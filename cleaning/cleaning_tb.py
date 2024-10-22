@@ -317,5 +317,4 @@ class data_cleaning:
 
 clean = data_cleaning(folder_names, variable_dict)
 
-#action item
 clean.fit()

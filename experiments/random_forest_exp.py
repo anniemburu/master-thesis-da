@@ -20,15 +20,18 @@ warnings.filterwarnings("ignore")
 
 import os
 
-path = '/content/drive/MyDrive/Master Thesis/Benchmark Dataset V2/Mixed Variables'
+path = './datasets'
+output_path = './experiments _results/version_1'
 
+#datasets
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 
-print(len(folder_names))
+
 
 class MultiRandomForestRegressor:
-    def __init__(self, path, folder_names):
+    def __init__(self, path, output_path,folder_names):
         self.path = path
+        self.output_path = output_path
         self.folder_names = folder_names
         self.results_df = pd.DataFrame(columns=['Model', 'Dataset', 'Train RSME', 'Test RSME', 'Train R2', 'Test R2'])
 
@@ -67,8 +70,8 @@ class MultiRandomForestRegressor:
             print(pd.DataFrame(results, index=['Training', 'Testing']).T)
             print('\n')
 
-        #SAVE THE
-        self.results_df.to_csv(f'{data_path}/{dataset}/train.csv', index=False)
+        #save results
+        self.results_df.to_csv(f'{self.path}/{folder}/xgb_v1.csv', index=False)
 
     def predict(self, X_train, y_train, X_test, y_test):
         train_pred = self.model.predict(X_train)
@@ -84,5 +87,5 @@ class MultiRandomForestRegressor:
 
         return train_rmse, test_rmse, train_r2, test_r2
 
-mod = MultiRandomForestRegressor(path, folder_names)
+mod = MultiRandomForestRegressor(path, output_path,folder_names)
 mod.fit()
