@@ -6,6 +6,7 @@
 #SBATCH --partition=STUD
 #SBATCH --gres=gpu:1
 
-cd ~Master_Thesis/master-thesis-da/experiments
+
+cd ~/Master_Thesis/master-thesis-da/experiments
 source activate MasterThesis
 srun python3 random_forest_exp.py

@@ -20,8 +20,9 @@ warnings.filterwarnings("ignore")
 
 import os
 
-path = './datasets'
-output_path = './experiments _results/version_1'
+path = '~/Master_Thesis/master-thesis-da/datasets'
+
+output_path = '~/Master_Thesis/master-thesis-da/experiments _results/version_1'
 
 #datasets
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
