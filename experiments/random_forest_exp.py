@@ -45,6 +45,9 @@ class MultiRandomForestRegressor:
         #load train and test datasets
         train = pd.read_csv(f'{self.path}/{folder}/train.csv')
         test = pd.read_csv(f'{self.path}/{folder}/test.csv')
+        print(f' DATASETS {self.folder_names})
+        print(train.head())
+        print(test.head())
 
         #Get X and y for train and test
         X_train, y_train = train.iloc[:, :-1], train.iloc[:, -1]
@@ -56,10 +59,10 @@ class MultiRandomForestRegressor:
     def fit(self):
         for folder in self.folder_names:
             X_train, y_train, X_test, y_test = self.data_load(folder)
-            print(X_train.head())
-            print(X_test.head())
-            print(y_train.head())
-            print(y_test.head())
+            #print(X_train.head())
+            #print(X_test.head())
+            #print(y_train.head())
+            #print(y_test.head())
 
             #train random forest
             self.model = RandomForestRegressor(random_state=0)
