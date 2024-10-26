@@ -20,7 +20,9 @@ warnings.filterwarnings("ignore")
 
 import os
 
-!cd /
+target_dir = 'home/mburu/
+os.chdir(target_dir)
+print(f'We are at{os.getpwd()}')
 
 path = '~/Master_Thesis/master-thesis-da/datasets'
 
