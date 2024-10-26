@@ -25,9 +25,9 @@ target_dir = '/home/mburu/'
 os.chdir(target_dir)
 print(f'We are at{os.getcwd()}')
 
-path = '~/Master_Thesis/master-thesis-da/datasets'
+path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
 
-output_path = '~/Master_Thesis/master-thesis-da/experiments_results/version_1'
+output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results/version_1'
 
 #datasets
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
