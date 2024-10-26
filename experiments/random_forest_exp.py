@@ -56,6 +56,10 @@ class MultiRandomForestRegressor:
     def fit(self):
         for folder in self.folder_names:
             X_train, y_train, X_test, y_test = self.data_load(folder)
+            print(X_train.head())
+            print(X_test.head())
+            print(y_train.head())
+            print(y_test.head())
 
             #train random forest
             self.model = RandomForestRegressor(random_state=0)
