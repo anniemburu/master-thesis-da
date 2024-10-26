@@ -20,6 +20,7 @@ warnings.filterwarnings("ignore")
 
 import os
 
+print(f'We are at{os.getpwd()}')
 target_dir = '/home/mburu/'
 os.chdir(target_dir)
 print(f'We are at{os.getpwd()}')
