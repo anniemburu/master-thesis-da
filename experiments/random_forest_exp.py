@@ -45,7 +45,7 @@ class MultiRandomForestRegressor:
         #load train and test datasets
         train = pd.read_csv(f'{self.path}/{folder}/train.csv')
         test = pd.read_csv(f'{self.path}/{folder}/test.csv')
-        print(f' DATASETS {self.folder_names})
+        print(f'DATASETS {self.folder_names}')
         print(train.head())
         print(test.head())
 
