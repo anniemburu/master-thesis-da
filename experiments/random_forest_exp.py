@@ -9,6 +9,7 @@ Original file is located at
 
 import pandas as pd
 import numpy as np
+import json
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
@@ -32,10 +33,12 @@ output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results/ve
 #datasets
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 
-
+#variable dicts
+#with open(f"{path}/variable_dict.json", "r") as json_file:
+   # variable_dict = json.load(json_file)
 
 class MultiRandomForestRegressor:
-    def __init__(self, path, output_path,folder_names):
+    def __init__(self, path, output_path,folder_name):
         self.path = path
         self.output_path = output_path
         self.folder_names = folder_names
@@ -59,11 +62,7 @@ class MultiRandomForestRegressor:
     def fit(self):
         for folder in self.folder_names:
             X_train, y_train, X_test, y_test = self.data_load(folder)
-            #print(X_train.head())
-            #print(X_test.head())
-            #print(y_train.head())
-            #print(y_test.head())
-
+           
             #train random forest
             self.model = RandomForestRegressor(random_state=0)
             self.model.fit(X_train, y_train)
