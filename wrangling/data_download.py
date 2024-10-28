@@ -10,7 +10,6 @@ Original file is located at
 # Enter API key, server address, etc.
 # You can obtain your API key by logging into OpenML and accessing "Your Profile."
 import os
-import openml
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
