@@ -9,6 +9,7 @@ Original file is located at
 
 import pandas as pd
 import numpy as np
+import json
 
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder , StandardScaler
 from sklearn.compose import ColumnTransformer
@@ -17,7 +18,7 @@ from sklearn.model_selection import train_test_split
 
 import os
 
-path = '~/Master_Thesis/master-thesis-da/datasets'
+path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
 
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 
@@ -30,8 +31,6 @@ variable_dict = {
     "546-sensory" : {'norm_cat' : ['Occasion', 'Judges', 'Interval', 'Sittings','Position', 'Squares',
                                     'Rows', 'Columns', 'Halfplot', 'Trellis', 'Method'],
                      'ord_cat': None, 'target' : 'Score', 'drop_cols' : None},
-    #"3050-QSAR-TID-11" : {'norm_cat' : ['CHAS'], 'ord_cat': None, 'target' : 'MEDV','drop_cols' : None},
-    #"3277-QSAR-TID-10980" : {'norm_cat' : ['CHAS'], 'ord_cat': None, 'target' : 'MEDV', 'drop_cols' : None},
     "41021-Moneyball" : {'norm_cat' : ['Team', 'League','Playoffs', 'G'],
                          'ord_cat': None, 'target' : 'RS',
                          'drop_cols' : ['RankSeason', 'RankPlayoffs', 'OOBP', 'OSLG']},
@@ -72,6 +71,7 @@ class data_cleaning:
     def __init__(self, dataset_list, variable_dict):
         self.dataset_list = dataset_list
         self.variable_dict = variable_dict
+        self.categorical_variables = {}
 
 
     def missing_duplicates(self, data, dataset):
@@ -141,6 +141,9 @@ class data_cleaning:
         except:
             pass
 
+        #save categorical cariables
+        self.categorical_variables[dataset] = categorical_cols
+
         #turn data to categorical
         data[categorical_cols] = data[categorical_cols].astype('category')
 
@@ -148,7 +151,7 @@ class data_cleaning:
 
     def fit(self):
         #dataset paths
-        data_path = '/content/drive/MyDrive/Master Thesis/Benchmark Dataset V2/Mixed Variables'
+        data_path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
 
         for dataset in self.dataset_list:
             print(f"We are in the dataset : {dataset}")
@@ -173,6 +176,11 @@ class data_cleaning:
             #save as csv
             train_data.to_csv(f'{data_path}/{dataset}/train_gbm.csv', index=False)
             test_data.to_csv(f'{data_path}/{dataset}/test_gbm.csv', index=False)
+
+        #save the categorical variables 
+        with open(f"{data_path}/variable_dict.json", "w") as json_file:
+            json.dump(self.categorical_variables, json_file, indent=4)
+
 
 model = data_cleaning(folder_names, variable_dict)
 model.fit()

@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 import os
 
 #dataset path
-path = '~/Master_Thesis/master-thesis-da/datasets'
+path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
 
 #datasets names
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
