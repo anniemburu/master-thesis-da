@@ -14,17 +14,32 @@ from tqdm import tqdm
 import pandas as pd
 import numpy as np
 
+import openml
 from openml import datasets, tasks, runs, flows, config, study
 from openml.datasets import edit_dataset, fork_dataset, get_dataset
 from openml.tasks import TaskType
+import time
+from requests.exceptions import ConnectionError
 
 config.apikey = '1d638eca3385a3acd1fb477970ade481'
 config.server = 'https://www.openml.org/api/v1'
 config.cache_directory = os.path.expanduser('~/.openml/cache ')
 config.cachedir = '~/.openml/cache'
 
-benchmark_suite = study.get_suite(suite_id=269) ## OBJECT : OpenMLBenchmarkSuite
-benchmark_suite
+attempts = 3
+for attempt in range(attempts):
+    try:
+        benchmark_suite = study.get_suite(suite_id=269)
+        break  # If successful, exit the loop
+    except ConnectionError as e:
+        print(f"Attempt {attempt+1} failed: {e}")
+        if attempt < attempts - 1:
+            time.sleep(10)  # Wait 10 seconds before retrying
+        else:
+            raise e  # Raise the error after the last attempt
+
+#benchmark_suite = study.get_suite(suite_id=269) ## OBJECT : OpenMLBenchmarkSuite
+print(benchmark_suite)
 
 print(benchmark_suite.description)
 
