@@ -8,5 +8,6 @@
 
 
 cd ~/Master_Thesis/master-thesis-da/experiments
-source activate MasterThesis
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate MasterThesis
 srun python3 random_forest_exp.py
