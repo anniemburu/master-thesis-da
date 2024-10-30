@@ -8,5 +8,6 @@
 
 
 cd ~/Master_Thesis/master-thesis-da/cleaning
-source activate MasterThesis
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate MasterThesis
 srun python3 cleaning_dnn.py
