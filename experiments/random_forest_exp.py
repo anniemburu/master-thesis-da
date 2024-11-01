@@ -9,7 +9,8 @@ Original file is located at
 
 import pandas as pd
 import numpy as np
-import json
+import os
+
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
@@ -19,12 +20,6 @@ from sklearn.metrics import r2_score
 import warnings
 warnings.filterwarnings("ignore")
 
-import os
-
-print(f'We are at{os.getcwd()}')
-target_dir = '/home/mburu/'
-os.chdir(target_dir)
-print(f'We are at{os.getcwd()}')
 
 path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
 
@@ -48,9 +43,7 @@ class MultiRandomForestRegressor:
         #load train and test datasets
         train = pd.read_csv(f'{self.path}/{folder}/train.csv')
         test = pd.read_csv(f'{self.path}/{folder}/test.csv')
-        print(f'DATASETS {self.folder_names}')
-        print(train.head())
-        print(test.head())
+        
 
         #Get X and y for train and test
         X_train, y_train = train.iloc[:, :-1], train.iloc[:, -1]
@@ -61,6 +54,7 @@ class MultiRandomForestRegressor:
 
     def fit(self):
         for folder in self.folder_names:
+            print(f'In Dataset : {folder}')
             X_train, y_train, X_test, y_test = self.data_load(folder)
            
             #train random forest
@@ -78,7 +72,6 @@ class MultiRandomForestRegressor:
             new_row = {'Model': 'Random Forest', 'Dataset': folder, 'Train RSME': train_rmse, 'Test RSME': test_rmse, 'Train R2': train_r2, 'Test R2': test_r2}
             self.results_df = pd.concat([self.results_df, pd.DataFrame([new_row])], ignore_index=True)
 
-            print(f'Results for {folder}:')
             print(pd.DataFrame(results, index=['Training', 'Testing']).T)
             print('\n')
 

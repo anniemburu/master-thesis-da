@@ -78,7 +78,7 @@ class MultiXGBoostRegressor:
 
     def fit(self):
         for folder in self.folder_names:
-            print(f'In Dataset {folder}')
+            print(f'In Dataset : {folder}')
             X_train, y_train, X_test, y_test = self.data_load(folder)
 
             #train random forest

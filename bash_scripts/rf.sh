@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=rf_v1
+#SBATCH --job-name=mult_rf_v1
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
