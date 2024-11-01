@@ -23,51 +23,6 @@ import tensorflow as tf
 import warnings
 warnings.filterwarnings("ignore")
 
-variable_dict = {
-    "531-boston" : {'norm_cat' : ['CHAS'], 'ord_cat': None, 'target' : 'MEDV', 'drop_cols' : None},
-    "541-socmob" : {'norm_cat' : ['fathers_occupation', 'sons_occupation', 'family_structure', 'race'],
-                    'ord_cat': None,
-                    'target' : 'counts_for_sons_current_occupation', 'drop_cols' : None},
-    "546-sensory" : {'norm_cat' : ['Occasion', 'Judges', 'Interval', 'Sittings','Position', 'Squares',
-                                    'Rows', 'Columns', 'Halfplot', 'Trellis', 'Method'],
-                     'ord_cat': None, 'target' : 'Score', 'drop_cols' : None},
-    #"3050-QSAR-TID-11" : {'norm_cat' : ['CHAS'], 'ord_cat': None, 'target' : 'MEDV','drop_cols' : None},
-    #"3277-QSAR-TID-10980" : {'norm_cat' : ['CHAS'], 'ord_cat': None, 'target' : 'MEDV', 'drop_cols' : None},
-    "41021-Moneyball" : {'norm_cat' : ['Team', 'League','Playoffs', 'G'],
-                         'ord_cat': None, 'target' : 'RS',
-                         'drop_cols' : ['RankSeason', 'RankPlayoffs', 'OOBP', 'OSLG']},
-    "41540-black_friday" : {'norm_cat' : ['Gender', 'Occupation', 'City_Category', 'Marital_Status',
-                                          'Product_Category_1','Product_Category_2', 'Product_Category_3'],
-                            'ord_cat': ['Age'], 'target' : 'Purchase',
-                            'drop_cols' : None},
-    "41980-SAT11-HAND-runtime-regression" : {'norm_cat' : ['algorithm'], 'ord_cat': None,
-                                             'target' : 'runtime', 'drop_cols': ['row_id']},
-    "42225-diamonds" : {'norm_cat' : None, 'ord_cat': ['cut', 'color', 'clarity'], 'drop_cols': None,
-                        'target' : 'price'},
-    "42563-house_prices_nominal" : {'norm_cat' : ['MSZoning','LotShape', 'Neighborhood'],
-                                    'ord_cat': ['Street', 'Alley', 'Utilities','LotConfig', 'LandSlope','LandContour','Condition1', 'Condition2',
-                                                'BldgType', 'HouseStyle', 'RoofStyle', 'RoofMatl','Exterior1st', 'Exterior2nd', 'MasVnrType', 'ExterQual', 'ExterCond',
-                                                'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinType2', 'Heating',
-                                                'HeatingQC', 'CentralAir', 'Electrical', 'KitchenQual', 'Functional', 'FireplaceQu', 'GarageType','GarageFinish',
-                                                'GarageQual', 'GarageCond', 'PavedDrive', 'PoolQC', 'Fence', 'MiscFeature', 'SaleType',
-                                                'SaleCondition'],
-                                    'target' : 'SalePrice', 'drop_cols':['Id']},
-    "42570-Mercedes_Benz_Greener_Manufacturing" : {'norm_cat' : ['X0','X1','X2','X3','X4','X5','X6','X8'],
-                                                   'ord_cat': None,
-                                                   'target' : 'y',
-                                                   'drop_cols':['ID']},
-    "42571-Allstate_Claims_Severity" : {'norm_cat' : [f'cat{i}' for i in range(1,117)], 'ord_cat': None,
-                                        'target' : 'loss', 'drop_cols':['id']},
-    "42688-Brazilian_houses" : {'norm_cat' : ['city', 'animal'], 'ord_cat': ['furniture'], 'target' : 'total_(BRL)', 'drop_cols': None},
-    "42726-abalone" : {'norm_cat' : ['Sex'], 'ord_cat': None, 'target' : 'Class_number_of_rings', 'drop_cols': None},
-    "42728-Airlines_DepDelay_10M" : {'norm_cat' : ['Month','DayOfWeek','UniqueCarrier', 'Origin', 'Dest'],
-                                     'ord_cat': None, 'target' : 'DepDelay', 'drop_cols': None},
-    "42729-nyc-taxi-green-dec-2016" : {'norm_cat' : ['VendorID', 'store_and_fwd_flag','PULocationID', 'DOLocationID', 'trip_type'],
-                                       'ord_cat': None, 'target' : 'tip_amount', 'drop_cols': None},
-    "42731-house_sales" : {'norm_cat' : ['zipcode'], 'ord_cat': None , 'target' : 'price', 'drop_cols':['id']},
-    "43071-MIP-2016-regression" : {'norm_cat' : ['algorithm','runstatus'], 'ord_cat': None, 'target' : 'PAR10', 'drop_cols':['instance_id']},
-
-}
 
 #load the categorical vars json
 cat_path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
