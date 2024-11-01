@@ -69,14 +69,15 @@ class MultiRandomForestRegressor:
             results['r2'] = [np.round(train_r2,2), np.round(test_r2,2)]
 
             #add results to datasets
-            new_row = {'Model': 'Random Forest', 'Dataset': folder, 'Train RSME': train_rmse, 'Test RSME': test_rmse, 'Train R2': train_r2, 'Test R2': test_r2}
+            new_row = {'Model': 'Random Forest', 'Dataset': folder, 'Version' : 1,'Train RSME': train_rmse, 'Test RSME': test_rmse, 'Train R2': train_r2, 'Test R2': test_r2}
             self.results_df = pd.concat([self.results_df, pd.DataFrame([new_row])], ignore_index=True)
 
             print(pd.DataFrame(results, index=['Training', 'Testing']).T)
             print('\n')
+            
 
         #save results
-        self.results_df.to_csv(f'{self.output_path}/xgb_v1.csv', index=False)
+        self.results_df.to_csv(f'{self.output_path}/randomforest_re.csv', index=False)
 
     def predict(self, X_train, y_train, X_test, y_test):
         train_pred = self.model.predict(X_train)

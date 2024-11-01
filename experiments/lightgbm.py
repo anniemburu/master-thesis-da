@@ -14,10 +14,10 @@ import json
 import os
 
 
-import xgboost as xgb
+import lightgbm as lgb
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
-
+from sklearn.preprocessing import LabelEncoder
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -35,7 +35,7 @@ output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results/ve
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 
 
-class MultiXGBoostRegressor:
+class MultiLightGBMRegressor:
     def __init__(self, path, output_path, folder_names):
         self.path = path
         self.output_path = output_path
@@ -70,10 +70,24 @@ class MultiXGBoostRegressor:
 
             X_train, y_train, X_test, y_test = self.data_load(folder,categorical_cols)
 
-            #train random forest
-            self.model = xgb.XGBRegressor(objective='reg:squarederror', n_estimators=100, learning_rate=0.1, enable_categorical=True, verbosity = 0)
-            self.model.fit(X_train, y_train)
+            cat_list = list(X_train.select_dtypes('category').columns) #category list
 
+            #encode categoricals
+            encoder = LabelEncoder()
+            X_train[cat_list] = X_train[cat_list].apply(encoder.fit_transform)
+            X_test[cat_list] = X_test[cat_list].apply(encoder.fit_transform)
+
+            #data loader
+            train_data = lgb.Dataset(X_train, label=y_train, feature_name=list(X_train.columns), categorical_feature=list(X_train.select_dtypes('category').columns))
+            test_data = lgb.Dataset(X_test, label=y_test, feature_name=list(X_test.columns), categorical_feature=list(X_test.select_dtypes('category').columns))
+            
+            #set parameters
+            params = {"objective":"regression"}
+            
+            #train random forest
+            self.model = lgb.train(params, train_data, valid_sets=[test_data])
+
+            #predict
             train_rmse, test_rmse, train_r2, test_r2 = self.predict(X_train, y_train, X_test, y_test)
 
              #Output
@@ -82,14 +96,14 @@ class MultiXGBoostRegressor:
             results['r2'] = [np.round(train_r2,2), np.round(test_r2,2)]
 
             #add results to datasets
-            new_row = {'Model': 'XGBoost', 'Dataset': folder, 'Version' : 1,'Train RSME': train_rmse, 'Test RSME': test_rmse, 'Train R2': train_r2, 'Test R2': test_r2}
+            new_row = {'Model': 'LightGBM', 'Dataset': folder, 'Version' : 1,'Train RSME': train_rmse, 'Test RSME': test_rmse, 'Train R2': train_r2, 'Test R2': test_r2}
             self.results_df = pd.concat([self.results_df, pd.DataFrame([new_row])], ignore_index=True)
 
             print(pd.DataFrame(results, index=['Training', 'Testing']).T)
             print('\n')
 
         #SAVE THE
-        self.results_df.to_csv(f'{self.output_path}/xgb_re.csv', index=False)
+        self.results_df.to_csv(f'{self.output_path}/lightgbm_results.csv', index=False)
 
     def predict(self, X_train, y_train, X_test, y_test):
         train_pred = self.model.predict(X_train)
@@ -105,5 +119,5 @@ class MultiXGBoostRegressor:
 
         return train_rmse, test_rmse, train_r2, test_r2
 
-mod = MultiXGBoostRegressor(path, folder_names,variable_dict)
+mod = MultiLightGBMRegressor(path, output_path, folder_names)
 mod.fit()

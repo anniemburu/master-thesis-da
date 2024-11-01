@@ -14,7 +14,7 @@ import json
 import os
 
 
-import xgboost as xgb
+import catboost as cat
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
@@ -31,11 +31,11 @@ with open(f"{cat_path}/variable_dict.json", "r") as json_file: #change to right 
 
 
 path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
-output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results/version_1'
+output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results'
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 
 
-class MultiXGBoostRegressor:
+class MultiCatBoostRegressor:
     def __init__(self, path, output_path, folder_names):
         self.path = path
         self.output_path = output_path
@@ -71,7 +71,7 @@ class MultiXGBoostRegressor:
             X_train, y_train, X_test, y_test = self.data_load(folder,categorical_cols)
 
             #train random forest
-            self.model = xgb.XGBRegressor(objective='reg:squarederror', n_estimators=100, learning_rate=0.1, enable_categorical=True, verbosity = 0)
+            self.model = cat.CatBoostRegressor(iterations=100, learning_rate=0.1, loss_function='RMSE', cat_features = categorical_cols[folder])
             self.model.fit(X_train, y_train)
 
             train_rmse, test_rmse, train_r2, test_r2 = self.predict(X_train, y_train, X_test, y_test)
@@ -82,14 +82,14 @@ class MultiXGBoostRegressor:
             results['r2'] = [np.round(train_r2,2), np.round(test_r2,2)]
 
             #add results to datasets
-            new_row = {'Model': 'XGBoost', 'Dataset': folder, 'Version' : 1,'Train RSME': train_rmse, 'Test RSME': test_rmse, 'Train R2': train_r2, 'Test R2': test_r2}
+            new_row = {'Model': 'CatBoost', 'Dataset': folder, 'Version' : 1,'Train RSME': train_rmse, 'Test RSME': test_rmse, 'Train R2': train_r2, 'Test R2': test_r2}
             self.results_df = pd.concat([self.results_df, pd.DataFrame([new_row])], ignore_index=True)
 
             print(pd.DataFrame(results, index=['Training', 'Testing']).T)
             print('\n')
 
         #SAVE THE
-        self.results_df.to_csv(f'{self.output_path}/xgb_re.csv', index=False)
+        self.results_df.to_csv(f'{self.output_path}/catboost_results.csv', index=False)
 
     def predict(self, X_train, y_train, X_test, y_test):
         train_pred = self.model.predict(X_train)
@@ -105,5 +105,5 @@ class MultiXGBoostRegressor:
 
         return train_rmse, test_rmse, train_r2, test_r2
 
-mod = MultiXGBoostRegressor(path, folder_names,variable_dict)
+mod = MultiCatBoostRegressor(path, output_path, folder_names)
 mod.fit()
