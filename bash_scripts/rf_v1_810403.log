@@ -1,0 +1,347 @@
+We are at/home/mburu/Master_Thesis/master-thesis-da/experiments
+We are at/home/mburu
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+       area     rooms  bathroom  ...  city_Sao Paulo  animal_acept  animal_not acept
+0  0.224939  1.256521  1.226959  ...             1.0           1.0               0.0
+1  0.340425  1.256521  1.933119  ...             1.0           1.0               0.0
+2  0.224939  1.256521  1.933119  ...             0.0           1.0               0.0
+3 -0.179265 -1.313622 -0.891519  ...             0.0           0.0               1.0
+4 -0.154517 -0.456907 -0.185359  ...             1.0           0.0               1.0
+
+[5 rows x 17 columns]
+       area     rooms  bathroom  ...  city_Sao Paulo  animal_acept  animal_not acept
+0  0.102853  2.113235 -0.185359  ...             0.0           1.0               0.0
+1  0.158946  1.256521  1.933119  ...             1.0           0.0               1.0
+2  0.142448  0.399807  1.226959  ...             1.0           1.0               0.0
+3 -0.171016 -0.456907 -0.891519  ...             1.0           0.0               1.0
+4 -0.141319 -0.456907 -0.185359  ...             1.0           1.0               0.0
+
+[5 rows x 17 columns]
+Results for 42688-Brazilian_houses:
+      Training  Testing
+rmse       0.0      0.0
+r2         1.0      1.0
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   MSSubClass  LotFrontage  ...  Neighborhood_Timber  Neighborhood_Veenker
+0   -0.866764    -0.004193  ...                  0.0                   0.0
+1    0.074110    -0.493958  ...                  0.0                   0.0
+2   -0.631546    -0.137765  ...                  0.0                   0.0
+3   -0.161109    -0.449434  ...                  0.0                   0.0
+4   -0.161109    -0.894674  ...                  0.0                   0.0
+
+[5 rows x 110 columns]
+   MSSubClass  LotFrontage  ...  Neighborhood_Timber  Neighborhood_Veenker
+0   -0.866764    -0.004193  ...                  0.0                   0.0
+1    0.074110     1.242480  ...                  0.0                   0.0
+2   -0.631546    -0.627530  ...                  0.0                   0.0
+3   -0.161109    -0.894674  ...                  0.0                   0.0
+4   -0.866764     0.841764  ...                  1.0                   0.0
+
+[5 rows x 110 columns]
+Results for 42563-house_prices_nominal:
+      Training  Testing
+rmse    0.0326    0.089
+r2      0.8600   -0.160
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   RatecodeID  passenger_count  ...  trip_type_1  trip_type_2
+0    7.458897        -0.347949  ...          0.0          1.0
+1   -0.141000        -0.347949  ...          1.0          0.0
+2   -0.141000        -0.347949  ...          1.0          0.0
+3   -0.141000        -0.347949  ...          1.0          0.0
+4   -0.141000        -0.347949  ...          1.0          0.0
+
+[5 rows x 502 columns]
+   RatecodeID  passenger_count  ...  trip_type_1  trip_type_2
+0      -0.141        -0.347949  ...          1.0          0.0
+1      -0.141         1.565488  ...          1.0          0.0
+2      -0.141        -0.347949  ...          1.0          0.0
+3      -0.141        -0.347949  ...          1.0          0.0
+4      -0.141        -0.347949  ...          1.0          0.0
+
+[5 rows x 502 columns]
+Results for 42729-nyc-taxi-green-dec-2016:
+      Training  Testing
+rmse       0.0      0.0
+r2         1.0      1.0
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+     Length  Diameter    Height  ...  Sex_F  Sex_I  Sex_M
+0  0.210175  0.369725 -0.347950  ...    0.0    1.0    0.0
+1 -0.419444 -0.542386 -0.936082  ...    0.0    1.0    0.0
+2 -1.846581 -1.859881 -1.641840  ...    1.0    0.0    0.0
+3 -2.098428 -2.113245 -1.759467  ...    0.0    1.0    0.0
+4 -0.251546 -0.289022 -0.112697  ...    0.0    0.0    1.0
+
+[5 rows x 10 columns]
+     Length  Diameter    Height  ...  Sex_F  Sex_I  Sex_M
+0  0.671895  0.471071  0.475434  ...    0.0    0.0    1.0
+1  0.545971  0.319052  0.240182  ...    0.0    0.0    1.0
+2  0.294124  0.369725  1.298819  ...    1.0    0.0    0.0
+3  0.923743  0.825781  0.710687  ...    1.0    0.0    0.0
+4 -0.419444 -0.238349  0.122555  ...    0.0    0.0    1.0
+
+[5 rows x 10 columns]
+Results for 42726-abalone:
+      Training  Testing
+rmse       0.0      0.0
+r2         1.0      1.0
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+      carat  cut  color  clarity  ...     table         x         y         z
+0 -0.943457    5      7        4  ... -1.101291 -1.122350 -1.046903 -1.074952
+1  2.964222    5      7        2  ... -0.205550  2.334907  2.233057  2.353882
+2 -0.565295    5      6        4  ... -0.205550 -0.438008 -0.378763 -0.544128
+3  0.001949    4      7        3  ...  0.242320  0.201895  0.167897  0.187548
+4 -0.817403    5      6        7  ... -0.653420 -0.820173 -0.795266 -0.831060
+
+[5 rows x 9 columns]
+      carat  cut  color  clarity  ...     table         x         y         z
+0 -0.187132    1      1        4  ... -1.549161 -0.091394 -0.179189  0.115815
+1  0.212039    3      6        2  ...  0.690191  0.361871  0.384825  0.316667
+2 -0.481259    5      4        5  ... -0.653420 -0.384683 -0.352732 -0.343276
+3 -0.607313    4      6        4  ...  1.138061 -0.580209 -0.552306 -0.515435
+4  0.821301    5      2        3  ... -1.101291  0.948449  0.940163  1.005303
+
+[5 rows x 9 columns]
+Results for 42225-diamonds:
+      Training  Testing
+rmse    0.0482   0.4202
+r2      1.0000   0.8400
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   X10  X11  X12  X13  X14  X15  X16  ...  X8_s  X8_t  X8_u  X8_v  X8_w  X8_x  X8_y
+0    0    0    0    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+1    0    0    0    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+2    0    0    0    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+3    0    0    0    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+4    0    0    0    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+
+[5 rows x 560 columns]
+   X10  X11  X12  X13  X14  X15  X16  ...  X8_s  X8_t  X8_u  X8_v  X8_w  X8_x  X8_y
+0    0    0    0    0    1    0    0  ...   0.0   0.0   0.0   1.0   0.0   0.0   0.0
+1    0    0    1    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+2    0    0    0    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+3    0    0    0    0    0    0    0  ...   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+4    0    0    0    0    1    0    0  ...   0.0   0.0   0.0   1.0   0.0   0.0   0.0
+
+[5 rows x 560 columns]
+Results for 42570-Mercedes_Benz_Greener_Manufacturing:
+      Training  Testing
+rmse    0.0601   0.1507
+r2      0.8700   0.0700
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+      cont1     cont2     cont3  ...  cat116_W  cat116_X  cat116_Y
+0  1.910641 -2.418081 -2.320557  ...       0.0       0.0       0.0
+1  0.732056  0.547846  0.358074  ...       0.0       0.0       0.0
+2 -0.983790  1.343400  2.202548  ...       0.0       0.0       0.0
+3  0.753626  1.108484 -0.801350  ...       0.0       0.0       0.0
+4  0.013808  1.108484  0.865087  ...       0.0       0.0       0.0
+
+[5 rows x 1130 columns]
+      cont1     cont2     cont3  ...  cat116_W  cat116_X  cat116_Y
+0  1.777195 -0.409872 -1.472351  ...       0.0       0.0       0.0
+1 -0.217483  0.234295 -0.073075  ...       0.0       0.0       0.0
+2 -0.217483 -0.409872 -1.400811  ...       0.0       0.0       0.0
+3  0.013808  1.108484  1.451321  ...       0.0       0.0       0.0
+4  0.571049 -1.003454 -1.400811  ...       0.0       0.0       0.0
+
+[5 rows x 1130 columns]
+Results for 42571-Allstate_Claims_Severity:
+      Training  Testing
+rmse    0.0019   0.0024
+r2      0.9400   0.7900
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+       CRIM        ZN     INDUS       NOX  ...         B     LSTAT  CHAS_0  CHAS_1
+0  1.287702 -0.500320  1.033237  0.489252  ... -0.074337  1.753505     1.0     0.0
+1 -0.336384 -0.500320 -0.413160 -0.157233  ...  0.430184 -0.561474     1.0     0.0
+2 -0.403253  1.013271 -0.715218 -1.008723  ...  0.065297 -0.651595     1.0     0.0
+3  0.388230 -0.500320  1.033237  0.489252  ... -3.868193  1.525387     1.0     0.0
+4 -0.325282 -0.500320 -0.413160 -0.157233  ...  0.379119 -0.165787     1.0     0.0
+
+[5 rows x 14 columns]
+       CRIM        ZN     INDUS       NOX  ...         B     LSTAT  CHAS_0  CHAS_1
+0 -0.396809 -0.500320 -1.007111 -0.395412  ...  0.428872 -0.481210     1.0     0.0
+1 -0.400796  1.229499 -0.664391 -0.931315  ...  0.444180 -1.257094     0.0     1.0
+2 -0.395234 -0.500320  2.433163  0.446720  ...  0.369934  0.790338     1.0     0.0
+3 -0.396825 -0.500320 -0.025421 -1.220532  ...  0.378682 -0.976875     1.0     0.0
+4  0.167084 -0.500320  1.033237  1.331384  ...  0.315043  0.677687     1.0     0.0
+
+[5 rows x 14 columns]
+Results for 531-boston:
+      Training  Testing
+rmse       0.0      0.0
+r2         1.0      1.0
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   bedrooms  bathrooms  ...  zipcode_98198  zipcode_98199
+0 -0.395263  -0.474451  ...            0.0            0.0
+1 -1.468964  -1.452583  ...            0.0            0.0
+2 -0.395263  -1.452583  ...            0.0            0.0
+3 -0.395263   0.177636  ...            0.0            0.0
+4 -1.468964   0.503680  ...            0.0            0.0
+
+[5 rows x 90 columns]
+   bedrooms  bathrooms  ...  zipcode_98198  zipcode_98199
+0  0.678437   0.177636  ...            0.0            0.0
+1  1.752138   1.155768  ...            0.0            0.0
+2  0.678437   0.503680  ...            0.0            0.0
+3 -0.395263   1.807856  ...            0.0            0.0
+4 -0.395263   0.503680  ...            0.0            0.0
+
+[5 rows x 90 columns]
+Results for 42731-house_sales:
+      Training  Testing
+rmse    0.0024   0.0153
+r2      1.0000   0.9800
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   counts_for_sons_first_occupation  ...  race_white
+0                         -0.104334  ...         1.0
+1                         -0.310131  ...         1.0
+2                         -0.345922  ...         1.0
+3                         -0.381713  ...         0.0
+4                          0.293838  ...         1.0
+
+[5 rows x 39 columns]
+   counts_for_sons_first_occupation  ...  race_white
+0                         -0.381713  ...         0.0
+1                          1.016365  ...         1.0
+2                         -0.151310  ...         1.0
+3                         -0.363817  ...         1.0
+4                         -0.381713  ...         0.0
+
+[5 rows x 39 columns]
+Results for 541-socmob:
+      Training  Testing
+rmse       0.0      0.0
+r2         1.0      1.0
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   Occasion_1  Occasion_2  Judges_1  ...  Trellis_4  Method_1  Method_2
+0         0.0         1.0       0.0  ...        1.0       0.0       1.0
+1         1.0         0.0       0.0  ...        0.0       0.0       1.0
+2         1.0         0.0       0.0  ...        0.0       0.0       1.0
+3         1.0         0.0       0.0  ...        0.0       1.0       0.0
+4         1.0         0.0       1.0  ...        1.0       1.0       0.0
+
+[5 rows x 36 columns]
+   Occasion_1  Occasion_2  Judges_1  ...  Trellis_4  Method_1  Method_2
+0         1.0         0.0       0.0  ...        0.0       0.0       1.0
+1         1.0         0.0       0.0  ...        1.0       1.0       0.0
+2         0.0         1.0       0.0  ...        1.0       1.0       0.0
+3         0.0         1.0       0.0  ...        0.0       1.0       0.0
+4         0.0         1.0       0.0  ...        1.0       1.0       0.0
+
+[5 rows x 36 columns]
+Results for 546-sensory:
+      Training  Testing
+rmse       0.0      0.0
+r2         1.0      1.0
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   Age  ...  Product_Category_3_18
+0  3.0  ...                    0.0
+1  2.0  ...                    0.0
+2  7.0  ...                    0.0
+3  3.0  ...                    0.0
+4  3.0  ...                    0.0
+
+[5 rows x 71 columns]
+   Age  ...  Product_Category_3_18
+0  4.0  ...                    0.0
+1  2.0  ...                    0.0
+2  4.0  ...                    0.0
+3  3.0  ...                    1.0
+4  3.0  ...                    0.0
+
+[5 rows x 71 columns]
+Results for 41540-black_friday:
+      Training  Testing
+rmse    0.0022    0.007
+r2      1.0000    1.000
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   nvarsOrig  ...  algorithm_sattime_2011.03.02
+0  -0.194135  ...                           0.0
+1  -0.217653  ...                           0.0
+2  -0.224728  ...                           0.0
+3  -0.131707  ...                           1.0
+4  -0.178648  ...                           0.0
+
+[5 rows x 130 columns]
+   nvarsOrig  ...  algorithm_sattime_2011.03.02
+0  -0.147290  ...                           0.0
+1  -0.243848  ...                           0.0
+2  -0.136870  ...                           0.0
+3  -0.238016  ...                           0.0
+4  -0.225684  ...                           0.0
+
+[5 rows x 130 columns]
+Results for 41980-SAT11-HAND-runtime-regression:
+      Training  Testing
+rmse    0.1075    0.305
+r2      0.8000   -0.170
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+       Year        RA         W       OBP  ...  G_162  G_163  G_164  G_165
+0 -1.329748 -2.120065  2.434184  1.118109  ...    1.0    0.0    0.0    0.0
+1 -0.792366  1.958913 -1.726634 -0.422317  ...    1.0    0.0    0.0    0.0
+2  0.618262  0.847445  0.787194  0.716259  ...    0.0    1.0    0.0    0.0
+3 -1.799957 -0.943852  1.047245 -0.355342  ...    0.0    0.0    0.0    0.0
+4 -0.456502  1.138801 -1.119848 -1.159042  ...    1.0    0.0    0.0    0.0
+
+[5 rows x 57 columns]
+       Year        RA         W       OBP  ...  G_162  G_163  G_164  G_165
+0  0.215226 -0.652496 -0.773113 -1.092067  ...    1.0    0.0    0.0    0.0
+1 -1.262575 -0.350350  1.827398  0.649284  ...    1.0    0.0    0.0    0.0
+2  1.021299  0.588463  1.480663  2.256684  ...    1.0    0.0    0.0    0.0
+3  0.215226 -1.278371  1.307296 -0.154417  ...    1.0    0.0    0.0    0.0
+4 -1.598439  0.415807 -2.680155 -3.302242  ...    0.0    0.0    1.0    0.0
+
+[5 rows x 57 columns]
+Results for 41021-Moneyball:
+      Training  Testing
+rmse    0.0125    0.056
+r2      0.8500    0.220
+
+
+DATASETS ['42688-Brazilian_houses', '42563-house_prices_nominal', '42729-nyc-taxi-green-dec-2016', '42726-abalone', '42225-diamonds', '42570-Mercedes_Benz_Greener_Manufacturing', '42571-Allstate_Claims_Severity', '531-boston', '42731-house_sales', '541-socmob', '546-sensory', '41540-black_friday', '41980-SAT11-HAND-runtime-regression', '41021-Moneyball', '43071-MIP-2016-regression']
+   repetition  probtype  ...  runstatus_ok  runstatus_timeout
+0         0.0       0.0  ...           1.0                0.0
+1         0.0       0.0  ...           1.0                0.0
+2         0.0       0.0  ...           0.0                1.0
+3         0.0       0.0  ...           0.0                1.0
+4         0.0       0.0  ...           1.0                0.0
+
+[5 rows x 151 columns]
+   repetition  probtype  ...  runstatus_ok  runstatus_timeout
+0         0.0       0.0  ...           1.0                0.0
+1         0.0       0.0  ...           0.0                1.0
+2         0.0       0.0  ...           1.0                0.0
+3         0.0       0.0  ...           0.0                1.0
+4         0.0       0.0  ...           1.0                0.0
+
+[5 rows x 151 columns]
+Results for 43071-MIP-2016-regression:
+      Training  Testing
+rmse       0.0      0.0
+r2         1.0      1.0
+
+
