@@ -38,7 +38,7 @@ folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, 
    # variable_dict = json.load(json_file)
 
 class MultiRandomForestRegressor:
-    def __init__(self, path, output_path,folder_name):
+    def __init__(self, path, output_path,folder_names):
         self.path = path
         self.output_path = output_path
         self.folder_names = folder_names
@@ -83,7 +83,7 @@ class MultiRandomForestRegressor:
             print('\n')
 
         #save results
-        self.results_df.to_csv(f'{self.path}/{folder}/xgb_v1.csv', index=False)
+        self.results_df.to_csv(f'{self.output_path}/xgb_v1.csv', index=False)
 
     def predict(self, X_train, y_train, X_test, y_test):
         train_pred = self.model.predict(X_train)
