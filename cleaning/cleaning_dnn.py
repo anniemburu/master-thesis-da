@@ -288,7 +288,7 @@ class data_cleaning:
 
     def fit(self):
         #dataset paths
-        data_path = './datasets'
+        data_path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
 
         for dataset in self.dataset_list:
             print(f"We are in the dataset : {dataset}")

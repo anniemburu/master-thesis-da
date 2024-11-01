@@ -1,6 +1,0 @@
-/var/spool/slurm/d/job809767/slurm_script: line 11: activate: No such file or directory
-Traceback (most recent call last):
-  File "/home/mburu/Master_Thesis/master-thesis-da/wrangling/data_download.py", line 17, in <module>
-    from openml import datasets, tasks, runs, flows, config, study
-ModuleNotFoundError: No module named 'openml'
-srun: error: stud-000: task 0: Exited with exit code 1
