@@ -23,7 +23,7 @@ warnings.filterwarnings("ignore")
 
 path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
 
-output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results/version_1'
+output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results'
 
 #datasets
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
@@ -58,7 +58,7 @@ class MultiRandomForestRegressor:
             X_train, y_train, X_test, y_test = self.data_load(folder)
            
             #train random forest
-            self.model = RandomForestRegressor(random_state=0)
+            self.model = RandomForestRegressor(random_state=42)
             self.model.fit(X_train, y_train)
 
             train_rmse, test_rmse, train_r2, test_r2 = self.predict(X_train, y_train, X_test, y_test)
@@ -77,7 +77,7 @@ class MultiRandomForestRegressor:
             
 
         #save results
-        self.results_df.to_csv(f'{self.output_path}/randomforest_re.csv', index=False)
+        self.results_df.to_csv(f'{self.output_path}/randomforest_results.csv', index=False)
 
     def predict(self, X_train, y_train, X_test, y_test):
         train_pred = self.model.predict(X_train)

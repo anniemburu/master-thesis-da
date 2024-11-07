@@ -65,7 +65,7 @@ class MultiLightGBMRegressor:
             print(f'In Dataset : {folder}')
 
             #load json
-            with open("/home/mburu/Master_Thesis/master-thesis-da/datasets/categorical_dict.json", "r") as json_file: #change to right path here
+            with open("/home/mburu/Master_Thesis/master-thesis-da/datasets/", "r") as json_file: #change to right path here
                 categorical_cols = json.load(json_file)
 
             X_train, y_train, X_test, y_test = self.data_load(folder,categorical_cols)

@@ -31,7 +31,7 @@ with open(f"{cat_path}/variable_dict.json", "r") as json_file: #change to right 
 
 
 path = '/home/mburu/Master_Thesis/master-thesis-da/datasets'
-output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results/version_1'
+output_path = '/home/mburu/Master_Thesis/master-thesis-da/experiments_results'
 folder_names = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 
 
