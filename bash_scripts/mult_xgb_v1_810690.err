@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/mburu/Master_Thesis/master-thesis-da/experiments/xgboost.py", line 17, in <module>
+    import xgboost as xgb
+  File "/home/mburu/Master_Thesis/master-thesis-da/experiments/xgboost.py", line 101, in <module>
+    mod = MultiXGBoostRegressor(path, folder_names,variable_dict)
+NameError: name 'variable_dict' is not defined
+srun: error: stud-000: task 0: Exited with exit code 1

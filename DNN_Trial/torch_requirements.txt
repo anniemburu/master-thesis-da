@@ -1,5 +1,5 @@
 pytorch
-cudatoolkit=11.3
+#cudatoolkit==11.3 <install via conda>
 ipykernel
 optuna
 configargparse
@@ -8,7 +8,7 @@ pandas
 matplotlib
 captum
 shap
-pytorch-tabnet
+#pytorch-tabnet
 requests
 qhoptim
 lightgbm==3.3.1
