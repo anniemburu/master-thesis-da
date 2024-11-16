@@ -3,6 +3,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
 import numpy as np
 import pandas as pd
+import os
 
 
 def discretize_colum(data_clm, num_values=10):
@@ -20,10 +21,11 @@ def load_data(args):
         #X, y = sklearn.datasets.fetch_california_housing(return_X_y=True)
 	# See if we can print files/folders in this path
 
-	folder_path = '/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/'
-	files = os.listdir(folder_path)
-	for file in files:
-		print(file)
+        folder_path = '/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial'
+
+        files = os.listdir(folder_path)
+        for file in files:
+            print(file)
 
         data = pd.read_csv("/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/california_housing.csv")
 
