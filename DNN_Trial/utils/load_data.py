@@ -18,7 +18,7 @@ def load_data(args):
 
     if args.dataset == "CaliforniaHousing":  # Regression dataset
         #X, y = sklearn.datasets.fetch_california_housing(return_X_y=True)
-        data = pd.read_csv("california_housing.csv")
+        data = pd.read_csv("/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/california_housing.csv")
         X = data.drop('target', axis=1)
         y = data['target']
 
