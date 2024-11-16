@@ -18,7 +18,15 @@ def load_data(args):
 
     if args.dataset == "CaliforniaHousing":  # Regression dataset
         #X, y = sklearn.datasets.fetch_california_housing(return_X_y=True)
+	# See if we can print files/folders in this path
+
+	folder_path = '/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/'
+	files = os.listdir(folder_path)
+	for file in files:
+		print(file)
+
         data = pd.read_csv("/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/california_housing.csv")
+
         X = data.drop('target', axis=1)
         y = data['target']
 
