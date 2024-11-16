@@ -32,7 +32,10 @@ def load_data(args):
         X = data.drop('target', axis=1)
         y = data['target']
 
-    elif args.dataset == "Covertype":  # Multi-class classification dataset
+        X = X.to_numpy()
+        y = y.to_numpy()
+
+    elif args.dataset == "Covertyßpe":  # Multi-class classification dataset
         X, y = sklearn.datasets.fetch_covtype(return_X_y=True)
         # X, y = X[:10000, :], y[:10000]  # only take 10000 samples from dataset
 
