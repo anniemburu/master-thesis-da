@@ -17,7 +17,10 @@ def load_data(args):
     print("Loading dataset " + args.dataset + "...")
 
     if args.dataset == "CaliforniaHousing":  # Regression dataset
-        X, y = sklearn.datasets.fetch_california_housing(return_X_y=True)
+        #X, y = sklearn.datasets.fetch_california_housing(return_X_y=True)
+        data = pd.read_csv("california_housing.csv")
+        X = data.drop('target', axis=1)
+        y = data['target']
 
     elif args.dataset == "Covertype":  # Multi-class classification dataset
         X, y = sklearn.datasets.fetch_covtype(return_X_y=True)
