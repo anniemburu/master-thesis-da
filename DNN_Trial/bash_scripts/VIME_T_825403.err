@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "train.py", line 149, in <module>
+    main_once(arguments)
+  File "train.py", line 131, in main_once
+    model = model_name(parameters, args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py", line 30, in __init__
+    self.model_self = nn.DataParallel(self.model_self, device_ids=self.args.gpu_ids)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 160, in __init__
+    _check_balance(self.device_ids)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 27, in _check_balance
+    dev_props = _get_devices_properties(device_ids)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/_utils.py", line 750, in _get_devices_properties
+    return [_get_device_attr(lambda m: m.get_device_properties(i)) for i in device_ids]
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/_utils.py", line 750, in <listcomp>
+    return [_get_device_attr(lambda m: m.get_device_properties(i)) for i in device_ids]
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/_utils.py", line 727, in _get_device_attr
+    return get_member(torch.cuda)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/_utils.py", line 750, in <lambda>
+    return [_get_device_attr(lambda m: m.get_device_properties(i)) for i in device_ids]
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/cuda/__init__.py", line 468, in get_device_properties
+    raise AssertionError("Invalid device id")
+AssertionError: Invalid device id
+srun: error: stud-000: task 0: Exited with exit code 1
