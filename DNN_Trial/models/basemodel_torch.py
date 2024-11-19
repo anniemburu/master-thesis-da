@@ -16,42 +16,22 @@ class BaseModelTorch(BaseModel):
     def __init__(self, params, args):
         super().__init__(params, args)
         self.device = self.get_device()
-        self.gpus = self.get_slurm_gpus() if args.use_gpu and torch.cuda.is_available() else None
-        self.model = None
-
-    def get_slurm_gpus(self):
-        print('We are in BASEMODELPY')
-        print("In get_slurm_gpus")
-        """
-        Retrieve the GPUs allocated by SLURM and validate them.
-        """
-        slurm_gpus = os.environ.get('CUDA_VISIBLE_DEVICES')
-        if slurm_gpus:
-            # Map SLURM's GPU IDs to PyTorch's indices
-            gpu_ids = list(map(int, slurm_gpus.split(',')))
-            print(f"SLURM allocated GPUs: {gpu_ids}")
-            return gpu_ids
-        else:
-            print("No GPUs allocated by SLURM. Falling back to CPU.")
-            return None
+        #self.gpus = args.gpu_ids if args.use_gpu and torch.cuda.is_available() and args.data_parallel else None
 
     def to_device(self):
-        print("In to_device")
-        print(f"self.device : {self.device}")
-        print(f"self.gpu : {self.gpus}")
-        """
-        Move the model to the appropriate device (CPU or GPU(s)).
-        """
-        if self.gpus and len(self.gpus) > 1:  # Use DataParallel for multiple GPUs
-            self.model = nn.DataParallel(self.model, device_ids=self.gpus)
-            print(f"Using DataParallel on GPUs: {self.gpus}")
-        elif self.gpus:
-            print(f"Using single GPU: {self.gpus[0]}")
-        else:
-            print("Using CPU.")
-
-        # Move the model to the device
+        print("On Device:", self.device)
         self.model.to(self.device)
+
+    def get_device(self):
+        if self.args.use_gpu and torch.cuda.is_available():
+            if self.args.data_parallel:
+                device = "cuda"  # + ''.join(str(i) + ',' for i in self.args.gpu_ids)[:-1]
+            else:
+                device = 'cuda'
+        else:
+            device = 'cpu'
+
+        return torch.device(device)
 
     def get_device(self):
         print("In get_device")
