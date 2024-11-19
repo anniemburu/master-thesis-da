@@ -37,6 +37,8 @@ class BaseModelTorch(BaseModel):
 
     def to_device(self):
         print("In to_device")
+        print(f"self.device : {self.device}")
+        print(f"self.gpu : {self.gpus}")
         """
         Move the model to the appropriate device (CPU or GPU(s)).
         """
