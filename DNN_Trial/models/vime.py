@@ -35,8 +35,9 @@ class VIME(BaseModelTorch):
         self.encoder_layer = None
 
     def fit(self, X, y, X_val=None, y_val=None):
-        X = np.array(X, dtype=np.float)
-        X_val = np.array(X_val, dtype=np.float)
+        
+        X = X.astype(float)
+        X_val = X_val.astype(float)
 
         X_unlab = np.concatenate([X, X_val], axis=0)
 
