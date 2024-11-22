@@ -1,0 +1,56 @@
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_encoders.py:975: FutureWarning: `sparse` was renamed to `sparse_output` in version 1.2 and will be removed in 1.4. `sparse_output` is ignored unless you leave `sparse` to its default value.
+  warnings.warn(
+[I 2024-11-21 19:20:48,270] A new study created in RDB with name: VIME_Boston
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py:223: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(filename_self)
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py:228: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(filename_semi)
+[W 2024-11-21 19:21:39,528] Trial 0 failed with parameters: {'p_m': 0.4983290659791568, 'alpha': 7.934358477708767, 'K': 10, 'beta': 7.2530436851575395} because of the following error: AttributeError("module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 46, in cross_validation
+    curr_model.predict(X_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel_torch.py", line 129, in predict
+    self.predictions = self.predict_helper(X)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py", line 61, in predict_helper
+    X = np.array(X, dtype=np.float)
+  File "/home/mburu/.local/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+[W 2024-11-21 19:21:39,529] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 144, in <module>
+    main(arguments)
+  File "train.py", line 116, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 46, in cross_validation
+    curr_model.predict(X_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel_torch.py", line 129, in predict
+    self.predictions = self.predict_helper(X)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py", line 61, in predict_helper
+    X = np.array(X, dtype=np.float)
+  File "/home/mburu/.local/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+srun: error: stud-000: task 0: Exited with exit code 1

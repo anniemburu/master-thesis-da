@@ -1,0 +1,170 @@
+Namespace(batch_size=128, cat_dims=None, cat_idx=[3], config='config/boston.yml', data_parallel=False, dataset='Boston', direction='minimize', early_stopping_rounds=20, epochs=1000, gpu_ids=[0, 1], logging_period=100, model_name='VIME', n_trials=10, num_classes=1, num_features=13, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+Loading dataset Boston...
+Dataset loaded!
+(506, 13)
+Scaling the data...
+args.num_features: 14
+New Shape: (506, 14)
+A new study created in RDB with name: VIME_Boston
+In get_device
+On Device: cuda
+In get_device
+On Device: cuda
+Fitted encoder
+Epoch 0, Val Loss: 545.56934
+Epoch 1, Val Loss: 538.50110
+Epoch 2, Val Loss: 525.58643
+Epoch 3, Val Loss: 500.63330
+Epoch 4, Val Loss: 454.36874
+Epoch 5, Val Loss: 373.81546
+Epoch 6, Val Loss: 250.85686
+Epoch 7, Val Loss: 117.82461
+Epoch 8, Val Loss: 79.28708
+Epoch 9, Val Loss: 64.08661
+Epoch 10, Val Loss: 65.29682
+Epoch 11, Val Loss: 90.62847
+Epoch 12, Val Loss: 96.44118
+Epoch 13, Val Loss: 76.71599
+Epoch 14, Val Loss: 54.79777
+Epoch 15, Val Loss: 49.85308
+Epoch 16, Val Loss: 49.03115
+Epoch 17, Val Loss: 50.04501
+Epoch 18, Val Loss: 54.11380
+Epoch 19, Val Loss: 51.55361
+Epoch 20, Val Loss: 44.18128
+Epoch 21, Val Loss: 40.56427
+Epoch 22, Val Loss: 40.53519
+Epoch 23, Val Loss: 41.33162
+Epoch 24, Val Loss: 40.99128
+Epoch 25, Val Loss: 39.36765
+Epoch 26, Val Loss: 38.51172
+Epoch 27, Val Loss: 37.85392
+Epoch 28, Val Loss: 37.33746
+Epoch 29, Val Loss: 37.42832
+Epoch 30, Val Loss: 36.87433
+Epoch 31, Val Loss: 35.54918
+Epoch 32, Val Loss: 35.25114
+Epoch 33, Val Loss: 34.82371
+Epoch 34, Val Loss: 35.61858
+Epoch 35, Val Loss: 34.47240
+Epoch 36, Val Loss: 33.25331
+Epoch 37, Val Loss: 33.91364
+Epoch 38, Val Loss: 34.10034
+Epoch 39, Val Loss: 32.99345
+Epoch 40, Val Loss: 32.09454
+Epoch 41, Val Loss: 32.96700
+Epoch 42, Val Loss: 32.51374
+Epoch 43, Val Loss: 31.86257
+Epoch 44, Val Loss: 32.76477
+Epoch 45, Val Loss: 33.25364
+Epoch 46, Val Loss: 31.76667
+Epoch 47, Val Loss: 31.71391
+Epoch 48, Val Loss: 31.98971
+Epoch 49, Val Loss: 30.99591
+Epoch 50, Val Loss: 31.61274
+Epoch 51, Val Loss: 30.81813
+Epoch 52, Val Loss: 30.38099
+Epoch 53, Val Loss: 30.98550
+Epoch 54, Val Loss: 31.64458
+Epoch 55, Val Loss: 30.79673
+Epoch 56, Val Loss: 30.96035
+Epoch 57, Val Loss: 29.88864
+Epoch 58, Val Loss: 29.43353
+Epoch 59, Val Loss: 32.07903
+Epoch 60, Val Loss: 31.25924
+Epoch 61, Val Loss: 30.46970
+Epoch 62, Val Loss: 30.67149
+Epoch 63, Val Loss: 30.58847
+Epoch 64, Val Loss: 30.66330
+Epoch 65, Val Loss: 29.39549
+Epoch 66, Val Loss: 29.53314
+Epoch 67, Val Loss: 30.49158
+Epoch 68, Val Loss: 30.08110
+Epoch 69, Val Loss: 29.09145
+Epoch 70, Val Loss: 29.54011
+Epoch 71, Val Loss: 29.80352
+Epoch 72, Val Loss: 29.59707
+Epoch 73, Val Loss: 29.19823
+Epoch 74, Val Loss: 29.21236
+Epoch 75, Val Loss: 28.90565
+Epoch 76, Val Loss: 30.05576
+Epoch 77, Val Loss: 30.63659
+Epoch 78, Val Loss: 28.70111
+Epoch 79, Val Loss: 28.65299
+Epoch 80, Val Loss: 30.05983
+Epoch 81, Val Loss: 28.70874
+Epoch 82, Val Loss: 29.74682
+Epoch 83, Val Loss: 29.75299
+Epoch 84, Val Loss: 29.20732
+Epoch 85, Val Loss: 28.97398
+Epoch 86, Val Loss: 29.18779
+Epoch 87, Val Loss: 27.79079
+Epoch 88, Val Loss: 28.75093
+Epoch 89, Val Loss: 29.17885
+Epoch 90, Val Loss: 29.45747
+Epoch 91, Val Loss: 28.73010
+Epoch 92, Val Loss: 27.98035
+Epoch 93, Val Loss: 28.52976
+Epoch 94, Val Loss: 27.94916
+Epoch 95, Val Loss: 29.59646
+Epoch 96, Val Loss: 28.53033
+Epoch 97, Val Loss: 28.06606
+Epoch 98, Val Loss: 28.68561
+Epoch 99, Val Loss: 28.08200
+Epoch 100, Val Loss: 29.06015
+Epoch 101, Val Loss: 27.63977
+Epoch 102, Val Loss: 27.43037
+Epoch 103, Val Loss: 28.38409
+Epoch 104, Val Loss: 27.39270
+Epoch 105, Val Loss: 28.57762
+Epoch 106, Val Loss: 27.71979
+Epoch 107, Val Loss: 28.13697
+Epoch 108, Val Loss: 28.76006
+Epoch 109, Val Loss: 26.45013
+Epoch 110, Val Loss: 28.61389
+Epoch 111, Val Loss: 27.23808
+Epoch 112, Val Loss: 27.64465
+Epoch 113, Val Loss: 29.01098
+Epoch 114, Val Loss: 25.43524
+Epoch 115, Val Loss: 28.67061
+Epoch 116, Val Loss: 29.11957
+Epoch 117, Val Loss: 25.60172
+Epoch 118, Val Loss: 27.09714
+Epoch 119, Val Loss: 28.92068
+Epoch 120, Val Loss: 26.97463
+Epoch 121, Val Loss: 26.21675
+Epoch 122, Val Loss: 26.82367
+Epoch 123, Val Loss: 27.43995
+Epoch 124, Val Loss: 27.28663
+Epoch 125, Val Loss: 25.47100
+Epoch 126, Val Loss: 27.47348
+Epoch 127, Val Loss: 27.64002
+Epoch 128, Val Loss: 26.32518
+Epoch 129, Val Loss: 28.43877
+Epoch 130, Val Loss: 26.61330
+Epoch 131, Val Loss: 27.12440
+Epoch 132, Val Loss: 26.59756
+Epoch 133, Val Loss: 26.85482
+Epoch 134, Val Loss: 27.28341
+Epoch 135, Val Loss: 25.93714
+Early stopping applies.
+Trial 0 failed with parameters: {'p_m': 0.4983290659791568, 'alpha': 7.934358477708767, 'K': 10, 'beta': 7.2530436851575395} because of the following error: AttributeError("module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 46, in cross_validation
+    curr_model.predict(X_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel_torch.py", line 129, in predict
+    self.predictions = self.predict_helper(X)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py", line 61, in predict_helper
+    X = np.array(X, dtype=np.float)
+  File "/home/mburu/.local/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Trial 0 failed with value None.
