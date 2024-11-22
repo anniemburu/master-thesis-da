@@ -23,6 +23,7 @@ seed: 221 # Don't change
 scale: False
 target_encode: False
 one_hot_encode: True
+ordinal_encode : False
 
 # Training parameters
 batch_size: 128
@@ -34,6 +35,6 @@ logging_period: 100
 # About the data
 num_classes: 1  # always 1 for regression
 num_features: 11  #without target variable
-cat_idx: [0, 1, 2, 3,4,5,6,7,8,9,10]
+nominal_idx : [0, 1, 2, 3,4,5,6,7,8,9,10]
 # cat_dims: will be automatically set.
 #cat_dims: [9, 16, 7, 15, 6, 5, 2, 42]

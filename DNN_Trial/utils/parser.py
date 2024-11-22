@@ -33,6 +33,7 @@ def get_parser():
     parser.add('--scale', action="store_true", help="Normalize input data.")
     parser.add('--target_encode', action="store_true", help="Encode the targets that they start at 0. (0, 1, 2,...)")
     parser.add('--one_hot_encode', action="store_true", help="OneHotEncode the categorical features")
+    parser.add('--ordinal_encode', action="store_true", help="Encode Ordinal categorical features")
 
     parser.add('--batch_size', type=int, default=128, help="Batch size used for training")
     parser.add('--val_batch_size', type=int, default=128, help="Batch size used for training and testing")
@@ -43,6 +44,8 @@ def get_parser():
     parser.add('--num_features', type=int, required=True, help="Set the total number of features.")
     parser.add('--num_classes', type=int, default=1, help="Set the number of classes in a classification task.")
     parser.add('--cat_idx', type=int, action="append", help="Indices of the categorical features")
+    parser.add('--nominal_idx', type=int, action="append", help="Indices of the nominal features")
+    parser.add('--ordinal_idx', type=int, action="append", help="Indices of the ordinal features")
     parser.add('--cat_dims', type=int, action="append", help="Cardinality of the categorical features (is set "
                                                              "automatically, when the load_data function is used.")
     parser.add('--dropna_idx', type=int, action="append", help="Indices of columns to be dropped")
