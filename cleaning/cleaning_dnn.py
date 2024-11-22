@@ -26,7 +26,7 @@ variable_dict = {
     "546-sensory" : {'norm_cat' : ['Occasion', 'Judges', 'Interval', 'Sittings','Position', 'Squares',
                                     'Rows', 'Columns', 'Halfplot', 'Trellis', 'Method'],
                      'ord_cat': None, 'target' : 'Score', 'drop_cols' : None},
-    "41021-Moneyball" : {'norm_cat' : ['Team', 'League','Playoffs', 'G'],
+    "41021-Moneyball" : {'norm_cat' : ['Team', 'League','Playoffs'],
                          'ord_cat': None, 'target' : 'RS',
                          'drop_cols' : ['RankSeason', 'RankPlayoffs', 'OOBP', 'OSLG']},
     "41540-black_friday" : {'norm_cat' : ['Gender', 'Occupation', 'City_Category', 'Marital_Status',
