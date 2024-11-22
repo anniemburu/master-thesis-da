@@ -58,7 +58,7 @@ class VIME(BaseModelTorch):
         self.model_self.eval()
         self.model_semi.eval()
 
-        X = np.array(X, dtype=np.float)
+        X = X.astype(float)
         X = torch.tensor(X).float()
 
         test_dataset = TensorDataset(X)

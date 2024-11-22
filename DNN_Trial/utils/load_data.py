@@ -37,7 +37,7 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    if args.dataset == "Socmob":
+    elif args.dataset == "Socmob":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
@@ -46,10 +46,25 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
 
-    if args.dataset == "Sensory":
+    elif args.dataset == "Sensory":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         label_col = 'Score'
+
+        X = df.drop(label_col, axis=1).to_numpy()
+        y = df[label_col].to_numpy()
+
+    elif args.dataset == "Moneyball":
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41021-Moneyball/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/41021-Moneyball.csv')
+        label_col = 'RS'
+
+        cat_cols = get_colnames(df, args.cat_idx) #categorical columns
+
+        #drop cols
+        drop_cols = get_colidx(df, args.dropna_idx) #get the columns to drop
+        df.drop(columns=drop_cols, inplace=True)
+        args.cat_idx = get_colidx(df, cat_cols) #update index of categorical columns
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
