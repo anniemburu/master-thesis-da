@@ -49,6 +49,8 @@ def get_parser():
     parser.add('--cat_dims', type=int, action="append", help="Cardinality of the categorical features (is set "
                                                              "automatically, when the load_data function is used.")
     parser.add('--dropna_idx', type=int, action="append", help="Indices of columns to be dropped")
+    parser.add('--miss_cat_idx', type=int, action="append", help="Indices of categorical columns with missing values")
+    parser.add('--miss_num_idx', type=int, action="append", help="Indices of numerical columns with missing values")
 
     # Todo: Validate the arguments
 

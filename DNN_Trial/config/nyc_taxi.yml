@@ -11,7 +11,7 @@ gpu_ids: [0, 1]
 data_parallel: False
 
 # Optuna parameters - https://optuna.org/
-n_trials: 10
+n_trials: 100
 direction: minimize
 
 # Cross validation parameters
