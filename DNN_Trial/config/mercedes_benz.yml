@@ -1,0 +1,45 @@
+# General parameters
+dataset: Mercedes Benz
+model_name: VIME # LinearModel, KNN, SVM, DecisionTree, RandomForest, XGBoost, CatBoost, LightGBM, ModelTree
+                # MLP, TabNet, VIME, TabTransformer, RLN, DNFNet, STG, NAM, DeepFM, SAINT
+objective: regression # Don't change
+# optimize_hyperparameters: True
+
+# GPU parameters
+use_gpu: True
+gpu_ids: [0, 1]
+data_parallel: False
+
+# Optuna parameters - https://optuna.org/
+n_trials: 10
+direction: minimize
+
+# Cross validation parameters
+num_splits: 5
+shuffle: True
+seed: 221 # Don't change
+
+# Preprocessing parameters
+scale: True
+target_encode: False
+one_hot_encode: True
+ordinal_encode : False  #Set True if there is ordinal features
+
+# Training parameters
+batch_size: 128
+val_batch_size: 256
+early_stopping_rounds: 20
+epochs: 1000
+logging_period: 100
+
+# About the data
+num_classes: 1  # always 1 for regression
+num_features: 377  #without target variable
+nominal_idx : [1, 2, 3, 4, 5, 6, 7, 8]
+#ordinal_idx : []
+dropna_idx : [0]
+#miss_cat_idx : []
+#miss_num_idx : []
+
+# cat_dims: will be automatically set.
+#cat_dims: [9, 16, 7, 15, 6, 5, 2, 42]
