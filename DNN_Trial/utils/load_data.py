@@ -111,8 +111,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Diamonds":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42225-diamonds/raw_data.csv') #CLUSTER
-        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42225-diamonds.csv')
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42225-diamonds/raw_data.csv') #CLUSTER
+        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42225-diamonds.csv')
         label_col = 'price'
 
         X = df.drop(label_col, axis=1).to_numpy()
@@ -203,8 +203,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "House Sales":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42731-house_sales/raw_data.csv') #CLUSTER
-        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42731-house_sales.csv')
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42731-house_sales/raw_data.csv') #CLUSTER
+        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42731-house_sales.csv')
         label_col = 'price'
 
         norm_cols = get_colnames(df, args.nominal_idx) #nominal cols
