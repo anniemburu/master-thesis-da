@@ -367,6 +367,6 @@ def load_data(args):
             # Fit and transform the data
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
 
-    print(f'X after {X[0]} \n ')
-    print(f'y : {y[0]}')
+    #print(f'X after {X[0]} \n ')
+    #print(f'y : {y[0]}')
     return X, y
