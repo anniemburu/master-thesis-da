@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=RandomForest_Titans_V1
+#SBATCH --job-name=VIME_Titans_V1
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -15,13 +15,13 @@ CONFIGS=(
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
-    printf 'Training RandomForest Vesion 1 with Dataset: %s \n\n'  "$config" 
+    printf 'Training CatBoost Vesion 1 with Dataset: %s \n\n'  "$config" 
     printf "\n\n----------------------------------------------------------------------------\n"
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/miniconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name RandomForest --optimize_hyperparameters
+    srun python3 train.py --config "$config" --model_name CatBoost --optimize_hyperparameters
 done
 
 

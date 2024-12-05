@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=VIME_Odyssey_V1
+#SBATCH --job-name=RandomForest_Odyssey_V1
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
