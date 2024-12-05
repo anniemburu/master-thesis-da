@@ -1,20 +1,18 @@
 #!/bin/bash
-<<<<<<< HEAD
+
 #SBATCH --job-name=RF_Olympus_V1
-=======
-#SBATCH --job-name=RandomForest_Olympus_V1
->>>>>>> 52e6ff276a8b8f4192a2eae485a10da29fac71a4
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
 #SBATCH --partition=STUD
 #SBATCH --gres=gpu:1
 
-CONFIGS=("config/boston.yml"
-        "config/socmob.yml"
-        "config/sensory.yml"
-        "config/moneyball.yml"
-        "config/black_friday.yml"
+CONFIGS=(
+    "config/boston.yml"
+    "config/socmob.yml"
+    "config/sensory.yml"
+    "config/moneyball.yml"
+    "config/black_friday.yml"
           )
 
 for config in "${CONFIGS[@]}"; do
