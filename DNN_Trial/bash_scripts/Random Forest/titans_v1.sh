@@ -1,5 +1,9 @@
 #!/bin/bash
+<<<<<<< HEAD
 #SBATCH --job-name=RF_Titans_V1
+=======
+#SBATCH --job-name=RandomForest_Titans_V1
+>>>>>>> 52e6ff276a8b8f4192a2eae485a10da29fac71a4
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -7,6 +11,7 @@
 #SBATCH --gres=gpu:1
 
 CONFIGS=(
+    "config/sat11.yml"
     "config/diamonds.yml"
     "config/house_prices_nominal.yml"
     "config/mercedes_benz.yml"
