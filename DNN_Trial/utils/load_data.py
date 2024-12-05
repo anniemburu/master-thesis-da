@@ -95,14 +95,15 @@ def load_data(args):
 
 
     elif args.dataset == "SAT11":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression.csv')
         label_col = 'runtime'
 
         norm_cols = get_colnames(df, args.nominal_idx) #nominal cols
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(axis=1, inplace=True) #drop missing
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
