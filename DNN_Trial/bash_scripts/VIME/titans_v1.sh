@@ -7,6 +7,7 @@
 #SBATCH --gres=gpu:1
 
 CONFIGS=(
+    "config/sat11.yml"
     "config/diamonds.yml"
     "config/house_prices_nominal.yml"
     "config/mercedes_benz.yml"
