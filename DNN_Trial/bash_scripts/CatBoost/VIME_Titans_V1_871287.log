@@ -1,0 +1,183 @@
+
+
+----------------------------------------------------------------------------
+Training CatBoost Vesion 1 with Dataset: config/sat11.yml 
+
+
+
+----------------------------------------------------------------------------
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/sat11.yml', data_parallel=False, dataset='SAT11', direction='minimize', dropna_idx=[116], early_stopping_rounds=20, epochs=1000, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='CatBoost', n_trials=100, nominal_idx=[115], num_classes=1, num_features=117, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+Loading dataset SAT11...
+Dataset loaded!
+(4440, 106)
+Scaling the data...
+args.num_features: 120
+New Shape: (4440, 120)
+A new study created in RDB with name: CatBoost_SAT11
+Trial 0 failed with parameters: {'learning_rate': 0.08494024277416304, 'max_depth': 7, 'l2_leaf_reg': 13.210193406377929} because of the following error: CatBoostError("catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/SAT11/catboost_info").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 41, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 112, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 5299, in fit
+    return self._fit(X, y, cat_features, None, None, None, sample_weight, None, None, None, None, baseline,
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 2037, in _fit
+    self._train(
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 1464, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4393, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4442, in _catboost._CatBoost._train
+_catboost.CatBoostError: catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/SAT11/catboost_info
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training CatBoost Vesion 1 with Dataset: config/diamonds.yml 
+
+
+
+----------------------------------------------------------------------------
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/diamonds.yml', data_parallel=False, dataset='Diamonds', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=1000, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='CatBoost', n_trials=100, nominal_idx=None, num_classes=1, num_features=9, num_splits=5, objective='regression', one_hot_encode=False, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1, 2, 3], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+Loading dataset Diamonds...
+Dataset loaded!
+(53940, 9)
+Scaling the data...
+A new study created in RDB with name: CatBoost_Diamonds
+Trial 0 failed with parameters: {'learning_rate': 0.1344654150294894, 'max_depth': 2, 'l2_leaf_reg': 2.5556520153195783} because of the following error: CatBoostError("catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/Diamonds/catboost_info").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 41, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 112, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 5299, in fit
+    return self._fit(X, y, cat_features, None, None, None, sample_weight, None, None, None, None, baseline,
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 2037, in _fit
+    self._train(
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 1464, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4393, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4442, in _catboost._CatBoost._train
+_catboost.CatBoostError: catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/Diamonds/catboost_info
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training CatBoost Vesion 1 with Dataset: config/house_prices_nominal.yml 
+
+
+
+----------------------------------------------------------------------------
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/house_prices_nominal.yml', data_parallel=False, dataset='House Prices Nominal', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=1000, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=[6, 25, 30, 31, 32, 33, 35, 42, 57, 58, 60, 63, 64, 72, 73, 74], miss_num_idx=[3, 26, 59], model_name='CatBoost', n_trials=100, nominal_idx=[2, 7, 12], num_classes=1, num_features=80, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31, 32, 33, 35, 39, 40, 41, 42, 53, 55, 57, 58, 60, 63, 64, 65, 72, 73, 74, 78, 79], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+Loading dataset House Prices Nominal...
+Dataset loaded!
+(1460, 79)
+Scaling the data...
+args.num_features: 110
+New Shape: (1460, 110)
+A new study created in RDB with name: CatBoost_House Prices Nominal
+Trial 0 failed with parameters: {'learning_rate': 0.03781259102763196, 'max_depth': 2, 'l2_leaf_reg': 5.653144092197295} because of the following error: CatBoostError("catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/House Prices Nominal/catboost_info").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 41, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 112, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 5299, in fit
+    return self._fit(X, y, cat_features, None, None, None, sample_weight, None, None, None, None, baseline,
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 2037, in _fit
+    self._train(
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 1464, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4393, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4442, in _catboost._CatBoost._train
+_catboost.CatBoostError: catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/House Prices Nominal/catboost_info
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training CatBoost Vesion 1 with Dataset: config/mercedes_benz.yml 
+
+
+
+----------------------------------------------------------------------------
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/mercedes_benz.yml', data_parallel=False, dataset='Mercedes Benz', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=1000, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='CatBoost', n_trials=100, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8], num_classes=1, num_features=377, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+Loading dataset Mercedes Benz...
+Dataset loaded!
+(4209, 376)
+Scaling the data...
+args.num_features: 563
+New Shape: (4209, 563)
+A new study created in RDB with name: CatBoost_Mercedes Benz
+Trial 0 failed with parameters: {'learning_rate': 0.016816430233603928, 'max_depth': 8, 'l2_leaf_reg': 12.26123647086882} because of the following error: CatBoostError("catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/Mercedes Benz/catboost_info").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 41, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 112, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 5299, in fit
+    return self._fit(X, y, cat_features, None, None, None, sample_weight, None, None, None, None, baseline,
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 2037, in _fit
+    self._train(
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 1464, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4393, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4442, in _catboost._CatBoost._train
+_catboost.CatBoostError: catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/Mercedes Benz/catboost_info
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training CatBoost Vesion 1 with Dataset: config/allstate.yml 
+
+
+
+----------------------------------------------------------------------------
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/allstate.yml', data_parallel=False, dataset='Allstate Claims', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=1000, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='CatBoost', n_trials=100, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116], num_classes=1, num_features=131, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+Loading dataset Allstate Claims...
+Dataset loaded!
+(188318, 130)
+Scaling the data...
+args.num_features: 1153
+New Shape: (188318, 1153)
+A new study created in RDB with name: CatBoost_Allstate Claims
+Trial 0 failed with parameters: {'learning_rate': 0.024534696275018596, 'max_depth': 2, 'l2_leaf_reg': 9.077244935266243} because of the following error: CatBoostError("catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/Allstate Claims/catboost_info").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 95, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args)
+  File "train.py", line 41, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 112, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 5299, in fit
+    return self._fit(X, y, cat_features, None, None, None, sample_weight, None, None, None, None, baseline,
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 2037, in _fit
+    self._train(
+  File "/home/mburu/.local/lib/python3.8/site-packages/catboost/core.py", line 1464, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4393, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4442, in _catboost._CatBoost._train
+_catboost.CatBoostError: catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/Allstate Claims/catboost_info
+Trial 0 failed with value None.
