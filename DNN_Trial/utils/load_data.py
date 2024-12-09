@@ -95,8 +95,8 @@ def load_data(args):
 
 
     elif args.dataset == "SAT11":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression/raw_data.csv') #CLUSTER
-        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression.csv')
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression/raw_data.csv') #CLUSTER
+        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression.csv')
         label_col = 'runtime'
 
         norm_cols = get_colnames(df, args.nominal_idx) #nominal cols
