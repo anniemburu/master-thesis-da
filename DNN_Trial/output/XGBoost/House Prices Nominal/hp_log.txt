@@ -610,3 +610,591 @@ Train time: 1.159733
 Test time: 0.016770
 
 ---------------------------------------
+2024-12-10 09:48:36.815380
+Parameters: {'max_depth': 4, 'alpha': 0.0036418827895449567, 'lambda': 1.2568502057826755e-05, 'eta': 0.014396048302046204, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 606956259.00917
+MSE - std: 164441092.60588
+R2 - mean: 0.90387
+R2 - std: 0.01626
+
+Train time: 1.639707
+Test time: 0.029436
+
+---------------------------------------
+2024-12-10 09:48:46.256391
+Parameters: {'max_depth': 4, 'alpha': 0.0044529291436841145, 'lambda': 2.5707693728467004e-06, 'eta': 0.01179058475414482, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 609372449.60803
+MSE - std: 168700925.76150
+R2 - mean: 0.90349
+R2 - std: 0.01717
+
+Train time: 1.826779
+Test time: 0.027836
+
+---------------------------------------
+2024-12-10 09:48:59.139862
+Parameters: {'max_depth': 5, 'alpha': 0.0026498734645213017, 'lambda': 2.0519457169854485e-07, 'eta': 0.011071845723265077, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 631738524.08424
+MSE - std: 140228026.12591
+R2 - mean: 0.89930
+R2 - std: 0.01343
+
+Train time: 2.480656
+Test time: 0.033406
+
+---------------------------------------
+2024-12-10 09:49:07.881309
+Parameters: {'max_depth': 4, 'alpha': 0.005785205886874603, 'lambda': 5.2668925431350995e-05, 'eta': 0.013229795285640859, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 606798448.88890
+MSE - std: 162669575.47422
+R2 - mean: 0.90373
+R2 - std: 0.01666
+
+Train time: 1.680231
+Test time: 0.054787
+
+---------------------------------------
+2024-12-10 09:49:16.829942
+Parameters: {'max_depth': 4, 'alpha': 0.004530386034353988, 'lambda': 5.3784824019214617e-05, 'eta': 0.012498027054529718, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 612187961.66350
+MSE - std: 162067374.54502
+R2 - mean: 0.90296
+R2 - std: 0.01596
+
+Train time: 1.731173
+Test time: 0.042645
+
+---------------------------------------
+2024-12-10 09:49:23.938734
+Parameters: {'max_depth': 3, 'alpha': 0.0003860782530279964, 'lambda': 1.1289024213003642e-05, 'eta': 0.010074340079176307, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 667357973.69929
+MSE - std: 212305543.07298
+R2 - mean: 0.89490
+R2 - std: 0.02225
+
+Train time: 1.392670
+Test time: 0.030075
+
+---------------------------------------
+2024-12-10 09:49:35.763343
+Parameters: {'max_depth': 5, 'alpha': 0.00788383057250506, 'lambda': 0.0004481281718553229, 'eta': 0.013813713796848554, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 629261988.95934
+MSE - std: 134592121.98323
+R2 - mean: 0.89965
+R2 - std: 0.01255
+
+Train time: 2.279020
+Test time: 0.039090
+
+---------------------------------------
+2024-12-10 09:49:43.304814
+Parameters: {'max_depth': 4, 'alpha': 0.0012984486500370225, 'lambda': 0.0043479200276512605, 'eta': 0.015836330048804064, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 604733897.55805
+MSE - std: 163453249.79832
+R2 - mean: 0.90418
+R2 - std: 0.01644
+
+Train time: 1.451976
+Test time: 0.029811
+
+---------------------------------------
+2024-12-10 09:49:49.853216
+Parameters: {'max_depth': 3, 'alpha': 0.00017882368154949197, 'lambda': 0.05579287488140205, 'eta': 0.015589468282897652, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 640215632.69051
+MSE - std: 208772149.22533
+R2 - mean: 0.89926
+R2 - std: 0.02186
+
+Train time: 1.274240
+Test time: 0.030463
+
+---------------------------------------
+2024-12-10 09:50:24.976616
+Parameters: {'max_depth': 8, 'alpha': 0.001331405904175755, 'lambda': 0.012414451588994627, 'eta': 0.02207870889116904, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 881812844.48229
+MSE - std: 179299410.17729
+R2 - mean: 0.85891
+R2 - std: 0.01678
+
+Train time: 6.780715
+Test time: 0.051068
+
+---------------------------------------
+2024-12-10 09:50:33.636239
+Parameters: {'max_depth': 4, 'alpha': 0.0006641175934361706, 'lambda': 2.4274134708116042e-05, 'eta': 0.012116281044803588, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 614677251.16724
+MSE - std: 171251528.93710
+R2 - mean: 0.90271
+R2 - std: 0.01742
+
+Train time: 1.662074
+Test time: 0.026412
+
+---------------------------------------
+2024-12-10 09:50:41.482049
+Parameters: {'max_depth': 4, 'alpha': 0.003078384654812153, 'lambda': 0.00011736301789665239, 'eta': 0.013923637977151052, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 613225766.91359
+MSE - std: 173752924.61081
+R2 - mean: 0.90296
+R2 - std: 0.01805
+
+Train time: 1.510434
+Test time: 0.021959
+
+---------------------------------------
+2024-12-10 09:50:49.393396
+Parameters: {'max_depth': 4, 'alpha': 5.6672637801792475e-05, 'lambda': 0.0022469427063854003, 'eta': 0.015913961402661464, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 615817625.20914
+MSE - std: 174487054.17159
+R2 - mean: 0.90260
+R2 - std: 0.01769
+
+Train time: 1.339407
+Test time: 0.024206
+
+---------------------------------------
+2024-12-10 09:50:57.860792
+Parameters: {'max_depth': 5, 'alpha': 0.02215635595120528, 'lambda': 2.3605272529655687e-06, 'eta': 0.020568764940055082, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 636638199.32314
+MSE - std: 147523697.36603
+R2 - mean: 0.89872
+R2 - std: 0.01382
+
+Train time: 1.647346
+Test time: 0.029591
+
+---------------------------------------
+2024-12-10 09:51:02.129473
+Parameters: {'max_depth': 4, 'alpha': 0.010313133549228958, 'lambda': 0.004135132930541195, 'eta': 0.03383650020899268, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 616829890.33037
+MSE - std: 164858676.11241
+R2 - mean: 0.90235
+R2 - std: 0.01630
+
+Train time: 0.823619
+Test time: 0.023888
+
+---------------------------------------
+2024-12-10 09:51:14.532352
+Parameters: {'max_depth': 5, 'alpha': 0.001992994750149737, 'lambda': 2.0441759636889402e-05, 'eta': 0.0117329048670664, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 633047976.88641
+MSE - std: 146378129.58155
+R2 - mean: 0.89926
+R2 - std: 0.01384
+
+Train time: 2.382720
+Test time: 0.040104
+
+---------------------------------------
+2024-12-10 09:51:20.286295
+Parameters: {'max_depth': 3, 'alpha': 0.01622654191323215, 'lambda': 0.0002860982061121405, 'eta': 0.018713859944538974, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 643715782.96928
+MSE - std: 209391597.17332
+R2 - mean: 0.89862
+R2 - std: 0.02205
+
+Train time: 1.120281
+Test time: 0.022198
+
+---------------------------------------
+2024-12-10 09:51:28.440824
+Parameters: {'max_depth': 4, 'alpha': 0.0070956606223176125, 'lambda': 5.656773090117883e-05, 'eta': 0.013479942606416075, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 615426049.24269
+MSE - std: 172196715.26264
+R2 - mean: 0.90261
+R2 - std: 0.01743
+
+Train time: 1.559918
+Test time: 0.025633
+
+---------------------------------------
+2024-12-10 09:51:38.761990
+Parameters: {'max_depth': 5, 'alpha': 9.346602166212306e-06, 'lambda': 7.330664281581884e-06, 'eta': 0.01675999924674892, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 634357287.83058
+MSE - std: 138939605.57286
+R2 - mean: 0.89888
+R2 - std: 0.01316
+
+Train time: 1.987506
+Test time: 0.030887
+
+---------------------------------------
+2024-12-10 09:51:48.333164
+Parameters: {'max_depth': 4, 'alpha': 0.05258419350337882, 'lambda': 0.0006867589737830024, 'eta': 0.011051564500645098, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 613036607.11401
+MSE - std: 166238717.17121
+R2 - mean: 0.90281
+R2 - std: 0.01698
+
+Train time: 1.850008
+Test time: 0.035270
+
+---------------------------------------
+2024-12-10 09:51:52.251163
+Parameters: {'max_depth': 4, 'alpha': 0.13581073424701182, 'lambda': 2.219234985680915e-06, 'eta': 0.03884711263567474, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 608599296.78730
+MSE - std: 173501224.65302
+R2 - mean: 0.90373
+R2 - std: 0.01782
+
+Train time: 0.763022
+Test time: 0.009938
+
+---------------------------------------
+2024-12-10 09:53:37.867286
+Parameters: {'max_depth': 10, 'alpha': 0.12487690950357781, 'lambda': 2.553642335477594e-06, 'eta': 0.01487239566512314, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 1153942832.53255
+MSE - std: 221681151.19691
+R2 - mean: 0.81385
+R2 - std: 0.02901
+
+Train time: 20.343915
+Test time: 0.079227
+
+---------------------------------------
+2024-12-10 09:53:46.803162
+Parameters: {'max_depth': 4, 'alpha': 0.005003244533239454, 'lambda': 0.6510887662836593, 'eta': 0.012900858911932359, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 594503925.41446
+MSE - std: 154402226.88890
+R2 - mean: 0.90537
+R2 - std: 0.01828
+
+Train time: 1.712850
+Test time: 0.021864
+
+---------------------------------------
+2024-12-10 09:53:51.912029
+Parameters: {'max_depth': 4, 'alpha': 0.0008871138674131772, 'lambda': 0.0913524404853661, 'eta': 0.023977114866439712, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 609545295.13283
+MSE - std: 165905186.26368
+R2 - mean: 0.90352
+R2 - std: 0.01629
+
+Train time: 1.023855
+Test time: 0.012126
+
+---------------------------------------
+2024-12-10 09:54:00.659115
+Parameters: {'max_depth': 6, 'alpha': 0.026659291767361436, 'lambda': 0.028834735837909537, 'eta': 0.04456726664262519, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 690555789.15619
+MSE - std: 140509221.08798
+R2 - mean: 0.88949
+R2 - std: 0.01398
+
+Train time: 1.691794
+Test time: 0.029358
+
+---------------------------------------
+2024-12-10 09:54:07.635897
+Parameters: {'max_depth': 3, 'alpha': 0.16061755063103245, 'lambda': 0.752634198167382, 'eta': 0.012914397710702208, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 686600254.36174
+MSE - std: 223347915.54034
+R2 - mean: 0.89224
+R2 - std: 0.02251
+
+Train time: 1.346361
+Test time: 0.033706
+
+---------------------------------------
+2024-12-10 09:54:12.877184
+Parameters: {'max_depth': 5, 'alpha': 0.289395100758341, 'lambda': 0.2992987072391664, 'eta': 0.0397993594945358, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 645632998.44694
+MSE - std: 148160772.20694
+R2 - mean: 0.89752
+R2 - std: 0.01261
+
+Train time: 0.982518
+Test time: 0.021488
+
+---------------------------------------
+2024-12-10 09:54:18.932418
+Parameters: {'max_depth': 4, 'alpha': 0.05841278195291847, 'lambda': 0.22140714130179512, 'eta': 0.019736708748837536, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 604736879.19406
+MSE - std: 150122775.06286
+R2 - mean: 0.90395
+R2 - std: 0.01501
+
+Train time: 1.162658
+Test time: 0.019015
+
+---------------------------------------
+2024-12-10 09:54:25.251892
+Parameters: {'max_depth': 4, 'alpha': 0.05898234441550682, 'lambda': 0.2420275466145566, 'eta': 0.019140676471375427, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 591141827.55819
+MSE - std: 150476472.94780
+R2 - mean: 0.90616
+R2 - std: 0.01506
+
+Train time: 1.218719
+Test time: 0.026640
+
+---------------------------------------
+2024-12-10 09:54:31.587667
+Parameters: {'max_depth': 4, 'alpha': 0.05858926849785571, 'lambda': 0.278049381224275, 'eta': 0.0192927629538749, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 599913876.31040
+MSE - std: 146585933.85720
+R2 - mean: 0.90447
+R2 - std: 0.01616
+
+Train time: 1.232536
+Test time: 0.023593
+
+---------------------------------------
+2024-12-10 09:54:37.630543
+Parameters: {'max_depth': 4, 'alpha': 0.05950630464083182, 'lambda': 0.2969881655438653, 'eta': 0.019993539664321897, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 598682844.83210
+MSE - std: 146801545.14497
+R2 - mean: 0.90460
+R2 - std: 0.01634
+
+Train time: 1.169404
+Test time: 0.018007
+
+---------------------------------------
+2024-12-10 09:54:42.072657
+Parameters: {'max_depth': 4, 'alpha': 0.05573678173325817, 'lambda': 0.48047447733702414, 'eta': 0.030241899438761728, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 589042597.73528
+MSE - std: 140177413.82999
+R2 - mean: 0.90598
+R2 - std: 0.01620
+
+Train time: 0.862970
+Test time: 0.013054
+
+---------------------------------------
+2024-12-10 09:54:48.228099
+Parameters: {'max_depth': 4, 'alpha': 0.07104081609021852, 'lambda': 0.38812341603440914, 'eta': 0.019439818493163664, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 594124842.15816
+MSE - std: 146969686.14503
+R2 - mean: 0.90549
+R2 - std: 0.01587
+
+Train time: 1.191424
+Test time: 0.025229
+
+---------------------------------------
+2024-12-10 09:54:54.411266
+Parameters: {'max_depth': 5, 'alpha': 0.053766976849067866, 'lambda': 0.3670480959417645, 'eta': 0.030445231108550058, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 620414555.80740
+MSE - std: 132116728.32114
+R2 - mean: 0.90118
+R2 - std: 0.01177
+
+Train time: 1.186271
+Test time: 0.023340
+
+---------------------------------------
+2024-12-10 09:55:21.268197
+Parameters: {'max_depth': 9, 'alpha': 0.07234162803735521, 'lambda': 0.21732623179628452, 'eta': 0.02582448953344121, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 718746434.55402
+MSE - std: 96547987.46913
+R2 - mean: 0.88400
+R2 - std: 0.01246
+
+Train time: 5.212503
+Test time: 0.036565
+
+---------------------------------------
+2024-12-10 09:55:26.628505
+Parameters: {'max_depth': 2, 'alpha': 0.03199194252682077, 'lambda': 0.4793787327610407, 'eta': 0.022669630553118447, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 662982820.41226
+MSE - std: 196225644.93084
+R2 - mean: 0.89512
+R2 - std: 0.02010
+
+Train time: 0.984165
+Test time: 0.018544
+
+---------------------------------------
+2024-12-10 09:55:32.850771
+Parameters: {'max_depth': 4, 'alpha': 0.10464035977559982, 'lambda': 0.9110157886728607, 'eta': 0.01992205271864472, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 613927733.64943
+MSE - std: 149680782.43289
+R2 - mean: 0.90259
+R2 - std: 0.01448
+
+Train time: 1.192534
+Test time: 0.022983
+
+---------------------------------------
+2024-12-10 09:55:43.849943
+Parameters: {'max_depth': 5, 'alpha': 0.5445052745965347, 'lambda': 0.14153470743834037, 'eta': 0.018384594391738434, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 636078102.89072
+MSE - std: 151879681.85385
+R2 - mean: 0.89889
+R2 - std: 0.01429
+
+Train time: 2.117320
+Test time: 0.065217
+
+---------------------------------------
+2024-12-10 09:55:48.101837
+Parameters: {'max_depth': 3, 'alpha': 0.05618881844418964, 'lambda': 0.0629499857556548, 'eta': 0.027723030123160974, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 653296054.73428
+MSE - std: 220997796.40915
+R2 - mean: 0.89743
+R2 - std: 0.02294
+
+Train time: 0.826159
+Test time: 0.014249
+
+---------------------------------------
+2024-12-10 09:55:53.555554
+Parameters: {'max_depth': 4, 'alpha': 0.28079520667115265, 'lambda': 0.19911623334670173, 'eta': 0.021372758660307068, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 604872977.79145
+MSE - std: 154090437.98810
+R2 - mean: 0.90395
+R2 - std: 0.01580
+
+Train time: 1.059787
+Test time: 0.019328
+
+---------------------------------------
+2024-12-10 09:55:59.756478
+Parameters: {'max_depth': 4, 'alpha': 0.3035752519392765, 'lambda': 0.16492564984290237, 'eta': 0.02019549540467024, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 606049359.18903
+MSE - std: 152040625.65781
+R2 - mean: 0.90387
+R2 - std: 0.01428
+
+Train time: 1.192782
+Test time: 0.020839
+
+---------------------------------------
+2024-12-10 09:56:05.679981
+Parameters: {'max_depth': 4, 'alpha': 0.03166081258941216, 'lambda': 0.540863307463929, 'eta': 0.021459421422009895, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 608186985.14026
+MSE - std: 163434645.19385
+R2 - mean: 0.90324
+R2 - std: 0.01930
+
+Train time: 1.149077
+Test time: 0.020489
+
+---------------------------------------
+2024-12-10 09:56:12.177882
+Parameters: {'max_depth': 4, 'alpha': 0.6226156927394377, 'lambda': 0.27372782073697477, 'eta': 0.017577106491195704, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 601810374.50165
+MSE - std: 152798825.98160
+R2 - mean: 0.90441
+R2 - std: 0.01591
+
+Train time: 1.257029
+Test time: 0.024275
+
+---------------------------------------
+2024-12-10 09:56:17.455963
+Parameters: {'max_depth': 4, 'alpha': 0.47319670304759676, 'lambda': 0.24442362348259955, 'eta': 0.024243666366076454, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 609681226.16076
+MSE - std: 154893606.37230
+R2 - mean: 0.90326
+R2 - std: 0.01522
+
+Train time: 1.022255
+Test time: 0.019303
+
+---------------------------------------
+2024-12-10 09:56:26.682477
+Parameters: {'max_depth': 5, 'alpha': 0.756230434065044, 'lambda': 0.0241034629977581, 'eta': 0.017827163291513758, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 625600980.87586
+MSE - std: 135344064.56888
+R2 - mean: 0.90028
+R2 - std: 0.01257
+
+Train time: 1.765592
+Test time: 0.028084
+
+---------------------------------------
+2024-12-10 09:56:33.595591
+Parameters: {'max_depth': 4, 'alpha': 0.3333429523699545, 'lambda': 0.07543160733198487, 'eta': 0.016843498000308918, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 611252697.97597
+MSE - std: 170989935.73852
+R2 - mean: 0.90340
+R2 - std: 0.01673
+
+Train time: 1.337712
+Test time: 0.024586
+
+---------------------------------------
+2024-12-10 09:58:30.680665
+Parameters: {'max_depth': 12, 'alpha': 0.14540340675980862, 'lambda': 0.03691679625080062, 'eta': 0.018969278717395035, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 920208861.25187
+MSE - std: 122958703.50741
+R2 - mean: 0.85117
+R2 - std: 0.01738
+
+Train time: 22.764797
+Test time: 0.087338
+
+---------------------------------------
+2024-12-10 09:58:35.042630
+Parameters: {'max_depth': 4, 'alpha': 0.018699966353357994, 'lambda': 0.17856318438221447, 'eta': 0.03012236427989207, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 609067202.95185
+MSE - std: 156084517.40184
+R2 - mean: 0.90340
+R2 - std: 0.01498
+
+Train time: 0.841327
+Test time: 0.019768
+
+---------------------------------------
+2024-12-10 09:59:10.484583
+Parameters: {'max_depth': 11, 'alpha': 0.06930760749126802, 'lambda': 0.41834602783073316, 'eta': 0.03389171840502954, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 675122937.60675
+MSE - std: 112746448.14213
+R2 - mean: 0.89121
+R2 - std: 0.01544
+
+Train time: 6.889160
+Test time: 0.046535
+
+---------------------------------------
