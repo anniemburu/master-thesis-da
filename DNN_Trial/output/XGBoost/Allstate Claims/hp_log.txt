@@ -730,3 +730,75 @@ Train time: 29.891494
 Test time: 3.194461
 
 ---------------------------------------
+2024-12-10 17:26:33.727726
+Parameters: {'max_depth': 9, 'alpha': 0.1405378079860334, 'lambda': 0.018552694881803226, 'eta': 0.02904644164266264, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3646489.87504
+MSE - std: 228364.45495
+R2 - mean: 0.56787
+R2 - std: 0.01379
+
+Train time: 87.063935
+Test time: 4.356411
+
+---------------------------------------
+2024-12-10 17:32:43.915235
+Parameters: {'max_depth': 8, 'alpha': 0.43998356591993654, 'lambda': 0.044624993522220255, 'eta': 0.02687149936576639, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3629643.16643
+MSE - std: 204954.18049
+R2 - mean: 0.56980
+R2 - std: 0.01077
+
+Train time: 70.511763
+Test time: 4.536900
+
+---------------------------------------
+2024-12-10 17:39:00.922889
+Parameters: {'max_depth': 9, 'alpha': 0.026033788671012414, 'lambda': 0.009123714503763574, 'eta': 0.03762942577398494, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3647565.06875
+MSE - std: 216273.83388
+R2 - mean: 0.56771
+R2 - std: 0.01215
+
+Train time: 71.880903
+Test time: 4.358819
+
+---------------------------------------
+2024-12-10 17:44:11.370555
+Parameters: {'max_depth': 7, 'alpha': 0.00720564876394518, 'lambda': 0.16697326423940106, 'eta': 0.02394550965242851, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3622598.09819
+MSE - std: 210088.50208
+R2 - mean: 0.57064
+R2 - std: 0.01178
+
+Train time: 58.805435
+Test time: 4.487933
+
+---------------------------------------
+2024-12-10 17:49:09.990065
+Parameters: {'max_depth': 7, 'alpha': 0.009932705501561216, 'lambda': 0.22706930713036638, 'eta': 0.02369918890484156, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3631278.61787
+MSE - std: 210201.98375
+R2 - mean: 0.56962
+R2 - std: 0.01154
+
+Train time: 56.547387
+Test time: 4.425520
+
+---------------------------------------
+2024-12-10 18:19:41.051202
+Parameters: {'max_depth': 12, 'alpha': 0.020764659684617486, 'lambda': 0.647868409852825, 'eta': 0.01811338592845775, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3672966.57036
+MSE - std: 218441.18121
+R2 - mean: 0.56466
+R2 - std: 0.01349
+
+Train time: 360.801434
+Test time: 5.950254
+
+---------------------------------------
