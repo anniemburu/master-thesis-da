@@ -1,0 +1,14 @@
+2024-12-10 01:47:31.148998
+XGBoost - Brazillian Houses
+
+MSE - mean: 17402991.31232
+MSE - std: 13906313.04821
+R2 - mean: 0.80848
+R2 - std: 0.22715
+
+Train time: 0.618697
+Test time: 0.044320
+
+Best Parameters: {'max_depth': 2, 'alpha': 0.34980397801746543, 'lambda': 0.3275405880640304, 'eta': 0.017925787553683785, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

@@ -1,0 +1,14 @@
+2024-12-10 06:56:41.942172
+XGBoost - House Sales
+
+MSE - mean: 14063534183.98081
+MSE - std: 3034267121.12793
+R2 - mean: 0.89559
+R2 - std: 0.02098
+
+Train time: 1.794470
+Test time: 0.158827
+
+Best Parameters: {'max_depth': 5, 'alpha': 2.874996481188489e-06, 'lambda': 0.00019152159657508756, 'eta': 0.07317314603436285, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

@@ -1,0 +1,14 @@
+2024-12-10 07:04:36.224968
+XGBoost - MIP
+
+MSE - mean: 705242.77787
+MSE - std: 102004.00263
+R2 - mean: 0.99913
+R2 - std: 0.00015
+
+Train time: 0.452996
+Test time: 0.008460
+
+Best Parameters: {'max_depth': 4, 'alpha': 0.04819342960619537, 'lambda': 0.9859138870346479, 'eta': 0.10113051764067468, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

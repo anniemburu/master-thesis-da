@@ -1,0 +1,14 @@
+2024-12-10 07:28:01.927428
+XGBoost - Socmob
+
+MSE - mean: 202.66552
+MSE - std: 79.37686
+R2 - mean: 0.87122
+R2 - std: 0.06093
+
+Train time: 2.076366
+Test time: 0.026003
+
+Best Parameters: {'max_depth': 9, 'alpha': 0.00021827408412994793, 'lambda': 0.9948835376183525, 'eta': 0.014147235442426642, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

@@ -1,0 +1,14 @@
+2024-12-10 07:41:20.356066
+XGBoost - Moneyball
+
+MSE - mean: 501.29801
+MSE - std: 45.43900
+R2 - mean: 0.93975
+R2 - std: 0.00702
+
+Train time: 0.511598
+Test time: 0.006964
+
+Best Parameters: {'max_depth': 2, 'alpha': 0.010798306575651387, 'lambda': 0.13661371717896892, 'eta': 0.06878357615175301, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

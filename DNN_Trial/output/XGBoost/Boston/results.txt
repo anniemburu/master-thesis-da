@@ -1,0 +1,14 @@
+2024-12-10 07:10:49.619045
+XGBoost - Boston
+
+MSE - mean: 8.58917
+MSE - std: 0.39163
+R2 - mean: 0.89601
+R2 - std: 0.01171
+
+Train time: 0.432016
+Test time: 0.012093
+
+Best Parameters: {'max_depth': 3, 'alpha': 0.012586352103154447, 'lambda': 0.0004743974449793586, 'eta': 0.07416212244200962, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
