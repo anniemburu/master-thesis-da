@@ -802,3 +802,27 @@ Train time: 360.801434
 Test time: 5.950254
 
 ---------------------------------------
+2024-12-10 18:33:20.731617
+Parameters: {'max_depth': 10, 'alpha': 0.004063949281338401, 'lambda': 0.1304034646239034, 'eta': 0.021127761305133365, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3660231.07222
+MSE - std: 214281.43664
+R2 - mean: 0.56619
+R2 - std: 0.01220
+
+Train time: 159.686947
+Test time: 5.481285
+
+---------------------------------------
+2024-12-10 18:36:22.655068
+Parameters: {'max_depth': 5, 'alpha': 0.0006801232241460085, 'lambda': 0.19573040004384643, 'eta': 0.03148556828828674, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+MSE - mean: 3644216.91098
+MSE - std: 211909.39866
+R2 - mean: 0.56808
+R2 - std: 0.01167
+
+Train time: 33.978744
+Test time: 3.870797
+
+---------------------------------------
