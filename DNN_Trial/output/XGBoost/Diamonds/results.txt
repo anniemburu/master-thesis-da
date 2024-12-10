@@ -1,0 +1,14 @@
+2024-12-10 09:38:20.902971
+XGBoost - Diamonds
+
+MSE - mean: 273278.55361
+MSE - std: 17048.90305
+R2 - mean: 0.98283
+R2 - std: 0.00091
+
+Train time: 2.964382
+Test time: 0.352758
+
+Best Parameters: {'max_depth': 7, 'alpha': 2.3906089520214718e-06, 'lambda': 0.0016581809407678495, 'eta': 0.016260878386196016, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
