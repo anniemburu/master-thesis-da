@@ -98,9 +98,9 @@ class CatBoost(BaseModel):
 
         if args.objective == "regression":
             self.model = cat.CatBoostRegressor(**self.params)
-        elif args.objective == "classification" or args.objective == "binary":
             print(f"Train Directory: {self.params["train_dir"]}")
             print("Current Working Directory:", os.getcwd())
+        elif args.objective == "classification" or args.objective == "binary":
             self.model = cat.CatBoostClassifier(**self.params)
             
 
