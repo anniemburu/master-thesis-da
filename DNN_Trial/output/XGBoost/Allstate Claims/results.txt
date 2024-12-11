@@ -1,0 +1,14 @@
+2024-12-10 22:27:15.643586
+XGBoost - Allstate Claims
+
+MSE - mean: 3615596.72119
+MSE - std: 212388.17907
+R2 - mean: 0.57147
+R2 - std: 0.01241
+
+Train time: 73.522701
+Test time: 4.630539
+
+Best Parameters: {'max_depth': 8, 'alpha': 0.12314701223602302, 'lambda': 0.3247672072222182, 'eta': 0.02765056200892192, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
