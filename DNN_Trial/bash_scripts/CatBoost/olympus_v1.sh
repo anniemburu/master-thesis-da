@@ -10,7 +10,7 @@ CONFIGS=("config/boston.yml"
         "config/socmob.yml"
         "config/sensory.yml"
         "config/moneyball.yml"
-        "config/black_friday.yml"
+        #"config/black_friday.yml"
           )
 
 for config in "${CONFIGS[@]}"; do

@@ -88,7 +88,10 @@ class CatBoost(BaseModel):
         self.params["od_type"] = "Iter"
         self.params["od_wait"] = self.args.early_stopping_rounds
         self.params["verbose"] = self.args.logging_period
-        self.params["train_dir"] = "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/output/CatBoost/" + self.args.dataset + "/catboost_info"
+        train_dir = os.path.join("output", "CatBoost", self.args.dataset, "catboost_info")
+        os.makedirs(train_dir, exist_ok=True)
+        #self.params["train_dir"] = "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/output/CatBoost/" + self.args.dataset + "/catboost_info"
+        self.params["train_dir"] = train_dir
 
         if args.use_gpu:
             self.params["task_type"] = "GPU"
@@ -99,7 +102,7 @@ class CatBoost(BaseModel):
         if args.objective == "regression":
             self.model = cat.CatBoostRegressor(**self.params)
             print(f"Model : {self.model}")
-            print(f"Train Directory:{"/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/output/CatBoost/" + self.args.dataset + "/catboost_info"}")
+            #print(f"Train Directory:{"/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/output/CatBoost/" + self.args.dataset + "/catboost_info"}")
             print("Current Working Directory:", os.getcwd())
         elif args.objective == "classification" or args.objective == "binary":
             self.model = cat.CatBoostClassifier(**self.params)
