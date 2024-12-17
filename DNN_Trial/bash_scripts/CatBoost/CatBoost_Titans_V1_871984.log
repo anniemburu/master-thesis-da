@@ -5005,3 +5005,785 @@ bestIteration = 271
 Shrink model to first 272 iterations.
 {'MSE - mean': 1403056.8140096152, 'MSE - std': 84088.51818403507, 'R2 - mean': 0.7238061331638007, 'R2 - std': 0.019526664061926866}
 Trial 78 finished with value: 1403056.8140096152 and parameters: {'learning_rate': 0.29657915532464635, 'max_depth': 5, 'l2_leaf_reg': 26.997680482858588}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c001190>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c2f9e20>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2033.5854636	test: 2022.9690783	best: 2022.9690783 (0)	total: 78ms	remaining: 1m 17s
+100:	learn: 975.2522981	test: 1223.5790361	best: 1223.5152429 (99)	total: 8.64s	remaining: 1m 16s
+200:	learn: 884.3613871	test: 1192.1515715	best: 1191.7714274 (198)	total: 17.4s	remaining: 1m 9s
+bestTest = 1188.052718
+bestIteration = 215
+Shrink model to first 216 iterations.
+{'MSE - mean': 1411469.263645732, 'MSE - std': 0.0, 'R2 - mean': 0.7185240355615512, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310790>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2044.8896708	test: 2037.6495203	best: 2037.6495203 (0)	total: 87.8ms	remaining: 1m 27s
+100:	learn: 981.4864256	test: 1145.8629071	best: 1145.8629071 (100)	total: 8.63s	remaining: 1m 16s
+200:	learn: 919.8398607	test: 1116.3854157	best: 1116.3854157 (200)	total: 17.3s	remaining: 1m 8s
+bestTest = 1110.775072
+bestIteration = 223
+Shrink model to first 224 iterations.
+{'MSE - mean': 1322645.3334323638, 'MSE - std': 88823.93021336838, 'R2 - mean': 0.7366131677462913, 'R2 - std': 0.01808913218474012}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c014340>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2040.4223551	test: 2027.3636545	best: 2027.3636545 (0)	total: 88.3ms	remaining: 1m 28s
+100:	learn: 1000.8305740	test: 1162.1001182	best: 1162.1001182 (100)	total: 8.86s	remaining: 1m 18s
+200:	learn: 918.5459720	test: 1131.8369347	best: 1131.8369347 (200)	total: 17.5s	remaining: 1m 9s
+bestTest = 1127.086717
+bestIteration = 216
+Shrink model to first 217 iterations.
+{'MSE - mean': 1305205.0596320427, 'MSE - std': 76603.65539250216, 'R2 - mean': 0.7397425602211246, 'R2 - std': 0.015418516897584136}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c014070>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2019.6519190	test: 2061.1839159	best: 2061.1839159 (0)	total: 89.4ms	remaining: 1m 29s
+100:	learn: 960.9573680	test: 1134.9960670	best: 1134.9960670 (100)	total: 8.82s	remaining: 1m 18s
+200:	learn: 911.5225161	test: 1108.6589253	best: 1108.6589253 (200)	total: 17.6s	remaining: 1m 9s
+300:	learn: 880.8628448	test: 1095.1047833	best: 1095.0284047 (297)	total: 26.3s	remaining: 1m 1s
+400:	learn: 854.4215471	test: 1081.6859713	best: 1081.6008489 (390)	total: 35s	remaining: 52.4s
+500:	learn: 838.0131801	test: 1074.0811787	best: 1074.0496742 (498)	total: 43.7s	remaining: 43.6s
+600:	learn: 824.0189799	test: 1063.7127229	best: 1063.6790480 (596)	total: 52.3s	remaining: 34.7s
+bestTest = 1061.237422
+bestIteration = 676
+Shrink model to first 677 iterations.
+{'MSE - mean': 1260460.010049204, 'MSE - std': 102016.9025266499, 'R2 - mean': 0.7513154109192406, 'R2 - std': 0.024085070424091998}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0850a0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2027.8728037	test: 2052.9591563	best: 2052.9591563 (0)	total: 90.5ms	remaining: 1m 30s
+100:	learn: 979.7343269	test: 1203.3123654	best: 1203.3123654 (100)	total: 8.7s	remaining: 1m 17s
+200:	learn: 925.0385334	test: 1178.4313898	best: 1178.4313898 (200)	total: 17.4s	remaining: 1m 9s
+300:	learn: 886.7106133	test: 1164.4089557	best: 1164.3227935 (295)	total: 26.1s	remaining: 1m
+bestTest = 1159.729823
+bestIteration = 379
+Shrink model to first 380 iterations.
+{'MSE - mean': 1277362.6675280747, 'MSE - std': 97307.54359399714, 'R2 - mean': 0.7484515757409826, 'R2 - std': 0.022290776154716738}
+Trial 79 finished with value: 1277362.6675280747 and parameters: {'learning_rate': 0.2327012584047532, 'max_depth': 10, 'l2_leaf_reg': 20.153367386630034}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c060310>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f250>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2063.7084088	test: 2055.9063322	best: 2055.9063322 (0)	total: 31.8ms	remaining: 31.8s
+100:	learn: 1003.5684798	test: 1225.6981096	best: 1225.6981096 (100)	total: 3.09s	remaining: 27.5s
+200:	learn: 943.8914657	test: 1202.5032150	best: 1202.5032150 (200)	total: 6.06s	remaining: 24.1s
+bestTest = 1202.131201
+bestIteration = 203
+Shrink model to first 204 iterations.
+{'MSE - mean': 1445119.422306295, 'MSE - std': 0.0, 'R2 - mean': 0.7118135027101139, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c098e20>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2069.9006374	test: 2067.2096003	best: 2067.2096003 (0)	total: 31.1ms	remaining: 31s
+100:	learn: 1027.9546385	test: 1165.6127028	best: 1165.0220583 (98)	total: 2.99s	remaining: 26.7s
+200:	learn: 941.9841050	test: 1122.8496566	best: 1122.8143533 (196)	total: 5.94s	remaining: 23.6s
+300:	learn: 925.4240031	test: 1115.9380008	best: 1115.8875593 (296)	total: 8.93s	remaining: 20.7s
+bestTest = 1115.887559
+bestIteration = 296
+Shrink model to first 297 iterations.
+{'MSE - mean': 1345162.1986038508, 'MSE - std': 99957.22370244411, 'R2 - mean': 0.7321263096878694, 'R2 - std': 0.02031280697775545}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f6d0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2076.1311212	test: 2060.7407747	best: 2060.7407747 (0)	total: 31.9ms	remaining: 31.9s
+100:	learn: 1036.7947489	test: 1185.1685249	best: 1185.0364346 (99)	total: 3.02s	remaining: 26.9s
+200:	learn: 979.6436565	test: 1151.9240465	best: 1151.9240465 (200)	total: 5.93s	remaining: 23.6s
+300:	learn: 951.1340221	test: 1137.4182240	best: 1137.3208917 (296)	total: 8.76s	remaining: 20.4s
+400:	learn: 933.9127416	test: 1127.3317297	best: 1127.2841636 (396)	total: 11.6s	remaining: 17.4s
+500:	learn: 907.7200823	test: 1117.4466390	best: 1116.9073131 (499)	total: 14.6s	remaining: 14.5s
+600:	learn: 882.5617504	test: 1107.2711038	best: 1107.2259956 (599)	total: 17.5s	remaining: 11.6s
+bestTest = 1106.200379
+bestIteration = 603
+Shrink model to first 604 iterations.
+{'MSE - mean': 1304667.9208838043, 'MSE - std': 99702.24388817347, 'R2 - mean': 0.7398601871046756, 'R2 - std': 0.019867036467645115}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f040>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2058.5522771	test: 2105.8179383	best: 2105.8179383 (0)	total: 31.7ms	remaining: 31.6s
+100:	learn: 1008.7649750	test: 1150.6671469	best: 1150.6671469 (100)	total: 3.06s	remaining: 27.3s
+200:	learn: 971.8879185	test: 1133.3914982	best: 1133.1242626 (199)	total: 6.02s	remaining: 23.9s
+300:	learn: 943.6601541	test: 1118.8708594	best: 1118.8358171 (286)	total: 8.96s	remaining: 20.8s
+bestTest = 1116.708419
+bestIteration = 307
+Shrink model to first 308 iterations.
+{'MSE - mean': 1290260.3546713262, 'MSE - std': 89878.45664981923, 'R2 - mean': 0.7456654708364308, 'R2 - std': 0.019928078460393493}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f250>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2064.8392037	test: 2091.2292863	best: 2091.2292863 (0)	total: 31.9ms	remaining: 31.9s
+100:	learn: 1011.3477940	test: 1220.0089204	best: 1219.8336912 (99)	total: 3.07s	remaining: 27.3s
+200:	learn: 949.4192440	test: 1182.0537937	best: 1181.9942226 (199)	total: 5.96s	remaining: 23.7s
+bestTest = 1181.562868
+bestIteration = 208
+Shrink model to first 209 iterations.
+{'MSE - mean': 1311426.4445682778, 'MSE - std': 90854.40562738868, 'R2 - mean': 0.741932461795918, 'R2 - std': 0.019324701159011005}
+Trial 80 finished with value: 1311426.4445682778 and parameters: {'learning_rate': 0.17525912449114753, 'max_depth': 8, 'l2_leaf_reg': 5.101586148978267}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c317370>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f040>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2120.2780032	test: 2101.2213351	best: 2101.2213351 (0)	total: 7.93ms	remaining: 7.92s
+100:	learn: 1189.5976154	test: 1325.2779549	best: 1324.8029464 (99)	total: 715ms	remaining: 6.36s
+200:	learn: 1102.6157924	test: 1284.6528609	best: 1284.6528609 (200)	total: 1.42s	remaining: 5.66s
+300:	learn: 1067.5774040	test: 1266.4102917	best: 1266.4102917 (300)	total: 2.13s	remaining: 4.95s
+bestTest = 1258.123127
+bestIteration = 343
+Shrink model to first 344 iterations.
+{'MSE - mean': 1582873.6123754522, 'MSE - std': 0.0, 'R2 - mean': 0.6843424875744379, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c001280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2109.6580655	test: 2105.6717915	best: 2105.6717915 (0)	total: 7.89ms	remaining: 7.89s
+100:	learn: 1219.9021671	test: 1288.5908778	best: 1288.5908778 (100)	total: 723ms	remaining: 6.44s
+200:	learn: 1136.3487601	test: 1230.7898585	best: 1230.7898585 (200)	total: 1.43s	remaining: 5.7s
+300:	learn: 1086.1184711	test: 1198.6733808	best: 1198.6733808 (300)	total: 2.14s	remaining: 4.96s
+400:	learn: 1059.9886452	test: 1187.6737502	best: 1187.3703552 (383)	total: 2.85s	remaining: 4.26s
+bestTest = 1182.541285
+bestIteration = 469
+Shrink model to first 470 iterations.
+{'MSE - mean': 1490638.7283456805, 'MSE - std': 92234.88402977178, 'R2 - mean': 0.7031619650199047, 'R2 - std': 0.018819477445466748}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f040>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2108.2016759	test: 2102.9197378	best: 2102.9197378 (0)	total: 8.14ms	remaining: 8.13s
+100:	learn: 1221.4112647	test: 1299.7915841	best: 1299.5452566 (95)	total: 725ms	remaining: 6.45s
+200:	learn: 1126.5667209	test: 1229.7809664	best: 1229.7809664 (200)	total: 1.43s	remaining: 5.69s
+300:	learn: 1090.8882570	test: 1211.1289350	best: 1211.1289350 (300)	total: 2.13s	remaining: 4.95s
+400:	learn: 1072.9028738	test: 1198.1101034	best: 1198.1101034 (400)	total: 2.83s	remaining: 4.23s
+500:	learn: 1057.3871929	test: 1185.7483439	best: 1185.6247678 (497)	total: 3.54s	remaining: 3.53s
+600:	learn: 1048.7340803	test: 1180.5839447	best: 1180.4666050 (595)	total: 4.25s	remaining: 2.82s
+bestTest = 1178.461113
+bestIteration = 620
+Shrink model to first 621 iterations.
+{'MSE - mean': 1456682.5403221461, 'MSE - std': 89317.19486285686, 'R2 - mean': 0.7095474405723223, 'R2 - std': 0.017823124032409966}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f343dcc70>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2106.6660052	test: 2154.2151431	best: 2154.2151431 (0)	total: 8.11ms	remaining: 8.1s
+100:	learn: 1195.6594773	test: 1269.1254845	best: 1269.1254845 (100)	total: 719ms	remaining: 6.4s
+200:	learn: 1112.4094133	test: 1228.8883133	best: 1228.8883133 (200)	total: 1.42s	remaining: 5.64s
+300:	learn: 1074.5976997	test: 1210.5616893	best: 1209.6761833 (298)	total: 2.11s	remaining: 4.91s
+400:	learn: 1053.2366588	test: 1196.5763774	best: 1196.4794001 (387)	total: 2.81s	remaining: 4.2s
+500:	learn: 1035.3415418	test: 1184.1791927	best: 1184.1791927 (500)	total: 3.52s	remaining: 3.5s
+bestTest = 1180.597864
+bestIteration = 548
+Shrink model to first 549 iterations.
+{'MSE - mean': 1440964.7271322247, 'MSE - std': 82001.95075757007, 'R2 - mean': 0.7159597071058097, 'R2 - std': 0.01901576448622163}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c2f9a00>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2107.7364828	test: 2124.0455026	best: 2124.0455026 (0)	total: 8.21ms	remaining: 8.2s
+100:	learn: 1204.2305607	test: 1352.4570367	best: 1352.1730259 (98)	total: 719ms	remaining: 6.4s
+200:	learn: 1114.1900140	test: 1293.2337289	best: 1293.1719227 (199)	total: 1.43s	remaining: 5.67s
+300:	learn: 1078.1169436	test: 1269.3247407	best: 1269.1991374 (299)	total: 2.13s	remaining: 4.95s
+400:	learn: 1057.1622051	test: 1253.8312026	best: 1253.8312026 (400)	total: 2.84s	remaining: 4.24s
+500:	learn: 1034.2094165	test: 1240.0088927	best: 1239.8682290 (498)	total: 3.54s	remaining: 3.53s
+600:	learn: 1023.1276549	test: 1232.6165533	best: 1232.3528218 (589)	total: 4.25s	remaining: 2.82s
+bestTest = 1232.352822
+bestIteration = 589
+Shrink model to first 590 iterations.
+{'MSE - mean': 1456510.4702381592, 'MSE - std': 79662.6415410662, 'R2 - mean': 0.7133729666923347, 'R2 - std': 0.017777636036975665}
+Trial 81 finished with value: 1456510.4702381592 and parameters: {'learning_rate': 0.20900976459422574, 'max_depth': 4, 'l2_leaf_reg': 17.29379053914409}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f040>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0112b0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2121.3876132	test: 2110.5127851	best: 2110.5127851 (0)	total: 162ms	remaining: 2m 41s
+100:	learn: 977.3662347	test: 1216.5625773	best: 1216.5625773 (100)	total: 14.7s	remaining: 2m 11s
+200:	learn: 909.2711664	test: 1194.9519648	best: 1194.6751528 (195)	total: 29.9s	remaining: 1m 58s
+300:	learn: 879.2996394	test: 1185.9789889	best: 1185.9321950 (297)	total: 45s	remaining: 1m 44s
+400:	learn: 852.2951737	test: 1179.4083721	best: 1179.4083721 (400)	total: 1m	remaining: 1m 30s
+500:	learn: 834.3849221	test: 1175.9108258	best: 1175.2046094 (485)	total: 1m 16s	remaining: 1m 15s
+bestTest = 1175.204609
+bestIteration = 485
+Shrink model to first 486 iterations.
+{'MSE - mean': 1381105.8101948767, 'MSE - std': 0.0, 'R2 - mean': 0.7245791318813153, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c300490>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2128.3079774	test: 2116.4318775	best: 2116.4318775 (0)	total: 159ms	remaining: 2m 38s
+100:	learn: 1007.6538087	test: 1165.5520441	best: 1165.5520441 (100)	total: 14.9s	remaining: 2m 12s
+200:	learn: 939.4975080	test: 1126.6643424	best: 1126.6643424 (200)	total: 29.8s	remaining: 1m 58s
+300:	learn: 901.7888129	test: 1109.1384531	best: 1109.1261068 (299)	total: 45.1s	remaining: 1m 44s
+bestTest = 1102.534737
+bestIteration = 373
+Shrink model to first 374 iterations.
+{'MSE - mean': 1298344.3142251857, 'MSE - std': 82761.4959696912, 'R2 - mean': 0.7414537347646513, 'R2 - std': 0.01687460288333592}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c308970>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2128.9031478	test: 2111.2443366	best: 2111.2443366 (0)	total: 163ms	remaining: 2m 42s
+100:	learn: 987.8085674	test: 1141.8371793	best: 1141.8371793 (100)	total: 14.9s	remaining: 2m 12s
+200:	learn: 937.7772839	test: 1115.2743290	best: 1115.1134067 (196)	total: 30.3s	remaining: 2m
+300:	learn: 915.6339408	test: 1107.2407715	best: 1107.2407715 (300)	total: 45.9s	remaining: 1m 46s
+400:	learn: 894.9558346	test: 1096.0379424	best: 1096.0379424 (400)	total: 1m 1s	remaining: 1m 31s
+500:	learn: 888.3599628	test: 1092.1563430	best: 1092.0282807 (498)	total: 1m 16s	remaining: 1m 16s
+600:	learn: 868.2305917	test: 1084.1632801	best: 1084.1316366 (598)	total: 1m 32s	remaining: 1m 1s
+bestTest = 1084.131637
+bestIteration = 598
+Shrink model to first 599 iterations.
+{'MSE - mean': 1257343.2757422964, 'MSE - std': 89042.0151208305, 'R2 - mean': 0.7493001746532623, 'R2 - std': 0.017690903109546546}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310790>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2113.1919923	test: 2160.5273964	best: 2160.5273964 (0)	total: 162ms	remaining: 2m 41s
+100:	learn: 986.8600492	test: 1135.2353727	best: 1135.1988674 (98)	total: 15.1s	remaining: 2m 14s
+200:	learn: 927.2344233	test: 1103.5528537	best: 1103.5386162 (199)	total: 30.8s	remaining: 2m 2s
+300:	learn: 909.6965537	test: 1091.4315255	best: 1091.3830551 (297)	total: 45.8s	remaining: 1m 46s
+400:	learn: 888.0577045	test: 1082.3719365	best: 1082.3719365 (400)	total: 1m	remaining: 1m 31s
+bestTest = 1080.928596
+bestIteration = 410
+Shrink model to first 411 iterations.
+{'MSE - mean': 1235109.1355309114, 'MSE - std': 86194.14896268911, 'R2 - mean': 0.7564801399439215, 'R2 - std': 0.019732758153606905}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c014520>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2123.4098025	test: 2142.2600846	best: 2142.2600846 (0)	total: 162ms	remaining: 2m 42s
+100:	learn: 986.7288756	test: 1203.9879680	best: 1203.9587554 (99)	total: 14.9s	remaining: 2m 13s
+200:	learn: 928.8601171	test: 1167.7579658	best: 1167.6727914 (199)	total: 29.6s	remaining: 1m 57s
+300:	learn: 898.1931813	test: 1152.8711671	best: 1152.6944228 (297)	total: 43.9s	remaining: 1m 42s
+400:	learn: 886.3894168	test: 1150.7746236	best: 1150.7280265 (393)	total: 59.2s	remaining: 1m 28s
+500:	learn: 869.3920419	test: 1143.3113280	best: 1143.3113280 (500)	total: 1m 14s	remaining: 1m 13s
+600:	learn: 863.0923244	test: 1139.3218783	best: 1139.1195589 (587)	total: 1m 28s	remaining: 58.6s
+bestTest = 1139.119559
+bestIteration = 587
+Shrink model to first 588 iterations.
+{'MSE - mean': 1247605.9883898688, 'MSE - std': 81044.6196723478, 'R2 - mean': 0.7544363461510564, 'R2 - std': 0.0181166709897268}
+Trial 82 finished with value: 1247605.9883898688 and parameters: {'learning_rate': 0.11382499067849615, 'max_depth': 11, 'l2_leaf_reg': 5.9383254650658435}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0037c0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c099280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2122.3229836	test: 2107.7199328	best: 2107.7199328 (0)	total: 83.6ms	remaining: 1m 23s
+100:	learn: 1036.4880064	test: 1249.3434095	best: 1249.3434095 (100)	total: 15.6s	remaining: 2m 18s
+200:	learn: 940.1388052	test: 1217.1823318	best: 1217.1778317 (199)	total: 31.4s	remaining: 2m 4s
+300:	learn: 888.0892740	test: 1195.1623811	best: 1195.1623811 (300)	total: 47.3s	remaining: 1m 49s
+400:	learn: 857.5097404	test: 1184.2623887	best: 1184.2211870 (399)	total: 1m 3s	remaining: 1m 34s
+bestTest = 1179.756701
+bestIteration = 436
+Shrink model to first 437 iterations.
+{'MSE - mean': 1391826.1484407384, 'MSE - std': 0.0, 'R2 - mean': 0.7224412762265162, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c092250>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2125.0925746	test: 2114.7252415	best: 2114.7252415 (0)	total: 162ms	remaining: 2m 42s
+100:	learn: 1057.0362442	test: 1189.9910515	best: 1189.9910515 (100)	total: 15.6s	remaining: 2m 19s
+200:	learn: 957.2269258	test: 1136.9617170	best: 1136.6823861 (195)	total: 31.6s	remaining: 2m 5s
+300:	learn: 909.4584469	test: 1110.7027237	best: 1110.6842952 (299)	total: 47.3s	remaining: 1m 49s
+400:	learn: 885.8204727	test: 1099.0389905	best: 1099.0387938 (399)	total: 1m 3s	remaining: 1m 34s
+500:	learn: 862.7793763	test: 1092.7379614	best: 1092.7379614 (500)	total: 1m 19s	remaining: 1m 18s
+600:	learn: 844.8633132	test: 1086.7355530	best: 1086.6714862 (598)	total: 1m 35s	remaining: 1m 3s
+bestTest = 1082.231162
+bestIteration = 658
+Shrink model to first 659 iterations.
+{'MSE - mean': 1281525.1730103374, 'MSE - std': 110300.97543040104, 'R2 - mean': 0.7447943055897948, 'R2 - std': 0.022353029363278598}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c099280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2127.2065174	test: 2109.6480215	best: 2109.6480215 (0)	total: 163ms	remaining: 2m 43s
+100:	learn: 1060.1774796	test: 1177.1383839	best: 1177.0390703 (99)	total: 15.5s	remaining: 2m 17s
+200:	learn: 962.2345990	test: 1127.1722731	best: 1127.1722731 (200)	total: 31.5s	remaining: 2m 5s
+300:	learn: 913.0390793	test: 1105.4777941	best: 1105.4777941 (300)	total: 47.5s	remaining: 1m 50s
+400:	learn: 898.2357081	test: 1098.8146931	best: 1098.8146931 (400)	total: 1m 3s	remaining: 1m 34s
+500:	learn: 883.9057061	test: 1094.3295944	best: 1094.0955704 (496)	total: 1m 19s	remaining: 1m 18s
+600:	learn: 865.6614406	test: 1088.9414978	best: 1088.9414978 (600)	total: 1m 34s	remaining: 1m 2s
+bestTest = 1088.800183
+bestIteration = 633
+Shrink model to first 634 iterations.
+{'MSE - mean': 1249512.0828219245, 'MSE - std': 100799.53376589374, 'R2 - mean': 0.7508510846412939, 'R2 - std': 0.020161210928440993}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c092280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2106.9292116	test: 2154.7323155	best: 2154.7323155 (0)	total: 161ms	remaining: 2m 40s
+100:	learn: 1052.9930571	test: 1169.3371342	best: 1169.3371342 (100)	total: 15.5s	remaining: 2m 18s
+200:	learn: 953.9228065	test: 1109.3997728	best: 1109.2998522 (198)	total: 31.6s	remaining: 2m 5s
+300:	learn: 922.8980989	test: 1092.1827389	best: 1092.1827389 (300)	total: 47.5s	remaining: 1m 50s
+400:	learn: 893.7467646	test: 1078.6590274	best: 1078.6590274 (400)	total: 1m 3s	remaining: 1m 34s
+500:	learn: 871.9645831	test: 1067.9443249	best: 1067.9328183 (499)	total: 1m 19s	remaining: 1m 19s
+600:	learn: 856.4920704	test: 1059.4862940	best: 1059.4862940 (600)	total: 1m 35s	remaining: 1m 3s
+700:	learn: 835.0553739	test: 1049.2721115	best: 1049.2721115 (700)	total: 1m 51s	remaining: 47.4s
+bestTest = 1047.44893
+bestIteration = 775
+Shrink model to first 776 iterations.
+{'MSE - mean': 1211421.38115569, 'MSE - std': 109421.72620574212, 'R2 - mean': 0.761027786829414, 'R2 - std': 0.024810312812475338}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c014670>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2116.9939592	test: 2133.9425256	best: 2133.9425256 (0)	total: 161ms	remaining: 2m 41s
+100:	learn: 1057.1787715	test: 1247.6473283	best: 1247.6473283 (100)	total: 15.5s	remaining: 2m 17s
+200:	learn: 979.0037223	test: 1199.8583700	best: 1199.8583700 (200)	total: 31.2s	remaining: 2m 3s
+300:	learn: 933.3858930	test: 1178.9833458	best: 1178.9833458 (300)	total: 47s	remaining: 1m 49s
+400:	learn: 895.0113996	test: 1160.0095681	best: 1160.0095681 (400)	total: 1m 2s	remaining: 1m 33s
+500:	learn: 877.5685492	test: 1152.9327430	best: 1152.7967090 (493)	total: 1m 18s	remaining: 1m 18s
+600:	learn: 871.1800840	test: 1150.0408767	best: 1150.0346097 (599)	total: 1m 34s	remaining: 1m 2s
+bestTest = 1149.715264
+bestIteration = 618
+Shrink model to first 619 iterations.
+{'MSE - mean': 1233506.2378216449, 'MSE - std': 107375.29934067056, 'R2 - mean': 0.7571259783732753, 'R2 - std': 0.023523131900235618}
+Trial 83 finished with value: 1233506.2378216449 and parameters: {'learning_rate': 0.14919398413413623, 'max_depth': 11, 'l2_leaf_reg': 29.747741404798397}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c317820>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c307d00>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2116.1199918	test: 2102.0981368	best: 2102.0981368 (0)	total: 87.5ms	remaining: 1m 27s
+100:	learn: 1009.3815786	test: 1238.9147241	best: 1238.5335124 (99)	total: 28s	remaining: 4m 9s
+200:	learn: 897.7989903	test: 1201.0031243	best: 1201.0031243 (200)	total: 58s	remaining: 3m 50s
+300:	learn: 860.0997219	test: 1190.2501819	best: 1190.2501819 (300)	total: 1m 27s	remaining: 3m 24s
+400:	learn: 822.1795249	test: 1177.8597784	best: 1177.7980983 (386)	total: 1m 57s	remaining: 2m 56s
+bestTest = 1177.798098
+bestIteration = 386
+Shrink model to first 387 iterations.
+{'MSE - mean': 1387208.3328055616, 'MSE - std': 0.0, 'R2 - mean': 0.7233621635196288, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c011730>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2116.6069056	test: 2104.8407185	best: 2104.8407185 (0)	total: 306ms	remaining: 5m 6s
+100:	learn: 1036.3033401	test: 1181.4946710	best: 1181.4946710 (100)	total: 28s	remaining: 4m 8s
+200:	learn: 953.5513894	test: 1133.1227997	best: 1133.0897884 (198)	total: 57.6s	remaining: 3m 49s
+300:	learn: 903.0834866	test: 1106.6504286	best: 1106.0096606 (292)	total: 1m 27s	remaining: 3m 22s
+bestTest = 1106.009661
+bestIteration = 292
+Shrink model to first 293 iterations.
+{'MSE - mean': 1305232.9041650933, 'MSE - std': 81975.42864046816, 'R2 - mean': 0.7400823460937319, 'R2 - std': 0.016720182574103126}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c014490>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2117.7510424	test: 2098.4527290	best: 2098.4527290 (0)	total: 304ms	remaining: 5m 3s
+100:	learn: 1021.9375697	test: 1149.9928711	best: 1149.9928711 (100)	total: 27.8s	remaining: 4m 7s
+200:	learn: 950.7203528	test: 1115.0119298	best: 1115.0013291 (199)	total: 57.8s	remaining: 3m 49s
+300:	learn: 897.0261981	test: 1092.7065002	best: 1092.7065002 (300)	total: 1m 27s	remaining: 3m 23s
+400:	learn: 881.7914607	test: 1085.5054205	best: 1085.4747788 (398)	total: 1m 57s	remaining: 2m 54s
+bestTest = 1080.535436
+bestIteration = 462
+Shrink model to first 463 iterations.
+{'MSE - mean': 1259340.874127486, 'MSE - std': 93231.6332714974, 'R2 - mean': 0.7489047392020639, 'R2 - std': 0.01849447423394659}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c308490>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2100.8802960	test: 2148.5280945	best: 2148.5280945 (0)	total: 300ms	remaining: 4m 59s
+100:	learn: 1014.1378978	test: 1153.2972551	best: 1153.2972551 (100)	total: 27.3s	remaining: 4m 3s
+200:	learn: 923.5970027	test: 1102.8655877	best: 1102.7271681 (197)	total: 57.3s	remaining: 3m 47s
+300:	learn: 891.5242540	test: 1087.1712198	best: 1087.1212005 (286)	total: 1m 27s	remaining: 3m 22s
+400:	learn: 861.4640377	test: 1072.7922311	best: 1072.7699937 (398)	total: 1m 56s	remaining: 2m 54s
+500:	learn: 849.2816679	test: 1064.6294961	best: 1064.5403356 (493)	total: 2m 26s	remaining: 2m 26s
+600:	learn: 833.5974789	test: 1055.7408227	best: 1055.7276471 (599)	total: 2m 56s	remaining: 1m 57s
+700:	learn: 814.0998456	test: 1046.0235127	best: 1046.0235127 (700)	total: 3m 26s	remaining: 1m 27s
+bestTest = 1042.803671
+bestIteration = 747
+Shrink model to first 748 iterations.
+{'MSE - mean': 1216365.5986980973, 'MSE - std': 109816.783674212, 'R2 - mean': 0.7600291932128687, 'R2 - std': 0.02505582994051716}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310790>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2111.4198630	test: 2127.7954247	best: 2127.7954247 (0)	total: 306ms	remaining: 5m 5s
+100:	learn: 1027.9514133	test: 1242.2073350	best: 1242.2073350 (100)	total: 27s	remaining: 4m
+200:	learn: 928.0782819	test: 1181.6166662	best: 1181.5875105 (199)	total: 57s	remaining: 3m 46s
+300:	learn: 901.4308546	test: 1169.7845185	best: 1169.3789219 (293)	total: 1m 26s	remaining: 3m 20s
+bestTest = 1168.531411
+bestIteration = 310
+Shrink model to first 311 iterations.
+{'MSE - mean': 1246185.634377334, 'MSE - std': 114911.78744098774, 'R2 - mean': 0.754621158259204, 'R2 - std': 0.024884192963540722}
+Trial 84 finished with value: 1246185.634377334 and parameters: {'learning_rate': 0.1495095406931487, 'max_depth': 12, 'l2_leaf_reg': 24.115469112630947}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c09b640>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0037c0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2092.5959567	test: 2078.9244621	best: 2078.9244621 (0)	total: 81.3ms	remaining: 1m 21s
+100:	learn: 992.3578982	test: 1221.4295568	best: 1221.4295568 (100)	total: 15.7s	remaining: 2m 19s
+200:	learn: 904.0019134	test: 1193.4752344	best: 1193.4752344 (200)	total: 31.5s	remaining: 2m 5s
+bestTest = 1181.167845
+bestIteration = 270
+Shrink model to first 271 iterations.
+{'MSE - mean': 1395157.6747592334, 'MSE - std': 0.0, 'R2 - mean': 0.7217769014450716, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310880>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2095.9695342	test: 2086.9647774	best: 2086.9647774 (0)	total: 160ms	remaining: 2m 40s
+100:	learn: 1035.9267427	test: 1174.7562216	best: 1174.7562216 (100)	total: 15.5s	remaining: 2m 18s
+200:	learn: 942.2639021	test: 1122.3518422	best: 1122.3518422 (200)	total: 31.4s	remaining: 2m 4s
+300:	learn: 887.6178871	test: 1092.6231268	best: 1092.6065701 (299)	total: 47.1s	remaining: 1m 49s
+400:	learn: 865.2767510	test: 1082.8434707	best: 1082.8434707 (400)	total: 1m 2s	remaining: 1m 33s
+500:	learn: 851.6178562	test: 1077.9015650	best: 1077.8653245 (495)	total: 1m 18s	remaining: 1m 18s
+600:	learn: 832.8196759	test: 1069.1374986	best: 1068.7005160 (597)	total: 1m 34s	remaining: 1m 2s
+bestTest = 1065.379584
+bestIteration = 655
+Shrink model to first 656 iterations.
+{'MSE - mean': 1265095.6109323069, 'MSE - std': 130062.06382692652, 'R2 - mean': 0.7480596742563137, 'R2 - std': 0.026282772811242083}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310790>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2098.2076263	test: 2081.9739075	best: 2081.9739075 (0)	total: 163ms	remaining: 2m 42s
+100:	learn: 1033.9607743	test: 1181.5204741	best: 1181.5204741 (100)	total: 15.8s	remaining: 2m 20s
+200:	learn: 943.9240693	test: 1137.1974402	best: 1137.1974402 (200)	total: 31.8s	remaining: 2m 6s
+300:	learn: 899.8397855	test: 1119.7344602	best: 1119.4914547 (293)	total: 47.7s	remaining: 1m 50s
+bestTest = 1115.301599
+bestIteration = 337
+Shrink model to first 338 iterations.
+{'MSE - mean': 1258029.682468482, 'MSE - std': 106664.34106450377, 'R2 - mean': 0.7491348842755444, 'R2 - std': 0.021513598434536357}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310880>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2077.1820135	test: 2123.7229931	best: 2123.7229931 (0)	total: 160ms	remaining: 2m 40s
+100:	learn: 1017.3405358	test: 1156.9716294	best: 1156.9716294 (100)	total: 15.9s	remaining: 2m 21s
+200:	learn: 917.0033452	test: 1091.9908590	best: 1091.9908590 (200)	total: 31.9s	remaining: 2m 6s
+300:	learn: 889.6037786	test: 1077.7866877	best: 1077.7866877 (300)	total: 47.8s	remaining: 1m 50s
+400:	learn: 868.4436945	test: 1063.9744629	best: 1063.8996092 (398)	total: 1m 3s	remaining: 1m 35s
+500:	learn: 848.2370058	test: 1055.6961411	best: 1055.6961411 (500)	total: 1m 19s	remaining: 1m 19s
+600:	learn: 833.7998982	test: 1046.1468383	best: 1046.1468383 (600)	total: 1m 35s	remaining: 1m 3s
+bestTest = 1044.185721
+bestIteration = 621
+Shrink model to first 622 iterations.
+{'MSE - mean': 1216103.2017312516, 'MSE - std': 117500.85362273616, 'R2 - mean': 0.7600648233128884, 'R2 - std': 0.026561567918367283}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310790>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2087.0943464	test: 2106.4750968	best: 2106.4750968 (0)	total: 161ms	remaining: 2m 40s
+100:	learn: 1035.0773658	test: 1247.9856779	best: 1247.9856779 (100)	total: 15.5s	remaining: 2m 18s
+200:	learn: 949.1347601	test: 1196.6281757	best: 1196.6281757 (200)	total: 31.5s	remaining: 2m 5s
+300:	learn: 904.4730485	test: 1169.0015452	best: 1168.9393976 (296)	total: 47.2s	remaining: 1m 49s
+400:	learn: 879.3573821	test: 1157.1968616	best: 1157.1105984 (395)	total: 1m 2s	remaining: 1m 34s
+500:	learn: 857.1057521	test: 1148.5618112	best: 1148.4452161 (499)	total: 1m 18s	remaining: 1m 18s
+bestTest = 1147.711487
+bestIteration = 516
+Shrink model to first 517 iterations.
+{'MSE - mean': 1236330.863829849, 'MSE - std': 112613.4704977939, 'R2 - mean': 0.7565356720091423, 'R2 - std': 0.024783727482454367}
+Trial 85 finished with value: 1236330.863829849 and parameters: {'learning_rate': 0.18176399680036534, 'max_depth': 11, 'l2_leaf_reg': 28.963888604127913}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c30f520>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c085280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2039.7950789	test: 2028.7794582	best: 2028.7794582 (0)	total: 89.2ms	remaining: 1m 29s
+100:	learn: 937.0073889	test: 1210.6673017	best: 1210.0138932 (95)	total: 29.1s	remaining: 4m 18s
+200:	learn: 881.7735608	test: 1184.9938609	best: 1184.9188059 (199)	total: 58.7s	remaining: 3m 53s
+bestTest = 1171.78155
+bestIteration = 247
+Shrink model to first 248 iterations.
+{'MSE - mean': 1373071.8723787472, 'MSE - std': 0.0, 'R2 - mean': 0.7261812641085469, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0992e0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2050.5566812	test: 2041.4977014	best: 2041.4977014 (0)	total: 306ms	remaining: 5m 5s
+100:	learn: 1001.8345335	test: 1153.3570585	best: 1153.3243764 (98)	total: 28.5s	remaining: 4m 13s
+200:	learn: 887.9565771	test: 1106.3282669	best: 1106.3282669 (200)	total: 58.1s	remaining: 3m 50s
+300:	learn: 851.2441769	test: 1093.9809442	best: 1093.9809442 (300)	total: 1m 27s	remaining: 3m 24s
+bestTest = 1082.865501
+bestIteration = 355
+Shrink model to first 356 iterations.
+{'MSE - mean': 1272834.8450189654, 'MSE - std': 100237.02735978179, 'R2 - mean': 0.746527753898951, 'R2 - std': 0.020346489790404043}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c085850>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2045.5590747	test: 2037.3499834	best: 2037.3499834 (0)	total: 302ms	remaining: 5m 1s
+100:	learn: 976.8501688	test: 1142.4291489	best: 1142.4291489 (100)	total: 28.3s	remaining: 4m 11s
+200:	learn: 889.8294603	test: 1102.8216717	best: 1102.5233629 (199)	total: 57.7s	remaining: 3m 49s
+300:	learn: 851.1665339	test: 1090.3777013	best: 1090.2421254 (299)	total: 1m 27s	remaining: 3m 23s
+bestTest = 1090.242125
+bestIteration = 299
+Shrink model to first 300 iterations.
+{'MSE - mean': 1244765.894917465, 'MSE - std': 90961.74849289552, 'R2 - mean': 0.7517972986496044, 'R2 - std': 0.01820776304086498}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c099280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2022.4819290	test: 2065.4262828	best: 2065.4262828 (0)	total: 303ms	remaining: 5m 2s
+100:	learn: 954.6895161	test: 1119.3250218	best: 1119.0287938 (98)	total: 28.4s	remaining: 4m 13s
+200:	learn: 892.4754520	test: 1085.6969531	best: 1085.6969531 (200)	total: 58.1s	remaining: 3m 51s
+300:	learn: 851.2276667	test: 1064.5363073	best: 1064.4875940 (293)	total: 1m 27s	remaining: 3m 24s
+400:	learn: 831.2765826	test: 1054.8358311	best: 1054.8201845 (398)	total: 1m 57s	remaining: 2m 55s
+500:	learn: 807.9640524	test: 1045.4215581	best: 1045.4083904 (499)	total: 2m 27s	remaining: 2m 27s
+bestTest = 1043.916948
+bestIteration = 542
+Shrink model to first 543 iterations.
+{'MSE - mean': 1206015.0975335226, 'MSE - std': 103491.07526901863, 'R2 - mean': 0.7620882820867736, 'R2 - std': 0.02379821414573976}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c085280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2035.3966787	test: 2060.3137695	best: 2060.3137695 (0)	total: 304ms	remaining: 5m 3s
+100:	learn: 934.0517955	test: 1185.7633570	best: 1185.7633570 (100)	total: 28.7s	remaining: 4m 15s
+200:	learn: 866.2084721	test: 1146.9801164	best: 1146.9801164 (200)	total: 58.5s	remaining: 3m 52s
+300:	learn: 837.5745765	test: 1137.3265950	best: 1137.1377376 (296)	total: 1m 28s	remaining: 3m 25s
+bestTest = 1137.137738
+bestIteration = 296
+Shrink model to first 297 iterations.
+{'MSE - mean': 1223428.5424885831, 'MSE - std': 98900.12330165136, 'R2 - mean': 0.7590992842409406, 'R2 - std': 0.02210928379009071}
+Trial 86 finished with value: 1223428.5424885831 and parameters: {'learning_rate': 0.22810232528086843, 'max_depth': 12, 'l2_leaf_reg': 21.275678838256372}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c300490>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c2f95e0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2030.9018810	test: 2020.2834517	best: 2020.2834517 (0)	total: 87ms	remaining: 1m 26s
+100:	learn: 946.5574610	test: 1216.2544779	best: 1216.2544779 (100)	total: 28.7s	remaining: 4m 15s
+200:	learn: 851.7818949	test: 1182.7004068	best: 1182.6783468 (199)	total: 58.5s	remaining: 3m 52s
+300:	learn: 812.6134460	test: 1169.1507351	best: 1169.1507351 (300)	total: 1m 28s	remaining: 3m 24s
+bestTest = 1169.089705
+bestIteration = 301
+Shrink model to first 302 iterations.
+{'MSE - mean': 1366770.7917877247, 'MSE - std': 0.0, 'R2 - mean': 0.7274378290101313, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c098e20>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2041.8769673	test: 2033.1616882	best: 2033.1616882 (0)	total: 303ms	remaining: 5m 3s
+100:	learn: 988.3805665	test: 1153.0260696	best: 1153.0260696 (100)	total: 28.6s	remaining: 4m 14s
+200:	learn: 907.1054847	test: 1114.5216079	best: 1114.2314768 (194)	total: 58.1s	remaining: 3m 50s
+bestTest = 1111.347141
+bestIteration = 219
+Shrink model to first 220 iterations.
+{'MSE - mean': 1300931.5380741418, 'MSE - std': 65839.25371358276, 'R2 - mean': 0.7409437316722228, 'R2 - std': 0.013505902662091507}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c098bb0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2036.7324476	test: 2029.1645820	best: 2029.1645820 (0)	total: 303ms	remaining: 5m 2s
+100:	learn: 964.2818922	test: 1118.2604896	best: 1118.2604896 (100)	total: 29s	remaining: 4m 18s
+200:	learn: 918.7482279	test: 1092.0074910	best: 1092.0074910 (200)	total: 57.7s	remaining: 3m 49s
+bestTest = 1085.503893
+bestIteration = 242
+Shrink model to first 243 iterations.
+{'MSE - mean': 1260060.5559609153, 'MSE - std': 78935.07402188453, 'R2 - mean': 0.7487617314849148, 'R2 - std': 0.015615649627465398}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c001190>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2013.3899879	test: 2055.9391445	best: 2055.9391445 (0)	total: 302ms	remaining: 5m 2s
+100:	learn: 965.3715711	test: 1130.2826562	best: 1130.0407072 (98)	total: 29s	remaining: 4m 17s
+200:	learn: 905.6439250	test: 1097.2317666	best: 1097.2317666 (200)	total: 58.8s	remaining: 3m 53s
+300:	learn: 864.6211064	test: 1074.1193250	best: 1074.0015267 (296)	total: 1m 27s	remaining: 3m 23s
+400:	learn: 846.0013844	test: 1064.3810196	best: 1064.3810196 (400)	total: 1m 57s	remaining: 2m 55s
+500:	learn: 826.8819539	test: 1056.8686708	best: 1056.8400631 (499)	total: 2m 27s	remaining: 2m 26s
+600:	learn: 810.6445439	test: 1045.2895974	best: 1044.9889348 (595)	total: 2m 57s	remaining: 1m 57s
+bestTest = 1044.988935
+bestIteration = 595
+Shrink model to first 596 iterations.
+{'MSE - mean': 1218045.9865287482, 'MSE - std': 99843.53542839643, 'R2 - mean': 0.7597052352984881, 'R2 - std': 0.023284484364462617}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c098bb0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2026.2347809	test: 2052.0165428	best: 2052.0165428 (0)	total: 307ms	remaining: 5m 7s
+100:	learn: 958.2019573	test: 1203.9077514	best: 1203.9077514 (100)	total: 28.6s	remaining: 4m 14s
+200:	learn: 887.9329575	test: 1165.0032517	best: 1165.0032517 (200)	total: 58.1s	remaining: 3m 51s
+300:	learn: 846.5138686	test: 1148.1902093	best: 1148.1810448 (298)	total: 1m 28s	remaining: 3m 24s
+bestTest = 1143.651998
+bestIteration = 363
+Shrink model to first 364 iterations.
+{'MSE - mean': 1236024.7782550594, 'MSE - std': 96270.10471182351, 'R2 - mean': 0.7566117779138664, 'R2 - std': 0.021725829881894223}
+Trial 87 finished with value: 1236024.7782550594 and parameters: {'learning_rate': 0.23737660405404581, 'max_depth': 12, 'l2_leaf_reg': 21.01422412546358}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0112b0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c300490>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2011.8397658	test: 2009.2277930	best: 2009.2277930 (0)	total: 303ms	remaining: 5m 2s
+100:	learn: 900.9158103	test: 1212.9460227	best: 1212.9018142 (80)	total: 27s	remaining: 4m
+bestTest = 1212.901814
+bestIteration = 80
+Shrink model to first 81 iterations.
+{'MSE - mean': 1471130.772984604, 'MSE - std': 0.0, 'R2 - mean': 0.7066263050805938, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c308250>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2014.5766461	test: 2007.6520283	best: 2007.6520283 (0)	total: 301ms	remaining: 5m 1s
+100:	learn: 912.2794735	test: 1120.6493613	best: 1120.6493613 (100)	total: 26.8s	remaining: 3m 58s
+bestTest = 1089.887472
+bestIteration = 167
+Shrink model to first 168 iterations.
+{'MSE - mean': 1329492.7384038507, 'MSE - std': 141638.03458075307, 'R2 - mean': 0.7352336533098098, 'R2 - std': 0.028607348229216012}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0833a0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2011.6519678	test: 2007.7264808	best: 2007.7264808 (0)	total: 306ms	remaining: 5m 6s
+100:	learn: 909.5058355	test: 1134.2412474	best: 1133.7571439 (97)	total: 27.1s	remaining: 4m
+200:	learn: 866.8041332	test: 1112.1184719	best: 1111.9229995 (199)	total: 55.3s	remaining: 3m 39s
+bestTest = 1108.16176
+bestIteration = 225
+Shrink model to first 226 iterations.
+{'MSE - mean': 1295669.3039445754, 'MSE - std': 125148.99652217558, 'R2 - mean': 0.7416422870443499, 'R2 - std': 0.025054502346392546}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310a90>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 1994.7661969	test: 2042.3306947	best: 2042.3306947 (0)	total: 303ms	remaining: 5m 2s
+100:	learn: 888.5199354	test: 1100.1016824	best: 1099.4324826 (96)	total: 28s	remaining: 4m 9s
+200:	learn: 854.7987277	test: 1079.6853729	best: 1079.6853729 (200)	total: 55.1s	remaining: 3m 38s
+300:	learn: 834.6918512	test: 1070.2086687	best: 1070.1488993 (281)	total: 1m 22s	remaining: 3m 11s
+bestTest = 1070.148899
+bestIteration = 281
+Shrink model to first 282 iterations.
+{'MSE - mean': 1258056.6126144188, 'MSE - std': 126454.9213956245, 'R2 - mean': 0.7518380767185493, 'R2 - std': 0.027976033441332822}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c30e250>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 1996.6224453	test: 2031.0114642	best: 2031.0114642 (0)	total: 304ms	remaining: 5m 3s
+100:	learn: 921.7042968	test: 1193.1504213	best: 1192.9641182 (98)	total: 26.5s	remaining: 3m 55s
+bestTest = 1170.460508
+bestIteration = 165
+Shrink model to first 166 iterations.
+{'MSE - mean': 1280440.8669976755, 'MSE - std': 121642.49706955322, 'R2 - mean': 0.7478918004088749, 'R2 - std': 0.026237742748522502}
+Trial 88 finished with value: 1280440.8669976755 and parameters: {'learning_rate': 0.20151159957500658, 'max_depth': 12, 'l2_leaf_reg': 3.3458575469126104}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c081df0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c098e20>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2023.0739611	test: 2012.1157347	best: 2012.1157347 (0)	total: 78.4ms	remaining: 1m 18s
+100:	learn: 988.7808127	test: 1230.6668814	best: 1230.0930603 (94)	total: 8.68s	remaining: 1m 17s
+200:	learn: 922.5648540	test: 1207.3631159	best: 1207.3631159 (200)	total: 17.3s	remaining: 1m 8s
+300:	learn: 877.9909909	test: 1193.8181913	best: 1193.7393441 (299)	total: 26s	remaining: 1m
+400:	learn: 844.5830359	test: 1184.7306000	best: 1184.7306000 (400)	total: 34.7s	remaining: 51.8s
+bestTest = 1179.73367
+bestIteration = 462
+Shrink model to first 463 iterations.
+{'MSE - mean': 1391771.6169537848, 'MSE - std': 0.0, 'R2 - mean': 0.7224521509251567, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c060310>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2027.9651364	test: 2022.0744321	best: 2022.0744321 (0)	total: 89.3ms	remaining: 1m 29s
+100:	learn: 1011.2526885	test: 1146.0116503	best: 1146.0116503 (100)	total: 8.71s	remaining: 1m 17s
+200:	learn: 936.2954797	test: 1108.6771275	best: 1108.5953453 (199)	total: 17.4s	remaining: 1m 9s
+300:	learn: 903.6427581	test: 1092.0062700	best: 1091.7168230 (293)	total: 26.1s	remaining: 1m
+bestTest = 1091.529087
+bestIteration = 309
+Shrink model to first 310 iterations.
+{'MSE - mean': 1291603.5817827317, 'MSE - std': 100168.03517105302, 'R2 - mean': 0.7427906201358297, 'R2 - std': 0.02033846921067306}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c098e20>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2028.9811583	test: 2012.0501131	best: 2012.0501131 (0)	total: 89.8ms	remaining: 1m 29s
+100:	learn: 989.8558636	test: 1154.8086383	best: 1154.8086383 (100)	total: 8.6s	remaining: 1m 16s
+200:	learn: 916.1057416	test: 1122.0045125	best: 1121.8945366 (199)	total: 17.3s	remaining: 1m 8s
+bestTest = 1108.861733
+bestIteration = 266
+Shrink model to first 267 iterations.
+{'MSE - mean': 1270927.1902109615, 'MSE - std': 86856.87374570812, 'R2 - mean': 0.7465768271041133, 'R2 - std': 0.0174481979862971}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c060310>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2007.6348686	test: 2050.5888058	best: 2050.5888058 (0)	total: 87.9ms	remaining: 1m 27s
+100:	learn: 988.2044505	test: 1141.5043654	best: 1141.5043654 (100)	total: 8.66s	remaining: 1m 17s
+200:	learn: 915.8419550	test: 1099.8671828	best: 1099.8671828 (200)	total: 17.4s	remaining: 1m 9s
+300:	learn: 884.1953231	test: 1083.5421060	best: 1083.4500783 (299)	total: 26.1s	remaining: 1m
+400:	learn: 866.7347860	test: 1072.5618401	best: 1072.5618401 (400)	total: 34.8s	remaining: 52s
+500:	learn: 854.7368385	test: 1063.8910057	best: 1063.8910057 (500)	total: 43.5s	remaining: 43.3s
+600:	learn: 840.3541939	test: 1057.1401162	best: 1057.1401162 (600)	total: 52.2s	remaining: 34.6s
+bestTest = 1049.823735
+bestIteration = 674
+Shrink model to first 675 iterations.
+{'MSE - mean': 1228727.8718247667, 'MSE - std': 104882.95764535219, 'R2 - mean': 0.7575855317012016, 'R2 - std': 0.02432908630517432}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c00e3a0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2018.4584609	test: 2048.1545550	best: 2048.1545550 (0)	total: 90.7ms	remaining: 1m 30s
+100:	learn: 995.9716701	test: 1228.3610116	best: 1228.3581366 (99)	total: 8.77s	remaining: 1m 18s
+200:	learn: 932.1851883	test: 1198.2672174	best: 1198.2600599 (198)	total: 17.5s	remaining: 1m 9s
+300:	learn: 900.1688330	test: 1184.6611254	best: 1184.5938370 (297)	total: 26.2s	remaining: 1m
+bestTest = 1180.123677
+bestIteration = 378
+Shrink model to first 379 iterations.
+{'MSE - mean': 1261520.654681034, 'MSE - std': 114463.15683827052, 'R2 - mean': 0.7516014431706439, 'R2 - std': 0.024834669607665425}
+Trial 89 finished with value: 1261520.654681034 and parameters: {'learning_rate': 0.25685139341131535, 'max_depth': 10, 'l2_leaf_reg': 26.27133211030004}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c0973d0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c2f3910>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2034.1402505	test: 2024.5923714	best: 2024.5923714 (0)	total: 160ms	remaining: 2m 40s
+100:	learn: 926.9613635	test: 1200.2140950	best: 1199.5988519 (96)	total: 15.8s	remaining: 2m 20s
+200:	learn: 870.1898726	test: 1188.0987007	best: 1188.0987007 (200)	total: 31.7s	remaining: 2m 5s
+bestTest = 1183.352696
+bestIteration = 242
+Shrink model to first 243 iterations.
+{'MSE - mean': 1400323.555752072, 'MSE - std': 0.0, 'R2 - mean': 0.7207467186617229, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c2f3820>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2040.1717645	test: 2034.5933653	best: 2034.5933653 (0)	total: 160ms	remaining: 2m 39s
+100:	learn: 991.1508644	test: 1161.2154552	best: 1161.2154552 (100)	total: 15.4s	remaining: 2m 17s
+200:	learn: 897.8071383	test: 1116.7462389	best: 1116.7377199 (199)	total: 31.2s	remaining: 2m 4s
+300:	learn: 854.9448747	test: 1098.4168788	best: 1097.7773778 (291)	total: 46.7s	remaining: 1m 48s
+bestTest = 1095.778632
+bestIteration = 329
+Shrink model to first 330 iterations.
+{'MSE - mean': 1300527.2021894301, 'MSE - std': 99796.35356264189, 'R2 - mean': 0.7410138982283158, 'R2 - std': 0.020267179566592852}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c2f3ac0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2038.0338874	test: 2026.1994957	best: 2026.1994957 (0)	total: 164ms	remaining: 2m 43s
+100:	learn: 948.9619934	test: 1112.5709209	best: 1112.5709209 (100)	total: 15.4s	remaining: 2m 17s
+200:	learn: 905.7640844	test: 1097.5583713	best: 1097.5583713 (200)	total: 30.8s	remaining: 2m 2s
+300:	learn: 872.6572034	test: 1088.0495484	best: 1088.0495484 (300)	total: 46.5s	remaining: 1m 47s
+bestTest = 1085.424748
+bestIteration = 377
+Shrink model to first 378 iterations.
+{'MSE - mean': 1259733.765389935, 'MSE - std': 99838.6219260629, 'R2 - mean': 0.7488199528671534, 'R2 - std': 0.019892411193854452}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c2f3820>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2019.5592776	test: 2061.7288993	best: 2061.7288993 (0)	total: 161ms	remaining: 2m 40s
+100:	learn: 957.6346987	test: 1118.1177233	best: 1118.1177233 (100)	total: 15.8s	remaining: 2m 20s
+200:	learn: 900.0496483	test: 1082.0920678	best: 1082.0920678 (200)	total: 31.5s	remaining: 2m 5s
+300:	learn: 873.0969627	test: 1064.7513435	best: 1064.5017106 (298)	total: 47s	remaining: 1m 49s
+bestTest = 1063.565853
+bestIteration = 308
+Shrink model to first 309 iterations.
+{'MSE - mean': 1227593.4069466302, 'MSE - std': 102833.94742819045, 'R2 - mean': 0.7578884688897447, 'R2 - std': 0.023312978485921072}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c085850>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2024.5261574	test: 2052.4945754	best: 2052.4945754 (0)	total: 163ms	remaining: 2m 43s
+100:	learn: 944.5228358	test: 1195.3323636	best: 1195.3323636 (100)	total: 15.2s	remaining: 2m 15s
+200:	learn: 891.7382559	test: 1167.3673469	best: 1167.3103604 (197)	total: 30.5s	remaining: 2m 1s
+300:	learn: 867.3138817	test: 1157.5376164	best: 1156.8550097 (282)	total: 46.2s	remaining: 1m 47s
+bestTest = 1156.85501
+bestIteration = 282
+Shrink model to first 283 iterations.
+{'MSE - mean': 1249737.4339932785, 'MSE - std': 102084.71154047435, 'R2 - mean': 0.7539704794382072, 'R2 - std': 0.022275514316788567}
+Trial 90 finished with value: 1249737.4339932785 and parameters: {'learning_rate': 0.22307349642126056, 'max_depth': 11, 'l2_leaf_reg': 14.99944488120762}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c099280>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c30edc0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 1956.2421781	test: 1950.3754871	best: 1950.3754871 (0)	total: 161ms	remaining: 2m 41s
+100:	learn: 888.7950746	test: 1198.6377854	best: 1197.9153063 (90)	total: 16s	remaining: 2m 22s
+200:	learn: 809.8850992	test: 1171.4608728	best: 1171.0149290 (182)	total: 31.6s	remaining: 2m 5s
+bestTest = 1171.014929
+bestIteration = 182
+Shrink model to first 183 iterations.
+{'MSE - mean': 1371275.9428747955, 'MSE - std': 0.0, 'R2 - mean': 0.7265394093421758, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310310>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 1949.7885864	test: 1944.6706291	best: 1944.6706291 (0)	total: 164ms	remaining: 2m 43s
+100:	learn: 933.7264294	test: 1121.1691452	best: 1120.7968208 (94)	total: 15.6s	remaining: 2m 19s
+bestTest = 1112.1407
+bestIteration = 116
+Shrink model to first 117 iterations.
+{'MSE - mean': 1304066.4325491935, 'MSE - std': 67209.51032560202, 'R2 - mean': 0.7403191068194558, 'R2 - std': 0.013779697477280028}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c060310>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 1962.7954325	test: 1954.9897352	best: 1954.9897352 (0)	total: 159ms	remaining: 2m 38s
+100:	learn: 945.5360461	test: 1150.0405007	best: 1149.9883587 (99)	total: 15.5s	remaining: 2m 17s
+200:	learn: 872.7756696	test: 1123.3611085	best: 1123.0472061 (194)	total: 31.2s	remaining: 2m 3s
+bestTest = 1118.867574
+bestIteration = 267
+Shrink model to first 268 iterations.
+{'MSE - mean': 1286665.7860244485, 'MSE - std': 60141.310132301856, 'R2 - mean': 0.7434435333095877, 'R2 - std': 0.012087629633694953}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c094520>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 1933.9022214	test: 1973.0094451	best: 1973.0094451 (0)	total: 164ms	remaining: 2m 44s
+100:	learn: 929.8241236	test: 1101.6838218	best: 1101.6838218 (100)	total: 15.9s	remaining: 2m 21s
+bestTest = 1083.135389
+bestIteration = 158
+Shrink model to first 159 iterations.
+{'MSE - mean': 1258294.9192565356, 'MSE - std': 71606.2227170955, 'R2 - mean': 0.7518608354328851, 'R2 - std': 0.017948148030525007}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c094430>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 1935.7797507	test: 1979.9265070	best: 1979.9265070 (0)	total: 161ms	remaining: 2m 41s
+100:	learn: 933.2903722	test: 1187.3354528	best: 1186.4009623 (85)	total: 15.7s	remaining: 2m 20s
+bestTest = 1186.400962
+bestIteration = 85
+Shrink model to first 86 iterations.
+{'MSE - mean': 1288145.3662878633, 'MSE - std': 87556.5968806958, 'R2 - mean': 0.7464407054328444, 'R2 - std': 0.01937059759144969}
+Trial 91 finished with value: 1288145.3662878633 and parameters: {'learning_rate': 0.2996402849260805, 'max_depth': 11, 'l2_leaf_reg': 10.684580512903858}. Best is trial 62 with value: 1214987.6890844502.
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c08f6d0>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310c40>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2064.8443695	test: 2048.2281686	best: 2048.2281686 (0)	total: 304ms	remaining: 5m 3s
+100:	learn: 952.4668777	test: 1200.2980411	best: 1199.5701332 (98)	total: 28.2s	remaining: 4m 10s
+200:	learn: 871.4400219	test: 1175.7032781	best: 1175.7032781 (200)	total: 57.6s	remaining: 3m 48s
+300:	learn: 814.1957619	test: 1156.6098332	best: 1156.6098332 (300)	total: 1m 27s	remaining: 3m 23s
+400:	learn: 785.6777415	test: 1149.2772504	best: 1148.7806618 (395)	total: 1m 57s	remaining: 2m 55s
+500:	learn: 771.5940678	test: 1142.0380076	best: 1141.5051230 (493)	total: 2m 27s	remaining: 2m 26s
+bestTest = 1141.505123
+bestIteration = 493
+Shrink model to first 494 iterations.
+{'MSE - mean': 1303033.9400558928, 'MSE - std': 0.0, 'R2 - mean': 0.7401482664766539, 'R2 - std': 0.0}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c314910>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2078.9813167	test: 2070.5835362	best: 2070.5835362 (0)	total: 301ms	remaining: 5m
+100:	learn: 983.5665566	test: 1141.1472021	best: 1141.1472021 (100)	total: 28.1s	remaining: 4m 10s
+200:	learn: 907.3963148	test: 1109.7490991	best: 1109.7490991 (200)	total: 58s	remaining: 3m 50s
+300:	learn: 866.4044371	test: 1090.7698909	best: 1090.7698909 (300)	total: 1m 27s	remaining: 3m 24s
+400:	learn: 842.5137420	test: 1083.3000965	best: 1083.0679814 (397)	total: 1m 56s	remaining: 2m 53s
+bestTest = 1083.067981
+bestIteration = 397
+Shrink model to first 398 iterations.
+{'MSE - mean': 1238035.1201291294, 'MSE - std': 64998.819926763535, 'R2 - mean': 0.7534676674296041, 'R2 - std': 0.0133194009529502}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c310790>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2075.0598993	test: 2064.4847535	best: 2064.4847535 (0)	total: 302ms	remaining: 5m 1s
+100:	learn: 982.9591653	test: 1144.7503367	best: 1144.7503367 (100)	total: 28s	remaining: 4m 9s
+200:	learn: 882.2066110	test: 1099.0623030	best: 1099.0391217 (199)	total: 57.6s	remaining: 3m 48s
+300:	learn: 863.1106534	test: 1092.5328865	best: 1092.3461155 (291)	total: 1m 26s	remaining: 3m 22s
+bestTest = 1088.195034
+bestIteration = 349
+Shrink model to first 350 iterations.
+{'MSE - mean': 1220079.44792924, 'MSE - std': 58833.46601111454, 'R2 - mean': 0.756721156221085, 'R2 - std': 0.011808528265462099}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c308250>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2053.2916575	test: 2097.7481878	best: 2097.7481878 (0)	total: 302ms	remaining: 5m 2s
+100:	learn: 960.7510951	test: 1124.3306237	best: 1124.3306237 (100)	total: 28.6s	remaining: 4m 14s
+200:	learn: 886.1004763	test: 1079.0377094	best: 1079.0377094 (200)	total: 58.3s	remaining: 3m 51s
+300:	learn: 854.2967816	test: 1063.4782301	best: 1063.0528196 (295)	total: 1m 28s	remaining: 3m 24s
+400:	learn: 838.6747160	test: 1053.2234861	best: 1053.1287063 (395)	total: 1m 57s	remaining: 2m 55s
+500:	learn: 818.8415900	test: 1042.4144530	best: 1042.1578446 (497)	total: 2m 27s	remaining: 2m 26s
+600:	learn: 804.2663715	test: 1037.5714542	best: 1037.4810798 (589)	total: 2m 57s	remaining: 1m 57s
+bestTest = 1036.984888
+bestIteration = 613
+Shrink model to first 614 iterations.
+{'MSE - mean': 1183894.0144546414, 'MSE - std': 80772.45402607585, 'R2 - mean': 0.7664663089227381, 'R2 - std': 0.019735374543767326}
+Model : <catboost.core.CatBoostRegressor object at 0x7f0f3c308580>
+Current Working Directory: /home/mburu/Master_Thesis/master-thesis-da/DNN_Trial
+0:	learn: 2064.9693931	test: 2087.2973862	best: 2087.2973862 (0)	total: 304ms	remaining: 5m 3s
+100:	learn: 957.0803576	test: 1202.9183732	best: 1202.9183732 (100)	total: 27.6s	remaining: 4m 5s
+200:	learn: 897.2806164	test: 1175.1117562	best: 1174.6660327 (190)	total: 57.3s	remaining: 3m 47s
+bestTest = 1174.666033
+bestIteration = 190
+Shrink model to first 191 iterations.
+{'MSE - mean': 1223083.2678515767, 'MSE - std': 106595.22405226438, 'R2 - mean': 0.7592086762813984, 'R2 - std': 0.022853466540828742}
+Trial 92 finished with value: 1223083.2678515767 and parameters: {'learning_rate': 0.19174890692908816, 'max_depth': 12, 'l2_leaf_reg': 19.420890844127975}. Best is trial 62 with value: 1214987.6890844502.

@@ -934,3 +934,171 @@ Train time: 5.866739
 Test time: 0.034277
 
 ---------------------------------------
+2024-12-17 09:51:13.551097
+Parameters: {'learning_rate': 0.2327012584047532, 'max_depth': 10, 'l2_leaf_reg': 20.153367386630034, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1277362.66753
+MSE - std: 97307.54359
+R2 - mean: 0.74845
+R2 - std: 0.02229
+
+Train time: 38.477741
+Test time: 0.037839
+
+---------------------------------------
+2024-12-17 09:52:06.142597
+Parameters: {'learning_rate': 0.17525912449114753, 'max_depth': 8, 'l2_leaf_reg': 5.101586148978267, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1311426.44457
+MSE - std: 90854.40563
+R2 - mean: 0.74193
+R2 - std: 0.01932
+
+Train time: 14.221783
+Test time: 0.040277
+
+---------------------------------------
+2024-12-17 09:52:26.734846
+Parameters: {'learning_rate': 0.20900976459422574, 'max_depth': 4, 'l2_leaf_reg': 17.29379053914409, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1456510.47024
+MSE - std: 79662.64154
+R2 - mean: 0.71337
+R2 - std: 0.01778
+
+Train time: 6.664011
+Test time: 0.031460
+
+---------------------------------------
+2024-12-17 09:58:56.318187
+Parameters: {'learning_rate': 0.11382499067849615, 'max_depth': 11, 'l2_leaf_reg': 5.9383254650658435, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1247605.98839
+MSE - std: 81044.61967
+R2 - mean: 0.75444
+R2 - std: 0.01812
+
+Train time: 89.982690
+Test time: 0.042661
+
+---------------------------------------
+2024-12-17 10:07:29.730477
+Parameters: {'learning_rate': 0.14919398413413623, 'max_depth': 11, 'l2_leaf_reg': 29.747741404798397, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1233506.23782
+MSE - std: 107375.29934
+R2 - mean: 0.75713
+R2 - std: 0.02352
+
+Train time: 118.359519
+Test time: 0.046672
+
+---------------------------------------
+2024-12-17 10:18:47.043146
+Parameters: {'learning_rate': 0.1495095406931487, 'max_depth': 12, 'l2_leaf_reg': 24.115469112630947, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1246185.63438
+MSE - std: 114911.78744
+R2 - mean: 0.75462
+R2 - std: 0.02488
+
+Train time: 151.059102
+Test time: 0.043565
+
+---------------------------------------
+2024-12-17 10:25:25.914541
+Parameters: {'learning_rate': 0.18176399680036534, 'max_depth': 11, 'l2_leaf_reg': 28.963888604127913, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1236330.86383
+MSE - std: 112613.47050
+R2 - mean: 0.75654
+R2 - std: 0.02478
+
+Train time: 92.033141
+Test time: 0.050521
+
+---------------------------------------
+2024-12-17 10:34:30.755459
+Parameters: {'learning_rate': 0.22810232528086843, 'max_depth': 12, 'l2_leaf_reg': 21.275678838256372, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1223428.54249
+MSE - std: 98900.12330
+R2 - mean: 0.75910
+R2 - std: 0.02211
+
+Train time: 121.665836
+Test time: 0.040712
+
+---------------------------------------
+2024-12-17 10:43:27.978550
+Parameters: {'learning_rate': 0.23737660405404581, 'max_depth': 12, 'l2_leaf_reg': 21.01422412546358, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1236024.77826
+MSE - std: 96270.10471
+R2 - mean: 0.75661
+R2 - std: 0.02173
+
+Train time: 119.963576
+Test time: 0.044391
+
+---------------------------------------
+2024-12-17 10:48:11.152350
+Parameters: {'learning_rate': 0.20151159957500658, 'max_depth': 12, 'l2_leaf_reg': 3.3458575469126104, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1280440.86700
+MSE - std: 121642.49707
+R2 - mean: 0.74789
+R2 - std: 0.02624
+
+Train time: 63.541022
+Test time: 0.038847
+
+---------------------------------------
+2024-12-17 10:51:23.651920
+Parameters: {'learning_rate': 0.25685139341131535, 'max_depth': 10, 'l2_leaf_reg': 26.27133211030004, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1261520.65468
+MSE - std: 114463.15684
+R2 - mean: 0.75160
+R2 - std: 0.02483
+
+Train time: 46.341244
+Test time: 0.046392
+
+---------------------------------------
+2024-12-17 10:55:41.942540
+Parameters: {'learning_rate': 0.22307349642126056, 'max_depth': 11, 'l2_leaf_reg': 14.99944488120762, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1249737.43399
+MSE - std: 102084.71154
+R2 - mean: 0.75397
+R2 - std: 0.02228
+
+Train time: 59.753028
+Test time: 0.039259
+
+---------------------------------------
+2024-12-17 10:58:07.181488
+Parameters: {'learning_rate': 0.2996402849260805, 'max_depth': 11, 'l2_leaf_reg': 10.684580512903858, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1288145.36629
+MSE - std: 87556.59688
+R2 - mean: 0.74644
+R2 - std: 0.01937
+
+Train time: 33.741009
+Test time: 0.040591
+
+---------------------------------------
+2024-12-17 11:08:39.438693
+Parameters: {'learning_rate': 0.19174890692908816, 'max_depth': 12, 'l2_leaf_reg': 19.420890844127975, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+MSE - mean: 1223083.26785
+MSE - std: 106595.22405
+R2 - mean: 0.75921
+R2 - std: 0.02285
+
+Train time: 141.127680
+Test time: 0.040956
+
+---------------------------------------
