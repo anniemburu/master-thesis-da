@@ -1,0 +1,14 @@
+2024-12-17 03:31:41.657059
+CatBoost - Boston
+
+MSE - mean: 8.89054
+MSE - std: 1.76313
+R2 - mean: 0.89218
+R2 - std: 0.02687
+
+Train time: 6.523773
+Test time: 0.005722
+
+Best Parameters: {'learning_rate': 0.06953921575913417, 'max_depth': 4, 'l2_leaf_reg': 5.586791127444733, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Boston/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [3]}
+
+
