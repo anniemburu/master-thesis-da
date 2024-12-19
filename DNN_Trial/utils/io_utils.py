@@ -100,7 +100,8 @@ def get_output_path(args, filename, file_type, directory=None, extension=None):
     if extension is not None:
         file_path += "_" + str(extension)
 
-    file_path += "." + file_type
+    if file_type is not None:
+        file_path += "." + file_type
 
     # For example: .../m_3.pkl
 
