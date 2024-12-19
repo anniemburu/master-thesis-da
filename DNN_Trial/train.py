@@ -1,5 +1,7 @@
 import logging
 import sys
+import numpy as np
+import pandas as pd
 
 import optuna
 
@@ -7,13 +9,16 @@ from models import str2model
 from utils.load_data import load_data
 from utils.scorer import get_scorer
 from utils.timer import Timer
-from utils.io_utils import save_results_to_file, save_hyperparameters_to_file, save_loss_to_file
+from utils.io_utils import save_results_to_file, save_hyperparameters_to_file, save_loss_to_file, get_output_path
 from utils.parser import get_parser, get_given_parameters_parser
+from utils.visualization import loss_vizualization
 
 from sklearn.model_selection import KFold, StratifiedKFold  # , train_test_split
+import warnings
+warnings.filterwarnings("ignore")
 
 
-def cross_validation(model, X, y, args, save_model=False):
+def cross_validation(model, X, y, args, visual, save_model=True):
     # Record some statistics and metrics
     sc = get_scorer(args)
     train_timer = Timer()
@@ -39,6 +44,7 @@ def cross_validation(model, X, y, args, save_model=False):
         # Train model
         train_timer.start()
         loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+        
         train_timer.end()
 
         # Test model
@@ -50,17 +56,22 @@ def cross_validation(model, X, y, args, save_model=False):
         curr_model.save_model_and_predictions(y_test, i)
 
         if save_model:
+
             save_loss_to_file(args, loss_history, "loss", extension=i)
             save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
+            print('Saved Losses')
+            
+        else:
+            print("DID NOT SAVE RESULTS")
 
         # Compute scores on the output
         sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities)
 
-        print(sc.get_results())
+        print(f'{sc.get_results()} \n \n')
 
     # Best run is saved to file
     if save_model:
-        print("Results:", sc.get_results())
+        print("Results After CV:", sc.get_results())
         print("Train time:", train_timer.get_average_time())
         print("Inference time:", test_timer.get_average_time())
 
@@ -69,8 +80,37 @@ def cross_validation(model, X, y, args, save_model=False):
                              train_timer.get_average_time(), test_timer.get_average_time(),
                              model.params)
 
-    # print("Finished cross validation")
+    print("Finished cross validation")
+
+    #visualization
+
+    if visual:
+        losses = losses_history(args)
+        loss_vizualization(args, losses)
+
+    #print(get_output_path(args, filename="logging", file_type = None))
     return sc, (train_timer.get_average_time(), test_timer.get_average_time())
+
+def losses_history(args):
+    path = get_output_path(args, filename="logging", file_type = None)
+    folds = 5
+    loss_dict = {
+        'train' : [],
+        'val' : []
+    }
+
+    for i in np.arange(folds):
+        loss_path = path + f'/loss_{i}.txt'
+        val_loss_path = path + f'/val_loss_{i}.txt'
+
+        loss_file = np.loadtxt(loss_path)
+        val_loss_file = np.loadtxt(val_loss_path)
+
+        loss_dict['train'].append(list(loss_file))
+        loss_dict['val'].append(list(val_loss_file))
+
+
+    return loss_dict
 
 
 class Objective(object):
@@ -92,7 +132,7 @@ class Objective(object):
         model = self.model_name(trial_params, self.args)
 
         # Cross validate the chosen hyperparameters
-        sc, time = cross_validation(model, self.X, self.y, self.args)
+        sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
 
         save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time)
 
@@ -118,7 +158,8 @@ def main(args):
 
     # Run best trial again and save it!
     model = model_name(study.best_trial.params, args)
-    cross_validation(model, X, y, args, save_model=True)
+    cross_validation(model, X, y, args, visual=False, save_model=True)
+    
 
 
 def main_once(args):
@@ -130,7 +171,7 @@ def main_once(args):
     parameters = args.parameters[args.dataset][args.model_name]
     model = model_name(parameters, args)
 
-    sc, time = cross_validation(model, X, y, args)
+    sc, time = cross_validation(model, X, y, args, visual=True)
     print(sc.get_results())
     print(time)
 
