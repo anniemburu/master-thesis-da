@@ -42,12 +42,15 @@ class XGBoost(BaseModel):
     def fit(self, X, y, X_val=None, y_val=None):
         train = xgb.DMatrix(X, label=y)
         val = xgb.DMatrix(X_val, label=y_val)
-        eval_list = [(val, "eval")]
-        self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs, evals=eval_list,
+        eval_list = [(train, "train"),(val, "eval")]
+        evals_result = {}
+        self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs, evals=eval_list, 
+                               evals_result=evals_result,
                                early_stopping_rounds=self.args.early_stopping_rounds,
                                verbose_eval=self.args.logging_period)
+        
 
-        return [], []
+        return evals_result['train']['rmse'], evals_result['eval']['rmse']
 
     def predict(self, X):
         X = xgb.DMatrix(X)
@@ -162,14 +165,18 @@ class LightGBM(BaseModel):
             self.params["metric"] = "auc"
 
     def fit(self, X, y, X_val=None, y_val=None):
+        evals_result = {}
         train = lgb.Dataset(X, label=y, categorical_feature=self.args.cat_idx)
         val = lgb.Dataset(X_val, label=y_val, categorical_feature=self.args.cat_idx)
-        self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs, valid_sets=[val],
-                               valid_names=["eval"], callbacks=[lgb.early_stopping(self.args.early_stopping_rounds),
+        self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs, valid_sets=[train,val],
+                               valid_names=["train","eval"], callbacks=[lgb.early_stopping(self.args.early_stopping_rounds),
                                                                 lgb.log_evaluation(self.args.logging_period)],
-                               categorical_feature=self.args.cat_idx)
+                               categorical_feature=self.args.cat_idx, evals_result = evals_result)
+        
+        #print(f"Train Loss : {evals_result['train']['l2']} \n")
+        #print(f"Eval Loss : {evals_result['eval']['l2']} \n")
 
-        return [], []
+        return evals_result['train']['l2'], evals_result['eval']['l2']
 
     def predict_proba(self, X):
         probabilities = self.model.predict(X)
