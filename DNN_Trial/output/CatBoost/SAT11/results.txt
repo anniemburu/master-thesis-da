@@ -1,0 +1,14 @@
+2024-12-17 12:16:47.343559
+CatBoost - SAT11
+
+MSE - mean: 1214877.29507
+MSE - std: 121512.09918
+R2 - mean: 0.76073
+R2 - std: 0.02655
+
+Train time: 156.445752
+Test time: 0.039995
+
+Best Parameters: {'learning_rate': 0.18855758911851606, 'max_depth': 12, 'l2_leaf_reg': 19.251736819896863, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [105]}
+
+

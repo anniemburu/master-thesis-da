@@ -1,0 +1,14 @@
+2024-12-17 18:11:32.997540
+CatBoost - Diamonds
+
+MSE - mean: 301015.66130
+MSE - std: 23840.77102
+R2 - mean: 0.98110
+R2 - std: 0.00131
+
+Train time: 32.004945
+Test time: 0.114086
+
+Best Parameters: {'learning_rate': 0.11639722298911934, 'max_depth': 8, 'l2_leaf_reg': 17.631037967653356, 'iterations': 1000, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Diamonds/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [1, 2, 3]}
+
+
