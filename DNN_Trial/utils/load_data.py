@@ -119,7 +119,7 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    elif args.dataset == "House Prices Nominal":
+    elif args.dataset == "House_Prices_Nominal":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42563-house_prices_nominal/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42563-house_prices_nominal.csv')
         label_col = 'SalePrice'
@@ -147,7 +147,7 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    elif args.dataset == "Mercedes Benz":
+    elif args.dataset == "Mercedes_Benz":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing.csv')
         label_col = 'y'
@@ -163,7 +163,7 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    elif args.dataset == "Allstate Claims":
+    elif args.dataset == "Allstate_Claims":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity.csv')
         label_col = 'loss'
@@ -179,7 +179,7 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    elif args.dataset == "Brazillian Houses":
+    elif args.dataset == "Brazillian_Houses":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         label_col = 'total_(BRL)'
@@ -195,7 +195,7 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    elif args.dataset == "NYC Taxi":
+    elif args.dataset == "NYC_Taxi":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016.csv')
         label_col = 'tip_amount'
@@ -203,7 +203,7 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    elif args.dataset == "House Sales":
+    elif args.dataset == "House_Sales":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42731-house_sales/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42731-house_sales.csv')
         label_col = 'price'
