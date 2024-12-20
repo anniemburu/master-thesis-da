@@ -1,4 +1,0 @@
-Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/house_prices_nominal.yml', data_parallel=False, dataset='House Prices Nominal', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=500, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=[6, 25, 30, 31, 32, 33, 35, 42, 57, 58, 60, 63, 64, 72, 73, 74], miss_num_idx=[3, 26, 59], model_name='XGBoost', n_trials=100, nominal_idx=[2, 7, 12], num_classes=1, num_features=80, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31, 32, 33, 35, 39, 40, 41, 42, 53, 55, 57, 58, 60, 63, 64, 65, 72, 73, 74, 78, 79], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
-Start hyperparameter optimization
-Loading dataset House Prices Nominal...
-Dataset loaded!
