@@ -29,6 +29,8 @@ def loss_vizualization(args, loss_hist):
     axes[0, 1].set_title('Result Fold 1')
     axes[0, 1].legend()
 
+    min_len = min(len(loss_hist['train'][2]), len(loss_hist['val'][2]))
+    epochs = range(1, min_len+1)
     axes[0, 2].plot(epochs, loss_hist['train'][2][:min_len], label='Training Loss')
     axes[0, 2].plot(epochs, loss_hist['val'][2][:min_len], label='Validation Loss')
     axes[0, 2].set_ylabel('Epochs')
@@ -36,6 +38,8 @@ def loss_vizualization(args, loss_hist):
     axes[0, 2].set_title('Result Fold 2')
     axes[0, 2].legend()
 
+    min_len = min(len(loss_hist['train'][3]), len(loss_hist['val'][3]))
+    epochs = range(1, min_len+1)
     axes[1, 0].plot(epochs, loss_hist['train'][3][:min_len], label='Training Loss')
     axes[1, 0].plot(epochs, loss_hist['val'][3][:min_len], label='Validation Loss')
     axes[1, 0].set_ylabel('Epochs')
@@ -43,6 +47,8 @@ def loss_vizualization(args, loss_hist):
     axes[1, 0].set_title('Result Fold 3')
     axes[1, 0].legend()
 
+    min_len = min(len(loss_hist['train'][4]), len(loss_hist['val'][4]))
+    epochs = range(1, min_len+1)
     axes[1, 1].plot(epochs, loss_hist['train'][4][:min_len], label='Training Loss')
     axes[1, 1].plot(epochs, loss_hist['val'][4][:min_len], label='Validation Loss')
     axes[1, 1].set_ylabel('Epochs')

@@ -120,9 +120,12 @@ class CatBoost(BaseModel):
             X[:, self.args.cat_idx] = X[:, self.args.cat_idx].astype('int')
             X_val[:, self.args.cat_idx] = X_val[:, self.args.cat_idx].astype('int')
 
+        #self.model.fit(X, y, eval_set=(X_val, y_val), use_best_model=True)
         self.model.fit(X, y, eval_set=(X_val, y_val))
 
-        return [], []
+        evals_result = self.model.get_evals_result()
+
+        return evals_result['learn']['RMSE'], evals_result['validation']['RMSE']
 
     def predict(self, X):
         if self.args.cat_idx:

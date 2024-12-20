@@ -92,7 +92,8 @@ def cross_validation(model, X, y, args, visual, save_model=True):
     return sc, (train_timer.get_average_time(), test_timer.get_average_time())
 
 def losses_history(args):
-    path = get_output_path(args, filename="logging", file_type = None)
+    
+    path = get_output_path(args, filename="", directory='logging',file_type = None)
     folds = 5
     loss_dict = {
         'train' : [],
