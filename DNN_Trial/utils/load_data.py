@@ -50,13 +50,13 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Socmob":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
+        import pandas as pd
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
-
 
     elif args.dataset == "Sensory":
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
@@ -236,6 +236,11 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     #####################################################################################
+    if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
+        args.one_hot_encode = False
+        print(f'No one Hot for this Baby!!! \n')
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~
 
     print("Dataset loaded!")
     print(X.shape)
@@ -289,7 +294,10 @@ def load_data(args):
         #change the num of features after one hot encoding;
         args.num_features = X.shape[1]
         args.cat_idx = get_catidx(args)
+        #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
+
         print(f"args.num_features: {args.num_features}")
+        print(f"args.cat_idx: {args.cat_idx}")
         print("New Shape:", X.shape)
         
 
