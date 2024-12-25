@@ -293,9 +293,13 @@ def load_data(args):
 
         #change the num of features after one hot encoding;
         args.num_features = X.shape[1]
-        args.cat_idx = get_catidx(args)
+        #args.cat_idx = get_catidx(args)
         #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
-
+        if args.ordinal_encode:
+            args.cat_idx = args.ordinal_idx
+        else:
+            args.cat_idx = []
+            
         print(f"args.num_features: {args.num_features}")
         print(f"args.cat_idx: {args.cat_idx}")
         print("New Shape:", X.shape)
