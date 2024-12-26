@@ -5,7 +5,7 @@ from sklearn.pipeline import Pipeline
 
 import numpy as np
 import pandas as pd
-print(f" Panda Version: {pd.__version__})
+print(f" Panda Version: {pd.__version__}")
 import os
 
 
