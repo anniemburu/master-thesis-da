@@ -5,6 +5,7 @@ from sklearn.pipeline import Pipeline
 
 import numpy as np
 import pandas as pd
+print(f" Panda Version: {pd.__version__})
 import os
 
 
@@ -51,8 +52,8 @@ def load_data(args):
 
     elif args.dataset == "Socmob":
         import pandas as pd
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
-        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
+        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
 
         X = df.drop(label_col, axis=1).to_numpy()
