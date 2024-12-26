@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 98, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41980-SAT11-HAND-runtime-regression/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 115, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42225-diamonds/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 123, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42563-house_prices_nominal/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 151, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 167, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1

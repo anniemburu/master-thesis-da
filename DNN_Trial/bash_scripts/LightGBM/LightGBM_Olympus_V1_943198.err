@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 45, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/531-boston/raw_data.csv')
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 55, in load_data
+    df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 62, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 70, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41021-Moneyball/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 145, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 86, in load_data
+    df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41540-black_friday/raw_data.csv') #CLUSTER
+UnboundLocalError: local variable 'pd' referenced before assignment
+srun: error: stud-000: task 0: Exited with exit code 1
