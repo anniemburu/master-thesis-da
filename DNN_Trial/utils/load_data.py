@@ -39,6 +39,8 @@ def get_catidx(args):
     return cat_idx
 
 def load_data(args):
+    import pandas as pd
+    print(f" Panda Version: {pd.__version__}")
     print("Loading dataset " + args.dataset + "...")
 
     ####~~~~~~~~~~~~~~~~~~~~ SPECIFY HOW DATASETS ARE LOADED AND STUFF ~~~~~~~~~~~~~~~~~ 
@@ -51,7 +53,6 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Socmob":
-        import pandas as pd
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
