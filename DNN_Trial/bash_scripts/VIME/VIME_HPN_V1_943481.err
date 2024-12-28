@@ -1,0 +1,36 @@
+[I 2024-12-27 20:54:17,296] A new study created in RDB with name: VIME_House_Prices_Nominal
+[W 2024-12-27 20:54:17,751] Trial 0 failed with parameters: {'p_m': 0.3055237576683746, 'alpha': 6.789788051576685, 'K': 5, 'beta': 7.726982438649694} because of the following error: ValueError("could not convert string to float: 'Pave'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 136, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py", line 39, in fit
+    X = X.astype(float)
+ValueError: could not convert string to float: 'Pave'
+[W 2024-12-27 20:54:17,752] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    main(arguments)
+  File "train.py", line 157, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 136, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/vime.py", line 39, in fit
+    X = X.astype(float)
+ValueError: could not convert string to float: 'Pave'
+srun: error: stud-000: task 0: Exited with exit code 1

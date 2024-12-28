@@ -1,0 +1,66 @@
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/allstate.yml', data_parallel=False, dataset='Allstate_Claims', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='VIME', n_trials=20, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116], num_classes=1, num_features=131, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Allstate_Claims...
+Dataset loaded!
+(188318, 130)
+Scaling the data...
+args.num_features: 1153
+args.cat_idx: []
+New Shape: (188318, 1153)
+A new study created in RDB with name: VIME_Allstate_Claims
+In get_device
+On Device: cuda
+In get_device
+On Device: cuda
+Fitted encoder
+Epoch 0, Val Loss: 3957165.50000
+Epoch 1, Val Loss: 4002278.25000
+Epoch 2, Val Loss: 3883378.75000
+Epoch 3, Val Loss: 3844312.25000
+Epoch 4, Val Loss: 3757195.25000
+Epoch 5, Val Loss: 3866857.50000
+Epoch 6, Val Loss: 3766436.75000
+Epoch 7, Val Loss: 3670515.00000
+Epoch 8, Val Loss: 3814654.25000
+Epoch 9, Val Loss: 3741214.25000
+Epoch 10, Val Loss: 3723346.25000
+Epoch 11, Val Loss: 3734703.25000
+Epoch 12, Val Loss: 3647805.50000
+Epoch 13, Val Loss: 3656014.75000
+Epoch 14, Val Loss: 3796529.50000
+Epoch 15, Val Loss: 3628228.00000
+Epoch 16, Val Loss: 3752224.00000
+Epoch 17, Val Loss: 3640322.75000
+Epoch 18, Val Loss: 3768319.25000
+Epoch 19, Val Loss: 3624099.00000
+Epoch 20, Val Loss: 3772809.50000
+Epoch 21, Val Loss: 3665377.50000
+Epoch 22, Val Loss: 3755642.50000
+Epoch 23, Val Loss: 3753105.75000
+Epoch 24, Val Loss: 3814374.25000
+Epoch 25, Val Loss: 3699862.50000
+Epoch 26, Val Loss: 3660094.75000
+Epoch 27, Val Loss: 3777185.50000
+Epoch 28, Val Loss: 3699004.75000
+Epoch 29, Val Loss: 3795035.75000
+Epoch 30, Val Loss: 3700468.75000
+Epoch 31, Val Loss: 3670949.25000
+Epoch 32, Val Loss: 3858608.50000
+Epoch 33, Val Loss: 3691172.75000
+Epoch 34, Val Loss: 3629892.75000
+Epoch 35, Val Loss: 3755932.25000
+Epoch 36, Val Loss: 3847944.25000
+Epoch 37, Val Loss: 3751047.00000
+Epoch 38, Val Loss: 3769640.00000
+Epoch 39, Val Loss: 3752357.25000
+Epoch 40, Val Loss: 3755348.50000
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3626763.1036368636, 'MSE - std': 0.0, 'R2 - mean': 0.5750681391725223, 'R2 - std': 0.0} 
+ 
+
+In get_device
+On Device: cuda
+Fitted encoder
