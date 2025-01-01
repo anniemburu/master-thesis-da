@@ -182,8 +182,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Brazillian_Houses":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         label_col = 'total_(BRL)'
 
         X = df.drop(label_col, axis=1).to_numpy()
@@ -237,15 +237,17 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    #####################################################################################
-    if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
-        args.one_hot_encode = False
-        print(f'No one Hot for this Baby!!! \n')
+    
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    print("Dataset loaded!")
+    print("Dataset loaded! \n")
+    print(f"X b4 encoding : {X[0]} \n")
     print(X.shape)
+    print(f"Data Type of X: {type(X)}")
+    print(f"Nominal Idx: {args.nominal_idx}")
+    print(f"Ordinal Idx: {args.ordinal_idx}")
+    print(f"Cat Dims: {args.cat_dims} \n \n")
+    print(f"Normonal Idx: {args.nominal_idx}")
+    
 
     # Preprocess target 
     if args.target_encode:
@@ -256,21 +258,39 @@ def load_data(args):
     num_idx = []
     args.cat_dims = []
     args.cat_idx = get_catidx(args)
+    print(f"Cat Idx Part II: {args.cat_idx} ")
+    print(f"ENDE \n \n")
+
+    #####################################################################################
+    # NO Encoding for XGBoost, CatBoost, LightGBM
+    if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
+        args.one_hot_encode = False
+        args.ordinal_encode = False
+        print(f'No one Hot for this Baby!!! \n')
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~
 
     
-    # Preprocess data
+    # Preprocess  Nominal data
     for i in range(args.num_features):
         if args.cat_idx and i in args.cat_idx:
             #Only Nominal
-            if args.nominal_idx and i in args.nominal_idx:
+            if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
                 le = LabelEncoder()
                 X[:, i] = le.fit_transform(X[:, i])
-
-                # Setting this?
                 args.cat_dims.append(len(le.classes_))
+            else:
+                if args.nominal_idx and i in args.nominal_idx:
+                    le = LabelEncoder()
+                    X[:, i] = le.fit_transform(X[:, i])
+
+                    # Setting this?
+                    args.cat_dims.append(len(le.classes_))
 
         else:
             num_idx.append(i)
+
+    args.num_idx = num_idx #update num_idx
     
     
     if args.scale:
@@ -300,8 +320,9 @@ def load_data(args):
         if args.ordinal_encode:
             args.cat_idx = args.ordinal_idx
         else:
-            args.cat_idx = []
+            args.cat_idx = None
             
+        print("One Hot Encoding...")
         print(f"args.num_features: {args.num_features}")
         print(f"args.cat_idx: {args.cat_idx}")
         print("New Shape:", X.shape)
@@ -382,6 +403,8 @@ def load_data(args):
             # Fit and transform the data
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
 
-    #print(f'X after {X[0]} \n ')
+            print("OE Done!!! \n")
+
+    print(f'X after {X[0]} \n ')
     #print(f'y : {y[0]}')
     return X, y
