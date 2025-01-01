@@ -40,8 +40,12 @@ class XGBoost(BaseModel):
             self.params["eval_metric"] = "auc"
 
     def fit(self, X, y, X_val=None, y_val=None):
-        train = xgb.DMatrix(X, label=y)
-        val = xgb.DMatrix(X_val, label=y_val)
+        feature_types = self.feature_types().tolist()
+        print(f"Feature Types: {feature_types}")
+
+        train = xgb.DMatrix(X, label=y, enable_categorical=True, feature_types=feature_types)
+        val = xgb.DMatrix(X_val, label=y_val, enable_categorical=True, feature_types=feature_types)
+
         eval_list = [(train, "train"),(val, "eval")]
         evals_result = {}
         self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs, evals=eval_list, 
@@ -65,6 +69,15 @@ class XGBoost(BaseModel):
 
         self.prediction_probabilities = probabilities
         return self.prediction_probabilities
+    
+    def feature_types(self):
+        feat_types = np.empty(np.max(np.concatenate([self.args.cat_idx, self.args.num_idx])) + 1, dtype=object)
+
+        feat_types[self.args.cat_idx] = "c"
+        feat_types[self.args.num_idx] = "q"
+
+        return feat_types
+
 
     @classmethod
     def define_trial_parameters(cls, trial, args):
