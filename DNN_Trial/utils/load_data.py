@@ -5,6 +5,7 @@ from sklearn.pipeline import Pipeline
 
 import numpy as np
 import pandas as pd
+print(f" Panda Version: {pd.__version__}")
 import os
 
 
@@ -38,6 +39,8 @@ def get_catidx(args):
     return cat_idx
 
 def load_data(args):
+    import pandas as pd
+    print(f" Panda Version: {pd.__version__}")
     print("Loading dataset " + args.dataset + "...")
 
     ####~~~~~~~~~~~~~~~~~~~~ SPECIFY HOW DATASETS ARE LOADED AND STUFF ~~~~~~~~~~~~~~~~~ 
@@ -50,9 +53,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Socmob":
-        import pandas as pd
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
-        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
+        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
 
         X = df.drop(label_col, axis=1).to_numpy()
@@ -293,9 +295,13 @@ def load_data(args):
 
         #change the num of features after one hot encoding;
         args.num_features = X.shape[1]
-        args.cat_idx = get_catidx(args)
+        #args.cat_idx = get_catidx(args)
         #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
-
+        if args.ordinal_encode:
+            args.cat_idx = args.ordinal_idx
+        else:
+            args.cat_idx = []
+            
         print(f"args.num_features: {args.num_features}")
         print(f"args.cat_idx: {args.cat_idx}")
         print("New Shape:", X.shape)

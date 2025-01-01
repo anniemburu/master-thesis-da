@@ -1,1414 +1,1414 @@
-2024-12-20 15:55:01.928302
+2024-12-27 13:59:40.506707
 XGBoost - Sensory
 
-MSE - mean: 0.53534
-MSE - std: 0.05915
-R2 - mean: 0.19719
-R2 - std: 0.08919
+MSE - mean: 0.48821
+MSE - std: 0.07183
+R2 - mean: 0.27252
+R2 - std: 0.07525
 
-Train time: 0.823834
-Test time: 0.003580
+Train time: 0.881867
+Test time: 0.009031
 
-Best Parameters: {'max_depth': 3, 'alpha': 0.553581687000262, 'lambda': 0.007409101500543749, 'eta': 0.010991430931186095, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 0.0010441909647426364, 'lambda': 9.177927032105286e-08, 'eta': 0.010541897955268312, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:55:07.586246
+2024-12-27 13:59:44.984094
 XGBoost - Sensory
 
-MSE - mean: 0.61443
-MSE - std: 0.05460
-R2 - mean: 0.07375
-R2 - std: 0.12426
+MSE - mean: 0.48680
+MSE - std: 0.07142
+R2 - mean: 0.27470
+R2 - std: 0.07344
 
-Train time: 1.085122
-Test time: 0.024207
+Train time: 0.873308
+Test time: 0.010747
 
-Best Parameters: {'max_depth': 7, 'alpha': 1.0538832871759822e-07, 'lambda': 3.036761586619425e-06, 'eta': 0.04177014507429393, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 0.0001236397495138919, 'lambda': 5.859317286187389e-07, 'eta': 0.010640559387655988, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:55:10.037580
+2024-12-27 13:59:49.304365
 XGBoost - Sensory
 
-MSE - mean: 0.52277
-MSE - std: 0.04565
-R2 - mean: 0.21456
-R2 - std: 0.08429
-
-Train time: 0.494721
-Test time: 0.005434
-
-Best Parameters: {'max_depth': 2, 'alpha': 1.3425370353509103e-07, 'lambda': 0.002380035005917513, 'eta': 0.020568873912464116, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:11.205082
-XGBoost - Sensory
-
-MSE - mean: 0.54480
-MSE - std: 0.06576
-R2 - mean: 0.18360
-R2 - std: 0.09331
-
-Train time: 0.247635
-Test time: 0.006913
-
-Best Parameters: {'max_depth': 4, 'alpha': 3.4058431233239344e-08, 'lambda': 8.60593214245575e-08, 'eta': 0.15519559542460987, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:13.894243
-XGBoost - Sensory
-
-MSE - mean: 0.52353
-MSE - std: 0.04897
-R2 - mean: 0.21424
-R2 - std: 0.08093
-
-Train time: 0.545658
-Test time: 0.007188
-
-Best Parameters: {'max_depth': 2, 'alpha': 0.20406470059991605, 'lambda': 0.26180655300545924, 'eta': 0.017701473845465537, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:15.085111
-XGBoost - Sensory
-
-MSE - mean: 0.55862
-MSE - std: 0.06243
-R2 - mean: 0.16117
-R2 - std: 0.10347
-
-Train time: 0.251251
-Test time: 0.010825
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.0002575249494506004, 'lambda': 0.5416559658173662, 'eta': 0.2944313432348514, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:18.093810
-XGBoost - Sensory
-
-MSE - mean: 0.51977
-MSE - std: 0.05182
-R2 - mean: 0.21872
-R2 - std: 0.09365
-
-Train time: 0.608948
-Test time: 0.004892
-
-Best Parameters: {'max_depth': 3, 'alpha': 0.00030665880708757333, 'lambda': 5.733830261807556e-06, 'eta': 0.017080191780367748, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:26.781170
-XGBoost - Sensory
-
-MSE - mean: 0.60670
-MSE - std: 0.07244
-R2 - mean: 0.09169
-R2 - std: 0.09462
-
-Train time: 1.645481
-Test time: 0.011976
-
-Best Parameters: {'max_depth': 6, 'alpha': 8.967255795237104e-06, 'lambda': 0.000962898505494087, 'eta': 0.01253504922595075, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:29.479273
-XGBoost - Sensory
-
-MSE - mean: 0.51648
-MSE - std: 0.05852
-R2 - mean: 0.22576
-R2 - std: 0.08482
-
-Train time: 0.536323
-Test time: 0.006640
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.00427984741453424, 'lambda': 1.517941088705104e-05, 'eta': 0.022508731904528928, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:30.790959
-XGBoost - Sensory
-
-MSE - mean: 0.51466
-MSE - std: 0.04831
-R2 - mean: 0.22500
-R2 - std: 0.10019
-
-Train time: 0.277541
-Test time: 0.001916
-
-Best Parameters: {'max_depth': 2, 'alpha': 9.155266841563429e-08, 'lambda': 8.666954344772423e-08, 'eta': 0.10741309033336592, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:40.279016
-XGBoost - Sensory
-
-MSE - mean: 0.93611
-MSE - std: 0.07402
-R2 - mean: -0.41432
-R2 - std: 0.20989
-
-Train time: 1.840004
-Test time: 0.014615
-
-Best Parameters: {'max_depth': 12, 'alpha': 9.17952472616058e-06, 'lambda': 1.003790207114255e-08, 'eta': 0.09218449184078062, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:42.227320
-XGBoost - Sensory
-
-MSE - mean: 0.51858
-MSE - std: 0.05346
-R2 - mean: 0.22062
-R2 - std: 0.09509
-
-Train time: 0.395020
-Test time: 0.004278
-
-Best Parameters: {'max_depth': 3, 'alpha': 0.008655406070108182, 'lambda': 3.342320608589689e-06, 'eta': 0.04200522631128016, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:55:43.907065
-XGBoost - Sensory
-
-MSE - mean: 0.51980
-MSE - std: 0.04863
-R2 - mean: 0.21782
-R2 - std: 0.09673
-
-Train time: 0.343112
-Test time: 0.003368
-
-Best Parameters: {'max_depth': 2, 'alpha': 0.0048717479088139105, 'lambda': 2.0498879485623406e-07, 'eta': 0.07971064443308148, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:02.642637
-XGBoost - Sensory
-
-MSE - mean: 0.76129
-MSE - std: 0.08288
-R2 - mean: -0.14695
-R2 - std: 0.16685
-
-Train time: 3.573774
-Test time: 0.020140
-
-Best Parameters: {'max_depth': 9, 'alpha': 5.888425427074675e-06, 'lambda': 6.793946034578582e-05, 'eta': 0.02801860502571882, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:04.192100
-XGBoost - Sensory
-
-MSE - mean: 0.52244
-MSE - std: 0.06209
-R2 - mean: 0.21457
-R2 - std: 0.10653
-
-Train time: 0.354675
-Test time: 0.066666
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.0035969444907603433, 'lambda': 7.377704658776539e-05, 'eta': 0.13126457600248118, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:05.966036
-XGBoost - Sensory
-
-MSE - mean: 0.51614
-MSE - std: 0.05315
-R2 - mean: 0.22413
-R2 - std: 0.09544
-
-Train time: 0.379732
-Test time: 0.004084
-
-Best Parameters: {'max_depth': 3, 'alpha': 4.184247485588205e-07, 'lambda': 2.575374140139522e-07, 'eta': 0.0582068111513493, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:07.804170
-XGBoost - Sensory
-
-MSE - mean: 0.52564
-MSE - std: 0.05376
-R2 - mean: 0.21034
-R2 - std: 0.09302
-
-Train time: 0.366500
-Test time: 0.005899
-
-Best Parameters: {'max_depth': 3, 'alpha': 7.533680217390247e-07, 'lambda': 3.2340822092345825e-07, 'eta': 0.0666439796382169, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:09.111285
-XGBoost - Sensory
-
-MSE - mean: 0.51770
-MSE - std: 0.05805
-R2 - mean: 0.21936
-R2 - std: 0.11715
-
-Train time: 0.259236
-Test time: 0.006996
-
-Best Parameters: {'max_depth': 2, 'alpha': 1.845523801326952e-08, 'lambda': 1.2025842044948983e-08, 'eta': 0.19633101432780634, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:10.908821
-XGBoost - Sensory
-
-MSE - mean: 0.52088
-MSE - std: 0.05237
-R2 - mean: 0.21636
-R2 - std: 0.09957
-
-Train time: 0.361573
-Test time: 0.002287
-
-Best Parameters: {'max_depth': 3, 'alpha': 1.2109517792879724e-06, 'lambda': 6.435053765918914e-07, 'eta': 0.04644930800076104, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:12.413222
-XGBoost - Sensory
-
-MSE - mean: 0.57114
-MSE - std: 0.07377
-R2 - mean: 0.14795
-R2 - std: 0.07342
-
-Train time: 0.302897
-Test time: 0.004278
-
-Best Parameters: {'max_depth': 5, 'alpha': 4.589421535990706e-07, 'lambda': 5.685446000963158e-08, 'eta': 0.1141336423601424, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:14.440737
-XGBoost - Sensory
-
-MSE - mean: 0.52315
-MSE - std: 0.04359
-R2 - mean: 0.21280
-R2 - std: 0.09200
-
-Train time: 0.364088
-Test time: 0.007339
-
-Best Parameters: {'max_depth': 2, 'alpha': 4.187835171814312e-05, 'lambda': 7.598888377829663e-07, 'eta': 0.06056764393746976, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:16.845195
-XGBoost - Sensory
-
-MSE - mean: 0.51406
-MSE - std: 0.05677
-R2 - mean: 0.22898
-R2 - std: 0.08568
-
-Train time: 0.483078
-Test time: 0.006308
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.061852630695156036, 'lambda': 1.7339921886870635e-05, 'eta': 0.030607225799034132, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:19.804250
-XGBoost - Sensory
-
-MSE - mean: 0.53461
-MSE - std: 0.06512
-R2 - mean: 0.19904
-R2 - std: 0.09150
-
-Train time: 0.580957
-Test time: 0.009796
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.06324922226823557, 'lambda': 0.0002885515601573985, 'eta': 0.034704053392667786, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:21.118940
-XGBoost - Sensory
-
-MSE - mean: 0.52379
-MSE - std: 0.04656
-R2 - mean: 0.21194
-R2 - std: 0.09428
-
-Train time: 0.266258
-Test time: 0.016268
-
-Best Parameters: {'max_depth': 3, 'alpha': 1.1676093392735857e-08, 'lambda': 1.6091044220322034e-05, 'eta': 0.08635725392779138, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:23.090675
-XGBoost - Sensory
-
-MSE - mean: 0.52355
-MSE - std: 0.05624
-R2 - mean: 0.21556
-R2 - std: 0.07832
-
-Train time: 0.389592
-Test time: 0.005679
-
-Best Parameters: {'max_depth': 4, 'alpha': 1.3552888176984198e-07, 'lambda': 5.887058906689593e-08, 'eta': 0.05551292560483405, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:28.243120
-XGBoost - Sensory
-
-MSE - mean: 0.61714
-MSE - std: 0.10359
-R2 - mean: 0.07637
-R2 - std: 0.14227
-
-Train time: 0.992814
-Test time: 0.003295
-
-Best Parameters: {'max_depth': 7, 'alpha': 0.03101717512820314, 'lambda': 1.279298714131347e-06, 'eta': 0.031113860627639746, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:29.483287
-XGBoost - Sensory
-
-MSE - mean: 0.53135
-MSE - std: 0.06052
-R2 - mean: 0.20207
-R2 - std: 0.09947
-
-Train time: 0.248824
-Test time: 0.006287
-
-Best Parameters: {'max_depth': 3, 'alpha': 0.0008622246132146007, 'lambda': 0.02291835453703112, 'eta': 0.21120529477768746, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:31.342787
-XGBoost - Sensory
-
-MSE - mean: 0.56255
-MSE - std: 0.06604
-R2 - mean: 0.15825
-R2 - std: 0.08278
-
-Train time: 0.377572
-Test time: 0.002810
-
-Best Parameters: {'max_depth': 5, 'alpha': 2.3199792397453547e-06, 'lambda': 1.9102270690611396e-05, 'eta': 0.07637667686991423, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:33.237580
-XGBoost - Sensory
-
-MSE - mean: 0.53679
-MSE - std: 0.06475
-R2 - mean: 0.19352
-R2 - std: 0.10651
-
-Train time: 0.374174
-Test time: 0.002835
-
-Best Parameters: {'max_depth': 6, 'alpha': 0.9997770491368674, 'lambda': 3.3208296816236686e-08, 'eta': 0.10940836607981674, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:35.265146
-XGBoost - Sensory
-
-MSE - mean: 0.51438
-MSE - std: 0.04804
-R2 - mean: 0.22749
-R2 - std: 0.08380
-
-Train time: 0.397227
-Test time: 0.006203
-
-Best Parameters: {'max_depth': 4, 'alpha': 3.123802959485394e-07, 'lambda': 3.0793575995644685e-07, 'eta': 0.04903008923812776, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:54.753346
-XGBoost - Sensory
-
-MSE - mean: 0.75941
-MSE - std: 0.08171
-R2 - mean: -0.14662
-R2 - std: 0.18210
-
-Train time: 3.686826
-Test time: 0.017696
-
-Best Parameters: {'max_depth': 9, 'alpha': 2.725717199051267e-05, 'lambda': 1.4117197574008437e-06, 'eta': 0.02896164237319051, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:56:56.572280
-XGBoost - Sensory
-
-MSE - mean: 0.51428
-MSE - std: 0.05526
-R2 - mean: 0.22943
-R2 - std: 0.07773
-
-Train time: 0.358821
-Test time: 0.004714
-
-Best Parameters: {'max_depth': 4, 'alpha': 3.190372134672273e-07, 'lambda': 1.7885965551641444e-07, 'eta': 0.04993453809283659, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:00.032787
-XGBoost - Sensory
-
-MSE - mean: 0.59701
-MSE - std: 0.07760
-R2 - mean: 0.10742
-R2 - std: 0.09256
-
-Train time: 0.666295
-Test time: 0.009725
-
-Best Parameters: {'max_depth': 6, 'alpha': 4.66850586950538e-08, 'lambda': 2.855432301094316e-08, 'eta': 0.04428414709870935, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:02.121720
-XGBoost - Sensory
-
-MSE - mean: 0.51690
-MSE - std: 0.05248
-R2 - mean: 0.22546
-R2 - std: 0.07346
-
-Train time: 0.429715
-Test time: 0.007540
-
-Best Parameters: {'max_depth': 4, 'alpha': 1.474241878090306e-07, 'lambda': 2.005107609526188e-07, 'eta': 0.036885485081318344, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:10.208298
-XGBoost - Sensory
-
-MSE - mean: 0.63910
-MSE - std: 0.06729
-R2 - mean: 0.03511
-R2 - std: 0.15299
-
-Train time: 1.536827
-Test time: 0.008970
-
-Best Parameters: {'max_depth': 7, 'alpha': 3.1222357072065583e-06, 'lambda': 5.5895394899351905e-06, 'eta': 0.025168690880679235, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:20.593163
-XGBoost - Sensory
-
-MSE - mean: 0.64491
-MSE - std: 0.07411
-R2 - mean: 0.02413
-R2 - std: 0.16790
-
-Train time: 1.982781
-Test time: 0.018875
-
-Best Parameters: {'max_depth': 9, 'alpha': 6.186543341528546e-08, 'lambda': 0.009231965011734764, 'eta': 0.04898595817602285, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:23.377975
-XGBoost - Sensory
-
-MSE - mean: 0.56106
-MSE - std: 0.07095
-R2 - mean: 0.16112
-R2 - std: 0.08586
-
-Train time: 0.580140
-Test time: 0.003462
-
-Best Parameters: {'max_depth': 5, 'alpha': 2.884862685538887e-07, 'lambda': 1.1139792026228426e-07, 'eta': 0.03616075090705091, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:26.814484
-XGBoost - Sensory
-
-MSE - mean: 0.50972
-MSE - std: 0.05659
-R2 - mean: 0.23555
-R2 - std: 0.08500
-
-Train time: 0.669845
-Test time: 0.002837
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.2572684832126284, 'lambda': 1.7743675668449738e-06, 'eta': 0.01807906987588982, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:31.355312
-XGBoost - Sensory
-
-MSE - mean: 0.50992
-MSE - std: 0.05529
-R2 - mean: 0.23520
-R2 - std: 0.08354
-
-Train time: 0.748834
-Test time: 0.006741
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.2696631195339969, 'lambda': 2.13820235218693e-06, 'eta': 0.014157102393808955, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:35.773539
-XGBoost - Sensory
-
-MSE - mean: 0.51887
-MSE - std: 0.05198
-R2 - mean: 0.22210
-R2 - std: 0.07705
-
-Train time: 0.864079
-Test time: 0.011854
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.2778970545480253, 'lambda': 0.00021709661974118053, 'eta': 0.01019369844800711, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:41.926133
-XGBoost - Sensory
-
-MSE - mean: 0.55482
-MSE - std: 0.06706
-R2 - mean: 0.16554
-R2 - std: 0.11733
-
-Train time: 1.180925
-Test time: 0.007610
-
-Best Parameters: {'max_depth': 6, 'alpha': 0.14674303472860878, 'lambda': 8.41153494815725e-06, 'eta': 0.014222942493433175, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:45.107904
-XGBoost - Sensory
-
-MSE - mean: 0.51607
-MSE - std: 0.06237
-R2 - mean: 0.22597
-R2 - std: 0.09314
-
-Train time: 0.621666
-Test time: 0.007702
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.028051365705431024, 'lambda': 2.2032223635800107e-06, 'eta': 0.019605786772596837, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:49.566973
-XGBoost - Sensory
-
-MSE - mean: 0.52522
-MSE - std: 0.07023
-R2 - mean: 0.21092
-R2 - std: 0.11249
-
-Train time: 0.860483
-Test time: 0.005222
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.4670058083182572, 'lambda': 3.429860254924081e-05, 'eta': 0.014802886905130815, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:53.610995
-XGBoost - Sensory
-
-MSE - mean: 0.52360
-MSE - std: 0.05026
-R2 - mean: 0.21511
-R2 - std: 0.07421
-
-Train time: 0.783181
-Test time: 0.004734
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.12597072792458633, 'lambda': 4.644650642319583e-07, 'eta': 0.012307622819552147, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:57:57.454695
-XGBoost - Sensory
-
-MSE - mean: 0.55722
-MSE - std: 0.06328
-R2 - mean: 0.16433
-R2 - std: 0.09528
-
-Train time: 0.737653
-Test time: 0.003308
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.015072737890675423, 'lambda': 4.7877210218011355e-06, 'eta': 0.02231292309609205, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:58:00.806850
-XGBoost - Sensory
-
-MSE - mean: 0.50734
-MSE - std: 0.05865
-R2 - mean: 0.23904
-R2 - std: 0.08800
-
-Train time: 0.655148
-Test time: 0.010534
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.06546169110181684, 'lambda': 1.891990919635516e-06, 'eta': 0.01769884821326702, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:58:04.321395
-XGBoost - Sensory
-
-MSE - mean: 0.50760
-MSE - std: 0.05768
-R2 - mean: 0.23741
-R2 - std: 0.09661
-
-Train time: 0.680675
-Test time: 0.007101
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.0011202622799668773, 'lambda': 1.8139504458925311e-06, 'eta': 0.017057547883904078, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:58:11.853434
-XGBoost - Sensory
-
-MSE - mean: 0.55628
-MSE - std: 0.06731
-R2 - mean: 0.16530
-R2 - std: 0.10423
-
-Train time: 1.430854
-Test time: 0.011036
-
-Best Parameters: {'max_depth': 7, 'alpha': 0.07417730022219443, 'lambda': 2.4128851619737665e-06, 'eta': 0.01764306586883242, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:58:17.053749
-XGBoost - Sensory
-
-MSE - mean: 0.54962
-MSE - std: 0.07277
-R2 - mean: 0.17790
-R2 - std: 0.09344
-
-Train time: 0.932353
-Test time: 0.006903
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.0006531484712684278, 'lambda': 0.0001581847332784716, 'eta': 0.015411927038451649, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:58:25.302264
-XGBoost - Sensory
-
-MSE - mean: 0.54288
-MSE - std: 0.06977
-R2 - mean: 0.18431
-R2 - std: 0.11372
-
-Train time: 1.588315
+MSE - mean: 0.49136
+MSE - std: 0.07074
+R2 - mean: 0.26799
+R2 - std: 0.07084
+
+Train time: 0.831383
 Test time: 0.011045
 
-Best Parameters: {'max_depth': 8, 'alpha': 0.40061105982943235, 'lambda': 4.075106571211338e-05, 'eta': 0.011495685165990293, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 0.00016895584500172393, 'lambda': 1.0711796622265671e-07, 'eta': 0.010006141990782749, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:58:31.114671
+2024-12-27 13:59:52.928460
 XGBoost - Sensory
 
-MSE - mean: 0.59638
-MSE - std: 0.07466
-R2 - mean: 0.10715
-R2 - std: 0.09759
+MSE - mean: 0.48259
+MSE - std: 0.06797
+R2 - mean: 0.27970
+R2 - std: 0.07753
 
-Train time: 1.101307
-Test time: 0.009458
+Train time: 0.713027
+Test time: 0.005970
 
-Best Parameters: {'max_depth': 6, 'alpha': 0.0019380480066402074, 'lambda': 8.09319205219815e-06, 'eta': 0.020144339467128767, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 0.0001676417212976516, 'lambda': 6.139424912140316e-08, 'eta': 0.014323245478397797, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:58:33.805502
+2024-12-27 13:59:57.036797
 XGBoost - Sensory
 
-MSE - mean: 0.52266
-MSE - std: 0.05594
-R2 - mean: 0.21605
-R2 - std: 0.08562
+MSE - mean: 0.49266
+MSE - std: 0.06867
+R2 - mean: 0.26545
+R2 - std: 0.07094
 
-Train time: 0.520396
-Test time: 0.005363
+Train time: 0.803501
+Test time: 0.006292
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.00017075602947154528, 'lambda': 1.0942363285836183e-06, 'eta': 0.024714637994620488, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 9.69582773035293e-05, 'lambda': 1.2396373121824422e-07, 'eta': 0.010317855091810258, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:58:37.223475
+2024-12-27 14:00:19.784417
 XGBoost - Sensory
 
-MSE - mean: 0.51528
-MSE - std: 0.05473
-R2 - mean: 0.22710
-R2 - std: 0.08340
+MSE - mean: 0.75987
+MSE - std: 0.12260
+R2 - mean: -0.14080
+R2 - std: 0.18727
 
-Train time: 0.670311
-Test time: 0.006455
+Train time: 4.181115
+Test time: 0.033527
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.03509574963066159, 'lambda': 2.256481539564967e-06, 'eta': 0.01623258487927371, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 8, 'alpha': 0.00011364034490753999, 'lambda': 1.0884378376136012e-07, 'eta': 0.010557608260520213, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:58:59.970757
+2024-12-27 14:00:24.432056
 XGBoost - Sensory
 
-MSE - mean: 0.63721
-MSE - std: 0.07261
-R2 - mean: 0.04057
-R2 - std: 0.13581
+MSE - mean: 0.48832
+MSE - std: 0.07124
+R2 - mean: 0.27213
+R2 - std: 0.07607
 
-Train time: 4.389286
-Test time: 0.028668
+Train time: 0.883388
+Test time: 0.013543
 
-Best Parameters: {'max_depth': 12, 'alpha': 0.013812265146506842, 'lambda': 0.0007677840645069681, 'eta': 0.013731100920309353, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 0.0003853765621141522, 'lambda': 9.232646918997398e-08, 'eta': 0.010740471557510739, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:59:02.828706
+2024-12-27 14:00:30.061706
 XGBoost - Sensory
 
-MSE - mean: 0.51459
-MSE - std: 0.05232
-R2 - mean: 0.22511
-R2 - std: 0.10399
+MSE - mean: 0.52023
+MSE - std: 0.08958
+R2 - mean: 0.22460
+R2 - std: 0.10810
 
-Train time: 0.566441
-Test time: 0.005797
+Train time: 1.062827
+Test time: 0.006090
 
-Best Parameters: {'max_depth': 3, 'alpha': 0.9366048415679701, 'lambda': 1.4566572497803417e-07, 'eta': 0.019453942108688897, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 5, 'alpha': 0.0003278318131103624, 'lambda': 4.5116175415122216e-08, 'eta': 0.010015233092440274, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:59:05.427525
+2024-12-27 14:00:34.331022
 XGBoost - Sensory
 
-MSE - mean: 0.51878
-MSE - std: 0.05101
-R2 - mean: 0.21987
-R2 - std: 0.09530
+MSE - mean: 0.48636
+MSE - std: 0.06865
+R2 - mean: 0.27481
+R2 - std: 0.07197
 
-Train time: 0.532361
-Test time: 0.056136
+Train time: 0.828461
+Test time: 0.007796
 
-Best Parameters: {'max_depth': 3, 'alpha': 0.06542352436339866, 'lambda': 5.697101183233747e-07, 'eta': 0.025005623334901847, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 7.107070961949204e-05, 'lambda': 1.4388263002996998e-07, 'eta': 0.011218306116750804, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:59:10.667753
+2024-12-27 14:00:38.540034
 XGBoost - Sensory
 
-MSE - mean: 0.53539
-MSE - std: 0.06324
-R2 - mean: 0.19639
-R2 - std: 0.10051
+MSE - mean: 0.48738
+MSE - std: 0.07032
+R2 - mean: 0.27355
+R2 - std: 0.07307
 
-Train time: 1.006710
-Test time: 0.013627
+Train time: 0.805788
+Test time: 0.005293
 
-Best Parameters: {'max_depth': 5, 'alpha': 0.1861492668989801, 'lambda': 1.0464482157834526e-05, 'eta': 0.012589064692554499, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 4, 'alpha': 5.778087945670561e-05, 'lambda': 1.0079658648143489e-07, 'eta': 0.011025332637134849, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:59:14.323126
+2024-12-27 14:00:42.002819
 XGBoost - Sensory
 
-MSE - mean: 0.50967
-MSE - std: 0.05674
-R2 - mean: 0.23435
-R2 - std: 0.09537
+MSE - mean: 0.48865
+MSE - std: 0.06310
+R2 - mean: 0.27003
+R2 - std: 0.07208
 
-Train time: 0.748891
-Test time: 0.006067
+Train time: 0.674645
+Test time: 0.006839
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.009947057051983519, 'lambda': 2.812017921669987e-05, 'eta': 0.017527571827780277, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.7664836093009838e-05, 'lambda': 9.95236760834364e-08, 'eta': 0.010879645166979923, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:59:17.561163
+2024-12-27 14:00:45.067962
 XGBoost - Sensory
 
-MSE - mean: 0.51197
-MSE - std: 0.05576
-R2 - mean: 0.23164
-R2 - std: 0.08841
+MSE - mean: 0.53696
+MSE - std: 0.06288
+R2 - mean: 0.19712
+R2 - std: 0.07297
 
-Train time: 0.631860
-Test time: 0.005227
+Train time: 0.618393
+Test time: 0.004238
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.0018473265956917642, 'lambda': 2.0049558866965036e-05, 'eta': 0.018278475061872787, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 2, 'alpha': 1.9084583390932218e-05, 'lambda': 2.1078353401968417e-08, 'eta': 0.010676381016367526, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 15:59:20.580451
+2024-12-27 14:00:48.479402
 XGBoost - Sensory
 
-MSE - mean: 0.52079
-MSE - std: 0.05900
-R2 - mean: 0.21894
-R2 - std: 0.08875
-
-Train time: 0.594710
-Test time: 0.004902
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.00222811821266753, 'lambda': 3.750895733676522e-05, 'eta': 0.017711866693768164, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:24.010238
-XGBoost - Sensory
-
-MSE - mean: 0.53452
-MSE - std: 0.04840
-R2 - mean: 0.19744
-R2 - std: 0.08376
-
-Train time: 0.680267
-Test time: 0.004803
-
-Best Parameters: {'max_depth': 3, 'alpha': 0.005975611263666881, 'lambda': 8.503368843718906e-05, 'eta': 0.010382528867265753, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:27.424466
-XGBoost - Sensory
-
-MSE - mean: 0.51664
-MSE - std: 0.05689
-R2 - mean: 0.22518
-R2 - std: 0.08558
-
-Train time: 0.663122
-Test time: 0.010544
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.0006514648134473548, 'lambda': 2.4092471558733927e-05, 'eta': 0.017406179712287702, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:30.945983
-XGBoost - Sensory
-
-MSE - mean: 0.55837
-MSE - std: 0.06748
-R2 - mean: 0.16404
-R2 - std: 0.08968
-
-Train time: 0.680604
-Test time: 0.024385
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.009940527299574, 'lambda': 3.819415866127823e-06, 'eta': 0.022472468872620013, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:34.803318
-XGBoost - Sensory
-
-MSE - mean: 0.51855
-MSE - std: 0.06249
-R2 - mean: 0.22270
-R2 - std: 0.09001
-
-Train time: 0.750324
-Test time: 0.008553
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.024702125413354134, 'lambda': 1.2420662252238515e-05, 'eta': 0.013259931849015668, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:39.218546
-XGBoost - Sensory
-
-MSE - mean: 0.55097
-MSE - std: 0.06715
-R2 - mean: 0.17469
-R2 - std: 0.09279
-
-Train time: 0.844661
-Test time: 0.005695
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.0017022466034329717, 'lambda': 0.000389486365788108, 'eta': 0.016156804365601993, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:41.740720
-XGBoost - Sensory
-
-MSE - mean: 0.51610
-MSE - std: 0.05607
-R2 - mean: 0.22561
-R2 - std: 0.08753
-
-Train time: 0.494328
-Test time: 0.003194
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.10276437940744963, 'lambda': 1.2137152459425449e-06, 'eta': 0.027753054816887168, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:50.489836
-XGBoost - Sensory
-
-MSE - mean: 0.59665
-MSE - std: 0.06234
-R2 - mean: 0.10483
-R2 - std: 0.09802
-
-Train time: 1.645022
-Test time: 0.017375
-
-Best Parameters: {'max_depth': 6, 'alpha': 0.04302439106761598, 'lambda': 6.380492219307834e-05, 'eta': 0.011541373945394444, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:53.548574
-XGBoost - Sensory
-
-MSE - mean: 0.51184
-MSE - std: 0.05861
-R2 - mean: 0.23287
-R2 - std: 0.08439
-
-Train time: 0.596952
-Test time: 0.023623
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.28879284901370045, 'lambda': 3.453675200876155e-06, 'eta': 0.02085216440416435, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 15:59:57.288090
-XGBoost - Sensory
-
-MSE - mean: 0.56057
-MSE - std: 0.07245
-R2 - mean: 0.16095
-R2 - std: 0.09607
-
-Train time: 0.715820
-Test time: 0.003457
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.00032766183607728594, 'lambda': 3.5648563253943953e-06, 'eta': 0.02130002026187225, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:00.155849
-XGBoost - Sensory
-
-MSE - mean: 0.52690
-MSE - std: 0.05551
-R2 - mean: 0.20906
-R2 - std: 0.09029
-
-Train time: 0.586299
-Test time: 0.029553
-
-Best Parameters: {'max_depth': 3, 'alpha': 0.2784788892173011, 'lambda': 8.833086776714298e-07, 'eta': 0.018806146308932126, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:03.483209
-XGBoost - Sensory
-
-MSE - mean: 0.52147
-MSE - std: 0.05104
-R2 - mean: 0.21621
-R2 - std: 0.09251
-
-Train time: 0.657303
-Test time: 0.005087
-
-Best Parameters: {'max_depth': 3, 'alpha': 0.00600767591498685, 'lambda': 7.684751042028319e-06, 'eta': 0.013771898914418301, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:06.961135
-XGBoost - Sensory
-
-MSE - mean: 0.51392
-MSE - std: 0.06008
-R2 - mean: 0.22858
-R2 - std: 0.09531
-
-Train time: 0.682038
-Test time: 0.005803
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.6151046986230787, 'lambda': 2.0432698781940264e-05, 'eta': 0.015321527057277958, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:10.455110
-XGBoost - Sensory
-
-MSE - mean: 0.52214
-MSE - std: 0.06058
-R2 - mean: 0.21622
-R2 - std: 0.09597
-
-Train time: 0.751623
-Test time: 0.007586
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.7819536408853838, 'lambda': 1.6770402631128865e-06, 'eta': 0.015137472043356505, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:21.596245
-XGBoost - Sensory
-
-MSE - mean: 0.54313
-MSE - std: 0.07190
-R2 - mean: 0.18177
-R2 - std: 0.12955
-
-Train time: 2.176154
-Test time: 0.005924
-
-Best Parameters: {'max_depth': 10, 'alpha': 0.298504216910155, 'lambda': 0.09456399935001465, 'eta': 0.017018821755985417, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:30.709585
-XGBoost - Sensory
-
-MSE - mean: 0.56293
-MSE - std: 0.07833
-R2 - mean: 0.15089
-R2 - std: 0.14454
-
-Train time: 1.744889
-Test time: 0.013152
-
-Best Parameters: {'max_depth': 11, 'alpha': 0.10949647276484052, 'lambda': 2.2764877265611616e-05, 'eta': 0.02384039899354345, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:33.491220
-XGBoost - Sensory
-
-MSE - mean: 0.51441
-MSE - std: 0.05802
-R2 - mean: 0.22926
-R2 - std: 0.08054
-
-Train time: 0.543144
-Test time: 0.004758
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.0033553092548950655, 'lambda': 5.573317740118121e-06, 'eta': 0.020614692617372962, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:37.496452
-XGBoost - Sensory
-
-MSE - mean: 0.51101
-MSE - std: 0.05769
-R2 - mean: 0.23354
-R2 - std: 0.08766
-
-Train time: 0.773939
-Test time: 0.026820
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.5452267292733576, 'lambda': 5.2008537936765e-07, 'eta': 0.012060364689601174, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:42.805681
-XGBoost - Sensory
-
-MSE - mean: 0.53842
-MSE - std: 0.07259
-R2 - mean: 0.19132
-R2 - std: 0.11455
-
-Train time: 1.022552
-Test time: 0.007083
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.23695970571688138, 'lambda': 4.7102385142184214e-07, 'eta': 0.011298902582201809, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:46.888273
-XGBoost - Sensory
-
-MSE - mean: 0.51092
-MSE - std: 0.05889
-R2 - mean: 0.23333
-R2 - std: 0.09120
-
-Train time: 0.780482
-Test time: 0.004639
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.018312929655614908, 'lambda': 3.227152292150696e-07, 'eta': 0.012355054939810928, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:51.583419
-XGBoost - Sensory
-
-MSE - mean: 0.51723
-MSE - std: 0.06465
-R2 - mean: 0.22388
-R2 - std: 0.09829
-
-Train time: 0.903617
-Test time: 0.006112
-
-Best Parameters: {'max_depth': 5, 'alpha': 0.4800444750044191, 'lambda': 4.0495937272227033e-07, 'eta': 0.012284226823412278, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:55.552883
-XGBoost - Sensory
-
-MSE - mean: 0.51075
-MSE - std: 0.05113
-R2 - mean: 0.23174
-R2 - std: 0.09629
-
-Train time: 0.773411
-Test time: 0.004232
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.17377854105787874, 'lambda': 5.17483074755955e-08, 'eta': 0.013117268490141191, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:00:59.931970
-XGBoost - Sensory
-
-MSE - mean: 0.51781
-MSE - std: 0.05775
-R2 - mean: 0.22413
-R2 - std: 0.08128
-
-Train time: 0.846070
-Test time: 0.009493
-
-Best Parameters: {'max_depth': 4, 'alpha': 0.020374474659640412, 'lambda': 5.8161838131213625e-08, 'eta': 0.01010968546324443, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
-
-
-2024-12-20 16:01:03.935478
-XGBoost - Sensory
-
-MSE - mean: 0.50665
+MSE - mean: 0.48770
 MSE - std: 0.06274
-R2 - mean: 0.24016
-R2 - std: 0.09307
+R2 - mean: 0.27119
+R2 - std: 0.07409
 
-Train time: 0.770556
-Test time: 0.004878
+Train time: 0.668204
+Test time: 0.008003
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.054582409365969406, 'lambda': 2.891950225548506e-07, 'eta': 0.012641721692049572, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 6.1397636264477e-05, 'lambda': 7.584847027602362e-08, 'eta': 0.011058965040336753, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:08.225394
+2024-12-27 14:00:51.903703
 XGBoost - Sensory
 
-MSE - mean: 0.51191
-MSE - std: 0.05677
-R2 - mean: 0.23267
+MSE - mean: 0.48738
+MSE - std: 0.06260
+R2 - mean: 0.27163
+R2 - std: 0.07406
+
+Train time: 0.666559
+Test time: 0.006978
+
+Best Parameters: {'max_depth': 3, 'alpha': 8.43493195888236e-05, 'lambda': 7.575083636805171e-08, 'eta': 0.011058059547201937, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:00:55.620219
+XGBoost - Sensory
+
+MSE - mean: 0.48590
+MSE - std: 0.06064
+R2 - mean: 0.27354
+R2 - std: 0.07379
+
+Train time: 0.722119
+Test time: 0.011441
+
+Best Parameters: {'max_depth': 3, 'alpha': 6.375273708120584e-05, 'lambda': 1.3758518980742105e-07, 'eta': 0.011022324486086515, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:00:59.141453
+XGBoost - Sensory
+
+MSE - mean: 0.49490
+MSE - std: 0.06300
+R2 - mean: 0.26103
+R2 - std: 0.06909
+
+Train time: 0.677127
+Test time: 0.003773
+
+Best Parameters: {'max_depth': 3, 'alpha': 7.122183306476369e-05, 'lambda': 8.050569733635146e-08, 'eta': 0.010000530649336382, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:02.570828
+XGBoost - Sensory
+
+MSE - mean: 0.48715
+MSE - std: 0.06176
+R2 - mean: 0.27190
+R2 - std: 0.07316
+
+Train time: 0.672991
+Test time: 0.010367
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.2444895780748994e-05, 'lambda': 1.3892527338790384e-07, 'eta': 0.011125479866587578, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:06.128789
+XGBoost - Sensory
+
+MSE - mean: 0.48630
+MSE - std: 0.06125
+R2 - mean: 0.27304
+R2 - std: 0.07348
+
+Train time: 0.677475
+Test time: 0.037299
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.2381756019422605e-05, 'lambda': 4.284312254188657e-08, 'eta': 0.011088094252672282, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:10.969460
+XGBoost - Sensory
+
+MSE - mean: 0.48652
+MSE - std: 0.06206
+R2 - mean: 0.27283
+R2 - std: 0.07412
+
+Train time: 0.768780
+Test time: 0.056090
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.5983055907106235e-05, 'lambda': 3.6108978333114985e-08, 'eta': 0.011063753837052612, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:14.711451
+XGBoost - Sensory
+
+MSE - mean: 0.48537
+MSE - std: 0.06177
+R2 - mean: 0.27437
+R2 - std: 0.07485
+
+Train time: 0.729718
+Test time: 0.007919
+
+Best Parameters: {'max_depth': 3, 'alpha': 8.570334743631515e-06, 'lambda': 1.1399930881958703e-08, 'eta': 0.011466467754627114, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:18.346849
+XGBoost - Sensory
+
+MSE - mean: 0.48504
+MSE - std: 0.06148
+R2 - mean: 0.27488
+R2 - std: 0.07422
+
+Train time: 0.711534
+Test time: 0.007097
+
+Best Parameters: {'max_depth': 3, 'alpha': 8.061286431389672e-06, 'lambda': 1.0820953742744538e-08, 'eta': 0.011351326958470555, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:21.904430
+XGBoost - Sensory
+
+MSE - mean: 0.48542
+MSE - std: 0.06309
+R2 - mean: 0.27454
+R2 - std: 0.07484
+
+Train time: 0.696696
+Test time: 0.006780
+
+Best Parameters: {'max_depth': 3, 'alpha': 7.548700952161064e-06, 'lambda': 4.048934651021318e-08, 'eta': 0.011574943054300032, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:25.509246
+XGBoost - Sensory
+
+MSE - mean: 0.48438
+MSE - std: 0.06157
+R2 - mean: 0.27591
+R2 - std: 0.07426
+
+Train time: 0.706615
+Test time: 0.006194
+
+Best Parameters: {'max_depth': 3, 'alpha': 6.643950300789027e-06, 'lambda': 1.2484832566141526e-08, 'eta': 0.011516505632477022, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:29.130161
+XGBoost - Sensory
+
+MSE - mean: 0.48508
+MSE - std: 0.06015
+R2 - mean: 0.27455
+R2 - std: 0.07398
+
+Train time: 0.705052
+Test time: 0.004199
+
+Best Parameters: {'max_depth': 3, 'alpha': 8.131538409917096e-06, 'lambda': 1.281797702062451e-08, 'eta': 0.011532201829506927, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:32.425183
+XGBoost - Sensory
+
+MSE - mean: 0.48417
+MSE - std: 0.06223
+R2 - mean: 0.27623
+R2 - std: 0.07513
+
+Train time: 0.652863
+Test time: 0.007872
+
+Best Parameters: {'max_depth': 3, 'alpha': 9.691007721754706e-06, 'lambda': 1.1642050486671583e-08, 'eta': 0.011746918539107375, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:35.679672
+XGBoost - Sensory
+
+MSE - mean: 0.48407
+MSE - std: 0.06260
+R2 - mean: 0.27647
+R2 - std: 0.07487
+
+Train time: 0.647213
+Test time: 0.005264
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.029714232654812e-06, 'lambda': 1.008026451564287e-08, 'eta': 0.01167483662654469, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:38.973224
+XGBoost - Sensory
+
+MSE - mean: 0.48135
+MSE - std: 0.06036
+R2 - mean: 0.28002
+R2 - std: 0.07584
+
+Train time: 0.650135
+Test time: 0.007255
+
+Best Parameters: {'max_depth': 3, 'alpha': 4.570064488595504e-06, 'lambda': 1.0516241645796197e-08, 'eta': 0.011841031962456942, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:42.285001
+XGBoost - Sensory
+
+MSE - mean: 0.48494
+MSE - std: 0.06253
+R2 - mean: 0.27511
+R2 - std: 0.07531
+
+Train time: 0.651357
+Test time: 0.011525
+
+Best Parameters: {'max_depth': 3, 'alpha': 4.854987400561311e-06, 'lambda': 1.3602222444435e-08, 'eta': 0.011695416820632066, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:45.654731
+XGBoost - Sensory
+
+MSE - mean: 0.48319
+MSE - std: 0.06120
+R2 - mean: 0.27749
+R2 - std: 0.07509
+
+Train time: 0.653777
+Test time: 0.006127
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.4854722261413004e-06, 'lambda': 1.0324209755483864e-08, 'eta': 0.011755061972011859, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:48.971406
+XGBoost - Sensory
+
+MSE - mean: 0.48288
+MSE - std: 0.06211
+R2 - mean: 0.27815
+R2 - std: 0.07489
+
+Train time: 0.659510
+Test time: 0.005921
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.0715111994701636e-06, 'lambda': 1.2534558855327513e-08, 'eta': 0.011938889417686172, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:52.284154
+XGBoost - Sensory
+
+MSE - mean: 0.48379
+MSE - std: 0.06345
+R2 - mean: 0.27708
+R2 - std: 0.07410
+
+Train time: 0.656198
+Test time: 0.005721
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.384211327906429e-06, 'lambda': 1.0328458554785326e-08, 'eta': 0.011898791361425508, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:55.809228
+XGBoost - Sensory
+
+MSE - mean: 0.47921
+MSE - std: 0.06321
+R2 - mean: 0.28359
+R2 - std: 0.07659
+
+Train time: 0.696292
+Test time: 0.008480
+
+Best Parameters: {'max_depth': 3, 'alpha': 4.904113774986606e-06, 'lambda': 1.1440617702841248e-08, 'eta': 0.01314347894843725, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:01:59.117618
+XGBoost - Sensory
+
+MSE - mean: 0.48231
+MSE - std: 0.06254
+R2 - mean: 0.27912
+R2 - std: 0.07405
+
+Train time: 0.641532
+Test time: 0.003052
+
+Best Parameters: {'max_depth': 3, 'alpha': 4.802751953079293e-06, 'lambda': 1.0002872692676463e-08, 'eta': 0.012842220261558759, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:02.292029
+XGBoost - Sensory
+
+MSE - mean: 0.47835
+MSE - std: 0.06192
+R2 - mean: 0.28453
+R2 - std: 0.07752
+
+Train time: 0.633947
+Test time: 0.003609
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.135543939108564e-06, 'lambda': 1.0446436469953321e-08, 'eta': 0.013092091323172248, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:05.835998
+XGBoost - Sensory
+
+MSE - mean: 0.47912
+MSE - std: 0.06282
+R2 - mean: 0.28369
+R2 - std: 0.07622
+
+Train time: 0.698189
+Test time: 0.012831
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.824767757737893e-06, 'lambda': 1.0383644068380592e-08, 'eta': 0.013152901999978088, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:09.161695
+XGBoost - Sensory
+
+MSE - mean: 0.47768
+MSE - std: 0.06136
+R2 - mean: 0.28560
+R2 - std: 0.07613
+
+Train time: 0.644142
+Test time: 0.006181
+
+Best Parameters: {'max_depth': 3, 'alpha': 3.2196916819088906e-06, 'lambda': 2.0585467899874643e-08, 'eta': 0.01331214770257105, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:12.422457
+XGBoost - Sensory
+
+MSE - mean: 0.47960
+MSE - std: 0.06034
+R2 - mean: 0.28283
+R2 - std: 0.07338
+
+Train time: 0.635866
+Test time: 0.005216
+
+Best Parameters: {'max_depth': 3, 'alpha': 3.8722907677313285e-06, 'lambda': 2.0519036877732966e-08, 'eta': 0.013337685644667424, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:15.781654
+XGBoost - Sensory
+
+MSE - mean: 0.47979
+MSE - std: 0.06356
+R2 - mean: 0.28277
+R2 - std: 0.07624
+
+Train time: 0.670291
+Test time: 0.008574
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.589432113402255e-06, 'lambda': 2.1953377689902296e-08, 'eta': 0.013843131728760916, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:18.938614
+XGBoost - Sensory
+
+MSE - mean: 0.47959
+MSE - std: 0.06303
+R2 - mean: 0.28297
+R2 - std: 0.07609
+
+Train time: 0.617011
+Test time: 0.011223
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.1689649860428143e-06, 'lambda': 2.0479353529550524e-08, 'eta': 0.014027815350007024, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:22.181846
+XGBoost - Sensory
+
+MSE - mean: 0.47754
+MSE - std: 0.06115
+R2 - mean: 0.28566
+R2 - std: 0.07677
+
+Train time: 0.616984
+Test time: 0.014926
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.5098129003805977e-06, 'lambda': 2.392728801984503e-08, 'eta': 0.013767476657920082, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:25.581129
+XGBoost - Sensory
+
+MSE - mean: 0.47911
+MSE - std: 0.06323
+R2 - mean: 0.28362
+R2 - std: 0.07776
+
+Train time: 0.672117
+Test time: 0.007531
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.1237976881487604e-06, 'lambda': 2.093401354972855e-08, 'eta': 0.013456842418498533, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:28.952345
+XGBoost - Sensory
+
+MSE - mean: 0.47628
+MSE - std: 0.06199
+R2 - mean: 0.28788
+R2 - std: 0.07544
+
+Train time: 0.659450
+Test time: 0.007934
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.3835293351721584e-06, 'lambda': 2.1893699255108653e-08, 'eta': 0.013959944125215824, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:32.405428
+XGBoost - Sensory
+
+MSE - mean: 0.47932
+MSE - std: 0.06258
+R2 - mean: 0.28292
+R2 - std: 0.07999
+
+Train time: 0.673095
+Test time: 0.011714
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.4429723032859867e-06, 'lambda': 2.2593640478383712e-08, 'eta': 0.014128700647594566, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:36.407843
+XGBoost - Sensory
+
+MSE - mean: 0.47904
+MSE - std: 0.06513
+R2 - mean: 0.28410
+R2 - std: 0.07693
+
+Train time: 0.662527
+Test time: 0.004165
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.249119241717647e-06, 'lambda': 2.1897917355565785e-08, 'eta': 0.013986910960488477, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:40.212476
+XGBoost - Sensory
+
+MSE - mean: 0.47755
+MSE - std: 0.06284
+R2 - mean: 0.28591
+R2 - std: 0.07727
+
+Train time: 0.644359
+Test time: 0.005705
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.4490137231245163e-06, 'lambda': 2.2852321928139503e-08, 'eta': 0.01539073770605443, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:43.417562
+XGBoost - Sensory
+
+MSE - mean: 0.47943
+MSE - std: 0.06307
+R2 - mean: 0.28341
+R2 - std: 0.07443
+
+Train time: 0.632574
+Test time: 0.009795
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.5676350278843457e-06, 'lambda': 2.3797238310038342e-08, 'eta': 0.01598587740300716, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:46.693961
+XGBoost - Sensory
+
+MSE - mean: 0.47910
+MSE - std: 0.06403
+R2 - mean: 0.28397
+R2 - std: 0.07591
+
+Train time: 0.647744
+Test time: 0.005084
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.401188869308877e-06, 'lambda': 2.2870158195143404e-08, 'eta': 0.013792243828958313, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:49.852641
+XGBoost - Sensory
+
+MSE - mean: 0.47597
+MSE - std: 0.06433
+R2 - mean: 0.28847
+R2 - std: 0.07759
+
+Train time: 0.628911
+Test time: 0.004653
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.384423438207233e-06, 'lambda': 2.1199670975827753e-08, 'eta': 0.015494905184628746, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:53.098415
+XGBoost - Sensory
+
+MSE - mean: 0.47582
+MSE - std: 0.06391
+R2 - mean: 0.28870
+R2 - std: 0.07718
+
+Train time: 0.644980
+Test time: 0.008970
+
+Best Parameters: {'max_depth': 3, 'alpha': 7.337668754961841e-07, 'lambda': 2.4907866549673902e-08, 'eta': 0.015560009810867376, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:56.168246
+XGBoost - Sensory
+
+MSE - mean: 0.47355
+MSE - std: 0.06225
+R2 - mean: 0.29159
+R2 - std: 0.07914
+
+Train time: 0.604222
+Test time: 0.008526
+
+Best Parameters: {'max_depth': 3, 'alpha': 6.659261118831931e-07, 'lambda': 2.6584096189828953e-08, 'eta': 0.01592100379957427, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:02:59.002104
+XGBoost - Sensory
+
+MSE - mean: 0.52544
+MSE - std: 0.06426
+R2 - mean: 0.21344
+R2 - std: 0.08386
+
+Train time: 0.567576
+Test time: 0.005241
+
+Best Parameters: {'max_depth': 2, 'alpha': 6.546547262740723e-07, 'lambda': 2.326298633302053e-08, 'eta': 0.015669279045631743, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:02.107667
+XGBoost - Sensory
+
+MSE - mean: 0.47819
+MSE - std: 0.06375
+R2 - mean: 0.28485
+R2 - std: 0.07935
+
+Train time: 0.607227
+Test time: 0.004320
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.8896318150464735e-06, 'lambda': 2.880701934308879e-08, 'eta': 0.015414071865805888, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:05.190564
+XGBoost - Sensory
+
+MSE - mean: 0.47412
+MSE - std: 0.06270
+R2 - mean: 0.29089
+R2 - std: 0.07843
+
+Train time: 0.614283
+Test time: 0.005505
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.284185226839424e-06, 'lambda': 3.0256772823034755e-08, 'eta': 0.015340067709333084, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:08.229303
+XGBoost - Sensory
+
+MSE - mean: 0.47996
+MSE - std: 0.06419
+R2 - mean: 0.28231
+R2 - std: 0.07952
+
+Train time: 0.596195
+Test time: 0.008586
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.6712536295840288e-06, 'lambda': 3.189669599797507e-08, 'eta': 0.015158887599433749, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:11.351368
+XGBoost - Sensory
+
+MSE - mean: 0.47734
+MSE - std: 0.06465
+R2 - mean: 0.28677
+R2 - std: 0.07513
+
+Train time: 0.609228
+Test time: 0.013648
+
+Best Parameters: {'max_depth': 3, 'alpha': 8.540342627333216e-07, 'lambda': 1.7072915424738192e-08, 'eta': 0.015261286905611912, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:14.340679
+XGBoost - Sensory
+
+MSE - mean: 0.47919
+MSE - std: 0.06315
+R2 - mean: 0.28306
+R2 - std: 0.08126
+
+Train time: 0.602048
+Test time: 0.005364
+
+Best Parameters: {'max_depth': 3, 'alpha': 7.379253859538124e-07, 'lambda': 3.222004306881063e-08, 'eta': 0.015424539216222447, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:17.598647
+XGBoost - Sensory
+
+MSE - mean: 0.47495
+MSE - std: 0.06188
+R2 - mean: 0.28968
+R2 - std: 0.07654
+
+Train time: 0.637546
+Test time: 0.005252
+
+Best Parameters: {'max_depth': 3, 'alpha': 7.883854624133479e-07, 'lambda': 3.6278891192598e-08, 'eta': 0.015296332475587933, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:20.509144
+XGBoost - Sensory
+
+MSE - mean: 0.47719
+MSE - std: 0.06255
+R2 - mean: 0.28672
+R2 - std: 0.07447
+
+Train time: 0.572073
+Test time: 0.005374
+
+Best Parameters: {'max_depth': 3, 'alpha': 4.09182916077864e-07, 'lambda': 1.7410000050416994e-08, 'eta': 0.016666468995658344, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:23.515411
+XGBoost - Sensory
+
+MSE - mean: 0.47825
+MSE - std: 0.06635
+R2 - mean: 0.28565
+R2 - std: 0.07594
+
+Train time: 0.584583
+Test time: 0.004056
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.3344999690037061e-07, 'lambda': 5.053905074948325e-08, 'eta': 0.016808655878046596, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:26.434286
+XGBoost - Sensory
+
+MSE - mean: 0.47540
+MSE - std: 0.06455
+R2 - mean: 0.28926
+R2 - std: 0.07843
+
+Train time: 0.572996
+Test time: 0.029479
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.4609558149785195e-07, 'lambda': 4.614904891261307e-08, 'eta': 0.019074614800803438, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:29.458238
+XGBoost - Sensory
+
+MSE - mean: 0.47646
+MSE - std: 0.06495
+R2 - mean: 0.28786
+R2 - std: 0.07742
+
+Train time: 0.600833
+Test time: 0.004636
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.520003159115017e-07, 'lambda': 4.933307397769334e-08, 'eta': 0.016827980338293747, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:03:32.548551
+XGBoost - Sensory
+
+MSE - mean: 0.47689
+MSE - std: 0.06382
+R2 - mean: 0.28655
 R2 - std: 0.08183
 
-Train time: 0.827234
-Test time: 0.009416
+Train time: 0.754827
+Test time: 0.175768
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.04181510186599158, 'lambda': 2.03198213459106e-08, 'eta': 0.012494552038175006, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 2.3245787751153453e-07, 'lambda': 5.227980812800089e-08, 'eta': 0.018580627622498902, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:12.182435
+2024-12-27 14:03:35.642228
 XGBoost - Sensory
 
-MSE - mean: 0.51735
-MSE - std: 0.06003
-R2 - mean: 0.22265
-R2 - std: 0.10093
+MSE - mean: 0.47668
+MSE - std: 0.06454
+R2 - mean: 0.28747
+R2 - std: 0.07738
 
-Train time: 0.772090
-Test time: 0.008195
+Train time: 0.740752
+Test time: 0.161165
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.16257211589950873, 'lambda': 2.667539538034175e-07, 'eta': 0.013733442011647794, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.8896140405451716e-07, 'lambda': 5.051690909598094e-08, 'eta': 0.01907205459667107, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:15.788848
+2024-12-27 14:03:38.996468
 XGBoost - Sensory
 
-MSE - mean: 0.52844
-MSE - std: 0.05011
-R2 - mean: 0.20623
-R2 - std: 0.08815
+MSE - mean: 0.47770
+MSE - std: 0.06205
+R2 - mean: 0.28492
+R2 - std: 0.08276
 
-Train time: 0.697042
-Test time: 0.009956
+Train time: 0.573546
+Test time: 0.056274
 
-Best Parameters: {'max_depth': 3, 'alpha': 0.09289197587282351, 'lambda': 1.1414123202373897e-07, 'eta': 0.011035632371136252, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 2.2186746821682552e-07, 'lambda': 4.257648613165781e-08, 'eta': 0.01857747229586498, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:20.786872
+2024-12-27 14:03:42.042400
 XGBoost - Sensory
 
-MSE - mean: 0.52245
-MSE - std: 0.07736
-R2 - mean: 0.21999
-R2 - std: 0.09046
+MSE - mean: 0.47993
+MSE - std: 0.06199
+R2 - mean: 0.28165
+R2 - std: 0.08212
 
-Train time: 0.959520
-Test time: 0.005588
+Train time: 0.601882
+Test time: 0.003514
 
-Best Parameters: {'max_depth': 5, 'alpha': 0.056591238251351594, 'lambda': 7.613749215628586e-07, 'eta': 0.01459395012822943, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 8.744507279220076e-08, 'lambda': 3.224203317600296e-08, 'eta': 0.018523198888854356, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:25.087209
+2024-12-27 14:03:45.153504
 XGBoost - Sensory
 
-MSE - mean: 0.51176
-MSE - std: 0.05354
-R2 - mean: 0.23253
-R2 - std: 0.08091
+MSE - mean: 0.47678
+MSE - std: 0.06477
+R2 - mean: 0.28741
+R2 - std: 0.07709
 
-Train time: 0.824101
-Test time: 0.011128
+Train time: 0.598386
+Test time: 0.005610
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.011893904589620643, 'lambda': 7.621077078744063e-08, 'eta': 0.01247964992028354, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 2.203013002815996e-07, 'lambda': 4.824055878402315e-08, 'eta': 0.01825089086168187, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:28.586891
+2024-12-27 14:03:47.900852
 XGBoost - Sensory
 
-MSE - mean: 0.51154
-MSE - std: 0.05637
-R2 - mean: 0.23225
-R2 - std: 0.08955
+MSE - mean: 0.48049
+MSE - std: 0.06395
+R2 - mean: 0.28120
+R2 - std: 0.08160
 
-Train time: 0.710496
-Test time: 0.002988
+Train time: 0.532385
+Test time: 0.005934
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.017246728214170712, 'lambda': 2.509095870324998e-07, 'eta': 0.016087788858777388, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 5.103019564568933e-07, 'lambda': 5.195829363403517e-08, 'eta': 0.02148345893695016, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:33.487854
+2024-12-27 14:03:50.635745
 XGBoost - Sensory
 
-MSE - mean: 0.52186
-MSE - std: 0.06649
-R2 - mean: 0.21858
-R2 - std: 0.08982
+MSE - mean: 0.47639
+MSE - std: 0.06459
+R2 - mean: 0.28793
+R2 - std: 0.07727
 
-Train time: 0.935924
-Test time: 0.006581
+Train time: 0.533988
+Test time: 0.005506
 
-Best Parameters: {'max_depth': 5, 'alpha': 0.5669493409677882, 'lambda': 3.241716203248674e-08, 'eta': 0.010915980038940563, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 2.2628799121605596e-07, 'lambda': 3.997970638016623e-08, 'eta': 0.019658508289393486, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:37.325388
+2024-12-27 14:03:53.165216
 XGBoost - Sensory
 
-MSE - mean: 0.51378
-MSE - std: 0.05687
-R2 - mean: 0.22772
-R2 - std: 0.09897
+MSE - mean: 0.47629
+MSE - std: 0.06410
+R2 - mean: 0.28807
+R2 - std: 0.07666
 
-Train time: 0.747973
-Test time: 0.005087
+Train time: 0.500094
+Test time: 0.005939
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.18686901326653976, 'lambda': 1.5417676799198954e-08, 'eta': 0.013523811694944095, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.691513192927536e-07, 'lambda': 6.233515735744021e-08, 'eta': 0.02353143377515516, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:40.608920
+2024-12-27 14:03:55.884671
 XGBoost - Sensory
 
-MSE - mean: 0.51121
-MSE - std: 0.06403
-R2 - mean: 0.23456
-R2 - std: 0.08504
+MSE - mean: 0.47664
+MSE - std: 0.06402
+R2 - mean: 0.28722
+R2 - std: 0.07925
 
-Train time: 0.648239
-Test time: 0.004326
+Train time: 0.529148
+Test time: 0.005121
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.022144103649845318, 'lambda': 2.346106220384083e-07, 'eta': 0.016925052036299414, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.4313041528430498e-07, 'lambda': 6.134884704542835e-08, 'eta': 0.019047042774660943, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:44.255061
+2024-12-27 14:03:58.875681
 XGBoost - Sensory
 
-MSE - mean: 0.51518
-MSE - std: 0.05900
-R2 - mean: 0.22699
-R2 - std: 0.09112
+MSE - mean: 0.47566
+MSE - std: 0.06381
+R2 - mean: 0.28877
+R2 - std: 0.07800
 
-Train time: 0.707013
-Test time: 0.006436
+Train time: 0.590831
+Test time: 0.007345
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.056152254001421376, 'lambda': 1.7028417394720808e-07, 'eta': 0.016495616946920092, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.22154683079767e-07, 'lambda': 6.22293598798654e-08, 'eta': 0.020068077982168486, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:48.087773
+2024-12-27 14:04:01.601391
 XGBoost - Sensory
 
-MSE - mean: 0.50978
-MSE - std: 0.05686
-R2 - mean: 0.23458
-R2 - std: 0.09211
+MSE - mean: 0.47725
+MSE - std: 0.06451
+R2 - mean: 0.28662
+R2 - std: 0.07729
 
-Train time: 0.735040
-Test time: 0.009002
+Train time: 0.540699
+Test time: 0.005517
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.007099370010356982, 'lambda': 1.5753266185652795e-06, 'eta': 0.014686264726587475, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.748639778975212e-07, 'lambda': 6.450610018555129e-08, 'eta': 0.019800284724322385, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:51.597536
+2024-12-27 14:04:04.078426
 XGBoost - Sensory
 
-MSE - mean: 0.51326
-MSE - std: 0.05788
-R2 - mean: 0.23059
-R2 - std: 0.08389
+MSE - mean: 0.48126
+MSE - std: 0.06131
+R2 - mean: 0.27950
+R2 - std: 0.08182
 
-Train time: 0.678102
-Test time: 0.014232
+Train time: 0.494704
+Test time: 0.003080
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.007896241470692443, 'lambda': 1.7804315390482208e-06, 'eta': 0.014719418062326874, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.3807360232890232e-07, 'lambda': 6.103593239038099e-08, 'eta': 0.023146806518205703, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:57.548351
+2024-12-27 14:04:06.818172
 XGBoost - Sensory
 
-MSE - mean: 0.54534
-MSE - std: 0.07195
-R2 - mean: 0.18329
-R2 - std: 0.09966
+MSE - mean: 0.47522
+MSE - std: 0.06428
+R2 - mean: 0.28947
+R2 - std: 0.07856
 
-Train time: 1.123527
-Test time: 0.008217
+Train time: 0.546904
+Test time: 0.004130
 
-Best Parameters: {'max_depth': 5, 'alpha': 0.003857835388354259, 'lambda': 6.935179042184657e-07, 'eta': 0.011609761019312846, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 3.7200881077678827e-07, 'lambda': 6.130822441479901e-08, 'eta': 0.020126506615814426, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:01:58.961600
+2024-12-27 14:04:09.540708
 XGBoost - Sensory
 
-MSE - mean: 0.56167
-MSE - std: 0.05808
-R2 - mean: 0.15741
-R2 - std: 0.09046
+MSE - mean: 0.47790
+MSE - std: 0.06215
+R2 - mean: 0.28451
+R2 - std: 0.08380
 
-Train time: 0.264803
-Test time: 0.032387
+Train time: 0.548582
+Test time: 0.008614
 
-Best Parameters: {'max_depth': 4, 'alpha': 4.1790701865394144e-05, 'lambda': 1.0362882394876866e-06, 'eta': 0.2795092762419425, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 3.643557403000117e-07, 'lambda': 6.450400846740479e-08, 'eta': 0.020003824739113496, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:02:03.942675
+2024-12-27 14:04:12.201472
 XGBoost - Sensory
 
-MSE - mean: 0.51323
-MSE - std: 0.06698
-R2 - mean: 0.23066
-R2 - std: 0.09588
+MSE - mean: 0.47846
+MSE - std: 0.06296
+R2 - mean: 0.28418
+R2 - std: 0.08067
 
-Train time: 0.833017
-Test time: 0.012027
+Train time: 0.537427
+Test time: 0.004835
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.08588090136773234, 'lambda': 3.570311088541533e-07, 'eta': 0.013166835616404006, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 1.916354648751785e-07, 'lambda': 4.9482579615857633e-08, 'eta': 0.019916847601166895, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:02:09.895170
+2024-12-27 14:04:14.730087
 XGBoost - Sensory
 
-MSE - mean: 0.55227
-MSE - std: 0.06522
-R2 - mean: 0.17367
-R2 - std: 0.08273
+MSE - mean: 0.47822
+MSE - std: 0.06244
+R2 - mean: 0.28433
+R2 - std: 0.08108
 
-Train time: 1.171988
-Test time: 0.034912
+Train time: 0.502055
+Test time: 0.005970
 
-Best Parameters: {'max_depth': 5, 'alpha': 0.029604275848886804, 'lambda': 2.385152549068252e-06, 'eta': 0.011994327282477913, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 3.906357225090396e-08, 'lambda': 3.654282679493095e-08, 'eta': 0.021447108790085132, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:02:13.115875
+2024-12-27 14:04:17.482860
 XGBoost - Sensory
 
-MSE - mean: 0.51219
-MSE - std: 0.06213
-R2 - mean: 0.23176
-R2 - std: 0.09347
+MSE - mean: 0.47917
+MSE - std: 0.06389
+R2 - mean: 0.28350
+R2 - std: 0.07893
 
-Train time: 0.650291
-Test time: 0.037982
+Train time: 0.535469
+Test time: 0.009839
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.366228714378893, 'lambda': 1.5293618631737904e-06, 'eta': 0.01921199654896967, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 8.497301417465107e-08, 'lambda': 6.454942553336923e-08, 'eta': 0.018058299091701074, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
-2024-12-20 16:02:17.080803
+2024-12-27 14:04:19.692811
 XGBoost - Sensory
 
-MSE - mean: 0.50665
-MSE - std: 0.06274
-R2 - mean: 0.24016
-R2 - std: 0.09307
+MSE - mean: 0.48207
+MSE - std: 0.06226
+R2 - mean: 0.27831
+R2 - std: 0.08293
 
-Train time: 0.793836
-Test time: 0.034779
+Train time: 0.421705
+Test time: 0.002708
 
-Best Parameters: {'max_depth': 4, 'alpha': 0.054582409365969406, 'lambda': 2.891950225548506e-07, 'eta': 0.012641721692049572, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 3, 'alpha': 4.915504918479845e-07, 'lambda': 3.979151157883119e-08, 'eta': 0.025605313822061264, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:04:22.317133
+XGBoost - Sensory
+
+MSE - mean: 0.47516
+MSE - std: 0.06320
+R2 - mean: 0.28979
+R2 - std: 0.07511
+
+Train time: 0.508412
+Test time: 0.005012
+
+Best Parameters: {'max_depth': 3, 'alpha': 6.477159260753676e-08, 'lambda': 2.01116929272411e-07, 'eta': 0.019504341814155876, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:01.373859
+XGBoost - Sensory
+
+MSE - mean: 0.95678
+MSE - std: 0.14190
+R2 - mean: -0.43223
+R2 - std: 0.19464
+
+Train time: 7.355233
+Test time: 0.065106
+
+Best Parameters: {'max_depth': 11, 'alpha': 2.249792162614205e-08, 'lambda': 1.827941602040643e-07, 'eta': 0.017483527414869953, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:04.181241
+XGBoost - Sensory
+
+MSE - mean: 0.48028
+MSE - std: 0.06437
+R2 - mean: 0.28167
+R2 - std: 0.08020
+
+Train time: 0.544947
+Test time: 0.005204
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.195178962647362e-07, 'lambda': 4.604015595071732e-08, 'eta': 0.019151963125208143, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:07.038874
+XGBoost - Sensory
+
+MSE - mean: 0.47874
+MSE - std: 0.06255
+R2 - mean: 0.28424
+R2 - std: 0.07520
+
+Train time: 0.560467
+Test time: 0.005090
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.8876079095412243e-07, 'lambda': 7.590674948329225e-08, 'eta': 0.020468539055840493, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:09.577794
+XGBoost - Sensory
+
+MSE - mean: 0.47776
+MSE - std: 0.06294
+R2 - mean: 0.28558
+R2 - std: 0.07667
+
+Train time: 0.509923
+Test time: 0.005337
+
+Best Parameters: {'max_depth': 3, 'alpha': 6.316402381583608e-08, 'lambda': 0.0017739978382197796, 'eta': 0.02270681091830035, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:12.723723
+XGBoost - Sensory
+
+MSE - mean: 0.47424
+MSE - std: 0.06251
+R2 - mean: 0.29050
+R2 - std: 0.07962
+
+Train time: 0.614478
+Test time: 0.002677
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.7129339666932028e-07, 'lambda': 3.2232006941246796e-08, 'eta': 0.01866275935649746, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:15.803492
+XGBoost - Sensory
+
+MSE - mean: 0.47551
+MSE - std: 0.06339
+R2 - mean: 0.28898
+R2 - std: 0.07766
+
+Train time: 0.601564
+Test time: 0.007444
+
+Best Parameters: {'max_depth': 3, 'alpha': 3.37568644345821e-07, 'lambda': 3.3534105400853225e-08, 'eta': 0.01686499825310114, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:18.973441
+XGBoost - Sensory
+
+MSE - mean: 0.47598
+MSE - std: 0.06549
+R2 - mean: 0.28861
+R2 - std: 0.07817
+
+Train time: 0.614747
+Test time: 0.008626
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.84985034953646e-08, 'lambda': 3.8013400719952005e-08, 'eta': 0.01782640707405229, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:22.018971
+XGBoost - Sensory
+
+MSE - mean: 0.47858
+MSE - std: 0.06532
+R2 - mean: 0.28481
+R2 - std: 0.07721
+
+Train time: 0.601846
+Test time: 0.003159
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.840460317863111e-08, 'lambda': 3.281417208554234e-08, 'eta': 0.017301735394852913, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:24.827664
+XGBoost - Sensory
+
+MSE - mean: 0.47609
+MSE - std: 0.06339
+R2 - mean: 0.28623
+R2 - std: 0.09259
+
+Train time: 0.549778
+Test time: 0.003718
+
+Best Parameters: {'max_depth': 3, 'alpha': 9.06238873261271e-08, 'lambda': 0.9474627136030229, 'eta': 0.021657296596538284, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:27.523252
+XGBoost - Sensory
+
+MSE - mean: 0.47995
+MSE - std: 0.06316
+R2 - mean: 0.28100
+R2 - std: 0.08922
+
+Train time: 0.526654
+Test time: 0.006308
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.331889675208292e-07, 'lambda': 0.5200116666164667, 'eta': 0.022153545236129023, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:30.723725
+XGBoost - Sensory
+
+MSE - mean: 0.47581
+MSE - std: 0.06496
+R2 - mean: 0.28900
+R2 - std: 0.07622
+
+Train time: 0.782212
+Test time: 0.191512
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.4353841596952e-08, 'lambda': 3.1193554340114934e-08, 'eta': 0.020930668796827385, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:33.765048
+XGBoost - Sensory
+
+MSE - mean: 0.47902
+MSE - std: 0.06263
+R2 - mean: 0.28327
+R2 - std: 0.08007
+
+Train time: 0.549538
+Test time: 0.042742
+
+Best Parameters: {'max_depth': 3, 'alpha': 2.4692832727321504e-08, 'lambda': 3.477328558927858e-08, 'eta': 0.020396210845270237, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:47.285048
+XGBoost - Sensory
+
+MSE - mean: 0.74556
+MSE - std: 0.13278
+R2 - mean: -0.11947
+R2 - std: 0.20110
+
+Train time: 2.627989
+Test time: 0.203981
+
+Best Parameters: {'max_depth': 8, 'alpha': 8.783210599343353e-08, 'lambda': 2.956406391587156e-08, 'eta': 0.02588499875524466, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:50.137494
+XGBoost - Sensory
+
+MSE - mean: 0.47608
+MSE - std: 0.06455
+R2 - mean: 0.28826
+R2 - std: 0.07873
+
+Train time: 0.713460
+Test time: 0.154408
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.62956617135894e-08, 'lambda': 8.969609324350467e-08, 'eta': 0.02399315853200911, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:53.001497
+XGBoost - Sensory
+
+MSE - mean: 0.47686
+MSE - std: 0.06332
+R2 - mean: 0.28706
+R2 - std: 0.07699
+
+Train time: 0.720758
+Test time: 0.178651
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.3125933940092432e-08, 'lambda': 0.008217209092094536, 'eta': 0.023968916337764698, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:56.211474
+XGBoost - Sensory
+
+MSE - mean: 0.47873
+MSE - std: 0.06466
+R2 - mean: 0.28406
+R2 - std: 0.08099
+
+Train time: 0.786520
+Test time: 0.152559
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.041005808438362e-08, 'lambda': 7.000848473869759e-08, 'eta': 0.016590474506064802, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:05:58.691660
+XGBoost - Sensory
+
+MSE - mean: 0.48067
+MSE - std: 0.06364
+R2 - mean: 0.28049
+R2 - std: 0.08404
+
+Train time: 0.627127
+Test time: 0.167626
+
+Best Parameters: {'max_depth': 3, 'alpha': 5.400487190048626e-07, 'lambda': 0.06369960381047618, 'eta': 0.032271627253796085, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:06:01.731913
+XGBoost - Sensory
+
+MSE - mean: 0.47619
+MSE - std: 0.06057
+R2 - mean: 0.28760
+R2 - std: 0.07640
+
+Train time: 0.733103
+Test time: 0.179565
+
+Best Parameters: {'max_depth': 3, 'alpha': 3.386210224164097e-07, 'lambda': 8.804830342447454e-08, 'eta': 0.021363085305057608, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:06:04.400108
+XGBoost - Sensory
+
+MSE - mean: 0.47856
+MSE - std: 0.06257
+R2 - mean: 0.28396
+R2 - std: 0.08067
+
+Train time: 0.515466
+Test time: 0.010879
+
+Best Parameters: {'max_depth': 3, 'alpha': 3.252148402630882e-08, 'lambda': 1.0014525321426448e-07, 'eta': 0.02256931608499994, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:06:06.912173
+XGBoost - Sensory
+
+MSE - mean: 0.47503
+MSE - std: 0.06226
+R2 - mean: 0.28919
+R2 - std: 0.07973
+
+Train time: 0.496698
+Test time: 0.005469
+
+Best Parameters: {'max_depth': 3, 'alpha': 3.3274731392991846e-07, 'lambda': 3.1402411582733304e-08, 'eta': 0.026390269816794133, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2024-12-27 14:06:09.995964
+XGBoost - Sensory
+
+MSE - mean: 0.47355
+MSE - std: 0.06225
+R2 - mean: 0.29159
+R2 - std: 0.07914
+
+Train time: 0.616506
+Test time: 0.011787
+
+Best Parameters: {'max_depth': 3, 'alpha': 6.659261118831931e-07, 'lambda': 2.6584096189828953e-08, 'eta': 0.01592100379957427, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
