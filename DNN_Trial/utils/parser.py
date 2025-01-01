@@ -46,6 +46,7 @@ def get_parser():
     parser.add('--cat_idx', type=int, action="append", help="Indices of the categorical features")
     parser.add('--nominal_idx', type=int, action="append", help="Indices of the nominal features")
     parser.add('--ordinal_idx', type=int, action="append", help="Indices of the ordinal features")
+    parser.add('--num_idx', type=int, action="append", help="Indices of the numerical features")
     parser.add('--cat_dims', type=int, action="append", help="Cardinality of the categorical features (is set "
                                                              "automatically, when the load_data function is used.")
     parser.add('--dropna_idx', type=int, action="append", help="Indices of columns to be dropped")
