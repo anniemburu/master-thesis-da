@@ -32,9 +32,26 @@ class CatEncoder(object):
         print("Preprocess data for CatNN...")
         for idx in self.num_col:
             # Bucketize numeric features
-            out, bins = pd.qcut(X[:, idx], config.config['bins'], labels=False, retbins=True, duplicates='drop')
-            X[:, idx] = np.nan_to_num(out, nan=0).astype("int")
-            self.num_bins[idx] = bins
+
+            #print(f"THE X Idx : \n {X[:, idx]} \n\n")
+            #print(f"Column {idx} data type: {X[:, idx].dtype} \n")
+            #print(f"Column {idx} sample data: {X[:, idx]} \n \n \n")
+
+            #nan_mask = np.isnan(X[:, idx])
+            #print(f"Rows with NaN in column {idx}: {nan_mask} \n")
+            ttypes = [type(x) for x in X[:, idx]]
+            
+            print(f"Data types: \n {set(ttypes)}")
+
+            if X[:, idx].dtype == 'object': 
+                X[:, idx] = pd.to_numeric(X[:, idx], errors='coerce') #change to int and change wierd to NAN
+                X[:, idx] = pd.Series(X[:, idx]).fillna(X[:, idx].mean()).values
+            ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            #if np.issubdtype(X[:, idx].dtype, np.number):
+            #    out, bins = pd.qcut(X[:, idx], config.config['bins'], labels=False, retbins=True, duplicates='drop')
+            #    X[:, idx] = np.nan_to_num(out, nan=0).astype("int")
+            #    self.num_bins[idx] = bins
 
         X = X.astype("int")
         # Get feature sizes (number of different features in every column)

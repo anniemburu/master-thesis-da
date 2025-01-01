@@ -30,6 +30,8 @@ class DeepGBM(BaseModelTorch):
             cat_col = []
             num_col = list(range(args.num_features))
 
+        print(f" \n Cat names: {cat_col} \n Numerical Names: {num_col} \n \n")
+
         self.ce = CatEncoder(cat_col, num_col)
         self.ne = NumEncoder(cat_col, num_col)
 
