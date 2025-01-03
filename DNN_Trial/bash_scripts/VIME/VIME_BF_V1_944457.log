@@ -1,0 +1,109 @@
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/black_friday.yml', data_parallel=False, dataset='Black_Friday', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='VIME', n_trials=18, nominal_idx=[0, 2, 3, 5, 6, 7, 8], num_classes=1, num_features=9, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Black_Friday...
+Dataset loaded! 
+
+X b4 encoding : ['F' '0-17' 10 'A' 2 0 1 6 14] 
+
+(166821, 9)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 2, 3, 5, 6, 7, 8]
+Ordinal Idx: [1]
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 2, 3, 5, 6, 7, 8]
+Cat Idx Part II: [0, 1, 2, 3, 5, 6, 7, 8] 
+ENDE 
+ 
+
+Scaling the data...
+One Hot Encoding...
+args.num_features: 71
+args.cat_idx: [0]
+New Shape: (166821, 71)
+Using an existing study with name 'VIME_Black_Friday' instead of creating a new one.
+In get_device
+On Device: cuda
+In get_device
+On Device: cuda
+Fitted encoder
+Epoch 0, Val Loss: 20001042.00000
+Epoch 1, Val Loss: 18602882.00000
+Epoch 2, Val Loss: 17073966.00000
+Epoch 3, Val Loss: 15628885.00000
+Epoch 4, Val Loss: 15283682.00000
+Epoch 5, Val Loss: 15209576.00000
+Epoch 6, Val Loss: 14981162.00000
+Epoch 7, Val Loss: 14618292.00000
+Epoch 8, Val Loss: 14645262.00000
+Epoch 9, Val Loss: 14313302.00000
+Epoch 10, Val Loss: 14388663.00000
+Epoch 11, Val Loss: 13949724.00000
+Epoch 12, Val Loss: 14032470.00000
+Epoch 13, Val Loss: 13770254.00000
+Epoch 14, Val Loss: 13545270.00000
+Epoch 15, Val Loss: 13274017.00000
+Epoch 16, Val Loss: 13222640.00000
+Epoch 17, Val Loss: 13345540.00000
+Epoch 18, Val Loss: 13125788.00000
+Epoch 19, Val Loss: 13522861.00000
+Epoch 20, Val Loss: 12750797.00000
+Epoch 21, Val Loss: 12891414.00000
+Epoch 22, Val Loss: 12701325.00000
+Epoch 23, Val Loss: 12786854.00000
+Epoch 24, Val Loss: 12759463.00000
+Epoch 25, Val Loss: 13053374.00000
+Epoch 26, Val Loss: 12766634.00000
+Epoch 27, Val Loss: 12636803.00000
+Epoch 28, Val Loss: 12947516.00000
+Epoch 29, Val Loss: 13128733.00000
+Epoch 30, Val Loss: 12511733.00000
+Epoch 31, Val Loss: 12591322.00000
+Epoch 32, Val Loss: 12756412.00000
+Epoch 33, Val Loss: 12502063.00000
+Epoch 34, Val Loss: 12503900.00000
+Epoch 35, Val Loss: 12927000.00000
+Epoch 36, Val Loss: 12534611.00000
+Epoch 37, Val Loss: 12422139.00000
+Epoch 38, Val Loss: 12604901.00000
+Epoch 39, Val Loss: 12677828.00000
+Epoch 40, Val Loss: 12408567.00000
+Epoch 41, Val Loss: 12361721.00000
+Epoch 42, Val Loss: 12997303.00000
+Epoch 43, Val Loss: 12450571.00000
+Epoch 44, Val Loss: 12351267.00000
+Epoch 45, Val Loss: 12338459.00000
+Epoch 46, Val Loss: 12361148.00000
+Epoch 47, Val Loss: 12292474.00000
+Epoch 48, Val Loss: 12289423.00000
+Epoch 49, Val Loss: 12338986.00000
+Epoch 50, Val Loss: 12565864.00000
+Epoch 51, Val Loss: 12434811.00000
+Epoch 52, Val Loss: 13215671.00000
+Epoch 53, Val Loss: 12308342.00000
+Epoch 54, Val Loss: 12319054.00000
+Epoch 55, Val Loss: 12330609.00000
+Epoch 56, Val Loss: 12327425.00000
+Epoch 57, Val Loss: 12306711.00000
+Epoch 58, Val Loss: 12355416.00000
+Epoch 59, Val Loss: 12237915.00000
+Epoch 60, Val Loss: 12310412.00000
+Epoch 61, Val Loss: 12299164.00000
+Epoch 62, Val Loss: 12478316.00000
+Epoch 63, Val Loss: 12250143.00000
+Epoch 64, Val Loss: 12574766.00000
+Epoch 65, Val Loss: 12427282.00000
+Epoch 66, Val Loss: 12278051.00000
+Epoch 67, Val Loss: 12228741.00000
+Epoch 68, Val Loss: 12367231.00000
+Epoch 69, Val Loss: 12270471.00000
+Epoch 70, Val Loss: 12550665.00000
+Epoch 71, Val Loss: 12463654.00000
+Epoch 72, Val Loss: 12229824.00000
+Epoch 73, Val Loss: 12305232.00000
+Epoch 74, Val Loss: 12318606.00000
+Epoch 75, Val Loss: 12252360.00000
+Epoch 76, Val Loss: 12295872.00000
