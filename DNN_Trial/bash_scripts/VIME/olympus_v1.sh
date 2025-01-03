@@ -22,6 +22,7 @@ for config in "${CONFIGS[@]}"; do
     source ~/miniconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
     srun python3 train.py --config "$config" --model_name VIME --optimize_hyperparameters --n_trials 100 --epochs 100
+
 done
 
 
