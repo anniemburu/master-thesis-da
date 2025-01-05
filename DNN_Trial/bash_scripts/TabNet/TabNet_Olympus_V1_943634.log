@@ -1,0 +1,189 @@
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/boston.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/boston.yml', data_parallel=False, dataset='Boston', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[3], num_classes=1, num_features=13, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Boston...
+Dataset loaded!
+(506, 13)
+Scaling the data...
+args.num_features: 14
+args.cat_idx: []
+New Shape: (506, 14)
+A new study created in RDB with name: TabNet_Boston
+In get_device
+Trial 0 failed with parameters: {'n_d': 48, 'n_steps': 5, 'gamma': 1.792811241282387, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.042077735969412354, 'mask_type': 'entmax'} because of the following error: ValueError('If cat_dims is non-empty, cat_idxs must be defined as a list of same length.').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 133, in __call__
+    model = self.model_name(trial_params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 28, in __init__
+    self.model = TabNetRegressor(**self.params)
+  File "<string>", line 29, in __init__
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_model.py", line 119, in __post_init__
+    super(TabNetRegressor, self).__post_init__()
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 88, in __post_init__
+    updated_params = check_embedding_parameters(self.cat_dims,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/utils.py", line 530, in check_embedding_parameters
+    raise ValueError(msg)
+ValueError: If cat_dims is non-empty, cat_idxs must be defined as a list of same length.
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/socmob.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/socmob.yml', data_parallel=False, dataset='Socmob', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 1, 2, 3], num_classes=1, num_features=5, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Socmob...
+Dataset loaded!
+(1156, 5)
+Scaling the data...
+args.num_features: 39
+args.cat_idx: []
+New Shape: (1156, 39)
+A new study created in RDB with name: TabNet_Socmob
+In get_device
+Trial 0 failed with parameters: {'n_d': 48, 'n_steps': 8, 'gamma': 1.282418778054071, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.007469603069357302, 'mask_type': 'sparsemax'} because of the following error: ValueError('If cat_dims is non-empty, cat_idxs must be defined as a list of same length.').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 133, in __call__
+    model = self.model_name(trial_params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 28, in __init__
+    self.model = TabNetRegressor(**self.params)
+  File "<string>", line 29, in __init__
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_model.py", line 119, in __post_init__
+    super(TabNetRegressor, self).__post_init__()
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 88, in __post_init__
+    updated_params = check_embedding_parameters(self.cat_dims,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/utils.py", line 530, in check_embedding_parameters
+    raise ValueError(msg)
+ValueError: If cat_dims is non-empty, cat_idxs must be defined as a list of same length.
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/sensory.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/sensory.yml', data_parallel=False, dataset='Sensory', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], num_classes=1, num_features=11, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=False, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Sensory...
+Dataset loaded!
+(576, 11)
+args.num_features: 36
+args.cat_idx: []
+New Shape: (576, 36)
+A new study created in RDB with name: TabNet_Sensory
+In get_device
+Trial 0 failed with parameters: {'n_d': 15, 'n_steps': 7, 'gamma': 1.8892475627905139, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.06328702437693877, 'mask_type': 'entmax'} because of the following error: ValueError('If cat_dims is non-empty, cat_idxs must be defined as a list of same length.').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 133, in __call__
+    model = self.model_name(trial_params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 28, in __init__
+    self.model = TabNetRegressor(**self.params)
+  File "<string>", line 29, in __init__
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_model.py", line 119, in __post_init__
+    super(TabNetRegressor, self).__post_init__()
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 88, in __post_init__
+    updated_params = check_embedding_parameters(self.cat_dims,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/utils.py", line 530, in check_embedding_parameters
+    raise ValueError(msg)
+ValueError: If cat_dims is non-empty, cat_idxs must be defined as a list of same length.
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/moneyball.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/moneyball.yml', data_parallel=False, dataset='Moneyball', direction='minimize', dropna_idx=[9, 10, 12, 13], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 1, 8], num_classes=1, num_features=14, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Moneyball...
+Dataset loaded!
+(1232, 10)
+Scaling the data...
+args.num_features: 50
+args.cat_idx: []
+New Shape: (1232, 50)
+A new study created in RDB with name: TabNet_Moneyball
+In get_device
+Trial 0 failed with parameters: {'n_d': 23, 'n_steps': 8, 'gamma': 1.2465135675375256, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 4, 'momentum': 0.0018676494085009601, 'mask_type': 'entmax'} because of the following error: ValueError('If cat_dims is non-empty, cat_idxs must be defined as a list of same length.').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 133, in __call__
+    model = self.model_name(trial_params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 28, in __init__
+    self.model = TabNetRegressor(**self.params)
+  File "<string>", line 29, in __init__
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_model.py", line 119, in __post_init__
+    super(TabNetRegressor, self).__post_init__()
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 88, in __post_init__
+    updated_params = check_embedding_parameters(self.cat_dims,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/utils.py", line 530, in check_embedding_parameters
+    raise ValueError(msg)
+ValueError: If cat_dims is non-empty, cat_idxs must be defined as a list of same length.
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/black_friday.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/black_friday.yml', data_parallel=False, dataset='Black_Friday', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 2, 3, 5, 6, 7, 8], num_classes=1, num_features=9, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Black_Friday...
+Dataset loaded!
+(166821, 9)
+Scaling the data...
+args.num_features: 71
+args.cat_idx: [0]
+New Shape: (166821, 71)
+A new study created in RDB with name: TabNet_Black_Friday
+In get_device
+Trial 0 failed with parameters: {'n_d': 24, 'n_steps': 5, 'gamma': 1.0817568922930016, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.021543231699696096, 'mask_type': 'entmax'} because of the following error: ValueError('The lists cat_dims and cat_idxs must have the same length.').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 133, in __call__
+    model = self.model_name(trial_params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 28, in __init__
+    self.model = TabNetRegressor(**self.params)
+  File "<string>", line 29, in __init__
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_model.py", line 119, in __post_init__
+    super(TabNetRegressor, self).__post_init__()
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 88, in __post_init__
+    updated_params = check_embedding_parameters(self.cat_dims,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/utils.py", line 533, in check_embedding_parameters
+    raise ValueError(msg)
+ValueError: The lists cat_dims and cat_idxs must have the same length.
+Trial 0 failed with value None.
