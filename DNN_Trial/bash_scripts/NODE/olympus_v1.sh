@@ -6,22 +6,23 @@
 #SBATCH --partition=STUD
 #SBATCH --gres=gpu:1
 
-CONFIGS=("config/boston.yml"
-        "config/socmob.yml"
-        "config/sensory.yml"
-        "config/moneyball.yml"
-        "config/black_friday.yml"
+CONFIGS=(config/boston.yml
+        config/socmob.yml
+       	config/sensory.yml
+        config/moneyball.yml
+        #config/black_friday.yml
           )
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
-    printf 'Training NODE Vesion 1 with Dataset: %s \n\n'  "$config" 
+    printf 'Training VIME Vesion 1 with Dataset: %s \n\n'  "$config" 
     printf "\n\n----------------------------------------------------------------------------\n"
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/miniconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name NODE --optimize_hyperparameters --n_trials 30 --epochs 100
+    srun python3 train.py --config "$config" --model_name NODE --optimize_hyperparameters --n_trials 100 --epochs 100
+
 done
 
 
