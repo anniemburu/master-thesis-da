@@ -280,10 +280,10 @@ def load_data(args):
                 X[:, i] = le.fit_transform(X[:, i])
                 args.cat_dims.append(len(le.classes_))
             else:
-                if args.nominal_idx and i in args.nominal_idx:
+                if args.ordinal_idx and i in args.ordinal_idx:
                     le = LabelEncoder()
-                    X[:, i] = le.fit_transform(X[:, i])
-
+                    #X[:, i] = le.fit_transform(X[:, i])
+                    le.fit_transform(X[:, i])
                     # Setting this?
                     args.cat_dims.append(len(le.classes_))
 
