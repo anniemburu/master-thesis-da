@@ -55,22 +55,18 @@ def cross_validation(model, X, y, args, visual, save_model=False):
         # Save model weights and the truth/prediction pairs for traceability
         curr_model.save_model_and_predictions(y_test, i)
 
-        if save_model:
-
-            save_loss_to_file(args, loss_history, "loss", extension=i)
-            save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
-            print('Saved Losses')
+        #save the losses
+        save_loss_to_file(args, loss_history, "loss", extension=i)
+        save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
+        print('Saved Losses')
             
-        else:
-            print("DID NOT SAVE RESULTS")
-
         # Compute scores on the output
         sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities)
 
         print(f'{sc.get_results()} \n \n')
 
     # Best run is saved to file
-    save_model= True
+    #save_model= True
     if save_model:
         print("Results After CV:", sc.get_results())
         print("Train time:", train_timer.get_average_time())
