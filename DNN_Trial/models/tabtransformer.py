@@ -56,8 +56,8 @@ class TabTransformer(BaseModelTorch):
         optimizer = optim.AdamW(self.model.parameters(), lr=learning_rate, weight_decay=weight_decay)
 
         # For some reason this has to be set explicitly to work with categorical data
-        X = np.array(X, dtype=np.float)
-        X_val = np.array(X_val, dtype=np.float)
+        X = np.array(X, dtype=float)
+        X_val = np.array(X_val, dtype=float)
 
         X = torch.tensor(X).float()
         X_val = torch.tensor(X_val).float()
