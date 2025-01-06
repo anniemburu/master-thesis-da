@@ -182,8 +182,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Brazillian_Houses":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
-        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
+        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         label_col = 'total_(BRL)'
 
         X = df.drop(label_col, axis=1).to_numpy()
@@ -291,12 +291,16 @@ def load_data(args):
             num_idx.append(i)
 
     args.num_idx = num_idx #update num_idx
+
+    print(f"X after Nominal Encoding: {X[0]} \n \n")
     
     
     if args.scale:
         print("Scaling the data...")
         scaler = StandardScaler()
         X[:, num_idx] = scaler.fit_transform(X[:, num_idx])
+
+    print(f"X after Scaling: {X[0]} \n \n")
 
 
     if args.one_hot_encode:
@@ -308,6 +312,7 @@ def load_data(args):
             ord_len = len(args.ordinal_idx)
             new_ord = X[:, args.ordinal_idx]
             args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
+            print(f"Ordinal Idx: {args.ordinal_idx}")
             X = np.concatenate([new_ord, new_x1, new_x2], axis=1)
 
         else:
@@ -317,15 +322,23 @@ def load_data(args):
         args.num_features = X.shape[1]
         #args.cat_idx = get_catidx(args)
         #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
+
+        """
+        We have encoded nominal features. Therefore categorical data now is if we have 
+        odinal features.
+        """
         if args.ordinal_encode:
             args.cat_idx = args.ordinal_idx
         else:
             args.cat_idx = None
             
         print("One Hot Encoding...")
+        print(f"X after One Hot Encoding: {X[0]} \n \n")
         print(f"args.num_features: {args.num_features}")
         print(f"args.cat_idx: {args.cat_idx}")
+        print(f"Cat Dims: {args.cat_dims}")
         print("New Shape:", X.shape)
+        print(f"{args.ordinal_encode} \n \n")
         
 
     # Ordinal Encode
@@ -347,7 +360,7 @@ def load_data(args):
             # Fit and transform the data
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
 
-        elif args.dataset == "House Prices Nominal":
+        elif args.dataset == "House_Prices_Nominal":
             categories = [
                     [None,'Grvl', 'Pave'],
                     ['None', 'Grvl', 'Pave'],
@@ -396,7 +409,8 @@ def load_data(args):
             # Fit and transform the data
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
         
-        elif args.dataset == "Brazillian Houses":
+        elif args.dataset == "Brazillian_Houses":
+            print('This BRAZILIAN HOUSES') 
 
             encoder = OrdinalEncoder(categories=[[None,'not furnished','furnished']])
 
