@@ -56,9 +56,10 @@ def cross_validation(model, X, y, args, visual, save_model=False):
         curr_model.save_model_and_predictions(y_test, i)
 
         #save the losses
-        save_loss_to_file(args, loss_history, "loss", extension=i)
-        save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
-        print('Saved Losses')
+        if save_model:
+            save_loss_to_file(args, loss_history, "loss", extension=i)
+            save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
+            print('Saved Losses')
             
         # Compute scores on the output
         sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities)
@@ -66,8 +67,8 @@ def cross_validation(model, X, y, args, visual, save_model=False):
         print(f'{sc.get_results()} \n \n')
 
     # Best run is saved to file
-    #save_model= True
     if save_model:
+        print("Saving model.....")
         print("Results After CV:", sc.get_results())
         print("Train time:", train_timer.get_average_time())
         print("Inference time:", test_timer.get_average_time())
@@ -76,7 +77,6 @@ def cross_validation(model, X, y, args, visual, save_model=False):
         save_results_to_file(args, sc.get_results(),
                              train_timer.get_average_time(), test_timer.get_average_time(),
                              model.params)
-    save_model=False #Change back to False
 
     print("Finished cross validation")
 

@@ -182,8 +182,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Brazillian_Houses":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         label_col = 'total_(BRL)'
 
         X = df.drop(label_col, axis=1).to_numpy()
@@ -284,8 +284,13 @@ def load_data(args):
                     le = LabelEncoder()
                     #X[:, i] = le.fit_transform(X[:, i])
                     le.fit_transform(X[:, i])
-                    # Setting this?
-                    args.cat_dims.append(len(le.classes_))
+
+                    # Gets number of unique classes per ordinal feature
+                    #Covers future cases with None
+                    if np.any(X[:, i] == "None"):
+                        args.cat_dims.append(len(le.classes_))
+                    else:
+                        args.cat_dims.append(len(le.classes_)+1)
 
         else:
             num_idx.append(i)
