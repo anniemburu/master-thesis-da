@@ -1,0 +1,108 @@
+
+
+----------------------------------------------------------------------------
+Training NODE Vesion 1 with Dataset: config/brazillian_houses.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/brazillian_houses.yml', data_parallel=False, dataset='Brazillian_Houses', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='NODE', n_trials=50, nominal_idx=[0, 6], num_classes=1, num_features=12, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[7], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Brazillian_Houses...
+Dataset loaded! 
+
+X b4 encoding : ['Sao Paulo' 70 2 1 1 7 'acept' 'furnished' 2065 3300 211 42] 
+
+(10692, 12)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 6]
+Ordinal Idx: [7]
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 6]
+Cat Idx Part II: [0, 6, 7] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['Sao Paulo' 70 2 1 1 7 'acept' 'furnished' 2065 3300 211 42] 
+ 
+
+Scaling the data...
+X after Scaling: ['Sao Paulo' -0.1475216487529234 -0.43209900207114194 -0.8789596333110133
+ -0.3832447761145863 0.31835221569081024 'acept' 'furnished'
+ 0.057144851637632804 -0.1749353429179716 -0.05010297344484243
+ -0.23658935594737002] 
+ 
+
+Ordinal Idx: [0]
+One Hot Encoding...
+X after One Hot Encoding: ['furnished' 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.1475216487529234
+ -0.43209900207114194 -0.8789596333110133 -0.3832447761145863
+ 0.31835221569081024 0.057144851637632804 -0.1749353429179716
+ -0.05010297344484243 -0.23658935594737002] 
+ 
+
+args.num_features: 17
+args.cat_idx: [0]
+Cat Dims: [2]
+New Shape: (10692, 17)
+True 
+ 
+
+This BRAZILIAN HOUSES
+OE Done!!! 
+
+
+
+----------------------------------------------------------------------------
+Training NODE Vesion 1 with Dataset: config/abalone.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/abalone.yml', data_parallel=False, dataset='Abalone', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='NODE', n_trials=50, nominal_idx=[0], num_classes=1, num_features=8, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Abalone...
+Dataset loaded! 
+
+X b4 encoding : ['M' 0.455 0.365 0.095 0.514 0.2245 0.101 0.15] 
+
+(4177, 8)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [0]
+Cat Idx Part II: [0] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['M' 0.455 0.365 0.095 0.514 0.2245 0.101 0.15] 
+ 
+
+Scaling the data...
+X after Scaling: ['M' -0.5745581331424137 -0.4321487936470637 -1.0644241467266957
+ -0.6418982280024725 -0.6076853645006243 -0.7262115735818162
+ -0.6382168891980078] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [0.0 0.0 1.0 -0.5745581331424137 -0.4321487936470637 -1.0644241467266957
+ -0.6418982280024725 -0.6076853645006243 -0.7262115735818162
+ -0.6382168891980078] 
+ 
+
+args.num_features: 10
+args.cat_idx: None
+Cat Dims: []
+New Shape: (4177, 10)
+False 
+ 
+
