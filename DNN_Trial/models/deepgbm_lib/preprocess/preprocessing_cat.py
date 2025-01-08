@@ -27,7 +27,30 @@ class CatEncoder(object):
         self.keep_values = {}
         self.num_bins = {}
 
+    '''
+    Check why shit is failing
+    '''
+    # Apply pd.to_numeric to check if conversion works
+    def is_numeric(self, arr):
+        try:
+            # Try converting the array to numeric, non-numeric values will become NaN
+            numeric_array = np.array([pd.to_numeric(x, errors='coerce') for x in arr])
+            return np.isnan(numeric_array).any()  # Check if any element is NaN (non-numeric)
+        except Exception as e:
+            return True  # If an error occurs, the array has non-numeric values
+        
+    def check_non_numeric(self, arr):
+        non_numeric_found = False
+        for value in arr.flatten():  # Flatten to check all values in the array
+            if not isinstance(value, (int, float, np.number)):  # Check for non-numeric types
+                non_numeric_found = True
+                break
+        return non_numeric_found
+
     def fit_transform(self, X):
+        print(F'X type b4: {X.dtype}')
+        X = X.astype(float)
+        print(F'X type after: {X.dtype}')
 
         print("Preprocess data for CatNN...")
         for idx in self.num_col:
@@ -46,6 +69,10 @@ class CatEncoder(object):
         return X, feature_sizes
 
     def transform(self, X):
+
+        print(F'X type b4: {X.dtype}')
+        X = X.astype(float)
+        print(F'X type after: {X.dtype}')
 
         for idx in self.num_col:
             # Bucketize numeric features
