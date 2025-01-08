@@ -49,6 +49,9 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/531-boston.csv')
         label_col = "MEDV"
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -57,6 +60,9 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -64,6 +70,9 @@ def load_data(args):
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         label_col = 'Score'
+
+        #drop nulls
+        df.dropna(inplace=True)
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
@@ -77,6 +86,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -92,6 +102,9 @@ def load_data(args):
         df.loc[df['Stay_In_Current_City_Years'] == '4+', 'Stay_In_Current_City_Years'] = 4
         df['Stay_In_Current_City_Years'] = df['Stay_In_Current_City_Years'].astype(int)
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -105,7 +118,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
-        df.dropna(axis=1, inplace=True) #drop missing
+        df.dropna(inplace=True) #drop missing
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -117,6 +130,9 @@ def load_data(args):
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42225-diamonds/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42225-diamonds.csv')
         label_col = 'price'
+
+        #drop nulls
+        df.dropna(inplace=True)
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
@@ -146,6 +162,9 @@ def load_data(args):
             median_val = df[idx].median()
             df[idx] = df[idx].fillna(median_val)
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -158,6 +177,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -174,6 +194,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -186,6 +207,9 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         label_col = 'total_(BRL)'
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -194,6 +218,9 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42726-abalone.csv')
         label_col = 'Class_number_of_rings'
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -201,6 +228,9 @@ def load_data(args):
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016.csv')
         label_col = 'tip_amount'
+
+        #drop nulls
+        df.dropna(inplace=True)
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
@@ -214,6 +244,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -230,6 +261,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
