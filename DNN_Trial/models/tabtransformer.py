@@ -152,7 +152,7 @@ class TabTransformer(BaseModelTorch):
 
     def predict_helper(self, X):
         self.model.eval()
-        X = np.array(X, dtype=np.float)
+        X = np.array(X, dtype=float)
         X = torch.tensor(X).float()
 
         test_dataset = TensorDataset(X)
@@ -193,7 +193,7 @@ class TabTransformer(BaseModelTorch):
             of the attention map.
             return array with the same shape as X. The number of columns is equal to the number of categorical values in X.
         """
-        X = np.array(X, dtype=np.float)
+        X = np.array(X, dtype=float)
         # Unroll and Rerun until first attention stage.
 
         X = torch.tensor(X).float()
