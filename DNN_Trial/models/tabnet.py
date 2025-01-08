@@ -45,7 +45,7 @@ class TabNet(BaseModelTorch):
         return history['loss'], history["eval_" + self.metric[0]]
 
     def predict_helper(self, X):
-        X = np.array(X, dtype=np.float)
+        X = np.array(X, dtype=float)
 
         if self.args.objective == "regression":
             return self.model.predict(X)
