@@ -1,0 +1,6 @@
+[I 2025-01-03 16:31:21,733] Using an existing study with name 'VIME_Allstate_Claims' instead of creating a new one.
+[I 2025-01-04 08:05:49,943] Trial 2 finished with value: 3690732.3254019385 and parameters: {'p_m': 0.6857855583349338, 'alpha': 2.431641575833991, 'K': 5, 'beta': 2.181737537614761}. Best is trial 2 with value: 3690732.3254019385.
+[I 2025-01-05 10:16:24,168] Trial 3 finished with value: 3850794.2144524404 and parameters: {'p_m': 0.360297101534264, 'alpha': 4.49517696332167, 'K': 10, 'beta': 5.306128254076743}. Best is trial 2 with value: 3690732.3254019385.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 944479.0 ON stud-000 CANCELLED AT 2025-01-06T16:31:13 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 944479 ON stud-000 CANCELLED AT 2025-01-06T16:31:13 DUE TO TIME LIMIT ***
