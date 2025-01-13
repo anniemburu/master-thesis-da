@@ -1,0 +1,14 @@
+2025-01-10 11:24:23.782483
+TabNet - MIP
+
+MSE - mean: 906434.84865
+MSE - std: 85592.11437
+R2 - mean: 0.99887
+R2 - std: 0.00021
+
+Train time: 29.629708
+Test time: 0.033807
+
+Best Parameters: {'n_d': 37, 'n_steps': 3, 'gamma': 1.6749039824525354, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.2491546234839367, 'mask_type': 'entmax', 'n_a': 37, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

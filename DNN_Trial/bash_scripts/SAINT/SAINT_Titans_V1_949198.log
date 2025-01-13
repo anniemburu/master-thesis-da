@@ -1,0 +1,3413 @@
+
+
+----------------------------------------------------------------------------
+Training SAINT Vesion 1 with Dataset: config/sat11.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/sat11.yml', data_parallel=False, dataset='SAT11', direction='minimize', dropna_idx=[116], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=1, nominal_idx=[115], num_classes=1, num_features=117, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset SAT11...
+Dataset loaded! 
+
+X b4 encoding : [99.0 264.0 72.0 264.0 0.375 0.0 0.2727 0.3939 0.8418 0.0 1 1.289 0.053
+ 0.101 0.0417 0.0556 0.4741 0 0.0 0.1818 0.053 0.1429 0.0455 0.0606 0.6931
+ 0.0 0.0 0.0 0.0 0.0 0.0186 0.3979 0.0076 0.0303 1.5208 0.3636 0.0208
+ 0.0909 0.0189 0.0227 5.7887 0.0705 5.0 6.0 0.5156 3147.3 0.1135 2706.0
+ 3848.0 3848.0 2841.0 3117.0 2891.0 3089.0 18.1338 0.0677 16.976 20.5128
+ 20.5128 17.052 18.0992 17.4347 17.8774 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.3361 0.0783 0.2945 0.3732 0.3661 0.3046 0.3623 0.3112 0.3409 2.2246
+ 0.6409 8.1282 0.2196 8.0 6.0 10.0 1.3984 0.2637 0.8229 0.1537 1.0228
+ 0.2076 8.0888 0.2218 8.0 6.0 10.0 1.0672 0.3603 0.761 0.1447 0.9922
+ 0.9986 'MPhaseSAT_2011.02.15'] 
+
+(4440, 106)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [105]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [105]
+Cat Idx Part II: [105] 
+ENDE 
+ 
+
+X after Nominal Encoding: [99.0 264.0 72.0 264.0 0.375 0.0 0.2727 0.3939 0.8418 0.0 1 1.289 0.053
+ 0.101 0.0417 0.0556 0.4741 0 0.0 0.1818 0.053 0.1429 0.0455 0.0606 0.6931
+ 0.0 0.0 0.0 0.0 0.0 0.0186 0.3979 0.0076 0.0303 1.5208 0.3636 0.0208
+ 0.0909 0.0189 0.0227 5.7887 0.0705 5.0 6.0 0.5156 3147.3 0.1135 2706.0
+ 3848.0 3848.0 2841.0 3117.0 2891.0 3089.0 18.1338 0.0677 16.976 20.5128
+ 20.5128 17.052 18.0992 17.4347 17.8774 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.3361 0.0783 0.2945 0.3732 0.3661 0.3046 0.3623 0.3112 0.3409 2.2246
+ 0.6409 8.1282 0.2196 8.0 6.0 10.0 1.3984 0.2637 0.8229 0.1537 1.0228
+ 0.2076 8.0888 0.2218 8.0 6.0 10.0 1.0672 0.3603 0.761 0.1447 0.9922
+ 0.9986 'MPhaseSAT_2011.02.15'] 
+ 
+
+Scaling the data...
+X after Scaling: [-0.30238058199577 -0.5033942695053991 -0.3615165780645017
+ -0.49581657104236726 0.005607098105351448 -0.08681418173849337
+ 1.362786121698914 -1.2516195580270237 1.1910660747617967
+ -1.1836807689441486 0.0 1.0543373246523007 1.1007179547284835
+ -1.163027052708958 1.1083534525921928 0.14230639643630474
+ 0.02700882333427685 0.0 -1.022639710992812 -1.1351981697044768
+ 1.1007179547284835 -0.32850570595043094 1.080497439815641
+ 0.4782717009658528 -0.9395294490147951 -1.0605889389711198
+ -0.9011993259075552 -0.7995710990914418 -1.2850425260862444
+ -1.263894880697935 1.3944908192154655 -0.11451083420319325
+ 0.4857455551116929 0.6491671414060174 -0.6618447045226997
+ -0.7860879463800144 -0.0350088370520026 -0.3435517538947066
+ -0.03910701013779577 -0.09901432473563744 -0.06282088459106885
+ 0.461428708178565 -0.06451899610580314 -0.0710388340543108
+ 0.38617282753735493 0.5836402963453176 -0.6257962603970071
+ 0.5438574880042023 0.5783663668000103 0.6418344463105027
+ 0.6009814722171821 0.42455064934935344 0.5521333699428296
+ 0.5345135806540205 -0.8362400339427635 -0.42632736622680556
+ -0.7366424934286302 -0.8686292582783284 -0.8247442060287196
+ -0.7520672730856894 -0.8188697597008135 -0.8023999736854818
+ -0.7616286190214288 -1.8694527454821355 -0.4848621330032288
+ -1.1537827139907295 -2.5407567714937396 -2.1285969703295153
+ -1.539396309272572 -1.9186025898314072 -1.646007146027377
+ -1.7691119765131615 1.4730841365698777 -0.6933490447638734
+ 1.7236866451546513 0.6899684168851017 1.2983314596565094
+ 1.6243401870278216 1.3768490481988622 1.3802560941814699
+ 1.4313196067088143 -0.1596010004600885 -0.3733296209656284
+ -0.5001928441135018 1.0991836507010306 -0.4926691296752407
+ -0.4694668000172307 -0.5041354324639336 -0.6967476738591576
+ 0.2507922515202087 -1.787033997810971 0.6597399376055526
+ -0.1922896905018057 -0.31315397695132074 -0.500425164621687
+ 0.823656104472706 -0.4947810282533262 -0.49989758651349564
+ -0.5139384633247642 -0.6925753430976646 0.053218680882387646
+ -0.4957769730044991 0.3589566172629024 1.2355186641648754
+ 0.9772331590931707 'MPhaseSAT_2011.02.15'] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ -0.30238058199577 -0.5033942695053991 -0.3615165780645017
+ -0.49581657104236726 0.005607098105351448 -0.08681418173849337
+ 1.362786121698914 -1.2516195580270237 1.1910660747617967
+ -1.1836807689441486 0.0 1.0543373246523007 1.1007179547284835
+ -1.163027052708958 1.1083534525921928 0.14230639643630474
+ 0.02700882333427685 0.0 -1.022639710992812 -1.1351981697044768
+ 1.1007179547284835 -0.32850570595043094 1.080497439815641
+ 0.4782717009658528 -0.9395294490147951 -1.0605889389711198
+ -0.9011993259075552 -0.7995710990914418 -1.2850425260862444
+ -1.263894880697935 1.3944908192154655 -0.11451083420319325
+ 0.4857455551116929 0.6491671414060174 -0.6618447045226997
+ -0.7860879463800144 -0.0350088370520026 -0.3435517538947066
+ -0.03910701013779577 -0.09901432473563744 -0.06282088459106885
+ 0.461428708178565 -0.06451899610580314 -0.0710388340543108
+ 0.38617282753735493 0.5836402963453176 -0.6257962603970071
+ 0.5438574880042023 0.5783663668000103 0.6418344463105027
+ 0.6009814722171821 0.42455064934935344 0.5521333699428296
+ 0.5345135806540205 -0.8362400339427635 -0.42632736622680556
+ -0.7366424934286302 -0.8686292582783284 -0.8247442060287196
+ -0.7520672730856894 -0.8188697597008135 -0.8023999736854818
+ -0.7616286190214288 -1.8694527454821355 -0.4848621330032288
+ -1.1537827139907295 -2.5407567714937396 -2.1285969703295153
+ -1.539396309272572 -1.9186025898314072 -1.646007146027377
+ -1.7691119765131615 1.4730841365698777 -0.6933490447638734
+ 1.7236866451546513 0.6899684168851017 1.2983314596565094
+ 1.6243401870278216 1.3768490481988622 1.3802560941814699
+ 1.4313196067088143 -0.1596010004600885 -0.3733296209656284
+ -0.5001928441135018 1.0991836507010306 -0.4926691296752407
+ -0.4694668000172307 -0.5041354324639336 -0.6967476738591576
+ 0.2507922515202087 -1.787033997810971 0.6597399376055526
+ -0.1922896905018057 -0.31315397695132074 -0.500425164621687
+ 0.823656104472706 -0.4947810282533262 -0.49989758651349564
+ -0.5139384633247642 -0.6925753430976646 0.053218680882387646
+ -0.4957769730044991 0.3589566172629024 1.2355186641648754
+ 0.9772331590931707] 
+ 
+
+args.num_features: 120
+args.cat_idx: None
+Cat Dims: []
+New Shape: (4440, 120)
+False 
+ 
+
+A new study created in RDB with name: SAINT_SAT11
+In get_device
+Using dim 8 and batch size 64
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 16362815.0
+Epoch 1 loss 13508511.0
+Epoch 2 loss 5353596.5
+Epoch 3 loss 4744434.0
+Epoch 4 loss 3561634.0
+Epoch 5 loss 3143679.75
+Epoch 6 loss 3018126.25
+Epoch 7 loss 2973696.0
+Epoch 8 loss 3047756.25
+Epoch 9 loss 2693864.0
+Epoch 10 loss 2783369.0
+Epoch 11 loss 2664864.25
+Epoch 12 loss 2748190.75
+Epoch 13 loss 2637441.0
+Epoch 14 loss 2558355.0
+Epoch 15 loss 2554827.25
+Epoch 16 loss 2467185.5
+Epoch 17 loss 2478729.25
+Epoch 18 loss 2352055.5
+Epoch 19 loss 2386375.0
+Epoch 20 loss 2341206.25
+Epoch 21 loss 2317067.75
+Epoch 22 loss 2318596.25
+Epoch 23 loss 2350718.75
+Epoch 24 loss 2309644.0
+Epoch 25 loss 2397715.75
+Epoch 26 loss 2274585.0
+Epoch 27 loss 2221330.5
+Epoch 28 loss 2098329.25
+Epoch 29 loss 2257766.0
+Epoch 30 loss 2273612.0
+Epoch 31 loss 2226747.0
+Epoch 32 loss 2114048.5
+Epoch 33 loss 2062218.25
+Epoch 34 loss 2156500.0
+Epoch 35 loss 2175586.25
+Epoch 36 loss 2240239.0
+Epoch 37 loss 2181493.0
+Epoch 38 loss 2154463.5
+Epoch 39 loss 2070276.75
+Epoch 40 loss 2245096.25
+Epoch 41 loss 1983504.5
+Epoch 42 loss 2003650.75
+Epoch 43 loss 2021809.125
+Epoch 44 loss 1908755.375
+Epoch 45 loss 2101209.75
+Epoch 46 loss 2029061.5
+Epoch 47 loss 1813079.0
+Epoch 48 loss 1973374.625
+Epoch 49 loss 2016061.125
+Epoch 50 loss 1792001.5
+Epoch 51 loss 1799835.5
+Epoch 52 loss 1917929.75
+Epoch 53 loss 1814695.0
+Epoch 54 loss 1839193.25
+Epoch 55 loss 1660860.125
+Epoch 56 loss 1873897.875
+Epoch 57 loss 1709421.75
+Epoch 58 loss 2014102.0
+Epoch 59 loss 1852459.0
+Epoch 60 loss 1815754.75
+Epoch 61 loss 1664560.5
+Epoch 62 loss 1735809.0
+Epoch 63 loss 1758765.25
+Epoch 64 loss 1687539.25
+Epoch 65 loss 1503131.125
+Epoch 66 loss 1662120.625
+Epoch 67 loss 1616647.125
+Epoch 68 loss 1620128.375
+Epoch 69 loss 1556927.75
+Epoch 70 loss 1610233.75
+Epoch 71 loss 1605820.875
+Epoch 72 loss 1533635.875
+Epoch 73 loss 1561327.0
+Epoch 74 loss 1577083.75
+Epoch 75 loss 1521344.75
+Epoch 76 loss 1552179.0
+Epoch 77 loss 1561462.25
+Epoch 78 loss 1558172.75
+Epoch 79 loss 1419893.5
+Epoch 80 loss 1469103.75
+Epoch 81 loss 1373763.0
+Epoch 82 loss 1492923.25
+Epoch 83 loss 1570478.0
+Epoch 84 loss 1564043.0
+Epoch 85 loss 1474093.0
+Epoch 86 loss 1440587.625
+Epoch 87 loss 1454545.75
+Epoch 88 loss 1455261.0
+Epoch 89 loss 1500333.25
+Epoch 90 loss 1436522.875
+Epoch 91 loss 1488610.0
+Epoch 92 loss 1477367.5
+Epoch 93 loss 1395635.75
+Epoch 94 loss 1381261.125
+Epoch 95 loss 1472606.0
+Epoch 96 loss 1381012.875
+Epoch 97 loss 1430179.25
+Epoch 98 loss 1490516.75
+Epoch 99 loss 1413320.5
+{'MSE - mean': 1758261.6913091668, 'MSE - std': 0.0, 'R2 - mean': 0.6493665019540631, 'R2 - std': 0.0} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 16250578.0
+Epoch 1 loss 12777446.0
+Epoch 2 loss 5069209.0
+Epoch 3 loss 4381369.5
+Epoch 4 loss 3499883.0
+Epoch 5 loss 3538859.5
+Epoch 6 loss 3258475.5
+Epoch 7 loss 2904691.0
+Epoch 8 loss 3103181.0
+Epoch 9 loss 2599725.5
+Epoch 10 loss 2911861.5
+Epoch 11 loss 2559801.5
+Epoch 12 loss 2479640.25
+Epoch 13 loss 2282249.5
+Epoch 14 loss 2346799.0
+Epoch 15 loss 2633772.75
+Epoch 16 loss 2343217.0
+Epoch 17 loss 2366246.0
+Epoch 18 loss 2142633.5
+Epoch 19 loss 2115233.75
+Epoch 20 loss 2134308.0
+Epoch 21 loss 2225292.25
+Epoch 22 loss 2013606.0
+Epoch 23 loss 2238557.25
+Epoch 24 loss 2386380.5
+Epoch 25 loss 2279755.5
+Epoch 26 loss 2045336.0
+Epoch 27 loss 2259938.5
+Epoch 28 loss 2373213.0
+Epoch 29 loss 2089181.25
+Epoch 30 loss 1966904.75
+Epoch 31 loss 2036478.75
+Epoch 32 loss 2019018.75
+Epoch 33 loss 2107139.75
+Epoch 34 loss 1992748.25
+Epoch 35 loss 1915661.0
+Epoch 36 loss 2160230.0
+Epoch 37 loss 1824767.5
+Epoch 38 loss 1879124.625
+Epoch 39 loss 1851454.75
+Epoch 40 loss 1806610.375
+Epoch 41 loss 1700056.875
+Epoch 42 loss 1821598.5
+Epoch 43 loss 1944463.0
+Epoch 44 loss 1641526.5
+Epoch 45 loss 1699011.25
+Epoch 46 loss 1634298.0
+Epoch 47 loss 1618736.5
+Epoch 48 loss 1692877.5
+Epoch 49 loss 1719447.0
+Epoch 50 loss 1592618.75
+Epoch 51 loss 1545565.75
+Epoch 52 loss 1584979.5
+Epoch 53 loss 1611603.375
+Epoch 54 loss 1654809.0
+Epoch 55 loss 1835132.0
+Epoch 56 loss 1560968.75
+Epoch 57 loss 1554622.5
+Epoch 58 loss 1463312.5
+Epoch 59 loss 1411137.25
+Epoch 60 loss 1528445.0
+Epoch 61 loss 1400545.125
+Epoch 62 loss 1422515.0
+Epoch 63 loss 1456599.5
+Epoch 64 loss 1518893.875
+Epoch 65 loss 1296304.875
+Epoch 66 loss 1504457.375
+Epoch 67 loss 1375616.375
+Epoch 68 loss 1367136.25
+Epoch 69 loss 1327630.75
+Epoch 70 loss 1370041.75
+Epoch 71 loss 1408573.5
+Epoch 72 loss 1360731.25
+Epoch 73 loss 1313786.875
+Epoch 74 loss 1294895.625
+Epoch 75 loss 1246378.125
+Epoch 76 loss 1303833.5
+Epoch 77 loss 1241577.125
+Epoch 78 loss 1371965.875
+Epoch 79 loss 1204964.25
+Epoch 80 loss 1147530.625
+Epoch 81 loss 1201617.25
+Epoch 82 loss 1120914.375
+Epoch 83 loss 1251634.75
+Epoch 84 loss 1194395.0
+Epoch 85 loss 1163170.75
+Epoch 86 loss 1083239.25
+Epoch 87 loss 1165533.0
+Epoch 88 loss 1177615.375
+Epoch 89 loss 1532191.0
+Epoch 90 loss 1137819.125
+Epoch 91 loss 1296175.125
+Epoch 92 loss 1103037.75
+Epoch 93 loss 1096614.625
+Epoch 94 loss 1122155.5
+Epoch 95 loss 1115716.375
+Epoch 96 loss 1058806.375
+Epoch 97 loss 1119850.375
+Epoch 98 loss 1159534.0
+Epoch 99 loss 1177489.75
+{'MSE - mean': 1486642.7989112227, 'MSE - std': 271618.8923979441, 'R2 - mean': 0.7039029788003055, 'R2 - std': 0.054536476846242354} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 16060160.0
+Epoch 1 loss 13079928.0
+Epoch 2 loss 5169026.0
+Epoch 3 loss 4774370.0
+Epoch 4 loss 3340460.75
+Epoch 5 loss 3244684.5
+Epoch 6 loss 3340289.0
+Epoch 7 loss 3268154.0
+Epoch 8 loss 2953559.0
+Epoch 9 loss 2752185.5
+Epoch 10 loss 2558556.75
+Epoch 11 loss 2521233.0
+Epoch 12 loss 2517356.25
+Epoch 13 loss 2668965.0
+Epoch 14 loss 2360655.0
+Epoch 15 loss 2416180.5
+Epoch 16 loss 2864936.25
+Epoch 17 loss 2375130.0
+Epoch 18 loss 2415463.25
+Epoch 19 loss 2477813.25
+Epoch 20 loss 2349043.25
+Epoch 21 loss 2490608.0
+Epoch 22 loss 2166547.5
+Epoch 23 loss 2234796.5
+Epoch 24 loss 2128001.0
+Epoch 25 loss 2309185.75
+Epoch 26 loss 2010326.875
+Epoch 27 loss 2016599.0
+Epoch 28 loss 2276365.75
+Epoch 29 loss 2033515.875
+Epoch 30 loss 2113977.75
+Epoch 31 loss 1912544.625
+Epoch 32 loss 2022599.25
+Epoch 33 loss 1955489.0
+Epoch 34 loss 2204526.5
+Epoch 35 loss 1920794.0
+Epoch 36 loss 1925310.5
+Epoch 37 loss 1780234.0
+Epoch 38 loss 1927330.25
+Epoch 39 loss 2040925.5
+Epoch 40 loss 1805586.0
+Epoch 41 loss 1876120.125
+Epoch 42 loss 1712282.5
+Epoch 43 loss 1771836.0
+Epoch 44 loss 1846360.625
+Epoch 45 loss 1805086.625
+Epoch 46 loss 1842698.75
+Epoch 47 loss 1851979.625
+Epoch 48 loss 1655289.5
+Epoch 49 loss 1643736.25
+Epoch 50 loss 1743878.0
+Epoch 51 loss 1852659.375
+Epoch 52 loss 1726810.75
+Epoch 53 loss 1522120.75
+Epoch 54 loss 1618621.25
+Epoch 55 loss 1687103.5
+Epoch 56 loss 1589824.125
+Epoch 57 loss 1518725.375
+Epoch 58 loss 1560835.125
+Epoch 59 loss 1596866.625
+Epoch 60 loss 1618441.375
+Epoch 61 loss 1474426.75
+Epoch 62 loss 1769366.0
+Epoch 63 loss 1547881.75
+Epoch 64 loss 1466348.25
+Epoch 65 loss 1527191.0
+Epoch 66 loss 1496072.625
+Epoch 67 loss 1542359.0
+Epoch 68 loss 1282907.125
+Epoch 69 loss 1385153.375
+Epoch 70 loss 1464459.125
+Epoch 71 loss 1399979.75
+Epoch 72 loss 1365234.5
+Epoch 73 loss 1550812.625
+Epoch 74 loss 1414762.5
+Epoch 75 loss 1329813.0
+Epoch 76 loss 1382535.625
+Epoch 77 loss 1353024.5
+Epoch 78 loss 1384887.25
+Epoch 79 loss 1325068.375
+Epoch 80 loss 1399722.5
+Epoch 81 loss 1330354.125
+Epoch 82 loss 1334502.625
+Epoch 83 loss 1250630.75
+Epoch 84 loss 1276876.25
+Epoch 85 loss 1211680.5
+Epoch 86 loss 1259090.25
+Epoch 87 loss 1294901.625
+Epoch 88 loss 1299639.125
+Epoch 89 loss 1352681.25
+Epoch 90 loss 1367501.625
+Epoch 91 loss 1373991.25
+Epoch 92 loss 1295194.0
+Epoch 93 loss 1427691.75
+Epoch 94 loss 1579150.25
+Epoch 95 loss 1185998.125
+Epoch 96 loss 1308403.75
+Epoch 97 loss 1238792.5
+Epoch 98 loss 1160558.0
+Epoch 99 loss 1285908.5
+{'MSE - mean': 1421068.1510884564, 'MSE - std': 240384.3117714152, 'R2 - mean': 0.7166298186454928, 'R2 - std': 0.048028773765565906} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 15474903.0
+Epoch 1 loss 12484474.0
+Epoch 2 loss 5248897.5
+Epoch 3 loss 4812289.5
+Epoch 4 loss 3488650.0
+Epoch 5 loss 3254308.5
+Epoch 6 loss 3174333.0
+Epoch 7 loss 3317675.0
+Epoch 8 loss 3080365.75
+Epoch 9 loss 3168228.0
+Epoch 10 loss 3062271.5
+Epoch 11 loss 2612598.5
+Epoch 12 loss 2621792.0
+Epoch 13 loss 2693178.5
+Epoch 14 loss 2354014.0
+Epoch 15 loss 2288622.75
+Epoch 16 loss 2318121.0
+Epoch 17 loss 2133025.0
+Epoch 18 loss 2151184.5
+Epoch 19 loss 2212054.0
+Epoch 20 loss 2312950.5
+Epoch 21 loss 2203568.5
+Epoch 22 loss 1861747.375
+Epoch 23 loss 1991073.875
+Epoch 24 loss 1961444.75
+Epoch 25 loss 1850973.375
+Epoch 26 loss 1908551.375
+Epoch 27 loss 1775011.0
+Epoch 28 loss 1817737.75
+Epoch 29 loss 1825308.5
+Epoch 30 loss 1710340.125
+Epoch 31 loss 1644392.375
+Epoch 32 loss 1665246.125
+Epoch 33 loss 1845420.125
+Epoch 34 loss 1504801.0
+Epoch 35 loss 1696827.5
+Epoch 36 loss 1510393.5
+Epoch 37 loss 1854626.5
+Epoch 38 loss 1680125.5
+Epoch 39 loss 1602969.0
+Epoch 40 loss 1574942.0
+Epoch 41 loss 1573239.625
+Epoch 42 loss 1569709.5
+Epoch 43 loss 1575906.375
+Epoch 44 loss 1549122.875
+Epoch 45 loss 1579634.125
+Epoch 46 loss 1504088.0
+Epoch 47 loss 1431374.25
+Epoch 48 loss 1418720.75
+Epoch 49 loss 1378899.25
+Epoch 50 loss 1488185.625
+Epoch 51 loss 1387903.0
+Epoch 52 loss 1612905.0
+Epoch 53 loss 1421564.125
+Epoch 54 loss 1523578.75
+Epoch 55 loss 1355100.75
+Epoch 56 loss 1205772.25
+Epoch 57 loss 1291581.625
+Epoch 58 loss 1243990.25
+Epoch 59 loss 1516371.0
+Epoch 60 loss 1203667.625
+Epoch 61 loss 1248108.375
+Epoch 62 loss 1412231.0
+Epoch 63 loss 1327086.5
+Epoch 64 loss 1354923.5
+Epoch 65 loss 1258400.5
+Epoch 66 loss 1240790.375
+Epoch 67 loss 1243134.25
+Epoch 68 loss 1343629.125
+Epoch 69 loss 1231780.5
+Epoch 70 loss 1200399.875
+Epoch 71 loss 1238672.875
+Epoch 72 loss 1287057.0
+Epoch 73 loss 1163898.25
+Epoch 74 loss 1270402.25
+Epoch 75 loss 1322135.5
+Epoch 76 loss 1269084.0
+Epoch 77 loss 1222106.0
+Epoch 78 loss 1222811.25
+Epoch 79 loss 1095105.25
+Epoch 80 loss 1167448.5
+Epoch 81 loss 1120797.0
+Epoch 82 loss 1212863.5
+Epoch 83 loss 1161334.0
+Epoch 84 loss 1019867.625
+Epoch 85 loss 1104929.5
+Epoch 86 loss 1138618.125
+Epoch 87 loss 1182302.625
+Epoch 88 loss 1115213.875
+Epoch 89 loss 934326.0
+Epoch 90 loss 882202.375
+Epoch 91 loss 955115.0625
+Epoch 92 loss 1049738.375
+Epoch 93 loss 937317.625
+Epoch 94 loss 946943.0625
+Epoch 95 loss 1109461.0
+Epoch 96 loss 978123.8125
+Epoch 97 loss 1020284.8125
+Epoch 98 loss 1040641.75
+Epoch 99 loss 956944.5625
+{'MSE - mean': 1356814.9152453998, 'MSE - std': 236059.09844416723, 'R2 - mean': 0.7321840534106911, 'R2 - std': 0.04955678550370926} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 15786940.0
+Epoch 1 loss 12323700.0
+Epoch 2 loss 5231477.5
+Epoch 3 loss 4612339.0
+Epoch 4 loss 3682862.75
+Epoch 5 loss 3764915.0
+Epoch 6 loss 3525580.25
+Epoch 7 loss 3630313.0
+Epoch 8 loss 3129197.5
+Epoch 9 loss 3259607.0
+Epoch 10 loss 2966199.5
+Epoch 11 loss 2942860.0
+Epoch 12 loss 2737936.5
+Epoch 13 loss 2594069.5
+Epoch 14 loss 2540213.0
+Epoch 15 loss 2596895.75
+Epoch 16 loss 2683298.5
+Epoch 17 loss 2614675.75
+Epoch 18 loss 2866293.0
+Epoch 19 loss 2594244.5
+Epoch 20 loss 2577251.0
+Epoch 21 loss 2218790.5
+Epoch 22 loss 2248004.75
+Epoch 23 loss 2421209.0
+Epoch 24 loss 2352733.5
+Epoch 25 loss 2308126.5
+Epoch 26 loss 2208328.25
+Epoch 27 loss 2241724.5
+Epoch 28 loss 2211021.5
+Epoch 29 loss 2148759.0
+Epoch 30 loss 2084557.75
+Epoch 31 loss 2426888.5
+Epoch 32 loss 2035904.625
+Epoch 33 loss 2082361.25
+Epoch 34 loss 1998889.625
+Epoch 35 loss 2290140.25
+Epoch 36 loss 1858840.125
+Epoch 37 loss 1996834.5
+Epoch 38 loss 1845935.75
+Epoch 39 loss 1926356.75
+Epoch 40 loss 1863129.625
+Epoch 41 loss 1997629.0
+Epoch 42 loss 1880360.5
+Epoch 43 loss 1995569.0
+Epoch 44 loss 1978037.125
+Epoch 45 loss 1797934.25
+Epoch 46 loss 2125654.75
+Epoch 47 loss 1755598.875
+Epoch 48 loss 1834954.0
+Epoch 49 loss 1892248.25
+Epoch 50 loss 1966297.375
+Epoch 51 loss 1677394.25
+Epoch 52 loss 1956254.75
+Epoch 53 loss 2043456.875
+Epoch 54 loss 2086856.5
+Epoch 55 loss 1730773.75
+Epoch 56 loss 1910724.0
+Epoch 57 loss 1860017.75
+Epoch 58 loss 1718821.625
+Epoch 59 loss 1798340.25
+Epoch 60 loss 1755662.0
+Epoch 61 loss 1791598.625
+Epoch 62 loss 1715238.875
+Epoch 63 loss 2058492.25
+Epoch 64 loss 1575471.625
+Epoch 65 loss 1563009.0
+Epoch 66 loss 1545404.5
+Epoch 67 loss 1655646.25
+Epoch 68 loss 1627836.75
+Epoch 69 loss 1558558.25
+Epoch 70 loss 1585452.375
+Epoch 71 loss 1537913.5
+Epoch 72 loss 1699910.125
+Epoch 73 loss 1535144.375
+Epoch 74 loss 1617521.75
+Epoch 75 loss 1732000.625
+Epoch 76 loss 1855766.625
+Epoch 77 loss 1554581.75
+Epoch 78 loss 1476810.25
+Epoch 79 loss 1612620.875
+Epoch 80 loss 1358074.75
+Epoch 81 loss 1362486.25
+Epoch 82 loss 1260756.75
+Epoch 83 loss 1362584.5
+Epoch 84 loss 1360770.25
+Epoch 85 loss 1441933.875
+Epoch 86 loss 1535338.125
+Epoch 87 loss 1300247.75
+Epoch 88 loss 1540401.375
+Epoch 89 loss 1469418.125
+Epoch 90 loss 1356703.375
+Epoch 91 loss 1371882.5
+Epoch 92 loss 1175008.75
+Epoch 93 loss 1314040.5
+Epoch 94 loss 1269762.875
+Epoch 95 loss 1197496.125
+Epoch 96 loss 1294848.125
+Epoch 97 loss 1276152.0
+Epoch 98 loss 1286786.875
+Epoch 99 loss 1361447.0
+{'MSE - mean': 1446674.0370579709, 'MSE - std': 277268.3996749799, 'R2 - mean': 0.7151118079951511, 'R2 - std': 0.05595128457580068} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 0 finished with value: 1446674.0370579709 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'dropout': 0.8}. Best is trial 0 with value: 1446674.0370579709.
+Best parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'dropout': 0.8}
+In get_device
+Using dim 8 and batch size 64
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 16393355.0
+Epoch 1 loss 12848556.0
+Epoch 2 loss 5050834.0
+Epoch 3 loss 4755424.5
+Epoch 4 loss 3349826.5
+Epoch 5 loss 2913699.0
+Epoch 6 loss 3075414.75
+Epoch 7 loss 2849664.0
+Epoch 8 loss 2975103.0
+Epoch 9 loss 2679936.0
+Epoch 10 loss 2675309.5
+Epoch 11 loss 2496020.5
+Epoch 12 loss 2718330.25
+Epoch 13 loss 2753147.5
+Epoch 14 loss 2513850.0
+Epoch 15 loss 2351638.75
+Epoch 16 loss 2331998.25
+Epoch 17 loss 2398426.25
+Epoch 18 loss 2415484.5
+Epoch 19 loss 2333472.5
+Epoch 20 loss 2278708.75
+Epoch 21 loss 2298723.0
+Epoch 22 loss 2303068.25
+Epoch 23 loss 2309919.5
+Epoch 24 loss 2178274.75
+Epoch 25 loss 2222615.75
+Epoch 26 loss 2148457.5
+Epoch 27 loss 2284800.5
+Epoch 28 loss 2069002.375
+Epoch 29 loss 2180057.0
+Epoch 30 loss 2013733.625
+Epoch 31 loss 1916658.0
+Epoch 32 loss 1909810.125
+Epoch 33 loss 1959217.5
+Epoch 34 loss 2005866.5
+Epoch 35 loss 2035448.375
+Epoch 36 loss 2172563.5
+Epoch 37 loss 2007893.5
+Epoch 38 loss 2020535.25
+Epoch 39 loss 1966893.375
+Epoch 40 loss 1879350.5
+Epoch 41 loss 1919249.5
+Epoch 42 loss 2079538.0
+Epoch 43 loss 1985901.75
+Epoch 44 loss 1854948.5
+Epoch 45 loss 1957812.25
+Epoch 46 loss 1711075.75
+Epoch 47 loss 1844348.125
+Epoch 48 loss 1890546.5
+Epoch 49 loss 1820934.625
+Epoch 50 loss 1758087.875
+Epoch 51 loss 1701695.375
+Epoch 52 loss 1656819.5
+Epoch 53 loss 1796082.875
+Epoch 54 loss 1735046.5
+Epoch 55 loss 1696481.0
+Epoch 56 loss 1665464.875
+Epoch 57 loss 1637792.125
+Epoch 58 loss 1658747.625
+Epoch 59 loss 1627545.375
+Epoch 60 loss 1652788.25
+Epoch 61 loss 1573135.75
+Epoch 62 loss 1629240.75
+Epoch 63 loss 1686261.75
+Epoch 64 loss 1571023.25
+Epoch 65 loss 1635146.0
+Epoch 66 loss 1516377.5
+Epoch 67 loss 1558270.25
+Epoch 68 loss 1646760.0
+Epoch 69 loss 1554034.625
+Epoch 70 loss 1573369.125
+Epoch 71 loss 1433127.0
+Epoch 72 loss 1668578.5
+Epoch 73 loss 1633167.5
+Epoch 74 loss 1523951.875
+Epoch 75 loss 1632310.625
+Epoch 76 loss 1431579.25
+Epoch 77 loss 1395544.75
+Epoch 78 loss 1482706.375
+Epoch 79 loss 1477268.0
+Epoch 80 loss 1456891.875
+Epoch 81 loss 1619070.0
+Epoch 82 loss 1513834.5
+Epoch 83 loss 1503460.375
+Epoch 84 loss 1425202.75
+Epoch 85 loss 1459504.625
+Epoch 86 loss 1474818.25
+Epoch 87 loss 1449600.5
+Epoch 88 loss 1456544.5
+Epoch 89 loss 1466134.25
+Epoch 90 loss 1435156.5
+Epoch 91 loss 1377706.75
+Epoch 92 loss 1536095.5
+Epoch 93 loss 1537604.5
+Epoch 94 loss 1412301.125
+Epoch 95 loss 1544009.25
+Epoch 96 loss 1595440.75
+Epoch 97 loss 1499724.125
+Epoch 98 loss 1343889.75
+Epoch 99 loss 1455578.25
+Saved Losses
+{'MSE - mean': 1855194.3223890716, 'MSE - std': 0.0, 'R2 - mean': 0.6300361442045084, 'R2 - std': 0.0} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 16109655.0
+Epoch 1 loss 12736291.0
+Epoch 2 loss 5056348.5
+Epoch 3 loss 4528491.0
+Epoch 4 loss 3619467.0
+Epoch 5 loss 3353584.5
+Epoch 6 loss 3542647.0
+Epoch 7 loss 3529265.5
+Epoch 8 loss 3024363.5
+Epoch 9 loss 3042045.0
+Epoch 10 loss 2729945.25
+Epoch 11 loss 2643253.0
+Epoch 12 loss 2699044.25
+Epoch 13 loss 2462021.5
+Epoch 14 loss 2418058.5
+Epoch 15 loss 2231015.0
+Epoch 16 loss 2390955.75
+Epoch 17 loss 2669253.5
+Epoch 18 loss 2310778.0
+Epoch 19 loss 2261593.0
+Epoch 20 loss 2252661.5
+Epoch 21 loss 2203086.75
+Epoch 22 loss 2159724.75
+Epoch 23 loss 2264981.0
+Epoch 24 loss 2037585.5
+Epoch 25 loss 2022751.625
+Epoch 26 loss 2032700.0
+Epoch 27 loss 2028210.75
+Epoch 28 loss 2045481.375
+Epoch 29 loss 1951796.5
+Epoch 30 loss 2102894.0
+Epoch 31 loss 2014659.875
+Epoch 32 loss 2016581.5
+Epoch 33 loss 2164756.75
+Epoch 34 loss 1812019.0
+Epoch 35 loss 1958311.5
+Epoch 36 loss 1908477.5
+Epoch 37 loss 1902555.75
+Epoch 38 loss 1951553.375
+Epoch 39 loss 1787276.875
+Epoch 40 loss 1836464.0
+Epoch 41 loss 1710559.0
+Epoch 42 loss 1738380.125
+Epoch 43 loss 1881764.0
+Epoch 44 loss 1722765.375
+Epoch 45 loss 1812534.625
+Epoch 46 loss 1548575.875
+Epoch 47 loss 1622817.125
+Epoch 48 loss 1575555.625
+Epoch 49 loss 1658938.25
+Epoch 50 loss 1683157.25
+Epoch 51 loss 1511408.625
+Epoch 52 loss 1558355.75
+Epoch 53 loss 1592933.5
+Epoch 54 loss 1567661.25
+Epoch 55 loss 1536911.375
+Epoch 56 loss 1588538.25
+Epoch 57 loss 1753398.25
+Epoch 58 loss 1331601.625
+Epoch 59 loss 1515396.75
+Epoch 60 loss 1360053.875
+Epoch 61 loss 1456806.0
+Epoch 62 loss 1457418.625
+Epoch 63 loss 1331843.625
+Epoch 64 loss 1330799.5
+Epoch 65 loss 1446449.125
+Epoch 66 loss 1422526.75
+Epoch 67 loss 1512009.0
+Epoch 68 loss 1400734.625
+Epoch 69 loss 1632645.875
+Epoch 70 loss 1438839.25
+Epoch 71 loss 1310270.0
+Epoch 72 loss 1320323.0
+Epoch 73 loss 1371317.25
+Epoch 74 loss 1244696.5
+Epoch 75 loss 1478922.375
+Epoch 76 loss 1376277.375
+Epoch 77 loss 1394526.125
+Epoch 78 loss 1198400.0
+Epoch 79 loss 1292373.25
+Epoch 80 loss 1436940.625
+Epoch 81 loss 1216230.875
+Epoch 82 loss 1305877.875
+Epoch 83 loss 1298166.75
+Epoch 84 loss 1276481.25
+Epoch 85 loss 1380275.0
+Epoch 86 loss 1279866.125
+Epoch 87 loss 1365832.0
+Epoch 88 loss 1300892.75
+Epoch 89 loss 1229337.5
+Epoch 90 loss 1165137.375
+Epoch 91 loss 1151304.125
+Epoch 92 loss 1245669.875
+Epoch 93 loss 1315859.125
+Epoch 94 loss 1104805.375
+Epoch 95 loss 1117007.5
+Epoch 96 loss 1146259.375
+Epoch 97 loss 1084280.25
+Epoch 98 loss 1140481.25
+Epoch 99 loss 1162446.0
+Saved Losses
+{'MSE - mean': 1777095.5369124757, 'MSE - std': 78098.78547659586, 'R2 - mean': 0.6461281523518921, 'R2 - std': 0.016092008147383763} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 16029932.0
+Epoch 1 loss 12151692.0
+Epoch 2 loss 5033444.0
+Epoch 3 loss 4273635.5
+Epoch 4 loss 3201896.5
+Epoch 5 loss 3174460.75
+Epoch 6 loss 2952244.75
+Epoch 7 loss 3255632.0
+Epoch 8 loss 2877433.5
+Epoch 9 loss 2969129.0
+Epoch 10 loss 3536917.5
+Epoch 11 loss 2749411.5
+Epoch 12 loss 2868429.25
+Epoch 13 loss 2554791.0
+Epoch 14 loss 2148993.75
+Epoch 15 loss 2525830.25
+Epoch 16 loss 2246178.0
+Epoch 17 loss 2221327.0
+Epoch 18 loss 2844798.0
+Epoch 19 loss 2449041.75
+Epoch 20 loss 2020070.25
+Epoch 21 loss 2311658.75
+Epoch 22 loss 2221145.25
+Epoch 23 loss 1966797.5
+Epoch 24 loss 2329795.5
+Epoch 25 loss 2345362.0
+Epoch 26 loss 2162026.0
+Epoch 27 loss 1968468.25
+Epoch 28 loss 2250425.0
+Epoch 29 loss 1976645.125
+Epoch 30 loss 2075673.75
+Epoch 31 loss 1906836.625
+Epoch 32 loss 2142762.5
+Epoch 33 loss 1835779.375
+Epoch 34 loss 1871470.875
+Epoch 35 loss 1835657.5
+Epoch 36 loss 1633436.25
+Epoch 37 loss 1905452.375
+Epoch 38 loss 1906590.625
+Epoch 39 loss 2032970.625
+Epoch 40 loss 1717541.5
+Epoch 41 loss 1721433.0
+Epoch 42 loss 1830924.125
+Epoch 43 loss 1703065.25
+Epoch 44 loss 1626318.875
+Epoch 45 loss 1847720.5
+Epoch 46 loss 1750884.75
+Epoch 47 loss 1849765.875
+Epoch 48 loss 1531872.875
+Epoch 49 loss 1994060.75
+Epoch 50 loss 1843284.75
+Epoch 51 loss 1689156.0
+Epoch 52 loss 1532931.5
+Epoch 53 loss 1639520.75
+Epoch 54 loss 1521245.875
+Epoch 55 loss 1757129.0
+Epoch 56 loss 1603900.25
+Epoch 57 loss 1648892.375
+Epoch 58 loss 1695079.75
+Epoch 59 loss 1616764.5
+Epoch 60 loss 1451254.25
+Epoch 61 loss 1384374.75
+Epoch 62 loss 1902751.625
+Epoch 63 loss 1448161.25
+Epoch 64 loss 1468149.75
+Epoch 65 loss 1523820.125
+Epoch 66 loss 1557671.25
+Epoch 67 loss 1414188.5
+Epoch 68 loss 1446017.5
+Epoch 69 loss 1531307.25
+Epoch 70 loss 1544392.5
+Epoch 71 loss 1434554.0
+Epoch 72 loss 1387193.75
+Epoch 73 loss 1574544.875
+Epoch 74 loss 1364825.875
+Epoch 75 loss 1548321.375
+Epoch 76 loss 1334711.5
+Epoch 77 loss 1431818.75
+Epoch 78 loss 1366488.0
+Epoch 79 loss 1540234.5
+Epoch 80 loss 1460027.125
+Epoch 81 loss 1299167.75
+Epoch 82 loss 1261349.5
+Epoch 83 loss 1396522.5
+Epoch 84 loss 1587205.0
+Epoch 85 loss 1469860.75
+Epoch 86 loss 1495284.5
+Epoch 87 loss 1365429.75
+Epoch 88 loss 1349126.5
+Epoch 89 loss 1312003.375
+Epoch 90 loss 1370379.25
+Epoch 91 loss 1383488.25
+Epoch 92 loss 1371053.375
+Epoch 93 loss 1276375.75
+Epoch 94 loss 1240914.75
+Epoch 95 loss 1452620.5
+Epoch 96 loss 1343185.5
+Epoch 97 loss 1303549.25
+Epoch 98 loss 1262539.5
+Epoch 99 loss 1338413.0
+Saved Losses
+{'MSE - mean': 1670354.695100451, 'MSE - std': 163870.35978711638, 'R2 - mean': 0.6669858928374675, 'R2 - std': 0.03229126549297088} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 15755686.0
+Epoch 1 loss 12454721.0
+Epoch 2 loss 5295605.5
+Epoch 3 loss 4718674.0
+Epoch 4 loss 4378481.5
+Epoch 5 loss 3400464.0
+Epoch 6 loss 3412604.5
+Epoch 7 loss 3424473.5
+Epoch 8 loss 2897807.5
+Epoch 9 loss 2735285.0
+Epoch 10 loss 2600203.25
+Epoch 11 loss 2733679.0
+Epoch 12 loss 2314968.25
+Epoch 13 loss 2270707.75
+Epoch 14 loss 2994604.0
+Epoch 15 loss 2135997.25
+Epoch 16 loss 2088593.0
+Epoch 17 loss 2080722.0
+Epoch 18 loss 2368861.25
+Epoch 19 loss 2154528.0
+Epoch 20 loss 2013514.0
+Epoch 21 loss 2154183.75
+Epoch 22 loss 2042562.25
+Epoch 23 loss 2001627.125
+Epoch 24 loss 1929866.5
+Epoch 25 loss 1926743.75
+Epoch 26 loss 1933883.125
+Epoch 27 loss 1875218.5
+Epoch 28 loss 1742965.125
+Epoch 29 loss 1915882.75
+Epoch 30 loss 1767578.0
+Epoch 31 loss 2214190.0
+Epoch 32 loss 2077762.375
+Epoch 33 loss 1810671.0
+Epoch 34 loss 2121113.5
+Epoch 35 loss 1662896.5
+Epoch 36 loss 1649873.25
+Epoch 37 loss 1637915.75
+Epoch 38 loss 1697769.75
+Epoch 39 loss 1550427.75
+Epoch 40 loss 1902507.5
+Epoch 41 loss 1724911.875
+Epoch 42 loss 1505670.5
+Epoch 43 loss 1597868.875
+Epoch 44 loss 1617337.0
+Epoch 45 loss 1616018.5
+Epoch 46 loss 1569577.625
+Epoch 47 loss 1590441.625
+Epoch 48 loss 1435180.875
+Epoch 49 loss 1669360.75
+Epoch 50 loss 1466123.875
+Epoch 51 loss 1479899.75
+Epoch 52 loss 1449692.5
+Epoch 53 loss 1355252.5
+Epoch 54 loss 1395057.75
+Epoch 55 loss 1344162.75
+Epoch 56 loss 1391796.375
+Epoch 57 loss 1474168.375
+Epoch 58 loss 1384828.625
+Epoch 59 loss 1407206.75
+Epoch 60 loss 1401910.625
+Epoch 61 loss 1308307.125
+Epoch 62 loss 1368622.625
+Epoch 63 loss 1392660.25
+Epoch 64 loss 1250913.125
+Epoch 65 loss 1296081.625
+Epoch 66 loss 1332052.625
+Epoch 67 loss 1284643.25
+Epoch 68 loss 1333188.125
+Epoch 69 loss 1332058.125
+Epoch 70 loss 1156242.25
+Epoch 71 loss 1179154.875
+Epoch 72 loss 1259369.0
+Epoch 73 loss 1205175.0
+Epoch 74 loss 1244588.875
+Epoch 75 loss 1201601.875
+Epoch 76 loss 1330414.25
+Epoch 77 loss 1128961.25
+Epoch 78 loss 1180519.875
+Epoch 79 loss 1147397.625
+Epoch 80 loss 1111981.875
+Epoch 81 loss 1034012.25
+Epoch 82 loss 1076254.75
+Epoch 83 loss 1400574.375
+Epoch 84 loss 1218393.0
+Epoch 85 loss 1054201.5
+Epoch 86 loss 1111079.5
+Epoch 87 loss 1235212.25
+Epoch 88 loss 1150687.25
+Epoch 89 loss 1137642.125
+Epoch 90 loss 1186081.5
+Epoch 91 loss 1062553.625
+Epoch 92 loss 1240554.5
+Epoch 93 loss 1116330.5
+Epoch 94 loss 1179730.875
+Epoch 95 loss 951074.3125
+Epoch 96 loss 1004483.375
+Epoch 97 loss 1079728.0
+Epoch 98 loss 973250.875
+Epoch 99 loss 903912.125
+Saved Losses
+{'MSE - mean': 1542988.382563601, 'MSE - std': 262310.2243914117, 'R2 - mean': 0.6951014710595772, 'R2 - std': 0.05615604675049572} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 15956416.0
+Epoch 1 loss 12153636.0
+Epoch 2 loss 5162755.5
+Epoch 3 loss 4487809.0
+Epoch 4 loss 3704640.5
+Epoch 5 loss 3690191.0
+Epoch 6 loss 3452876.5
+Epoch 7 loss 3373782.0
+Epoch 8 loss 3665979.75
+Epoch 9 loss 3003031.5
+Epoch 10 loss 3310716.0
+Epoch 11 loss 2900812.0
+Epoch 12 loss 2902578.5
+Epoch 13 loss 2744122.0
+Epoch 14 loss 2695442.0
+Epoch 15 loss 2491021.75
+Epoch 16 loss 2752950.25
+Epoch 17 loss 2865145.75
+Epoch 18 loss 2816929.5
+Epoch 19 loss 2781403.75
+Epoch 20 loss 2406735.5
+Epoch 21 loss 2382854.5
+Epoch 22 loss 2563767.25
+Epoch 23 loss 2424437.25
+Epoch 24 loss 2435967.5
+Epoch 25 loss 2496623.75
+Epoch 26 loss 2224379.5
+Epoch 27 loss 2356540.5
+Epoch 28 loss 2221785.5
+Epoch 29 loss 2327532.0
+Epoch 30 loss 2390746.0
+Epoch 31 loss 2210711.0
+Epoch 32 loss 2219281.0
+Epoch 33 loss 2205804.5
+Epoch 34 loss 2281218.0
+Epoch 35 loss 2333972.5
+Epoch 36 loss 2284381.0
+Epoch 37 loss 2020974.625
+Epoch 38 loss 2323976.0
+Epoch 39 loss 1986115.5
+Epoch 40 loss 1754511.5
+Epoch 41 loss 1922559.75
+Epoch 42 loss 2027670.25
+Epoch 43 loss 2194374.5
+Epoch 44 loss 1833287.25
+Epoch 45 loss 1757263.0
+Epoch 46 loss 1816357.375
+Epoch 47 loss 2092645.875
+Epoch 48 loss 1863098.125
+Epoch 49 loss 2019963.25
+Epoch 50 loss 2006961.75
+Epoch 51 loss 1585562.75
+Epoch 52 loss 1830225.125
+Epoch 53 loss 1702200.125
+Epoch 54 loss 1714800.75
+Epoch 55 loss 1629866.75
+Epoch 56 loss 1639263.25
+Epoch 57 loss 1793079.25
+Epoch 58 loss 1604682.625
+Epoch 59 loss 1679516.625
+Epoch 60 loss 1551719.75
+Epoch 61 loss 1525036.625
+Epoch 62 loss 1745729.125
+Epoch 63 loss 1646346.25
+Epoch 64 loss 1599675.625
+Epoch 65 loss 1554499.875
+Epoch 66 loss 1639003.75
+Epoch 67 loss 1416030.75
+Epoch 68 loss 1507647.5
+Epoch 69 loss 1457002.0
+Epoch 70 loss 1571431.75
+Epoch 71 loss 1688908.75
+Epoch 72 loss 1492994.125
+Epoch 73 loss 1402506.75
+Epoch 74 loss 1411397.375
+Epoch 75 loss 1475116.0
+Epoch 76 loss 1416379.625
+Epoch 77 loss 1509129.375
+Epoch 78 loss 1432606.0
+Epoch 79 loss 1501048.875
+Epoch 80 loss 1371951.25
+Epoch 81 loss 1601948.375
+Epoch 82 loss 1384461.375
+Epoch 83 loss 1229026.75
+Epoch 84 loss 1319051.875
+Epoch 85 loss 1339685.5
+Epoch 86 loss 1569310.25
+Epoch 87 loss 1335999.25
+Epoch 88 loss 1327784.375
+Epoch 89 loss 1202705.375
+Epoch 90 loss 1319707.375
+Epoch 91 loss 1380254.25
+Epoch 92 loss 1350866.875
+Epoch 93 loss 1371536.875
+Epoch 94 loss 1161539.875
+Epoch 95 loss 1344356.0
+Epoch 96 loss 1278587.0
+Epoch 97 loss 1245842.0
+Epoch 98 loss 1213859.25
+Epoch 99 loss 1305032.5
+Saved Losses
+{'MSE - mean': 1498894.7690176102, 'MSE - std': 250643.79122250553, 'R2 - mean': 0.7043585407604771, 'R2 - std': 0.05353106226392643} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 1498894.7690176102, 'MSE - std': 250643.79122250553, 'R2 - mean': 0.7043585407604771, 'R2 - std': 0.05353106226392643}
+Train time: 1085.0688087731996
+Inference time: 0.2676141000003554
+Finished cross validation
+
+
+----------------------------------------------------------------------------
+Training SAINT Vesion 1 with Dataset: config/diamonds.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/diamonds.yml', data_parallel=False, dataset='Diamonds', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=1, nominal_idx=None, num_classes=1, num_features=9, num_idx=None, num_splits=5, objective='regression', one_hot_encode=False, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1, 2, 3], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Diamonds...
+Dataset loaded! 
+
+X b4 encoding : [0.23 'Ideal' 'E' 'SI2' 61.5 55.0 3.95 3.98 2.43] 
+
+(53940, 9)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: None
+Ordinal Idx: [1, 2, 3]
+Cat Dims: None 
+ 
+
+Normonal Idx: None
+Cat Idx Part II: [1, 2, 3] 
+ENDE 
+ 
+
+X after Nominal Encoding: [0.23 'Ideal' 'E' 'SI2' 61.5 55.0 3.95 3.98 2.43] 
+ 
+
+Scaling the data...
+X after Scaling: [-1.1981678055010725 'Ideal' 'E' 'SI2' -0.1740915083097858
+ -1.0996719906799668 -1.5878374489219242 -1.5361955629431636
+ -1.5711291873012518] 
+ 
+
+A new study created in RDB with name: SAINT_Diamonds
+In get_device
+Using dim 32 and batch size 128
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 8366311.5
+Epoch 1 loss 496752.03125
+Epoch 2 loss 387638.84375
+Epoch 3 loss 408966.5
+Epoch 4 loss 388802.03125
+Epoch 5 loss 320666.3125
+Epoch 6 loss 310777.375
+Epoch 7 loss 306641.5
+Epoch 8 loss 298619.5625
+Epoch 9 loss 303595.09375
+Epoch 10 loss 310012.1875
+Epoch 11 loss 285970.46875
+Epoch 12 loss 281001.78125
+Epoch 13 loss 289086.53125
+Epoch 14 loss 284141.625
+Epoch 15 loss 280707.125
+Epoch 16 loss 306559.90625
+Epoch 17 loss 275142.96875
+Epoch 18 loss 275028.625
+Epoch 19 loss 320215.59375
+Epoch 20 loss 297780.0
+Epoch 21 loss 283524.625
+Epoch 22 loss 290266.59375
+Epoch 23 loss 293372.3125
+Epoch 24 loss 292370.90625
+Epoch 25 loss 285177.6875
+Epoch 26 loss 275666.5
+Epoch 27 loss 309151.09375
+Epoch 28 loss 309849.03125
+Epoch 29 loss 277122.84375
+Epoch 30 loss 277113.9375
+Epoch 31 loss 280368.4375
+Epoch 32 loss 279498.6875
+Epoch 33 loss 274844.9375
+Epoch 34 loss 271572.40625
+Epoch 35 loss 302543.5
+Epoch 36 loss 271821.3125
+Epoch 37 loss 289178.5
+Epoch 38 loss 289836.25
+Epoch 39 loss 283463.8125
+Epoch 40 loss 283883.03125
+Epoch 41 loss 267373.5
+Epoch 42 loss 279136.21875
+Epoch 43 loss 271847.25
+Epoch 44 loss 268013.21875
+Epoch 45 loss 272072.375
+Epoch 46 loss 282180.625
+Epoch 47 loss 263201.21875
+Epoch 48 loss 274808.1875
+Epoch 49 loss 287000.71875
+Epoch 50 loss 278849.5625
+Epoch 51 loss 277912.875
+Epoch 52 loss 278829.5
+Epoch 53 loss 268200.25
+Epoch 54 loss 286063.28125
+Epoch 55 loss 278680.40625
+Epoch 56 loss 297396.59375
+Epoch 57 loss 272877.34375
+Epoch 58 loss 282959.34375
+Epoch 59 loss 273296.0
+Epoch 60 loss 275057.5
+Epoch 61 loss 288369.875
+Epoch 62 loss 283654.625
+Epoch 63 loss 281264.875
+Epoch 64 loss 280113.59375
+Epoch 65 loss 297540.125
+Epoch 66 loss 269224.46875
+Epoch 67 loss 295546.78125
+Epoch 68 loss 296865.78125
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 508416.21572626766, 'MSE - std': 0.0, 'R2 - mean': 0.966933082594806, 'R2 - std': 0.0} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 8255043.5
+Epoch 1 loss 642285.4375
+Epoch 2 loss 353800.25
+Epoch 3 loss 335796.6875
+Epoch 4 loss 317066.03125
+Epoch 5 loss 378669.3125
+Epoch 6 loss 358395.6875
+Epoch 7 loss 321408.40625
+Epoch 8 loss 330223.46875
+Epoch 9 loss 307242.3125
+Epoch 10 loss 312611.0625
+Epoch 11 loss 283276.875
+Epoch 12 loss 293744.6875
+Epoch 13 loss 280421.0625
+Epoch 14 loss 281874.21875
+Epoch 15 loss 286844.09375
+Epoch 16 loss 305101.1875
+Epoch 17 loss 318828.5
+Epoch 18 loss 285780.8125
+Epoch 19 loss 279580.15625
+Epoch 20 loss 291718.34375
+Epoch 21 loss 277744.9375
+Epoch 22 loss 287212.1875
+Epoch 23 loss 322242.84375
+Epoch 24 loss 277817.25
+Epoch 25 loss 275971.125
+Epoch 26 loss 282796.15625
+Epoch 27 loss 288269.03125
+Epoch 28 loss 285679.9375
+Epoch 29 loss 285958.625
+Epoch 30 loss 312041.28125
+Epoch 31 loss 282282.65625
+Epoch 32 loss 276227.03125
+Epoch 33 loss 273244.03125
+Epoch 34 loss 282599.59375
+Epoch 35 loss 279616.40625
+Epoch 36 loss 274219.40625
+Epoch 37 loss 277426.3125
+Epoch 38 loss 282280.71875
+Epoch 39 loss 279315.5
+Epoch 40 loss 281551.9375
+Epoch 41 loss 295772.40625
+Epoch 42 loss 271373.0
+Epoch 43 loss 283624.40625
+Epoch 44 loss 277399.78125
+Epoch 45 loss 295021.9375
+Epoch 46 loss 281934.1875
+Epoch 47 loss 276102.1875
+Epoch 48 loss 270891.8125
+Epoch 49 loss 290882.59375
+Epoch 50 loss 293148.6875
+Epoch 51 loss 281777.03125
+Epoch 52 loss 272806.46875
+Epoch 53 loss 270280.4375
+Epoch 54 loss 273751.96875
+Epoch 55 loss 271690.75
+Epoch 56 loss 279415.8125
+Epoch 57 loss 294423.40625
+Epoch 58 loss 268767.90625
+Epoch 59 loss 274926.9375
+Epoch 60 loss 273289.375
+Epoch 61 loss 271602.65625
+Epoch 62 loss 280043.40625
+Epoch 63 loss 275864.875
+Epoch 64 loss 272026.75
+Epoch 65 loss 305127.59375
+Epoch 66 loss 279386.28125
+Epoch 67 loss 298734.78125
+Epoch 68 loss 281792.5625
+Epoch 69 loss 284281.3125
+Epoch 70 loss 268236.71875
+Epoch 71 loss 270101.8125
+Epoch 72 loss 266647.21875
+Epoch 73 loss 293653.84375
+Epoch 74 loss 270978.0625
+Epoch 75 loss 286726.9375
+Epoch 76 loss 276583.6875
+Epoch 77 loss 277567.21875
+Epoch 78 loss 283795.9375
+Epoch 79 loss 292266.5625
+Epoch 80 loss 269391.53125
+Epoch 81 loss 316911.5
+Epoch 82 loss 274977.21875
+Epoch 83 loss 271042.78125
+Epoch 84 loss 280308.8125
+Epoch 85 loss 273570.46875
+Epoch 86 loss 287573.0625
+Epoch 87 loss 283394.21875
+Epoch 88 loss 285223.875
+Epoch 89 loss 312915.15625
+Epoch 90 loss 282458.34375
+Epoch 91 loss 271598.125
+Epoch 92 loss 283286.0625
+Epoch 93 loss 301850.65625
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 458466.52501150954, 'MSE - std': 49949.69071475815, 'R2 - mean': 0.9705890869775644, 'R2 - std': 0.0036560043827583155} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 8742422.0
+Epoch 1 loss 469444.125
+Epoch 2 loss 428251.625
+Epoch 3 loss 378810.6875
+Epoch 4 loss 443672.09375
+Epoch 5 loss 341690.1875
+Epoch 6 loss 364005.9375
+Epoch 7 loss 393142.3125
+Epoch 8 loss 330722.53125
+Epoch 9 loss 338771.53125
+Epoch 10 loss 341347.40625
+Epoch 11 loss 336262.84375
+Epoch 12 loss 335396.46875
+Epoch 13 loss 354093.375
+Epoch 14 loss 336146.15625
+Epoch 15 loss 343414.9375
+Epoch 16 loss 330560.65625
+Epoch 17 loss 358383.25
+Epoch 18 loss 336508.09375
+Epoch 19 loss 328479.21875
+Epoch 20 loss 327292.21875
+Epoch 21 loss 366702.15625
+Epoch 22 loss 329292.03125
+Epoch 23 loss 328597.53125
+Epoch 24 loss 330024.03125
+Epoch 25 loss 345671.15625
+Epoch 26 loss 331993.65625
+Epoch 27 loss 340731.59375
+Epoch 28 loss 321186.40625
+Epoch 29 loss 330499.34375
+Epoch 30 loss 330724.5625
+Epoch 31 loss 404096.59375
+Epoch 32 loss 356075.5625
+Epoch 33 loss 335013.75
+Epoch 34 loss 350852.3125
+Epoch 35 loss 345199.0625
+Epoch 36 loss 322197.78125
+Epoch 37 loss 315882.84375
+Epoch 38 loss 326611.34375
+Epoch 39 loss 317140.3125
+Epoch 40 loss 344178.71875
+Epoch 41 loss 338024.6875
+Epoch 42 loss 326014.125
+Epoch 43 loss 336652.3125
+Epoch 44 loss 319565.5625
+Epoch 45 loss 328820.78125
+Epoch 46 loss 315620.65625
+Epoch 47 loss 333830.125
+Epoch 48 loss 317306.5
+Epoch 49 loss 341815.03125
+Epoch 50 loss 329571.875
+Epoch 51 loss 345315.6875
+Epoch 52 loss 343874.9375
+Epoch 53 loss 338004.9375
+Epoch 54 loss 328462.6875
+Epoch 55 loss 326979.4375
+Epoch 56 loss 321031.625
+Epoch 57 loss 336842.96875
+Epoch 58 loss 329478.84375
+Epoch 59 loss 324194.6875
+Epoch 60 loss 327556.875
+Epoch 61 loss 330587.75
+Epoch 62 loss 338011.25
+Epoch 63 loss 348705.125
+Epoch 64 loss 335844.46875
+Epoch 65 loss 328119.125
+Epoch 66 loss 346923.46875
+Epoch 67 loss 329580.03125
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 477814.5429713372, 'MSE - std': 49112.17771199213, 'R2 - mean': 0.9696613254633891, 'R2 - std': 0.0032607353289610353} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 8502191.0
+Epoch 1 loss 448272.84375
+Epoch 2 loss 432234.96875
+Epoch 3 loss 425948.9375
+Epoch 4 loss 413015.6875
+Epoch 5 loss 373417.15625
+Epoch 6 loss 507152.6875
+Epoch 7 loss 362233.25
+Epoch 8 loss 361066.75
+Epoch 9 loss 374626.125
+Epoch 10 loss 333995.03125
+Epoch 11 loss 330722.625
+Epoch 12 loss 337074.90625
+Epoch 13 loss 326735.9375
+Epoch 14 loss 316072.5625
+Epoch 15 loss 314932.78125
+Epoch 16 loss 311038.53125
+Epoch 17 loss 355991.5625
+Epoch 18 loss 310291.78125
+Epoch 19 loss 315410.78125
+Epoch 20 loss 312317.78125
+Epoch 21 loss 296866.5625
+Epoch 22 loss 302305.84375
+Epoch 23 loss 301484.84375
+Epoch 24 loss 296164.53125
+Epoch 25 loss 335613.3125
+Epoch 26 loss 334635.78125
+Epoch 27 loss 295492.5
+Epoch 28 loss 288715.15625
+Epoch 29 loss 293738.9375
+Epoch 30 loss 303063.03125
+Epoch 31 loss 293105.625
+Epoch 32 loss 285500.625
+Epoch 33 loss 286348.9375
+Epoch 34 loss 310478.5
+Epoch 35 loss 291780.9375
+Epoch 36 loss 293470.40625
+Epoch 37 loss 295768.21875
+Epoch 38 loss 300946.78125
+Epoch 39 loss 290960.0625
+Epoch 40 loss 323688.4375
+Epoch 41 loss 296212.5
+Epoch 42 loss 300335.125
+Epoch 43 loss 300048.5625
+Epoch 44 loss 297394.03125
+Epoch 45 loss 290870.71875
+Epoch 46 loss 285691.5
+Epoch 47 loss 293943.84375
+Epoch 48 loss 297615.84375
+Epoch 49 loss 278684.03125
+Epoch 50 loss 283699.5625
+Epoch 51 loss 287217.21875
+Epoch 52 loss 305497.65625
+Epoch 53 loss 288763.59375
+Epoch 54 loss 285413.625
+Epoch 55 loss 291615.875
+Epoch 56 loss 287481.53125
+Epoch 57 loss 289046.9375
+Epoch 58 loss 287282.03125
+Epoch 59 loss 294684.78125
+Epoch 60 loss 282870.1875
+Epoch 61 loss 292770.65625
+Epoch 62 loss 287522.125
+Epoch 63 loss 290080.3125
+Epoch 64 loss 295510.46875
+Epoch 65 loss 292149.25
+Epoch 66 loss 320274.75
+Epoch 67 loss 289763.9375
+Epoch 68 loss 281753.78125
+Epoch 69 loss 296634.5
+Epoch 70 loss 291231.84375
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 490184.95449776883, 'MSE - std': 47624.4238149979, 'R2 - mean': 0.9691103483894214, 'R2 - std': 0.0029807756326608766} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 9168814.0
+Epoch 1 loss 554752.8125
+Epoch 2 loss 425076.9375
+Epoch 3 loss 359481.71875
+Epoch 4 loss 359662.65625
+Epoch 5 loss 325886.0
+Epoch 6 loss 314342.96875
+Epoch 7 loss 321456.09375
+Epoch 8 loss 335810.28125
+Epoch 9 loss 328532.34375
+Epoch 10 loss 304252.78125
+Epoch 11 loss 307637.3125
+Epoch 12 loss 306241.40625
+Epoch 13 loss 315479.125
+Epoch 14 loss 301780.15625
+Epoch 15 loss 314318.75
+Epoch 16 loss 304581.125
+Epoch 17 loss 316015.84375
+Epoch 18 loss 298694.59375
+Epoch 19 loss 320570.84375
+Epoch 20 loss 310324.0625
+Epoch 21 loss 312499.90625
+Epoch 22 loss 319842.6875
+Epoch 23 loss 335064.71875
+Epoch 24 loss 371245.53125
+Epoch 25 loss 324381.5
+Epoch 26 loss 316378.5
+Epoch 27 loss 311336.6875
+Epoch 28 loss 326842.5
+Epoch 29 loss 312333.3125
+Epoch 30 loss 350372.6875
+Epoch 31 loss 299591.875
+Epoch 32 loss 303406.125
+Epoch 33 loss 304129.90625
+Epoch 34 loss 325881.5625
+Epoch 35 loss 336484.59375
+Epoch 36 loss 358046.59375
+Epoch 37 loss 314223.875
+Epoch 38 loss 319323.375
+Epoch 39 loss 307525.59375
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 474150.7644489361, 'MSE - std': 53318.37954267538, 'R2 - mean': 0.9701908237419256, 'R2 - std': 0.003431869264305809} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 0 finished with value: 474150.7644489361 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'dropout': 0.3}. Best is trial 0 with value: 474150.7644489361.
+Best parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'dropout': 0.3}
+In get_device
+Using dim 32 and batch size 128
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 7644659.5
+Epoch 1 loss 422633.34375
+Epoch 2 loss 386152.3125
+Epoch 3 loss 364783.03125
+Epoch 4 loss 322906.53125
+Epoch 5 loss 324688.21875
+Epoch 6 loss 320125.53125
+Epoch 7 loss 318629.75
+Epoch 8 loss 316949.5
+Epoch 9 loss 298838.96875
+Epoch 10 loss 291271.78125
+Epoch 11 loss 284475.90625
+Epoch 12 loss 319072.65625
+Epoch 13 loss 273663.375
+Epoch 14 loss 291046.3125
+Epoch 15 loss 280356.28125
+Epoch 16 loss 279234.84375
+Epoch 17 loss 291941.875
+Epoch 18 loss 276857.3125
+Epoch 19 loss 274198.5
+Epoch 20 loss 277528.6875
+Epoch 21 loss 267358.1875
+Epoch 22 loss 272390.28125
+Epoch 23 loss 278789.25
+Epoch 24 loss 275055.875
+Epoch 25 loss 264544.6875
+Epoch 26 loss 289420.90625
+Epoch 27 loss 274964.65625
+Epoch 28 loss 262601.625
+Epoch 29 loss 280991.84375
+Epoch 30 loss 294568.78125
+Epoch 31 loss 272649.3125
+Epoch 32 loss 289651.875
+Epoch 33 loss 284687.125
+Epoch 34 loss 271223.875
+Epoch 35 loss 285010.6875
+Epoch 36 loss 280745.125
+Epoch 37 loss 281026.75
+Epoch 38 loss 279206.21875
+Epoch 39 loss 272262.125
+Epoch 40 loss 268138.25
+Epoch 41 loss 268931.3125
+Epoch 42 loss 276829.0625
+Epoch 43 loss 288405.09375
+Epoch 44 loss 267564.4375
+Epoch 45 loss 266000.65625
+Epoch 46 loss 313311.3125
+Epoch 47 loss 277656.90625
+Epoch 48 loss 267842.5
+Epoch 49 loss 274932.90625
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 524625.3429223476, 'MSE - std': 0.0, 'R2 - mean': 0.9658788560504434, 'R2 - std': 0.0} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 7933568.5
+Epoch 1 loss 636808.0625
+Epoch 2 loss 392391.6875
+Epoch 3 loss 337467.96875
+Epoch 4 loss 324482.28125
+Epoch 5 loss 335927.28125
+Epoch 6 loss 317071.78125
+Epoch 7 loss 293343.84375
+Epoch 8 loss 326783.3125
+Epoch 9 loss 290758.9375
+Epoch 10 loss 332430.59375
+Epoch 11 loss 308367.84375
+Epoch 12 loss 281858.34375
+Epoch 13 loss 301472.625
+Epoch 14 loss 286448.46875
+Epoch 15 loss 278804.96875
+Epoch 16 loss 283295.875
+Epoch 17 loss 284901.8125
+Epoch 18 loss 285942.0
+Epoch 19 loss 298312.625
+Epoch 20 loss 285219.84375
+Epoch 21 loss 277164.9375
+Epoch 22 loss 331695.9375
+Epoch 23 loss 280532.125
+Epoch 24 loss 278095.96875
+Epoch 25 loss 280531.125
+Epoch 26 loss 279214.6875
+Epoch 27 loss 282449.875
+Epoch 28 loss 280917.375
+Epoch 29 loss 279848.25
+Epoch 30 loss 279959.53125
+Epoch 31 loss 285009.28125
+Epoch 32 loss 269843.5
+Epoch 33 loss 293764.96875
+Epoch 34 loss 278530.21875
+Epoch 35 loss 290364.84375
+Epoch 36 loss 274933.03125
+Epoch 37 loss 281577.15625
+Epoch 38 loss 273231.75
+Epoch 39 loss 266150.34375
+Epoch 40 loss 276319.78125
+Epoch 41 loss 283599.125
+Epoch 42 loss 309747.90625
+Epoch 43 loss 270359.40625
+Epoch 44 loss 283868.15625
+Epoch 45 loss 277668.03125
+Epoch 46 loss 280581.875
+Epoch 47 loss 288248.59375
+Epoch 48 loss 288734.96875
+Epoch 49 loss 272989.0625
+Epoch 50 loss 274857.90625
+Epoch 51 loss 287154.9375
+Epoch 52 loss 268295.34375
+Epoch 53 loss 273245.25
+Epoch 54 loss 280688.78125
+Epoch 55 loss 273276.875
+Epoch 56 loss 277932.5625
+Epoch 57 loss 271133.625
+Epoch 58 loss 268025.625
+Epoch 59 loss 264408.78125
+Epoch 60 loss 269314.375
+Epoch 61 loss 276585.25
+Epoch 62 loss 290713.15625
+Epoch 63 loss 270643.1875
+Epoch 64 loss 272590.9375
+Epoch 65 loss 270281.5
+Epoch 66 loss 282846.125
+Epoch 67 loss 282056.71875
+Epoch 68 loss 277533.3125
+Epoch 69 loss 279755.03125
+Epoch 70 loss 291322.625
+Epoch 71 loss 283060.3125
+Epoch 72 loss 271676.5
+Epoch 73 loss 277619.875
+Epoch 74 loss 289014.875
+Epoch 75 loss 269702.9375
+Epoch 76 loss 291838.5625
+Epoch 77 loss 288018.46875
+Epoch 78 loss 273938.71875
+Epoch 79 loss 277410.375
+Epoch 80 loss 269956.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 486948.7676303932, 'MSE - std': 37676.57529195439, 'R2 - mean': 0.9687772646862947, 'R2 - std': 0.0028984086358511685} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 8616443.0
+Epoch 1 loss 598858.6875
+Epoch 2 loss 393289.3125
+Epoch 3 loss 376843.84375
+Epoch 4 loss 343105.71875
+Epoch 5 loss 408319.78125
+Epoch 6 loss 352255.875
+Epoch 7 loss 339582.25
+Epoch 8 loss 347604.3125
+Epoch 9 loss 359933.5625
+Epoch 10 loss 326160.78125
+Epoch 11 loss 346104.78125
+Epoch 12 loss 327890.9375
+Epoch 13 loss 355287.46875
+Epoch 14 loss 329140.3125
+Epoch 15 loss 327639.03125
+Epoch 16 loss 336769.5
+Epoch 17 loss 360833.6875
+Epoch 18 loss 322430.125
+Epoch 19 loss 329627.3125
+Epoch 20 loss 328377.09375
+Epoch 21 loss 312148.59375
+Epoch 22 loss 317219.875
+Epoch 23 loss 319052.21875
+Epoch 24 loss 317786.21875
+Epoch 25 loss 329847.40625
+Epoch 26 loss 323414.40625
+Epoch 27 loss 317551.21875
+Epoch 28 loss 323301.03125
+Epoch 29 loss 314104.78125
+Epoch 30 loss 326842.875
+Epoch 31 loss 331396.3125
+Epoch 32 loss 327421.46875
+Epoch 33 loss 332145.25
+Epoch 34 loss 359261.40625
+Epoch 35 loss 323568.03125
+Epoch 36 loss 312986.84375
+Epoch 37 loss 359243.65625
+Epoch 38 loss 325850.15625
+Epoch 39 loss 329989.125
+Epoch 40 loss 328145.78125
+Epoch 41 loss 320919.3125
+Epoch 42 loss 322035.03125
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 497425.4521672228, 'MSE - std': 34144.85888468953, 'R2 - mean': 0.9684146279749711, 'R2 - std': 0.002421471835279144} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 9513623.0
+Epoch 1 loss 489849.75
+Epoch 2 loss 405968.125
+Epoch 3 loss 384170.09375
+Epoch 4 loss 485675.0625
+Epoch 5 loss 373871.71875
+Epoch 6 loss 372876.21875
+Epoch 7 loss 364913.03125
+Epoch 8 loss 361188.375
+Epoch 9 loss 366698.8125
+Epoch 10 loss 363298.34375
+Epoch 11 loss 344535.9375
+Epoch 12 loss 430109.4375
+Epoch 13 loss 367321.5
+Epoch 14 loss 332704.75
+Epoch 15 loss 342364.40625
+Epoch 16 loss 356051.6875
+Epoch 17 loss 319548.5625
+Epoch 18 loss 325263.40625
+Epoch 19 loss 315994.59375
+Epoch 20 loss 309932.4375
+Epoch 21 loss 314150.71875
+Epoch 22 loss 302310.125
+Epoch 23 loss 297942.875
+Epoch 24 loss 309977.15625
+Epoch 25 loss 296922.71875
+Epoch 26 loss 305820.375
+Epoch 27 loss 306938.28125
+Epoch 28 loss 291030.0625
+Epoch 29 loss 304066.1875
+Epoch 30 loss 303884.84375
+Epoch 31 loss 294592.09375
+Epoch 32 loss 299819.46875
+Epoch 33 loss 298989.34375
+Epoch 34 loss 293324.90625
+Epoch 35 loss 300419.28125
+Epoch 36 loss 304133.03125
+Epoch 37 loss 295377.21875
+Epoch 38 loss 294444.59375
+Epoch 39 loss 292498.5
+Epoch 40 loss 293378.125
+Epoch 41 loss 294519.0625
+Epoch 42 loss 290364.5625
+Epoch 43 loss 287963.59375
+Epoch 44 loss 291113.59375
+Epoch 45 loss 300705.9375
+Epoch 46 loss 292704.90625
+Epoch 47 loss 302449.96875
+Epoch 48 loss 292184.78125
+Epoch 49 loss 286436.5
+Epoch 50 loss 312886.3125
+Epoch 51 loss 299623.75
+Epoch 52 loss 279628.0625
+Epoch 53 loss 292473.96875
+Epoch 54 loss 286578.96875
+Epoch 55 loss 298818.9375
+Epoch 56 loss 296508.84375
+Epoch 57 loss 301333.21875
+Epoch 58 loss 289640.03125
+Epoch 59 loss 298021.96875
+Epoch 60 loss 312239.125
+Epoch 61 loss 299742.40625
+Epoch 62 loss 293911.03125
+Epoch 63 loss 298371.84375
+Epoch 64 loss 281712.6875
+Epoch 65 loss 292563.875
+Epoch 66 loss 287284.6875
+Epoch 67 loss 322736.78125
+Epoch 68 loss 300012.9375
+Epoch 69 loss 303185.84375
+Epoch 70 loss 305243.3125
+Epoch 71 loss 287916.8125
+Epoch 72 loss 296655.4375
+Epoch 73 loss 287039.625
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 494873.1368723401, 'MSE - std': 29898.937795262853, 'R2 - mean': 0.9687937190168746, 'R2 - std': 0.0021974472555540787} 
+ 
+
+In get_device
+Using dim 32 and batch size 128
+Epoch 0 loss 8600138.0
+Epoch 1 loss 432290.84375
+Epoch 2 loss 343965.59375
+Epoch 3 loss 351150.15625
+Epoch 4 loss 382346.5625
+Epoch 5 loss 383717.6875
+Epoch 6 loss 336736.71875
+Epoch 7 loss 328445.1875
+Epoch 8 loss 344746.875
+Epoch 9 loss 343201.3125
+Epoch 10 loss 311560.1875
+Epoch 11 loss 326422.03125
+Epoch 12 loss 306150.125
+Epoch 13 loss 334653.75
+Epoch 14 loss 316469.71875
+Epoch 15 loss 309793.5625
+Epoch 16 loss 310758.28125
+Epoch 17 loss 403508.6875
+Epoch 18 loss 332361.0625
+Epoch 19 loss 312044.9375
+Epoch 20 loss 328157.78125
+Epoch 21 loss 318393.59375
+Epoch 22 loss 314438.9375
+Epoch 23 loss 296269.6875
+Epoch 24 loss 293422.78125
+Epoch 25 loss 311018.40625
+Epoch 26 loss 333332.96875
+Epoch 27 loss 314020.6875
+Epoch 28 loss 306536.59375
+Epoch 29 loss 304925.9375
+Epoch 30 loss 305910.125
+Epoch 31 loss 311424.9375
+Epoch 32 loss 313913.53125
+Epoch 33 loss 333841.5
+Epoch 34 loss 311851.84375
+Epoch 35 loss 312722.03125
+Epoch 36 loss 308402.21875
+Epoch 37 loss 315851.03125
+Epoch 38 loss 336381.78125
+Epoch 39 loss 301551.28125
+Epoch 40 loss 316276.21875
+Epoch 41 loss 309863.125
+Epoch 42 loss 322753.1875
+Epoch 43 loss 305264.5
+Epoch 44 loss 323303.96875
+Epoch 45 loss 303753.21875
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 537199.1685438037, 'MSE - std': 88775.7231074068, 'R2 - mean': 0.9662514490510912, 'R2 - std': 0.005451198571731904} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 537199.1685438037, 'MSE - std': 88775.7231074068, 'R2 - mean': 0.9662514490510912, 'R2 - std': 0.005451198571731904}
+Train time: 620.5612082094003
+Inference time: 0.4263337823998882
+Finished cross validation
+
+
+----------------------------------------------------------------------------
+Training SAINT Vesion 1 with Dataset: config/house_prices_nominal.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/house_prices_nominal.yml', data_parallel=False, dataset='House_Prices_Nominal', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=[6, 25, 30, 31, 32, 33, 35, 42, 57, 58, 60, 63, 64, 72, 73, 74], miss_num_idx=[3, 26, 59], model_name='SAINT', n_trials=1, nominal_idx=[2, 7, 12], num_classes=1, num_features=80, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31, 32, 33, 35, 39, 40, 41, 42, 53, 55, 57, 58, 60, 63, 64, 65, 72, 73, 74, 78, 79], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset House_Prices_Nominal...
+Dataset loaded! 
+
+X b4 encoding : [60 'RL' 65.0 8450 'Pave' 'None' 'Reg' 'Lvl' 'AllPub' 'Inside' 'Gtl'
+ 'CollgCr' 'Norm' 'Norm' '1Fam' '2Story' 7 5 2003 2003 'Gable' 'CompShg'
+ 'VinylSd' 'VinylSd' 'BrkFace' 196.0 'Gd' 'TA' 'PConc' 'Gd' 'TA' 'No'
+ 'GLQ' 706 'Unf' 0 150 856 'GasA' 'Ex' 'Y' 'SBrkr' 856 854 0 1710 1 0 2 1
+ 3 1 'Gd' 8 'Typ' 0 'None' 'Attchd' 2003.0 'RFn' 2 548 'TA' 'TA' 'Y' 0 61
+ 0 0 0 0 'None' 'None' 'None' 0 2 2008 'WD' 'Normal'] 
+
+(1460, 79)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [1, 6, 11]
+Ordinal Idx: [4, 5, 7, 8, 9, 10, 12, 13, 14, 15, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 34, 38, 39, 40, 41, 52, 54, 56, 57, 59, 62, 63, 64, 71, 72, 73, 77, 78]
+Cat Dims: None 
+ 
+
+Normonal Idx: [1, 6, 11]
+Cat Idx Part II: [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 34, 38, 39, 40, 41, 52, 54, 56, 57, 59, 62, 63, 64, 71, 72, 73, 77, 78] 
+ENDE 
+ 
+
+X after Nominal Encoding: [60 'RL' 65.0 8450 'Pave' 'None' 'Reg' 'Lvl' 'AllPub' 'Inside' 'Gtl'
+ 'CollgCr' 'Norm' 'Norm' '1Fam' '2Story' 7 5 2003 2003 'Gable' 'CompShg'
+ 'VinylSd' 'VinylSd' 'BrkFace' 196.0 'Gd' 'TA' 'PConc' 'Gd' 'TA' 'No'
+ 'GLQ' 706 'Unf' 0 150 856 'GasA' 'Ex' 'Y' 'SBrkr' 856 854 0 1710 1 0 2 1
+ 3 1 'Gd' 8 'Typ' 0 'None' 'Attchd' 2003.0 'RFn' 2 548 'TA' 'TA' 'Y' 0 61
+ 0 0 0 0 'None' 'None' 'None' 0 2 2008 'WD' 'Normal'] 
+ 
+
+Scaling the data...
+X after Scaling: [0.07337496353744775 'RL' -0.22087508895451458 -0.20714170777431132 'Pave'
+ 'None' 'Reg' 'Lvl' 'AllPub' 'Inside' 'Gtl' 'CollgCr' 'Norm' 'Norm' '1Fam'
+ '2Story' 0.6514792433257054 -0.5171998069472914 1.0509937888999856
+ 0.8786680880058696 'Gable' 'CompShg' 'VinylSd' 'VinylSd' 'BrkFace'
+ 0.5141038909843643 'Gd' 'TA' 'PConc' 'Gd' 'TA' 'No' 'GLQ'
+ 0.5754248369676035 'Unf' -0.2886528311122454 -0.9445906057378156
+ -0.4593025408311876 'GasA' 'Ex' 'Y' 'SBrkr' -0.7934337933349002
+ 1.1618515874685553 -0.12024172373467248 0.3703334392167798
+ 1.1078101491462133 -0.24106103579929677 0.7897405221108432
+ 1.2275853765130371 0.1637791168735145 -0.21145358120204893 'Gd'
+ 0.9122097711603002 'Typ' -0.9512264882332893 'None' 'Attchd'
+ 1.0175980835384009 'RFn' 0.31172464418307205 0.35100032086652694 'TA'
+ 'TA' 'Y' -0.7521758378613592 0.2165031608388436 -0.3593249004055313
+ -0.11633928614822256 -0.2702083542015609 -0.06869174753820707 'None'
+ 'None' 'None' -0.08768781151769862 -1.599111099180035 0.1387774889497933
+ 'WD' 'Normal'] 
+ 
+
+Ordinal Idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+One Hot Encoding...
+X after One Hot Encoding: ['Pave' 'None' 'Lvl' 'AllPub' 'Inside' 'Gtl' 'Norm' 'Norm' '1Fam' '2Story'
+ 'Gable' 'CompShg' 'VinylSd' 'VinylSd' 'BrkFace' 'Gd' 'TA' 'PConc' 'Gd'
+ 'TA' 'No' 'GLQ' 'Unf' 'GasA' 'Ex' 'Y' 'SBrkr' 'Gd' 'Typ' 'None' 'Attchd'
+ 'RFn' 'TA' 'TA' 'Y' 'None' 'None' 'None' 'WD' 'Normal' 0.0 0.0 0.0 1.0
+ 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.07337496353744775
+ -0.22087508895451458 -0.20714170777431132 0.6514792433257054
+ -0.5171998069472914 1.0509937888999856 0.8786680880058696
+ 0.5141038909843643 0.5754248369676035 -0.2886528311122454
+ -0.9445906057378156 -0.4593025408311876 -0.7934337933349002
+ 1.1618515874685553 -0.12024172373467248 0.3703334392167798
+ 1.1078101491462133 -0.24106103579929677 0.7897405221108432
+ 1.2275853765130371 0.1637791168735145 -0.21145358120204893
+ 0.9122097711603002 -0.9512264882332893 1.0175980835384009
+ 0.31172464418307205 0.35100032086652694 -0.7521758378613592
+ 0.2165031608388436 -0.3593249004055313 -0.11633928614822256
+ -0.2702083542015609 -0.06869174753820707 -0.08768781151769862
+ -1.599111099180035 0.1387774889497933] 
+ 
+
+args.num_features: 110
+args.cat_idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+Cat Dims: [3, 3, 5, 3, 6, 4, 10, 9, 6, 9, 7, 9, 16, 17, 4, 5, 6, 7, 5, 5, 5, 7, 7, 7, 6, 3, 6, 5, 8, 6, 7, 4, 6, 6, 4, 4, 5, 5, 10, 7]
+New Shape: (1460, 110)
+True 
+ 
+
+A new study created in RDB with name: SAINT_House_Prices_Nominal
+In get_device
+Using dim 8 and batch size 64
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 41779097600.0
+Epoch 1 loss 47140360192.0
+Epoch 2 loss 41655009280.0
+Epoch 3 loss 41803366400.0
+Epoch 4 loss 38601752576.0
+Epoch 5 loss 52161728512.0
+Epoch 6 loss 41864044544.0
+Epoch 7 loss 39192346624.0
+Epoch 8 loss 40504967168.0
+Epoch 9 loss 49252777984.0
+Epoch 10 loss 35800109056.0
+Epoch 11 loss 37755797504.0
+Epoch 12 loss 30067355648.0
+Epoch 13 loss 27878918144.0
+Epoch 14 loss 30647578624.0
+Epoch 15 loss 22963593216.0
+Epoch 16 loss 17403727872.0
+Epoch 17 loss 13404387328.0
+Epoch 18 loss 15830831104.0
+Epoch 19 loss 9385823232.0
+Epoch 20 loss 7278767104.0
+Epoch 21 loss 10197338112.0
+Epoch 22 loss 9041729536.0
+Epoch 23 loss 6321728000.0
+Epoch 24 loss 6261099008.0
+Epoch 25 loss 8702334976.0
+Epoch 26 loss 5000532480.0
+Epoch 27 loss 9094398976.0
+Epoch 28 loss 4839981056.0
+Epoch 29 loss 3094884352.0
+Epoch 30 loss 2704058368.0
+Epoch 31 loss 2153943808.0
+Epoch 32 loss 2191560704.0
+Epoch 33 loss 4658321920.0
+Epoch 34 loss 1686129664.0
+Epoch 35 loss 4413619200.0
+Epoch 36 loss 1868055680.0
+Epoch 37 loss 1531743872.0
+Epoch 38 loss 1177266816.0
+Epoch 39 loss 3629798912.0
+Epoch 40 loss 1192713216.0
+Epoch 41 loss 1271171584.0
+Epoch 42 loss 985120384.0
+Epoch 43 loss 970328256.0
+Epoch 44 loss 1266359296.0
+Epoch 45 loss 1519319808.0
+Epoch 46 loss 1030722816.0
+Epoch 47 loss 3094987520.0
+Epoch 48 loss 792856960.0
+Epoch 49 loss 1104492416.0
+Epoch 50 loss 2761449984.0
+Epoch 51 loss 1072384128.0
+Epoch 52 loss 913052800.0
+Epoch 53 loss 1062966016.0
+Epoch 54 loss 2498839552.0
+Epoch 55 loss 1013671808.0
+Epoch 56 loss 788447552.0
+Epoch 57 loss 954255616.0
+Epoch 58 loss 990277376.0
+Epoch 59 loss 839914432.0
+Epoch 60 loss 762484928.0
+Epoch 61 loss 2327982080.0
+Epoch 62 loss 953794560.0
+Epoch 63 loss 650991552.0
+Epoch 64 loss 801064832.0
+Epoch 65 loss 988172416.0
+Epoch 66 loss 871769856.0
+Epoch 67 loss 726070208.0
+Epoch 68 loss 879308800.0
+Epoch 69 loss 1354778880.0
+Epoch 70 loss 695028480.0
+Epoch 71 loss 685715008.0
+Epoch 72 loss 1961856640.0
+Epoch 73 loss 899763648.0
+Epoch 74 loss 868344448.0
+Epoch 75 loss 1053324480.0
+Epoch 76 loss 726653824.0
+Epoch 77 loss 1002506752.0
+Epoch 78 loss 2046994688.0
+Epoch 79 loss 857880640.0
+Epoch 80 loss 1058748160.0
+Epoch 81 loss 807812224.0
+Epoch 82 loss 1801025408.0
+Epoch 83 loss 710005312.0
+Epoch 84 loss 686885952.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 1005309512.2237365, 'MSE - std': 0.0, 'R2 - mean': 0.8644636724073073, 'R2 - std': 0.0} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 49332637696.0
+Epoch 1 loss 44348669952.0
+Epoch 2 loss 44003115008.0
+Epoch 3 loss 34091413504.0
+Epoch 4 loss 41934004224.0
+Epoch 5 loss 38360449024.0
+Epoch 6 loss 40907100160.0
+Epoch 7 loss 39774404608.0
+Epoch 8 loss 39762264064.0
+Epoch 9 loss 38191153152.0
+Epoch 10 loss 36420673536.0
+Epoch 11 loss 35211538432.0
+Epoch 12 loss 33430659072.0
+Epoch 13 loss 28468449280.0
+Epoch 14 loss 26037841920.0
+Epoch 15 loss 27801554944.0
+Epoch 16 loss 16026449920.0
+Epoch 17 loss 13454028800.0
+Epoch 18 loss 9387274240.0
+Epoch 19 loss 11119992832.0
+Epoch 20 loss 9032045568.0
+Epoch 21 loss 5679137280.0
+Epoch 22 loss 5754313728.0
+Epoch 23 loss 9119278080.0
+Epoch 24 loss 7982391808.0
+Epoch 25 loss 6786686976.0
+Epoch 26 loss 3658697728.0
+Epoch 27 loss 4115841024.0
+Epoch 28 loss 3775468032.0
+Epoch 29 loss 2796513280.0
+Epoch 30 loss 2852244480.0
+Epoch 31 loss 2523824128.0
+Epoch 32 loss 2375760640.0
+Epoch 33 loss 3975826944.0
+Epoch 34 loss 2778748416.0
+Epoch 35 loss 1440139136.0
+Epoch 36 loss 1129400576.0
+Epoch 37 loss 1270345728.0
+Epoch 38 loss 978859264.0
+Epoch 39 loss 1033419264.0
+Epoch 40 loss 1799942528.0
+Epoch 41 loss 1246430208.0
+Epoch 42 loss 1229028480.0
+Epoch 43 loss 945711552.0
+Epoch 44 loss 934712640.0
+Epoch 45 loss 1105621760.0
+Epoch 46 loss 1891717632.0
+Epoch 47 loss 698094976.0
+Epoch 48 loss 760893184.0
+Epoch 49 loss 728855616.0
+Epoch 50 loss 726916416.0
+Epoch 51 loss 800911104.0
+Epoch 52 loss 925396096.0
+Epoch 53 loss 718220736.0
+Epoch 54 loss 677441920.0
+Epoch 55 loss 1051467008.0
+Epoch 56 loss 678183232.0
+Epoch 57 loss 1496329472.0
+Epoch 58 loss 1011350528.0
+Epoch 59 loss 1449491200.0
+Epoch 60 loss 687944064.0
+Epoch 61 loss 645560704.0
+Epoch 62 loss 739257344.0
+Epoch 63 loss 682071168.0
+Epoch 64 loss 606056896.0
+Epoch 65 loss 601959552.0
+Epoch 66 loss 885266816.0
+Epoch 67 loss 655246080.0
+Epoch 68 loss 727927040.0
+Epoch 69 loss 981148672.0
+Epoch 70 loss 611355008.0
+Epoch 71 loss 1621510272.0
+Epoch 72 loss 928834688.0
+Epoch 73 loss 618733568.0
+Epoch 74 loss 645288256.0
+Epoch 75 loss 741850752.0
+Epoch 76 loss 655801024.0
+Epoch 77 loss 900196224.0
+Epoch 78 loss 862010176.0
+Epoch 79 loss 631252160.0
+Epoch 80 loss 695957056.0
+Epoch 81 loss 718710272.0
+Epoch 82 loss 739361920.0
+Epoch 83 loss 1858741760.0
+Epoch 84 loss 731819712.0
+Epoch 85 loss 715516672.0
+Epoch 86 loss 729675648.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 925094074.5174786, 'MSE - std': 80215437.70625794, 'R2 - mean': 0.870240203468511, 'R2 - std': 0.005776531061203738} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 45275578368.0
+Epoch 1 loss 41227534336.0
+Epoch 2 loss 36089061376.0
+Epoch 3 loss 36908859392.0
+Epoch 4 loss 41459449856.0
+Epoch 5 loss 41118621696.0
+Epoch 6 loss 40802168832.0
+Epoch 7 loss 35362279424.0
+Epoch 8 loss 38119759872.0
+Epoch 9 loss 41874599936.0
+Epoch 10 loss 33463398400.0
+Epoch 11 loss 35071000576.0
+Epoch 12 loss 30589198336.0
+Epoch 13 loss 27428065280.0
+Epoch 14 loss 25537634304.0
+Epoch 15 loss 20276592640.0
+Epoch 16 loss 15614136320.0
+Epoch 17 loss 10998859776.0
+Epoch 18 loss 10891747328.0
+Epoch 19 loss 7577269248.0
+Epoch 20 loss 10718672896.0
+Epoch 21 loss 8786010112.0
+Epoch 22 loss 7686661120.0
+Epoch 23 loss 6153442304.0
+Epoch 24 loss 6008170496.0
+Epoch 25 loss 5884946432.0
+Epoch 26 loss 4281257984.0
+Epoch 27 loss 3413558272.0
+Epoch 28 loss 3001368576.0
+Epoch 29 loss 2638596096.0
+Epoch 30 loss 2017174656.0
+Epoch 31 loss 2019613568.0
+Epoch 32 loss 1736566400.0
+Epoch 33 loss 4469120512.0
+Epoch 34 loss 2874252800.0
+Epoch 35 loss 1392772352.0
+Epoch 36 loss 1318171648.0
+Epoch 37 loss 3366706176.0
+Epoch 38 loss 1177145984.0
+Epoch 39 loss 1309154816.0
+Epoch 40 loss 1065464768.0
+Epoch 41 loss 1600049152.0
+Epoch 42 loss 1033509248.0
+Epoch 43 loss 977942272.0
+Epoch 44 loss 1411513344.0
+Epoch 45 loss 1141745408.0
+Epoch 46 loss 958804352.0
+Epoch 47 loss 897009728.0
+Epoch 48 loss 1695508736.0
+Epoch 49 loss 1085771136.0
+Epoch 50 loss 945837632.0
+Epoch 51 loss 945437440.0
+Epoch 52 loss 889801344.0
+Epoch 53 loss 922272896.0
+Epoch 54 loss 994000640.0
+Epoch 55 loss 784662144.0
+Epoch 56 loss 1531784448.0
+Epoch 57 loss 1078194944.0
+Epoch 58 loss 2224052992.0
+Epoch 59 loss 773246528.0
+Epoch 60 loss 842296896.0
+Epoch 61 loss 806703808.0
+Epoch 62 loss 2140004480.0
+Epoch 63 loss 1305069952.0
+Epoch 64 loss 915618944.0
+Epoch 65 loss 711598784.0
+Epoch 66 loss 1968927104.0
+Epoch 67 loss 737934976.0
+Epoch 68 loss 863827328.0
+Epoch 69 loss 744930816.0
+Epoch 70 loss 717940672.0
+Epoch 71 loss 1064802176.0
+Epoch 72 loss 1758518272.0
+Epoch 73 loss 796642048.0
+Epoch 74 loss 1737547008.0
+Epoch 75 loss 791642688.0
+Epoch 76 loss 1716424704.0
+Epoch 77 loss 876082304.0
+Epoch 78 loss 799196032.0
+Epoch 79 loss 1718537216.0
+Epoch 80 loss 959575488.0
+Epoch 81 loss 891587776.0
+Epoch 82 loss 762806784.0
+Epoch 83 loss 725682816.0
+Epoch 84 loss 1630795904.0
+Epoch 85 loss 801412480.0
+Epoch 86 loss 1097660544.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 969020689.6354818, 'MSE - std': 90270552.57606478, 'R2 - mean': 0.8646617866567903, 'R2 - std': 0.009191463919562015} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 33470031872.0
+Epoch 1 loss 37481758720.0
+Epoch 2 loss 39838867456.0
+Epoch 3 loss 38583967744.0
+Epoch 4 loss 34674245632.0
+Epoch 5 loss 39519682560.0
+Epoch 6 loss 33288699904.0
+Epoch 7 loss 33137065984.0
+Epoch 8 loss 36234780672.0
+Epoch 9 loss 33761830912.0
+Epoch 10 loss 36671897600.0
+Epoch 11 loss 30398488576.0
+Epoch 12 loss 30759933952.0
+Epoch 13 loss 26324299776.0
+Epoch 14 loss 24911396864.0
+Epoch 15 loss 18565212160.0
+Epoch 16 loss 15403329536.0
+Epoch 17 loss 12995302400.0
+Epoch 18 loss 7636056064.0
+Epoch 19 loss 7656498176.0
+Epoch 20 loss 6354106368.0
+Epoch 21 loss 6641822720.0
+Epoch 22 loss 6581379072.0
+Epoch 23 loss 5567499776.0
+Epoch 24 loss 5291472896.0
+Epoch 25 loss 4769575936.0
+Epoch 26 loss 4714531328.0
+Epoch 27 loss 4917723648.0
+Epoch 28 loss 4515433984.0
+Epoch 29 loss 2483817472.0
+Epoch 30 loss 2262041856.0
+Epoch 31 loss 2027234432.0
+Epoch 32 loss 2927484416.0
+Epoch 33 loss 1598036992.0
+Epoch 34 loss 2543737344.0
+Epoch 35 loss 1415785216.0
+Epoch 36 loss 992563328.0
+Epoch 37 loss 1022632768.0
+Epoch 38 loss 921216384.0
+Epoch 39 loss 824267904.0
+Epoch 40 loss 801552576.0
+Epoch 41 loss 611360768.0
+Epoch 42 loss 607246144.0
+Epoch 43 loss 819159616.0
+Epoch 44 loss 447820800.0
+Epoch 45 loss 865327872.0
+Epoch 46 loss 763804288.0
+Epoch 47 loss 436441920.0
+Epoch 48 loss 1010838720.0
+Epoch 49 loss 441668608.0
+Epoch 50 loss 1060849728.0
+Epoch 51 loss 407257760.0
+Epoch 52 loss 500195008.0
+Epoch 53 loss 446323840.0
+Epoch 54 loss 331243328.0
+Epoch 55 loss 492926784.0
+Epoch 56 loss 391594720.0
+Epoch 57 loss 422374080.0
+Epoch 58 loss 369092832.0
+Epoch 59 loss 410515712.0
+Epoch 60 loss 336342240.0
+Epoch 61 loss 330994432.0
+Epoch 62 loss 417613888.0
+Epoch 63 loss 408374304.0
+Epoch 64 loss 354678304.0
+Epoch 65 loss 417145504.0
+Epoch 66 loss 358070880.0
+Epoch 67 loss 283532864.0
+Epoch 68 loss 351710720.0
+Epoch 69 loss 296945696.0
+Epoch 70 loss 329262080.0
+Epoch 71 loss 516081216.0
+Epoch 72 loss 326695456.0
+Epoch 73 loss 282477696.0
+Epoch 74 loss 319937248.0
+Epoch 75 loss 391385536.0
+Epoch 76 loss 323283072.0
+Epoch 77 loss 327769600.0
+Epoch 78 loss 433391488.0
+Epoch 79 loss 505115584.0
+Epoch 80 loss 435679040.0
+Epoch 81 loss 295242816.0
+Epoch 82 loss 653582784.0
+Epoch 83 loss 641807936.0
+Epoch 84 loss 309934592.0
+Epoch 85 loss 380863520.0
+Epoch 86 loss 407400832.0
+Epoch 87 loss 468788224.0
+Epoch 88 loss 560155648.0
+Epoch 89 loss 377112128.0
+Epoch 90 loss 357128032.0
+Epoch 91 loss 486827424.0
+Epoch 92 loss 496493312.0
+Epoch 93 loss 343930880.0
+Epoch 94 loss 414378592.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+{'MSE - mean': 813070949.363159, 'MSE - std': 281198406.7696793, 'R2 - mean': 0.882712041804429, 'R2 - std': 0.03226139162254213} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 33889640448.0
+Epoch 1 loss 38732095488.0
+Epoch 2 loss 32178642944.0
+Epoch 3 loss 33933578240.0
+Epoch 4 loss 37929635840.0
+Epoch 5 loss 37971501056.0
+Epoch 6 loss 31714103296.0
+Epoch 7 loss 37539373056.0
+Epoch 8 loss 32231481344.0
+Epoch 9 loss 36263350272.0
+Epoch 10 loss 35306020864.0
+Epoch 11 loss 31996813312.0
+Epoch 12 loss 23134044160.0
+Epoch 13 loss 25386967040.0
+Epoch 14 loss 23443800064.0
+Epoch 15 loss 18250686464.0
+Epoch 16 loss 18434899968.0
+Epoch 17 loss 11664290816.0
+Epoch 18 loss 7876298752.0
+Epoch 19 loss 6074130432.0
+Epoch 20 loss 4887939072.0
+Epoch 21 loss 3333985024.0
+Epoch 22 loss 4242695680.0
+Epoch 23 loss 5414302720.0
+Epoch 24 loss 4329710592.0
+Epoch 25 loss 4652271616.0
+Epoch 26 loss 4259460096.0
+Epoch 27 loss 4180967424.0
+Epoch 28 loss 3642808832.0
+Epoch 29 loss 2298613248.0
+Epoch 30 loss 1743506432.0
+Epoch 31 loss 2436127744.0
+Epoch 32 loss 1127542144.0
+Epoch 33 loss 797936128.0
+Epoch 34 loss 745075968.0
+Epoch 35 loss 1000968320.0
+Epoch 36 loss 686850688.0
+Epoch 37 loss 647190976.0
+Epoch 38 loss 684405696.0
+Epoch 39 loss 499173376.0
+Epoch 40 loss 546968960.0
+Epoch 41 loss 960461696.0
+Epoch 42 loss 705661824.0
+Epoch 43 loss 777677440.0
+Epoch 44 loss 556462208.0
+Epoch 45 loss 498394592.0
+Epoch 46 loss 925157632.0
+Epoch 47 loss 841848896.0
+Epoch 48 loss 950770432.0
+Epoch 49 loss 857168384.0
+Epoch 50 loss 591389056.0
+Epoch 51 loss 741942400.0
+Epoch 52 loss 504556480.0
+Epoch 53 loss 542498752.0
+Epoch 54 loss 713903488.0
+Epoch 55 loss 469443456.0
+Epoch 56 loss 952597632.0
+Epoch 57 loss 530162720.0
+Epoch 58 loss 649906688.0
+Epoch 59 loss 582005248.0
+Epoch 60 loss 823994880.0
+Epoch 61 loss 436670080.0
+Epoch 62 loss 581061440.0
+Epoch 63 loss 1068490624.0
+Epoch 64 loss 669241856.0
+Epoch 65 loss 445794112.0
+Epoch 66 loss 416728384.0
+Epoch 67 loss 739939008.0
+Epoch 68 loss 410500928.0
+Epoch 69 loss 481298016.0
+Epoch 70 loss 554755200.0
+Epoch 71 loss 590810304.0
+Epoch 72 loss 665721536.0
+Epoch 73 loss 427164192.0
+Epoch 74 loss 381100832.0
+Epoch 75 loss 484245312.0
+Epoch 76 loss 604503808.0
+Epoch 77 loss 580841280.0
+Epoch 78 loss 404217632.0
+Epoch 79 loss 446046496.0
+Epoch 80 loss 546074304.0
+Epoch 81 loss 616881536.0
+Epoch 82 loss 399326624.0
+Epoch 83 loss 608214272.0
+Epoch 84 loss 402466080.0
+Epoch 85 loss 376443808.0
+Epoch 86 loss 466646016.0
+Epoch 87 loss 479733568.0
+Epoch 88 loss 749579584.0
+Epoch 89 loss 894458368.0
+Epoch 90 loss 496742592.0
+Epoch 91 loss 515452096.0
+Epoch 92 loss 762081664.0
+Epoch 93 loss 462975360.0
+Epoch 94 loss 541597376.0
+Epoch 95 loss 414537984.0
+Epoch 96 loss 749804160.0
+Epoch 97 loss 533797632.0
+Epoch 98 loss 448881728.0
+Epoch 99 loss 460657792.0
+{'MSE - mean': 750054869.2640469, 'MSE - std': 281322129.55982614, 'R2 - mean': 0.8839801828315684, 'R2 - std': 0.028966716040954348} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 0 finished with value: 750054869.2640469 and parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'dropout': 0.3}. Best is trial 0 with value: 750054869.2640469.
+Best parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'dropout': 0.3}
+In get_device
+Using dim 8 and batch size 64
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 41191104512.0
+Epoch 1 loss 46127616000.0
+Epoch 2 loss 44163358720.0
+Epoch 3 loss 42739032064.0
+Epoch 4 loss 41525927936.0
+Epoch 5 loss 39656800256.0
+Epoch 6 loss 47222657024.0
+Epoch 7 loss 40888000512.0
+Epoch 8 loss 36933738496.0
+Epoch 9 loss 38995877888.0
+Epoch 10 loss 40915841024.0
+Epoch 11 loss 35278962688.0
+Epoch 12 loss 33619394560.0
+Epoch 13 loss 36998438912.0
+Epoch 14 loss 27170381824.0
+Epoch 15 loss 23956410368.0
+Epoch 16 loss 24444018688.0
+Epoch 17 loss 15151587328.0
+Epoch 18 loss 13146523648.0
+Epoch 19 loss 7631093760.0
+Epoch 20 loss 6240622080.0
+Epoch 21 loss 11192819712.0
+Epoch 22 loss 12255495168.0
+Epoch 23 loss 6781941248.0
+Epoch 24 loss 8123594752.0
+Epoch 25 loss 6417528832.0
+Epoch 26 loss 41563074560.0
+Epoch 27 loss 31748784128.0
+Epoch 28 loss 27257849856.0
+Epoch 29 loss 19040264192.0
+Epoch 30 loss 14869450752.0
+Epoch 31 loss 9213266944.0
+Epoch 32 loss 6612251648.0
+Epoch 33 loss 7702996992.0
+Epoch 34 loss 7553210368.0
+Epoch 35 loss 9813037056.0
+Epoch 36 loss 10728358912.0
+Epoch 37 loss 7680448512.0
+Epoch 38 loss 5969132544.0
+Epoch 39 loss 7845695488.0
+Epoch 40 loss 6280709120.0
+Epoch 41 loss 9244206080.0
+Epoch 42 loss 9334902784.0
+Epoch 43 loss 2751274496.0
+Epoch 44 loss 2786108928.0
+Epoch 45 loss 4801101824.0
+Epoch 46 loss 1895580160.0
+Epoch 47 loss 2133351936.0
+Epoch 48 loss 1455861248.0
+Epoch 49 loss 1301591552.0
+Epoch 50 loss 1249654528.0
+Epoch 51 loss 1261016960.0
+Epoch 52 loss 1430044928.0
+Epoch 53 loss 1235306240.0
+Epoch 54 loss 1321490176.0
+Epoch 55 loss 3005193984.0
+Epoch 56 loss 1172270336.0
+Epoch 57 loss 1272083968.0
+Epoch 58 loss 1028757888.0
+Epoch 59 loss 1115573888.0
+Epoch 60 loss 801207744.0
+Epoch 61 loss 1219656960.0
+Epoch 62 loss 944765120.0
+Epoch 63 loss 1026755520.0
+Epoch 64 loss 713825152.0
+Epoch 65 loss 767132224.0
+Epoch 66 loss 692640640.0
+Epoch 67 loss 874751040.0
+Epoch 68 loss 2409695232.0
+Epoch 69 loss 684529792.0
+Epoch 70 loss 763804224.0
+Epoch 71 loss 2284150272.0
+Epoch 72 loss 2229529600.0
+Epoch 73 loss 960491008.0
+Epoch 74 loss 864322688.0
+Epoch 75 loss 1133192576.0
+Epoch 76 loss 694724224.0
+Epoch 77 loss 736988928.0
+Epoch 78 loss 683904256.0
+Epoch 79 loss 695337024.0
+Epoch 80 loss 693171200.0
+Epoch 81 loss 980629120.0
+Epoch 82 loss 667236928.0
+Epoch 83 loss 1165981696.0
+Epoch 84 loss 1643170816.0
+Epoch 85 loss 628491264.0
+Epoch 86 loss 810716800.0
+Epoch 87 loss 1827313408.0
+Epoch 88 loss 621925504.0
+Epoch 89 loss 691842496.0
+Epoch 90 loss 633492672.0
+Epoch 91 loss 732105984.0
+Epoch 92 loss 615183936.0
+Epoch 93 loss 1179687936.0
+Epoch 94 loss 1564904320.0
+Epoch 95 loss 1515391872.0
+Epoch 96 loss 619458624.0
+Epoch 97 loss 723954816.0
+Epoch 98 loss 1713519616.0
+Epoch 99 loss 569843200.0
+Saved Losses
+{'MSE - mean': 755517639.9424025, 'MSE - std': 0.0, 'R2 - mean': 0.898140736654542, 'R2 - std': 0.0} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 37513764864.0
+Epoch 1 loss 42889105408.0
+Epoch 2 loss 42202456064.0
+Epoch 3 loss 39193427968.0
+Epoch 4 loss 41767321600.0
+Epoch 5 loss 38171996160.0
+Epoch 6 loss 35938205696.0
+Epoch 7 loss 38639509504.0
+Epoch 8 loss 41056571392.0
+Epoch 9 loss 42677673984.0
+Epoch 10 loss 34316173312.0
+Epoch 11 loss 34613862400.0
+Epoch 12 loss 32225339392.0
+Epoch 13 loss 26220662784.0
+Epoch 14 loss 27160301568.0
+Epoch 15 loss 18030952448.0
+Epoch 16 loss 16659177472.0
+Epoch 17 loss 11601575936.0
+Epoch 18 loss 10820954112.0
+Epoch 19 loss 7793062912.0
+Epoch 20 loss 9173339136.0
+Epoch 21 loss 5849453568.0
+Epoch 22 loss 5678788096.0
+Epoch 23 loss 9128763392.0
+Epoch 24 loss 8076713984.0
+Epoch 25 loss 7975132160.0
+Epoch 26 loss 7138266112.0
+Epoch 27 loss 6889387008.0
+Epoch 28 loss 35576459264.0
+Epoch 29 loss 29943584768.0
+Epoch 30 loss 19096006656.0
+Epoch 31 loss 14056572928.0
+Epoch 32 loss 12703221760.0
+Epoch 33 loss 8568135680.0
+Epoch 34 loss 6977028096.0
+Epoch 35 loss 8898782208.0
+Epoch 36 loss 9105329152.0
+Epoch 37 loss 6755195904.0
+Epoch 38 loss 6011085312.0
+Epoch 39 loss 8182616064.0
+Epoch 40 loss 5157027328.0
+Epoch 41 loss 7009317376.0
+Epoch 42 loss 6010656768.0
+Epoch 43 loss 6763425792.0
+Epoch 44 loss 7286469632.0
+Epoch 45 loss 7573966336.0
+Epoch 46 loss 3427942912.0
+Epoch 47 loss 3863864320.0
+Epoch 48 loss 4342312960.0
+Epoch 49 loss 2266230784.0
+Epoch 50 loss 1550700544.0
+Epoch 51 loss 1534059008.0
+Epoch 52 loss 2114013056.0
+Epoch 53 loss 1632510336.0
+Epoch 54 loss 1279686144.0
+Epoch 55 loss 1186146688.0
+Epoch 56 loss 1120838144.0
+Epoch 57 loss 1758678400.0
+Epoch 58 loss 1002165440.0
+Epoch 59 loss 1052860032.0
+Epoch 60 loss 1650333312.0
+Epoch 61 loss 1079134464.0
+Epoch 62 loss 874156544.0
+Epoch 63 loss 1235888896.0
+Epoch 64 loss 1589575424.0
+Epoch 65 loss 782939072.0
+Epoch 66 loss 1256089216.0
+Epoch 67 loss 2097481728.0
+Epoch 68 loss 748101312.0
+Epoch 69 loss 722899648.0
+Epoch 70 loss 691431168.0
+Epoch 71 loss 1160254976.0
+Epoch 72 loss 1258321792.0
+Epoch 73 loss 677085312.0
+Epoch 74 loss 1161428224.0
+Epoch 75 loss 1008512640.0
+Epoch 76 loss 635003200.0
+Epoch 77 loss 783856128.0
+Epoch 78 loss 798447104.0
+Epoch 79 loss 598306688.0
+Epoch 80 loss 653850752.0
+Epoch 81 loss 633295936.0
+Epoch 82 loss 961482880.0
+Epoch 83 loss 1417859328.0
+Epoch 84 loss 958329152.0
+Epoch 85 loss 580303616.0
+Epoch 86 loss 695389632.0
+Epoch 87 loss 723164032.0
+Epoch 88 loss 664406656.0
+Epoch 89 loss 663098496.0
+Epoch 90 loss 759772672.0
+Epoch 91 loss 723505088.0
+Epoch 92 loss 730340480.0
+Epoch 93 loss 883197696.0
+Epoch 94 loss 722349120.0
+Epoch 95 loss 925309696.0
+Epoch 96 loss 864281920.0
+Epoch 97 loss 642063104.0
+Epoch 98 loss 707023104.0
+Epoch 99 loss 653062656.0
+Saved Losses
+{'MSE - mean': 790127151.5460403, 'MSE - std': 34609511.603637874, 'R2 - mean': 0.8885566210296154, 'R2 - std': 0.009584115624926504} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 41948446720.0
+Epoch 1 loss 38933970944.0
+Epoch 2 loss 38949265408.0
+Epoch 3 loss 44057231360.0
+Epoch 4 loss 41281822720.0
+Epoch 5 loss 36214325248.0
+Epoch 6 loss 41668206592.0
+Epoch 7 loss 47530434560.0
+Epoch 8 loss 41154895872.0
+Epoch 9 loss 31111544832.0
+Epoch 10 loss 42420543488.0
+Epoch 11 loss 34871246848.0
+Epoch 12 loss 35634114560.0
+Epoch 13 loss 27447549952.0
+Epoch 14 loss 24172720128.0
+Epoch 15 loss 17219147776.0
+Epoch 16 loss 13855850496.0
+Epoch 17 loss 11211928576.0
+Epoch 18 loss 7358724608.0
+Epoch 19 loss 11155857408.0
+Epoch 20 loss 7713686016.0
+Epoch 21 loss 6133044224.0
+Epoch 22 loss 8282720768.0
+Epoch 23 loss 8854500352.0
+Epoch 24 loss 5772386304.0
+Epoch 25 loss 10662190080.0
+Epoch 26 loss 8323324416.0
+Epoch 27 loss 8033173504.0
+Epoch 28 loss 6254450688.0
+Epoch 29 loss 8654131200.0
+Epoch 30 loss 6941150208.0
+Epoch 31 loss 36998717440.0
+Epoch 32 loss 29529444352.0
+Epoch 33 loss 22716624896.0
+Epoch 34 loss 17449648128.0
+Epoch 35 loss 11435708416.0
+Epoch 36 loss 10482411520.0
+Epoch 37 loss 5957506560.0
+Epoch 38 loss 6722715648.0
+Epoch 39 loss 10108977152.0
+Epoch 40 loss 5951030272.0
+Epoch 41 loss 8402815488.0
+Epoch 42 loss 6340724736.0
+Epoch 43 loss 6320739328.0
+Epoch 44 loss 10110908416.0
+Epoch 45 loss 5636072960.0
+Epoch 46 loss 7392448512.0
+Epoch 47 loss 6578864128.0
+Epoch 48 loss 5999721472.0
+Epoch 49 loss 6737059840.0
+Epoch 50 loss 5965167616.0
+Epoch 51 loss 6198828032.0
+Epoch 52 loss 12661952512.0
+Epoch 53 loss 7462410240.0
+Epoch 54 loss 6611441664.0
+Epoch 55 loss 12093812736.0
+Epoch 56 loss 6108325888.0
+Epoch 57 loss 10244047872.0
+Epoch 58 loss 6120606720.0
+Epoch 59 loss 12138762240.0
+Epoch 60 loss 8585351680.0
+Epoch 61 loss 6513304576.0
+Epoch 62 loss 6568908800.0
+Epoch 63 loss 6239720448.0
+Epoch 64 loss 6125219840.0
+Epoch 65 loss 10136700928.0
+Epoch 66 loss 8661212160.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 2930785098.790628, 'MSE - std': 3027479387.1687684, 'R2 - mean': 0.5924773204583765, 'R2 - std': 0.41879247999661606} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 34644492288.0
+Epoch 1 loss 40100765696.0
+Epoch 2 loss 37389197312.0
+Epoch 3 loss 35806232576.0
+Epoch 4 loss 35009777664.0
+Epoch 5 loss 34735878144.0
+Epoch 6 loss 36808613888.0
+Epoch 7 loss 36272054272.0
+Epoch 8 loss 36687364096.0
+Epoch 9 loss 36394369024.0
+Epoch 10 loss 37409132544.0
+Epoch 11 loss 31044206592.0
+Epoch 12 loss 31588833280.0
+Epoch 13 loss 26970370048.0
+Epoch 14 loss 24199102464.0
+Epoch 15 loss 18079457280.0
+Epoch 16 loss 14516455424.0
+Epoch 17 loss 12612495360.0
+Epoch 18 loss 7104222208.0
+Epoch 19 loss 7426869248.0
+Epoch 20 loss 4770359296.0
+Epoch 21 loss 5181549056.0
+Epoch 22 loss 5278673920.0
+Epoch 23 loss 4335188992.0
+Epoch 24 loss 5480596480.0
+Epoch 25 loss 4956826112.0
+Epoch 26 loss 4719314432.0
+Epoch 27 loss 2797268480.0
+Epoch 28 loss 4409411584.0
+Epoch 29 loss 2376651776.0
+Epoch 30 loss 2604865024.0
+Epoch 31 loss 1215026688.0
+Epoch 32 loss 3105758464.0
+Epoch 33 loss 1214127104.0
+Epoch 34 loss 1240918272.0
+Epoch 35 loss 1172970112.0
+Epoch 36 loss 941503104.0
+Epoch 37 loss 1889120000.0
+Epoch 38 loss 861012480.0
+Epoch 39 loss 1180599808.0
+Epoch 40 loss 664748544.0
+Epoch 41 loss 483403648.0
+Epoch 42 loss 530980672.0
+Epoch 43 loss 470563136.0
+Epoch 44 loss 886991936.0
+Epoch 45 loss 875832192.0
+Epoch 46 loss 453253376.0
+Epoch 47 loss 392744128.0
+Epoch 48 loss 352909504.0
+Epoch 49 loss 434851712.0
+Epoch 50 loss 434097600.0
+Epoch 51 loss 454756576.0
+Epoch 52 loss 605283712.0
+Epoch 53 loss 722051584.0
+Epoch 54 loss 629222336.0
+Epoch 55 loss 485155584.0
+Epoch 56 loss 453395872.0
+Epoch 57 loss 567817600.0
+Epoch 58 loss 357672064.0
+Epoch 59 loss 446727360.0
+Epoch 60 loss 303750688.0
+Epoch 61 loss 412976704.0
+Epoch 62 loss 565394304.0
+Epoch 63 loss 581337024.0
+Epoch 64 loss 522304896.0
+Epoch 65 loss 486114080.0
+Epoch 66 loss 346979008.0
+Epoch 67 loss 397853184.0
+Epoch 68 loss 345506496.0
+Epoch 69 loss 314698304.0
+Epoch 70 loss 460779616.0
+Epoch 71 loss 406932672.0
+Epoch 72 loss 344219616.0
+Epoch 73 loss 348790368.0
+Epoch 74 loss 540701120.0
+Epoch 75 loss 398983232.0
+Epoch 76 loss 453281344.0
+Epoch 77 loss 518129024.0
+Epoch 78 loss 376675456.0
+Epoch 79 loss 330046464.0
+Epoch 80 loss 477025664.0
+Epoch 81 loss 600372736.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 2300625638.042239, 'MSE - std': 2839987045.3420973, 'R2 - mean': 0.6756051539744694, 'R2 - std': 0.3902192538708525} 
+ 
+
+In get_device
+Using dim 8 and batch size 64
+Epoch 0 loss 32117682176.0
+Epoch 1 loss 38276472832.0
+Epoch 2 loss 32963596288.0
+Epoch 3 loss 37361823744.0
+Epoch 4 loss 34959106048.0
+Epoch 5 loss 33807548416.0
+Epoch 6 loss 34677964800.0
+Epoch 7 loss 31565008896.0
+Epoch 8 loss 36371488768.0
+Epoch 9 loss 33314985984.0
+Epoch 10 loss 30301648896.0
+Epoch 11 loss 30407950336.0
+Epoch 12 loss 27040047104.0
+Epoch 13 loss 22501830656.0
+Epoch 14 loss 21789046784.0
+Epoch 15 loss 18826641408.0
+Epoch 16 loss 12795793408.0
+Epoch 17 loss 10846377984.0
+Epoch 18 loss 6758349824.0
+Epoch 19 loss 4839384576.0
+Epoch 20 loss 3753739520.0
+Epoch 21 loss 4377004032.0
+Epoch 22 loss 4494605312.0
+Epoch 23 loss 4268690176.0
+Epoch 24 loss 5305492480.0
+Epoch 25 loss 5687836672.0
+Epoch 26 loss 4027860224.0
+Epoch 27 loss 4563128832.0
+Epoch 28 loss 2590309888.0
+Epoch 29 loss 1502933504.0
+Epoch 30 loss 1284875264.0
+Epoch 31 loss 883436032.0
+Epoch 32 loss 1038432768.0
+Epoch 33 loss 772957184.0
+Epoch 34 loss 743672832.0
+Epoch 35 loss 411671168.0
+Epoch 36 loss 462350848.0
+Epoch 37 loss 906023360.0
+Epoch 38 loss 654816768.0
+Epoch 39 loss 440238592.0
+Epoch 40 loss 569467264.0
+Epoch 41 loss 617764608.0
+Epoch 42 loss 621255936.0
+Epoch 43 loss 873392960.0
+Epoch 44 loss 490561536.0
+Epoch 45 loss 472979872.0
+Epoch 46 loss 1209886336.0
+Epoch 47 loss 657566272.0
+Epoch 48 loss 585517056.0
+Epoch 49 loss 563340800.0
+Epoch 50 loss 1049917696.0
+Epoch 51 loss 904960384.0
+Epoch 52 loss 482604640.0
+Epoch 53 loss 562007168.0
+Epoch 54 loss 654867584.0
+Epoch 55 loss 516242176.0
+Epoch 56 loss 463663552.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 1954519699.1820903, 'MSE - std': 2632789094.82431, 'R2 - mean': 0.715081802158615, 'R2 - std': 0.3578414116345942} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 1954519699.1820903, 'MSE - std': 2632789094.82431, 'R2 - mean': 0.715081802158615, 'R2 - std': 0.3578414116345942}
+Train time: 339.892273977
+Inference time: 0.20011542559977896
+Finished cross validation
+
+
+----------------------------------------------------------------------------
+Training SAINT Vesion 1 with Dataset: config/mercedes_benz.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/mercedes_benz.yml', data_parallel=False, dataset='Mercedes_Benz', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=1, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8], num_classes=1, num_features=377, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Mercedes_Benz...
+Dataset loaded! 
+
+X b4 encoding : ['k' 'v' 'at' 'a' 'd' 'u' 'j' 'o' 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0
+ 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 1 0 1 0 1 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0
+ 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0
+ 0 0 1 0 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0] 
+
+(4209, 376)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 1, 2, 3, 4, 5, 6, 7]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 1, 2, 3, 4, 5, 6, 7]
+Cat Idx Part II: [0, 1, 2, 3, 4, 5, 6, 7] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['k' 'v' 'at' 'a' 'd' 'u' 'j' 'o' 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0
+ 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 1 0 1 0 1 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0
+ 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0
+ 0 0 1 0 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0] 
+ 
+
+Scaling the data...
+X after Scaling: ['k' 'v' 'at' 'a' 'd' 'u' 'j' 'o' -0.11612160982660122 0.0
+ -0.2849058320955993 4.031128874149275 -0.865245497821163
+ -0.021803626898918238 -0.05118882083767691 -0.08752714275137063
+ 11.249242398733102 -0.3324967514273824 -0.4081351239224057
+ 19.535515443324336 -0.3086066999241838 -0.14527993356801028
+ -0.043638383310758345 -0.07081191035104524 -1.4664409643065783
+ -0.18342410088604666 -0.21197983827982328 -0.06733948474149916
+ 1.8176030869238453 -0.10626687049827596 -0.015415660399455184
+ -0.07412493166611012 1.8176030869238453 -0.06733948474149916
+ 1.8176030869238453 -0.18548985977839724 -0.015415660399455184
+ -0.026707054531881675 -0.10740432270821094 -0.015415660399455182
+ -0.27901417822707236 -0.10740432270821094 -0.5823799460208114
+ 0.8211116511628718 -0.11400171003847596 -0.15113985701693927
+ -0.3729703757912443 -0.5218908047589058 -1.6107028874473046
+ -0.21013751979714299 -0.08329345138161945 -0.2132007163556104
+ -0.07248695558099073 -0.1469759903779281 -0.11612160982660122
+ 0.8598000920836817 -0.026707054531881675 -0.03778295579690521
+ -4.5492720614027675 -0.07729905176288829 -0.10740432270821096
+ -0.7748420665767201 -0.04629100498862757 -0.16684971632828097
+ -0.04363838331075835 3.5526552356372787 -0.17566918344782498
+ 0.29501715876698126 -0.33993809947735903 -0.14270121360253515
+ 0.026707054531882064 -0.19356163866207562 -0.2132007163556104
+ -0.11292761741817592 -0.07572824456627533 -0.16073193539951902
+ -4.227817340174881 -0.5450435020310923 -0.13192390185661293
+ -0.03448685956125488 -0.33993809947735903 1.2041352884050467
+ -0.03778295579690521 -0.03084231693103158 -0.08472750968454026
+ -0.026707054531881675 -0.08613836598625603 -0.04081511231911637
+ -0.03084231693103158 0.0 -0.08613836598625603 -0.015415660399455182
+ -1.7704738357692325 -0.06553562146454743 -4.0487728984806095
+ -0.09288103752413639 -1.4925685030163 -3.8120027955988087
+ -0.08329345138161945 -1.908028647225417 -0.04363838331075835
+ -0.048800813613946906 -0.11506628681372201 0.0 -0.12227250988960929
+ -0.2051575641917339 -0.03084231693103158 0.16073193539951902
+ -0.05347134870411735 -0.15113985701693927 2.417416480258292
+ -0.6322451693030825 2.02072594216369 -0.22742941307367104
+ 0.7791674706429502 0.7791674706429502 0.21013751979714312
+ -0.08472750968454026 -0.05118882083767691 -0.021803626898918238
+ -0.05566137575726647 -0.20135511251264882 -0.9903059539116894
+ 0.2082816825743065 -0.373796471073718 -0.2082816825743064
+ 6.048169734957606 -1.4867838833500564 -0.37668053535978807
+ -0.15113985701693927 -0.16684971632828097 0.21320071635561028
+ 0.8477385669106275 -0.2064119557267236 -0.31548340774795636
+ -0.2051575641917339 -0.12025521186108384 0.5461434529412791
+ -0.1994310088043664 0.4874188990810853 -0.03778295579690521
+ -0.2064119557267236 -0.15113985701693927 -0.21682925396065525
+ 0.5119267188936728 -0.30582803536866776 -0.18273100766909092
+ -0.02670705453188168 -0.5137742344298358 -0.2878197989826109
+ 0.627829797836437 -0.6278297978364372 -0.5461434529412791
+ -0.11716792948337855 -0.03448685956125488 -0.496359265037085
+ -0.2064119557267236 -0.6599536963376189 -0.2581661711396995
+ -0.06733948474149914 -0.18548985977839724 -0.03084231693103158
+ -0.6094723131437214 -0.08183497082039462 6.3454476502728285
+ -1.3852301941220277 -0.07729905176288829 -0.09918090646537599
+ -0.13285293857570915 -0.15113985701693924 -0.13192390185661293
+ -0.2297311215183895 -1.122167215373564 4.453833591791048
+ -0.43317558047683696 -0.321816423094047 -0.34470244663261895
+ -0.06368157905902129 26.466960535732095 -0.1383052034372562
+ -1.074777153338997 1.17386800863424 0.3039663401530114
+ -0.015415660399455182 -0.9433909735431699 -0.048800813613946906
+ 1.074777153338997 -0.1085303927655574 -0.10159552876103495
+ -0.1827310076690909 -0.15358871756552997 -0.05347134870411735
+ -0.08183497082039462 -0.46488978042723256 -0.5640886932636001
+ -0.13098872991932262 64.8690989609074 -64.8690989609074
+ -0.14007888143205535 -0.015415660399455184 -0.25921163047054185
+ 0.3360107525161235 -0.015415660399455184 -0.12326949756687881
+ -0.07412493166611012 -0.04363838331075835 -0.08329345138161945
+ -0.3307313663526787 -0.07729905176288829 -0.08613836598625603
+ -0.6740833700455322 -0.26899198482127523 0.8842875306809806
+ -0.09024252088040481 -0.15113985701693927 -1.1173170704403634
+ -0.6819231215849595 -0.3276281026385194 -0.18273100766909092
+ -0.05566137575726647 -0.20135511251264882 -4.904444048877653
+ -0.07248695558099073 -0.12814505183795824 -0.21197983827982328 0.0
+ 1.989371049639779 0.0 -0.021803626898918235 12.219714750002497
+ -3.305073788567413 -0.08329345138161945 -0.05347134870411735
+ -0.3280725208659945 -0.08613836598625603 -0.08472750968454026
+ -0.33993809947735903 -0.026707054531881675 -0.8325150178994717
+ -0.5640886932636001 -0.03778295579690521 -0.08752714275137065
+ -1.1119579958274466 -0.8065905003743334 -0.026707054531881675
+ -0.03778295579690521 -0.07248695558099073 -0.14095798788790348
+ -0.2809877476504253 -0.015415660399455184 -0.04880081361394691
+ -0.015415660399455184 -0.015415660399455182 -0.850224501425592
+ 26.466960535732095 0.21197983827982342 -0.20262926697976008
+ -3.0944105875630195 26.466960535732095 -0.09544907047186942 0.0
+ -0.021803626898918238 -0.01541566039945518 -0.04629100498862757
+ -0.19749105138947126 0.6234184873418637 -0.10039518745690373
+ 0.6131393394849658 -0.20007411525175656 -0.03778295579690521
+ -0.021803626898918238 -0.21197983827982328 -0.015415660399455182
+ -0.05118882083767692 -0.0636815790590213 -0.404563407896863
+ -0.20703676485586361 1.9647587984937644 -0.24042351841717247
+ -0.12718396322718073 -0.01541566039945518 0.0 0.0 -0.10278241916921449
+ -0.09544907047186942 0.0 -0.37791315748757204 -0.015415660399455178
+ -0.015415660399455178 0.0 -0.06733948474149916 -0.06733948474149916
+ -0.510817669459461 -0.22159127222033656 -0.10740432270821094
+ -3.4920420052987846 -0.11612160982660122 4.677071733467426
+ -0.04629100498862757 -0.09795216694323321 -0.08472750968454026
+ -0.05118882083767691 -1.2208736807625507 -0.06553562146454743
+ -0.6562464593151708 -0.8715591687403584 -0.17204309294970996
+ 2.0283530959612293 -0.08752714275137065 -0.026707054531881675
+ -0.021803626898918238 -0.08472750968454026 -0.5600628643152648
+ -0.14948701855038718 -0.0967084173462244 0.8598000920836817
+ -0.07572824456627533 -0.18273100766909092 2.606615515269646
+ -0.20452795204645463 1.139073782934816 0.0 -0.2437231143245928
+ -0.026707054531881675 -0.1567997873734226 1.077862405493946
+ -0.05980416299307149 -0.38200753617076794 -1.0335882489195918
+ -0.08329345138161945 -0.015415660399455184 -0.15113985701693924
+ -0.09024252088040481 -0.15113985701693924 -0.2916735718992556
+ -0.09288103752413639 -0.15113985701693924 -0.22335566381166003 0.0
+ -4.237860245390292 -0.21682925396065525 -0.7158188976374373
+ -0.6503236828648707 -0.23931577925505068 -0.046291004988627565
+ 1.9820624179302295 -0.7835051806453864 -0.4682874794221448
+ -0.03448685956125488 -0.8631482350221719 -0.18133790442933348
+ -0.2878197989826109 0.18753586310573125 -1.0414871068617635
+ -1.7500689451393945 -0.05347134870411735 -0.05347134870411735
+ -0.03448685956125488 -0.23371542852032468 -0.258689296437357
+ -0.021803626898918238 -0.08183497082039462 -0.12025521186108384
+ -0.021803626898918238 -0.14007888143205535 -0.5424762140448446
+ -0.684167454928235 -0.24644651974977083 1.4753317503480041
+ -0.14527993356801028 -0.09795216694323321 -0.09024252088040481
+ -0.08752714275137063 -0.04081511231911637 -0.021803626898918238
+ -0.03778295579690521] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ -0.11612160982660122 0.0 -0.2849058320955993 4.031128874149275
+ -0.865245497821163 -0.021803626898918238 -0.05118882083767691
+ -0.08752714275137063 11.249242398733102 -0.3324967514273824
+ -0.4081351239224057 19.535515443324336 -0.3086066999241838
+ -0.14527993356801028 -0.043638383310758345 -0.07081191035104524
+ -1.4664409643065783 -0.18342410088604666 -0.21197983827982328
+ -0.06733948474149916 1.8176030869238453 -0.10626687049827596
+ -0.015415660399455184 -0.07412493166611012 1.8176030869238453
+ -0.06733948474149916 1.8176030869238453 -0.18548985977839724
+ -0.015415660399455184 -0.026707054531881675 -0.10740432270821094
+ -0.015415660399455182 -0.27901417822707236 -0.10740432270821094
+ -0.5823799460208114 0.8211116511628718 -0.11400171003847596
+ -0.15113985701693927 -0.3729703757912443 -0.5218908047589058
+ -1.6107028874473046 -0.21013751979714299 -0.08329345138161945
+ -0.2132007163556104 -0.07248695558099073 -0.1469759903779281
+ -0.11612160982660122 0.8598000920836817 -0.026707054531881675
+ -0.03778295579690521 -4.5492720614027675 -0.07729905176288829
+ -0.10740432270821096 -0.7748420665767201 -0.04629100498862757
+ -0.16684971632828097 -0.04363838331075835 3.5526552356372787
+ -0.17566918344782498 0.29501715876698126 -0.33993809947735903
+ -0.14270121360253515 0.026707054531882064 -0.19356163866207562
+ -0.2132007163556104 -0.11292761741817592 -0.07572824456627533
+ -0.16073193539951902 -4.227817340174881 -0.5450435020310923
+ -0.13192390185661293 -0.03448685956125488 -0.33993809947735903
+ 1.2041352884050467 -0.03778295579690521 -0.03084231693103158
+ -0.08472750968454026 -0.026707054531881675 -0.08613836598625603
+ -0.04081511231911637 -0.03084231693103158 0.0 -0.08613836598625603
+ -0.015415660399455182 -1.7704738357692325 -0.06553562146454743
+ -4.0487728984806095 -0.09288103752413639 -1.4925685030163
+ -3.8120027955988087 -0.08329345138161945 -1.908028647225417
+ -0.04363838331075835 -0.048800813613946906 -0.11506628681372201 0.0
+ -0.12227250988960929 -0.2051575641917339 -0.03084231693103158
+ 0.16073193539951902 -0.05347134870411735 -0.15113985701693927
+ 2.417416480258292 -0.6322451693030825 2.02072594216369
+ -0.22742941307367104 0.7791674706429502 0.7791674706429502
+ 0.21013751979714312 -0.08472750968454026 -0.05118882083767691
+ -0.021803626898918238 -0.05566137575726647 -0.20135511251264882
+ -0.9903059539116894 0.2082816825743065 -0.373796471073718
+ -0.2082816825743064 6.048169734957606 -1.4867838833500564
+ -0.37668053535978807 -0.15113985701693927 -0.16684971632828097
+ 0.21320071635561028 0.8477385669106275 -0.2064119557267236
+ -0.31548340774795636 -0.2051575641917339 -0.12025521186108384
+ 0.5461434529412791 -0.1994310088043664 0.4874188990810853
+ -0.03778295579690521 -0.2064119557267236 -0.15113985701693927
+ -0.21682925396065525 0.5119267188936728 -0.30582803536866776
+ -0.18273100766909092 -0.02670705453188168 -0.5137742344298358
+ -0.2878197989826109 0.627829797836437 -0.6278297978364372
+ -0.5461434529412791 -0.11716792948337855 -0.03448685956125488
+ -0.496359265037085 -0.2064119557267236 -0.6599536963376189
+ -0.2581661711396995 -0.06733948474149914 -0.18548985977839724
+ -0.03084231693103158 -0.6094723131437214 -0.08183497082039462
+ 6.3454476502728285 -1.3852301941220277 -0.07729905176288829
+ -0.09918090646537599 -0.13285293857570915 -0.15113985701693924
+ -0.13192390185661293 -0.2297311215183895 -1.122167215373564
+ 4.453833591791048 -0.43317558047683696 -0.321816423094047
+ -0.34470244663261895 -0.06368157905902129 26.466960535732095
+ -0.1383052034372562 -1.074777153338997 1.17386800863424
+ 0.3039663401530114 -0.015415660399455182 -0.9433909735431699
+ -0.048800813613946906 1.074777153338997 -0.1085303927655574
+ -0.10159552876103495 -0.1827310076690909 -0.15358871756552997
+ -0.05347134870411735 -0.08183497082039462 -0.46488978042723256
+ -0.5640886932636001 -0.13098872991932262 64.8690989609074
+ -64.8690989609074 -0.14007888143205535 -0.015415660399455184
+ -0.25921163047054185 0.3360107525161235 -0.015415660399455184
+ -0.12326949756687881 -0.07412493166611012 -0.04363838331075835
+ -0.08329345138161945 -0.3307313663526787 -0.07729905176288829
+ -0.08613836598625603 -0.6740833700455322 -0.26899198482127523
+ 0.8842875306809806 -0.09024252088040481 -0.15113985701693927
+ -1.1173170704403634 -0.6819231215849595 -0.3276281026385194
+ -0.18273100766909092 -0.05566137575726647 -0.20135511251264882
+ -4.904444048877653 -0.07248695558099073 -0.12814505183795824
+ -0.21197983827982328 0.0 1.989371049639779 0.0 -0.021803626898918235
+ 12.219714750002497 -3.305073788567413 -0.08329345138161945
+ -0.05347134870411735 -0.3280725208659945 -0.08613836598625603
+ -0.08472750968454026 -0.33993809947735903 -0.026707054531881675
+ -0.8325150178994717 -0.5640886932636001 -0.03778295579690521
+ -0.08752714275137065 -1.1119579958274466 -0.8065905003743334
+ -0.026707054531881675 -0.03778295579690521 -0.07248695558099073
+ -0.14095798788790348 -0.2809877476504253 -0.015415660399455184
+ -0.04880081361394691 -0.015415660399455184 -0.015415660399455182
+ -0.850224501425592 26.466960535732095 0.21197983827982342
+ -0.20262926697976008 -3.0944105875630195 26.466960535732095
+ -0.09544907047186942 0.0 -0.021803626898918238 -0.01541566039945518
+ -0.04629100498862757 -0.19749105138947126 0.6234184873418637
+ -0.10039518745690373 0.6131393394849658 -0.20007411525175656
+ -0.03778295579690521 -0.021803626898918238 -0.21197983827982328
+ -0.015415660399455182 -0.05118882083767692 -0.0636815790590213
+ -0.404563407896863 -0.20703676485586361 1.9647587984937644
+ -0.24042351841717247 -0.12718396322718073 -0.01541566039945518 0.0 0.0
+ -0.10278241916921449 -0.09544907047186942 0.0 -0.37791315748757204
+ -0.015415660399455178 -0.015415660399455178 0.0 -0.06733948474149916
+ -0.06733948474149916 -0.510817669459461 -0.22159127222033656
+ -0.10740432270821094 -3.4920420052987846 -0.11612160982660122
+ 4.677071733467426 -0.04629100498862757 -0.09795216694323321
+ -0.08472750968454026 -0.05118882083767691 -1.2208736807625507
+ -0.06553562146454743 -0.6562464593151708 -0.8715591687403584
+ -0.17204309294970996 2.0283530959612293 -0.08752714275137065
+ -0.026707054531881675 -0.021803626898918238 -0.08472750968454026
+ -0.5600628643152648 -0.14948701855038718 -0.0967084173462244
+ 0.8598000920836817 -0.07572824456627533 -0.18273100766909092
+ 2.606615515269646 -0.20452795204645463 1.139073782934816 0.0
+ -0.2437231143245928 -0.026707054531881675 -0.1567997873734226
+ 1.077862405493946 -0.05980416299307149 -0.38200753617076794
+ -1.0335882489195918 -0.08329345138161945 -0.015415660399455184
+ -0.15113985701693924 -0.09024252088040481 -0.15113985701693924
+ -0.2916735718992556 -0.09288103752413639 -0.15113985701693924
+ -0.22335566381166003 0.0 -4.237860245390292 -0.21682925396065525
+ -0.7158188976374373 -0.6503236828648707 -0.23931577925505068
+ -0.046291004988627565 1.9820624179302295 -0.7835051806453864
+ -0.4682874794221448 -0.03448685956125488 -0.8631482350221719
+ -0.18133790442933348 -0.2878197989826109 0.18753586310573125
+ -1.0414871068617635 -1.7500689451393945 -0.05347134870411735
+ -0.05347134870411735 -0.03448685956125488 -0.23371542852032468
+ -0.258689296437357 -0.021803626898918238 -0.08183497082039462
+ -0.12025521186108384 -0.021803626898918238 -0.14007888143205535
+ -0.5424762140448446 -0.684167454928235 -0.24644651974977083
+ 1.4753317503480041 -0.14527993356801028 -0.09795216694323321
+ -0.09024252088040481 -0.08752714275137063 -0.04081511231911637
+ -0.021803626898918238 -0.03778295579690521] 
+ 
+
+args.num_features: 563
+args.cat_idx: None
+Cat Dims: []
+New Shape: (4209, 563)
+False 
+ 
+
+A new study created in RDB with name: SAINT_Mercedes_Benz
+In get_device
+Using dim 8 and batch size 64
+In get_device
+Using dim 8 and batch size 64
+Trial 0 failed with parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.2} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 312.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 112.44 MiB is free. Including non-PyTorch memory, this process has 7.67 GiB memory in use. Of the allocated memory 7.41 GiB is allocated by PyTorch, and 138.41 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 132, in fit
+    optimizer.step()
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/optimizer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/optimizer.py", line 89, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/adamw.py", line 216, in step
+    has_complex = self._init_group(
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/adamw.py", line 159, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 312.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 112.44 MiB is free. Including non-PyTorch memory, this process has 7.67 GiB memory in use. Of the allocated memory 7.41 GiB is allocated by PyTorch, and 138.41 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Trial 0 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training SAINT Vesion 1 with Dataset: config/allstate.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/allstate.yml', data_parallel=False, dataset='Allstate_Claims', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=1, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116], num_classes=1, num_features=131, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Allstate_Claims...
+Dataset loaded! 
+
+X b4 encoding : ['A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'B' 'A' 'D' 'B' 'B' 'D' 'D' 'B' 'D' 'C' 'B' 'D' 'B' 'A' 'A' 'A'
+ 'A' 'A' 'D' 'B' 'C' 'E' 'A' 'C' 'T' 'B' 'G' 'A' 'A' 'I' 'E' 'G' 'J' 'G'
+ 'BU' 'BC' 'C' 'AS' 'S' 'A' 'O' 'LB' 0.7263 0.245921 0.187583 0.789639
+ 0.310061 0.718367 0.3350599999999999 0.3026 0.67135 0.8351 0.569745
+ 0.594646 0.822493 0.714843] 
+
+(188318, 130)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]
+Cat Idx Part II: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'B' 'A' 'D' 'B' 'B' 'D' 'D' 'B' 'D' 'C' 'B' 'D' 'B' 'A' 'A' 'A'
+ 'A' 'A' 'D' 'B' 'C' 'E' 'A' 'C' 'T' 'B' 'G' 'A' 'A' 'I' 'E' 'G' 'J' 'G'
+ 'BU' 'BC' 'C' 'AS' 'S' 'A' 'O' 'LB' 0.7263 0.245921 0.187583 0.789639
+ 0.310061 0.718367 0.3350599999999999 0.3026 0.67135 0.8351 0.569745
+ 0.594646 0.822493 0.714843] 
+ 
+
+Scaling the data...
+X after Scaling: ['A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'B' 'A' 'D' 'B' 'B' 'D' 'D' 'B' 'D' 'C' 'B' 'D' 'B' 'A' 'A' 'A'
+ 'A' 'A' 'D' 'B' 'C' 'E' 'A' 'C' 'T' 'B' 'G' 'A' 'A' 'I' 'E' 'G' 'J' 'G'
+ 'BU' 'BC' 'C' 'AS' 'S' 'A' 'O' 'LB' 1.238749914994374 -1.2609356061477353
+ -1.5404709478398098 1.4095526019295532 -0.8485379649282767
+ 1.1079077456610602 -0.8400698534898288 -0.9220915124049341
+ 1.0230320281848326 1.8132181032572763 0.36347602679004504
+ 0.4846367827213369 1.547892317048025 0.9848936450970709] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [1.0 0.0 0.0 ... 0.4846367827213369 1.547892317048025 0.9848936450970709] 
+ 
+
+args.num_features: 1153
+args.cat_idx: None
+Cat Dims: []
+New Shape: (188318, 1153)
+False 
+ 
+
+A new study created in RDB with name: SAINT_Allstate_Claims
