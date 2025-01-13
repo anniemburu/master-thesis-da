@@ -1,0 +1,444 @@
+[I 2025-01-08 11:28:16,309] A new study created in RDB with name: TabTransformer_SAT11
+[I 2025-01-08 11:39:01,807] Trial 0 finished with value: 1634373.3126953784 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 0 with value: 1634373.3126953784.
+[I 2025-01-08 11:41:04,001] Trial 1 finished with value: 16221998.597864956 and parameters: {'dim': 64, 'depth': 1, 'heads': 2, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0.3}. Best is trial 0 with value: 1634373.3126953784.
+[I 2025-01-08 11:42:37,327] Trial 2 finished with value: 16230587.175516631 and parameters: {'dim': 256, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -5, 'dropout': 0.1}. Best is trial 0 with value: 1634373.3126953784.
+[I 2025-01-08 11:53:35,252] Trial 3 finished with value: 2830070.7008047258 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 0 with value: 1634373.3126953784.
+[I 2025-01-08 11:54:43,043] Trial 4 finished with value: 16234480.307346905 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -6, 'learning_rate': -6, 'dropout': 0.3}. Best is trial 0 with value: 1634373.3126953784.
+[I 2025-01-08 11:55:59,667] Trial 5 finished with value: 16234710.49268579 and parameters: {'dim': 32, 'depth': 1, 'heads': 4, 'weight_decay': -4, 'learning_rate': -6, 'dropout': 0.1}. Best is trial 0 with value: 1634373.3126953784.
+[I 2025-01-08 12:06:24,492] Trial 6 finished with value: 1588565.9500220935 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 12:14:46,341] Trial 7 finished with value: 2936128.303159903 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 12:23:31,796] Trial 8 finished with value: 2857396.4174490473 and parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 12:25:26,236] Trial 9 finished with value: 16234627.338736951 and parameters: {'dim': 64, 'depth': 6, 'heads': 8, 'weight_decay': -6, 'learning_rate': -6, 'dropout': 0.4}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 12:33:00,050] Trial 10 finished with value: 1938246.8647749785 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 12:41:59,489] Trial 11 finished with value: 1691564.683053799 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 12:50:03,310] Trial 12 finished with value: 1889981.3994362908 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 12:58:16,347] Trial 13 finished with value: 1699761.7582682022 and parameters: {'dim': 128, 'depth': 12, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 13:05:55,935] Trial 14 finished with value: 2966363.2995599224 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 6 with value: 1588565.9500220935.
+[I 2025-01-08 13:15:24,319] Trial 15 finished with value: 1588026.142384549 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 15 with value: 1588026.142384549.
+[I 2025-01-08 13:24:10,729] Trial 16 finished with value: 1645521.821424855 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 15 with value: 1588026.142384549.
+[I 2025-01-08 13:25:40,949] Trial 17 finished with value: 16225879.019693667 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -1, 'learning_rate': -5, 'dropout': 0}. Best is trial 15 with value: 1588026.142384549.
+[I 2025-01-08 13:34:24,007] Trial 18 finished with value: 2871245.6292049573 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 15 with value: 1588026.142384549.
+[I 2025-01-08 13:46:00,978] Trial 19 finished with value: 1496670.8778827009 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 13:56:04,237] Trial 20 finished with value: 2833410.290026751 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 14:04:31,820] Trial 21 finished with value: 1755669.366861031 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 14:15:08,722] Trial 22 finished with value: 1585696.7207938093 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 14:27:22,487] Trial 23 finished with value: 1526990.673384064 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 14:37:05,863] Trial 24 finished with value: 1580869.5102781917 and parameters: {'dim': 128, 'depth': 2, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 14:48:10,888] Trial 25 finished with value: 2696575.399906795 and parameters: {'dim': 128, 'depth': 12, 'heads': 4, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 14:58:57,324] Trial 26 finished with value: 1541740.8568506117 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 15:08:16,870] Trial 27 finished with value: 2807487.29213282 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 15:17:35,035] Trial 28 finished with value: 1594869.8937289766 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 15:27:27,963] Trial 29 finished with value: 1538184.5546686451 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 15:28:45,486] Trial 30 finished with value: 16229862.635148764 and parameters: {'dim': 128, 'depth': 6, 'heads': 4, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 15:39:17,244] Trial 31 finished with value: 1512091.9151397138 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 15:48:47,232] Trial 32 finished with value: 1625927.935787486 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 15:59:01,617] Trial 33 finished with value: 1535051.2460755473 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 16:09:14,908] Trial 34 finished with value: 1507475.6639414835 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 16:19:34,619] Trial 35 finished with value: 2757209.499391311 and parameters: {'dim': 256, 'depth': 1, 'heads': 4, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 16:29:45,192] Trial 36 finished with value: 1551754.2561923263 and parameters: {'dim': 64, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 16:39:50,397] Trial 37 finished with value: 1524563.6696621608 and parameters: {'dim': 128, 'depth': 12, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 16:41:17,639] Trial 38 finished with value: 16228114.002921984 and parameters: {'dim': 128, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -5, 'dropout': 0.1}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 16:48:18,845] Trial 39 finished with value: 3049355.475053558 and parameters: {'dim': 128, 'depth': 12, 'heads': 4, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 16:58:41,566] Trial 40 finished with value: 1558159.8227223635 and parameters: {'dim': 256, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 17:07:53,449] Trial 41 finished with value: 1594826.0478351554 and parameters: {'dim': 128, 'depth': 12, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 17:18:14,731] Trial 42 finished with value: 1562274.8196390101 and parameters: {'dim': 128, 'depth': 6, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 17:26:47,173] Trial 43 finished with value: 1657895.5248266966 and parameters: {'dim': 64, 'depth': 1, 'heads': 4, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 17:35:13,480] Trial 44 finished with value: 1645564.9648493961 and parameters: {'dim': 32, 'depth': 12, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 17:44:27,396] Trial 45 finished with value: 1620026.2151795211 and parameters: {'dim': 256, 'depth': 1, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 19 with value: 1496670.8778827009.
+[I 2025-01-08 17:56:53,108] Trial 46 finished with value: 1451015.8323068037 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 17:58:09,472] Trial 47 finished with value: 16234832.290596869 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -5, 'learning_rate': -6, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 18:07:14,043] Trial 48 finished with value: 2961552.3147518607 and parameters: {'dim': 128, 'depth': 6, 'heads': 8, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 18:17:40,935] Trial 49 finished with value: 1595009.624250894 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 18:26:56,486] Trial 50 finished with value: 1737858.8096668902 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 18:37:01,176] Trial 51 finished with value: 1569582.927956252 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 18:44:30,745] Trial 52 finished with value: 1747250.299643642 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 18:53:38,804] Trial 53 finished with value: 1630694.7792436772 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 19:02:28,709] Trial 54 finished with value: 1618716.603893342 and parameters: {'dim': 128, 'depth': 2, 'heads': 4, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 19:09:46,323] Trial 55 finished with value: 1769872.7317590888 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 19:19:37,944] Trial 56 finished with value: 2798314.9483248005 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 19:29:58,510] Trial 57 finished with value: 1498462.395475209 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 19:37:31,195] Trial 58 finished with value: 1734884.1879933476 and parameters: {'dim': 32, 'depth': 12, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 19:47:10,555] Trial 59 finished with value: 1529762.984802362 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 19:56:52,074] Trial 60 finished with value: 1561765.809501009 and parameters: {'dim': 256, 'depth': 2, 'heads': 8, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 20:04:31,381] Trial 61 finished with value: 1776944.1997170008 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 20:13:07,204] Trial 62 finished with value: 1683670.6613703792 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 20:21:53,207] Trial 63 finished with value: 1647414.800134717 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 20:28:22,073] Trial 64 finished with value: 1791425.1696901661 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 20:35:52,005] Trial 65 finished with value: 2939996.3334765034 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 20:45:37,612] Trial 66 finished with value: 1599793.3539738688 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 20:55:52,740] Trial 67 finished with value: 1543533.1595912105 and parameters: {'dim': 128, 'depth': 6, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 21:05:18,272] Trial 68 finished with value: 1584723.914835582 and parameters: {'dim': 64, 'depth': 3, 'heads': 8, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 21:14:24,706] Trial 69 finished with value: 1595271.5990139372 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 21:16:21,753] Trial 70 finished with value: 16205216.2544218 and parameters: {'dim': 128, 'depth': 12, 'heads': 4, 'weight_decay': -2, 'learning_rate': -5, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 21:25:33,842] Trial 71 finished with value: 1668458.1449365946 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 21:35:35,746] Trial 72 finished with value: 1533150.0582345596 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 21:43:20,109] Trial 73 finished with value: 1713096.6482898958 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 21:55:08,695] Trial 74 finished with value: 1493262.7979845565 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:04:14,588] Trial 75 finished with value: 1597949.8729198712 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:12:45,608] Trial 76 finished with value: 1659588.5546511037 and parameters: {'dim': 64, 'depth': 1, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:21:05,538] Trial 77 finished with value: 1657365.2726880373 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:30:19,697] Trial 78 finished with value: 2837004.3449463034 and parameters: {'dim': 256, 'depth': 12, 'heads': 4, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:40:57,295] Trial 79 finished with value: 1482118.9837142935 and parameters: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:42:17,727] Trial 80 finished with value: 16235222.669072086 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -4, 'learning_rate': -6, 'dropout': 0}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:50:36,691] Trial 81 finished with value: 1683791.3604058386 and parameters: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 22:59:15,985] Trial 82 finished with value: 1639286.6864804772 and parameters: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 23:10:14,523] Trial 83 finished with value: 1530939.1941172297 and parameters: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 23:17:50,591] Trial 84 finished with value: 1755729.7245220628 and parameters: {'dim': 128, 'depth': 2, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 23:27:21,214] Trial 85 finished with value: 1570168.4207473237 and parameters: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 23:34:39,688] Trial 86 finished with value: 1733834.4708939455 and parameters: {'dim': 128, 'depth': 6, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 23:43:57,844] Trial 87 finished with value: 1606869.0865444252 and parameters: {'dim': 64, 'depth': 12, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 46 with value: 1451015.8323068037.
+[I 2025-01-08 23:56:07,447] Trial 88 finished with value: 1442465.274244375 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 00:04:15,146] Trial 89 finished with value: 1665493.9679983545 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 00:13:27,769] Trial 90 finished with value: 1606029.8615973906 and parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 00:22:43,736] Trial 91 finished with value: 1580834.6701319646 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 00:33:13,928] Trial 92 finished with value: 1522130.12918238 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 00:42:07,949] Trial 93 finished with value: 1619505.5580404934 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 00:50:20,045] Trial 94 finished with value: 1675605.7872504406 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 01:00:17,012] Trial 95 finished with value: 1544096.0940771285 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 01:10:51,091] Trial 96 finished with value: 1524543.4665273696 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 01:20:57,470] Trial 97 finished with value: 1560727.8731707167 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 01:31:05,479] Trial 98 finished with value: 1585695.3687877837 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 01:40:21,084] Trial 99 finished with value: 1593049.1885510895 and parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 88 with value: 1442465.274244375.
+[I 2025-01-09 01:50:56,811] A new study created in RDB with name: TabTransformer_Diamonds
+[I 2025-01-09 03:30:00,307] Trial 0 finished with value: 512890.5766758834 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-09 04:19:38,751] Trial 1 finished with value: 14909054.302343553 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -6, 'dropout': 0.2}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-09 04:50:03,409] Trial 2 finished with value: 14837833.89675408 and parameters: {'dim': 256, 'depth': 1, 'heads': 4, 'weight_decay': -3, 'learning_rate': -6, 'dropout': 0.1}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-09 10:25:32,792] Trial 3 finished with value: 1324112.6247657822 and parameters: {'dim': 128, 'depth': 6, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 0 with value: 512890.5766758834.
+[W 2025-01-09 10:26:01,544] Trial 4 failed with parameters: {'dim': 128, 'depth': 12, 'heads': 2, 'weight_decay': -6, 'learning_rate': -6, 'dropout': 0.2} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 2.44 MiB is free. Including non-PyTorch memory, this process has 7.78 GiB memory in use. Of the allocated memory 7.64 GiB is allocated by PyTorch, and 5.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 126, in fit
+    out = self.model(x_categ, x_cont)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 465, in forward
+    x = self.transformer(x_categ)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 352, in forward
+    x = ff(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 266, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 276, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 298, in forward
+    return self.net(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 2.44 MiB is free. Including non-PyTorch memory, this process has 7.78 GiB memory in use. Of the allocated memory 7.64 GiB is allocated by PyTorch, and 5.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[W 2025-01-09 10:26:01,591] Trial 4 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 185, in <module>
+    main(arguments)
+  File "train.py", line 156, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 126, in fit
+    out = self.model(x_categ, x_cont)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 465, in forward
+    x = self.transformer(x_categ)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 352, in forward
+    x = ff(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 266, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 276, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 298, in forward
+    return self.net(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 2.44 MiB is free. Including non-PyTorch memory, this process has 7.78 GiB memory in use. Of the allocated memory 7.64 GiB is allocated by PyTorch, and 5.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-01-09 10:26:07,687] A new study created in RDB with name: TabTransformer_House_Prices_Nominal
+[I 2025-01-09 10:27:03,931] Trial 0 finished with value: 39039254794.80752 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -3, 'learning_rate': -6, 'dropout': 0}. Best is trial 0 with value: 39039254794.80752.
+[I 2025-01-09 10:30:17,114] Trial 1 finished with value: 39036595995.97533 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0.2}. Best is trial 1 with value: 39036595995.97533.
+[I 2025-01-09 10:31:54,981] Trial 2 finished with value: 39038834767.95821 and parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'weight_decay': -6, 'learning_rate': -5, 'dropout': 0.1}. Best is trial 1 with value: 39036595995.97533.
+[I 2025-01-09 10:35:53,205] Trial 3 finished with value: 1518863851.407818 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 10:37:19,131] Trial 4 finished with value: 39039219435.86756 and parameters: {'dim': 256, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -6, 'dropout': 0.1}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 10:41:34,663] Trial 5 finished with value: 5078702995.973251 and parameters: {'dim': 128, 'depth': 6, 'heads': 4, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 10:46:07,053] Trial 6 finished with value: 3631276027.7308755 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 10:47:35,573] Trial 7 finished with value: 39036395305.04909 and parameters: {'dim': 256, 'depth': 1, 'heads': 2, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0.4}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:00:11,075] Trial 8 finished with value: 1521838162.8117101 and parameters: {'dim': 32, 'depth': 12, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:01:38,281] Trial 9 finished with value: 39039202984.637596 and parameters: {'dim': 256, 'depth': 2, 'heads': 4, 'weight_decay': -6, 'learning_rate': -6, 'dropout': 0.3}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:05:42,728] Trial 10 finished with value: 1530923717.065641 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:13:56,738] Trial 11 finished with value: 2085727437.5239472 and parameters: {'dim': 64, 'depth': 12, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:22:51,110] Trial 12 finished with value: 1989416591.091664 and parameters: {'dim': 128, 'depth': 12, 'heads': 4, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:26:43,003] Trial 13 finished with value: 4421012319.383357 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:34:10,030] Trial 14 finished with value: 2172477036.8883605 and parameters: {'dim': 32, 'depth': 12, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:38:15,694] Trial 15 finished with value: 3227457216.577811 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 3 with value: 1518863851.407818.
+[I 2025-01-09 11:43:12,748] Trial 16 finished with value: 1474244652.463939 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 16 with value: 1474244652.463939.
+[I 2025-01-09 11:48:23,808] Trial 17 finished with value: 1217684762.0068197 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 11:52:09,802] Trial 18 finished with value: 4598388814.221659 and parameters: {'dim': 64, 'depth': 3, 'heads': 4, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 11:56:21,868] Trial 19 finished with value: 1518426252.7446985 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:00:31,050] Trial 20 finished with value: 4334442485.538724 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:03:47,401] Trial 21 finished with value: 1590716699.7321153 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:08:12,249] Trial 22 finished with value: 1399074088.3075266 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:13:31,927] Trial 23 finished with value: 1249216761.1282198 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:18:18,017] Trial 24 finished with value: 1470667468.0611863 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:22:38,134] Trial 25 finished with value: 3467129482.676013 and parameters: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:26:02,704] Trial 26 finished with value: 1415620902.4763818 and parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:31:37,338] Trial 27 finished with value: 3499835102.3038926 and parameters: {'dim': 64, 'depth': 6, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:36:11,881] Trial 28 finished with value: 1460169568.4346132 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:37:05,850] Trial 29 finished with value: 39038966878.11822 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -3, 'learning_rate': -5, 'dropout': 0.2}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:41:40,944] Trial 30 finished with value: 1247192829.6959825 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:46:18,097] Trial 31 finished with value: 1591367954.9362907 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:51:41,203] Trial 32 finished with value: 1376834359.3422694 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 12:55:36,920] Trial 33 finished with value: 1677400995.5488098 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:00:42,400] Trial 34 finished with value: 1567104546.9896743 and parameters: {'dim': 128, 'depth': 6, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:03:58,252] Trial 35 finished with value: 4501190080.140046 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:07:51,531] Trial 36 finished with value: 1722220801.0600479 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:11:34,202] Trial 37 finished with value: 1627013859.9783392 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:18:07,885] Trial 38 finished with value: 2610092654.3725586 and parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:19:28,394] Trial 39 finished with value: 39037435413.08881 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -3, 'learning_rate': -5, 'dropout': 0.2}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:20:31,993] Trial 40 finished with value: 39039233005.60453 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -6, 'dropout': 0.3}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:23:38,749] Trial 41 finished with value: 1675169962.1091146 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:27:23,211] Trial 42 finished with value: 1550927334.526838 and parameters: {'dim': 256, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:32:56,025] Trial 43 finished with value: 1311314363.3801503 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:36:36,874] Trial 44 finished with value: 1658308529.8194566 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:40:43,351] Trial 45 finished with value: 1700674240.8322816 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:46:04,424] Trial 46 finished with value: 1277015693.85573 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:54:51,239] Trial 47 finished with value: 4391138156.820396 and parameters: {'dim': 128, 'depth': 12, 'heads': 2, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 13:59:56,834] Trial 48 finished with value: 1249639349.9550729 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:04:21,943] Trial 49 finished with value: 1340213783.7012544 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:09:03,229] Trial 50 finished with value: 1347199864.723434 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:12:52,900] Trial 51 finished with value: 1481365644.038842 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:17:24,496] Trial 52 finished with value: 1393330012.349175 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:21:44,914] Trial 53 finished with value: 1345143177.1210303 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:26:13,348] Trial 54 finished with value: 1609045098.2035606 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:33:45,068] Trial 55 finished with value: 4425611205.562922 and parameters: {'dim': 128, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:38:44,148] Trial 56 finished with value: 1447897218.4947255 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:44:23,769] Trial 57 finished with value: 1221949193.4722528 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:47:45,341] Trial 58 finished with value: 1349638532.7501915 and parameters: {'dim': 64, 'depth': 1, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:52:27,056] Trial 59 finished with value: 4315258155.661442 and parameters: {'dim': 128, 'depth': 6, 'heads': 2, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 14:58:06,211] Trial 60 finished with value: 1301955855.7778754 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 15:02:27,243] Trial 61 finished with value: 1488472904.6109948 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 17 with value: 1217684762.0068197.
+[I 2025-01-09 15:08:10,387] Trial 62 finished with value: 1206564305.300672 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:13:34,057] Trial 63 finished with value: 1479793312.9120154 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:17:46,352] Trial 64 finished with value: 1388432853.979132 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:22:42,997] Trial 65 finished with value: 1403211665.0498319 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:27:04,289] Trial 66 finished with value: 1399686605.3251815 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:31:27,401] Trial 67 finished with value: 1256702156.4669461 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:35:05,853] Trial 68 finished with value: 1482008326.938791 and parameters: {'dim': 256, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:38:54,707] Trial 69 finished with value: 1411771933.895364 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:42:14,415] Trial 70 finished with value: 1469806137.1816955 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:46:17,461] Trial 71 finished with value: 1347387536.5120137 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:50:52,413] Trial 72 finished with value: 1314821431.9596643 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:57:38,581] Trial 73 finished with value: 2236704081.437936 and parameters: {'dim': 128, 'depth': 12, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 15:59:17,992] Trial 74 finished with value: 39039199056.3615 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -6, 'dropout': 0.5}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 16:02:43,218] Trial 75 finished with value: 1387797553.3132172 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 16:08:24,062] Trial 76 finished with value: 1240545429.3000803 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 16:12:42,875] Trial 77 finished with value: 9839954298.41229 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 16:14:59,679] Trial 78 finished with value: 38992172510.075905 and parameters: {'dim': 32, 'depth': 6, 'heads': 4, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0.3}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 16:19:51,582] Trial 79 finished with value: 1358565321.5936806 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 16:24:50,075] Trial 80 finished with value: 1372876725.1354527 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 62 with value: 1206564305.300672.
+[I 2025-01-09 16:30:31,538] Trial 81 finished with value: 1176059515.8883579 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 16:35:23,537] Trial 82 finished with value: 1281332188.2309322 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 16:40:09,487] Trial 83 finished with value: 1335712217.0032983 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 16:46:02,948] Trial 84 finished with value: 1271450987.4839792 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 16:50:57,977] Trial 85 finished with value: 1430809803.0765448 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 16:55:45,441] Trial 86 finished with value: 1387030069.436744 and parameters: {'dim': 256, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 16:59:19,807] Trial 87 finished with value: 1749671822.4443555 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:03:26,167] Trial 88 finished with value: 1391272896.1920419 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:07:29,097] Trial 89 finished with value: 1321949160.2524648 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:12:22,013] Trial 90 finished with value: 2531139280.300573 and parameters: {'dim': 64, 'depth': 12, 'heads': 8, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:17:04,873] Trial 91 finished with value: 1393308469.1403337 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:21:46,627] Trial 92 finished with value: 1314723276.0019348 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:26:20,499] Trial 93 finished with value: 1378431767.2694848 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:31:14,768] Trial 94 finished with value: 1284178107.8251786 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:36:03,159] Trial 95 finished with value: 1549279198.1099753 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:39:20,705] Trial 96 finished with value: 1310972555.8855186 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:43:12,545] Trial 97 finished with value: 1595424265.3334365 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:49:31,152] Trial 98 finished with value: 1461669249.2503104 and parameters: {'dim': 32, 'depth': 6, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:54:58,542] Trial 99 finished with value: 1196609532.2076383 and parameters: {'dim': 256, 'depth': 3, 'heads': 4, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 81 with value: 1176059515.8883579.
+[I 2025-01-09 17:59:25,639] A new study created in RDB with name: TabTransformer_Mercedes_Benz
+[I 2025-01-09 18:00:59,978] Trial 0 finished with value: 124.92623953317215 and parameters: {'dim': 64, 'depth': 6, 'heads': 8, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 0 with value: 124.92623953317215.
+[I 2025-01-09 18:04:48,615] Trial 1 finished with value: 122.63207308425417 and parameters: {'dim': 64, 'depth': 12, 'heads': 4, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 1 with value: 122.63207308425417.
+[I 2025-01-09 18:08:35,012] Trial 2 finished with value: 123.08680928563017 and parameters: {'dim': 128, 'depth': 6, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 1 with value: 122.63207308425417.
+[I 2025-01-09 18:10:12,852] Trial 3 finished with value: 122.19041917700483 and parameters: {'dim': 64, 'depth': 6, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 3 with value: 122.19041917700483.
+[I 2025-01-09 18:13:48,536] Trial 4 finished with value: 123.75701695005175 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 3 with value: 122.19041917700483.
+[I 2025-01-09 18:15:15,744] Trial 5 finished with value: 121.78796224833143 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 18:16:37,504] Trial 6 finished with value: 125.47718044125807 and parameters: {'dim': 256, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 18:18:22,395] Trial 7 finished with value: 123.29828835410983 and parameters: {'dim': 32, 'depth': 12, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 18:28:59,972] Trial 8 finished with value: 140.16067779777828 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -6, 'learning_rate': -5, 'dropout': 0}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 18:31:53,712] Trial 9 finished with value: 127.26556985063064 and parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 18:49:50,048] Trial 10 finished with value: 2961.621643685692 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -6, 'dropout': 0.4}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 18:51:12,627] Trial 11 finished with value: 124.37600202649669 and parameters: {'dim': 32, 'depth': 6, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:01:46,859] Trial 12 finished with value: 140.84369148676942 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -2, 'learning_rate': -5, 'dropout': 0.5}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:03:11,800] Trial 13 finished with value: 123.13426807681904 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:14:59,580] Trial 14 finished with value: 5662.507160989686 and parameters: {'dim': 64, 'depth': 6, 'heads': 2, 'weight_decay': -2, 'learning_rate': -6, 'dropout': 0.2}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:16:31,183] Trial 15 finished with value: 122.7736155197108 and parameters: {'dim': 32, 'depth': 2, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:26:50,386] Trial 16 finished with value: 143.26838429987805 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0.5}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:30:37,067] Trial 17 finished with value: 123.22094085701656 and parameters: {'dim': 128, 'depth': 6, 'heads': 4, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:32:02,691] Trial 18 finished with value: 122.13650437462016 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:35:49,552] Trial 19 finished with value: 122.12138141442774 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:39:46,231] Trial 20 finished with value: 122.62318778864282 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:41:21,404] Trial 21 finished with value: 122.16305024503401 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:45:44,431] Trial 22 finished with value: 123.20599992196881 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:47:12,293] Trial 23 finished with value: 123.24960894293619 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 19:57:49,256] Trial 24 finished with value: 141.37005073919286 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -5, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:01:46,463] Trial 25 finished with value: 123.704707206392 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:03:08,608] Trial 26 finished with value: 125.71534178465421 and parameters: {'dim': 32, 'depth': 1, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:04:31,464] Trial 27 finished with value: 122.97982536237741 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:08:35,063] Trial 28 finished with value: 124.7138272267903 and parameters: {'dim': 32, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:10:01,858] Trial 29 finished with value: 123.32091352448765 and parameters: {'dim': 256, 'depth': 3, 'heads': 8, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:21:49,090] Trial 30 finished with value: 136.73354855405734 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -5, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:23:20,892] Trial 31 finished with value: 124.56680185639414 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:24:43,571] Trial 32 finished with value: 122.208286177122 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 5 with value: 121.78796224833143.
+[I 2025-01-09 20:26:13,224] Trial 33 finished with value: 120.22263741192339 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:30:12,291] Trial 34 finished with value: 123.608262877751 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:31:58,530] Trial 35 finished with value: 122.1742305124566 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:35:07,643] Trial 36 finished with value: 126.57179390563962 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:36:44,699] Trial 37 finished with value: 124.36240283633924 and parameters: {'dim': 256, 'depth': 3, 'heads': 8, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:38:13,620] Trial 38 finished with value: 124.05642136189695 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:39:48,472] Trial 39 finished with value: 124.09569036453236 and parameters: {'dim': 64, 'depth': 1, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:43:43,928] Trial 40 finished with value: 122.8578827851517 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:45:17,098] Trial 41 finished with value: 121.47957491877091 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:46:50,029] Trial 42 finished with value: 122.18448678442284 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:48:20,975] Trial 43 finished with value: 125.83812413620794 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:49:44,426] Trial 44 finished with value: 124.87046374828633 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:51:04,911] Trial 45 finished with value: 124.4044144907995 and parameters: {'dim': 256, 'depth': 3, 'heads': 8, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:52:32,695] Trial 46 finished with value: 124.18987093795181 and parameters: {'dim': 32, 'depth': 6, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:56:21,872] Trial 47 finished with value: 122.42677061554616 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 20:57:58,187] Trial 48 finished with value: 124.12489569290419 and parameters: {'dim': 32, 'depth': 1, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:09:29,248] Trial 49 finished with value: 5878.237942200869 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -2, 'learning_rate': -6, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:12:36,773] Trial 50 finished with value: 127.23978008923409 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:14:17,153] Trial 51 finished with value: 122.50029310835983 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:15:53,859] Trial 52 finished with value: 124.24693804165156 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:17:32,898] Trial 53 finished with value: 124.02384086866854 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:18:59,177] Trial 54 finished with value: 121.37121079995657 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:20:24,151] Trial 55 finished with value: 124.98779592732032 and parameters: {'dim': 32, 'depth': 6, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:21:48,063] Trial 56 finished with value: 125.6038776904874 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:32:27,001] Trial 57 finished with value: 141.90175188722415 and parameters: {'dim': 64, 'depth': 3, 'heads': 4, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:34:04,680] Trial 58 finished with value: 124.96879737308097 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:35:27,947] Trial 59 finished with value: 120.9819900907859 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:39:14,141] Trial 60 finished with value: 123.5231329509667 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0.2}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:40:49,444] Trial 61 finished with value: 123.34111594561082 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:42:15,631] Trial 62 finished with value: 124.81097513884124 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:43:48,177] Trial 63 finished with value: 125.39968547504093 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:45:16,862] Trial 64 finished with value: 124.77566584014626 and parameters: {'dim': 32, 'depth': 12, 'heads': 8, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:46:44,362] Trial 65 finished with value: 122.05307355980952 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:48:10,549] Trial 66 finished with value: 124.63586466424711 and parameters: {'dim': 32, 'depth': 1, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 33 with value: 120.22263741192339.
+[I 2025-01-09 21:49:40,126] Trial 67 finished with value: 119.53025804588569 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 21:50:58,487] Trial 68 finished with value: 123.17975514139334 and parameters: {'dim': 128, 'depth': 6, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 21:52:27,071] Trial 69 finished with value: 125.55661975822723 and parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 21:53:53,578] Trial 70 finished with value: 124.9609070856942 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 21:55:34,338] Trial 71 finished with value: 123.55974403276002 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 21:56:53,320] Trial 72 finished with value: 124.69452977006283 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 21:58:34,798] Trial 73 finished with value: 122.3100013725231 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:02:33,350] Trial 74 finished with value: 124.69999715224648 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:17:12,876] Trial 75 finished with value: 4351.692032671849 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -6, 'dropout': 0.3}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:18:44,195] Trial 76 finished with value: 121.77853423802586 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:20:10,024] Trial 77 finished with value: 125.14646069000298 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:21:35,474] Trial 78 finished with value: 125.93470635220918 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:22:54,350] Trial 79 finished with value: 124.83738759371354 and parameters: {'dim': 64, 'depth': 12, 'heads': 2, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:24:26,627] Trial 80 finished with value: 127.04509999822021 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:25:57,555] Trial 81 finished with value: 123.48365101018108 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:27:23,118] Trial 82 finished with value: 122.24449517122949 and parameters: {'dim': 32, 'depth': 3, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.2}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:28:53,233] Trial 83 finished with value: 124.1269170478914 and parameters: {'dim': 64, 'depth': 3, 'heads': 8, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:30:19,434] Trial 84 finished with value: 121.51428466866955 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:31:55,260] Trial 85 finished with value: 120.33101331898597 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:33:29,228] Trial 86 finished with value: 124.38714114899915 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:34:51,309] Trial 87 finished with value: 121.22014139167781 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:36:20,635] Trial 88 finished with value: 123.35191676409889 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:37:47,486] Trial 89 finished with value: 126.11419612433056 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:39:18,148] Trial 90 finished with value: 122.66104992889912 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:40:48,920] Trial 91 finished with value: 122.99430113635917 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:42:24,716] Trial 92 finished with value: 121.68706200728347 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:44:00,672] Trial 93 finished with value: 123.7155029652292 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:45:40,734] Trial 94 finished with value: 123.3395003167788 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:47:18,242] Trial 95 finished with value: 122.53407569033452 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:49:06,106] Trial 96 finished with value: 123.74447999138863 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:50:35,821] Trial 97 finished with value: 123.94133273721204 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:52:10,132] Trial 98 finished with value: 124.39554772020415 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:53:34,594] Trial 99 finished with value: 120.97427553675007 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0}. Best is trial 67 with value: 119.53025804588569.
+[I 2025-01-09 22:55:14,734] A new study created in RDB with name: TabTransformer_Allstate_Claims
+srun: error: IO: Node 0 already established stream!
+srun: error: IO: Node 0 already established stream!
+srun: error: IO: Node 0 already established stream!
+srun: error: IO: Node 0 already established stream!
+srun: error: IO: Node 0 already established stream!
+[I 2025-01-10 01:23:23,254] Trial 0 finished with value: 3577806.9490809576 and parameters: {'dim': 64, 'depth': 6, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0}. Best is trial 0 with value: 3577806.9490809576.
+[I 2025-01-10 02:39:04,479] Trial 1 finished with value: 3552409.371169546 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 1 with value: 3552409.371169546.
+[I 2025-01-10 03:11:22,161] Trial 2 finished with value: 3588660.7415467286 and parameters: {'dim': 32, 'depth': 6, 'heads': 8, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 1 with value: 3552409.371169546.
+[I 2025-01-10 06:26:15,011] Trial 3 finished with value: 3564248.9047012804 and parameters: {'dim': 128, 'depth': 2, 'heads': 2, 'weight_decay': -1, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 1 with value: 3552409.371169546.
+[I 2025-01-10 15:11:09,155] Trial 4 finished with value: 3861271.788583166 and parameters: {'dim': 256, 'depth': 12, 'heads': 2, 'weight_decay': -2, 'learning_rate': -6, 'dropout': 0}. Best is trial 1 with value: 3552409.371169546.
+[I 2025-01-10 23:39:45,876] Trial 5 finished with value: 3864410.4971537427 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'weight_decay': -2, 'learning_rate': -6, 'dropout': 0.1}. Best is trial 1 with value: 3552409.371169546.
+[I 2025-01-11 05:32:34,708] Trial 6 finished with value: 3569087.0467714407 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0.3}. Best is trial 1 with value: 3552409.371169546.
+[I 2025-01-11 06:51:16,184] Trial 7 finished with value: 3554768.2490767254 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 1 with value: 3552409.371169546.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 949200 ON stud-000 CANCELLED AT 2025-01-11T11:28:28 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 949200.4 ON stud-000 CANCELLED AT 2025-01-11T11:28:28 DUE TO TIME LIMIT ***
