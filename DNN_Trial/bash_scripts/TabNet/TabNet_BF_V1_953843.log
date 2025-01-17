@@ -1,0 +1,122 @@
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/black_friday.yml', data_parallel=False, dataset='Black_Friday', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=18, nominal_idx=[0, 2, 3, 5, 6, 7, 8], num_classes=1, num_features=9, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Black_Friday...
+Dataset loaded! 
+
+X b4 encoding : ['F' '0-17' 10 'A' 2 0 1 6 14] 
+
+(166821, 9)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 2, 3, 5, 6, 7, 8]
+Ordinal Idx: [1]
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 2, 3, 5, 6, 7, 8]
+Cat Idx Part II: [0, 1, 2, 3, 5, 6, 7, 8] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['F' '0-17' 10 'A' 2 0 1 6 14] 
+ 
+
+Scaling the data...
+X after Scaling: ['F' '0-17' 10 'A' 0.1076520112629123 0 1 6 14] 
+ 
+
+Ordinal Idx: [0]
+One Hot Encoding...
+X after One Hot Encoding: ['0-17' 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0
+ 0.1076520112629123] 
+ 
+
+args.num_features: 71
+args.cat_idx: [0]
+Cat Dims: [8]
+New Shape: (166821, 71)
+True 
+ 
+
+Using an existing study with name 'TabNet_Black_Friday' instead of creating a new one.
+In get_device
+In get_device
+epoch 0  | loss: 30954000.95202| eval_rmse: 3804.09529|  0:01:23s
+epoch 1  | loss: 13166100.54511| eval_rmse: 3714.00368|  0:02:46s
+epoch 2  | loss: 12905710.14731| eval_rmse: 3746.97856|  0:04:09s
+epoch 3  | loss: 12753725.70969| eval_rmse: 3866.22653|  0:05:32s
+epoch 4  | loss: 12713020.91027| eval_rmse: 3548.13247|  0:06:55s
+epoch 5  | loss: 12606041.09309| eval_rmse: 3584.98754|  0:08:16s
+epoch 6  | loss: 12552836.68138| eval_rmse: 3628.8465|  0:09:38s
+epoch 7  | loss: 12615772.96257| eval_rmse: 3579.85719|  0:11:01s
+epoch 8  | loss: 12540341.51823| eval_rmse: 3608.3179|  0:12:24s
+epoch 9  | loss: 12476267.29798| eval_rmse: 3537.06927|  0:13:45s
+epoch 10 | loss: 12516640.6761| eval_rmse: 3694.85168|  0:15:04s
+epoch 11 | loss: 12461591.14203| eval_rmse: 3885.61482|  0:16:25s
+epoch 12 | loss: 12456786.28983| eval_rmse: 3642.50352|  0:17:45s
+epoch 13 | loss: 12380744.4477| eval_rmse: 3817.16544|  0:19:06s
+epoch 14 | loss: 12345550.90595| eval_rmse: 3519.79751|  0:20:26s
+epoch 15 | loss: 12286580.94722| eval_rmse: 3540.69561|  0:21:46s
+epoch 16 | loss: 12291509.25288| eval_rmse: 3549.30557|  0:23:05s
+epoch 17 | loss: 12285443.51775| eval_rmse: 3749.47951|  0:24:25s
+epoch 18 | loss: 12242318.79846| eval_rmse: 3677.90393|  0:25:44s
+epoch 19 | loss: 12228651.26823| eval_rmse: 4622.78414|  0:27:04s
+epoch 20 | loss: 12173732.4928| eval_rmse: 3647.47618|  0:28:24s
+epoch 21 | loss: 12109416.45873| eval_rmse: 3742.08702|  0:29:44s
+epoch 22 | loss: 12081918.83061| eval_rmse: 3786.44806|  0:31:03s
+Trial 5 failed with parameters: {'n_d': 43, 'n_steps': 8, 'gamma': 1.1243034120263502, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.0047928248364812005, 'mask_type': 'entmax'} because of the following error: RuntimeError('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 40, in fit
+    self.model.fit(X, y, eval_set=[(X_val, y_val)], eval_name=["eval"], eval_metric=self.metric,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 258, in fit
+    self._train_epoch(train_dataloader)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 489, in _train_epoch
+    batch_logs = self._train_batch(X, y)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 527, in _train_batch
+    output, M_loss = self.network(X)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 616, in forward
+    return self.tabnet(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 492, in forward
+    steps_output, M_loss = self.encoder(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 181, in forward
+    out = self.feat_transformers[step](masked_x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 737, in forward
+    x = self.shared(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 772, in forward
+    scale = torch.sqrt(torch.FloatTensor([0.5]).to(x.device))
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Trial 5 failed with value None.
