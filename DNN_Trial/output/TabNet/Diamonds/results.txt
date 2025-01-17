@@ -1,0 +1,770 @@
+2025-01-15 03:07:28.622349
+TabNet - Diamonds
+
+MSE - mean: 464519.52627
+MSE - std: 297064.09680
+R2 - mean: 0.97048
+R2 - std: 0.01966
+
+Train time: 1336.656717
+Test time: 2.194787
+
+Best Parameters: {'n_d': 46, 'n_steps': 10, 'gamma': 1.1569303629370262, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.006610905379107259, 'mask_type': 'entmax', 'n_a': 46, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:13:48.714973
+TabNet - Diamonds
+
+MSE - mean: 322473.48295
+MSE - std: 34017.52988
+R2 - mean: 0.97974
+R2 - std: 0.00202
+
+Train time: 804.784199
+Test time: 0.925207
+
+Best Parameters: {'n_d': 57, 'n_steps': 5, 'gamma': 1.0099894852884028, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.009594888535369958, 'mask_type': 'sparsemax', 'n_a': 57, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:55:09.915129
+TabNet - Diamonds
+
+MSE - mean: 375000.35528
+MSE - std: 124668.00278
+R2 - mean: 0.97630
+R2 - std: 0.00844
+
+Train time: 1223.290268
+Test time: 2.026825
+
+Best Parameters: {'n_d': 64, 'n_steps': 9, 'gamma': 1.0982829319013463, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.019115544308408724, 'mask_type': 'entmax', 'n_a': 64, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:02:34.021518
+TabNet - Diamonds
+
+MSE - mean: 329980.28833
+MSE - std: 26457.29980
+R2 - mean: 0.97927
+R2 - std: 0.00153
+
+Train time: 816.872568
+Test time: 1.044436
+
+Best Parameters: {'n_d': 41, 'n_steps': 3, 'gamma': 1.2587623254188454, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.005363196718993145, 'mask_type': 'entmax', 'n_a': 41, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:10:01.714432
+TabNet - Diamonds
+
+MSE - mean: 358429.29393
+MSE - std: 67125.95878
+R2 - mean: 0.97741
+R2 - std: 0.00460
+
+Train time: 817.366348
+Test time: 1.050549
+
+Best Parameters: {'n_d': 58, 'n_steps': 3, 'gamma': 1.3227703591854145, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.030650753146174478, 'mask_type': 'entmax', 'n_a': 58, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:10:32.017073
+TabNet - Diamonds
+
+MSE - mean: 507519.56240
+MSE - std: 251930.23280
+R2 - mean: 0.96801
+R2 - std: 0.01596
+
+Train time: 731.695634
+Test time: 1.356789
+
+Best Parameters: {'n_d': 36, 'n_steps': 4, 'gamma': 1.1817768781200717, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.019113086857213808, 'mask_type': 'entmax', 'n_a': 36, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:54:22.886460
+TabNet - Diamonds
+
+MSE - mean: 462370.31489
+MSE - std: 308084.05515
+R2 - mean: 0.97060
+R2 - std: 0.02037
+
+Train time: 1259.640912
+Test time: 1.141194
+
+Best Parameters: {'n_d': 62, 'n_steps': 3, 'gamma': 1.1285942243715872, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.001695042385670843, 'mask_type': 'entmax', 'n_a': 62, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:04:46.515019
+TabNet - Diamonds
+
+MSE - mean: 434191.75834
+MSE - std: 261975.03610
+R2 - mean: 0.97281
+R2 - std: 0.01617
+
+Train time: 852.569981
+Test time: 1.219471
+
+Best Parameters: {'n_d': 48, 'n_steps': 3, 'gamma': 1.3505464347480507, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.15530512873192392, 'mask_type': 'entmax', 'n_a': 48, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 13:24:24.302066
+TabNet - Diamonds
+
+MSE - mean: 319466.51622
+MSE - std: 32995.70444
+R2 - mean: 0.97988
+R2 - std: 0.00247
+
+Train time: 963.925804
+Test time: 1.337064
+
+Best Parameters: {'n_d': 56, 'n_steps': 4, 'gamma': 1.056783981110702, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.30934964833499534, 'mask_type': 'entmax', 'n_a': 56, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 14:30:34.841530
+TabNet - Diamonds
+
+MSE - mean: 372012.83707
+MSE - std: 88506.30107
+R2 - mean: 0.97652
+R2 - std: 0.00612
+
+Train time: 803.158536
+Test time: 0.967759
+
+Best Parameters: {'n_d': 52, 'n_steps': 3, 'gamma': 1.2649505646297334, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.004477838817069673, 'mask_type': 'sparsemax', 'n_a': 52, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 15:41:33.673301
+TabNet - Diamonds
+
+MSE - mean: 396262.40615
+MSE - std: 118720.38897
+R2 - mean: 0.97497
+R2 - std: 0.00801
+
+Train time: 858.176882
+Test time: 1.533306
+
+Best Parameters: {'n_d': 45, 'n_steps': 5, 'gamma': 1.1846294020980421, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.08598753799435166, 'mask_type': 'entmax', 'n_a': 45, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 16:48:43.692250
+TabNet - Diamonds
+
+MSE - mean: 327521.74673
+MSE - std: 23573.48813
+R2 - mean: 0.97940
+R2 - std: 0.00177
+
+Train time: 813.778131
+Test time: 1.065854
+
+Best Parameters: {'n_d': 60, 'n_steps': 3, 'gamma': 1.0322900775368427, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.24716920606048964, 'mask_type': 'entmax', 'n_a': 60, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 17:58:19.148770
+TabNet - Diamonds
+
+MSE - mean: 432795.30548
+MSE - std: 266205.32535
+R2 - mean: 0.97250
+R2 - std: 0.01764
+
+Train time: 843.891699
+Test time: 0.936051
+
+Best Parameters: {'n_d': 49, 'n_steps': 4, 'gamma': 1.0912986946036125, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.20912477932179568, 'mask_type': 'entmax', 'n_a': 49, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 18:32:55.907117
+TabNet - Diamonds
+
+MSE - mean: 303050.58970
+MSE - std: 23608.99537
+R2 - mean: 0.98097
+R2 - std: 0.00125
+
+Train time: 423.534829
+Test time: 0.490258
+
+Best Parameters: {'n_d': 33, 'n_steps': 3, 'gamma': 1.5582647042152291, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.10052648819270729, 'mask_type': 'entmax', 'n_a': 33, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 19:10:19.684938
+TabNet - Diamonds
+
+MSE - mean: 412922.77945
+MSE - std: 128470.14490
+R2 - mean: 0.97396
+R2 - std: 0.00840
+
+Train time: 457.518166
+Test time: 0.494193
+
+Best Parameters: {'n_d': 33, 'n_steps': 3, 'gamma': 1.6442692192948336, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.3483745328781203, 'mask_type': 'entmax', 'n_a': 33, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 19:45:58.882860
+TabNet - Diamonds
+
+MSE - mean: 325581.33501
+MSE - std: 49435.01222
+R2 - mean: 0.97956
+R2 - std: 0.00291
+
+Train time: 436.179718
+Test time: 0.485789
+
+Best Parameters: {'n_d': 42, 'n_steps': 3, 'gamma': 1.4818920855700068, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.0984207712432805, 'mask_type': 'entmax', 'n_a': 42, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 20:35:05.316381
+TabNet - Diamonds
+
+MSE - mean: 314915.25862
+MSE - std: 13875.36967
+R2 - mean: 0.98022
+R2 - std: 0.00065
+
+Train time: 596.197385
+Test time: 0.800546
+
+Best Parameters: {'n_d': 38, 'n_steps': 4, 'gamma': 1.6398305492536396, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.16814641237310143, 'mask_type': 'entmax', 'n_a': 38, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 21:54:12.501652
+TabNet - Diamonds
+
+MSE - mean: 310108.23307
+MSE - std: 15404.08139
+R2 - mean: 0.98052
+R2 - std: 0.00086
+
+Train time: 958.231964
+Test time: 1.143161
+
+Best Parameters: {'n_d': 62, 'n_steps': 3, 'gamma': 1.5632120848823485, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.2109689057501646, 'mask_type': 'entmax', 'n_a': 62, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-15 22:59:50.748924
+TabNet - Diamonds
+
+MSE - mean: 314063.41071
+MSE - std: 17232.78112
+R2 - mean: 0.98026
+R2 - std: 0.00108
+
+Train time: 798.616983
+Test time: 0.709868
+
+Best Parameters: {'n_d': 19, 'n_steps': 4, 'gamma': 1.4238939760099332, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 2, 'momentum': 0.008664257591562688, 'mask_type': 'entmax', 'n_a': 19, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 00:59:33.199890
+TabNet - Diamonds
+
+MSE - mean: 320960.86992
+MSE - std: 34947.94044
+R2 - mean: 0.97984
+R2 - std: 0.00203
+
+Train time: 1446.946980
+Test time: 1.771964
+
+Best Parameters: {'n_d': 13, 'n_steps': 7, 'gamma': 1.8671918955279385, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 5, 'momentum': 0.07986702269655835, 'mask_type': 'entmax', 'n_a': 13, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 02:00:44.054870
+TabNet - Diamonds
+
+MSE - mean: 319940.10839
+MSE - std: 12981.55586
+R2 - mean: 0.97989
+R2 - std: 0.00076
+
+Train time: 742.334426
+Test time: 0.894035
+
+Best Parameters: {'n_d': 28, 'n_steps': 3, 'gamma': 1.3667942001767117, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.12993442122238333, 'mask_type': 'entmax', 'n_a': 28, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 03:14:25.164384
+TabNet - Diamonds
+
+MSE - mean: 300782.98281
+MSE - std: 16044.98130
+R2 - mean: 0.98110
+R2 - std: 0.00088
+
+Train time: 895.471062
+Test time: 0.863674
+
+Best Parameters: {'n_d': 25, 'n_steps': 4, 'gamma': 1.2933717560336726, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.05014932935935607, 'mask_type': 'entmax', 'n_a': 25, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 03:57:20.011392
+TabNet - Diamonds
+
+MSE - mean: 422786.82162
+MSE - std: 135754.89074
+R2 - mean: 0.97328
+R2 - std: 0.00920
+
+Train time: 520.777672
+Test time: 0.897316
+
+Best Parameters: {'n_d': 25, 'n_steps': 6, 'gamma': 1.2980507182455467, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.033994752998961306, 'mask_type': 'sparsemax', 'n_a': 25, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 04:38:44.448386
+TabNet - Diamonds
+
+MSE - mean: 423934.65162
+MSE - std: 163211.43140
+R2 - mean: 0.97335
+R2 - std: 0.01017
+
+Train time: 502.898345
+Test time: 0.881274
+
+Best Parameters: {'n_d': 31, 'n_steps': 4, 'gamma': 1.4525557785718637, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.04591521452790249, 'mask_type': 'entmax', 'n_a': 31, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 05:21:22.252905
+TabNet - Diamonds
+
+MSE - mean: 341567.27220
+MSE - std: 73437.58889
+R2 - mean: 0.97857
+R2 - std: 0.00443
+
+Train time: 518.368373
+Test time: 0.699319
+
+Best Parameters: {'n_d': 22, 'n_steps': 3, 'gamma': 1.3825436522824677, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.303285942687192, 'mask_type': 'entmax', 'n_a': 22, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 06:22:20.260786
+TabNet - Diamonds
+
+MSE - mean: 544472.94361
+MSE - std: 476028.42545
+R2 - mean: 0.96526
+R2 - std: 0.03129
+
+Train time: 740.721274
+Test time: 0.896763
+
+Best Parameters: {'n_d': 18, 'n_steps': 5, 'gamma': 1.1152960033899986, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.025271149128145657, 'mask_type': 'entmax', 'n_a': 18, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 07:39:12.447236
+TabNet - Diamonds
+
+MSE - mean: 312641.46015
+MSE - std: 25147.84018
+R2 - mean: 0.98035
+R2 - std: 0.00152
+
+Train time: 932.911780
+Test time: 0.938456
+
+Best Parameters: {'n_d': 35, 'n_steps': 4, 'gamma': 1.2277856276398118, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.05833820025560204, 'mask_type': 'entmax', 'n_a': 35, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 08:29:21.946129
+TabNet - Diamonds
+
+MSE - mean: 431626.40378
+MSE - std: 223576.66356
+R2 - mean: 0.97283
+R2 - std: 0.01415
+
+Train time: 608.071374
+Test time: 1.012063
+
+Best Parameters: {'n_d': 24, 'n_steps': 3, 'gamma': 1.691757885159708, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.10906052723563767, 'mask_type': 'entmax', 'n_a': 24, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 09:08:46.369637
+TabNet - Diamonds
+
+MSE - mean: 469031.95673
+MSE - std: 213426.84330
+R2 - mean: 0.97030
+R2 - std: 0.01423
+
+Train time: 476.841748
+Test time: 1.092203
+
+Best Parameters: {'n_d': 20, 'n_steps': 4, 'gamma': 1.587683406606061, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.04558631153107006, 'mask_type': 'entmax', 'n_a': 20, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 09:57:32.548148
+TabNet - Diamonds
+
+MSE - mean: 297465.32494
+MSE - std: 18307.37714
+R2 - mean: 0.98132
+R2 - std: 0.00092
+
+Train time: 593.892039
+Test time: 0.634814
+
+Best Parameters: {'n_d': 15, 'n_steps': 3, 'gamma': 1.1547273615849214, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.13843887521853776, 'mask_type': 'entmax', 'n_a': 15, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 10:42:59.313706
+TabNet - Diamonds
+
+MSE - mean: 318748.92757
+MSE - std: 20638.29501
+R2 - mean: 0.97998
+R2 - std: 0.00107
+
+Train time: 553.075940
+Test time: 0.633125
+
+Best Parameters: {'n_d': 8, 'n_steps': 3, 'gamma': 1.1336353059012303, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.1442140682661213, 'mask_type': 'entmax', 'n_a': 8, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 12:03:32.056374
+TabNet - Diamonds
+
+MSE - mean: 436351.88641
+MSE - std: 202220.55336
+R2 - mean: 0.97261
+R2 - std: 0.01252
+
+Train time: 979.102122
+Test time: 0.779998
+
+Best Parameters: {'n_d': 15, 'n_steps': 4, 'gamma': 1.1665290587566777, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.0010438548065516134, 'mask_type': 'entmax', 'n_a': 15, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 13:14:32.092752
+TabNet - Diamonds
+
+MSE - mean: 386137.32387
+MSE - std: 103161.87119
+R2 - mean: 0.97566
+R2 - std: 0.00678
+
+Train time: 859.091687
+Test time: 1.488564
+
+Best Parameters: {'n_d': 11, 'n_steps': 8, 'gamma': 1.0760084136147663, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.014065426998884347, 'mask_type': 'entmax', 'n_a': 11, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 14:03:27.696739
+TabNet - Diamonds
+
+MSE - mean: 630963.64217
+MSE - std: 628529.91785
+R2 - mean: 0.95966
+R2 - std: 0.04122
+
+Train time: 595.398793
+Test time: 0.600588
+
+Best Parameters: {'n_d': 16, 'n_steps': 3, 'gamma': 1.1893534087545878, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.18132480679846422, 'mask_type': 'entmax', 'n_a': 16, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 15:03:16.399417
+TabNet - Diamonds
+
+MSE - mean: 385561.37701
+MSE - std: 187926.80565
+R2 - mean: 0.97585
+R2 - std: 0.01157
+
+Train time: 727.710305
+Test time: 0.707952
+
+Best Parameters: {'n_d': 26, 'n_steps': 3, 'gamma': 1.2885369039227614, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.24518501726137118, 'mask_type': 'entmax', 'n_a': 26, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 16:00:37.594047
+TabNet - Diamonds
+
+MSE - mean: 311996.87279
+MSE - std: 27846.39717
+R2 - mean: 0.98040
+R2 - std: 0.00167
+
+Train time: 695.804488
+Test time: 0.989643
+
+Best Parameters: {'n_d': 14, 'n_steps': 3, 'gamma': 1.0300335217322791, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.12019288141427664, 'mask_type': 'entmax', 'n_a': 14, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 17:02:58.812511
+TabNet - Diamonds
+
+MSE - mean: 303120.54038
+MSE - std: 10972.38092
+R2 - mean: 0.98095
+R2 - std: 0.00070
+
+Train time: 757.161635
+Test time: 0.902235
+
+Best Parameters: {'n_d': 63, 'n_steps': 4, 'gamma': 1.2342588354147759, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.09458777825510498, 'mask_type': 'entmax', 'n_a': 63, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 17:59:29.525106
+TabNet - Diamonds
+
+MSE - mean: 355459.41621
+MSE - std: 63164.04040
+R2 - mean: 0.97760
+R2 - std: 0.00435
+
+Train time: 685.488428
+Test time: 0.968239
+
+Best Parameters: {'n_d': 62, 'n_steps': 5, 'gamma': 1.2363075715200593, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.07924575482944132, 'mask_type': 'entmax', 'n_a': 62, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 18:36:14.400174
+TabNet - Diamonds
+
+MSE - mean: 502349.47717
+MSE - std: 208538.31557
+R2 - mean: 0.96824
+R2 - std: 0.01360
+
+Train time: 445.427364
+Test time: 0.840285
+
+Best Parameters: {'n_d': 59, 'n_steps': 4, 'gamma': 1.001619071294634, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.10002423505385626, 'mask_type': 'sparsemax', 'n_a': 59, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 19:20:14.849347
+TabNet - Diamonds
+
+MSE - mean: 367825.34325
+MSE - std: 97068.47187
+R2 - mean: 0.97678
+R2 - std: 0.00665
+
+Train time: 535.217646
+Test time: 0.710021
+
+Best Parameters: {'n_d': 55, 'n_steps': 4, 'gamma': 1.1976379390392071, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.01645766739059006, 'mask_type': 'entmax', 'n_a': 55, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 20:26:00.472941
+TabNet - Diamonds
+
+MSE - mean: 397868.02157
+MSE - std: 219192.86046
+R2 - mean: 0.97507
+R2 - std: 0.01353
+
+Train time: 797.291124
+Test time: 1.080096
+
+Best Parameters: {'n_d': 63, 'n_steps': 5, 'gamma': 1.1451600192253708, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.06687231591935086, 'mask_type': 'entmax', 'n_a': 63, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 21:23:51.495895
+TabNet - Diamonds
+
+MSE - mean: 318732.39463
+MSE - std: 21482.09048
+R2 - mean: 0.97995
+R2 - std: 0.00167
+
+Train time: 702.281361
+Test time: 0.916272
+
+Best Parameters: {'n_d': 60, 'n_steps': 4, 'gamma': 1.2556950507162083, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.14165232071098147, 'mask_type': 'entmax', 'n_a': 60, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 22:17:50.157126
+TabNet - Diamonds
+
+MSE - mean: 379910.09769
+MSE - std: 148796.11765
+R2 - mean: 0.97612
+R2 - std: 0.00940
+
+Train time: 655.828548
+Test time: 0.779908
+
+Best Parameters: {'n_d': 31, 'n_steps': 4, 'gamma': 1.102960879177306, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.07394397463698141, 'mask_type': 'entmax', 'n_a': 31, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 23:16:35.856012
+TabNet - Diamonds
+
+MSE - mean: 310140.26102
+MSE - std: 20829.05480
+R2 - mean: 0.98052
+R2 - std: 0.00114
+
+Train time: 713.553619
+Test time: 0.883487
+
+Best Parameters: {'n_d': 20, 'n_steps': 3, 'gamma': 1.3380868716610597, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.18700085777504422, 'mask_type': 'entmax', 'n_a': 20, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-16 23:56:12.491591
+TabNet - Diamonds
+
+MSE - mean: 457941.49086
+MSE - std: 292731.36428
+R2 - mean: 0.97133
+R2 - std: 0.01808
+
+Train time: 479.621818
+Test time: 1.029902
+
+Best Parameters: {'n_d': 63, 'n_steps': 3, 'gamma': 1.0433496847560306, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.2908347041902888, 'mask_type': 'entmax', 'n_a': 63, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 00:52:37.100319
+TabNet - Diamonds
+
+MSE - mean: 308665.15045
+MSE - std: 19947.75484
+R2 - mean: 0.98061
+R2 - std: 0.00106
+
+Train time: 684.760179
+Test time: 0.909041
+
+Best Parameters: {'n_d': 58, 'n_steps': 3, 'gamma': 1.166966327585866, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.053796168951042556, 'mask_type': 'entmax', 'n_a': 58, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 01:58:30.182329
+TabNet - Diamonds
+
+MSE - mean: 577198.48640
+MSE - std: 529609.52126
+R2 - mean: 0.96314
+R2 - std: 0.03478
+
+Train time: 797.456420
+Test time: 1.302163
+
+Best Parameters: {'n_d': 64, 'n_steps': 4, 'gamma': 1.3170347676703469, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.09438566367591524, 'mask_type': 'entmax', 'n_a': 64, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 03:03:26.096588
+TabNet - Diamonds
+
+MSE - mean: 302544.05618
+MSE - std: 15940.32317
+R2 - mean: 0.98098
+R2 - std: 0.00106
+
+Train time: 790.604743
+Test time: 0.672667
+
+Best Parameters: {'n_d': 23, 'n_steps': 3, 'gamma': 1.5330261700586671, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.21350064705032634, 'mask_type': 'entmax', 'n_a': 23, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 03:50:44.727110
+TabNet - Diamonds
+
+MSE - mean: 366974.25733
+MSE - std: 104146.68254
+R2 - mean: 0.97694
+R2 - std: 0.00656
+
+Train time: 575.504960
+Test time: 0.706868
+
+Best Parameters: {'n_d': 34, 'n_steps': 3, 'gamma': 1.5394720664132817, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.3840743040475317, 'mask_type': 'entmax', 'n_a': 34, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 04:52:22.122142
+TabNet - Diamonds
+
+MSE - mean: 366568.49684
+MSE - std: 59946.75723
+R2 - mean: 0.97691
+R2 - std: 0.00410
+
+Train time: 746.145295
+Test time: 1.248575
+
+Best Parameters: {'n_d': 29, 'n_steps': 6, 'gamma': 1.5941680884682103, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.15775438402394243, 'mask_type': 'entmax', 'n_a': 29, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 05:26:30.220460
+TabNet - Diamonds
+
+MSE - mean: 439238.26680
+MSE - std: 184288.62855
+R2 - mean: 0.97220
+R2 - std: 0.01233
+
+Train time: 415.069949
+Test time: 0.692180
+
+Best Parameters: {'n_d': 38, 'n_steps': 3, 'gamma': 1.5322637171757212, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.2065722290510415, 'mask_type': 'sparsemax', 'n_a': 38, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 06:25:17.603869
+TabNet - Diamonds
+
+MSE - mean: 310135.40108
+MSE - std: 21594.45226
+R2 - mean: 0.98052
+R2 - std: 0.00112
+
+Train time: 713.326558
+Test time: 1.019374
+
+Best Parameters: {'n_d': 23, 'n_steps': 4, 'gamma': 1.5010150384083285, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.23843303902154067, 'mask_type': 'entmax', 'n_a': 23, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 07:16:45.904293
+TabNet - Diamonds
+
+MSE - mean: 316500.31667
+MSE - std: 34121.31971
+R2 - mean: 0.98014
+R2 - std: 0.00185
+
+Train time: 626.312801
+Test time: 0.729724
+
+Best Parameters: {'n_d': 45, 'n_steps': 3, 'gamma': 1.6130919953746115, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.0027812937451910887, 'mask_type': 'entmax', 'n_a': 45, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 08:06:05.024484
+TabNet - Diamonds
+
+MSE - mean: 497554.51109
+MSE - std: 264123.31631
+R2 - mean: 0.96846
+R2 - std: 0.01747
+
+Train time: 597.336964
+Test time: 1.173705
+
+Best Parameters: {'n_d': 22, 'n_steps': 3, 'gamma': 1.0713481395481712, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.12751388772650757, 'mask_type': 'entmax', 'n_a': 22, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-17 09:27:25.718039
+TabNet - Diamonds
+
+MSE - mean: 308680.54841
+MSE - std: 12596.64025
+R2 - mean: 0.98061
+R2 - std: 0.00060
+
+Train time: 985.616256
+Test time: 1.200537
+
+Best Parameters: {'n_d': 17, 'n_steps': 3, 'gamma': 1.2770556764266912, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.33151577675979627, 'mask_type': 'entmax', 'n_a': 17, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
