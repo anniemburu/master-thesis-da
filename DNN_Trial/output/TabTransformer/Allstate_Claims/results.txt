@@ -1,0 +1,70 @@
+2025-01-19 10:38:19.286203
+TabTransformer - Allstate_Claims
+
+MSE - mean: 3758325.80665
+MSE - std: 256119.61322
+R2 - mean: 0.55476
+R2 - std: 0.01478
+
+Train time: 7602.258169
+Test time: 6.770799
+
+Best Parameters: {'dim': 32, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -5, 'dropout': 0}
+
+
+2025-01-19 11:45:25.541272
+TabTransformer - Allstate_Claims
+
+MSE - mean: 3557416.50841
+MSE - std: 185806.90305
+R2 - mean: 0.57826
+R2 - std: 0.01059
+
+Train time: 5490.972324
+Test time: 6.639914
+
+Best Parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.1}
+
+
+2025-01-19 12:12:35.718494
+TabTransformer - Allstate_Claims
+
+MSE - mean: 3596006.21341
+MSE - std: 188803.08844
+R2 - mean: 0.57365
+R2 - std: 0.01217
+
+Train time: 2176.481560
+Test time: 6.674443
+
+Best Parameters: {'dim': 256, 'depth': 3, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}
+
+
+2025-01-19 13:17:15.493462
+TabTransformer - Allstate_Claims
+
+MSE - mean: 3551278.97940
+MSE - std: 189773.75444
+R2 - mean: 0.57900
+R2 - std: 0.01104
+
+Train time: 5276.027359
+Test time: 6.814441
+
+Best Parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.5}
+
+
+2025-01-19 13:45:36.091553
+TabTransformer - Allstate_Claims
+
+MSE - mean: 3578821.01770
+MSE - std: 204917.87451
+R2 - mean: 0.57573
+R2 - std: 0.01440
+
+Train time: 2269.106241
+Test time: 6.536954
+
+Best Parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}
+
+
