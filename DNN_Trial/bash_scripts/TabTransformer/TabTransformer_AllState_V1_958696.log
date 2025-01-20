@@ -1,0 +1,2210 @@
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/allstate.yml', data_parallel=False, dataset='Allstate_Claims', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabTransformer', n_trials=100, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116], num_classes=1, num_features=131, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Allstate_Claims...
+Dataset loaded! 
+
+X b4 encoding : ['A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'B' 'A' 'D' 'B' 'B' 'D' 'D' 'B' 'D' 'C' 'B' 'D' 'B' 'A' 'A' 'A'
+ 'A' 'A' 'D' 'B' 'C' 'E' 'A' 'C' 'T' 'B' 'G' 'A' 'A' 'I' 'E' 'G' 'J' 'G'
+ 'BU' 'BC' 'C' 'AS' 'S' 'A' 'O' 'LB' 0.7263 0.245921 0.187583 0.789639
+ 0.310061 0.718367 0.3350599999999999 0.3026 0.67135 0.8351 0.569745
+ 0.594646 0.822493 0.714843] 
+
+(188318, 130)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]
+Cat Idx Part II: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'B' 'A' 'D' 'B' 'B' 'D' 'D' 'B' 'D' 'C' 'B' 'D' 'B' 'A' 'A' 'A'
+ 'A' 'A' 'D' 'B' 'C' 'E' 'A' 'C' 'T' 'B' 'G' 'A' 'A' 'I' 'E' 'G' 'J' 'G'
+ 'BU' 'BC' 'C' 'AS' 'S' 'A' 'O' 'LB' 0.7263 0.245921 0.187583 0.789639
+ 0.310061 0.718367 0.3350599999999999 0.3026 0.67135 0.8351 0.569745
+ 0.594646 0.822493 0.714843] 
+ 
+
+Scaling the data...
+X after Scaling: ['A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'B' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'B' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A' 'A'
+ 'A' 'A' 'B' 'A' 'D' 'B' 'B' 'D' 'D' 'B' 'D' 'C' 'B' 'D' 'B' 'A' 'A' 'A'
+ 'A' 'A' 'D' 'B' 'C' 'E' 'A' 'C' 'T' 'B' 'G' 'A' 'A' 'I' 'E' 'G' 'J' 'G'
+ 'BU' 'BC' 'C' 'AS' 'S' 'A' 'O' 'LB' 1.238749914994374 -1.2609356061477353
+ -1.5404709478398098 1.4095526019295532 -0.8485379649282767
+ 1.1079077456610602 -0.8400698534898288 -0.9220915124049341
+ 1.0230320281848326 1.8132181032572763 0.36347602679004504
+ 0.4846367827213369 1.547892317048025 0.9848936450970709] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [1.0 0.0 0.0 ... 0.4846367827213369 1.547892317048025 0.9848936450970709] 
+ 
+
+args.num_features: 1153
+args.cat_idx: None
+Cat Dims: []
+New Shape: (188318, 1153)
+False 
+ 
+
+Using an existing study with name 'TabTransformer_Allstate_Claims' instead of creating a new one.
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 8885270.00000
+Epoch 1: Val Loss 8272374.00000
+Epoch 2: Val Loss 7875109.50000
+Epoch 3: Val Loss 7341685.00000
+Epoch 4: Val Loss 6666907.50000
+Epoch 5: Val Loss 5932476.00000
+Epoch 6: Val Loss 5358922.00000
+Epoch 7: Val Loss 5014455.50000
+Epoch 8: Val Loss 4797433.00000
+Epoch 9: Val Loss 4618612.50000
+Epoch 10: Val Loss 4490355.00000
+Epoch 11: Val Loss 4395938.00000
+Epoch 12: Val Loss 4327784.50000
+Epoch 13: Val Loss 4286330.50000
+Epoch 14: Val Loss 4231119.00000
+Epoch 15: Val Loss 4198803.50000
+Epoch 16: Val Loss 4156950.25000
+Epoch 17: Val Loss 4124975.25000
+Epoch 18: Val Loss 4117702.25000
+Epoch 19: Val Loss 4088553.50000
+Epoch 20: Val Loss 4071318.50000
+Epoch 21: Val Loss 4053671.50000
+Epoch 22: Val Loss 4042909.00000
+Epoch 23: Val Loss 4033706.50000
+Epoch 24: Val Loss 4004101.25000
+Epoch 25: Val Loss 3993121.75000
+Epoch 26: Val Loss 4373337.00000
+Epoch 27: Val Loss 3967405.00000
+Epoch 28: Val Loss 3967903.75000
+Epoch 29: Val Loss 3962939.75000
+Epoch 30: Val Loss 3952134.50000
+Epoch 31: Val Loss 3949319.50000
+Epoch 32: Val Loss 3942179.00000
+Epoch 33: Val Loss 3925215.25000
+Epoch 34: Val Loss 3915917.00000
+Epoch 35: Val Loss 3919587.00000
+Epoch 36: Val Loss 3906585.25000
+Epoch 37: Val Loss 3903531.00000
+Epoch 38: Val Loss 3884571.25000
+Epoch 39: Val Loss 3885453.00000
+Epoch 40: Val Loss 3896164.50000
+Epoch 41: Val Loss 3868733.50000
+Epoch 42: Val Loss 3884420.50000
+Epoch 43: Val Loss 3903926.25000
+Epoch 44: Val Loss 3850865.00000
+Epoch 45: Val Loss 3851640.00000
+Epoch 46: Val Loss 3858752.50000
+Epoch 47: Val Loss 3844091.75000
+Epoch 48: Val Loss 3830692.75000
+Epoch 49: Val Loss 3831566.00000
+Epoch 50: Val Loss 3830620.25000
+Epoch 51: Val Loss 3826544.00000
+Epoch 52: Val Loss 3826961.75000
+Epoch 53: Val Loss 3859092.00000
+Epoch 54: Val Loss 3812828.75000
+Epoch 55: Val Loss 3811730.75000
+Epoch 56: Val Loss 3812444.75000
+Epoch 57: Val Loss 3800119.50000
+Epoch 58: Val Loss 3792461.00000
+Epoch 59: Val Loss 3787886.75000
+Epoch 60: Val Loss 3784382.00000
+Epoch 61: Val Loss 3790283.00000
+Epoch 62: Val Loss 3787588.75000
+Epoch 63: Val Loss 3771210.00000
+Epoch 64: Val Loss 3771857.75000
+Epoch 65: Val Loss 3874143.75000
+Epoch 66: Val Loss 3779873.00000
+Epoch 67: Val Loss 3765278.25000
+Epoch 68: Val Loss 3778361.50000
+Epoch 69: Val Loss 3761586.25000
+Epoch 70: Val Loss 3749074.75000
+Epoch 71: Val Loss 3755946.50000
+Epoch 72: Val Loss 3750758.25000
+Epoch 73: Val Loss 3748840.75000
+Epoch 74: Val Loss 3732430.00000
+Epoch 75: Val Loss 3746007.75000
+Epoch 76: Val Loss 3727213.00000
+Epoch 77: Val Loss 3729755.00000
+Epoch 78: Val Loss 3733174.25000
+Epoch 79: Val Loss 3736045.50000
+Epoch 80: Val Loss 3728661.25000
+Epoch 81: Val Loss 3714197.75000
+Epoch 82: Val Loss 3717878.50000
+Epoch 83: Val Loss 3717420.25000
+Epoch 84: Val Loss 3713086.00000
+Epoch 85: Val Loss 3718462.00000
+Epoch 86: Val Loss 3717956.00000
+Epoch 87: Val Loss 3703022.25000
+Epoch 88: Val Loss 3699002.50000
+Epoch 89: Val Loss 3707145.50000
+Epoch 90: Val Loss 3715319.00000
+Epoch 91: Val Loss 3699457.50000
+Epoch 92: Val Loss 3692648.25000
+Epoch 93: Val Loss 3694302.25000
+Epoch 94: Val Loss 3710030.25000
+Epoch 95: Val Loss 3702819.00000
+Epoch 96: Val Loss 3681099.75000
+Epoch 97: Val Loss 3681332.75000
+Epoch 98: Val Loss 3693385.25000
+Epoch 99: Val Loss 3674206.25000
+Saved Losses
+{'MSE - mean': 3685611.2345796544, 'MSE - std': 0.0, 'R2 - mean': 0.5681731628332453, 'R2 - std': 0.0} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 8176020.00000
+Epoch 1: Val Loss 7730994.50000
+Epoch 2: Val Loss 7304755.00000
+Epoch 3: Val Loss 6746105.50000
+Epoch 4: Val Loss 6048201.00000
+Epoch 5: Val Loss 5389176.50000
+Epoch 6: Val Loss 4899279.00000
+Epoch 7: Val Loss 4582950.50000
+Epoch 8: Val Loss 4427939.50000
+Epoch 9: Val Loss 4302729.50000
+Epoch 10: Val Loss 4225675.00000
+Epoch 11: Val Loss 4189285.25000
+Epoch 12: Val Loss 4151249.00000
+Epoch 13: Val Loss 4088275.50000
+Epoch 14: Val Loss 4054827.00000
+Epoch 15: Val Loss 4022643.50000
+Epoch 16: Val Loss 4011472.00000
+Epoch 17: Val Loss 3969768.75000
+Epoch 18: Val Loss 3946325.75000
+Epoch 19: Val Loss 3942987.00000
+Epoch 20: Val Loss 3918148.75000
+Epoch 21: Val Loss 3903054.00000
+Epoch 22: Val Loss 3923172.50000
+Epoch 23: Val Loss 3871144.75000
+Epoch 24: Val Loss 3864666.00000
+Epoch 25: Val Loss 3870603.25000
+Epoch 26: Val Loss 3851902.75000
+Epoch 27: Val Loss 3819322.50000
+Epoch 28: Val Loss 3831525.75000
+Epoch 29: Val Loss 3813139.00000
+Epoch 30: Val Loss 3804114.25000
+Epoch 31: Val Loss 3792254.00000
+Epoch 32: Val Loss 3893716.50000
+Epoch 33: Val Loss 3800908.25000
+Epoch 34: Val Loss 3770184.25000
+Epoch 35: Val Loss 3768328.25000
+Epoch 36: Val Loss 3750935.50000
+Epoch 37: Val Loss 3757328.00000
+Epoch 38: Val Loss 3748504.75000
+Epoch 39: Val Loss 3749214.25000
+Epoch 40: Val Loss 3742033.50000
+Epoch 41: Val Loss 3725745.50000
+Epoch 42: Val Loss 3736430.25000
+Epoch 43: Val Loss 3726729.50000
+Epoch 44: Val Loss 3750529.75000
+Epoch 45: Val Loss 3711992.25000
+Epoch 46: Val Loss 3738106.00000
+Epoch 47: Val Loss 3692075.00000
+Epoch 48: Val Loss 3693472.00000
+Epoch 49: Val Loss 3709985.75000
+Epoch 50: Val Loss 3678063.75000
+Epoch 51: Val Loss 3700007.50000
+Epoch 52: Val Loss 3684218.50000
+Epoch 53: Val Loss 3674211.50000
+Epoch 54: Val Loss 3671160.75000
+Epoch 55: Val Loss 3672791.75000
+Epoch 56: Val Loss 3677091.00000
+Epoch 57: Val Loss 3666945.75000
+Epoch 58: Val Loss 3652615.75000
+Epoch 59: Val Loss 3692960.50000
+Epoch 60: Val Loss 3644590.75000
+Epoch 61: Val Loss 3658454.50000
+Epoch 62: Val Loss 3645585.50000
+Epoch 63: Val Loss 3643788.25000
+Epoch 64: Val Loss 3639010.75000
+Epoch 65: Val Loss 3636161.00000
+Epoch 66: Val Loss 3627188.75000
+Epoch 67: Val Loss 3626593.25000
+Epoch 68: Val Loss 3615835.75000
+Epoch 69: Val Loss 3618661.50000
+Epoch 70: Val Loss 3636926.25000
+Epoch 71: Val Loss 3614253.25000
+Epoch 72: Val Loss 3609111.75000
+Epoch 73: Val Loss 3635080.75000
+Epoch 74: Val Loss 3612257.50000
+Epoch 75: Val Loss 3601106.75000
+Epoch 76: Val Loss 3616316.50000
+Epoch 77: Val Loss 3615736.25000
+Epoch 78: Val Loss 3599140.00000
+Epoch 79: Val Loss 3608082.00000
+Epoch 80: Val Loss 3601922.50000
+Epoch 81: Val Loss 3593889.50000
+Epoch 82: Val Loss 3590831.00000
+Epoch 83: Val Loss 3586574.50000
+Epoch 84: Val Loss 3591229.25000
+Epoch 85: Val Loss 3585473.50000
+Epoch 86: Val Loss 3585047.00000
+Epoch 87: Val Loss 3579619.00000
+Epoch 88: Val Loss 3579631.00000
+Epoch 89: Val Loss 3574776.75000
+Epoch 90: Val Loss 3577674.00000
+Epoch 91: Val Loss 3575719.75000
+Epoch 92: Val Loss 3571269.50000
+Epoch 93: Val Loss 3573360.75000
+Epoch 94: Val Loss 3570235.25000
+Epoch 95: Val Loss 3590474.00000
+Epoch 96: Val Loss 3562535.00000
+Epoch 97: Val Loss 3571831.25000
+Epoch 98: Val Loss 3587893.25000
+Epoch 99: Val Loss 3595332.75000
+Saved Losses
+{'MSE - mean': 3628807.419361253, 'MSE - std': 56803.81521840161, 'R2 - mean': 0.5610567552933026, 'R2 - std': 0.007116407539942637} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 9246513.00000
+Epoch 1: Val Loss 8716338.00000
+Epoch 2: Val Loss 8254372.50000
+Epoch 3: Val Loss 7707921.50000
+Epoch 4: Val Loss 6991280.50000
+Epoch 5: Val Loss 6298279.00000
+Epoch 6: Val Loss 5768578.50000
+Epoch 7: Val Loss 5403457.00000
+Epoch 8: Val Loss 5192510.00000
+Epoch 9: Val Loss 5081505.50000
+Epoch 10: Val Loss 4958023.00000
+Epoch 11: Val Loss 4874399.00000
+Epoch 12: Val Loss 4808080.50000
+Epoch 13: Val Loss 4758744.50000
+Epoch 14: Val Loss 4724314.00000
+Epoch 15: Val Loss 4681749.50000
+Epoch 16: Val Loss 4644541.50000
+Epoch 17: Val Loss 4627374.00000
+Epoch 18: Val Loss 4584181.50000
+Epoch 19: Val Loss 4571415.00000
+Epoch 20: Val Loss 4557388.00000
+Epoch 21: Val Loss 4521979.00000
+Epoch 22: Val Loss 4531651.50000
+Epoch 23: Val Loss 4504654.00000
+Epoch 24: Val Loss 4514921.50000
+Epoch 25: Val Loss 4478218.50000
+Epoch 26: Val Loss 4481340.00000
+Epoch 27: Val Loss 4460249.50000
+Epoch 28: Val Loss 4447445.00000
+Epoch 29: Val Loss 4435507.00000
+Epoch 30: Val Loss 4439261.00000
+Epoch 31: Val Loss 4419897.50000
+Epoch 32: Val Loss 4416167.00000
+Epoch 33: Val Loss 4401430.50000
+Epoch 34: Val Loss 4391531.50000
+Epoch 35: Val Loss 4396781.00000
+Epoch 36: Val Loss 4383647.00000
+Epoch 37: Val Loss 4376569.00000
+Epoch 38: Val Loss 4378136.00000
+Epoch 39: Val Loss 4361915.50000
+Epoch 40: Val Loss 4362124.50000
+Epoch 41: Val Loss 4354414.50000
+Epoch 42: Val Loss 4361371.50000
+Epoch 43: Val Loss 4343683.00000
+Epoch 44: Val Loss 4339806.00000
+Epoch 45: Val Loss 4338803.00000
+Epoch 46: Val Loss 4325874.00000
+Epoch 47: Val Loss 4316917.50000
+Epoch 48: Val Loss 4322595.00000
+Epoch 49: Val Loss 4306354.50000
+Epoch 50: Val Loss 4310165.00000
+Epoch 51: Val Loss 4323998.50000
+Epoch 52: Val Loss 4292642.00000
+Epoch 53: Val Loss 4293365.50000
+Epoch 54: Val Loss 4298745.00000
+Epoch 55: Val Loss 4282348.50000
+Epoch 56: Val Loss 4286588.50000
+Epoch 57: Val Loss 4282033.00000
+Epoch 58: Val Loss 4275006.50000
+Epoch 59: Val Loss 4272307.00000
+Epoch 60: Val Loss 4263010.50000
+Epoch 61: Val Loss 4275272.50000
+Epoch 62: Val Loss 4254554.50000
+Epoch 63: Val Loss 4301910.00000
+Epoch 64: Val Loss 4270729.00000
+Epoch 65: Val Loss 4254079.00000
+Epoch 66: Val Loss 4241340.00000
+Epoch 67: Val Loss 4286261.50000
+Epoch 68: Val Loss 4261166.00000
+Epoch 69: Val Loss 4229971.00000
+Epoch 70: Val Loss 4230252.00000
+Epoch 71: Val Loss 4230830.00000
+Epoch 72: Val Loss 4217887.00000
+Epoch 73: Val Loss 4238301.00000
+Epoch 74: Val Loss 4224436.00000
+Epoch 75: Val Loss 4217822.50000
+Epoch 76: Val Loss 4211176.00000
+Epoch 77: Val Loss 4205402.50000
+Epoch 78: Val Loss 4214933.00000
+Epoch 79: Val Loss 4209790.00000
+Epoch 80: Val Loss 4217029.00000
+Epoch 81: Val Loss 4210965.50000
+Epoch 82: Val Loss 4193894.25000
+Epoch 83: Val Loss 4208399.00000
+Epoch 84: Val Loss 4195252.00000
+Epoch 85: Val Loss 4184982.25000
+Epoch 86: Val Loss 4198805.50000
+Epoch 87: Val Loss 4194601.00000
+Epoch 88: Val Loss 4209250.50000
+Epoch 89: Val Loss 4190849.00000
+Epoch 90: Val Loss 4180381.00000
+Epoch 91: Val Loss 4185294.75000
+Epoch 92: Val Loss 4180706.25000
+Epoch 93: Val Loss 4172339.50000
+Epoch 94: Val Loss 4165909.25000
+Epoch 95: Val Loss 4192391.50000
+Epoch 96: Val Loss 4175187.50000
+Epoch 97: Val Loss 4175452.25000
+Epoch 98: Val Loss 4168817.50000
+Epoch 99: Val Loss 4170006.25000
+Saved Losses
+{'MSE - mean': 3812932.8539306247, 'MSE - std': 264490.95811822725, 'R2 - mean': 0.5514576454569414, 'R2 - std': 0.014766448122373666} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 8996574.00000
+Epoch 1: Val Loss 8370291.00000
+Epoch 2: Val Loss 7945238.00000
+Epoch 3: Val Loss 7519005.50000
+Epoch 4: Val Loss 6811619.50000
+Epoch 5: Val Loss 6071366.00000
+Epoch 6: Val Loss 5503302.00000
+Epoch 7: Val Loss 5158827.00000
+Epoch 8: Val Loss 4906291.50000
+Epoch 9: Val Loss 4747045.50000
+Epoch 10: Val Loss 4710513.00000
+Epoch 11: Val Loss 4559158.50000
+Epoch 12: Val Loss 4505395.00000
+Epoch 13: Val Loss 4455034.00000
+Epoch 14: Val Loss 4438513.00000
+Epoch 15: Val Loss 4391217.50000
+Epoch 16: Val Loss 4354579.00000
+Epoch 17: Val Loss 4332146.50000
+Epoch 18: Val Loss 4322181.50000
+Epoch 19: Val Loss 4276349.00000
+Epoch 20: Val Loss 4260451.00000
+Epoch 21: Val Loss 4251140.50000
+Epoch 22: Val Loss 4227645.00000
+Epoch 23: Val Loss 4223169.00000
+Epoch 24: Val Loss 4201343.50000
+Epoch 25: Val Loss 4189070.25000
+Epoch 26: Val Loss 4184206.75000
+Epoch 27: Val Loss 4188018.25000
+Epoch 28: Val Loss 4167211.25000
+Epoch 29: Val Loss 4164660.75000
+Epoch 30: Val Loss 4162668.75000
+Epoch 31: Val Loss 4138999.00000
+Epoch 32: Val Loss 4127102.75000
+Epoch 33: Val Loss 4124385.00000
+Epoch 34: Val Loss 4111927.00000
+Epoch 35: Val Loss 4116676.75000
+Epoch 36: Val Loss 4108091.75000
+Epoch 37: Val Loss 4095096.25000
+Epoch 38: Val Loss 4244212.50000
+Epoch 39: Val Loss 4094890.00000
+Epoch 40: Val Loss 4080008.75000
+Epoch 41: Val Loss 4082205.50000
+Epoch 42: Val Loss 4062015.25000
+Epoch 43: Val Loss 4065205.75000
+Epoch 44: Val Loss 4067979.75000
+Epoch 45: Val Loss 4055461.25000
+Epoch 46: Val Loss 4132579.50000
+Epoch 47: Val Loss 4038435.00000
+Epoch 48: Val Loss 4047565.50000
+Epoch 49: Val Loss 4042008.25000
+Epoch 50: Val Loss 4024963.00000
+Epoch 51: Val Loss 4028833.00000
+Epoch 52: Val Loss 4012782.00000
+Epoch 53: Val Loss 4014239.75000
+Epoch 54: Val Loss 3997394.25000
+Epoch 55: Val Loss 3997819.25000
+Epoch 56: Val Loss 3997531.00000
+Epoch 57: Val Loss 4003173.25000
+Epoch 58: Val Loss 3994682.50000
+Epoch 59: Val Loss 4013158.50000
+Epoch 60: Val Loss 3983053.00000
+Epoch 61: Val Loss 3988686.00000
+Epoch 62: Val Loss 3974435.00000
+Epoch 63: Val Loss 3972452.00000
+Epoch 64: Val Loss 3968985.50000
+Epoch 65: Val Loss 3972693.25000
+Epoch 66: Val Loss 3961898.00000
+Epoch 67: Val Loss 3967467.25000
+Epoch 68: Val Loss 3946290.75000
+Epoch 69: Val Loss 3971818.00000
+Epoch 70: Val Loss 3952694.50000
+Epoch 71: Val Loss 3968021.25000
+Epoch 72: Val Loss 3949768.00000
+Epoch 73: Val Loss 3935672.00000
+Epoch 74: Val Loss 3937044.00000
+Epoch 75: Val Loss 3947884.75000
+Epoch 76: Val Loss 3986751.75000
+Epoch 77: Val Loss 3924600.00000
+Epoch 78: Val Loss 3938285.00000
+Epoch 79: Val Loss 3928156.75000
+Epoch 80: Val Loss 3916199.00000
+Epoch 81: Val Loss 3930664.75000
+Epoch 82: Val Loss 3919684.00000
+Epoch 83: Val Loss 3915196.25000
+Epoch 84: Val Loss 3908544.50000
+Epoch 85: Val Loss 3939119.75000
+Epoch 86: Val Loss 3930164.50000
+Epoch 87: Val Loss 3898033.75000
+Epoch 88: Val Loss 3913846.50000
+Epoch 89: Val Loss 3900732.75000
+Epoch 90: Val Loss 3905114.50000
+Epoch 91: Val Loss 3914897.00000
+Epoch 92: Val Loss 3903530.00000
+Epoch 93: Val Loss 3887034.00000
+Epoch 94: Val Loss 3904001.75000
+Epoch 95: Val Loss 3890588.75000
+Epoch 96: Val Loss 3881899.75000
+Epoch 97: Val Loss 3887016.25000
+Epoch 98: Val Loss 3906261.25000
+Epoch 99: Val Loss 3889692.75000
+Saved Losses
+{'MSE - mean': 3833505.885480797, 'MSE - std': 231811.02017854218, 'R2 - mean': 0.5501814533230884, 'R2 - std': 0.012977749870474082} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 8394861.00000
+Epoch 1: Val Loss 7830035.00000
+Epoch 2: Val Loss 7446726.00000
+Epoch 3: Val Loss 6940793.00000
+Epoch 4: Val Loss 6262219.50000
+Epoch 5: Val Loss 5528719.50000
+Epoch 6: Val Loss 4981508.50000
+Epoch 7: Val Loss 4630782.50000
+Epoch 8: Val Loss 4408093.50000
+Epoch 9: Val Loss 4267356.00000
+Epoch 10: Val Loss 4142176.00000
+Epoch 11: Val Loss 4057663.25000
+Epoch 12: Val Loss 3992054.50000
+Epoch 13: Val Loss 3938307.00000
+Epoch 14: Val Loss 3928294.50000
+Epoch 15: Val Loss 3849247.25000
+Epoch 16: Val Loss 3883948.25000
+Epoch 17: Val Loss 3808394.50000
+Epoch 18: Val Loss 3769208.00000
+Epoch 19: Val Loss 3757070.00000
+Epoch 20: Val Loss 3729036.25000
+Epoch 21: Val Loss 3746097.75000
+Epoch 22: Val Loss 3713030.50000
+Epoch 23: Val Loss 3694354.75000
+Epoch 24: Val Loss 3675044.00000
+Epoch 25: Val Loss 3670209.00000
+Epoch 26: Val Loss 3655001.50000
+Epoch 27: Val Loss 3646173.50000
+Epoch 28: Val Loss 3644702.00000
+Epoch 29: Val Loss 3630558.00000
+Epoch 30: Val Loss 3633470.25000
+Epoch 31: Val Loss 3617998.75000
+Epoch 32: Val Loss 3622881.50000
+Epoch 33: Val Loss 3609349.50000
+Epoch 34: Val Loss 3609447.25000
+Epoch 35: Val Loss 3601158.75000
+Epoch 36: Val Loss 3586885.00000
+Epoch 37: Val Loss 3604540.75000
+Epoch 38: Val Loss 3638429.50000
+Epoch 39: Val Loss 3573378.00000
+Epoch 40: Val Loss 3579481.00000
+Epoch 41: Val Loss 3569805.75000
+Epoch 42: Val Loss 3564529.25000
+Epoch 43: Val Loss 3569575.75000
+Epoch 44: Val Loss 3561219.75000
+Epoch 45: Val Loss 3588929.00000
+Epoch 46: Val Loss 3553919.75000
+Epoch 47: Val Loss 3551410.25000
+Epoch 48: Val Loss 3559076.50000
+Epoch 49: Val Loss 3555080.75000
+Epoch 50: Val Loss 3535413.75000
+Epoch 51: Val Loss 3529133.75000
+Epoch 52: Val Loss 3535633.50000
+Epoch 53: Val Loss 3527960.50000
+Epoch 54: Val Loss 3551144.25000
+Epoch 55: Val Loss 3565196.00000
+Epoch 56: Val Loss 3557048.00000
+Epoch 57: Val Loss 3533350.00000
+Epoch 58: Val Loss 3518705.25000
+Epoch 59: Val Loss 3518397.50000
+Epoch 60: Val Loss 3525039.75000
+Epoch 61: Val Loss 3511519.50000
+Epoch 62: Val Loss 3525596.25000
+Epoch 63: Val Loss 3501754.50000
+Epoch 64: Val Loss 3500106.00000
+Epoch 65: Val Loss 3512031.00000
+Epoch 66: Val Loss 3503984.50000
+Epoch 67: Val Loss 3507237.25000
+Epoch 68: Val Loss 3494174.50000
+Epoch 69: Val Loss 3499979.50000
+Epoch 70: Val Loss 3520499.00000
+Epoch 71: Val Loss 3532650.25000
+Epoch 72: Val Loss 3497353.25000
+Epoch 73: Val Loss 3489133.50000
+Epoch 74: Val Loss 3489413.00000
+Epoch 75: Val Loss 3484380.25000
+Epoch 76: Val Loss 3483944.50000
+Epoch 77: Val Loss 3488484.00000
+Epoch 78: Val Loss 3478116.75000
+Epoch 79: Val Loss 3473838.25000
+Epoch 80: Val Loss 3551986.25000
+Epoch 81: Val Loss 3484563.50000
+Epoch 82: Val Loss 3551282.75000
+Epoch 83: Val Loss 3479967.75000
+Epoch 84: Val Loss 3478695.25000
+Epoch 85: Val Loss 3470110.25000
+Epoch 86: Val Loss 3464157.75000
+Epoch 87: Val Loss 3483884.50000
+Epoch 88: Val Loss 3502257.75000
+Epoch 89: Val Loss 3461648.00000
+Epoch 90: Val Loss 3459608.00000
+Epoch 91: Val Loss 3463585.25000
+Epoch 92: Val Loss 3481345.75000
+Epoch 93: Val Loss 3464367.75000
+Epoch 94: Val Loss 3467096.75000
+Epoch 95: Val Loss 3466465.25000
+Epoch 96: Val Loss 3465002.25000
+Epoch 97: Val Loss 3464286.75000
+Epoch 98: Val Loss 3467956.75000
+Epoch 99: Val Loss 3452811.75000
+Saved Losses
+{'MSE - mean': 3758325.806649287, 'MSE - std': 256119.6132150396, 'R2 - mean': 0.5547572366080316, 'R2 - std': 0.01478136543231151} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 3758325.806649287, 'MSE - std': 256119.6132150396, 'R2 - mean': 0.5547572366080316, 'R2 - std': 0.01478136543231151}
+Train time: 7602.2581693
+Inference time: 6.770799457399517
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 9 finished with value: 3758325.806649287 and parameters: {'dim': 32, 'depth': 2, 'heads': 4, 'weight_decay': -2, 'learning_rate': -5, 'dropout': 0}. Best is trial 1 with value: 3552409.371169546.
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4516361.00000
+Epoch 1: Val Loss 4096265.50000
+Epoch 2: Val Loss 3976824.00000
+Epoch 3: Val Loss 3923404.75000
+Epoch 4: Val Loss 4253855.00000
+Epoch 5: Val Loss 3811537.00000
+Epoch 6: Val Loss 3770329.25000
+Epoch 7: Val Loss 3733101.50000
+Epoch 8: Val Loss 3722799.75000
+Epoch 9: Val Loss 3695815.50000
+Epoch 10: Val Loss 3671960.75000
+Epoch 11: Val Loss 3698318.75000
+Epoch 12: Val Loss 3632082.25000
+Epoch 13: Val Loss 3619127.75000
+Epoch 14: Val Loss 3617831.50000
+Epoch 15: Val Loss 3584320.25000
+Epoch 16: Val Loss 3585293.75000
+Epoch 17: Val Loss 3583111.25000
+Epoch 18: Val Loss 3556697.00000
+Epoch 19: Val Loss 3544776.25000
+Epoch 20: Val Loss 3586303.75000
+Epoch 21: Val Loss 3569185.75000
+Epoch 22: Val Loss 3519798.00000
+Epoch 23: Val Loss 3514575.75000
+Epoch 24: Val Loss 3501937.75000
+Epoch 25: Val Loss 3495789.25000
+Epoch 26: Val Loss 3506278.25000
+Epoch 27: Val Loss 3504642.75000
+Epoch 28: Val Loss 3508374.00000
+Epoch 29: Val Loss 3484027.75000
+Epoch 30: Val Loss 3491006.00000
+Epoch 31: Val Loss 3489348.50000
+Epoch 32: Val Loss 3471503.75000
+Epoch 33: Val Loss 3459445.50000
+Epoch 34: Val Loss 3479432.75000
+Epoch 35: Val Loss 3452248.25000
+Epoch 36: Val Loss 3465391.25000
+Epoch 37: Val Loss 3478825.50000
+Epoch 38: Val Loss 3481787.75000
+Epoch 39: Val Loss 3508533.25000
+Epoch 40: Val Loss 3443771.00000
+Epoch 41: Val Loss 3479516.50000
+Epoch 42: Val Loss 3490119.00000
+Epoch 43: Val Loss 3468061.75000
+Epoch 44: Val Loss 3494455.50000
+Epoch 45: Val Loss 3454121.75000
+Epoch 46: Val Loss 3484808.25000
+Epoch 47: Val Loss 3472425.75000
+Epoch 48: Val Loss 3449231.25000
+Epoch 49: Val Loss 3493922.75000
+Epoch 50: Val Loss 3430039.75000
+Epoch 51: Val Loss 3422086.00000
+Epoch 52: Val Loss 3422221.25000
+Epoch 53: Val Loss 3451423.75000
+Epoch 54: Val Loss 3457944.50000
+Epoch 55: Val Loss 3459891.75000
+Epoch 56: Val Loss 3431752.50000
+Epoch 57: Val Loss 3458689.25000
+Epoch 58: Val Loss 3431126.50000
+Epoch 59: Val Loss 3427517.75000
+Epoch 60: Val Loss 3466388.50000
+Epoch 61: Val Loss 3431475.00000
+Epoch 62: Val Loss 3458153.50000
+Epoch 63: Val Loss 3445126.25000
+Epoch 64: Val Loss 3428085.25000
+Epoch 65: Val Loss 3424547.00000
+Epoch 66: Val Loss 3443784.00000
+Epoch 67: Val Loss 3476719.75000
+Epoch 68: Val Loss 3433677.50000
+Epoch 69: Val Loss 3469467.25000
+Epoch 70: Val Loss 3477430.25000
+Epoch 71: Val Loss 3439297.75000
+Epoch 72: Val Loss 3508802.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3433332.9294770965, 'MSE - std': 0.0, 'R2 - mean': 0.597731500825085, 'R2 - std': 0.0} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4223368.00000
+Epoch 1: Val Loss 3872665.50000
+Epoch 2: Val Loss 3778379.25000
+Epoch 3: Val Loss 3731454.00000
+Epoch 4: Val Loss 3696846.25000
+Epoch 5: Val Loss 3745159.50000
+Epoch 6: Val Loss 3674747.00000
+Epoch 7: Val Loss 3686882.75000
+Epoch 8: Val Loss 3603738.50000
+Epoch 9: Val Loss 3597071.75000
+Epoch 10: Val Loss 3568504.00000
+Epoch 11: Val Loss 3647774.25000
+Epoch 12: Val Loss 3567621.00000
+Epoch 13: Val Loss 3530434.75000
+Epoch 14: Val Loss 3526559.75000
+Epoch 15: Val Loss 3528347.00000
+Epoch 16: Val Loss 3526403.25000
+Epoch 17: Val Loss 3493684.75000
+Epoch 18: Val Loss 3516315.00000
+Epoch 19: Val Loss 3509837.75000
+Epoch 20: Val Loss 3484669.75000
+Epoch 21: Val Loss 3477059.75000
+Epoch 22: Val Loss 3466147.25000
+Epoch 23: Val Loss 3448059.00000
+Epoch 24: Val Loss 3467503.75000
+Epoch 25: Val Loss 3457670.75000
+Epoch 26: Val Loss 3484569.25000
+Epoch 27: Val Loss 3437835.25000
+Epoch 28: Val Loss 3426501.25000
+Epoch 29: Val Loss 3414094.25000
+Epoch 30: Val Loss 3430215.50000
+Epoch 31: Val Loss 3454306.25000
+Epoch 32: Val Loss 3429398.50000
+Epoch 33: Val Loss 3444504.50000
+Epoch 34: Val Loss 3419947.50000
+Epoch 35: Val Loss 3437210.75000
+Epoch 36: Val Loss 3425578.25000
+Epoch 37: Val Loss 3429590.50000
+Epoch 38: Val Loss 3413485.50000
+Epoch 39: Val Loss 3420396.75000
+Epoch 40: Val Loss 3404919.00000
+Epoch 41: Val Loss 3414642.75000
+Epoch 42: Val Loss 3396683.25000
+Epoch 43: Val Loss 3413166.00000
+Epoch 44: Val Loss 3393392.00000
+Epoch 45: Val Loss 3391572.50000
+Epoch 46: Val Loss 3404302.25000
+Epoch 47: Val Loss 3444991.50000
+Epoch 48: Val Loss 3412420.00000
+Epoch 49: Val Loss 3418970.50000
+Epoch 50: Val Loss 3395985.00000
+Epoch 51: Val Loss 3394697.50000
+Epoch 52: Val Loss 3409794.75000
+Epoch 53: Val Loss 3485160.50000
+Epoch 54: Val Loss 3393430.25000
+Epoch 55: Val Loss 3418667.25000
+Epoch 56: Val Loss 3379817.75000
+Epoch 57: Val Loss 3441777.75000
+Epoch 58: Val Loss 3401736.50000
+Epoch 59: Val Loss 3455581.50000
+Epoch 60: Val Loss 3451431.75000
+Epoch 61: Val Loss 3433025.50000
+Epoch 62: Val Loss 3392806.25000
+Epoch 63: Val Loss 3450362.75000
+Epoch 64: Val Loss 3412724.75000
+Epoch 65: Val Loss 3416412.25000
+Epoch 66: Val Loss 3427076.50000
+Epoch 67: Val Loss 3577250.00000
+Epoch 68: Val Loss 3404261.50000
+Epoch 69: Val Loss 3419079.50000
+Epoch 70: Val Loss 3425920.00000
+Epoch 71: Val Loss 3448812.00000
+Epoch 72: Val Loss 3428313.25000
+Epoch 73: Val Loss 3452057.50000
+Epoch 74: Val Loss 3438018.50000
+Epoch 75: Val Loss 3461534.50000
+Epoch 76: Val Loss 3418327.75000
+Epoch 77: Val Loss 3442039.75000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3413178.0387905957, 'MSE - std': 20154.890686500818, 'R2 - mean': 0.5870111593711521, 'R2 - std': 0.010720341453932858} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 5017411.50000
+Epoch 1: Val Loss 4556665.50000
+Epoch 2: Val Loss 4474718.00000
+Epoch 3: Val Loss 4384943.00000
+Epoch 4: Val Loss 4366631.50000
+Epoch 5: Val Loss 4313370.50000
+Epoch 6: Val Loss 4285294.00000
+Epoch 7: Val Loss 4241067.00000
+Epoch 8: Val Loss 4225196.50000
+Epoch 9: Val Loss 4204437.50000
+Epoch 10: Val Loss 4187320.75000
+Epoch 11: Val Loss 4160800.00000
+Epoch 12: Val Loss 4146928.50000
+Epoch 13: Val Loss 4145301.75000
+Epoch 14: Val Loss 4114566.50000
+Epoch 15: Val Loss 4112992.00000
+Epoch 16: Val Loss 4078197.25000
+Epoch 17: Val Loss 4072072.75000
+Epoch 18: Val Loss 4121891.50000
+Epoch 19: Val Loss 4055683.25000
+Epoch 20: Val Loss 4049571.50000
+Epoch 21: Val Loss 4046339.25000
+Epoch 22: Val Loss 4036441.50000
+Epoch 23: Val Loss 4021156.50000
+Epoch 24: Val Loss 4016141.00000
+Epoch 25: Val Loss 4012064.00000
+Epoch 26: Val Loss 4000628.50000
+Epoch 27: Val Loss 3999855.75000
+Epoch 28: Val Loss 3992010.00000
+Epoch 29: Val Loss 3988608.00000
+Epoch 30: Val Loss 3970495.75000
+Epoch 31: Val Loss 3999927.00000
+Epoch 32: Val Loss 3951259.25000
+Epoch 33: Val Loss 3947761.75000
+Epoch 34: Val Loss 3955075.00000
+Epoch 35: Val Loss 3949252.00000
+Epoch 36: Val Loss 3944414.25000
+Epoch 37: Val Loss 3937057.00000
+Epoch 38: Val Loss 3930611.50000
+Epoch 39: Val Loss 3921928.00000
+Epoch 40: Val Loss 3922591.25000
+Epoch 41: Val Loss 3928129.50000
+Epoch 42: Val Loss 3917012.50000
+Epoch 43: Val Loss 3932697.25000
+Epoch 44: Val Loss 3908034.25000
+Epoch 45: Val Loss 3887631.75000
+Epoch 46: Val Loss 3938399.25000
+Epoch 47: Val Loss 3915562.50000
+Epoch 48: Val Loss 3892350.00000
+Epoch 49: Val Loss 3904478.75000
+Epoch 50: Val Loss 3916910.25000
+Epoch 51: Val Loss 3866353.50000
+Epoch 52: Val Loss 3869098.50000
+Epoch 53: Val Loss 3883585.00000
+Epoch 54: Val Loss 3859324.75000
+Epoch 55: Val Loss 3894365.50000
+Epoch 56: Val Loss 3862164.75000
+Epoch 57: Val Loss 3870386.25000
+Epoch 58: Val Loss 3892156.75000
+Epoch 59: Val Loss 3856183.00000
+Epoch 60: Val Loss 3845627.75000
+Epoch 61: Val Loss 3847232.00000
+Epoch 62: Val Loss 3864397.00000
+Epoch 63: Val Loss 3858919.00000
+Epoch 64: Val Loss 3838394.50000
+Epoch 65: Val Loss 3845676.25000
+Epoch 66: Val Loss 3840977.00000
+Epoch 67: Val Loss 3876052.00000
+Epoch 68: Val Loss 3858134.25000
+Epoch 69: Val Loss 3846721.00000
+Epoch 70: Val Loss 3839695.25000
+Epoch 71: Val Loss 3857368.75000
+Epoch 72: Val Loss 3853468.75000
+Epoch 73: Val Loss 3850773.75000
+Epoch 74: Val Loss 3847089.00000
+Epoch 75: Val Loss 3847934.00000
+Epoch 76: Val Loss 3856124.25000
+Epoch 77: Val Loss 3864935.00000
+Epoch 78: Val Loss 3855340.25000
+Epoch 79: Val Loss 3848891.25000
+Epoch 80: Val Loss 3881118.75000
+Epoch 81: Val Loss 3864184.00000
+Epoch 82: Val Loss 3934948.75000
+Epoch 83: Val Loss 3860550.25000
+Epoch 84: Val Loss 3887973.25000
+Epoch 85: Val Loss 4002979.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3558488.7555935513, 'MSE - std': 206158.24483787685, 'R2 - mean': 0.5811433799140857, 'R2 - std': 0.012061460059744638} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4633657.00000
+Epoch 1: Val Loss 4205938.50000
+Epoch 2: Val Loss 4160605.50000
+Epoch 3: Val Loss 4114084.75000
+Epoch 4: Val Loss 4024463.75000
+Epoch 5: Val Loss 3995013.25000
+Epoch 6: Val Loss 3977785.25000
+Epoch 7: Val Loss 3968660.50000
+Epoch 8: Val Loss 3909114.50000
+Epoch 9: Val Loss 3937055.25000
+Epoch 10: Val Loss 3878419.50000
+Epoch 11: Val Loss 3856408.75000
+Epoch 12: Val Loss 3882883.00000
+Epoch 13: Val Loss 3836148.00000
+Epoch 14: Val Loss 3846596.50000
+Epoch 15: Val Loss 3822276.75000
+Epoch 16: Val Loss 3810209.00000
+Epoch 17: Val Loss 3789614.00000
+Epoch 18: Val Loss 3785432.75000
+Epoch 19: Val Loss 3803472.00000
+Epoch 20: Val Loss 3798439.00000
+Epoch 21: Val Loss 3758714.00000
+Epoch 22: Val Loss 3866915.50000
+Epoch 23: Val Loss 3760721.00000
+Epoch 24: Val Loss 3771049.50000
+Epoch 25: Val Loss 3810192.50000
+Epoch 26: Val Loss 3743981.50000
+Epoch 27: Val Loss 3720447.75000
+Epoch 28: Val Loss 3736280.25000
+Epoch 29: Val Loss 3727147.00000
+Epoch 30: Val Loss 3738823.50000
+Epoch 31: Val Loss 3723041.00000
+Epoch 32: Val Loss 3710972.75000
+Epoch 33: Val Loss 3730516.50000
+Epoch 34: Val Loss 3713998.75000
+Epoch 35: Val Loss 3711532.75000
+Epoch 36: Val Loss 3719363.50000
+Epoch 37: Val Loss 3709082.00000
+Epoch 38: Val Loss 3781793.75000
+Epoch 39: Val Loss 3705952.00000
+Epoch 40: Val Loss 3778938.00000
+Epoch 41: Val Loss 3731154.25000
+Epoch 42: Val Loss 3706091.25000
+Epoch 43: Val Loss 3714321.50000
+Epoch 44: Val Loss 3721929.25000
+Epoch 45: Val Loss 3744127.25000
+Epoch 46: Val Loss 3703734.25000
+Epoch 47: Val Loss 3729635.00000
+Epoch 48: Val Loss 3727180.25000
+Epoch 49: Val Loss 3703322.00000
+Epoch 50: Val Loss 3741048.75000
+Epoch 51: Val Loss 3722915.50000
+Epoch 52: Val Loss 3720526.25000
+Epoch 53: Val Loss 3692791.00000
+Epoch 54: Val Loss 3694554.50000
+Epoch 55: Val Loss 3717666.25000
+Epoch 56: Val Loss 3710424.25000
+Epoch 57: Val Loss 3740742.50000
+Epoch 58: Val Loss 3698961.75000
+Epoch 59: Val Loss 3743995.75000
+Epoch 60: Val Loss 3766764.75000
+Epoch 61: Val Loss 3715208.25000
+Epoch 62: Val Loss 3720209.50000
+Epoch 63: Val Loss 3735874.75000
+Epoch 64: Val Loss 3745981.50000
+Epoch 65: Val Loss 3799128.75000
+Epoch 66: Val Loss 3815745.50000
+Epoch 67: Val Loss 3765656.75000
+Epoch 68: Val Loss 3765863.00000
+Epoch 69: Val Loss 3761817.50000
+Epoch 70: Val Loss 3763313.50000
+Epoch 71: Val Loss 3769604.00000
+Epoch 72: Val Loss 3766514.25000
+Epoch 73: Val Loss 3792692.75000
+Epoch 74: Val Loss 3795794.75000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3595363.881060287, 'MSE - std': 189618.67278972812, 'R2 - mean': 0.57795546423476, 'R2 - std': 0.011815139999808898} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4158972.75000
+Epoch 1: Val Loss 3713657.50000
+Epoch 2: Val Loss 3618931.00000
+Epoch 3: Val Loss 3596737.75000
+Epoch 4: Val Loss 3535832.00000
+Epoch 5: Val Loss 3527995.50000
+Epoch 6: Val Loss 3514708.75000
+Epoch 7: Val Loss 3501513.50000
+Epoch 8: Val Loss 3492110.25000
+Epoch 9: Val Loss 3468556.25000
+Epoch 10: Val Loss 3464531.00000
+Epoch 11: Val Loss 3449716.75000
+Epoch 12: Val Loss 3444353.50000
+Epoch 13: Val Loss 3445585.25000
+Epoch 14: Val Loss 3446033.50000
+Epoch 15: Val Loss 3418582.50000
+Epoch 16: Val Loss 3426673.75000
+Epoch 17: Val Loss 3418017.00000
+Epoch 18: Val Loss 3424905.50000
+Epoch 19: Val Loss 3420759.00000
+Epoch 20: Val Loss 3423680.25000
+Epoch 21: Val Loss 3415818.25000
+Epoch 22: Val Loss 3446835.50000
+Epoch 23: Val Loss 3441942.75000
+Epoch 24: Val Loss 3410134.75000
+Epoch 25: Val Loss 3407125.00000
+Epoch 26: Val Loss 3456975.25000
+Epoch 27: Val Loss 3395804.50000
+Epoch 28: Val Loss 3407021.00000
+Epoch 29: Val Loss 3400439.75000
+Epoch 30: Val Loss 3424539.75000
+Epoch 31: Val Loss 3400156.50000
+Epoch 32: Val Loss 3467451.75000
+Epoch 33: Val Loss 3455448.75000
+Epoch 34: Val Loss 3412622.25000
+Epoch 35: Val Loss 3433931.00000
+Epoch 36: Val Loss 3463033.75000
+Epoch 37: Val Loss 3442379.00000
+Epoch 38: Val Loss 3398897.50000
+Epoch 39: Val Loss 3427493.00000
+Epoch 40: Val Loss 3443166.25000
+Epoch 41: Val Loss 3412384.75000
+Epoch 42: Val Loss 3400062.50000
+Epoch 43: Val Loss 3458030.25000
+Epoch 44: Val Loss 3444336.50000
+Epoch 45: Val Loss 3438223.25000
+Epoch 46: Val Loss 3408857.50000
+Epoch 47: Val Loss 3411333.75000
+Epoch 48: Val Loss 3447929.75000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3557416.508405545, 'MSE - std': 185806.90305266372, 'R2 - mean': 0.5782600891960167, 'R2 - std': 0.01058533003926424} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 3557416.508405545, 'MSE - std': 185806.90305266372, 'R2 - mean': 0.5782600891960167, 'R2 - std': 0.01058533003926424}
+Train time: 5490.972324189601
+Inference time: 6.639913597598206
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 10 finished with value: 3557416.508405545 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 1 with value: 3552409.371169546.
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 3865086.00000
+Epoch 1: Val Loss 3815481.50000
+Epoch 2: Val Loss 3705468.75000
+Epoch 3: Val Loss 3587874.75000
+Epoch 4: Val Loss 3663916.25000
+Epoch 5: Val Loss 3513891.25000
+Epoch 6: Val Loss 3501706.25000
+Epoch 7: Val Loss 3616019.50000
+Epoch 8: Val Loss 3530101.00000
+Epoch 9: Val Loss 3463611.00000
+Epoch 10: Val Loss 3568704.25000
+Epoch 11: Val Loss 3645791.25000
+Epoch 12: Val Loss 3535078.25000
+Epoch 13: Val Loss 3793270.50000
+Epoch 14: Val Loss 3598894.25000
+Epoch 15: Val Loss 3565086.75000
+Epoch 16: Val Loss 3706707.00000
+Epoch 17: Val Loss 3665483.00000
+Epoch 18: Val Loss 3798194.75000
+Epoch 19: Val Loss 3874331.00000
+Epoch 20: Val Loss 3959729.50000
+Epoch 21: Val Loss 3934275.00000
+Epoch 22: Val Loss 3965634.75000
+Epoch 23: Val Loss 4149262.00000
+Epoch 24: Val Loss 4045872.50000
+Epoch 25: Val Loss 4497689.00000
+Epoch 26: Val Loss 4263960.00000
+Epoch 27: Val Loss 4308306.50000
+Epoch 28: Val Loss 4361731.00000
+Epoch 29: Val Loss 4296818.50000
+Epoch 30: Val Loss 4459465.00000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3454593.4189024903, 'MSE - std': 0.0, 'R2 - mean': 0.5952405029089056, 'R2 - std': 0.0} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 3716401.00000
+Epoch 1: Val Loss 3761767.75000
+Epoch 2: Val Loss 3651554.25000
+Epoch 3: Val Loss 3605130.50000
+Epoch 4: Val Loss 3594560.00000
+Epoch 5: Val Loss 3481537.25000
+Epoch 6: Val Loss 3439592.25000
+Epoch 7: Val Loss 3525938.00000
+Epoch 8: Val Loss 3545712.75000
+Epoch 9: Val Loss 3467758.25000
+Epoch 10: Val Loss 3495801.00000
+Epoch 11: Val Loss 3522535.00000
+Epoch 12: Val Loss 3480826.25000
+Epoch 13: Val Loss 3550593.25000
+Epoch 14: Val Loss 3527064.50000
+Epoch 15: Val Loss 3530326.75000
+Epoch 16: Val Loss 3654437.25000
+Epoch 17: Val Loss 3783767.00000
+Epoch 18: Val Loss 3774405.25000
+Epoch 19: Val Loss 3811362.75000
+Epoch 20: Val Loss 3769853.50000
+Epoch 21: Val Loss 3866053.25000
+Epoch 22: Val Loss 3877017.50000
+Epoch 23: Val Loss 4008467.50000
+Epoch 24: Val Loss 3975857.75000
+Epoch 25: Val Loss 4024597.75000
+Epoch 26: Val Loss 3999040.50000
+Epoch 27: Val Loss 4118491.25000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3448523.733798571, 'MSE - std': 6069.68510391959, 'R2 - mean': 0.582679279102852, 'R2 - std': 0.012561223806053623} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4362618.50000
+Epoch 1: Val Loss 4261231.50000
+Epoch 2: Val Loss 4224476.00000
+Epoch 3: Val Loss 4050695.00000
+Epoch 4: Val Loss 4040789.75000
+Epoch 5: Val Loss 3963835.00000
+Epoch 6: Val Loss 3956714.50000
+Epoch 7: Val Loss 3908533.75000
+Epoch 8: Val Loss 4060522.00000
+Epoch 9: Val Loss 3852814.75000
+Epoch 10: Val Loss 3878772.50000
+Epoch 11: Val Loss 3911480.00000
+Epoch 12: Val Loss 3921398.50000
+Epoch 13: Val Loss 3903053.00000
+Epoch 14: Val Loss 4064865.75000
+Epoch 15: Val Loss 3973386.00000
+Epoch 16: Val Loss 3971278.00000
+Epoch 17: Val Loss 3994101.25000
+Epoch 18: Val Loss 4090942.75000
+Epoch 19: Val Loss 4159965.50000
+Epoch 20: Val Loss 4176489.50000
+Epoch 21: Val Loss 4199526.50000
+Epoch 22: Val Loss 4265396.50000
+Epoch 23: Val Loss 4303576.50000
+Epoch 24: Val Loss 4493215.00000
+Epoch 25: Val Loss 4500106.00000
+Epoch 26: Val Loss 4707121.50000
+Epoch 27: Val Loss 4605433.00000
+Epoch 28: Val Loss 4708554.50000
+Epoch 29: Val Loss 4642575.00000
+Epoch 30: Val Loss 4746354.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3586134.6186058572, 'MSE - std': 194674.2714203968, 'R2 - mean': 0.5777988072223254, 'R2 - std': 0.012362344999651189} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4005089.75000
+Epoch 1: Val Loss 3942176.50000
+Epoch 2: Val Loss 3855744.50000
+Epoch 3: Val Loss 3792782.75000
+Epoch 4: Val Loss 3776912.00000
+Epoch 5: Val Loss 3971115.25000
+Epoch 6: Val Loss 3831163.75000
+Epoch 7: Val Loss 3784098.75000
+Epoch 8: Val Loss 3972106.00000
+Epoch 9: Val Loss 3888224.00000
+Epoch 10: Val Loss 3895866.50000
+Epoch 11: Val Loss 3962361.50000
+Epoch 12: Val Loss 4229968.50000
+Epoch 13: Val Loss 4010510.75000
+Epoch 14: Val Loss 4081631.25000
+Epoch 15: Val Loss 4185211.75000
+Epoch 16: Val Loss 4230508.00000
+Epoch 17: Val Loss 4196210.50000
+Epoch 18: Val Loss 4296037.00000
+Epoch 19: Val Loss 4222081.50000
+Epoch 20: Val Loss 4208789.50000
+Epoch 21: Val Loss 4347529.00000
+Epoch 22: Val Loss 4552081.50000
+Epoch 23: Val Loss 4508136.50000
+Epoch 24: Val Loss 4658471.50000
+Epoch 25: Val Loss 4579759.00000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3636958.575788887, 'MSE - std': 190191.4241915868, 'R2 - mean': 0.5730175950861851, 'R2 - std': 0.013535163423103732} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 3680652.25000
+Epoch 1: Val Loss 3516041.50000
+Epoch 2: Val Loss 3483901.75000
+Epoch 3: Val Loss 3473195.00000
+Epoch 4: Val Loss 3507431.25000
+Epoch 5: Val Loss 3427572.75000
+Epoch 6: Val Loss 3561749.75000
+Epoch 7: Val Loss 3442886.75000
+Epoch 8: Val Loss 3467807.75000
+Epoch 9: Val Loss 3497841.75000
+Epoch 10: Val Loss 3472955.00000
+Epoch 11: Val Loss 3486699.25000
+Epoch 12: Val Loss 3491584.00000
+Epoch 13: Val Loss 3535264.50000
+Epoch 14: Val Loss 3561832.50000
+Epoch 15: Val Loss 3494768.25000
+Epoch 16: Val Loss 3652789.75000
+Epoch 17: Val Loss 3593954.25000
+Epoch 18: Val Loss 3744715.75000
+Epoch 19: Val Loss 3662235.25000
+Epoch 20: Val Loss 3821815.00000
+Epoch 21: Val Loss 3858062.75000
+Epoch 22: Val Loss 3889699.50000
+Epoch 23: Val Loss 3870257.00000
+Epoch 24: Val Loss 3974406.50000
+Epoch 25: Val Loss 4016389.25000
+Epoch 26: Val Loss 3998711.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3596006.213412009, 'MSE - std': 188803.08844350965, 'R2 - mean': 0.5736536358734778, 'R2 - std': 0.012172867806909737} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 3596006.213412009, 'MSE - std': 188803.08844350965, 'R2 - mean': 0.5736536358734778, 'R2 - std': 0.012172867806909737}
+Train time: 2176.4815602355984
+Inference time: 6.674442610793631
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 11 finished with value: 3596006.213412009 and parameters: {'dim': 256, 'depth': 3, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 1 with value: 3552409.371169546.
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4488288.00000
+Epoch 1: Val Loss 4081463.00000
+Epoch 2: Val Loss 3956642.25000
+Epoch 3: Val Loss 3885996.25000
+Epoch 4: Val Loss 3839395.00000
+Epoch 5: Val Loss 3799422.25000
+Epoch 6: Val Loss 3811300.50000
+Epoch 7: Val Loss 3726882.75000
+Epoch 8: Val Loss 3702086.25000
+Epoch 9: Val Loss 3710006.25000
+Epoch 10: Val Loss 3658797.00000
+Epoch 11: Val Loss 3632886.25000
+Epoch 12: Val Loss 3622220.75000
+Epoch 13: Val Loss 3644413.50000
+Epoch 14: Val Loss 3592657.75000
+Epoch 15: Val Loss 3582052.75000
+Epoch 16: Val Loss 3577434.75000
+Epoch 17: Val Loss 3573858.75000
+Epoch 18: Val Loss 3541492.75000
+Epoch 19: Val Loss 3551016.50000
+Epoch 20: Val Loss 3524984.00000
+Epoch 21: Val Loss 3519316.50000
+Epoch 22: Val Loss 3510806.25000
+Epoch 23: Val Loss 3508683.50000
+Epoch 24: Val Loss 3499674.25000
+Epoch 25: Val Loss 3524639.50000
+Epoch 26: Val Loss 3507695.50000
+Epoch 27: Val Loss 3527123.50000
+Epoch 28: Val Loss 3476577.50000
+Epoch 29: Val Loss 3484006.25000
+Epoch 30: Val Loss 3486085.25000
+Epoch 31: Val Loss 3479282.00000
+Epoch 32: Val Loss 3455763.25000
+Epoch 33: Val Loss 3462921.25000
+Epoch 34: Val Loss 3452001.75000
+Epoch 35: Val Loss 3444050.00000
+Epoch 36: Val Loss 3464558.75000
+Epoch 37: Val Loss 3450263.25000
+Epoch 38: Val Loss 3438893.75000
+Epoch 39: Val Loss 3447918.25000
+Epoch 40: Val Loss 3449857.25000
+Epoch 41: Val Loss 3437506.00000
+Epoch 42: Val Loss 3443087.50000
+Epoch 43: Val Loss 3436981.75000
+Epoch 44: Val Loss 3429941.50000
+Epoch 45: Val Loss 3445476.25000
+Epoch 46: Val Loss 3418056.50000
+Epoch 47: Val Loss 3432263.50000
+Epoch 48: Val Loss 3431703.75000
+Epoch 49: Val Loss 3428255.75000
+Epoch 50: Val Loss 3414148.00000
+Epoch 51: Val Loss 3466931.25000
+Epoch 52: Val Loss 3427949.25000
+Epoch 53: Val Loss 3437441.50000
+Epoch 54: Val Loss 3414865.25000
+Epoch 55: Val Loss 3434843.25000
+Epoch 56: Val Loss 3445182.50000
+Epoch 57: Val Loss 3447590.00000
+Epoch 58: Val Loss 3459595.50000
+Epoch 59: Val Loss 3423535.00000
+Epoch 60: Val Loss 3475244.75000
+Epoch 61: Val Loss 3415305.00000
+Epoch 62: Val Loss 3433671.00000
+Epoch 63: Val Loss 3444648.00000
+Epoch 64: Val Loss 3437687.50000
+Epoch 65: Val Loss 3468164.75000
+Epoch 66: Val Loss 3529289.50000
+Epoch 67: Val Loss 3442595.50000
+Epoch 68: Val Loss 3460358.50000
+Epoch 69: Val Loss 3468092.75000
+Epoch 70: Val Loss 3455009.50000
+Epoch 71: Val Loss 3465993.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3420795.358347772, 'MSE - std': 0.0, 'R2 - mean': 0.5992004728196711, 'R2 - std': 0.0} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4246056.50000
+Epoch 1: Val Loss 3915263.75000
+Epoch 2: Val Loss 3782532.75000
+Epoch 3: Val Loss 3752088.25000
+Epoch 4: Val Loss 3704211.50000
+Epoch 5: Val Loss 3702797.00000
+Epoch 6: Val Loss 3649268.00000
+Epoch 7: Val Loss 3630708.75000
+Epoch 8: Val Loss 3598713.00000
+Epoch 9: Val Loss 3584055.25000
+Epoch 10: Val Loss 3582698.00000
+Epoch 11: Val Loss 3540930.50000
+Epoch 12: Val Loss 3524275.25000
+Epoch 13: Val Loss 3521559.75000
+Epoch 14: Val Loss 3513735.75000
+Epoch 15: Val Loss 3511506.25000
+Epoch 16: Val Loss 3509223.25000
+Epoch 17: Val Loss 3486336.50000
+Epoch 18: Val Loss 3515437.50000
+Epoch 19: Val Loss 3490032.25000
+Epoch 20: Val Loss 3486922.00000
+Epoch 21: Val Loss 3462152.75000
+Epoch 22: Val Loss 3457722.75000
+Epoch 23: Val Loss 3452285.75000
+Epoch 24: Val Loss 3485420.25000
+Epoch 25: Val Loss 3502945.50000
+Epoch 26: Val Loss 3472750.50000
+Epoch 27: Val Loss 3433094.75000
+Epoch 28: Val Loss 3425233.75000
+Epoch 29: Val Loss 3411442.75000
+Epoch 30: Val Loss 3433603.00000
+Epoch 31: Val Loss 3432510.25000
+Epoch 32: Val Loss 3418716.50000
+Epoch 33: Val Loss 3424999.50000
+Epoch 34: Val Loss 3412971.25000
+Epoch 35: Val Loss 3417134.00000
+Epoch 36: Val Loss 3432945.50000
+Epoch 37: Val Loss 3399500.00000
+Epoch 38: Val Loss 3394064.25000
+Epoch 39: Val Loss 3392439.75000
+Epoch 40: Val Loss 3396835.25000
+Epoch 41: Val Loss 3427469.00000
+Epoch 42: Val Loss 3421521.00000
+Epoch 43: Val Loss 3410041.50000
+Epoch 44: Val Loss 3443095.75000
+Epoch 45: Val Loss 3390710.25000
+Epoch 46: Val Loss 3406441.25000
+Epoch 47: Val Loss 3420219.75000
+Epoch 48: Val Loss 3415328.00000
+Epoch 49: Val Loss 3405944.00000
+Epoch 50: Val Loss 3402786.00000
+Epoch 51: Val Loss 3395574.25000
+Epoch 52: Val Loss 3448105.50000
+Epoch 53: Val Loss 3386033.75000
+Epoch 54: Val Loss 3388392.50000
+Epoch 55: Val Loss 3393721.25000
+Epoch 56: Val Loss 3394725.75000
+Epoch 57: Val Loss 3424348.50000
+Epoch 58: Val Loss 3377028.75000
+Epoch 59: Val Loss 3381822.25000
+Epoch 60: Val Loss 3386984.25000
+Epoch 61: Val Loss 3383317.00000
+Epoch 62: Val Loss 3401698.75000
+Epoch 63: Val Loss 3455492.50000
+Epoch 64: Val Loss 3382018.25000
+Epoch 65: Val Loss 3444288.25000
+Epoch 66: Val Loss 3442581.25000
+Epoch 67: Val Loss 3412741.25000
+Epoch 68: Val Loss 3416470.25000
+Epoch 69: Val Loss 3459542.00000
+Epoch 70: Val Loss 3416741.50000
+Epoch 71: Val Loss 3403342.25000
+Epoch 72: Val Loss 3399349.00000
+Epoch 73: Val Loss 3436727.50000
+Epoch 74: Val Loss 3480651.25000
+Epoch 75: Val Loss 3411718.25000
+Epoch 76: Val Loss 3449955.75000
+Epoch 77: Val Loss 3444225.50000
+Epoch 78: Val Loss 3437388.50000
+Epoch 79: Val Loss 3436947.25000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3405650.6627344787, 'MSE - std': 15144.695613293443, 'R2 - mean': 0.5879028138652206, 'R2 - std': 0.011297658954450562} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 5006732.00000
+Epoch 1: Val Loss 4586298.00000
+Epoch 2: Val Loss 4446905.00000
+Epoch 3: Val Loss 4387808.00000
+Epoch 4: Val Loss 4334803.00000
+Epoch 5: Val Loss 4288109.00000
+Epoch 6: Val Loss 4263326.50000
+Epoch 7: Val Loss 4232193.50000
+Epoch 8: Val Loss 4189730.25000
+Epoch 9: Val Loss 4174218.50000
+Epoch 10: Val Loss 4152110.00000
+Epoch 11: Val Loss 4135786.00000
+Epoch 12: Val Loss 4134433.50000
+Epoch 13: Val Loss 4108935.00000
+Epoch 14: Val Loss 4117256.00000
+Epoch 15: Val Loss 4105621.25000
+Epoch 16: Val Loss 4062158.25000
+Epoch 17: Val Loss 4059495.00000
+Epoch 18: Val Loss 4047089.75000
+Epoch 19: Val Loss 4052796.25000
+Epoch 20: Val Loss 4029691.00000
+Epoch 21: Val Loss 4057053.00000
+Epoch 22: Val Loss 4020108.25000
+Epoch 23: Val Loss 4006420.50000
+Epoch 24: Val Loss 4011472.50000
+Epoch 25: Val Loss 3990020.00000
+Epoch 26: Val Loss 3989089.50000
+Epoch 27: Val Loss 3977659.75000
+Epoch 28: Val Loss 3981836.25000
+Epoch 29: Val Loss 3962353.50000
+Epoch 30: Val Loss 3979266.25000
+Epoch 31: Val Loss 3954476.75000
+Epoch 32: Val Loss 3984852.00000
+Epoch 33: Val Loss 3947628.25000
+Epoch 34: Val Loss 3964419.00000
+Epoch 35: Val Loss 3957920.00000
+Epoch 36: Val Loss 3948215.50000
+Epoch 37: Val Loss 3923230.00000
+Epoch 38: Val Loss 3921009.50000
+Epoch 39: Val Loss 3911489.75000
+Epoch 40: Val Loss 3908331.00000
+Epoch 41: Val Loss 3910863.25000
+Epoch 42: Val Loss 3919728.00000
+Epoch 43: Val Loss 3895125.75000
+Epoch 44: Val Loss 3916704.50000
+Epoch 45: Val Loss 3889926.50000
+Epoch 46: Val Loss 3886856.00000
+Epoch 47: Val Loss 3878808.25000
+Epoch 48: Val Loss 3872334.25000
+Epoch 49: Val Loss 3892171.25000
+Epoch 50: Val Loss 3879526.25000
+Epoch 51: Val Loss 3888781.00000
+Epoch 52: Val Loss 3879247.75000
+Epoch 53: Val Loss 3862125.00000
+Epoch 54: Val Loss 3862161.00000
+Epoch 55: Val Loss 3901309.00000
+Epoch 56: Val Loss 3854106.50000
+Epoch 57: Val Loss 3932891.25000
+Epoch 58: Val Loss 3853611.75000
+Epoch 59: Val Loss 3850598.25000
+Epoch 60: Val Loss 3862094.25000
+Epoch 61: Val Loss 3867619.00000
+Epoch 62: Val Loss 3854197.25000
+Epoch 63: Val Loss 3853886.00000
+Epoch 64: Val Loss 3869132.75000
+Epoch 65: Val Loss 3874682.50000
+Epoch 66: Val Loss 3847576.25000
+Epoch 67: Val Loss 3846656.00000
+Epoch 68: Val Loss 3863848.75000
+Epoch 69: Val Loss 3849066.50000
+Epoch 70: Val Loss 3869784.00000
+Epoch 71: Val Loss 3864018.75000
+Epoch 72: Val Loss 3852542.25000
+Epoch 73: Val Loss 3873049.50000
+Epoch 74: Val Loss 3853515.00000
+Epoch 75: Val Loss 3871844.50000
+Epoch 76: Val Loss 3855803.75000
+Epoch 77: Val Loss 3897905.50000
+Epoch 78: Val Loss 3866542.00000
+Epoch 79: Val Loss 3890024.25000
+Epoch 80: Val Loss 3855524.00000
+Epoch 81: Val Loss 3890733.00000
+Epoch 82: Val Loss 3872296.00000
+Epoch 83: Val Loss 3912094.25000
+Epoch 84: Val Loss 3924503.50000
+Epoch 85: Val Loss 3918464.00000
+Epoch 86: Val Loss 3973734.25000
+Epoch 87: Val Loss 3906540.25000
+Epoch 88: Val Loss 3895479.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3555242.753172387, 'MSE - std': 211916.24504344378, 'R2 - mean': 0.5815395584092228, 'R2 - std': 0.012886948380588611} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4603046.50000
+Epoch 1: Val Loss 4212957.50000
+Epoch 2: Val Loss 4130250.50000
+Epoch 3: Val Loss 4072877.00000
+Epoch 4: Val Loss 4066169.25000
+Epoch 5: Val Loss 4002736.50000
+Epoch 6: Val Loss 3957323.25000
+Epoch 7: Val Loss 3933230.75000
+Epoch 8: Val Loss 3921740.25000
+Epoch 9: Val Loss 3891372.25000
+Epoch 10: Val Loss 3898334.00000
+Epoch 11: Val Loss 3870493.00000
+Epoch 12: Val Loss 3863272.75000
+Epoch 13: Val Loss 3838011.00000
+Epoch 14: Val Loss 3829012.75000
+Epoch 15: Val Loss 3832725.25000
+Epoch 16: Val Loss 3832664.25000
+Epoch 17: Val Loss 3821134.75000
+Epoch 18: Val Loss 3796087.50000
+Epoch 19: Val Loss 3790150.25000
+Epoch 20: Val Loss 3805668.50000
+Epoch 21: Val Loss 3790120.00000
+Epoch 22: Val Loss 3756436.50000
+Epoch 23: Val Loss 3750211.00000
+Epoch 24: Val Loss 3757566.00000
+Epoch 25: Val Loss 3777049.25000
+Epoch 26: Val Loss 3751292.25000
+Epoch 27: Val Loss 3739601.00000
+Epoch 28: Val Loss 3758136.25000
+Epoch 29: Val Loss 3733078.25000
+Epoch 30: Val Loss 3775480.75000
+Epoch 31: Val Loss 3736683.75000
+Epoch 32: Val Loss 3714003.50000
+Epoch 33: Val Loss 3720538.50000
+Epoch 34: Val Loss 3743925.75000
+Epoch 35: Val Loss 3755778.25000
+Epoch 36: Val Loss 3727313.50000
+Epoch 37: Val Loss 3719884.75000
+Epoch 38: Val Loss 3705353.25000
+Epoch 39: Val Loss 3714926.75000
+Epoch 40: Val Loss 3702457.50000
+Epoch 41: Val Loss 3705000.75000
+Epoch 42: Val Loss 3731028.75000
+Epoch 43: Val Loss 3841336.00000
+Epoch 44: Val Loss 3698397.00000
+Epoch 45: Val Loss 3686720.00000
+Epoch 46: Val Loss 3712790.25000
+Epoch 47: Val Loss 3728506.50000
+Epoch 48: Val Loss 3715821.50000
+Epoch 49: Val Loss 3709980.25000
+Epoch 50: Val Loss 3716799.75000
+Epoch 51: Val Loss 3752222.00000
+Epoch 52: Val Loss 3776673.50000
+Epoch 53: Val Loss 3693800.25000
+Epoch 54: Val Loss 3699248.50000
+Epoch 55: Val Loss 3725417.25000
+Epoch 56: Val Loss 3765340.75000
+Epoch 57: Val Loss 3735430.50000
+Epoch 58: Val Loss 3734876.25000
+Epoch 59: Val Loss 3743685.75000
+Epoch 60: Val Loss 3758128.00000
+Epoch 61: Val Loss 3756912.50000
+Epoch 62: Val Loss 3743016.25000
+Epoch 63: Val Loss 3811237.75000
+Epoch 64: Val Loss 3730423.75000
+Epoch 65: Val Loss 3754739.50000
+Epoch 66: Val Loss 3834212.00000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3590359.887333044, 'MSE - std': 193341.69369268845, 'R2 - mean': 0.5785518472173483, 'R2 - std': 0.012301802039584446} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4128642.75000
+Epoch 1: Val Loss 3723686.50000
+Epoch 2: Val Loss 3612863.75000
+Epoch 3: Val Loss 3582945.75000
+Epoch 4: Val Loss 3562079.75000
+Epoch 5: Val Loss 3516373.00000
+Epoch 6: Val Loss 3549248.50000
+Epoch 7: Val Loss 3478204.50000
+Epoch 8: Val Loss 3468262.50000
+Epoch 9: Val Loss 3473196.25000
+Epoch 10: Val Loss 3431692.00000
+Epoch 11: Val Loss 3426875.00000
+Epoch 12: Val Loss 3426689.75000
+Epoch 13: Val Loss 3428214.25000
+Epoch 14: Val Loss 3428194.00000
+Epoch 15: Val Loss 3503664.75000
+Epoch 16: Val Loss 3430231.25000
+Epoch 17: Val Loss 3404873.50000
+Epoch 18: Val Loss 3437411.25000
+Epoch 19: Val Loss 3420578.25000
+Epoch 20: Val Loss 3399700.50000
+Epoch 21: Val Loss 3403781.50000
+Epoch 22: Val Loss 3387158.50000
+Epoch 23: Val Loss 3400095.75000
+Epoch 24: Val Loss 3390506.25000
+Epoch 25: Val Loss 3396656.00000
+Epoch 26: Val Loss 3388716.50000
+Epoch 27: Val Loss 3428392.00000
+Epoch 28: Val Loss 3426013.50000
+Epoch 29: Val Loss 3388325.75000
+Epoch 30: Val Loss 3398437.75000
+Epoch 31: Val Loss 3397924.50000
+Epoch 32: Val Loss 3447041.25000
+Epoch 33: Val Loss 3470633.50000
+Epoch 34: Val Loss 3410113.75000
+Epoch 35: Val Loss 3395523.50000
+Epoch 36: Val Loss 3389086.25000
+Epoch 37: Val Loss 3403814.00000
+Epoch 38: Val Loss 3392626.25000
+Epoch 39: Val Loss 3437826.25000
+Epoch 40: Val Loss 3432435.50000
+Epoch 41: Val Loss 3413173.50000
+Epoch 42: Val Loss 3414794.50000
+Epoch 43: Val Loss 3569203.25000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3551278.97940188, 'MSE - std': 189773.75444160443, 'R2 - mean': 0.5790007397546132, 'R2 - std': 0.011039632456605967} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 3551278.97940188, 'MSE - std': 189773.75444160443, 'R2 - mean': 0.5790007397546132, 'R2 - std': 0.011039632456605967}
+Train time: 5276.0273586396015
+Inference time: 6.814441461398383
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 12 finished with value: 3551278.97940188 and parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.5}. Best is trial 12 with value: 3551278.97940188.
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 3835825.75000
+Epoch 1: Val Loss 3799960.25000
+Epoch 2: Val Loss 3691580.25000
+Epoch 3: Val Loss 3657371.00000
+Epoch 4: Val Loss 3589255.00000
+Epoch 5: Val Loss 3520795.50000
+Epoch 6: Val Loss 3552424.50000
+Epoch 7: Val Loss 3469198.00000
+Epoch 8: Val Loss 3474864.25000
+Epoch 9: Val Loss 3456028.50000
+Epoch 10: Val Loss 3409260.50000
+Epoch 11: Val Loss 3431830.00000
+Epoch 12: Val Loss 3431668.50000
+Epoch 13: Val Loss 3474482.00000
+Epoch 14: Val Loss 3555736.00000
+Epoch 15: Val Loss 3648691.50000
+Epoch 16: Val Loss 3576363.75000
+Epoch 17: Val Loss 3689634.25000
+Epoch 18: Val Loss 3711611.00000
+Epoch 19: Val Loss 3732225.50000
+Epoch 20: Val Loss 3877666.75000
+Epoch 21: Val Loss 3974836.50000
+Epoch 22: Val Loss 3884089.50000
+Epoch 23: Val Loss 3980553.50000
+Epoch 24: Val Loss 4230684.50000
+Epoch 25: Val Loss 4205576.00000
+Epoch 26: Val Loss 4165683.50000
+Epoch 27: Val Loss 4096034.25000
+Epoch 28: Val Loss 4311086.00000
+Epoch 29: Val Loss 4228923.50000
+Epoch 30: Val Loss 4334667.50000
+Epoch 31: Val Loss 4340409.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3407661.5030116285, 'MSE - std': 0.0, 'R2 - mean': 0.6007393088087738, 'R2 - std': 0.0} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 3689566.25000
+Epoch 1: Val Loss 3691321.50000
+Epoch 2: Val Loss 3794012.75000
+Epoch 3: Val Loss 3588982.50000
+Epoch 4: Val Loss 3548267.50000
+Epoch 5: Val Loss 3521460.50000
+Epoch 6: Val Loss 3447145.00000
+Epoch 7: Val Loss 3470965.00000
+Epoch 8: Val Loss 3425650.00000
+Epoch 9: Val Loss 3429332.25000
+Epoch 10: Val Loss 3443093.75000
+Epoch 11: Val Loss 3456965.25000
+Epoch 12: Val Loss 3470264.00000
+Epoch 13: Val Loss 3480100.25000
+Epoch 14: Val Loss 3526779.00000
+Epoch 15: Val Loss 3571124.75000
+Epoch 16: Val Loss 3686742.25000
+Epoch 17: Val Loss 3813986.75000
+Epoch 18: Val Loss 3638871.50000
+Epoch 19: Val Loss 3737039.75000
+Epoch 20: Val Loss 3851641.25000
+Epoch 21: Val Loss 3801297.50000
+Epoch 22: Val Loss 3867488.50000
+Epoch 23: Val Loss 3913548.75000
+Epoch 24: Val Loss 3915546.00000
+Epoch 25: Val Loss 4033557.75000
+Epoch 26: Val Loss 4007041.75000
+Epoch 27: Val Loss 4097809.50000
+Epoch 28: Val Loss 4164839.50000
+Epoch 29: Val Loss 4270238.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3420841.9025966944, 'MSE - std': 13180.39958506613, 'R2 - mean': 0.5859551459557073, 'R2 - std': 0.01478416285306644} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4306584.50000
+Epoch 1: Val Loss 4255411.00000
+Epoch 2: Val Loss 4203049.00000
+Epoch 3: Val Loss 4133084.25000
+Epoch 4: Val Loss 4429956.00000
+Epoch 5: Val Loss 4052885.25000
+Epoch 6: Val Loss 4024501.25000
+Epoch 7: Val Loss 3984974.75000
+Epoch 8: Val Loss 3955005.00000
+Epoch 9: Val Loss 3933697.75000
+Epoch 10: Val Loss 3856744.75000
+Epoch 11: Val Loss 4046648.75000
+Epoch 12: Val Loss 3908644.00000
+Epoch 13: Val Loss 3937398.50000
+Epoch 14: Val Loss 3960888.00000
+Epoch 15: Val Loss 3940134.50000
+Epoch 16: Val Loss 4002606.75000
+Epoch 17: Val Loss 4100893.50000
+Epoch 18: Val Loss 4096954.50000
+Epoch 19: Val Loss 4176372.00000
+Epoch 20: Val Loss 4254162.50000
+Epoch 21: Val Loss 4267813.50000
+Epoch 22: Val Loss 4458834.50000
+Epoch 23: Val Loss 4446443.50000
+Epoch 24: Val Loss 4472793.00000
+Epoch 25: Val Loss 4734986.00000
+Epoch 26: Val Loss 4613028.00000
+Epoch 27: Val Loss 4708071.00000
+Epoch 28: Val Loss 4649883.50000
+Epoch 29: Val Loss 4706096.00000
+Epoch 30: Val Loss 4766178.50000
+Epoch 31: Val Loss 4853610.50000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3568080.5132649913, 'MSE - std': 208504.7534994715, 'R2 - mean': 0.5799379210601926, 'R2 - std': 0.01476916737882443} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 4055043.25000
+Epoch 1: Val Loss 3982487.50000
+Epoch 2: Val Loss 4034886.25000
+Epoch 3: Val Loss 3980004.50000
+Epoch 4: Val Loss 3840782.00000
+Epoch 5: Val Loss 3812361.50000
+Epoch 6: Val Loss 3863345.50000
+Epoch 7: Val Loss 3784262.25000
+Epoch 8: Val Loss 3990200.25000
+Epoch 9: Val Loss 3994343.50000
+Epoch 10: Val Loss 3829050.00000
+Epoch 11: Val Loss 3858676.50000
+Epoch 12: Val Loss 3923590.50000
+Epoch 13: Val Loss 3913052.75000
+Epoch 14: Val Loss 3963972.50000
+Epoch 15: Val Loss 4093171.50000
+Epoch 16: Val Loss 4153227.00000
+Epoch 17: Val Loss 4179962.50000
+Epoch 18: Val Loss 4241369.50000
+Epoch 19: Val Loss 4189026.25000
+Epoch 20: Val Loss 4317727.00000
+Epoch 21: Val Loss 4571845.50000
+Epoch 22: Val Loss 4397422.50000
+Epoch 23: Val Loss 4561652.50000
+Epoch 24: Val Loss 4485095.00000
+Epoch 25: Val Loss 4419082.50000
+Epoch 26: Val Loss 4666692.00000
+Epoch 27: Val Loss 4656911.50000
+Epoch 28: Val Loss 4617421.00000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3624375.580752411, 'MSE - std': 205214.71205580235, 'R2 - mean': 0.5745104079684685, 'R2 - std': 0.01587356052939309} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 3578793.50000
+Epoch 1: Val Loss 3476700.00000
+Epoch 2: Val Loss 3485347.00000
+Epoch 3: Val Loss 3487774.25000
+Epoch 4: Val Loss 3444509.75000
+Epoch 5: Val Loss 3448885.50000
+Epoch 6: Val Loss 3443788.00000
+Epoch 7: Val Loss 3404746.75000
+Epoch 8: Val Loss 3385573.25000
+Epoch 9: Val Loss 3481404.50000
+Epoch 10: Val Loss 3477273.50000
+Epoch 11: Val Loss 3495261.25000
+Epoch 12: Val Loss 3508343.25000
+Epoch 13: Val Loss 3422825.75000
+Epoch 14: Val Loss 3531790.25000
+Epoch 15: Val Loss 3578979.00000
+Epoch 16: Val Loss 3600180.75000
+Epoch 17: Val Loss 3618431.25000
+Epoch 18: Val Loss 3681751.75000
+Epoch 19: Val Loss 3770299.00000
+Epoch 20: Val Loss 3718997.75000
+Epoch 21: Val Loss 3823973.75000
+Epoch 22: Val Loss 3840726.25000
+Epoch 23: Val Loss 3905397.75000
+Epoch 24: Val Loss 3973175.50000
+Epoch 25: Val Loss 4049764.75000
+Epoch 26: Val Loss 4049200.00000
+Epoch 27: Val Loss 4127985.75000
+Epoch 28: Val Loss 4159485.50000
+Epoch 29: Val Loss 4255113.00000
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Saved Losses
+{'MSE - mean': 3578821.0177025646, 'MSE - std': 204917.87451065955, 'R2 - mean': 0.5757269042485892, 'R2 - std': 0.01440470034059837} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 3578821.0177025646, 'MSE - std': 204917.87451065955, 'R2 - mean': 0.5757269042485892, 'R2 - std': 0.01440470034059837}
+Train time: 2269.1062414532003
+Inference time: 6.536953634198289
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 13 finished with value: 3578821.0177025646 and parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 12 with value: 3551278.97940188.
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 8790269.00000
+Epoch 1: Val Loss 8228656.00000
+Epoch 2: Val Loss 7860248.50000
+Epoch 3: Val Loss 7300385.00000
+Epoch 4: Val Loss 6567911.00000
+Epoch 5: Val Loss 5827597.50000
+Epoch 6: Val Loss 5391482.50000
+Epoch 7: Val Loss 5020279.50000
+Epoch 8: Val Loss 4763637.50000
+Epoch 9: Val Loss 4576272.50000
+Epoch 10: Val Loss 4477443.00000
+Epoch 11: Val Loss 4392471.00000
+Epoch 12: Val Loss 4331047.00000
+Epoch 13: Val Loss 4269160.50000
+Epoch 14: Val Loss 4228912.50000
+Epoch 15: Val Loss 4191404.75000
+Epoch 16: Val Loss 4164954.50000
+Epoch 17: Val Loss 4144023.50000
+Epoch 18: Val Loss 4099508.00000
+Epoch 19: Val Loss 4095141.75000
+Epoch 20: Val Loss 4074615.50000
+Epoch 21: Val Loss 4057085.00000
+Epoch 22: Val Loss 4058572.75000
+Epoch 23: Val Loss 4059013.75000
+Epoch 24: Val Loss 4011344.50000
+Epoch 25: Val Loss 4004413.50000
+Epoch 26: Val Loss 3988379.00000
+Epoch 27: Val Loss 4011211.00000
+Epoch 28: Val Loss 3973750.50000
+Epoch 29: Val Loss 3961594.50000
+Epoch 30: Val Loss 3958563.00000
+Epoch 31: Val Loss 3940395.25000
+Epoch 32: Val Loss 3933986.75000
+Epoch 33: Val Loss 3925656.75000
+Epoch 34: Val Loss 3923192.00000
+Epoch 35: Val Loss 3926894.25000
+Epoch 36: Val Loss 3907042.75000
+Epoch 37: Val Loss 3891928.75000
+Epoch 38: Val Loss 3890513.50000
+Epoch 39: Val Loss 3881284.00000
+Epoch 40: Val Loss 3874008.00000
+Epoch 41: Val Loss 3878973.50000
+Epoch 42: Val Loss 3862495.75000
+Epoch 43: Val Loss 3851105.75000
+Epoch 44: Val Loss 3852770.75000
+Epoch 45: Val Loss 3845557.75000
+Epoch 46: Val Loss 3841096.00000
+Epoch 47: Val Loss 3855656.25000
+Epoch 48: Val Loss 3821151.25000
+Epoch 49: Val Loss 3826133.75000
+Epoch 50: Val Loss 3818356.75000
+Epoch 51: Val Loss 3820767.75000
+Epoch 52: Val Loss 3803790.75000
+Epoch 53: Val Loss 3823644.75000
+Epoch 54: Val Loss 3804875.25000
+Epoch 55: Val Loss 3791194.00000
+Epoch 56: Val Loss 3791582.00000
+Epoch 57: Val Loss 3786878.00000
+Epoch 58: Val Loss 3790619.75000
+Epoch 59: Val Loss 3782634.00000
+Epoch 60: Val Loss 3778999.50000
+Epoch 61: Val Loss 3781129.25000
+Epoch 62: Val Loss 3772611.00000
+Epoch 63: Val Loss 3755260.75000
+Epoch 64: Val Loss 3770290.75000
+Epoch 65: Val Loss 3786870.50000
+Epoch 66: Val Loss 3757979.00000
+Epoch 67: Val Loss 3752576.00000
+Epoch 68: Val Loss 3746643.00000
+Epoch 69: Val Loss 3742918.50000
+Epoch 70: Val Loss 3732852.50000
+Epoch 71: Val Loss 3737652.00000
+Epoch 72: Val Loss 3735066.00000
+Epoch 73: Val Loss 3730546.75000
+Epoch 74: Val Loss 3734637.50000
+Epoch 75: Val Loss 3717767.50000
+Epoch 76: Val Loss 3725787.75000
+Epoch 77: Val Loss 3722099.50000
+Epoch 78: Val Loss 3710573.50000
+Epoch 79: Val Loss 3716246.25000
+Epoch 80: Val Loss 3716324.75000
+Epoch 81: Val Loss 3762497.75000
+Epoch 82: Val Loss 3707052.75000
+Epoch 83: Val Loss 3742452.00000
+Epoch 84: Val Loss 3694836.00000
+Epoch 85: Val Loss 3697704.25000
+Epoch 86: Val Loss 3710880.00000
+Epoch 87: Val Loss 3699940.75000
+Epoch 88: Val Loss 3713047.50000
+Epoch 89: Val Loss 3682897.75000
+Epoch 90: Val Loss 3679359.25000
+Epoch 91: Val Loss 3682421.75000
+Epoch 92: Val Loss 3690570.00000
+Epoch 93: Val Loss 3673306.50000
+Epoch 94: Val Loss 3680224.50000
+Epoch 95: Val Loss 3680409.50000
+Epoch 96: Val Loss 3675736.75000
+Epoch 97: Val Loss 3690477.00000
+Epoch 98: Val Loss 3676260.75000
+Epoch 99: Val Loss 3685021.00000
+Saved Losses
+{'MSE - mean': 3683818.0758112785, 'MSE - std': 0.0, 'R2 - mean': 0.5683832593491829, 'R2 - std': 0.0} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 8233149.50000
+Epoch 1: Val Loss 7751472.50000
+Epoch 2: Val Loss 7416196.50000
+Epoch 3: Val Loss 6852267.50000
+Epoch 4: Val Loss 6193289.00000
+Epoch 5: Val Loss 5499109.50000
+Epoch 6: Val Loss 4982861.00000
+Epoch 7: Val Loss 4655432.00000
+Epoch 8: Val Loss 4459664.50000
+Epoch 9: Val Loss 4339213.50000
+Epoch 10: Val Loss 4258437.50000
+Epoch 11: Val Loss 4175156.00000
+Epoch 12: Val Loss 4171350.25000
+Epoch 13: Val Loss 4098509.00000
+Epoch 14: Val Loss 4039898.00000
+Epoch 15: Val Loss 4013103.25000
+Epoch 16: Val Loss 3971844.50000
+Epoch 17: Val Loss 3960002.75000
+Epoch 18: Val Loss 3930865.50000
+Epoch 19: Val Loss 3912778.50000
+Epoch 20: Val Loss 3897062.50000
+Epoch 21: Val Loss 3994788.50000
+Epoch 22: Val Loss 3860503.00000
+Epoch 23: Val Loss 3863055.75000
+Epoch 24: Val Loss 3846309.25000
+Epoch 25: Val Loss 3837997.50000
+Epoch 26: Val Loss 3822150.50000
+Epoch 27: Val Loss 3809720.00000
+Epoch 28: Val Loss 3825626.00000
+Epoch 29: Val Loss 3817678.75000
+Epoch 30: Val Loss 3795020.75000
+Epoch 31: Val Loss 3791105.50000
+Epoch 32: Val Loss 3780008.75000
+Epoch 33: Val Loss 3786823.00000
+Epoch 34: Val Loss 3767075.00000
+Epoch 35: Val Loss 3783242.00000
+Epoch 36: Val Loss 3752615.00000
+Epoch 37: Val Loss 3739121.00000
+Epoch 38: Val Loss 3787041.00000
+Epoch 39: Val Loss 3751882.50000
+Epoch 40: Val Loss 3746786.75000
+Epoch 41: Val Loss 3722372.75000
+Epoch 42: Val Loss 3746251.75000
+Epoch 43: Val Loss 3725567.25000
+Epoch 44: Val Loss 3705905.75000
+Epoch 45: Val Loss 3701119.75000
+Epoch 46: Val Loss 3722895.25000
+Epoch 47: Val Loss 3692829.50000
+Epoch 48: Val Loss 3703260.75000
+Epoch 49: Val Loss 3691223.75000
+Epoch 50: Val Loss 3687057.75000
+Epoch 51: Val Loss 3685239.00000
+Epoch 52: Val Loss 3675701.25000
+Epoch 53: Val Loss 3669519.25000
+Epoch 54: Val Loss 3678313.50000
+Epoch 55: Val Loss 3676495.25000
+Epoch 56: Val Loss 3659467.75000
+Epoch 57: Val Loss 3670820.00000
+Epoch 58: Val Loss 3657418.50000
+Epoch 59: Val Loss 3647278.25000
+Epoch 60: Val Loss 3650756.00000
+Epoch 61: Val Loss 3647426.25000
+Epoch 62: Val Loss 3642103.50000
+Epoch 63: Val Loss 3702686.25000
+Epoch 64: Val Loss 3646625.75000
+Epoch 65: Val Loss 3644530.25000
+Epoch 66: Val Loss 3645909.75000
+Epoch 67: Val Loss 3635089.00000
+Epoch 68: Val Loss 3626481.75000
+Epoch 69: Val Loss 3630597.25000
+Epoch 70: Val Loss 3632048.00000
+Epoch 71: Val Loss 3637766.50000
+Epoch 72: Val Loss 3623088.50000
+Epoch 73: Val Loss 3620710.25000
+Epoch 74: Val Loss 3626556.50000
+Epoch 75: Val Loss 3609094.25000
+Epoch 76: Val Loss 3613640.25000
+Epoch 77: Val Loss 3612807.50000
+Epoch 78: Val Loss 3599108.50000
+Epoch 79: Val Loss 3623519.75000
+Epoch 80: Val Loss 3592848.25000
+Epoch 81: Val Loss 3609859.00000
+Epoch 82: Val Loss 3604883.75000
+Epoch 83: Val Loss 3589662.50000
+Epoch 84: Val Loss 3599775.25000
+Epoch 85: Val Loss 3592364.00000
+Epoch 86: Val Loss 3585731.75000
+Epoch 87: Val Loss 3579795.25000
+Epoch 88: Val Loss 3597345.75000
+Epoch 89: Val Loss 3595760.25000
+Epoch 90: Val Loss 3572910.25000
+Epoch 91: Val Loss 3567581.50000
+Epoch 92: Val Loss 3580136.00000
+Epoch 93: Val Loss 3580506.75000
+Epoch 94: Val Loss 3564848.25000
+Epoch 95: Val Loss 3569454.50000
+Epoch 96: Val Loss 3567067.00000
+Epoch 97: Val Loss 3561290.50000
+Epoch 98: Val Loss 3633636.50000
+Epoch 99: Val Loss 3562459.25000
+Saved Losses
+{'MSE - mean': 3630266.9691888858, 'MSE - std': 53551.10662239278, 'R2 - mean': 0.560867578154731, 'R2 - std': 0.007515681194451895} 
+ 
+
+In get_device
+()
+On Device: cuda
+Using dim 8 and batch size 64
+On Device: cuda
+Epoch 0: Val Loss 9165631.00000
+Epoch 1: Val Loss 8637445.00000
+Epoch 2: Val Loss 8235363.00000
+Epoch 3: Val Loss 7748165.50000
+Epoch 4: Val Loss 6987606.50000
+Epoch 5: Val Loss 6269130.50000
+Epoch 6: Val Loss 5748395.00000
+Epoch 7: Val Loss 5424621.50000
+Epoch 8: Val Loss 5276270.50000
+Epoch 9: Val Loss 5081091.00000
+Epoch 10: Val Loss 4970867.50000
+Epoch 11: Val Loss 5032659.00000
+Epoch 12: Val Loss 4838081.00000
+Epoch 13: Val Loss 4785062.00000
+Epoch 14: Val Loss 4730073.00000
+Epoch 15: Val Loss 4695829.50000
+Epoch 16: Val Loss 4656132.50000
+Epoch 17: Val Loss 4628931.50000
+Epoch 18: Val Loss 4616341.50000
+Epoch 19: Val Loss 4621525.00000
+Epoch 20: Val Loss 4572835.00000
+Epoch 21: Val Loss 4593800.00000
+Epoch 22: Val Loss 4528455.50000
+Epoch 23: Val Loss 4522855.50000
+Epoch 24: Val Loss 4495864.00000
+Epoch 25: Val Loss 4482639.50000
+Epoch 26: Val Loss 4475470.00000
+Epoch 27: Val Loss 4478474.50000
+Epoch 28: Val Loss 4476537.50000
+Epoch 29: Val Loss 4449246.00000
+Epoch 30: Val Loss 4499975.50000
+Epoch 31: Val Loss 4429712.00000
+Epoch 32: Val Loss 4424667.00000
+Epoch 33: Val Loss 4422940.50000
+Epoch 34: Val Loss 4416719.50000
+Epoch 35: Val Loss 4392697.00000
+Epoch 36: Val Loss 4441313.00000
+Epoch 37: Val Loss 4385325.00000
+Epoch 38: Val Loss 4370557.00000
+Epoch 39: Val Loss 4390177.00000
+Epoch 40: Val Loss 4360934.00000
+Epoch 41: Val Loss 4357886.00000
+Epoch 42: Val Loss 4409805.00000
+Epoch 43: Val Loss 4341832.50000
+Epoch 44: Val Loss 4343711.50000
+Epoch 45: Val Loss 4320716.50000
+Epoch 46: Val Loss 4335877.50000
+Epoch 47: Val Loss 4310027.00000
+Epoch 48: Val Loss 4317865.00000
+Epoch 49: Val Loss 4308450.00000
+Epoch 50: Val Loss 4319099.00000
+Epoch 51: Val Loss 4315873.00000
+Epoch 52: Val Loss 4306987.00000
+Epoch 53: Val Loss 4288354.50000
+Epoch 54: Val Loss 4278647.00000
+Epoch 55: Val Loss 4292966.00000
+Epoch 56: Val Loss 4270908.50000
+Epoch 57: Val Loss 4287490.50000
+Epoch 58: Val Loss 4274389.50000
+Epoch 59: Val Loss 4279311.00000
+Epoch 60: Val Loss 4252578.50000
+Epoch 61: Val Loss 4253064.00000
+Epoch 62: Val Loss 4253496.50000
+Epoch 63: Val Loss 4245446.50000
+Epoch 64: Val Loss 4250135.00000
+Epoch 65: Val Loss 4237985.00000
+Epoch 66: Val Loss 4233031.00000
+Epoch 67: Val Loss 4230216.00000
+Epoch 68: Val Loss 4222372.50000
+Epoch 69: Val Loss 4264585.00000
+Epoch 70: Val Loss 4227849.00000
+Epoch 71: Val Loss 4225638.50000
+Epoch 72: Val Loss 4215298.50000
+Epoch 73: Val Loss 4232633.50000
+Epoch 74: Val Loss 4205833.50000
+Epoch 75: Val Loss 4208588.00000
+Epoch 76: Val Loss 4197714.00000
+Epoch 77: Val Loss 4200450.00000
+Epoch 78: Val Loss 4205769.00000
+Epoch 79: Val Loss 4197143.00000
+Epoch 80: Val Loss 4207782.50000
+Epoch 81: Val Loss 4189143.00000
