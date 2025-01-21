@@ -9,6 +9,6 @@
 
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate TabSurvey
+conda activate Test4Node
 srun python3 train.py --config config/house_prices_nominal.yml --model_name NODE --optimize_hyperparameters --n_trials 100 --epochs 100
 
