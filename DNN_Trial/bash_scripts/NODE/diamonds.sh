@@ -9,6 +9,6 @@
 
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate TabSurvey
+conda activate Test4Node
 srun python3 train.py --config config/diamonds.yml --model_name NODE --optimize_hyperparameters --n_trials 86 --epochs 100
 
