@@ -1,0 +1,87 @@
+[I 2025-01-22 23:39:40,151] A new study created in RDB with name: NODE_House_Prices_Nominal
+[I 2025-01-22 23:45:58,095] Trial 0 finished with value: 39038312001.74159 and parameters: {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}. Best is trial 0 with value: 39038312001.74159.
+[I 2025-01-22 23:58:01,818] Trial 1 finished with value: 39038150058.82904 and parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}. Best is trial 1 with value: 39038150058.82904.
+[I 2025-01-23 00:08:43,895] Trial 2 finished with value: 39038145129.90751 and parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}. Best is trial 2 with value: 39038145129.90751.
+[I 2025-01-23 00:51:41,238] Trial 3 finished with value: 39038228136.80293 and parameters: {'num_layers': 4, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}. Best is trial 2 with value: 39038145129.90751.
+[I 2025-01-23 01:11:52,823] Trial 4 finished with value: 39038342244.98305 and parameters: {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 2}. Best is trial 2 with value: 39038145129.90751.
+[I 2025-01-23 01:27:30,171] Trial 5 finished with value: 39038199015.491875 and parameters: {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}. Best is trial 2 with value: 39038145129.90751.
+[I 2025-01-23 01:33:19,316] Trial 6 finished with value: 39038227840.6357 and parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 3}. Best is trial 2 with value: 39038145129.90751.
+[W 2025-01-23 01:33:21,655] Trial 7 failed with parameters: {'num_layers': 2, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 2} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 7.81 GiB. GPU 0 has a total capacty of 7.79 GiB of which 6.73 GiB is free. Including non-PyTorch memory, this process has 1.06 GiB memory in use. Of the allocated memory 327.61 MiB is allocated by PyTorch, and 622.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 64, in fit
+    res = self.model(torch.as_tensor(data.X_train[:1000], device=self.device))
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/arch.py", line 31, in forward
+    h = layer(layer_inp)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 221, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/odst.py", line 98, in forward
+    bin_matches = torch.einsum('btds,dcs->btdc', bins, self.bin_codes_1hot)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/functional.py", line 377, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.81 GiB. GPU 0 has a total capacty of 7.79 GiB of which 6.73 GiB is free. Including non-PyTorch memory, this process has 1.06 GiB memory in use. Of the allocated memory 327.61 MiB is allocated by PyTorch, and 622.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[W 2025-01-23 01:33:21,660] Trial 7 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 185, in <module>
+    main(arguments)
+  File "train.py", line 156, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 64, in fit
+    res = self.model(torch.as_tensor(data.X_train[:1000], device=self.device))
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/arch.py", line 31, in forward
+    h = layer(layer_inp)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 221, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/odst.py", line 98, in forward
+    bin_matches = torch.einsum('btds,dcs->btdc', bins, self.bin_codes_1hot)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/functional.py", line 377, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.81 GiB. GPU 0 has a total capacty of 7.79 GiB of which 6.73 GiB is free. Including non-PyTorch memory, this process has 1.06 GiB memory in use. Of the allocated memory 327.61 MiB is allocated by PyTorch, and 622.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
