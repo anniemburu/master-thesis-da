@@ -26,3 +26,45 @@ Test time: 1.246514
 Best Parameters: {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}
 
 
+2025-01-23 15:55:32.859362
+NODE - Diamonds
+
+MSE - mean: 31160910.03240
+MSE - std: 418438.58761
+R2 - mean: -0.95828
+R2 - std: 0.01671
+
+Train time: 4038.016161
+Test time: 1.500034
+
+Best Parameters: {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}
+
+
+2025-01-23 15:57:25.861267
+NODE - Diamonds
+
+MSE - mean: 31372674.39163
+MSE - std: 511605.14295
+R2 - mean: -0.97148
+R2 - std: 0.01353
+
+Train time: 15.527398
+Test time: 0.412362
+
+Best Parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+
+
+2025-01-23 16:01:29.549662
+NODE - Diamonds
+
+MSE - mean: 31372613.00689
+MSE - std: 511694.34449
+R2 - mean: -0.97148
+R2 - std: 0.01353
+
+Train time: 40.526753
+Test time: 0.960775
+
+Best Parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}
+
+

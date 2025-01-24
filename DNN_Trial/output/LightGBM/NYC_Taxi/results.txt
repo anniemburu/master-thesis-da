@@ -1328,3 +1328,87 @@ Test time: 5.353407
 Best Parameters: {'num_leaves': 3248, 'lambda_l1': 4.947429379827415e-05, 'lambda_l2': 1.5398812182520533e-08, 'learning_rate': 0.0381911334699349, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 
+2025-01-23 14:01:31.558697
+LightGBM - NYC_Taxi
+
+MSE - mean: 3.20794
+MSE - std: 0.22013
+R2 - mean: 0.56477
+R2 - std: 0.01460
+
+Train time: 76.065504
+Test time: 4.176946
+
+Best Parameters: {'num_leaves': 1900, 'lambda_l1': 0.14562587069870658, 'lambda_l2': 5.592446874893556e-08, 'learning_rate': 0.031257117881314675, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+
+2025-01-23 14:02:42.757642
+LightGBM - NYC_Taxi
+
+MSE - mean: 3.26498
+MSE - std: 0.22406
+R2 - mean: 0.55701
+R2 - std: 0.01559
+
+Train time: 95.761298
+Test time: 4.100830
+
+Best Parameters: {'num_leaves': 2513, 'lambda_l1': 0.022750422650111898, 'lambda_l2': 3.659692558331962e-08, 'learning_rate': 0.022744890898154648, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+
+2025-01-23 14:03:49.486344
+LightGBM - NYC_Taxi
+
+MSE - mean: 3.29855
+MSE - std: 0.23007
+R2 - mean: 0.55248
+R2 - std: 0.01581
+
+Train time: 86.111958
+Test time: 3.896117
+
+Best Parameters: {'num_leaves': 2178, 'lambda_l1': 0.3318504688935131, 'lambda_l2': 1.0587534807574493e-07, 'learning_rate': 0.02095744678578199, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+
+2025-01-23 14:05:07.398913
+LightGBM - NYC_Taxi
+
+MSE - mean: 3.18195
+MSE - std: 0.21934
+R2 - mean: 0.56829
+R2 - std: 0.01473
+
+Train time: 101.916296
+Test time: 5.121930
+
+Best Parameters: {'num_leaves': 2793, 'lambda_l1': 0.1929484136256285, 'lambda_l2': 2.336962443497902e-08, 'learning_rate': 0.0398160251679854, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+
+2025-01-23 14:06:01.582373
+LightGBM - NYC_Taxi
+
+MSE - mean: 3.19006
+MSE - std: 0.21654
+R2 - mean: 0.56711
+R2 - std: 0.01604
+
+Train time: 70.006041
+Test time: 4.274531
+
+Best Parameters: {'num_leaves': 1720, 'lambda_l1': 0.08191210655862428, 'lambda_l2': 2.0905800023136656e-07, 'learning_rate': 0.04388010927944651, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+
+2025-01-23 14:07:03.636268
+LightGBM - NYC_Taxi
+
+MSE - mean: 3.18430
+MSE - std: 0.21813
+R2 - mean: 0.56795
+R2 - std: 0.01483
+
+Train time: 82.220481
+Test time: 4.689255
+
+Best Parameters: {'num_leaves': 2108, 'lambda_l1': 0.06790784991135729, 'lambda_l2': 4.427944636105121e-08, 'learning_rate': 0.038020748637939895, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+

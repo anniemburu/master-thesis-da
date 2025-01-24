@@ -992,3 +992,199 @@ Test time: 0.872725
 Best Parameters: {'n_d': 59, 'n_steps': 4, 'gamma': 1.2122604851236343, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.0888694882395916, 'mask_type': 'entmax', 'n_a': 59, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
 
 
+2025-01-23 14:56:23.382374
+TabNet - Diamonds
+
+MSE - mean: 321382.71927
+MSE - std: 14751.31400
+R2 - mean: 0.97978
+R2 - std: 0.00130
+
+Train time: 863.173467
+Test time: 1.025493
+
+Best Parameters: {'n_d': 27, 'n_steps': 3, 'gamma': 1.180198536690575, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.030416282273883672, 'mask_type': 'entmax', 'n_a': 27, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 16:52:25.383298
+TabNet - Diamonds
+
+MSE - mean: 331636.13179
+MSE - std: 32734.90063
+R2 - mean: 0.97912
+R2 - std: 0.00242
+
+Train time: 1399.550365
+Test time: 2.044861
+
+Best Parameters: {'n_d': 62, 'n_steps': 8, 'gamma': 1.3623761987708853, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.0024411570142905377, 'mask_type': 'entmax', 'n_a': 62, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 17:47:25.904006
+TabNet - Diamonds
+
+MSE - mean: 334799.83250
+MSE - std: 27637.29051
+R2 - mean: 0.97895
+R2 - std: 0.00180
+
+Train time: 666.197769
+Test time: 1.082817
+
+Best Parameters: {'n_d': 57, 'n_steps': 3, 'gamma': 1.1739134608976016, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.005429475942919865, 'mask_type': 'entmax', 'n_a': 57, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 18:43:04.009668
+TabNet - Diamonds
+
+MSE - mean: 305634.77659
+MSE - std: 19574.68527
+R2 - mean: 0.98081
+R2 - std: 0.00099
+
+Train time: 674.140284
+Test time: 0.991320
+
+Best Parameters: {'n_d': 59, 'n_steps': 3, 'gamma': 1.160414979979283, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.1360410314653014, 'mask_type': 'entmax', 'n_a': 59, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 19:45:04.410984
+TabNet - Diamonds
+
+MSE - mean: 304524.06099
+MSE - std: 16574.93383
+R2 - mean: 0.98087
+R2 - std: 0.00078
+
+Train time: 750.959754
+Test time: 1.020698
+
+Best Parameters: {'n_d': 64, 'n_steps': 3, 'gamma': 1.1180350889243347, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.17022960027236486, 'mask_type': 'entmax', 'n_a': 64, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 20:43:27.426553
+TabNet - Diamonds
+
+MSE - mean: 313272.56573
+MSE - std: 4086.58608
+R2 - mean: 0.98030
+R2 - std: 0.00057
+
+Train time: 707.529926
+Test time: 0.954071
+
+Best Parameters: {'n_d': 63, 'n_steps': 3, 'gamma': 1.092315554079956, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.14303451341020573, 'mask_type': 'entmax', 'n_a': 63, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 22:06:32.064515
+TabNet - Diamonds
+
+MSE - mean: 296127.17066
+MSE - std: 12832.13897
+R2 - mean: 0.98140
+R2 - std: 0.00065
+
+Train time: 1007.047576
+Test time: 1.006713
+
+Best Parameters: {'n_d': 61, 'n_steps': 3, 'gamma': 1.118866027918218, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.17533567314912962, 'mask_type': 'entmax', 'n_a': 61, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 23:18:27.625081
+TabNet - Diamonds
+
+MSE - mean: 306359.30641
+MSE - std: 16539.85445
+R2 - mean: 0.98074
+R2 - std: 0.00111
+
+Train time: 871.976410
+Test time: 0.977863
+
+Best Parameters: {'n_d': 64, 'n_steps': 3, 'gamma': 1.1186496952553877, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.17353992313500882, 'mask_type': 'entmax', 'n_a': 64, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-23 23:58:07.347363
+TabNet - Diamonds
+
+MSE - mean: 326605.08336
+MSE - std: 13034.93523
+R2 - mean: 0.97946
+R2 - std: 0.00114
+
+Train time: 480.174651
+Test time: 1.025185
+
+Best Parameters: {'n_d': 60, 'n_steps': 3, 'gamma': 1.0660410779761473, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.11826467293146682, 'mask_type': 'entmax', 'n_a': 60, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-24 01:16:43.203720
+TabNet - Diamonds
+
+MSE - mean: 297797.81808
+MSE - std: 7924.94642
+R2 - mean: 0.98129
+R2 - std: 0.00041
+
+Train time: 953.038652
+Test time: 1.044001
+
+Best Parameters: {'n_d': 62, 'n_steps': 3, 'gamma': 1.1484170073111823, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.22725510587429543, 'mask_type': 'entmax', 'n_a': 62, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-24 02:19:35.178693
+TabNet - Diamonds
+
+MSE - mean: 608260.35006
+MSE - std: 603879.26821
+R2 - mean: 0.96110
+R2 - std: 0.03961
+
+Train time: 762.256829
+Test time: 0.992533
+
+Best Parameters: {'n_d': 62, 'n_steps': 3, 'gamma': 1.1419077998069134, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.23366289388696151, 'mask_type': 'entmax', 'n_a': 62, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-24 03:19:23.844072
+TabNet - Diamonds
+
+MSE - mean: 402312.76752
+MSE - std: 193103.56234
+R2 - mean: 0.97479
+R2 - std: 0.01189
+
+Train time: 725.121238
+Test time: 0.985163
+
+Best Parameters: {'n_d': 61, 'n_steps': 3, 'gamma': 1.2021028035407952, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.13439665307016324, 'mask_type': 'entmax', 'n_a': 61, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-24 04:15:54.536358
+TabNet - Diamonds
+
+MSE - mean: 322382.13034
+MSE - std: 45699.36900
+R2 - mean: 0.97976
+R2 - std: 0.00271
+
+Train time: 685.108680
+Test time: 1.072285
+
+Best Parameters: {'n_d': 64, 'n_steps': 3, 'gamma': 1.9960976045279124, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.15651006927011585, 'mask_type': 'entmax', 'n_a': 64, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
+2025-01-24 05:38:22.467374
+TabNet - Diamonds
+
+MSE - mean: 312035.39444
+MSE - std: 29471.68472
+R2 - mean: 0.98040
+R2 - std: 0.00171
+
+Train time: 1000.526859
+Test time: 1.057719
+
+Best Parameters: {'n_d': 61, 'n_steps': 3, 'gamma': 1.1562808429660585, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.1892111610696083, 'mask_type': 'entmax', 'n_a': 61, 'cat_idxs': [1, 2, 3], 'cat_dims': [6, 8, 9], 'device_name': device(type='cuda')}
+
+
