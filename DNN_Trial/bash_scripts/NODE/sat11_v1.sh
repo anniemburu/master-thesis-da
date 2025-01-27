@@ -10,4 +10,4 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate Test4Node
-srun python3 train.py --config config/sat11.yml --model_name NODE --optimize_hyperparameters --n_trials 100 --epochs 100
+srun python3 train.py --config config/sat11.yml --model_name NODE --optimize_hyperparameters --n_trials 80 --epochs 100
