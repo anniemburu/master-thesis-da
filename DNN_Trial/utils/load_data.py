@@ -5,7 +5,7 @@ from sklearn.pipeline import Pipeline
 
 import numpy as np
 import pandas as pd
-print(f" Panda Version: {pd.__version__}")
+#print(f" Panda Version: {pd.__version__}")
 import os
 
 
@@ -40,7 +40,7 @@ def get_catidx(args):
 
 def load_data(args):
     import pandas as pd
-    print(f" Panda Version: {pd.__version__}")
+    #print(f" Panda Version: {pd.__version__}")
     print("Loading dataset " + args.dataset + "...")
 
     ####~~~~~~~~~~~~~~~~~~~~ SPECIFY HOW DATASETS ARE LOADED AND STUFF ~~~~~~~~~~~~~~~~~ 
@@ -67,8 +67,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Sensory":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         label_col = 'Score'
 
         #drop nulls
@@ -225,6 +225,7 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "NYC_Taxi":
+        pass
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016.csv')
         label_col = 'tip_amount'
@@ -272,13 +273,13 @@ def load_data(args):
     
 
     print("Dataset loaded! \n")
-    print(f"X b4 encoding : {X[0]} \n")
+    #print(f"X b4 encoding : {X[0]} \n")
     print(X.shape)
-    print(f"Data Type of X: {type(X)}")
-    print(f"Nominal Idx: {args.nominal_idx}")
-    print(f"Ordinal Idx: {args.ordinal_idx}")
-    print(f"Cat Dims: {args.cat_dims} \n \n")
-    print(f"Normonal Idx: {args.nominal_idx}")
+    #print(f"Data Type of X: {type(X)}")
+    #print(f"Nominal Idx: {args.nominal_idx}")
+    #print(f"Ordinal Idx: {args.ordinal_idx}")
+    #print(f"Cat Dims: {args.cat_dims} \n \n")
+    #print(f"Normonal Idx: {args.nominal_idx}")
     
 
     # Preprocess target 
@@ -290,8 +291,8 @@ def load_data(args):
     num_idx = []
     args.cat_dims = []
     args.cat_idx = get_catidx(args)
-    print(f"Cat Idx Part II: {args.cat_idx} ")
-    print(f"ENDE \n \n")
+    #print(f"Cat Idx Part II: {args.cat_idx} ")
+    #print(f"ENDE \n \n")
 
     #####################################################################################
     # NO Encoding for XGBoost, CatBoost, LightGBM
@@ -329,7 +330,7 @@ def load_data(args):
 
     args.num_idx = num_idx #update num_idx
 
-    print(f"X after Nominal Encoding: {X[0]} \n \n")
+    #print(f"X after Nominal Encoding: {X[0]} \n \n")
     
     
     if args.scale:
@@ -337,11 +338,11 @@ def load_data(args):
         scaler = StandardScaler()
         X[:, num_idx] = scaler.fit_transform(X[:, num_idx])
 
-    print(f"X after Scaling: {X[0]} \n \n")
+    #print(f"X after Scaling: {X[0]} \n \n")
 
 
     if args.one_hot_encode:
-        ohe = OneHotEncoder(sparse=False, handle_unknown='ignore')
+        ohe = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
         new_x1 = ohe.fit_transform(X[:, args.nominal_idx])
         new_x2 = X[:, num_idx]
 
@@ -370,12 +371,12 @@ def load_data(args):
             args.cat_idx = None
             
         print("One Hot Encoding...")
-        print(f"X after One Hot Encoding: {X[0]} \n \n")
-        print(f"args.num_features: {args.num_features}")
-        print(f"args.cat_idx: {args.cat_idx}")
-        print(f"Cat Dims: {args.cat_dims}")
+        #print(f"X after One Hot Encoding: {X[0]} \n \n")
+        #print(f"args.num_features: {args.num_features}")
+        #print(f"args.cat_idx: {args.cat_idx}")
+        #print(f"Cat Dims: {args.cat_dims}")
         print("New Shape:", X.shape)
-        print(f"{args.ordinal_encode} \n \n")
+        #print(f"{args.ordinal_encode} \n \n")
         
 
     # Ordinal Encode
@@ -447,7 +448,6 @@ def load_data(args):
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
         
         elif args.dataset == "Brazillian_Houses":
-            print('This BRAZILIAN HOUSES') 
 
             encoder = OrdinalEncoder(categories=[[None,'not furnished','furnished']])
 
