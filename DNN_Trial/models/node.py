@@ -139,7 +139,7 @@ class NODE(BaseModelTorch):
         return loss_history, val_loss_history
 
     def predict_helper(self, X):
-        X_test = torch.as_tensor(np.array(X, dtype=np.float), device=self.device, dtype=torch.float32)
+        X_test = torch.as_tensor(np.array(X, dtype=float), device=self.device, dtype=torch.float32)
         self.model.train(False)
         with torch.no_grad():
             prediction = process_in_chunks(self.model, X_test, batch_size=self.args.val_batch_size)

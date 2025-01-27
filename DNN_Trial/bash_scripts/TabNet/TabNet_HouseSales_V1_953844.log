@@ -1,0 +1,2049 @@
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/house_sales.yml', data_parallel=False, dataset='House_Sales', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=93, nominal_idx=[14], num_classes=1, num_features=21, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset House_Sales...
+Dataset loaded! 
+
+X b4 encoding : [ 3.00000e+00  1.00000e+00  1.18000e+03  5.65000e+03  1.00000e+00
+  0.00000e+00  0.00000e+00  3.00000e+00  7.00000e+00  1.18000e+03
+  0.00000e+00  1.95500e+03  0.00000e+00  9.81780e+04  4.75112e+01
+ -1.22257e+02  1.34000e+03  5.65000e+03  2.01400e+03  1.00000e+01
+  1.30000e+01] 
+
+(21613, 21)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [13]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [13]
+Cat Idx Part II: [13] 
+ENDE 
+ 
+
+X after Nominal Encoding: [ 3.00000e+00  1.00000e+00  1.18000e+03  5.65000e+03  1.00000e+00
+  0.00000e+00  0.00000e+00  3.00000e+00  7.00000e+00  1.18000e+03
+  0.00000e+00  1.95500e+03  0.00000e+00  9.81780e+04  4.75112e+01
+ -1.22257e+02  1.34000e+03  5.65000e+03  2.01400e+03  1.00000e+01
+  1.30000e+01] 
+ 
+
+Scaling the data...
+X after Scaling: [-3.98737149e-01 -1.44746357e+00 -9.79835021e-01 -2.28321332e-01
+ -9.15427004e-01 -8.71726310e-02 -3.05759464e-01 -6.29186873e-01
+ -5.58835749e-01 -7.34707638e-01 -6.58681040e-01 -5.44897771e-01
+ -2.10128386e-01  9.81780000e+04 -3.52571748e-01 -3.06078958e-01
+ -9.43355198e-01 -2.60715408e-01 -6.90654785e-01  1.09962055e+00
+ -3.11319009e-01] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [ 0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  0.          0.          0.          0.          0.          0.
+  1.          0.          0.          0.         -0.39873715 -1.44746357
+ -0.97983502 -0.22832133 -0.915427   -0.08717263 -0.30575946 -0.62918687
+ -0.55883575 -0.73470764 -0.65868104 -0.54489777 -0.21012839 -0.35257175
+ -0.30607896 -0.9433552  -0.26071541 -0.69065478  1.09962055 -0.31131901] 
+ 
+
+args.num_features: 90
+args.cat_idx: None
+Cat Dims: []
+New Shape: (21613, 90)
+False 
+ 
+
+Using an existing study with name 'TabNet_House_Sales' instead of creating a new one.
+In get_device
+In get_device
+epoch 0  | loss: 425772974565.45184| eval_rmse: 638369.23018|  0:00:06s
+epoch 1  | loss: 405328115818.19257| eval_rmse: 607182.83382|  0:00:12s
+epoch 2  | loss: 368219471507.91113| eval_rmse: 566439.10247|  0:00:18s
+epoch 3  | loss: 324348014683.0222| eval_rmse: 507218.10079|  0:00:24s
+epoch 4  | loss: 286094674299.2594| eval_rmse: 493646.66274|  0:00:31s
+epoch 5  | loss: 248510970690.37036| eval_rmse: 474930.49193|  0:00:37s
+epoch 6  | loss: 212076863609.36295| eval_rmse: 446894.94211|  0:00:43s
+epoch 7  | loss: 179022762742.51855| eval_rmse: 396640.74579|  0:00:49s
+epoch 8  | loss: 148589335832.65186| eval_rmse: 281934.47482|  0:00:55s
+epoch 9  | loss: 117480448151.7037| eval_rmse: 364381.0995|  0:01:01s
+epoch 10 | loss: 89808631140.50371| eval_rmse: 252337.48546|  0:01:07s
+epoch 11 | loss: 68147285378.84444| eval_rmse: 220106.57019|  0:01:14s
+epoch 12 | loss: 52566526938.07407| eval_rmse: 263968.56236|  0:01:20s
+epoch 13 | loss: 42502090888.53334| eval_rmse: 223624.36413|  0:01:26s
+epoch 14 | loss: 34753146660.02964| eval_rmse: 228984.30889|  0:01:32s
+epoch 15 | loss: 29154483742.34074| eval_rmse: 136791.26176|  0:01:38s
+epoch 16 | loss: 25337825826.13335| eval_rmse: 186220.23682|  0:01:44s
+epoch 17 | loss: 22548344213.8074| eval_rmse: 157079.43567|  0:01:50s
+epoch 18 | loss: 21301375465.24444| eval_rmse: 139085.94832|  0:01:57s
+epoch 19 | loss: 21672612450.60741| eval_rmse: 131464.59424|  0:02:03s
+epoch 20 | loss: 19550685563.25925| eval_rmse: 128735.75836|  0:02:09s
+epoch 21 | loss: 18930032583.11112| eval_rmse: 124811.0739|  0:02:15s
+epoch 22 | loss: 19337003258.31111| eval_rmse: 127124.56564|  0:02:21s
+epoch 23 | loss: 21031226413.51112| eval_rmse: 131166.97154|  0:02:27s
+epoch 24 | loss: 18397251606.75556| eval_rmse: 136371.77988|  0:02:33s
+epoch 25 | loss: 18538719372.32592| eval_rmse: 196796.06522|  0:02:40s
+epoch 26 | loss: 20767959362.37036| eval_rmse: 159682.36664|  0:02:46s
+epoch 27 | loss: 18744051772.68148| eval_rmse: 125790.03505|  0:02:52s
+epoch 28 | loss: 18120348884.38519| eval_rmse: 168566.67066|  0:02:58s
+epoch 29 | loss: 18501415446.75556| eval_rmse: 152269.93856|  0:03:04s
+epoch 30 | loss: 19380377914.78519| eval_rmse: 153490.31032|  0:03:10s
+epoch 31 | loss: 19389095416.41481| eval_rmse: 126673.58069|  0:03:16s
+epoch 32 | loss: 18768063017.71854| eval_rmse: 130481.76641|  0:03:22s
+epoch 33 | loss: 17461597703.58518| eval_rmse: 181341.91953|  0:03:29s
+epoch 34 | loss: 17349681512.2963| eval_rmse: 136269.73304|  0:03:35s
+epoch 35 | loss: 18240049178.54814| eval_rmse: 132801.394|  0:03:41s
+epoch 36 | loss: 19841684703.76296| eval_rmse: 123037.89965|  0:03:47s
+epoch 37 | loss: 17632779044.02962| eval_rmse: 124075.82038|  0:03:53s
+epoch 38 | loss: 18180730166.9926| eval_rmse: 167569.74494|  0:03:59s
+epoch 39 | loss: 16431069077.80741| eval_rmse: 126092.13583|  0:04:05s
+epoch 40 | loss: 16974355547.02222| eval_rmse: 146137.92709|  0:04:11s
+epoch 41 | loss: 16571295967.76295| eval_rmse: 189372.67449|  0:04:17s
+epoch 42 | loss: 16496796982.99259| eval_rmse: 129797.96291|  0:04:24s
+epoch 43 | loss: 15637040848.59259| eval_rmse: 183724.16505|  0:04:30s
+epoch 44 | loss: 15400779825.3037| eval_rmse: 135662.95913|  0:04:36s
+epoch 45 | loss: 14168529749.33334| eval_rmse: 129675.41838|  0:04:42s
+epoch 46 | loss: 15534298737.77778| eval_rmse: 158108.38612|  0:04:48s
+epoch 47 | loss: 15892521551.64444| eval_rmse: 129764.33178|  0:04:54s
+epoch 48 | loss: 14797362285.98519| eval_rmse: 139917.18976|  0:05:00s
+epoch 49 | loss: 15282582899.67407| eval_rmse: 165010.47915|  0:05:06s
+epoch 50 | loss: 14356843406.22222| eval_rmse: 139143.15481|  0:05:12s
+epoch 51 | loss: 13714331511.46667| eval_rmse: 136778.18649|  0:05:18s
+epoch 52 | loss: 13409569302.75556| eval_rmse: 192916.26369|  0:05:24s
+epoch 53 | loss: 13923407026.25185| eval_rmse: 141139.85592|  0:05:30s
+epoch 54 | loss: 13998117732.5037| eval_rmse: 143617.13758|  0:05:36s
+epoch 55 | loss: 14623729036.32592| eval_rmse: 136404.51098|  0:05:43s
+epoch 56 | loss: 13934231836.44444| eval_rmse: 147982.93917|  0:05:49s
+
+Early stopping occurred at epoch 56 with best_epoch = 36 and best_eval_rmse = 123037.89965
+Saved Losses
+{'MSE - mean': 15138324750.107698, 'MSE - std': 0.0, 'R2 - mean': 0.8821162226751699, 'R2 - std': 0.0} 
+ 
+
+In get_device
+epoch 0  | loss: 424603409885.86664| eval_rmse: 643136.09197|  0:00:06s
+epoch 1  | loss: 408801959389.86664| eval_rmse: 623824.82468|  0:00:12s
+epoch 2  | loss: 374004675621.9259| eval_rmse: 578389.08954|  0:00:18s
+epoch 3  | loss: 333768590889.71857| eval_rmse: 545813.86013|  0:00:24s
+epoch 4  | loss: 295152806449.30365| eval_rmse: 533982.89115|  0:00:30s
+epoch 5  | loss: 260799350313.7185| eval_rmse: 509478.20453|  0:00:36s
+epoch 6  | loss: 225124040764.6815| eval_rmse: 425698.09634|  0:00:43s
+epoch 7  | loss: 196539028093.15555| eval_rmse: 410105.3771|  0:00:49s
+epoch 8  | loss: 164837168226.60742| eval_rmse: 292968.99866|  0:00:55s
+epoch 9  | loss: 137773970955.37778| eval_rmse: 341983.95109|  0:01:01s
+epoch 10 | loss: 113486556546.84447| eval_rmse: 407795.75499|  0:01:07s
+epoch 11 | loss: 97775795298.6074| eval_rmse: 303742.36553|  0:01:14s
+epoch 12 | loss: 80250977606.16296| eval_rmse: 283537.98291|  0:01:20s
+epoch 13 | loss: 64160739828.62222| eval_rmse: 292969.38702|  0:01:26s
+epoch 14 | loss: 52045241821.86667| eval_rmse: 219087.40503|  0:01:32s
+epoch 15 | loss: 40718465463.94072| eval_rmse: 192979.51995|  0:01:38s
+epoch 16 | loss: 34580964306.4889| eval_rmse: 196582.92441|  0:01:44s
+epoch 17 | loss: 30326342974.57778| eval_rmse: 163232.71025|  0:01:50s
+epoch 18 | loss: 25780265130.66666| eval_rmse: 159848.80663|  0:01:56s
+epoch 19 | loss: 24579297814.75554| eval_rmse: 181943.18287|  0:02:03s
+epoch 20 | loss: 23065756603.73334| eval_rmse: 281151.73639|  0:02:09s
+epoch 21 | loss: 22032759641.12592| eval_rmse: 219924.15423|  0:02:15s
+epoch 22 | loss: 21836023652.5037| eval_rmse: 248555.51668|  0:02:21s
+epoch 23 | loss: 20517774396.68147| eval_rmse: 191080.74862|  0:02:28s
+epoch 24 | loss: 19513061360.82962| eval_rmse: 226309.90691|  0:02:34s
+epoch 25 | loss: 18761982221.27407| eval_rmse: 156861.9754|  0:02:40s
+epoch 26 | loss: 18588109903.64443| eval_rmse: 183830.73415|  0:02:46s
+epoch 27 | loss: 18154578295.46666| eval_rmse: 203533.88389|  0:02:52s
+epoch 28 | loss: 17894632284.91852| eval_rmse: 142107.21902|  0:02:58s
+epoch 29 | loss: 16903109203.43704| eval_rmse: 210657.65773|  0:03:04s
+epoch 30 | loss: 17480552683.14074| eval_rmse: 153718.64266|  0:03:10s
+epoch 31 | loss: 16824518762.19258| eval_rmse: 245625.61242|  0:03:16s
+epoch 32 | loss: 16279415497.00741| eval_rmse: 170501.5034|  0:03:23s
+epoch 33 | loss: 16279650201.6| eval_rmse: 231177.11776|  0:03:29s
+epoch 34 | loss: 16289940999.58518| eval_rmse: 168380.40228|  0:03:35s
+epoch 35 | loss: 17035890786.60741| eval_rmse: 159564.59175|  0:03:41s
+epoch 36 | loss: 15654514574.22222| eval_rmse: 166686.178|  0:03:48s
+epoch 37 | loss: 17484037552.35556| eval_rmse: 187128.02446|  0:03:54s
+epoch 38 | loss: 15952609003.14074| eval_rmse: 159630.40744|  0:04:00s
+epoch 39 | loss: 14309012673.42222| eval_rmse: 161977.46596|  0:04:06s
+epoch 40 | loss: 15486028352.47407| eval_rmse: 174546.70248|  0:04:12s
+epoch 41 | loss: 15068301433.36296| eval_rmse: 150886.18191|  0:04:19s
+epoch 42 | loss: 14322287885.27407| eval_rmse: 166471.80301|  0:04:25s
+epoch 43 | loss: 15746104445.15556| eval_rmse: 158821.08559|  0:04:31s
+epoch 44 | loss: 14559678615.7037| eval_rmse: 155550.5451|  0:04:37s
+epoch 45 | loss: 14886053690.78519| eval_rmse: 155238.40418|  0:04:44s
+epoch 46 | loss: 14379938793.24444| eval_rmse: 164205.0378|  0:04:50s
+epoch 47 | loss: 13781400735.28889| eval_rmse: 165419.82627|  0:04:56s
+epoch 48 | loss: 13840855324.44444| eval_rmse: 188793.96126|  0:05:03s
+
+Early stopping occurred at epoch 48 with best_epoch = 28 and best_eval_rmse = 142107.21902
+Saved Losses
+{'MSE - mean': 17666393223.414886, 'MSE - std': 2528068473.307189, 'R2 - mean': 0.8689705869183322, 'R2 - std': 0.013145635756837637} 
+ 
+
+In get_device
+epoch 0  | loss: 418910538956.8| eval_rmse: 660828.54223|  0:00:06s
+epoch 1  | loss: 399459291409.0668| eval_rmse: 633166.22078|  0:00:12s
+epoch 2  | loss: 370361050119.58527| eval_rmse: 602012.05252|  0:00:18s
+epoch 3  | loss: 327802205950.10376| eval_rmse: 577069.02132|  0:00:24s
+epoch 4  | loss: 287994952028.9185| eval_rmse: 538625.91163|  0:00:31s
+epoch 5  | loss: 252780882238.5778| eval_rmse: 501815.38239|  0:00:37s
+epoch 6  | loss: 222086922422.04443| eval_rmse: 425816.82334|  0:00:43s
+epoch 7  | loss: 190258118109.86667| eval_rmse: 372934.37974|  0:00:49s
+epoch 8  | loss: 160893304710.63702| eval_rmse: 378657.71975|  0:00:55s
+epoch 9  | loss: 134906681662.57774| eval_rmse: 357002.68742|  0:01:02s
+epoch 10 | loss: 112704216056.41483| eval_rmse: 271025.19969|  0:01:08s
+epoch 11 | loss: 90657017431.22961| eval_rmse: 295905.17613|  0:01:14s
+epoch 12 | loss: 72746013764.26668| eval_rmse: 273622.10561|  0:01:21s
+epoch 13 | loss: 58264333349.92591| eval_rmse: 258222.68762|  0:01:27s
+epoch 14 | loss: 45336665505.1852| eval_rmse: 210218.81913|  0:01:33s
+epoch 15 | loss: 37302721399.46665| eval_rmse: 165199.63703|  0:01:40s
+epoch 16 | loss: 31203040866.6074| eval_rmse: 163529.34011|  0:01:46s
+epoch 17 | loss: 28172464969.95556| eval_rmse: 236323.78603|  0:01:52s
+epoch 18 | loss: 25584545644.08889| eval_rmse: 162111.4914|  0:01:58s
+epoch 19 | loss: 23266025460.62223| eval_rmse: 292990.49758|  0:02:04s
+epoch 20 | loss: 20796459903.05185| eval_rmse: 152709.88226|  0:02:11s
+epoch 21 | loss: 18913499283.9111| eval_rmse: 190070.03028|  0:02:18s
+epoch 22 | loss: 20844717750.04444| eval_rmse: 161978.85019|  0:02:24s
+epoch 23 | loss: 19580561081.83704| eval_rmse: 137987.4246|  0:02:30s
+epoch 24 | loss: 18344616383.52592| eval_rmse: 158926.3533|  0:02:36s
+epoch 25 | loss: 18904867510.04445| eval_rmse: 132251.89552|  0:02:42s
+epoch 26 | loss: 18960719196.91852| eval_rmse: 144484.13427|  0:02:48s
+epoch 27 | loss: 18675208586.42963| eval_rmse: 136521.37155|  0:02:54s
+epoch 28 | loss: 20887086337.89629| eval_rmse: 152793.31562|  0:03:00s
+epoch 29 | loss: 18650576171.6148| eval_rmse: 172239.46696|  0:03:06s
+epoch 30 | loss: 19436608508.20742| eval_rmse: 153127.47895|  0:03:13s
+epoch 31 | loss: 17952248452.74074| eval_rmse: 137683.51014|  0:03:19s
+epoch 32 | loss: 17007647296.47407| eval_rmse: 128320.78794|  0:03:25s
+epoch 33 | loss: 17146731971.31851| eval_rmse: 129581.92085|  0:03:31s
+epoch 34 | loss: 17999939876.02963| eval_rmse: 138197.62633|  0:03:37s
+epoch 35 | loss: 18229986963.91112| eval_rmse: 130045.47858|  0:03:43s
+epoch 36 | loss: 16164545536.0| eval_rmse: 163703.49764|  0:03:49s
+epoch 37 | loss: 15726899055.88148| eval_rmse: 171038.9257|  0:03:55s
+epoch 38 | loss: 16386077210.54815| eval_rmse: 190568.27256|  0:04:01s
+epoch 39 | loss: 16050110111.28889| eval_rmse: 149972.71234|  0:04:07s
+epoch 40 | loss: 16692951627.85186| eval_rmse: 132115.74201|  0:04:13s
+epoch 41 | loss: 15907763017.95556| eval_rmse: 143207.45802|  0:04:20s
+epoch 42 | loss: 14299549551.88148| eval_rmse: 148134.32435|  0:04:26s
+epoch 43 | loss: 15031397046.04444| eval_rmse: 151480.88186|  0:04:32s
+epoch 44 | loss: 14907204549.21482| eval_rmse: 167811.257|  0:04:38s
+epoch 45 | loss: 14936284675.79259| eval_rmse: 161948.02465|  0:04:44s
+epoch 46 | loss: 14010677357.98518| eval_rmse: 136398.94944|  0:04:50s
+epoch 47 | loss: 14080225094.16296| eval_rmse: 156756.39251|  0:04:56s
+epoch 48 | loss: 13813530077.86667| eval_rmse: 142639.18749|  0:05:02s
+epoch 49 | loss: 13107802927.40741| eval_rmse: 165119.22896|  0:05:08s
+epoch 50 | loss: 12968499480.65185| eval_rmse: 130464.00539|  0:05:14s
+epoch 51 | loss: 13407072895.05185| eval_rmse: 155494.94602|  0:05:21s
+epoch 52 | loss: 11669238856.05926| eval_rmse: 183131.99731|  0:05:27s
+
+Early stopping occurred at epoch 52 with best_epoch = 32 and best_eval_rmse = 128320.78794
+Saved Losses
+{'MSE - mean': 17266337021.651382, 'MSE - std': 2140290494.2146, 'R2 - mean': 0.8761088677428849, 'R2 - std': 0.014734831722644469} 
+ 
+
+In get_device
+epoch 0  | loss: 428021426615.94073| eval_rmse: 630138.84072|  0:00:06s
+epoch 1  | loss: 406763851078.1629| eval_rmse: 605114.30949|  0:00:12s
+epoch 2  | loss: 373772518104.17773| eval_rmse: 562022.19123|  0:00:18s
+epoch 3  | loss: 337338620313.6001| eval_rmse: 531905.08042|  0:00:24s
+epoch 4  | loss: 301211717419.61487| eval_rmse: 533219.57781|  0:00:30s
+epoch 5  | loss: 263924085312.4741| eval_rmse: 472344.26749|  0:00:36s
+epoch 6  | loss: 224646025853.15555| eval_rmse: 402751.312|  0:00:43s
+epoch 7  | loss: 188036920297.24445| eval_rmse: 379563.33166|  0:00:49s
+epoch 8  | loss: 155627998200.41483| eval_rmse: 396239.51314|  0:00:55s
+epoch 9  | loss: 131247908939.85182| eval_rmse: 367595.8465|  0:01:01s
+epoch 10 | loss: 106487196163.79259| eval_rmse: 347148.931|  0:01:07s
+epoch 11 | loss: 84893470446.93333| eval_rmse: 233903.26231|  0:01:13s
+epoch 12 | loss: 69798187341.74817| eval_rmse: 252249.41366|  0:01:20s
+epoch 13 | loss: 56683995575.94074| eval_rmse: 210391.42488|  0:01:26s
+epoch 14 | loss: 45900475467.85185| eval_rmse: 161865.93589|  0:01:32s
+epoch 15 | loss: 37093108045.74812| eval_rmse: 173732.93837|  0:01:38s
+epoch 16 | loss: 32982469229.98517| eval_rmse: 146034.32725|  0:01:44s
+epoch 17 | loss: 30084152282.07407| eval_rmse: 186241.61626|  0:01:50s
+epoch 18 | loss: 26627281203.2| eval_rmse: 172732.67372|  0:01:56s
+epoch 19 | loss: 25825399038.1037| eval_rmse: 136360.67639|  0:02:03s
+epoch 20 | loss: 23078448078.6963| eval_rmse: 125479.62946|  0:02:09s
+epoch 21 | loss: 23130451251.2| eval_rmse: 153865.35431|  0:02:15s
+epoch 22 | loss: 22604243512.88889| eval_rmse: 173952.10784|  0:02:21s
+epoch 23 | loss: 20361779738.54815| eval_rmse: 127676.45797|  0:02:27s
+epoch 24 | loss: 21554842487.46667| eval_rmse: 128026.65402|  0:02:33s
+epoch 25 | loss: 20557717936.35555| eval_rmse: 127134.51074|  0:02:39s
+epoch 26 | loss: 19714304860.91852| eval_rmse: 129401.17155|  0:02:45s
+epoch 27 | loss: 20945740030.1037| eval_rmse: 128362.68803|  0:02:52s
+epoch 28 | loss: 19047525979.02223| eval_rmse: 144251.32751|  0:02:58s
+epoch 29 | loss: 20121057909.57036| eval_rmse: 133128.80848|  0:03:04s
+epoch 30 | loss: 18540011417.6| eval_rmse: 133382.33177|  0:03:10s
+epoch 31 | loss: 17551663616.0| eval_rmse: 124458.28298|  0:03:16s
+epoch 32 | loss: 17084701783.22964| eval_rmse: 136357.961|  0:03:22s
+epoch 33 | loss: 17424106442.9037| eval_rmse: 134710.48439|  0:03:29s
+epoch 34 | loss: 18076352151.70371| eval_rmse: 114979.23406|  0:03:36s
+epoch 35 | loss: 17402723711.05185| eval_rmse: 139795.85629|  0:03:42s
+epoch 36 | loss: 17159953631.76296| eval_rmse: 124720.70104|  0:03:48s
+epoch 37 | loss: 16961000861.39259| eval_rmse: 124251.16605|  0:03:54s
+epoch 38 | loss: 16489283902.57778| eval_rmse: 132260.40404|  0:04:00s
+epoch 39 | loss: 16072558273.42222| eval_rmse: 128583.31816|  0:04:06s
+epoch 40 | loss: 16657329038.22222| eval_rmse: 135117.01476|  0:04:12s
+epoch 41 | loss: 15514384054.04444| eval_rmse: 128631.49524|  0:04:18s
+epoch 42 | loss: 16518363428.02963| eval_rmse: 130877.0769|  0:04:25s
+epoch 43 | loss: 16445628400.82963| eval_rmse: 128903.87637|  0:04:31s
+epoch 44 | loss: 16203636918.04444| eval_rmse: 136162.74544|  0:04:37s
+epoch 45 | loss: 15993935469.98518| eval_rmse: 146009.70444|  0:04:43s
+epoch 46 | loss: 14962367533.51111| eval_rmse: 132494.59966|  0:04:50s
+epoch 47 | loss: 15428596827.02222| eval_rmse: 120848.95791|  0:04:56s
+epoch 48 | loss: 14509878317.51111| eval_rmse: 131420.22459|  0:05:02s
+epoch 49 | loss: 15836726537.48148| eval_rmse: 124934.65025|  0:05:08s
+epoch 50 | loss: 13715554353.3037| eval_rmse: 128391.83653|  0:05:14s
+epoch 51 | loss: 14093394871.94074| eval_rmse: 124051.74529|  0:05:20s
+epoch 52 | loss: 13491418730.19259| eval_rmse: 127397.71223|  0:05:26s
+epoch 53 | loss: 13929074122.9037| eval_rmse: 124341.97845|  0:05:32s
+epoch 54 | loss: 13580182554.54815| eval_rmse: 127850.39227|  0:05:39s
+
+Early stopping occurred at epoch 54 with best_epoch = 34 and best_eval_rmse = 114979.23406
+Saved Losses
+{'MSE - mean': 16254808832.720184, 'MSE - std': 2550529431.4566, 'R2 - mean': 0.8798033006246212, 'R2 - std': 0.0142752566482691} 
+ 
+
+In get_device
+epoch 0  | loss: 422673244099.31854| eval_rmse: 647814.24436|  0:00:06s
+epoch 1  | loss: 401800951186.0148| eval_rmse: 618317.38067|  0:00:12s
+epoch 2  | loss: 369916538242.84454| eval_rmse: 587379.9614|  0:00:18s
+epoch 3  | loss: 334899070262.9926| eval_rmse: 543783.61306|  0:00:24s
+epoch 4  | loss: 299271194153.7185| eval_rmse: 510440.88619|  0:00:30s
+epoch 5  | loss: 261113746045.15555| eval_rmse: 454874.03664|  0:00:36s
+epoch 6  | loss: 226076189521.54077| eval_rmse: 468441.97544|  0:00:43s
+epoch 7  | loss: 192958502532.74075| eval_rmse: 400229.46885|  0:00:49s
+epoch 8  | loss: 164175593836.08896| eval_rmse: 412356.11083|  0:00:55s
+epoch 9  | loss: 140652769947.49634| eval_rmse: 423649.28196|  0:01:01s
+epoch 10 | loss: 116666950026.42963| eval_rmse: 394336.03882|  0:01:07s
+epoch 11 | loss: 95086564238.2222| eval_rmse: 275576.5213|  0:01:13s
+epoch 12 | loss: 77901327792.35556| eval_rmse: 275430.25076|  0:01:19s
+epoch 13 | loss: 64508170573.74815| eval_rmse: 220008.09575|  0:01:26s
+epoch 14 | loss: 51755631942.16296| eval_rmse: 266108.61678|  0:01:32s
+epoch 15 | loss: 43072044244.38518| eval_rmse: 234114.41037|  0:01:38s
+epoch 16 | loss: 36308932850.72593| eval_rmse: 148288.91428|  0:01:44s
+epoch 17 | loss: 29964951210.66667| eval_rmse: 214488.50499|  0:01:50s
+epoch 18 | loss: 27350552674.6074| eval_rmse: 209629.90182|  0:01:57s
+epoch 19 | loss: 26243734118.4| eval_rmse: 159903.32106|  0:02:03s
+epoch 20 | loss: 25332018911.76296| eval_rmse: 194450.36939|  0:02:09s
+epoch 21 | loss: 24360780739.31852| eval_rmse: 200841.22985|  0:02:15s
+epoch 22 | loss: 21620761565.86666| eval_rmse: 146808.18576|  0:02:21s
+epoch 23 | loss: 22075962166.99258| eval_rmse: 143502.85009|  0:02:27s
+epoch 24 | loss: 20356026652.44445| eval_rmse: 176089.86049|  0:02:33s
+epoch 25 | loss: 19854661002.42963| eval_rmse: 128342.33089|  0:02:40s
+epoch 26 | loss: 18699139144.05926| eval_rmse: 139945.17228|  0:02:46s
+epoch 27 | loss: 18872546963.91111| eval_rmse: 135395.83417|  0:02:52s
+epoch 28 | loss: 17826105560.17777| eval_rmse: 151094.92859|  0:02:58s
+epoch 29 | loss: 18942670597.68889| eval_rmse: 144755.97717|  0:03:04s
+epoch 30 | loss: 18112247394.60741| eval_rmse: 212809.16908|  0:03:11s
+epoch 31 | loss: 17679007205.45184| eval_rmse: 123561.89538|  0:03:17s
+epoch 32 | loss: 16888228492.32592| eval_rmse: 153595.09798|  0:03:23s
+epoch 33 | loss: 17718665671.11111| eval_rmse: 125629.16717|  0:03:29s
+epoch 34 | loss: 16444663550.1037| eval_rmse: 131792.58905|  0:03:35s
+epoch 35 | loss: 15798634382.22222| eval_rmse: 123338.93672|  0:03:42s
+epoch 36 | loss: 16085251724.32592| eval_rmse: 177010.51494|  0:03:48s
+epoch 37 | loss: 15462434861.51111| eval_rmse: 145673.99166|  0:03:54s
+epoch 38 | loss: 15364541955.7926| eval_rmse: 157463.22548|  0:04:00s
+epoch 39 | loss: 15595878623.76296| eval_rmse: 179233.04613|  0:04:07s
+epoch 40 | loss: 15209686524.20741| eval_rmse: 157440.4748|  0:04:13s
+epoch 41 | loss: 17083528768.47407| eval_rmse: 136128.64322|  0:04:19s
+epoch 42 | loss: 15917475187.67408| eval_rmse: 129210.74088|  0:04:25s
+epoch 43 | loss: 15569163703.94074| eval_rmse: 129535.30944|  0:04:31s
+epoch 44 | loss: 14390169512.77037| eval_rmse: 131600.25374|  0:04:38s
+epoch 45 | loss: 15348846406.16296| eval_rmse: 161331.63329|  0:04:44s
+epoch 46 | loss: 15057238520.41482| eval_rmse: 149935.98708|  0:04:50s
+epoch 47 | loss: 13251262469.68889| eval_rmse: 145020.09465|  0:04:56s
+epoch 48 | loss: 15174002655.76296| eval_rmse: 210972.313|  0:05:03s
+epoch 49 | loss: 15106369175.7037| eval_rmse: 201002.38034|  0:05:09s
+epoch 50 | loss: 13538703583.76296| eval_rmse: 135371.18673|  0:05:15s
+epoch 51 | loss: 13310726187.61482| eval_rmse: 125115.42795|  0:05:21s
+epoch 52 | loss: 12760646071.94074| eval_rmse: 157468.55482|  0:05:28s
+epoch 53 | loss: 13381201087.52593| eval_rmse: 125043.93307|  0:05:34s
+epoch 54 | loss: 14097350927.17037| eval_rmse: 123641.43255|  0:05:40s
+epoch 55 | loss: 13312668994.37037| eval_rmse: 127390.78584|  0:05:46s
+
+Early stopping occurred at epoch 55 with best_epoch = 35 and best_eval_rmse = 123338.93672
+Saved Losses
+{'MSE - mean': 16046345728.352606, 'MSE - std': 2319048892.997156, 'R2 - mean': 0.8811211475309918, 'R2 - std': 0.013037378715588594} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 16046345728.352606, 'MSE - std': 2319048892.997156, 'R2 - mean': 0.8811211475309918, 'R2 - std': 0.013037378715588594}
+Train time: 337.25340716459993
+Inference time: 0.5635867615999928
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 4 finished with value: 16046345728.352606 and parameters: {'n_d': 58, 'n_steps': 7, 'gamma': 1.2229418563903558, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.056981089459962456, 'mask_type': 'entmax'}. Best is trial 1 with value: 15097435312.279827.
+In get_device
+In get_device
+epoch 0  | loss: 428531439661.5112| eval_rmse: 643945.33118|  0:00:08s
+epoch 1  | loss: 426186707581.1556| eval_rmse: 638698.97546|  0:00:16s
+epoch 2  | loss: 416698043960.88885| eval_rmse: 589956.12877|  0:00:24s
+epoch 3  | loss: 402403249478.16296| eval_rmse: 430950.30359|  0:00:32s
+epoch 4  | loss: 386664325423.4074| eval_rmse: 387564.71297|  0:00:39s
+epoch 5  | loss: 369058854532.7407| eval_rmse: 340498.78067|  0:00:47s
+epoch 6  | loss: 349737684900.9778| eval_rmse: 426463.71565|  0:00:55s
+epoch 7  | loss: 330597841609.0073| eval_rmse: 415782.82384|  0:01:03s
+epoch 8  | loss: 311462551248.59235| eval_rmse: 774893.48576|  0:01:11s
+epoch 9  | loss: 288046301669.4517| eval_rmse: 562629.48283|  0:01:19s
+epoch 10 | loss: 268102821478.4| eval_rmse: 1209813.63723|  0:01:27s
+epoch 11 | loss: 247495136718.6963| eval_rmse: 902820.25226|  0:01:34s
+epoch 12 | loss: 230266901723.97037| eval_rmse: 928382.84179|  0:01:42s
+epoch 13 | loss: 210934360685.9852| eval_rmse: 808500.14679|  0:01:50s
+epoch 14 | loss: 193841598494.34067| eval_rmse: 1249990.304|  0:01:58s
+epoch 15 | loss: 179136206226.01486| eval_rmse: 1142407.23166|  0:02:06s
+epoch 16 | loss: 168767521981.62958| eval_rmse: 1096143.97893|  0:02:14s
+epoch 17 | loss: 153884313372.44434| eval_rmse: 2341420.06615|  0:02:22s
+epoch 18 | loss: 148471830512.82962| eval_rmse: 1562867.9044|  0:02:29s
+epoch 19 | loss: 132200370176.0| eval_rmse: 2242350.83428|  0:02:37s
+epoch 20 | loss: 118615277659.02222| eval_rmse: 1452172.7512|  0:02:45s
+epoch 21 | loss: 106897429572.26666| eval_rmse: 1948389.74384|  0:02:53s
+epoch 22 | loss: 94232002772.38518| eval_rmse: 1528666.36258|  0:03:01s
+epoch 23 | loss: 86708059280.11852| eval_rmse: 1625110.27715|  0:03:09s
+epoch 24 | loss: 80922440165.45184| eval_rmse: 1672441.72391|  0:03:17s
+epoch 25 | loss: 69690121344.94814| eval_rmse: 1971393.73489|  0:03:25s
+
+Early stopping occurred at epoch 25 with best_epoch = 5 and best_eval_rmse = 340498.78067
+Saved Losses
+{'MSE - mean': 115939419636.61984, 'MSE - std': 0.0, 'R2 - mean': 0.09716715995829717, 'R2 - std': 0.0} 
+ 
+
+In get_device
+epoch 0  | loss: 426716656799.2887| eval_rmse: 648790.48996|  0:00:07s
+epoch 1  | loss: 424306298788.9778| eval_rmse: 621204.53885|  0:00:15s
+epoch 2  | loss: 415598330462.8148| eval_rmse: 429749.57179|  0:00:23s
+epoch 3  | loss: 402130317281.65936| eval_rmse: 346599.39855|  0:00:31s
+epoch 4  | loss: 387522522741.5704| eval_rmse: 758710.97862|  0:00:39s
+epoch 5  | loss: 371067404288.0002| eval_rmse: 822136.4695|  0:00:47s
+epoch 6  | loss: 351907198475.3778| eval_rmse: 796240.26133|  0:00:55s
+epoch 7  | loss: 333885977395.1999| eval_rmse: 776124.7946|  0:01:03s
+epoch 8  | loss: 311845251876.0297| eval_rmse: 552030.79204|  0:01:11s
+epoch 9  | loss: 290416555774.1037| eval_rmse: 841402.71141|  0:01:19s
+epoch 10 | loss: 272028925223.82205| eval_rmse: 894543.67659|  0:01:26s
+epoch 11 | loss: 256707221428.14816| eval_rmse: 764279.7743|  0:01:34s
+epoch 12 | loss: 241410325981.86667| eval_rmse: 602919.90568|  0:01:42s
+epoch 13 | loss: 224483087701.33337| eval_rmse: 737423.09306|  0:01:50s
+epoch 14 | loss: 206951866853.45187| eval_rmse: 1203777.66267|  0:01:58s
+epoch 15 | loss: 192469734255.8814| eval_rmse: 1244616.78793|  0:02:06s
+epoch 16 | loss: 181189282292.62225| eval_rmse: 1902235.12912|  0:02:14s
+epoch 17 | loss: 159781353820.91858| eval_rmse: 1929072.62344|  0:02:21s
+epoch 18 | loss: 141990013944.41483| eval_rmse: 2041001.01119|  0:02:29s
+epoch 19 | loss: 131817093711.6444| eval_rmse: 1822764.53996|  0:02:37s
+epoch 20 | loss: 121688535889.54074| eval_rmse: 1586884.89305|  0:02:45s
+epoch 21 | loss: 114021364622.22221| eval_rmse: 1668337.67095|  0:02:53s
+epoch 22 | loss: 105735185112.17778| eval_rmse: 1661112.91621|  0:03:01s
+epoch 23 | loss: 96216878679.22966| eval_rmse: 1475683.82089|  0:03:09s
+
+Early stopping occurred at epoch 23 with best_epoch = 3 and best_eval_rmse = 346599.39855
+Saved Losses
+{'MSE - mean': 118035281356.58069, 'MSE - std': 2095861719.9608536, 'R2 - mean': 0.11975527843305711, 'R2 - std': 0.022588118474759944} 
+ 
+
+In get_device
+epoch 0  | loss: 421055348007.82227| eval_rmse: 667665.96921|  0:00:07s
+epoch 1  | loss: 418786541203.91095| eval_rmse: 660976.24765|  0:00:15s
+epoch 2  | loss: 409818180266.6666| eval_rmse: 570917.65763|  0:00:23s
+epoch 3  | loss: 396194009846.5186| eval_rmse: 506194.13572|  0:00:31s
+epoch 4  | loss: 381941070658.3705| eval_rmse: 355256.42455|  0:00:39s
+epoch 5  | loss: 365113792193.42224| eval_rmse: 643257.32216|  0:00:47s
+epoch 6  | loss: 349478756655.4073| eval_rmse: 855161.65037|  0:00:55s
+epoch 7  | loss: 327107143877.2149| eval_rmse: 1240905.00234|  0:01:03s
+epoch 8  | loss: 306095207461.9259| eval_rmse: 1481434.62377|  0:01:11s
+epoch 9  | loss: 282267842423.4667| eval_rmse: 1483177.63885|  0:01:18s
+epoch 10 | loss: 260723235589.68893| eval_rmse: 1633259.58353|  0:01:26s
+epoch 11 | loss: 240790192977.54077| eval_rmse: 1224441.67617|  0:01:34s
+epoch 12 | loss: 223972971800.65182| eval_rmse: 907694.78339|  0:01:42s
+epoch 13 | loss: 205156948074.1926| eval_rmse: 1947157.69488|  0:01:50s
+epoch 14 | loss: 188502891451.7333| eval_rmse: 1899573.47275|  0:01:58s
+epoch 15 | loss: 176595117731.0815| eval_rmse: 1708959.9547|  0:02:06s
+epoch 16 | loss: 162671619580.20734| eval_rmse: 1930488.83981|  0:02:13s
+epoch 17 | loss: 144391691074.37048| eval_rmse: 1730130.18084|  0:02:21s
+epoch 18 | loss: 129724747867.02222| eval_rmse: 1911551.10712|  0:02:29s
+epoch 19 | loss: 119118589132.8| eval_rmse: 1645578.16998|  0:02:37s
+epoch 20 | loss: 109481298299.25926| eval_rmse: 1213547.15892|  0:02:45s
+epoch 21 | loss: 101271445928.77039| eval_rmse: 1397564.03999|  0:02:53s
+epoch 22 | loss: 94634792702.1037| eval_rmse: 1075437.82464|  0:03:01s
+epoch 23 | loss: 85745419908.74074| eval_rmse: 394309.82473|  0:03:09s
+epoch 24 | loss: 77269478908.20741| eval_rmse: 622902.81125|  0:03:17s
+
+Early stopping occurred at epoch 24 with best_epoch = 4 and best_eval_rmse = 355256.42455
+Saved Losses
+{'MSE - mean': 120759229966.24068, 'MSE - std': 4215236207.9645386, 'R2 - mean': 0.13311934670885872, 'R2 - std': 0.026407297714465882} 
+ 
+
+In get_device
+epoch 0  | loss: 430102256268.3259| eval_rmse: 640019.83708|  0:00:08s
+epoch 1  | loss: 428112699209.9556| eval_rmse: 617064.77518|  0:00:16s
+epoch 2  | loss: 418815405564.20734| eval_rmse: 562233.90072|  0:00:24s
+epoch 3  | loss: 403043096378.7851| eval_rmse: 397852.29262|  0:00:32s
+epoch 4  | loss: 385786318756.97766| eval_rmse: 326695.36808|  0:00:40s
+epoch 5  | loss: 364331949655.2296| eval_rmse: 434317.83414|  0:00:48s
+epoch 6  | loss: 350869620022.9926| eval_rmse: 396336.24283|  0:00:56s
+epoch 7  | loss: 335140165920.2369| eval_rmse: 337296.15959|  0:01:04s
+epoch 8  | loss: 318657580479.526| eval_rmse: 351083.13008|  0:01:12s
+epoch 9  | loss: 302166116488.53326| eval_rmse: 474921.15414|  0:01:20s
+epoch 10 | loss: 285429785728.94806| eval_rmse: 363378.50734|  0:01:28s
+epoch 11 | loss: 265954021406.34085| eval_rmse: 333440.53299|  0:01:36s
+epoch 12 | loss: 250372113536.94815| eval_rmse: 672062.45363|  0:01:44s
+epoch 13 | loss: 241437618267.0222| eval_rmse: 326910.70249|  0:01:52s
+epoch 14 | loss: 229933056910.22223| eval_rmse: 664562.87087|  0:02:00s
+epoch 15 | loss: 212393883936.23703| eval_rmse: 1707331.26244|  0:02:08s
+epoch 16 | loss: 198345289636.97775| eval_rmse: 1126488.06421|  0:02:16s
+epoch 17 | loss: 184053906121.00748| eval_rmse: 1155615.33662|  0:02:24s
+epoch 18 | loss: 167613373311.05188| eval_rmse: 1382486.00798|  0:02:32s
+epoch 19 | loss: 153930295917.98514| eval_rmse: 1076580.3647|  0:02:40s
+epoch 20 | loss: 143895681676.32605| eval_rmse: 900537.61949|  0:02:48s
+epoch 21 | loss: 130842631099.7333| eval_rmse: 759751.05009|  0:02:55s
+epoch 22 | loss: 119974199933.15553| eval_rmse: 520788.28045|  0:03:03s
+epoch 23 | loss: 109153773431.46666| eval_rmse: 1011298.69764|  0:03:11s
+epoch 24 | loss: 102297729312.23705| eval_rmse: 1047509.61243|  0:03:19s
+
+Early stopping occurred at epoch 24 with best_epoch = 4 and best_eval_rmse = 326695.36808
+Saved Losses
+{'MSE - mean': 117251888355.79701, 'MSE - std': 7087347722.085471, 'R2 - mean': 0.12961521325786368, 'R2 - std': 0.023661062595802272} 
+ 
+
+In get_device
+epoch 0  | loss: 425221419220.3852| eval_rmse: 656000.72132|  0:00:07s
+epoch 1  | loss: 423014039187.91113| eval_rmse: 639232.68082|  0:00:15s
+epoch 2  | loss: 414756069072.5926| eval_rmse: 583586.70908|  0:00:23s
+epoch 3  | loss: 402401764723.6741| eval_rmse: 278364.01962|  0:00:31s
+epoch 4  | loss: 387708912465.5407| eval_rmse: 294071.5277|  0:00:39s
+epoch 5  | loss: 369521315384.88885| eval_rmse: 356338.86323|  0:00:47s
+epoch 6  | loss: 352628932850.72595| eval_rmse: 382030.4996|  0:00:55s
+epoch 7  | loss: 337001016221.3927| eval_rmse: 322225.81976|  0:01:03s
+epoch 8  | loss: 319297385752.65173| eval_rmse: 565834.38576|  0:01:11s
+epoch 9  | loss: 304526666046.578| eval_rmse: 418508.99546|  0:01:19s
+epoch 10 | loss: 285532656859.9703| eval_rmse: 641501.15496|  0:01:26s
+epoch 11 | loss: 268450578067.91116| eval_rmse: 551849.40386|  0:01:34s
+epoch 12 | loss: 251901505020.2074| eval_rmse: 811080.77045|  0:01:42s
+epoch 13 | loss: 237321148036.74075| eval_rmse: 379042.25457|  0:01:50s
+epoch 14 | loss: 220245847002.07404| eval_rmse: 1031519.03494|  0:01:58s
+epoch 15 | loss: 204148616154.07404| eval_rmse: 454287.45637|  0:02:06s
+epoch 16 | loss: 186243128312.41483| eval_rmse: 957078.89985|  0:02:14s
+epoch 17 | loss: 171357675216.5926| eval_rmse: 831407.92037|  0:02:22s
+epoch 18 | loss: 156518717728.23706| eval_rmse: 804127.7483|  0:02:30s
+epoch 19 | loss: 143660596337.77777| eval_rmse: 1424949.5729|  0:02:37s
+epoch 20 | loss: 131384108221.62965| eval_rmse: 893358.77498|  0:02:45s
+epoch 21 | loss: 121462835306.1926| eval_rmse: 1245440.91319|  0:02:53s
+epoch 22 | loss: 114497661974.75555| eval_rmse: 669428.85957|  0:03:01s
+epoch 23 | loss: 107866951315.91112| eval_rmse: 317108.13428|  0:03:09s
+
+Early stopping occurred at epoch 23 with best_epoch = 3 and best_eval_rmse = 278364.01962
+Saved Losses
+{'MSE - mean': 109298816167.95248, 'MSE - std': 17122786779.238487, 'R2 - mean': 0.18795771788474896, 'R2 - std': 0.11858865076845464} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 109298816167.95248, 'MSE - std': 17122786779.238487, 'R2 - mean': 0.18795771788474896, 'R2 - std': 0.11858865076845464}
+Train time: 201.41253368240004
+Inference time: 0.7753742618000615
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 5 finished with value: 109298816167.95248 and parameters: {'n_d': 10, 'n_steps': 9, 'gamma': 1.934417945624145, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.0012031788704420533, 'mask_type': 'sparsemax'}. Best is trial 1 with value: 15097435312.279827.
+In get_device
+In get_device
+epoch 0  | loss: 427452728995.08154| eval_rmse: 642895.4583|  0:00:06s
+epoch 1  | loss: 419595612979.20013| eval_rmse: 632741.29237|  0:00:12s
+epoch 2  | loss: 404963373996.563| eval_rmse: 615527.87392|  0:00:18s
+epoch 3  | loss: 385360588041.4815| eval_rmse: 597652.4683|  0:00:24s
+epoch 4  | loss: 363799277173.5704| eval_rmse: 567813.64568|  0:00:30s
+epoch 5  | loss: 340778265137.3037| eval_rmse: 566184.47925|  0:00:36s
+epoch 6  | loss: 319116553360.11847| eval_rmse: 530921.86473|  0:00:42s
+epoch 7  | loss: 297589798411.3777| eval_rmse: 508003.77487|  0:00:48s
+epoch 8  | loss: 274166497401.3629| eval_rmse: 464842.29419|  0:00:54s
+epoch 9  | loss: 252027497555.43704| eval_rmse: 465328.19916|  0:01:00s
+epoch 10 | loss: 228846156792.41483| eval_rmse: 471911.06215|  0:01:06s
+epoch 11 | loss: 207106224158.34073| eval_rmse: 446799.41501|  0:01:12s
+epoch 12 | loss: 187105053658.074| eval_rmse: 386736.25412|  0:01:18s
+epoch 13 | loss: 169880796455.82227| eval_rmse: 447041.64815|  0:01:24s
+epoch 14 | loss: 150764774468.2667| eval_rmse: 309624.25725|  0:01:30s
+epoch 15 | loss: 132993743166.57771| eval_rmse: 337459.85259|  0:01:36s
+epoch 16 | loss: 116809802577.54074| eval_rmse: 318453.63841|  0:01:43s
+epoch 17 | loss: 101224732186.54814| eval_rmse: 341224.99346|  0:01:49s
+epoch 18 | loss: 87962351873.8963| eval_rmse: 279049.65305|  0:01:55s
+epoch 19 | loss: 74702830569.24443| eval_rmse: 212801.8632|  0:02:01s
+epoch 20 | loss: 63618832596.38518| eval_rmse: 191812.35471|  0:02:07s
+epoch 21 | loss: 54924503950.22221| eval_rmse: 295182.85711|  0:02:13s
+epoch 22 | loss: 47373628340.14814| eval_rmse: 127176.5887|  0:02:19s
+epoch 23 | loss: 40313878057.71854| eval_rmse: 153684.17904|  0:02:25s
+epoch 24 | loss: 34128068930.37037| eval_rmse: 257535.00131|  0:02:31s
+epoch 25 | loss: 30990094567.34815| eval_rmse: 119434.57654|  0:02:37s
+epoch 26 | loss: 27331964586.66667| eval_rmse: 261782.1659|  0:02:43s
+epoch 27 | loss: 24202940821.8074| eval_rmse: 158795.23964|  0:02:49s
+epoch 28 | loss: 22010199373.74815| eval_rmse: 381197.92708|  0:02:55s
+epoch 29 | loss: 20594782598.63703| eval_rmse: 190843.74129|  0:03:01s
+epoch 30 | loss: 18935910195.20001| eval_rmse: 169096.81375|  0:03:07s
+epoch 31 | loss: 19789102542.6963| eval_rmse: 264662.97734|  0:03:13s
+epoch 32 | loss: 19837824402.01482| eval_rmse: 175121.99735|  0:03:19s
+epoch 33 | loss: 17949105114.07406| eval_rmse: 160007.62832|  0:03:25s
+epoch 34 | loss: 17710964993.8963| eval_rmse: 145146.33673|  0:03:31s
+epoch 35 | loss: 18800772915.20001| eval_rmse: 210701.4179|  0:03:37s
+epoch 36 | loss: 17363929603.79259| eval_rmse: 152541.24038|  0:03:43s
+epoch 37 | loss: 17180735362.84444| eval_rmse: 145184.35009|  0:03:49s
+epoch 38 | loss: 17877610621.15556| eval_rmse: 170481.91516|  0:03:55s
+epoch 39 | loss: 16331631665.3037| eval_rmse: 152909.73802|  0:04:01s
+epoch 40 | loss: 16954018952.53333| eval_rmse: 176883.745|  0:04:07s
+epoch 41 | loss: 17357697915.25926| eval_rmse: 146759.31689|  0:04:13s
+epoch 42 | loss: 16121598194.72592| eval_rmse: 152379.20409|  0:04:19s
+epoch 43 | loss: 17311569950.34074| eval_rmse: 151320.63926|  0:04:25s
+epoch 44 | loss: 15366081380.5037| eval_rmse: 161625.72276|  0:04:31s
+epoch 45 | loss: 17103810726.87408| eval_rmse: 151999.16299|  0:04:37s
+
+Early stopping occurred at epoch 45 with best_epoch = 25 and best_eval_rmse = 119434.57654
+Saved Losses
+{'MSE - mean': 14264618074.126104, 'MSE - std': 0.0, 'R2 - mean': 0.8889198713574917, 'R2 - std': 0.0} 
+ 
+
+In get_device
+epoch 0  | loss: 425533293514.9036| eval_rmse: 647547.97996|  0:00:06s
+epoch 1  | loss: 417383013368.41486| eval_rmse: 638787.89106|  0:00:12s
+epoch 2  | loss: 404493404903.348| eval_rmse: 628358.42458|  0:00:18s
+epoch 3  | loss: 388478391030.5185| eval_rmse: 609504.56225|  0:00:24s
+epoch 4  | loss: 370120085048.889| eval_rmse: 603091.49118|  0:00:30s
+epoch 5  | loss: 351496515189.5703| eval_rmse: 563347.32494|  0:00:36s
+epoch 6  | loss: 331365319626.90375| eval_rmse: 547220.18586|  0:00:42s
+epoch 7  | loss: 309108317783.2296| eval_rmse: 478497.07037|  0:00:48s
+epoch 8  | loss: 285916751098.3111| eval_rmse: 497821.9476|  0:00:54s
+epoch 9  | loss: 265095098216.29636| eval_rmse: 509531.00829|  0:01:00s
+epoch 10 | loss: 241958329639.82224| eval_rmse: 475283.59738|  0:01:06s
+epoch 11 | loss: 218887504236.08887| eval_rmse: 405738.73529|  0:01:12s
+epoch 12 | loss: 198038975525.92593| eval_rmse: 464954.93798|  0:01:19s
+epoch 13 | loss: 176245739246.93332| eval_rmse: 444318.91183|  0:01:25s
+epoch 14 | loss: 154774861808.82962| eval_rmse: 253457.13387|  0:01:31s
+epoch 15 | loss: 136603383914.19273| eval_rmse: 275376.22801|  0:01:37s
+epoch 16 | loss: 119316890358.51852| eval_rmse: 332382.83067|  0:01:43s
+epoch 17 | loss: 103445589591.22961| eval_rmse: 365909.88396|  0:01:49s
+epoch 18 | loss: 88595478270.1037| eval_rmse: 371287.9154|  0:01:55s
+epoch 19 | loss: 75308417782.5185| eval_rmse: 185309.52544|  0:02:02s
+epoch 20 | loss: 63622414457.36296| eval_rmse: 373220.13846|  0:02:08s
+epoch 21 | loss: 54440476292.74072| eval_rmse: 280135.12214|  0:02:14s
+epoch 22 | loss: 46702985754.54815| eval_rmse: 336289.12339|  0:02:20s
+epoch 23 | loss: 39443170311.58518| eval_rmse: 175120.57044|  0:02:26s
+epoch 24 | loss: 33613855963.97037| eval_rmse: 259887.34717|  0:02:32s
+epoch 25 | loss: 28997779998.34074| eval_rmse: 169729.22024|  0:02:38s
+epoch 26 | loss: 26287984370.72592| eval_rmse: 199289.90995|  0:02:44s
+epoch 27 | loss: 20942212877.27408| eval_rmse: 319476.97135|  0:02:50s
+epoch 28 | loss: 20295675725.74815| eval_rmse: 199004.90227|  0:02:56s
+epoch 29 | loss: 18673122269.86666| eval_rmse: 203740.04485|  0:03:02s
+epoch 30 | loss: 19523053423.88148| eval_rmse: 198230.17115|  0:03:08s
+epoch 31 | loss: 17963837246.57777| eval_rmse: 170904.79575|  0:03:14s
+epoch 32 | loss: 15926547444.62222| eval_rmse: 231789.6655|  0:03:20s
+epoch 33 | loss: 16761465628.44444| eval_rmse: 182627.75237|  0:03:26s
+epoch 34 | loss: 15815979410.01482| eval_rmse: 191696.97979|  0:03:32s
+epoch 35 | loss: 16416480202.9037| eval_rmse: 193558.54882|  0:03:38s
+epoch 36 | loss: 14949682725.92592| eval_rmse: 267865.43584|  0:03:45s
+epoch 37 | loss: 16701127433.48148| eval_rmse: 319529.4045|  0:03:51s
+epoch 38 | loss: 16274583286.51852| eval_rmse: 180641.1806|  0:03:57s
+epoch 39 | loss: 15279448265.00741| eval_rmse: 173133.59286|  0:04:04s
+epoch 40 | loss: 13607980608.47407| eval_rmse: 150372.67065|  0:04:10s
+epoch 41 | loss: 14170150494.81482| eval_rmse: 161500.4914|  0:04:17s
+epoch 42 | loss: 14132612755.91111| eval_rmse: 148242.26552|  0:04:23s
+epoch 43 | loss: 13831035016.53333| eval_rmse: 160282.4638|  0:04:29s
+epoch 44 | loss: 14146424756.14815| eval_rmse: 162402.75341|  0:04:35s
+epoch 45 | loss: 14073659073.42222| eval_rmse: 172525.64857|  0:04:41s
+epoch 46 | loss: 15150605880.88889| eval_rmse: 147740.81755|  0:04:47s
+epoch 47 | loss: 14292318014.57778| eval_rmse: 165088.24208|  0:04:53s
+epoch 48 | loss: 13714289349.21482| eval_rmse: 149490.26221|  0:04:59s
+epoch 49 | loss: 13269387844.26667| eval_rmse: 164368.06245|  0:05:05s
+epoch 50 | loss: 14395687211.61481| eval_rmse: 151422.18956|  0:05:11s
+epoch 51 | loss: 12930677394.01482| eval_rmse: 146131.30278|  0:05:17s
+epoch 52 | loss: 13272549994.19259| eval_rmse: 179143.95609|  0:05:24s
+epoch 53 | loss: 13025548352.47407| eval_rmse: 165158.45064|  0:05:30s
+epoch 54 | loss: 12866070057.71852| eval_rmse: 165080.62124|  0:05:36s
+epoch 55 | loss: 12488286355.91111| eval_rmse: 146640.12832|  0:05:42s
+epoch 56 | loss: 12252744294.4| eval_rmse: 143690.04977|  0:05:48s
+epoch 57 | loss: 12603434617.36296| eval_rmse: 187514.85275|  0:05:55s
+epoch 58 | loss: 13270972438.75556| eval_rmse: 137151.76836|  0:06:01s
+epoch 59 | loss: 12538379146.42963| eval_rmse: 146080.26483|  0:06:07s
+epoch 60 | loss: 12608808857.6| eval_rmse: 156497.18418|  0:06:13s
+epoch 61 | loss: 12733593015.94074| eval_rmse: 168280.20194|  0:06:19s
+epoch 62 | loss: 12284738044.20741| eval_rmse: 151929.1705|  0:06:25s
+epoch 63 | loss: 12023733653.80741| eval_rmse: 141721.23825|  0:06:31s
+epoch 64 | loss: 12093275947.61481| eval_rmse: 152248.51476|  0:06:37s
+epoch 65 | loss: 11477300648.77037| eval_rmse: 170725.06998|  0:06:43s
+epoch 66 | loss: 10813756273.77778| eval_rmse: 150259.37595|  0:06:49s
+epoch 67 | loss: 12736808364.56296| eval_rmse: 173736.55102|  0:06:55s
+epoch 68 | loss: 11431964747.85185| eval_rmse: 145161.37355|  0:07:01s
+epoch 69 | loss: 11061796132.02963| eval_rmse: 140555.36593|  0:07:07s
+epoch 70 | loss: 11330739393.42222| eval_rmse: 151605.7956|  0:07:14s
+epoch 71 | loss: 11523926531.7926| eval_rmse: 146441.36513|  0:07:20s
+epoch 72 | loss: 10405534067.67407| eval_rmse: 150758.02872|  0:07:25s
+epoch 73 | loss: 10345827745.18518| eval_rmse: 154713.81295|  0:07:31s
+epoch 74 | loss: 10641625850.31111| eval_rmse: 146590.98815|  0:07:37s
+epoch 75 | loss: 10639478387.67407| eval_rmse: 149022.48242|  0:07:43s
+epoch 76 | loss: 10553411367.82222| eval_rmse: 148303.47656|  0:07:49s
+epoch 77 | loss: 10436018887.11111| eval_rmse: 155669.57267|  0:07:55s
+epoch 78 | loss: 10777124994.84444| eval_rmse: 188454.93582|  0:08:02s
+
+Early stopping occurred at epoch 78 with best_epoch = 58 and best_eval_rmse = 137151.76836
+Saved Losses
+{'MSE - mean': 16537612819.786495, 'MSE - std': 2272994745.66039, 'R2 - mean': 0.8773123111181349, 'R2 - std': 0.011607560239356773} 
+ 
+
+In get_device
+epoch 0  | loss: 420114360759.94073| eval_rmse: 665765.22567|  0:00:06s
+epoch 1  | loss: 411912929765.45184| eval_rmse: 655432.81105|  0:00:12s
+epoch 2  | loss: 398257413355.14075| eval_rmse: 642715.20812|  0:00:18s
+epoch 3  | loss: 382935065364.85925| eval_rmse: 621999.68389|  0:00:25s
+epoch 4  | loss: 364884949098.1925| eval_rmse: 614688.91187|  0:00:31s
+epoch 5  | loss: 344043329824.23706| eval_rmse: 577134.80812|  0:00:37s
+epoch 6  | loss: 322735483441.3037| eval_rmse: 580001.87531|  0:00:43s
+epoch 7  | loss: 301367377191.8224| eval_rmse: 556768.18308|  0:00:49s
+epoch 8  | loss: 278351046125.03705| eval_rmse: 473621.04762|  0:00:54s
+epoch 9  | loss: 255964106418.25183| eval_rmse: 483440.87277|  0:01:00s
+epoch 10 | loss: 232373108553.95557| eval_rmse: 448613.79255|  0:01:06s
+epoch 11 | loss: 211769311778.13333| eval_rmse: 490427.0752|  0:01:12s
+epoch 12 | loss: 189560187380.62225| eval_rmse: 472285.77901|  0:01:18s
+epoch 13 | loss: 169329482744.41483| eval_rmse: 307556.16627|  0:01:24s
+epoch 14 | loss: 148185255844.97784| eval_rmse: 425070.23112|  0:01:30s
+epoch 15 | loss: 130610181825.4222| eval_rmse: 376218.86936|  0:01:36s
+epoch 16 | loss: 112525629667.55556| eval_rmse: 393836.48554|  0:01:42s
+epoch 17 | loss: 98345921862.16298| eval_rmse: 267139.52601|  0:01:48s
+epoch 18 | loss: 83583029976.17778| eval_rmse: 263778.80375|  0:01:54s
+epoch 19 | loss: 72294094377.71852| eval_rmse: 216602.99828|  0:02:00s
+epoch 20 | loss: 60230051278.6963| eval_rmse: 321992.73362|  0:02:07s
+epoch 21 | loss: 51772386023.34816| eval_rmse: 185473.56509|  0:02:13s
+epoch 22 | loss: 43970564634.54814| eval_rmse: 146978.78824|  0:02:19s
+epoch 23 | loss: 37437718262.51853| eval_rmse: 199462.37914|  0:02:25s
+epoch 24 | loss: 32877931000.4148| eval_rmse: 270974.886|  0:02:31s
+epoch 25 | loss: 28336399754.42962| eval_rmse: 154382.78004|  0:02:37s
+epoch 26 | loss: 23708391200.23704| eval_rmse: 217803.74408|  0:02:43s
+epoch 27 | loss: 21907071434.9037| eval_rmse: 272812.75834|  0:02:49s
+epoch 28 | loss: 20709220920.88888| eval_rmse: 185639.69681|  0:02:55s
+epoch 29 | loss: 19858668665.36298| eval_rmse: 137231.64678|  0:03:01s
+epoch 30 | loss: 19664758795.37777| eval_rmse: 202281.57627|  0:03:07s
+epoch 31 | loss: 17858076736.47407| eval_rmse: 171804.54634|  0:03:13s
+epoch 32 | loss: 17692997484.0889| eval_rmse: 166452.32043|  0:03:19s
+epoch 33 | loss: 18318951439.17036| eval_rmse: 186250.01714|  0:03:25s
+epoch 34 | loss: 17100880949.0963| eval_rmse: 174271.64379|  0:03:31s
+epoch 35 | loss: 17349113370.54815| eval_rmse: 162278.40546|  0:03:37s
+epoch 36 | loss: 16938335133.39259| eval_rmse: 138676.26333|  0:03:43s
+epoch 37 | loss: 16381914684.68148| eval_rmse: 168419.61322|  0:03:49s
+epoch 38 | loss: 17012815250.01482| eval_rmse: 135264.46149|  0:03:55s
+epoch 39 | loss: 16527149112.88889| eval_rmse: 179782.58193|  0:04:01s
+epoch 40 | loss: 16356238199.46667| eval_rmse: 153811.69356|  0:04:07s
+epoch 41 | loss: 15920941715.91111| eval_rmse: 162017.16319|  0:04:13s
+epoch 42 | loss: 15829160721.06667| eval_rmse: 149825.23942|  0:04:19s
+epoch 43 | loss: 15772064498.72593| eval_rmse: 169829.60087|  0:04:25s
+epoch 44 | loss: 14726254212.74074| eval_rmse: 156296.75479|  0:04:31s
+epoch 45 | loss: 14628422564.97778| eval_rmse: 136591.60539|  0:04:37s
+epoch 46 | loss: 15101340757.33334| eval_rmse: 161746.51795|  0:04:44s
+epoch 47 | loss: 14277498900.85926| eval_rmse: 143851.59649|  0:04:50s
+epoch 48 | loss: 14544194829.27408| eval_rmse: 140345.99961|  0:04:56s
+epoch 49 | loss: 13452572000.71111| eval_rmse: 145035.6389|  0:05:02s
+epoch 50 | loss: 14508107438.45926| eval_rmse: 167620.18661|  0:05:08s
+epoch 51 | loss: 14199541790.34074| eval_rmse: 182346.83378|  0:05:14s
+epoch 52 | loss: 13077141830.16296| eval_rmse: 145404.56024|  0:05:20s
+epoch 53 | loss: 13088540835.08148| eval_rmse: 140142.76881|  0:05:26s
+epoch 54 | loss: 12768391896.17778| eval_rmse: 174804.43364|  0:05:32s
+epoch 55 | loss: 13072433224.05926| eval_rmse: 140127.45741|  0:05:38s
+epoch 56 | loss: 14224703734.51852| eval_rmse: 170245.59016|  0:05:44s
+epoch 57 | loss: 13133592263.11112| eval_rmse: 141262.29288|  0:05:50s
+epoch 58 | loss: 12749563198.57778| eval_rmse: 145789.82676|  0:05:56s
+
+Early stopping occurred at epoch 58 with best_epoch = 38 and best_eval_rmse = 135264.46149
+Saved Losses
+{'MSE - mean': 17123900060.651255, 'MSE - std': 2032683497.2850022, 'R2 - mean': 0.8776087328894372, 'R2 - std': 0.00948679968200735} 
+ 
+
+In get_device
+epoch 0  | loss: 429284129116.91846| eval_rmse: 637136.79429|  0:00:06s
+epoch 1  | loss: 420264183094.9926| eval_rmse: 624959.95793|  0:00:12s
+epoch 2  | loss: 406151597624.88885| eval_rmse: 610671.8066|  0:00:18s
+epoch 3  | loss: 388170848786.96295| eval_rmse: 577615.50054|  0:00:24s
+epoch 4  | loss: 367766326476.8| eval_rmse: 588468.31386|  0:00:30s
+epoch 5  | loss: 345317396510.34076| eval_rmse: 556162.52762|  0:00:36s
+epoch 6  | loss: 324051306753.8963| eval_rmse: 509798.13903|  0:00:42s
+epoch 7  | loss: 298852150537.48157| eval_rmse: 517499.83867|  0:00:48s
+epoch 8  | loss: 274794325363.67422| eval_rmse: 465959.86906|  0:00:54s
+epoch 9  | loss: 249009305584.82965| eval_rmse: 453155.48685|  0:01:00s
+epoch 10 | loss: 225423297983.5259| eval_rmse: 426947.00497|  0:01:06s
+epoch 11 | loss: 203412380664.41483| eval_rmse: 417272.0564|  0:01:12s
+epoch 12 | loss: 180789798320.35556| eval_rmse: 357076.86083|  0:01:18s
+epoch 13 | loss: 159420231892.3853| eval_rmse: 434390.74447|  0:01:24s
+epoch 14 | loss: 140528856996.97778| eval_rmse: 389632.29443|  0:01:30s
+epoch 15 | loss: 122322757434.78519| eval_rmse: 297675.02491|  0:01:36s
+epoch 16 | loss: 104284419549.86665| eval_rmse: 270915.38546|  0:01:42s
+epoch 17 | loss: 89965964007.34814| eval_rmse: 185978.56087|  0:01:49s
+epoch 18 | loss: 76088704690.25185| eval_rmse: 141490.94002|  0:01:55s
+epoch 19 | loss: 63893352736.23705| eval_rmse: 204307.73021|  0:02:01s
+epoch 20 | loss: 53362551375.64445| eval_rmse: 183465.8136|  0:02:07s
+epoch 21 | loss: 46692538716.91853| eval_rmse: 181686.15798|  0:02:13s
+epoch 22 | loss: 39767668022.99258| eval_rmse: 202342.96328|  0:02:19s
+epoch 23 | loss: 33067594422.04444| eval_rmse: 155496.03014|  0:02:25s
+epoch 24 | loss: 31332289069.51111| eval_rmse: 237417.70535|  0:02:31s
+epoch 25 | loss: 28053740745.00741| eval_rmse: 224230.4785|  0:02:37s
+epoch 26 | loss: 25299595669.8074| eval_rmse: 155771.52947|  0:02:43s
+epoch 27 | loss: 21388201392.35555| eval_rmse: 227251.24288|  0:02:49s
+epoch 28 | loss: 22354518239.76296| eval_rmse: 174746.32547|  0:02:55s
+epoch 29 | loss: 20577117726.34074| eval_rmse: 125365.40708|  0:03:01s
+epoch 30 | loss: 19058003243.61482| eval_rmse: 122493.44448|  0:03:07s
+epoch 31 | loss: 18042694242.60741| eval_rmse: 120810.9022|  0:03:13s
+epoch 32 | loss: 17522918707.2| eval_rmse: 129235.8262|  0:03:19s
+epoch 33 | loss: 18094138861.03704| eval_rmse: 117392.71983|  0:03:25s
+epoch 34 | loss: 16530155497.24445| eval_rmse: 178016.47143|  0:03:31s
+epoch 35 | loss: 16763202669.98518| eval_rmse: 129723.43807|  0:03:37s
+epoch 36 | loss: 17054565284.97778| eval_rmse: 121301.83774|  0:03:43s
+epoch 37 | loss: 16987437715.91112| eval_rmse: 137587.06587|  0:03:49s
+epoch 38 | loss: 17800635710.57778| eval_rmse: 134735.29493|  0:03:55s
+epoch 39 | loss: 17302025151.52592| eval_rmse: 125308.50283|  0:04:01s
+epoch 40 | loss: 16447565202.01482| eval_rmse: 124698.30168|  0:04:07s
+epoch 41 | loss: 15658481656.41482| eval_rmse: 118684.26588|  0:04:13s
+epoch 42 | loss: 16138748029.15556| eval_rmse: 146393.99831|  0:04:19s
+epoch 43 | loss: 16411911972.02962| eval_rmse: 205216.60051|  0:04:25s
+epoch 44 | loss: 16861967189.33334| eval_rmse: 174711.49193|  0:04:31s
+epoch 45 | loss: 15722795076.26667| eval_rmse: 130344.42369|  0:04:37s
+epoch 46 | loss: 14570060944.11852| eval_rmse: 194464.40448|  0:04:43s
+epoch 47 | loss: 14619842810.31111| eval_rmse: 194457.28812|  0:04:49s
+epoch 48 | loss: 16002243041.65926| eval_rmse: 118376.54001|  0:04:55s
+epoch 49 | loss: 15465622907.25926| eval_rmse: 121964.93614|  0:05:01s
+epoch 50 | loss: 15447043538.48889| eval_rmse: 136124.84942|  0:05:07s
+epoch 51 | loss: 15651312636.20741| eval_rmse: 140269.86562|  0:05:13s
+epoch 52 | loss: 15526406250.19259| eval_rmse: 144159.89232|  0:05:19s
+epoch 53 | loss: 17628792153.12593| eval_rmse: 119095.50477|  0:05:25s
+
+Early stopping occurred at epoch 53 with best_epoch = 33 and best_eval_rmse = 117392.71983
+Saved Losses
+{'MSE - mean': 16288187712.590958, 'MSE - std': 2279056172.235003, 'R2 - mean': 0.8797710013394185, 'R2 - std': 0.009029160575837344} 
+ 
+
+In get_device
+epoch 0  | loss: 423699177411.31854| eval_rmse: 653035.36997|  0:00:05s
+epoch 1  | loss: 415911290106.3112| eval_rmse: 640015.7791|  0:00:12s
+epoch 2  | loss: 401691052896.7111| eval_rmse: 629508.46227|  0:00:18s
+epoch 3  | loss: 385540022818.1334| eval_rmse: 609049.97106|  0:00:24s
+epoch 4  | loss: 367434638829.03705| eval_rmse: 587957.61941|  0:00:30s
+epoch 5  | loss: 348118278204.6814| eval_rmse: 566029.99066|  0:00:36s
+epoch 6  | loss: 328121740189.3927| eval_rmse: 540282.17103|  0:00:42s
+epoch 7  | loss: 306734709206.28143| eval_rmse: 527639.62674|  0:00:48s
+epoch 8  | loss: 284475688611.08136| eval_rmse: 499044.78668|  0:00:54s
+epoch 9  | loss: 261758475499.14075| eval_rmse: 496595.30555|  0:01:00s
+epoch 10 | loss: 238773519913.7185| eval_rmse: 427184.9998|  0:01:06s
+epoch 11 | loss: 217135704989.39255| eval_rmse: 423168.09034|  0:01:13s
+epoch 12 | loss: 195758893010.4889| eval_rmse: 408137.83121|  0:01:19s
+epoch 13 | loss: 174745864813.9852| eval_rmse: 338262.34183|  0:01:25s
+epoch 14 | loss: 152662653216.23697| eval_rmse: 305780.45194|  0:01:31s
+epoch 15 | loss: 133527512253.62962| eval_rmse: 285887.02094|  0:01:37s
+epoch 16 | loss: 115432984424.2963| eval_rmse: 289632.22905|  0:01:43s
+epoch 17 | loss: 98726722279.34814| eval_rmse: 364905.60155|  0:01:49s
+epoch 18 | loss: 83209868947.91113| eval_rmse: 245258.24816|  0:01:55s
+epoch 19 | loss: 72235317809.30376| eval_rmse: 178487.30569|  0:02:01s
+epoch 20 | loss: 61091602401.65926| eval_rmse: 238925.50246|  0:02:07s
+epoch 21 | loss: 51099176451.79259| eval_rmse: 163019.73284|  0:02:13s
+epoch 22 | loss: 43575095007.76294| eval_rmse: 284442.69973|  0:02:20s
+epoch 23 | loss: 37236239625.48152| eval_rmse: 149007.32925|  0:02:26s
+epoch 24 | loss: 32634643858.01483| eval_rmse: 277680.92364|  0:02:32s
+epoch 25 | loss: 27824788809.95556| eval_rmse: 187993.41355|  0:02:38s
+epoch 26 | loss: 24247581555.67407| eval_rmse: 136030.01102|  0:02:44s
+epoch 27 | loss: 21986960793.6| eval_rmse: 215230.17242|  0:02:50s
+epoch 28 | loss: 21616449991.11111| eval_rmse: 224408.87079|  0:02:56s
+epoch 29 | loss: 19207386775.7037| eval_rmse: 127203.00983|  0:03:03s
+epoch 30 | loss: 17526952288.71111| eval_rmse: 134475.68881|  0:03:09s
+epoch 31 | loss: 18161585569.18519| eval_rmse: 185626.85669|  0:03:15s
+epoch 32 | loss: 17925565333.80742| eval_rmse: 169871.97399|  0:03:21s
+epoch 33 | loss: 17018201061.45185| eval_rmse: 128402.34715|  0:03:27s
+epoch 34 | loss: 16014312425.24444| eval_rmse: 143266.38303|  0:03:34s
+epoch 35 | loss: 16924131377.30372| eval_rmse: 140845.75671|  0:03:40s
+epoch 36 | loss: 15517562216.2963| eval_rmse: 128065.96836|  0:03:46s
+epoch 37 | loss: 16046896264.53333| eval_rmse: 158760.08611|  0:03:53s
+epoch 38 | loss: 15961129179.97037| eval_rmse: 256260.33818|  0:03:59s
+epoch 39 | loss: 15298466304.0| eval_rmse: 190337.70688|  0:04:05s
+epoch 40 | loss: 14850834432.0| eval_rmse: 121772.3816|  0:04:11s
+epoch 41 | loss: 15638530764.8| eval_rmse: 311987.31267|  0:04:17s
+epoch 42 | loss: 14649451603.43704| eval_rmse: 160986.76812|  0:04:23s
+epoch 43 | loss: 14947391203.55556| eval_rmse: 249635.66573|  0:04:29s
+epoch 44 | loss: 14155611010.84444| eval_rmse: 166312.44523|  0:04:35s
+epoch 45 | loss: 13687894930.01482| eval_rmse: 128788.19318|  0:04:41s
+epoch 46 | loss: 14648673609.95556| eval_rmse: 158458.54322|  0:04:47s
+epoch 47 | loss: 13651284688.59259| eval_rmse: 161336.42014|  0:04:53s
+epoch 48 | loss: 13636858161.3037| eval_rmse: 172838.4804|  0:04:59s
+epoch 49 | loss: 12917449159.11111| eval_rmse: 131634.53688|  0:05:05s
+epoch 50 | loss: 13177472128.94815| eval_rmse: 130216.50139|  0:05:12s
+epoch 51 | loss: 13029014827.61481| eval_rmse: 132392.63555|  0:05:18s
+epoch 52 | loss: 13017473505.65926| eval_rmse: 144600.5517|  0:05:24s
+epoch 53 | loss: 13234157088.23704| eval_rmse: 205742.39729|  0:05:30s
+epoch 54 | loss: 13422632986.54815| eval_rmse: 129715.36323|  0:05:36s
+epoch 55 | loss: 12506216804.5037| eval_rmse: 150816.66137|  0:05:42s
+epoch 56 | loss: 11392716041.48148| eval_rmse: 140365.99808|  0:05:48s
+epoch 57 | loss: 12488583069.3926| eval_rmse: 146382.25278|  0:05:54s
+epoch 58 | loss: 13137980442.54814| eval_rmse: 134998.93098|  0:06:00s
+epoch 59 | loss: 12403076052.38518| eval_rmse: 132380.77712|  0:06:07s
+epoch 60 | loss: 11956940282.31111| eval_rmse: 130631.76292|  0:06:13s
+
+Early stopping occurred at epoch 60 with best_epoch = 40 and best_eval_rmse = 121772.3816
+Saved Losses
+{'MSE - mean': 15996252753.99792, 'MSE - std': 2120420172.7857728, 'R2 - mean': 0.8816688240664365, 'R2 - std': 0.008923425181854202} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 15996252753.99792, 'MSE - std': 2120420172.7857728, 'R2 - mean': 0.8816688240664365, 'R2 - std': 0.008923425181854202}
+Train time: 366.6203182951998
+Inference time: 0.5315770629998042
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 6 finished with value: 15996252753.99792 and parameters: {'n_d': 26, 'n_steps': 5, 'gamma': 1.0158629167406121, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.054815858756816195, 'mask_type': 'entmax'}. Best is trial 1 with value: 15097435312.279827.
+In get_device
+In get_device
+epoch 0  | loss: 428014021169.30365| eval_rmse: 642514.68136|  0:00:06s
+epoch 1  | loss: 420979576376.88885| eval_rmse: 626583.40989|  0:00:12s
+epoch 2  | loss: 407167619223.7036| eval_rmse: 599806.16309|  0:00:18s
+epoch 3  | loss: 389182532994.8443| eval_rmse: 587395.27235|  0:00:23s
+epoch 4  | loss: 370303603325.1557| eval_rmse: 606729.64978|  0:00:29s
+epoch 5  | loss: 352099045527.7036| eval_rmse: 545989.83562|  0:00:35s
+epoch 6  | loss: 330685639702.75555| eval_rmse: 509536.93667|  0:00:40s
+epoch 7  | loss: 307905513972.6224| eval_rmse: 484060.51594|  0:00:46s
+epoch 8  | loss: 288168448637.1558| eval_rmse: 545640.24846|  0:00:52s
+epoch 9  | loss: 269537108028.6815| eval_rmse: 496622.852|  0:00:57s
+epoch 10 | loss: 253882172241.54077| eval_rmse: 480351.39342|  0:01:03s
+epoch 11 | loss: 240496912823.94073| eval_rmse: 431657.15277|  0:01:08s
+epoch 12 | loss: 227872260338.72592| eval_rmse: 469322.52574|  0:01:14s
+epoch 13 | loss: 214752479125.8074| eval_rmse: 464021.15796|  0:01:19s
+epoch 14 | loss: 201458858150.87415| eval_rmse: 401762.49878|  0:01:25s
+epoch 15 | loss: 188241983169.4222| eval_rmse: 398473.0671|  0:01:31s
+epoch 16 | loss: 173385969208.8889| eval_rmse: 275136.33353|  0:01:37s
+epoch 17 | loss: 161752740537.83698| eval_rmse: 322067.28109|  0:01:42s
+epoch 18 | loss: 151374289032.53336| eval_rmse: 317537.23619|  0:01:48s
+epoch 19 | loss: 140734482083.08148| eval_rmse: 480535.0191|  0:01:53s
+epoch 20 | loss: 136906280686.93327| eval_rmse: 363156.09732|  0:01:59s
+epoch 21 | loss: 125860753316.97778| eval_rmse: 277568.75689|  0:02:04s
+epoch 22 | loss: 114266694572.56296| eval_rmse: 276067.01452|  0:02:10s
+epoch 23 | loss: 102754370628.26666| eval_rmse: 290135.20132|  0:02:16s
+epoch 24 | loss: 92096745350.637| eval_rmse: 395532.2919|  0:02:21s
+epoch 25 | loss: 82953069560.41481| eval_rmse: 181517.22764|  0:02:27s
+epoch 26 | loss: 73639591587.08145| eval_rmse: 368624.38159|  0:02:32s
+epoch 27 | loss: 67732679626.9037| eval_rmse: 199367.48442|  0:02:38s
+epoch 28 | loss: 59379019078.16296| eval_rmse: 205221.77153|  0:02:43s
+epoch 29 | loss: 54406735439.64445| eval_rmse: 832020.13512|  0:02:49s
+epoch 30 | loss: 49413889289.48148| eval_rmse: 238956.05896|  0:02:55s
+epoch 31 | loss: 43788634430.57776| eval_rmse: 211012.37945|  0:03:00s
+epoch 32 | loss: 41690252121.12592| eval_rmse: 612839.51384|  0:03:06s
+epoch 33 | loss: 36734296777.0074| eval_rmse: 170047.25804|  0:03:11s
+epoch 34 | loss: 33678380024.41482| eval_rmse: 212061.03307|  0:03:17s
+epoch 35 | loss: 30812637449.48148| eval_rmse: 157625.71439|  0:03:22s
+epoch 36 | loss: 27379543244.8| eval_rmse: 271903.80557|  0:03:28s
+epoch 37 | loss: 26631547608.17778| eval_rmse: 121864.31236|  0:03:34s
+epoch 38 | loss: 25891411850.42963| eval_rmse: 350285.56358|  0:03:39s
+epoch 39 | loss: 29637569206.04444| eval_rmse: 198836.55884|  0:03:45s
+epoch 40 | loss: 27492285823.05186| eval_rmse: 273070.21778|  0:03:50s
+epoch 41 | loss: 28424846859.37778| eval_rmse: 178793.51812|  0:03:56s
+epoch 42 | loss: 26003016025.12592| eval_rmse: 188587.00533|  0:04:02s
+epoch 43 | loss: 26205336693.57037| eval_rmse: 167347.14045|  0:04:07s
+epoch 44 | loss: 24002312939.14074| eval_rmse: 204944.31395|  0:04:13s
+epoch 45 | loss: 23698799092.62222| eval_rmse: 148506.09408|  0:04:18s
+epoch 46 | loss: 23214490172.68148| eval_rmse: 295584.43249|  0:04:24s
+epoch 47 | loss: 23935232906.42962| eval_rmse: 320696.23464|  0:04:29s
+epoch 48 | loss: 22794960713.95556| eval_rmse: 234011.25262|  0:04:35s
+epoch 49 | loss: 21992828685.27408| eval_rmse: 174245.26376|  0:04:41s
+epoch 50 | loss: 22720723296.7111| eval_rmse: 277638.43012|  0:04:46s
+epoch 51 | loss: 23116341695.52593| eval_rmse: 218172.2156|  0:04:52s
+epoch 52 | loss: 22208888232.77036| eval_rmse: 364057.47813|  0:04:57s
+epoch 53 | loss: 21263793273.36296| eval_rmse: 205904.99376|  0:05:03s
+epoch 54 | loss: 22186575348.62224| eval_rmse: 219205.16263|  0:05:08s
+epoch 55 | loss: 35372311404.0889| eval_rmse: 250871.08738|  0:05:14s
+epoch 56 | loss: 32301624941.98518| eval_rmse: 263024.86911|  0:05:19s
+epoch 57 | loss: 26738735779.08148| eval_rmse: 158645.76516|  0:05:25s
+
+Early stopping occurred at epoch 57 with best_epoch = 37 and best_eval_rmse = 121864.31236
+Saved Losses
+{'MSE - mean': 14850910627.96184, 'MSE - std': 0.0, 'R2 - mean': 0.8843543476285147, 'R2 - std': 0.0} 
+ 
+
+In get_device
+epoch 0  | loss: 426444659583.0518| eval_rmse: 647599.11547|  0:00:05s
+epoch 1  | loss: 419347148769.6593| eval_rmse: 634019.13647|  0:00:11s
+epoch 2  | loss: 406502033787.2593| eval_rmse: 620957.28037|  0:00:16s
+epoch 3  | loss: 390629729894.4001| eval_rmse: 602303.61521|  0:00:22s
+epoch 4  | loss: 372357938350.4593| eval_rmse: 578638.00038|  0:00:27s
+epoch 5  | loss: 355984406148.7407| eval_rmse: 583121.14781|  0:00:33s
+epoch 6  | loss: 337470096694.9927| eval_rmse: 542803.92541|  0:00:38s
+epoch 7  | loss: 317840393405.62964| eval_rmse: 522683.8788|  0:00:44s
+epoch 8  | loss: 298983725951.0518| eval_rmse: 479997.64639|  0:00:50s
+epoch 9  | loss: 281022185957.4517| eval_rmse: 510689.33869|  0:00:55s
+epoch 10 | loss: 263848207488.94815| eval_rmse: 509327.96648|  0:01:01s
+epoch 11 | loss: 249175190854.16296| eval_rmse: 463836.77966|  0:01:06s
+epoch 12 | loss: 236867474773.33337| eval_rmse: 368837.31228|  0:01:12s
+epoch 13 | loss: 223201780500.85925| eval_rmse: 412310.58833|  0:01:17s
+epoch 14 | loss: 211617362253.7481| eval_rmse: 444941.17168|  0:01:23s
+epoch 15 | loss: 199951427720.53333| eval_rmse: 359998.55301|  0:01:28s
+epoch 16 | loss: 190683315313.77777| eval_rmse: 400690.98518|  0:01:34s
+epoch 17 | loss: 178011472782.22217| eval_rmse: 440455.91825|  0:01:40s
+epoch 18 | loss: 164515470995.9111| eval_rmse: 266641.28229|  0:01:45s
+epoch 19 | loss: 149905343131.4963| eval_rmse: 378682.73894|  0:01:51s
+epoch 20 | loss: 138487126789.6888| eval_rmse: 227361.84731|  0:01:57s
+epoch 21 | loss: 125632883583.05183| eval_rmse: 442368.25911|  0:02:02s
+epoch 22 | loss: 112173353490.96297| eval_rmse: 318830.53975|  0:02:08s
+epoch 23 | loss: 100145834241.8963| eval_rmse: 300844.1219|  0:02:13s
+epoch 24 | loss: 93127308265.24446| eval_rmse: 239574.82684|  0:02:19s
+epoch 25 | loss: 88717957150.34077| eval_rmse: 298232.76847|  0:02:24s
+epoch 26 | loss: 80629932487.11111| eval_rmse: 339375.99151|  0:02:30s
+epoch 27 | loss: 69363855102.10376| eval_rmse: 252657.14341|  0:02:35s
+epoch 28 | loss: 63584132968.2963| eval_rmse: 398497.8188|  0:02:41s
+epoch 29 | loss: 56242433683.9111| eval_rmse: 220153.14411|  0:02:46s
+epoch 30 | loss: 50000487128.17778| eval_rmse: 328185.22615|  0:02:52s
+epoch 31 | loss: 43786293991.34814| eval_rmse: 341797.25766|  0:02:58s
+epoch 32 | loss: 38282145389.98518| eval_rmse: 332590.35554|  0:03:03s
+epoch 33 | loss: 35566633855.05185| eval_rmse: 344287.07811|  0:03:09s
+epoch 34 | loss: 30929197480.77038| eval_rmse: 274070.57661|  0:03:14s
+epoch 35 | loss: 29918969385.71852| eval_rmse: 187109.04551|  0:03:20s
+epoch 36 | loss: 26618801042.01482| eval_rmse: 183406.82579|  0:03:25s
+epoch 37 | loss: 25200991819.85185| eval_rmse: 207218.44716|  0:03:31s
+epoch 38 | loss: 26693763542.28148| eval_rmse: 184282.64126|  0:03:36s
+epoch 39 | loss: 28834540096.47408| eval_rmse: 247814.39161|  0:03:42s
+epoch 40 | loss: 22577541700.26666| eval_rmse: 313788.93586|  0:03:48s
+epoch 41 | loss: 22627210736.82963| eval_rmse: 231509.35026|  0:03:53s
+epoch 42 | loss: 23977079182.22222| eval_rmse: 273990.91265|  0:03:59s
+epoch 43 | loss: 22178111089.77778| eval_rmse: 437431.16429|  0:04:04s
+epoch 44 | loss: 20448948178.48889| eval_rmse: 178337.10961|  0:04:10s
+epoch 45 | loss: 22657839623.58518| eval_rmse: 163084.4545|  0:04:15s
+epoch 46 | loss: 20907372532.62222| eval_rmse: 217188.15937|  0:04:21s
+epoch 47 | loss: 23781144811.14074| eval_rmse: 462204.19316|  0:04:26s
+epoch 48 | loss: 22214125951.05185| eval_rmse: 267988.76733|  0:04:32s
+epoch 49 | loss: 21106368728.17778| eval_rmse: 533217.60041|  0:04:38s
+epoch 50 | loss: 19893240373.09629| eval_rmse: 282743.03277|  0:04:43s
+epoch 51 | loss: 25971097975.46666| eval_rmse: 310693.41359|  0:04:49s
+epoch 52 | loss: 21771242655.2889| eval_rmse: 195336.95813|  0:04:54s
+epoch 53 | loss: 22777834913.18518| eval_rmse: 294917.85218|  0:05:00s
+epoch 54 | loss: 21639604675.31851| eval_rmse: 333295.42355|  0:05:06s
+epoch 55 | loss: 20548442301.62963| eval_rmse: 215292.69532|  0:05:11s
+epoch 56 | loss: 19570518402.84444| eval_rmse: 144124.36824|  0:05:17s
+epoch 57 | loss: 21370518201.83704| eval_rmse: 169654.27018|  0:05:23s
+epoch 58 | loss: 18835201892.5037| eval_rmse: 174348.28481|  0:05:28s
+epoch 59 | loss: 18343412000.23704| eval_rmse: 250674.4376|  0:05:34s
+epoch 60 | loss: 19266758125.03704| eval_rmse: 164469.65563|  0:05:40s
+epoch 61 | loss: 17787242150.87408| eval_rmse: 433391.38992|  0:05:45s
+epoch 62 | loss: 18474189835.37778| eval_rmse: 295101.28334|  0:05:51s
+epoch 63 | loss: 17633861779.91111| eval_rmse: 200915.5529|  0:05:56s
+epoch 64 | loss: 16421387411.91111| eval_rmse: 400157.35944|  0:06:02s
+epoch 65 | loss: 18027300378.54814| eval_rmse: 158866.35948|  0:06:08s
+epoch 66 | loss: 17530105268.14815| eval_rmse: 212049.71311|  0:06:13s
+epoch 67 | loss: 16974732561.06667| eval_rmse: 150804.32125|  0:06:19s
+epoch 68 | loss: 16419983906.13333| eval_rmse: 234890.38085|  0:06:25s
+epoch 69 | loss: 16334861380.26667| eval_rmse: 233435.89241|  0:06:31s
+epoch 70 | loss: 16478264225.18518| eval_rmse: 169764.4506|  0:06:36s
+epoch 71 | loss: 15578861454.22222| eval_rmse: 545738.91152|  0:06:42s
+epoch 72 | loss: 15758160258.84444| eval_rmse: 274957.35304|  0:06:48s
+epoch 73 | loss: 15865225447.34815| eval_rmse: 333055.3396|  0:06:53s
+epoch 74 | loss: 15894631480.88889| eval_rmse: 296669.16|  0:06:59s
+epoch 75 | loss: 15196535337.71852| eval_rmse: 179996.60453|  0:07:04s
+epoch 76 | loss: 16119456347.02222| eval_rmse: 237215.07951|  0:07:10s
+
+Early stopping occurred at epoch 76 with best_epoch = 56 and best_eval_rmse = 144124.36824
+Saved Losses
+{'MSE - mean': 17811372074.435223, 'MSE - std': 2960461446.473384, 'R2 - mean': 0.8680286236494266, 'R2 - std': 0.016325723979088158} 
+ 
+
+In get_device
+epoch 0  | loss: 420801412391.8221| eval_rmse: 666873.85664|  0:00:05s
+epoch 1  | loss: 413713678457.36285| eval_rmse: 648384.67877|  0:00:11s
+epoch 2  | loss: 400151137484.8| eval_rmse: 626819.87311|  0:00:17s
+epoch 3  | loss: 383902266527.2889| eval_rmse: 613979.49898|  0:00:22s
+epoch 4  | loss: 365928281854.1038| eval_rmse: 596224.42578|  0:00:28s
+epoch 5  | loss: 344951515818.66675| eval_rmse: 570157.46046|  0:00:34s
+epoch 6  | loss: 326249603618.13336| eval_rmse: 576203.25117|  0:00:39s
+epoch 7  | loss: 305186287100.20746| eval_rmse: 526434.52291|  0:00:45s
+epoch 8  | loss: 287383823731.6742| eval_rmse: 579183.30306|  0:00:50s
+epoch 9  | loss: 272539808563.2| eval_rmse: 530333.38829|  0:00:56s
+epoch 10 | loss: 259688532711.34818| eval_rmse: 543202.03924|  0:01:02s
+epoch 11 | loss: 246735231142.87408| eval_rmse: 500733.35904|  0:01:07s
+epoch 12 | loss: 233560639624.53333| eval_rmse: 531623.13626|  0:01:13s
+epoch 13 | loss: 220223872356.5037| eval_rmse: 430978.61289|  0:01:18s
+epoch 14 | loss: 206751554431.05185| eval_rmse: 422093.88638|  0:01:24s
+epoch 15 | loss: 192184476922.31113| eval_rmse: 375883.48893|  0:01:30s
+epoch 16 | loss: 177499825857.42224| eval_rmse: 412274.47895|  0:01:36s
+epoch 17 | loss: 164725084372.3851| eval_rmse: 447104.76497|  0:01:42s
+epoch 18 | loss: 150936150349.74814| eval_rmse: 407345.32535|  0:01:48s
+epoch 19 | loss: 133625461236.62222| eval_rmse: 388886.06824|  0:01:53s
+epoch 20 | loss: 121174849308.44444| eval_rmse: 270265.46379|  0:01:59s
+epoch 21 | loss: 110569938792.2963| eval_rmse: 271055.82214|  0:02:05s
+epoch 22 | loss: 101045064923.9704| eval_rmse: 254057.36615|  0:02:11s
+epoch 23 | loss: 91952786272.7111| eval_rmse: 297846.72301|  0:02:17s
+epoch 24 | loss: 81962246310.8741| eval_rmse: 256966.76715|  0:02:23s
+epoch 25 | loss: 73290303457.65926| eval_rmse: 289603.70179|  0:02:28s
+epoch 26 | loss: 66034323622.8741| eval_rmse: 365188.02311|  0:02:34s
+epoch 27 | loss: 58790129224.05925| eval_rmse: 284480.12132|  0:02:39s
+epoch 28 | loss: 51417990576.35555| eval_rmse: 173757.32595|  0:02:45s
+epoch 29 | loss: 46306943423.52592| eval_rmse: 285007.27295|  0:02:51s
+epoch 30 | loss: 40276659033.12591| eval_rmse: 218832.26873|  0:02:56s
+epoch 31 | loss: 36107187336.53332| eval_rmse: 367181.59671|  0:03:02s
+epoch 32 | loss: 32036031321.12593| eval_rmse: 160933.98972|  0:03:07s
+epoch 33 | loss: 29722850573.27408| eval_rmse: 266781.58589|  0:03:13s
+epoch 34 | loss: 30903778759.11111| eval_rmse: 541551.80974|  0:03:19s
+epoch 35 | loss: 27012118452.14814| eval_rmse: 188783.49896|  0:03:25s
+epoch 36 | loss: 23248557511.1111| eval_rmse: 256457.30017|  0:03:30s
+epoch 37 | loss: 24697414375.34815| eval_rmse: 376893.48329|  0:03:36s
+epoch 38 | loss: 22214699163.49629| eval_rmse: 196181.15842|  0:03:42s
+epoch 39 | loss: 21260720518.63704| eval_rmse: 183675.31695|  0:03:47s
+epoch 40 | loss: 20424930171.25926| eval_rmse: 144265.40588|  0:03:53s
+epoch 41 | loss: 20274598813.3926| eval_rmse: 239678.95514|  0:03:58s
+epoch 42 | loss: 21381597354.66668| eval_rmse: 406979.36337|  0:04:04s
+epoch 43 | loss: 22240504767.52592| eval_rmse: 151074.91716|  0:04:10s
+epoch 44 | loss: 19289863570.01482| eval_rmse: 148525.88392|  0:04:16s
+epoch 45 | loss: 23764876507.97037| eval_rmse: 173814.15987|  0:04:21s
+epoch 46 | loss: 18773208488.77037| eval_rmse: 284099.53115|  0:04:27s
+epoch 47 | loss: 18698776242.25185| eval_rmse: 183840.35255|  0:04:33s
+epoch 48 | loss: 21001503125.80741| eval_rmse: 321994.85052|  0:04:38s
+epoch 49 | loss: 19915618797.03704| eval_rmse: 185758.46423|  0:04:44s
+epoch 50 | loss: 20905768774.16296| eval_rmse: 144352.65588|  0:04:50s
+epoch 51 | loss: 18575156311.22962| eval_rmse: 181166.57641|  0:04:55s
+epoch 52 | loss: 19280369299.91111| eval_rmse: 883656.5066|  0:05:01s
+epoch 53 | loss: 19044189915.97037| eval_rmse: 143330.43188|  0:05:07s
+epoch 54 | loss: 16848594306.84445| eval_rmse: 170849.69878|  0:05:12s
+epoch 55 | loss: 17768077224.77037| eval_rmse: 137510.72921|  0:05:18s
+epoch 56 | loss: 17165883611.97037| eval_rmse: 160612.37831|  0:05:24s
+epoch 57 | loss: 16808688052.14815| eval_rmse: 160757.9473|  0:05:30s
+epoch 58 | loss: 17008843829.0963| eval_rmse: 209073.25589|  0:05:36s
+epoch 59 | loss: 16273196760.17778| eval_rmse: 290697.34564|  0:05:42s
+epoch 60 | loss: 17030118927.17038| eval_rmse: 171964.33491|  0:05:48s
+epoch 61 | loss: 17334807404.08889| eval_rmse: 145459.30918|  0:05:54s
+epoch 62 | loss: 16962625365.33333| eval_rmse: 161384.80803|  0:05:59s
+epoch 63 | loss: 17231597662.81482| eval_rmse: 141799.29218|  0:06:05s
+epoch 64 | loss: 17161271284.62223| eval_rmse: 134631.44686|  0:06:11s
+epoch 65 | loss: 16849732998.63704| eval_rmse: 135237.61251|  0:06:16s
+epoch 66 | loss: 16978426402.13334| eval_rmse: 159103.13659|  0:06:22s
+epoch 67 | loss: 16622129406.1037| eval_rmse: 245103.7824|  0:06:27s
+epoch 68 | loss: 15997800326.63704| eval_rmse: 371205.23271|  0:06:33s
+epoch 69 | loss: 16290648579.79259| eval_rmse: 154037.64017|  0:06:39s
+epoch 70 | loss: 16213993153.42222| eval_rmse: 135620.25698|  0:06:44s
+epoch 71 | loss: 16427386151.82223| eval_rmse: 155294.46054|  0:06:50s
+epoch 72 | loss: 15216122094.93334| eval_rmse: 156939.21072|  0:06:56s
+epoch 73 | loss: 15534702463.05185| eval_rmse: 205995.78441|  0:07:01s
+epoch 74 | loss: 15177062809.6| eval_rmse: 161065.98539|  0:07:07s
+epoch 75 | loss: 15587806902.04444| eval_rmse: 143475.78863|  0:07:13s
+epoch 76 | loss: 15350809717.57037| eval_rmse: 178292.898|  0:07:18s
+epoch 77 | loss: 14713210572.8| eval_rmse: 142970.90235|  0:07:24s
+epoch 78 | loss: 15168544092.91851| eval_rmse: 159918.96158|  0:07:30s
+epoch 79 | loss: 13865012546.37037| eval_rmse: 178911.84526|  0:07:36s
+epoch 80 | loss: 14796669603.08148| eval_rmse: 370764.94184|  0:07:41s
+epoch 81 | loss: 13314303662.45926| eval_rmse: 923913.89723|  0:07:47s
+epoch 82 | loss: 14167796398.45926| eval_rmse: 134967.28381|  0:07:53s
+epoch 83 | loss: 12854124635.02222| eval_rmse: 154148.05112|  0:07:58s
+epoch 84 | loss: 13765326832.82963| eval_rmse: 264070.25157|  0:08:04s
+
+Early stopping occurred at epoch 84 with best_epoch = 64 and best_eval_rmse = 134631.44686
+Saved Losses
+{'MSE - mean': 17916123543.7974, 'MSE - std': 2421741878.215745, 'R2 - mean': 0.8717987159968, 'R2 - std': 0.01435664892107595} 
+ 
+
+In get_device
+epoch 0  | loss: 429959651024.5926| eval_rmse: 638012.31437|  0:00:06s
+epoch 1  | loss: 424433742521.8371| eval_rmse: 622209.34991|  0:00:12s
+epoch 2  | loss: 412678163296.7113| eval_rmse: 602719.73307|  0:00:17s
+epoch 3  | loss: 392600281755.4962| eval_rmse: 571830.11159|  0:00:23s
+epoch 4  | loss: 369548629576.05927| eval_rmse: 575148.11842|  0:00:30s
+epoch 5  | loss: 346609749803.6148| eval_rmse: 538998.94709|  0:00:35s
+epoch 6  | loss: 326315017891.0815| eval_rmse: 530584.37783|  0:00:41s
+epoch 7  | loss: 306735014191.4074| eval_rmse: 429638.29881|  0:00:47s
+epoch 8  | loss: 285550020865.8963| eval_rmse: 521785.51855|  0:00:52s
+epoch 9  | loss: 262769644035.7926| eval_rmse: 449419.83465|  0:00:58s
+epoch 10 | loss: 238930789626.31107| eval_rmse: 415321.84739|  0:01:04s
+epoch 11 | loss: 220973364626.0148| eval_rmse: 509984.16593|  0:01:09s
+epoch 12 | loss: 202530245715.43704| eval_rmse: 404458.0687|  0:01:15s
+epoch 13 | loss: 181618072507.7333| eval_rmse: 316102.27769|  0:01:21s
+epoch 14 | loss: 166779443488.2371| eval_rmse: 302137.62469|  0:01:26s
+epoch 15 | loss: 151646358459.73346| eval_rmse: 313667.00459|  0:01:32s
+epoch 16 | loss: 138411593545.95566| eval_rmse: 246957.62476|  0:01:38s
+epoch 17 | loss: 122416323788.8| eval_rmse: 407438.31921|  0:01:43s
+epoch 18 | loss: 110021243244.08888| eval_rmse: 189236.68831|  0:01:49s
+epoch 19 | loss: 99280508108.8| eval_rmse: 372172.02817|  0:01:55s
+epoch 20 | loss: 89595629734.8741| eval_rmse: 202424.6877|  0:02:00s
+epoch 21 | loss: 77392725955.31854| eval_rmse: 218692.53589|  0:02:06s
+epoch 22 | loss: 69389593622.75557| eval_rmse: 263564.29515|  0:02:12s
+epoch 23 | loss: 63417136712.05926| eval_rmse: 229222.57384|  0:02:18s
+epoch 24 | loss: 55603113498.54815| eval_rmse: 305999.38148|  0:02:23s
+epoch 25 | loss: 50046034936.41483| eval_rmse: 156464.89816|  0:02:29s
+epoch 26 | loss: 43866991396.02965| eval_rmse: 272530.0091|  0:02:35s
+epoch 27 | loss: 43829743289.83704| eval_rmse: 158054.30941|  0:02:40s
+epoch 28 | loss: 39144662827.61478| eval_rmse: 145205.31174|  0:02:46s
+epoch 29 | loss: 33215517521.54076| eval_rmse: 255958.113|  0:02:52s
+epoch 30 | loss: 31830820924.68148| eval_rmse: 169653.84758|  0:02:57s
+epoch 31 | loss: 30075212068.02963| eval_rmse: 217784.38782|  0:03:03s
+epoch 32 | loss: 28220803170.60742| eval_rmse: 166856.21398|  0:03:09s
+epoch 33 | loss: 26734143108.74074| eval_rmse: 161714.36523|  0:03:14s
+epoch 34 | loss: 23697137250.60742| eval_rmse: 186019.32887|  0:03:20s
+epoch 35 | loss: 23845516113.54074| eval_rmse: 180564.65111|  0:03:26s
+epoch 36 | loss: 22836308267.61482| eval_rmse: 305322.5581|  0:03:32s
+epoch 37 | loss: 23206069407.28889| eval_rmse: 159135.85795|  0:03:37s
+epoch 38 | loss: 22117290329.12593| eval_rmse: 151039.47625|  0:03:43s
+epoch 39 | loss: 21144193137.77778| eval_rmse: 160212.63454|  0:03:49s
+epoch 40 | loss: 21544878588.20741| eval_rmse: 136462.44867|  0:03:54s
+epoch 41 | loss: 20243607070.34074| eval_rmse: 159269.81053|  0:04:00s
+epoch 42 | loss: 20460319713.65926| eval_rmse: 133356.14976|  0:04:06s
+epoch 43 | loss: 20410717942.51852| eval_rmse: 186296.91542|  0:04:12s
+epoch 44 | loss: 20641513085.15556| eval_rmse: 137188.02534|  0:04:18s
+epoch 45 | loss: 21012305146.31111| eval_rmse: 162673.10789|  0:04:23s
+epoch 46 | loss: 19823497288.05927| eval_rmse: 183627.7539|  0:04:29s
+epoch 47 | loss: 20711583228.20742| eval_rmse: 129160.09527|  0:04:34s
+epoch 48 | loss: 19821401069.03703| eval_rmse: 147680.03034|  0:04:40s
+epoch 49 | loss: 21758367368.53334| eval_rmse: 155990.06237|  0:04:46s
+epoch 50 | loss: 20987429178.78519| eval_rmse: 132116.78605|  0:04:52s
+epoch 51 | loss: 20176582246.4| eval_rmse: 128723.09902|  0:04:57s
+epoch 52 | loss: 19562498476.56297| eval_rmse: 184780.67002|  0:05:03s
+epoch 53 | loss: 20947672306.72594| eval_rmse: 304556.48735|  0:05:09s
+epoch 54 | loss: 18512660756.85927| eval_rmse: 167110.29237|  0:05:14s
+epoch 55 | loss: 18796333818.3111| eval_rmse: 149449.35966|  0:05:20s
+epoch 56 | loss: 18018548064.7111| eval_rmse: 134023.47521|  0:05:26s
+epoch 57 | loss: 18038581775.17036| eval_rmse: 164386.77283|  0:05:31s
+epoch 58 | loss: 17984269873.3037| eval_rmse: 125468.39631|  0:05:37s
+epoch 59 | loss: 17166893837.27408| eval_rmse: 202763.20791|  0:05:43s
+epoch 60 | loss: 17176080990.81482| eval_rmse: 134923.10884|  0:05:48s
+epoch 61 | loss: 18458695717.92594| eval_rmse: 129884.45634|  0:05:54s
+epoch 62 | loss: 18401067940.97778| eval_rmse: 236831.3402|  0:06:00s
+epoch 63 | loss: 17646351837.86666| eval_rmse: 229282.45523|  0:06:05s
+epoch 64 | loss: 17170442031.40741| eval_rmse: 123944.99889|  0:06:11s
+epoch 65 | loss: 16341564560.11853| eval_rmse: 210679.50258|  0:06:16s
+epoch 66 | loss: 18338012709.92594| eval_rmse: 126310.74525|  0:06:22s
+epoch 67 | loss: 17141725358.45925| eval_rmse: 325144.54556|  0:06:27s
+epoch 68 | loss: 16295563002.31111| eval_rmse: 151263.88112|  0:06:33s
+epoch 69 | loss: 17290786649.12594| eval_rmse: 141530.13413|  0:06:39s
+epoch 70 | loss: 15386721219.31852| eval_rmse: 135592.21953|  0:06:44s
+epoch 71 | loss: 16196854139.25926| eval_rmse: 130905.15019|  0:06:50s
+epoch 72 | loss: 16073351547.25926| eval_rmse: 134854.814|  0:06:55s
+epoch 73 | loss: 15253657296.59259| eval_rmse: 272842.3404|  0:07:01s
+epoch 74 | loss: 16110910111.28888| eval_rmse: 137584.67913|  0:07:06s
+epoch 75 | loss: 15360019748.02963| eval_rmse: 133984.70383|  0:07:12s
+epoch 76 | loss: 15066668005.45185| eval_rmse: 135306.72812|  0:07:18s
+epoch 77 | loss: 15365005167.88148| eval_rmse: 150831.58625|  0:07:23s
+epoch 78 | loss: 14907752815.88148| eval_rmse: 131915.95401|  0:07:29s
+epoch 79 | loss: 15554425002.66666| eval_rmse: 130060.28771|  0:07:34s
+epoch 80 | loss: 13856377928.05926| eval_rmse: 127024.0775|  0:07:40s
+epoch 81 | loss: 14981074697.48148| eval_rmse: 196653.20609|  0:07:46s
+epoch 82 | loss: 14625108544.47408| eval_rmse: 151163.00397|  0:07:51s
+epoch 83 | loss: 15516733455.17037| eval_rmse: 127722.43043|  0:07:57s
+epoch 84 | loss: 13283111526.4| eval_rmse: 160624.24495|  0:08:02s
+
+Early stopping occurred at epoch 84 with best_epoch = 64 and best_eval_rmse = 123944.99889
+Saved Losses
+{'MSE - mean': 17277683345.07462, 'MSE - std': 2370958235.727383, 'R2 - mean': 0.872150640490365, 'R2 - std': 0.01244815563566693} 
+ 
+
+In get_device
+epoch 0  | loss: 424563430013.1556| eval_rmse: 650208.5847|  0:00:05s
+epoch 1  | loss: 417944775702.7555| eval_rmse: 636822.59926|  0:00:11s
+epoch 2  | loss: 406312515204.74066| eval_rmse: 624871.5308|  0:00:16s
+epoch 3  | loss: 389698950363.9704| eval_rmse: 578089.55256|  0:00:22s
+epoch 4  | loss: 368802839605.0963| eval_rmse: 581674.7454|  0:00:27s
+epoch 5  | loss: 351405095625.00726| eval_rmse: 572579.29742|  0:00:33s
+epoch 6  | loss: 333818883216.1185| eval_rmse: 574433.94453|  0:00:39s
+epoch 7  | loss: 316587698373.21484| eval_rmse: 522298.19526|  0:00:44s
+epoch 8  | loss: 296396065268.62213| eval_rmse: 543023.81949|  0:00:50s
+epoch 9  | loss: 278242891336.05927| eval_rmse: 386822.35605|  0:00:55s
+epoch 10 | loss: 262173817302.2815| eval_rmse: 516408.49803|  0:01:01s
+epoch 11 | loss: 247350000511.05185| eval_rmse: 468750.21403|  0:01:06s
+epoch 12 | loss: 233266144142.22223| eval_rmse: 438331.64734|  0:01:12s
+epoch 13 | loss: 216178715670.75555| eval_rmse: 334033.75159|  0:01:18s
+epoch 14 | loss: 198708496581.2148| eval_rmse: 478486.82421|  0:01:23s
+epoch 15 | loss: 184384029400.17776| eval_rmse: 447796.09021|  0:01:29s
+epoch 16 | loss: 174334816650.42966| eval_rmse: 415192.24359|  0:01:35s
+epoch 17 | loss: 159866598559.28888| eval_rmse: 381728.72024|  0:01:41s
+epoch 18 | loss: 146129733010.0148| eval_rmse: 293793.10712|  0:01:46s
+epoch 19 | loss: 133854016610.6074| eval_rmse: 221150.29634|  0:01:52s
+epoch 20 | loss: 121993317550.45926| eval_rmse: 490189.17722|  0:01:57s
+epoch 21 | loss: 108454433192.77039| eval_rmse: 388761.6355|  0:02:03s
+epoch 22 | loss: 96994828105.95557| eval_rmse: 260116.71246|  0:02:09s
+epoch 23 | loss: 86383828658.25188| eval_rmse: 303193.25492|  0:02:14s
+epoch 24 | loss: 77375208683.14069| eval_rmse: 222374.63308|  0:02:20s
+epoch 25 | loss: 70975384401.54074| eval_rmse: 429965.36903|  0:02:26s
+epoch 26 | loss: 63351813173.09629| eval_rmse: 254876.69943|  0:02:32s
+epoch 27 | loss: 56944314368.0| eval_rmse: 146123.31436|  0:02:37s
+epoch 28 | loss: 48430644307.43703| eval_rmse: 635148.52694|  0:02:43s
+epoch 29 | loss: 44439928627.19999| eval_rmse: 405977.26139|  0:02:48s
+epoch 30 | loss: 39405095200.237| eval_rmse: 397091.8894|  0:02:54s
+epoch 31 | loss: 34818296483.08148| eval_rmse: 311399.46248|  0:03:00s
+epoch 32 | loss: 30961191814.63704| eval_rmse: 349140.08763|  0:03:05s
+epoch 33 | loss: 28616819765.0963| eval_rmse: 366522.3691|  0:03:11s
+epoch 34 | loss: 28100615084.56296| eval_rmse: 156366.86799|  0:03:16s
+epoch 35 | loss: 24899360718.6963| eval_rmse: 239301.12171|  0:03:22s
+epoch 36 | loss: 23621332153.83704| eval_rmse: 167967.8635|  0:03:28s
+epoch 37 | loss: 23439024332.8| eval_rmse: 231342.59648|  0:03:33s
+epoch 38 | loss: 22508045547.14073| eval_rmse: 186240.28742|  0:03:39s
+epoch 39 | loss: 21834664690.72594| eval_rmse: 211097.36288|  0:03:44s
+epoch 40 | loss: 21444055051.37776| eval_rmse: 750162.77022|  0:03:50s
+epoch 41 | loss: 25256874837.33333| eval_rmse: 181021.8101|  0:03:55s
+epoch 42 | loss: 22993491107.08149| eval_rmse: 151146.84458|  0:04:01s
+epoch 43 | loss: 21342652241.54074| eval_rmse: 143798.23831|  0:04:07s
+epoch 44 | loss: 20922545371.97037| eval_rmse: 257274.34489|  0:04:12s
+epoch 45 | loss: 21052384699.73332| eval_rmse: 349912.4709|  0:04:18s
+epoch 46 | loss: 20340655342.93334| eval_rmse: 335543.88377|  0:04:23s
+epoch 47 | loss: 20858645807.40741| eval_rmse: 249406.56761|  0:04:29s
+epoch 48 | loss: 20146143493.6889| eval_rmse: 273798.45553|  0:04:35s
+epoch 49 | loss: 21469442745.83703| eval_rmse: 185243.43469|  0:04:40s
+epoch 50 | loss: 20026047601.77778| eval_rmse: 295065.75271|  0:04:46s
+epoch 51 | loss: 17761809373.86666| eval_rmse: 129263.78896|  0:04:51s
+epoch 52 | loss: 17655971453.15555| eval_rmse: 173740.02999|  0:04:57s
+epoch 53 | loss: 18236802658.60741| eval_rmse: 139772.16269|  0:05:03s
+epoch 54 | loss: 18097758526.57778| eval_rmse: 187292.51451|  0:05:08s
+epoch 55 | loss: 16903876418.37036| eval_rmse: 299659.08461|  0:05:15s
+epoch 56 | loss: 17302206475.37778| eval_rmse: 214092.37218|  0:05:20s
+epoch 57 | loss: 16091613434.31111| eval_rmse: 185562.37096|  0:05:26s
+epoch 58 | loss: 18079348982.51852| eval_rmse: 157236.18213|  0:05:32s
+epoch 59 | loss: 17586949677.51112| eval_rmse: 217651.82307|  0:05:37s
+epoch 60 | loss: 16535471612.20741| eval_rmse: 152490.19759|  0:05:43s
+epoch 61 | loss: 15471458910.81482| eval_rmse: 446430.04349|  0:05:49s
+epoch 62 | loss: 15518297372.44444| eval_rmse: 186808.92069|  0:05:54s
+epoch 63 | loss: 16651891996.44443| eval_rmse: 181409.8434|  0:06:00s
+epoch 64 | loss: 16463017308.91852| eval_rmse: 144887.89123|  0:06:06s
+epoch 65 | loss: 16088593358.6963| eval_rmse: 142966.49322|  0:06:11s
+epoch 66 | loss: 14220641568.23704| eval_rmse: 152517.05256|  0:06:17s
+epoch 67 | loss: 14940061468.44444| eval_rmse: 210102.62329|  0:06:23s
+epoch 68 | loss: 15282565146.54815| eval_rmse: 435003.36932|  0:06:28s
+epoch 69 | loss: 15845107480.65185| eval_rmse: 271178.91303|  0:06:34s
+epoch 70 | loss: 13323060940.8| eval_rmse: 164872.65998|  0:06:40s
+epoch 71 | loss: 15182754668.08889| eval_rmse: 248409.57295|  0:06:46s
+
+Early stopping occurred at epoch 71 with best_epoch = 51 and best_eval_rmse = 129263.78896
+Saved Losses
+{'MSE - mean': 17163972103.154888, 'MSE - std': 2132809262.593942, 'R2 - mean': 0.8727636360299977, 'R2 - std': 0.011201264085373006} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 17163972103.154888, 'MSE - std': 2132809262.593942, 'R2 - mean': 0.8727636360299977, 'R2 - std': 0.011201264085373006}
+Train time: 429.3142589711999
+Inference time: 0.5117161125999701
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 7 finished with value: 17163972103.154888 and parameters: {'n_d': 22, 'n_steps': 6, 'gamma': 1.745664834528378, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.020891560068890005, 'mask_type': 'entmax'}. Best is trial 1 with value: 15097435312.279827.
+In get_device
+In get_device
+epoch 0  | loss: 427545896914.4888| eval_rmse: 641051.27328|  0:00:06s
+epoch 1  | loss: 414317800956.20746| eval_rmse: 613147.491|  0:00:13s
+epoch 2  | loss: 383556505023.52594| eval_rmse: 482829.63061|  0:00:19s
+epoch 3  | loss: 341952650596.5036| eval_rmse: 462465.52536|  0:00:26s
+epoch 4  | loss: 298746651898.311| eval_rmse: 484679.84156|  0:00:32s
+epoch 5  | loss: 262968429954.84445| eval_rmse: 431389.2504|  0:00:38s
+epoch 6  | loss: 230149816137.95557| eval_rmse: 435326.20817|  0:00:45s
+epoch 7  | loss: 197639985197.5111| eval_rmse: 339309.48074|  0:00:51s
+epoch 8  | loss: 167027958124.08896| eval_rmse: 428353.22332|  0:00:58s
+epoch 9  | loss: 143112868659.19992| eval_rmse: 300689.91143|  0:01:04s
+epoch 10 | loss: 123091115334.16296| eval_rmse: 254529.05646|  0:01:10s
+epoch 11 | loss: 103703614774.9926| eval_rmse: 294224.68117|  0:01:16s
+epoch 12 | loss: 87791557169.30371| eval_rmse: 253247.64445|  0:01:23s
+epoch 13 | loss: 74661748189.86664| eval_rmse: 213504.62911|  0:01:29s
+epoch 14 | loss: 61298744160.7111| eval_rmse: 314217.7834|  0:01:36s
+epoch 15 | loss: 55455027730.96296| eval_rmse: 210549.29398|  0:01:42s
+epoch 16 | loss: 49899437018.07407| eval_rmse: 429697.24539|  0:01:48s
+epoch 17 | loss: 49913484963.08148| eval_rmse: 605105.10826|  0:01:54s
+epoch 18 | loss: 40886593012.62222| eval_rmse: 364271.37851|  0:02:00s
+epoch 19 | loss: 38548978945.89632| eval_rmse: 663379.06524|  0:02:07s
+epoch 20 | loss: 37427641814.28146| eval_rmse: 219603.29829|  0:02:13s
+epoch 21 | loss: 33503248550.87408| eval_rmse: 184837.19466|  0:02:19s
+epoch 22 | loss: 31928812680.53334| eval_rmse: 232379.44256|  0:02:25s
+epoch 23 | loss: 28872413828.74074| eval_rmse: 214534.08698|  0:02:31s
+epoch 24 | loss: 33201968810.66667| eval_rmse: 973905.50074|  0:02:37s
+epoch 25 | loss: 35870264357.92591| eval_rmse: 311669.898|  0:02:44s
+epoch 26 | loss: 38049160123.73334| eval_rmse: 288665.7707|  0:02:50s
+epoch 27 | loss: 34876391264.71112| eval_rmse: 181363.95632|  0:02:56s
+epoch 28 | loss: 30133143434.42963| eval_rmse: 162413.48978|  0:03:03s
+epoch 29 | loss: 27488095770.54815| eval_rmse: 135532.21561|  0:03:09s
+epoch 30 | loss: 27702507209.00741| eval_rmse: 143042.44618|  0:03:15s
+epoch 31 | loss: 25891925447.1111| eval_rmse: 269286.14152|  0:03:21s
+epoch 32 | loss: 25904146511.64444| eval_rmse: 161010.08686|  0:03:28s
+epoch 33 | loss: 23631731712.0| eval_rmse: 186240.40288|  0:03:34s
+epoch 34 | loss: 24867365076.38518| eval_rmse: 259778.70535|  0:03:40s
+epoch 35 | loss: 23354345157.2148| eval_rmse: 237047.36234|  0:03:46s
+epoch 36 | loss: 21715612470.9926| eval_rmse: 228945.5265|  0:03:53s
+epoch 37 | loss: 23177456196.26666| eval_rmse: 266740.23718|  0:03:59s
+epoch 38 | loss: 23231993871.17037| eval_rmse: 216998.21215|  0:04:05s
+epoch 39 | loss: 23231005206.75556| eval_rmse: 243133.0137|  0:04:12s
+epoch 40 | loss: 21615616690.25185| eval_rmse: 392658.66985|  0:04:18s
+epoch 41 | loss: 21646775785.24445| eval_rmse: 148289.60922|  0:04:24s
+epoch 42 | loss: 21323952617.24444| eval_rmse: 458199.18356|  0:04:30s
+epoch 43 | loss: 21660952750.45926| eval_rmse: 301055.46404|  0:04:36s
+epoch 44 | loss: 22477709683.67407| eval_rmse: 815934.99822|  0:04:43s
+epoch 45 | loss: 21470599755.85185| eval_rmse: 210346.4502|  0:04:49s
+epoch 46 | loss: 19092513492.38519| eval_rmse: 268691.54239|  0:04:55s
+epoch 47 | loss: 20721834093.98518| eval_rmse: 152581.30101|  0:05:01s
+epoch 48 | loss: 19578836935.1111| eval_rmse: 296000.31179|  0:05:08s
+epoch 49 | loss: 20692954415.4074| eval_rmse: 267432.28292|  0:05:14s
+
+Early stopping occurred at epoch 49 with best_epoch = 29 and best_eval_rmse = 135532.21561
+Saved Losses
+{'MSE - mean': 18368981467.910465, 'MSE - std': 0.0, 'R2 - mean': 0.8569587482900521, 'R2 - std': 0.0} 
+ 
+
+In get_device
+epoch 0  | loss: 426551198302.8147| eval_rmse: 649296.6777|  0:00:06s
+epoch 1  | loss: 415503572688.5926| eval_rmse: 596458.64197|  0:00:12s
+epoch 2  | loss: 380435503513.5999| eval_rmse: 556338.60793|  0:00:18s
+epoch 3  | loss: 334667054133.09644| eval_rmse: 508374.80703|  0:00:24s
+epoch 4  | loss: 295377129259.6148| eval_rmse: 491519.81373|  0:00:31s
+epoch 5  | loss: 262792836498.0148| eval_rmse: 389919.68156|  0:00:37s
+epoch 6  | loss: 228754695600.35556| eval_rmse: 344730.24253|  0:00:43s
+epoch 7  | loss: 195678999165.15555| eval_rmse: 447910.11242|  0:00:49s
+epoch 8  | loss: 172038143453.86667| eval_rmse: 287728.27895|  0:00:56s
+epoch 9  | loss: 144188327101.62955| eval_rmse: 363877.64982|  0:01:02s
+epoch 10 | loss: 116322380094.57777| eval_rmse: 271413.9856|  0:01:08s
+epoch 11 | loss: 94663189814.9926| eval_rmse: 275215.70201|  0:01:14s
+epoch 12 | loss: 78045890013.86667| eval_rmse: 283734.08212|  0:01:20s
+epoch 13 | loss: 62620116984.41483| eval_rmse: 209541.10299|  0:01:26s
+epoch 14 | loss: 50627186248.05926| eval_rmse: 304020.73671|  0:01:32s
+epoch 15 | loss: 44201648181.09632| eval_rmse: 407368.24274|  0:01:39s
+epoch 16 | loss: 36310031617.89628| eval_rmse: 231732.8209|  0:01:45s
+epoch 17 | loss: 29194244012.56296| eval_rmse: 290250.07109|  0:01:51s
+epoch 18 | loss: 26390964982.51852| eval_rmse: 297363.67339|  0:01:57s
+epoch 19 | loss: 28092280737.18518| eval_rmse: 348562.71247|  0:02:03s
+epoch 20 | loss: 27376634094.93334| eval_rmse: 350462.12666|  0:02:09s
+epoch 21 | loss: 27915253399.7037| eval_rmse: 350666.76686|  0:02:16s
+epoch 22 | loss: 28601016244.14815| eval_rmse: 235819.99784|  0:02:22s
+epoch 23 | loss: 26553342866.01482| eval_rmse: 188110.95465|  0:02:28s
+epoch 24 | loss: 23562426189.74815| eval_rmse: 297608.32807|  0:02:34s
+epoch 25 | loss: 23597549344.23704| eval_rmse: 193023.35042|  0:02:41s
+epoch 26 | loss: 20711673666.37037| eval_rmse: 207546.24736|  0:02:47s
+epoch 27 | loss: 22640317512.05926| eval_rmse: 167166.64077|  0:02:53s
+epoch 28 | loss: 21661069702.63704| eval_rmse: 477402.21388|  0:02:59s
+epoch 29 | loss: 21349052230.16296| eval_rmse: 208618.85244|  0:03:05s
+epoch 30 | loss: 20187815496.05924| eval_rmse: 206593.99345|  0:03:12s
+epoch 31 | loss: 19969193718.51852| eval_rmse: 277025.31631|  0:03:18s
+epoch 32 | loss: 19478763868.91852| eval_rmse: 314520.83594|  0:03:24s
+epoch 33 | loss: 18969235137.42222| eval_rmse: 241928.41689|  0:03:30s
+epoch 34 | loss: 19866494300.91852| eval_rmse: 193379.86657|  0:03:37s
+epoch 35 | loss: 18832522027.61482| eval_rmse: 398473.5994|  0:03:43s
+epoch 36 | loss: 19422471232.47408| eval_rmse: 261080.56536|  0:03:49s
+epoch 37 | loss: 18414627381.0963| eval_rmse: 277197.07016|  0:03:55s
+epoch 38 | loss: 18382916281.83702| eval_rmse: 307638.06615|  0:04:01s
+epoch 39 | loss: 18636727478.04445| eval_rmse: 169821.01294|  0:04:08s
+epoch 40 | loss: 19538390053.92592| eval_rmse: 375163.95739|  0:04:14s
+epoch 41 | loss: 16811306943.52593| eval_rmse: 320018.16553|  0:04:20s
+epoch 42 | loss: 17663051059.19998| eval_rmse: 199221.21773|  0:04:26s
+epoch 43 | loss: 16629774104.65185| eval_rmse: 157240.69806|  0:04:32s
+epoch 44 | loss: 17720940168.53333| eval_rmse: 178382.81299|  0:04:38s
+epoch 45 | loss: 17254218619.25926| eval_rmse: 175273.10429|  0:04:44s
+epoch 46 | loss: 17893295555.31851| eval_rmse: 233884.81028|  0:04:51s
+epoch 47 | loss: 16849522316.32592| eval_rmse: 700288.40088|  0:04:57s
+epoch 48 | loss: 16644779823.40741| eval_rmse: 157323.66651|  0:05:03s
+epoch 49 | loss: 17143510167.7037| eval_rmse: 151426.94357|  0:05:09s
+epoch 50 | loss: 16281489305.6| eval_rmse: 171946.15173|  0:05:15s
+epoch 51 | loss: 17309058377.95556| eval_rmse: 194394.56207|  0:05:22s
+epoch 52 | loss: 17455735178.42964| eval_rmse: 183801.78957|  0:05:28s
+epoch 53 | loss: 15515267591.58518| eval_rmse: 198233.09728|  0:05:34s
+epoch 54 | loss: 16386413249.42222| eval_rmse: 235848.13417|  0:05:41s
+epoch 55 | loss: 16488566294.75556| eval_rmse: 194336.71266|  0:05:47s
+epoch 56 | loss: 15476968004.26667| eval_rmse: 183940.08435|  0:05:53s
+epoch 57 | loss: 13987009289.48148| eval_rmse: 199353.94825|  0:05:59s
+epoch 58 | loss: 14517214033.54074| eval_rmse: 166110.27766|  0:06:05s
+epoch 59 | loss: 14793409012.62222| eval_rmse: 269309.55106|  0:06:11s
+epoch 60 | loss: 15772957673.24444| eval_rmse: 258922.13841|  0:06:17s
+epoch 61 | loss: 14825437642.90371| eval_rmse: 189465.78029|  0:06:24s
+epoch 62 | loss: 13266130420.62222| eval_rmse: 205257.6715|  0:06:30s
+epoch 63 | loss: 14397920794.54815| eval_rmse: 214518.17744|  0:06:36s
+epoch 64 | loss: 12425707019.37778| eval_rmse: 159886.20152|  0:06:42s
+epoch 65 | loss: 13020168025.12592| eval_rmse: 214405.62279|  0:06:48s
+epoch 66 | loss: 13095677030.4| eval_rmse: 174513.6852|  0:06:54s
+epoch 67 | loss: 14266225667.7926| eval_rmse: 178832.0189|  0:07:00s
+epoch 68 | loss: 13174829272.17778| eval_rmse: 566198.35531|  0:07:07s
+epoch 69 | loss: 13101227565.51111| eval_rmse: 199317.74329|  0:07:13s
+
+Early stopping occurred at epoch 69 with best_epoch = 49 and best_eval_rmse = 151426.94357
+Saved Losses
+{'MSE - mean': 20649550353.801765, 'MSE - std': 2280568885.8913, 'R2 - mean': 0.8466264604376972, 'R2 - std': 0.010332287852354904} 
+ 
+
+In get_device
+epoch 0  | loss: 419801578427.7332| eval_rmse: 664669.03876|  0:00:06s
+epoch 1  | loss: 407354318180.5038| eval_rmse: 634105.32661|  0:00:12s
+epoch 2  | loss: 378798920074.4296| eval_rmse: 561014.41993|  0:00:18s
+epoch 3  | loss: 338767868844.56305| eval_rmse: 517265.05454|  0:00:24s
+epoch 4  | loss: 298322161997.74805| eval_rmse: 447142.25677|  0:00:30s
+epoch 5  | loss: 258545025266.7259| eval_rmse: 422796.54226|  0:00:36s
+epoch 6  | loss: 219740136334.22223| eval_rmse: 390975.36301|  0:00:43s
+epoch 7  | loss: 187859035629.03705| eval_rmse: 466280.15896|  0:00:49s
+epoch 8  | loss: 159802218116.74078| eval_rmse: 377557.35621|  0:00:55s
+epoch 9  | loss: 133961838258.25185| eval_rmse: 305030.43248|  0:01:02s
+epoch 10 | loss: 110966387507.20003| eval_rmse: 292218.77844|  0:01:08s
+epoch 11 | loss: 90652934690.13335| eval_rmse: 271413.16193|  0:01:14s
+epoch 12 | loss: 77736656258.84445| eval_rmse: 283609.15242|  0:01:20s
+epoch 13 | loss: 65476384510.10371| eval_rmse: 361152.05039|  0:01:26s
+epoch 14 | loss: 57568402568.53333| eval_rmse: 237369.31066|  0:01:32s
+epoch 15 | loss: 51104393367.7037| eval_rmse: 303167.28129|  0:01:39s
+epoch 16 | loss: 42858612971.14076| eval_rmse: 470260.30141|  0:01:45s
+epoch 17 | loss: 41870475779.79258| eval_rmse: 261742.52478|  0:01:51s
+epoch 18 | loss: 38225948641.65926| eval_rmse: 272919.37346|  0:01:57s
+epoch 19 | loss: 35474640797.3926| eval_rmse: 182869.97346|  0:02:03s
+epoch 20 | loss: 31442360437.57037| eval_rmse: 306992.5522|  0:02:09s
+epoch 21 | loss: 30725466612.62222| eval_rmse: 349838.75299|  0:02:16s
+epoch 22 | loss: 28075289964.08889| eval_rmse: 165769.64856|  0:02:22s
+epoch 23 | loss: 26284873234.96297| eval_rmse: 244106.26468|  0:02:28s
+epoch 24 | loss: 24097497042.48889| eval_rmse: 157618.72123|  0:02:34s
+epoch 25 | loss: 23152405094.4| eval_rmse: 199377.07955|  0:02:41s
+epoch 26 | loss: 25401007088.82964| eval_rmse: 178326.49774|  0:02:47s
+epoch 27 | loss: 21263038433.65927| eval_rmse: 196477.64738|  0:02:54s
+epoch 28 | loss: 21701236652.56296| eval_rmse: 903148.25959|  0:03:01s
+epoch 29 | loss: 21248390902.51851| eval_rmse: 190857.79503|  0:03:07s
+epoch 30 | loss: 20291843428.50371| eval_rmse: 404124.10423|  0:03:13s
+epoch 31 | loss: 20144493287.34814| eval_rmse: 215328.49501|  0:03:19s
+epoch 32 | loss: 20108622916.26666| eval_rmse: 262628.79666|  0:03:25s
+epoch 33 | loss: 22033112079.17037| eval_rmse: 376137.92222|  0:03:31s
+epoch 34 | loss: 23308826870.51852| eval_rmse: 156724.03428|  0:03:38s
+epoch 35 | loss: 20247397118.10371| eval_rmse: 192331.92473|  0:03:44s
+epoch 36 | loss: 19684793905.30371| eval_rmse: 143949.58825|  0:03:50s
+epoch 37 | loss: 20422349482.66667| eval_rmse: 212355.30909|  0:03:56s
+epoch 38 | loss: 20017627446.9926| eval_rmse: 159965.6931|  0:04:02s
+epoch 39 | loss: 20305428995.79258| eval_rmse: 193913.4447|  0:04:08s
+epoch 40 | loss: 19248058140.44444| eval_rmse: 172235.95597|  0:04:15s
+epoch 41 | loss: 21464739126.99259| eval_rmse: 346561.6659|  0:04:21s
+epoch 42 | loss: 19598147538.48888| eval_rmse: 288338.07104|  0:04:28s
+epoch 43 | loss: 21063268810.9037| eval_rmse: 398274.02417|  0:04:34s
+epoch 44 | loss: 18483548706.13333| eval_rmse: 160612.23421|  0:04:40s
+epoch 45 | loss: 19613859688.2963| eval_rmse: 190770.20486|  0:04:47s
+epoch 46 | loss: 18322552191.05184| eval_rmse: 194291.20758|  0:04:53s
+epoch 47 | loss: 17766614607.64444| eval_rmse: 189230.48275|  0:04:59s
+epoch 48 | loss: 18239944491.61482| eval_rmse: 236150.43777|  0:05:05s
+epoch 49 | loss: 18590850577.06666| eval_rmse: 195755.2706|  0:05:11s
+epoch 50 | loss: 19759349710.6963| eval_rmse: 165409.0211|  0:05:17s
+epoch 51 | loss: 16405524555.85185| eval_rmse: 177500.18973|  0:05:24s
+epoch 52 | loss: 17206468744.53333| eval_rmse: 245761.36887|  0:05:30s
+epoch 53 | loss: 17241508685.74814| eval_rmse: 224614.36818|  0:05:36s
+epoch 54 | loss: 15768207195.02222| eval_rmse: 151580.54722|  0:05:42s
+epoch 55 | loss: 16296707667.43704| eval_rmse: 232781.20222|  0:05:48s
+epoch 56 | loss: 16341188960.71111| eval_rmse: 184176.96491|  0:05:54s
+
+Early stopping occurred at epoch 56 with best_epoch = 36 and best_eval_rmse = 143949.58825
+Saved Losses
+{'MSE - mean': 20673528222.025623, 'MSE - std': 1862385434.1120632, 'R2 - mean': 0.8517704565536647, 'R2 - std': 0.01113966667326533} 
+ 
+
+In get_device
+epoch 0  | loss: 429700134411.37787| eval_rmse: 637447.87246|  0:00:06s
+epoch 1  | loss: 416831378287.8815| eval_rmse: 587405.67422|  0:00:12s
+epoch 2  | loss: 382882220775.3479| eval_rmse: 554304.34762|  0:00:18s
+epoch 3  | loss: 335308502418.01483| eval_rmse: 375113.48431|  0:00:24s
+epoch 4  | loss: 285605419417.59985| eval_rmse: 316457.70823|  0:00:30s
+epoch 5  | loss: 237803343598.93332| eval_rmse: 380124.65421|  0:00:37s
+epoch 6  | loss: 193076026724.50375| eval_rmse: 327008.78899|  0:00:43s
+epoch 7  | loss: 157989333158.87418| eval_rmse: 332102.16487|  0:00:49s
+epoch 8  | loss: 133203359880.53323| eval_rmse: 261228.75484|  0:00:55s
+epoch 9  | loss: 107390954670.45926| eval_rmse: 259674.45958|  0:01:02s
+epoch 10 | loss: 90802001995.85188| eval_rmse: 211240.22762|  0:01:09s
+epoch 11 | loss: 84212828508.91856| eval_rmse: 227895.10008|  0:01:15s
+epoch 12 | loss: 82006637332.85925| eval_rmse: 300473.67643|  0:01:21s
+epoch 13 | loss: 68060237050.31111| eval_rmse: 344712.54227|  0:01:28s
+epoch 14 | loss: 57450184135.11111| eval_rmse: 265127.096|  0:01:34s
+epoch 15 | loss: 50327209172.38519| eval_rmse: 234541.7078|  0:01:40s
+epoch 16 | loss: 45826053749.57037| eval_rmse: 222199.77016|  0:01:46s
+epoch 17 | loss: 39176421713.54072| eval_rmse: 285812.97035|  0:01:52s
+epoch 18 | loss: 32989852656.82963| eval_rmse: 194526.53725|  0:01:58s
+epoch 19 | loss: 29044248678.4| eval_rmse: 133066.51282|  0:02:05s
+epoch 20 | loss: 27670652992.47408| eval_rmse: 140976.62938|  0:02:11s
+epoch 21 | loss: 25746239537.3037| eval_rmse: 211332.53165|  0:02:17s
+epoch 22 | loss: 24300257700.97778| eval_rmse: 172636.06586|  0:02:23s
+epoch 23 | loss: 23416581745.77778| eval_rmse: 207831.18519|  0:02:30s
+epoch 24 | loss: 22630874089.24444| eval_rmse: 173638.47736|  0:02:36s
+epoch 25 | loss: 22584829106.25184| eval_rmse: 168672.01659|  0:02:42s
+epoch 26 | loss: 22468925254.16298| eval_rmse: 280774.6159|  0:02:49s
+epoch 27 | loss: 21853575262.81483| eval_rmse: 165906.24879|  0:02:55s
+epoch 28 | loss: 22711316392.77037| eval_rmse: 141685.05635|  0:03:01s
+epoch 29 | loss: 19748449655.46667| eval_rmse: 158170.73978|  0:03:07s
+epoch 30 | loss: 21761038480.11851| eval_rmse: 143168.11386|  0:03:14s
+epoch 31 | loss: 20209092001.18518| eval_rmse: 172959.74198|  0:03:20s
+epoch 32 | loss: 20150654903.94075| eval_rmse: 221674.43658|  0:03:27s
+epoch 33 | loss: 20261061616.82963| eval_rmse: 194210.57462|  0:03:34s
+epoch 34 | loss: 20949058214.87407| eval_rmse: 147880.01497|  0:03:41s
+epoch 35 | loss: 20501157508.74075| eval_rmse: 229341.89766|  0:03:47s
+epoch 36 | loss: 19818826850.6074| eval_rmse: 234675.79685|  0:03:53s
+epoch 37 | loss: 19374782077.15555| eval_rmse: 208106.78306|  0:04:00s
+epoch 38 | loss: 19307773129.00742| eval_rmse: 479429.73021|  0:04:06s
+epoch 39 | loss: 18612316914.72593| eval_rmse: 155554.365|  0:04:12s
+
+Early stopping occurred at epoch 39 with best_epoch = 19 and best_eval_rmse = 133066.51282
+Saved Losses
+{'MSE - mean': 19931820374.83726, 'MSE - std': 2061977502.4565537, 'R2 - mean': 0.8522921931646523, 'R2 - std': 0.009689466314886921} 
+ 
+
+In get_device
+epoch 0  | loss: 424157934508.563| eval_rmse: 651957.52854|  0:00:07s
+epoch 1  | loss: 409636614599.11115| eval_rmse: 615628.46742|  0:00:13s
+epoch 2  | loss: 383016151722.6666| eval_rmse: 510660.99109|  0:00:19s
+epoch 3  | loss: 339980043817.7185| eval_rmse: 452918.72039|  0:00:25s
+epoch 4  | loss: 294714203856.59247| eval_rmse: 517641.16612|  0:00:32s
+epoch 5  | loss: 254779614033.54068| eval_rmse: 406907.15202|  0:00:38s
+epoch 6  | loss: 221041152819.19995| eval_rmse: 324503.15836|  0:00:44s
+epoch 7  | loss: 195014309205.33337| eval_rmse: 412640.3167|  0:00:50s
+epoch 8  | loss: 170141080507.73328| eval_rmse: 323562.21944|  0:00:56s
+epoch 9  | loss: 151899815571.9112| eval_rmse: 389818.03505|  0:01:03s
+epoch 10 | loss: 127802538211.55556| eval_rmse: 324517.2954|  0:01:09s
+epoch 11 | loss: 115007329515.14075| eval_rmse: 263879.13594|  0:01:15s
+epoch 12 | loss: 93854455003.97037| eval_rmse: 386344.19542|  0:01:21s
+epoch 13 | loss: 77087754513.06668| eval_rmse: 333480.31226|  0:01:27s
+epoch 14 | loss: 62357799078.87408| eval_rmse: 262475.11703|  0:01:34s
+epoch 15 | loss: 49990062360.65185| eval_rmse: 321129.25852|  0:01:40s
+epoch 16 | loss: 41594310068.14816| eval_rmse: 492869.05648|  0:01:46s
+epoch 17 | loss: 36286521215.05184| eval_rmse: 204572.00064|  0:01:52s
+epoch 18 | loss: 34169363425.65926| eval_rmse: 219888.52069|  0:01:59s
+epoch 19 | loss: 30190046723.79259| eval_rmse: 154500.0584|  0:02:05s
+epoch 20 | loss: 26551035448.88889| eval_rmse: 162185.22536|  0:02:11s
+epoch 21 | loss: 24725283529.00741| eval_rmse: 182053.94979|  0:02:17s
+epoch 22 | loss: 23980716176.11852| eval_rmse: 165422.224|  0:02:23s
+epoch 23 | loss: 25360969705.24444| eval_rmse: 151679.09864|  0:02:30s
+epoch 24 | loss: 23394652235.85185| eval_rmse: 315823.4408|  0:02:36s
+epoch 25 | loss: 21504499730.96296| eval_rmse: 188311.95591|  0:02:42s
+epoch 26 | loss: 21806238958.93333| eval_rmse: 133256.04064|  0:02:48s
+epoch 27 | loss: 22193321107.91111| eval_rmse: 181130.95132|  0:02:55s
+epoch 28 | loss: 20309211211.85185| eval_rmse: 302375.89881|  0:03:01s
+epoch 29 | loss: 20572912298.66667| eval_rmse: 127680.52507|  0:03:07s
+epoch 30 | loss: 19413030638.93334| eval_rmse: 559815.24068|  0:03:13s
+epoch 31 | loss: 18836653560.41482| eval_rmse: 205620.72686|  0:03:20s
+epoch 32 | loss: 19574891485.86666| eval_rmse: 311313.41111|  0:03:26s
+epoch 33 | loss: 18288160115.67408| eval_rmse: 200753.48572|  0:03:33s
+epoch 34 | loss: 18885248804.02962| eval_rmse: 234121.19682|  0:03:39s
+epoch 35 | loss: 16831725685.57037| eval_rmse: 204754.80056|  0:03:45s
+epoch 36 | loss: 18064357869.03703| eval_rmse: 136390.09018|  0:03:51s
+epoch 37 | loss: 18118310384.82965| eval_rmse: 146839.89958|  0:03:57s
+epoch 38 | loss: 16714844565.80741| eval_rmse: 194606.30843|  0:04:03s
+epoch 39 | loss: 16053603267.31852| eval_rmse: 398799.30144|  0:04:10s
+epoch 40 | loss: 16437544656.59259| eval_rmse: 196560.58008|  0:04:16s
+epoch 41 | loss: 16645827219.91111| eval_rmse: 139999.65019|  0:04:22s
+epoch 42 | loss: 17107962106.31112| eval_rmse: 167334.4813|  0:04:28s
+epoch 43 | loss: 16501704434.72592| eval_rmse: 170785.79979|  0:04:34s
+epoch 44 | loss: 17369065638.87408| eval_rmse: 226927.46338|  0:04:40s
+epoch 45 | loss: 16813671643.97037| eval_rmse: 130862.67418|  0:04:47s
+epoch 46 | loss: 17536543713.65926| eval_rmse: 158854.51372|  0:04:53s
+epoch 47 | loss: 17358102436.97778| eval_rmse: 235724.98034|  0:04:59s
+epoch 48 | loss: 16436002137.12592| eval_rmse: 129640.77553|  0:05:05s
+epoch 49 | loss: 16474196256.23704| eval_rmse: 219678.72282|  0:05:11s
+
+Early stopping occurred at epoch 49 with best_epoch = 29 and best_eval_rmse = 127680.52507
+Saved Losses
+{'MSE - mean': 19205919596.52579, 'MSE - std': 2347153326.1213202, 'R2 - mean': 0.8574844935802988, 'R2 - std': 0.013525847123161978} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 19205919596.52579, 'MSE - std': 2347153326.1213202, 'R2 - mean': 0.8574844935802988, 'R2 - std': 0.013525847123161978}
+Train time: 337.48612913140005
+Inference time: 0.5822076429998561
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 8 finished with value: 19205919596.52579 and parameters: {'n_d': 47, 'n_steps': 8, 'gamma': 1.9217788085516176, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 3, 'momentum': 0.011142396473103677, 'mask_type': 'entmax'}. Best is trial 1 with value: 15097435312.279827.
+In get_device
+In get_device
+epoch 0  | loss: 427913262603.37787| eval_rmse: 642652.95794|  0:00:05s
+epoch 1  | loss: 422684824674.60754| eval_rmse: 637197.64371|  0:00:10s
+epoch 2  | loss: 413424435442.7259| eval_rmse: 620995.89872|  0:00:15s
+epoch 3  | loss: 403048117164.56287| eval_rmse: 619418.30739|  0:00:20s
+epoch 4  | loss: 392478940516.50366| eval_rmse: 603871.91944|  0:00:25s
+epoch 5  | loss: 381351476277.0961| eval_rmse: 597692.71839|  0:00:30s
+epoch 6  | loss: 368647083713.42224| eval_rmse: 558952.60974|  0:00:35s
+epoch 7  | loss: 354020683017.4815| eval_rmse: 557002.18311|  0:00:40s
+epoch 8  | loss: 339026649998.22217| eval_rmse: 558011.62612|  0:00:44s
+epoch 9  | loss: 324441329330.25183| eval_rmse: 551872.64692|  0:00:50s
+epoch 10 | loss: 310253706353.77765| eval_rmse: 499710.8158|  0:00:55s
+epoch 11 | loss: 294377682928.8298| eval_rmse: 490000.98266|  0:01:00s
+epoch 12 | loss: 279135278299.9703| eval_rmse: 470719.02123|  0:01:05s
+epoch 13 | loss: 262757561139.2| eval_rmse: 442414.82886|  0:01:10s
+epoch 14 | loss: 245032214467.3185| eval_rmse: 427861.44873|  0:01:14s
+epoch 15 | loss: 226648558978.84445| eval_rmse: 445504.93099|  0:01:19s
+epoch 16 | loss: 209549522564.74075| eval_rmse: 392011.12092|  0:01:24s
+epoch 17 | loss: 192145226987.14075| eval_rmse: 453332.25242|  0:01:29s
+epoch 18 | loss: 176914265854.10367| eval_rmse: 360119.22995|  0:01:34s
+epoch 19 | loss: 160645778758.16293| eval_rmse: 247866.50709|  0:01:39s
+epoch 20 | loss: 143972738996.14816| eval_rmse: 367289.54125|  0:01:44s
+epoch 21 | loss: 131478207177.0074| eval_rmse: 173472.69071|  0:01:48s
+epoch 22 | loss: 117678753807.17036| eval_rmse: 270239.56634|  0:01:53s
+epoch 23 | loss: 103420651353.12595| eval_rmse: 296142.36638|  0:01:58s
+epoch 24 | loss: 91766935703.70367| eval_rmse: 281005.54407|  0:02:03s
+epoch 25 | loss: 80570102867.43704| eval_rmse: 253719.8853|  0:02:08s
+epoch 26 | loss: 69188660626.01485| eval_rmse: 360474.67149|  0:02:13s
+epoch 27 | loss: 59320931290.07407| eval_rmse: 244864.61155|  0:02:17s
+epoch 28 | loss: 51525628783.88148| eval_rmse: 156347.2249|  0:02:22s
+epoch 29 | loss: 46225580327.82221| eval_rmse: 131862.76665|  0:02:27s
+epoch 30 | loss: 39964641598.57778| eval_rmse: 167280.41175|  0:02:32s
+epoch 31 | loss: 35598480080.5926| eval_rmse: 150717.77084|  0:02:37s
+epoch 32 | loss: 30637382454.99259| eval_rmse: 123851.67347|  0:02:42s
+epoch 33 | loss: 27620389140.85926| eval_rmse: 183813.24905|  0:02:46s
+epoch 34 | loss: 25407297133.98518| eval_rmse: 127443.49748|  0:02:51s
+epoch 35 | loss: 25184403410.48889| eval_rmse: 163855.03712|  0:02:56s
+epoch 36 | loss: 22418366027.85186| eval_rmse: 439600.47968|  0:03:01s
+epoch 37 | loss: 23507857040.11852| eval_rmse: 127098.53605|  0:03:06s
+epoch 38 | loss: 20860875100.91852| eval_rmse: 134838.8121|  0:03:11s
+epoch 39 | loss: 20367490639.64446| eval_rmse: 147082.92689|  0:03:16s
+epoch 40 | loss: 19294797482.66668| eval_rmse: 135907.24077|  0:03:21s
+epoch 41 | loss: 18557969734.16297| eval_rmse: 225154.07123|  0:03:27s
+epoch 42 | loss: 18154941458.96296| eval_rmse: 146739.66108|  0:03:32s
+epoch 43 | loss: 17941820203.61482| eval_rmse: 129843.80316|  0:03:36s
+epoch 44 | loss: 19578743083.61482| eval_rmse: 138977.31828|  0:03:41s
+epoch 45 | loss: 17981065454.93334| eval_rmse: 329532.0878|  0:03:46s
+epoch 46 | loss: 20209927607.94075| eval_rmse: 139839.37632|  0:03:51s
+epoch 47 | loss: 17379618630.16296| eval_rmse: 181294.44471|  0:03:57s
+epoch 48 | loss: 18153015296.00001| eval_rmse: 146880.53121|  0:04:01s
+epoch 49 | loss: 17726613018.54815| eval_rmse: 178115.78715|  0:04:07s
+epoch 50 | loss: 17345243367.34813| eval_rmse: 195162.54719|  0:04:12s
+epoch 51 | loss: 17192201147.73332| eval_rmse: 126765.05769|  0:04:17s
+epoch 52 | loss: 16363053260.8| eval_rmse: 179676.28619|  0:04:22s
+
+Early stopping occurred at epoch 52 with best_epoch = 32 and best_eval_rmse = 123851.67347
+Saved Losses
+{'MSE - mean': 15339237022.108633, 'MSE - std': 0.0, 'R2 - mean': 0.8805516970142828, 'R2 - std': 0.0} 
+ 
+
+In get_device
+epoch 0  | loss: 426258578363.73334| eval_rmse: 648308.24943|  0:00:04s
+epoch 1  | loss: 421237197179.2593| eval_rmse: 635819.56609|  0:00:09s
+epoch 2  | loss: 411811252360.5334| eval_rmse: 628281.6579|  0:00:14s
+epoch 3  | loss: 401941801157.2149| eval_rmse: 623558.78|  0:00:19s
+epoch 4  | loss: 390656138596.5038| eval_rmse: 610657.20891|  0:00:24s
+epoch 5  | loss: 378872641035.37787| eval_rmse: 596062.43491|  0:00:29s
+epoch 6  | loss: 366842377011.1999| eval_rmse: 570941.52571|  0:00:34s
+epoch 7  | loss: 353043140274.25195| eval_rmse: 578151.44388|  0:00:39s
+epoch 8  | loss: 338604777168.5925| eval_rmse: 573601.11637|  0:00:43s
+epoch 9  | loss: 326206808852.85925| eval_rmse: 560003.24914|  0:00:48s
+epoch 10 | loss: 313127600370.72595| eval_rmse: 552010.39839|  0:00:53s
+epoch 11 | loss: 298499052157.15564| eval_rmse: 538842.06185|  0:00:58s
+epoch 12 | loss: 283792330539.6149| eval_rmse: 533158.80361|  0:01:03s
+epoch 13 | loss: 267712512364.08896| eval_rmse: 502911.71818|  0:01:08s
+epoch 14 | loss: 252208567151.88147| eval_rmse: 486480.4904|  0:01:12s
+epoch 15 | loss: 235812279273.24445| eval_rmse: 464312.15843|  0:01:17s
+epoch 16 | loss: 218839021613.5111| eval_rmse: 355327.10698|  0:01:22s
+epoch 17 | loss: 201848021356.08884| eval_rmse: 388732.08458|  0:01:27s
+epoch 18 | loss: 185229257508.02972| eval_rmse: 385039.10668|  0:01:33s
+epoch 19 | loss: 170686763523.7926| eval_rmse: 428755.6882|  0:01:37s
+epoch 20 | loss: 155156379693.51108| eval_rmse: 374287.25127|  0:01:42s
+epoch 21 | loss: 141293709114.785| eval_rmse: 357882.01212|  0:01:47s
+epoch 22 | loss: 127155599526.87408| eval_rmse: 295419.26227|  0:01:52s
+epoch 23 | loss: 114140707286.28148| eval_rmse: 303904.91784|  0:01:57s
+epoch 24 | loss: 101046246210.3704| eval_rmse: 309065.72251|  0:02:02s
+epoch 25 | loss: 89315715284.38518| eval_rmse: 175658.68837|  0:02:07s
+epoch 26 | loss: 78318393905.30368| eval_rmse: 213906.42697|  0:02:11s
+epoch 27 | loss: 69192591693.7481| eval_rmse: 383597.53632|  0:02:16s
+epoch 28 | loss: 61208972720.35555| eval_rmse: 328307.12751|  0:02:21s
+epoch 29 | loss: 53891668301.74815| eval_rmse: 335159.56163|  0:02:26s
+epoch 30 | loss: 46861085028.5037| eval_rmse: 183246.6651|  0:02:31s
+epoch 31 | loss: 40942620201.7185| eval_rmse: 157554.59431|  0:02:36s
+epoch 32 | loss: 36138890869.57038| eval_rmse: 282354.40278|  0:02:41s
+epoch 33 | loss: 29238590972.20741| eval_rmse: 168859.37517|  0:02:46s
+epoch 34 | loss: 26063824789.80742| eval_rmse: 204289.18947|  0:02:51s
+epoch 35 | loss: 23241535063.22964| eval_rmse: 272098.34546|  0:02:55s
+epoch 36 | loss: 20878281720.41481| eval_rmse: 182916.73443|  0:03:00s
+epoch 37 | loss: 20527777033.48148| eval_rmse: 236992.09215|  0:03:05s
+epoch 38 | loss: 18756923547.49628| eval_rmse: 175353.25511|  0:03:10s
+epoch 39 | loss: 17174153386.66666| eval_rmse: 181854.1869|  0:03:15s
+epoch 40 | loss: 17459882992.82962| eval_rmse: 161446.41539|  0:03:20s
+epoch 41 | loss: 17370787946.19258| eval_rmse: 182268.01009|  0:03:25s
+epoch 42 | loss: 18344949816.88888| eval_rmse: 172360.88068|  0:03:30s
+epoch 43 | loss: 16184170044.68148| eval_rmse: 333955.14809|  0:03:34s
+epoch 44 | loss: 17631242581.33333| eval_rmse: 162829.97454|  0:03:40s
+epoch 45 | loss: 15043620939.85186| eval_rmse: 207888.87966|  0:03:45s
+epoch 46 | loss: 16117084842.66666| eval_rmse: 255268.66743|  0:03:50s
+epoch 47 | loss: 14692613931.61482| eval_rmse: 178155.26578|  0:03:55s
+epoch 48 | loss: 16289225375.28889| eval_rmse: 181309.12879|  0:04:00s
+epoch 49 | loss: 15200930015.76296| eval_rmse: 227995.50179|  0:04:05s
+epoch 50 | loss: 16183604993.8963| eval_rmse: 225370.42614|  0:04:10s
+epoch 51 | loss: 15025680577.42222| eval_rmse: 222808.2312|  0:04:14s
+
+Early stopping occurred at epoch 51 with best_epoch = 31 and best_eval_rmse = 157554.59431
+Saved Losses
+{'MSE - mean': 20081343605.08506, 'MSE - std': 4742106582.976428, 'R2 - mean': 0.851664371832205, 'R2 - std': 0.028887325182077817} 
+ 
+
+In get_device
+epoch 0  | loss: 420677563672.65186| eval_rmse: 666007.81315|  0:00:04s
+epoch 1  | loss: 415742617433.12585| eval_rmse: 655145.2879|  0:00:09s
+epoch 2  | loss: 407007864301.0372| eval_rmse: 640773.62299|  0:00:14s
+epoch 3  | loss: 396794263415.46655| eval_rmse: 630272.84857|  0:00:19s
+epoch 4  | loss: 384863524666.7851| eval_rmse: 610914.65412|  0:00:24s
+epoch 5  | loss: 370586272714.9036| eval_rmse: 614581.42202|  0:00:29s
+epoch 6  | loss: 356901049685.3332| eval_rmse: 637283.1806|  0:00:34s
+epoch 7  | loss: 342738288518.63696| eval_rmse: 553633.80647|  0:00:39s
+epoch 8  | loss: 327870303315.4371| eval_rmse: 548902.96865|  0:00:44s
+epoch 9  | loss: 312138853398.75555| eval_rmse: 544036.84412|  0:00:49s
+epoch 10 | loss: 295118720447.52576| eval_rmse: 501938.36961|  0:00:54s
+epoch 11 | loss: 277655961114.5483| eval_rmse: 450320.16581|  0:00:58s
+epoch 12 | loss: 260167047577.6| eval_rmse: 467925.38635|  0:01:03s
+epoch 13 | loss: 241405181041.77777| eval_rmse: 430528.15214|  0:01:08s
+epoch 14 | loss: 222770867586.84445| eval_rmse: 426036.59497|  0:01:13s
+epoch 15 | loss: 205556309773.274| eval_rmse: 378574.21276|  0:01:18s
+epoch 16 | loss: 188775453248.47403| eval_rmse: 372069.63022|  0:01:24s
+epoch 17 | loss: 172838862665.95557| eval_rmse: 360117.21696|  0:01:28s
+epoch 18 | loss: 157369765523.91104| eval_rmse: 383008.99699|  0:01:33s
+epoch 19 | loss: 141787320289.65924| eval_rmse: 335336.03403|  0:01:38s
+epoch 20 | loss: 126724545164.32591| eval_rmse: 227411.32646|  0:01:43s
+epoch 21 | loss: 111221088862.8148| eval_rmse: 282699.72281|  0:01:47s
+epoch 22 | loss: 98304952638.57777| eval_rmse: 208070.90073|  0:01:52s
+epoch 23 | loss: 87893466802.25185| eval_rmse: 367744.01646|  0:01:57s
+epoch 24 | loss: 75292778389.80742| eval_rmse: 213964.87582|  0:02:02s
+epoch 25 | loss: 65765692742.16298| eval_rmse: 203736.71464|  0:02:07s
+epoch 26 | loss: 58680768496.82963| eval_rmse: 265074.67817|  0:02:11s
+epoch 27 | loss: 51359575912.2963| eval_rmse: 325455.61563|  0:02:16s
+epoch 28 | loss: 44614842997.57038| eval_rmse: 354358.54723|  0:02:21s
+epoch 29 | loss: 38659124436.38521| eval_rmse: 149053.24281|  0:02:26s
+epoch 30 | loss: 34618253941.5704| eval_rmse: 167457.93858|  0:02:31s
+epoch 31 | loss: 30221882584.17778| eval_rmse: 253591.51852|  0:02:35s
+epoch 32 | loss: 27448285460.85926| eval_rmse: 146581.59583|  0:02:40s
+epoch 33 | loss: 24407633165.27408| eval_rmse: 174931.11381|  0:02:45s
+epoch 34 | loss: 23821288338.01482| eval_rmse: 171721.24995|  0:02:50s
+epoch 35 | loss: 21059824689.3037| eval_rmse: 285548.99247|  0:02:55s
+epoch 36 | loss: 22554414633.71852| eval_rmse: 465118.85219|  0:02:59s
+epoch 37 | loss: 21662722889.95554| eval_rmse: 157146.05102|  0:03:04s
+epoch 38 | loss: 19253566452.62222| eval_rmse: 151448.21032|  0:03:10s
+epoch 39 | loss: 19180994370.37038| eval_rmse: 218014.84229|  0:03:15s
+epoch 40 | loss: 18426900085.57037| eval_rmse: 198785.24502|  0:03:19s
+epoch 41 | loss: 16966069888.94814| eval_rmse: 244981.33798|  0:03:24s
+epoch 42 | loss: 17306887630.69628| eval_rmse: 173444.95527|  0:03:29s
+epoch 43 | loss: 17292369840.35554| eval_rmse: 154391.88414|  0:03:34s
+epoch 44 | loss: 16896628352.94816| eval_rmse: 152968.89091|  0:03:39s
+epoch 45 | loss: 16539973051.73333| eval_rmse: 177106.06494|  0:03:44s
+epoch 46 | loss: 16898686793.95555| eval_rmse: 166042.11848|  0:03:48s
+epoch 47 | loss: 17447779111.82222| eval_rmse: 178123.62789|  0:03:53s
+epoch 48 | loss: 17008410870.51851| eval_rmse: 182180.72356|  0:03:58s
+epoch 49 | loss: 15331479021.03704| eval_rmse: 172761.61804|  0:04:03s
+epoch 50 | loss: 15399610989.98519| eval_rmse: 163968.58344|  0:04:08s
+epoch 51 | loss: 14663954860.56296| eval_rmse: 231951.83809|  0:04:13s
+epoch 52 | loss: 15306132973.03704| eval_rmse: 162389.6178|  0:04:18s
+
+Early stopping occurred at epoch 52 with best_epoch = 32 and best_eval_rmse = 146581.59583
+Saved Losses
+{'MSE - mean': 20549617148.662148, 'MSE - std': 3928139099.637478, 'R2 - mean': 0.8534322554360595, 'R2 - std': 0.023718541178937628} 
+ 
+
+In get_device
+epoch 0  | loss: 429836063357.1555| eval_rmse: 637789.06223|  0:00:04s
+epoch 1  | loss: 424848503845.9259| eval_rmse: 632629.73404|  0:00:09s
+epoch 2  | loss: 415481404529.7777| eval_rmse: 624311.7177|  0:00:14s
+epoch 3  | loss: 404913435443.2| eval_rmse: 603399.3446|  0:00:19s
+epoch 4  | loss: 391622659398.16296| eval_rmse: 599929.11524|  0:00:24s
+epoch 5  | loss: 378659771611.97046| eval_rmse: 586299.08239|  0:00:29s
+epoch 6  | loss: 365203808195.31854| eval_rmse: 571455.61593|  0:00:34s
+epoch 7  | loss: 351742389149.3926| eval_rmse: 543694.81797|  0:00:38s
+epoch 8  | loss: 336621600646.637| eval_rmse: 531376.98155|  0:00:43s
+epoch 9  | loss: 319928369516.089| eval_rmse: 519286.58339|  0:00:48s
+epoch 10 | loss: 303211870921.0073| eval_rmse: 546224.19074|  0:00:53s
+epoch 11 | loss: 287093898778.54803| eval_rmse: 505355.39007|  0:00:58s
+epoch 12 | loss: 271105030371.5556| eval_rmse: 482842.93043|  0:01:03s
+epoch 13 | loss: 255021162920.77036| eval_rmse: 490569.68111|  0:01:07s
+epoch 14 | loss: 237214333155.55557| eval_rmse: 426176.87838|  0:01:12s
+epoch 15 | loss: 221242682087.34818| eval_rmse: 443429.19698|  0:01:17s
+epoch 16 | loss: 205881340905.24445| eval_rmse: 444189.13129|  0:01:22s
+epoch 17 | loss: 189405146195.43704| eval_rmse: 315266.5221|  0:01:27s
+epoch 18 | loss: 173995336772.2667| eval_rmse: 335358.24806|  0:01:32s
+epoch 19 | loss: 159266691117.51105| eval_rmse: 423648.47477|  0:01:36s
+epoch 20 | loss: 142898474765.27423| eval_rmse: 352879.50162|  0:01:41s
+epoch 21 | loss: 128129432143.64444| eval_rmse: 263627.37994|  0:01:46s
+epoch 22 | loss: 114779876890.54814| eval_rmse: 309036.74774|  0:01:51s
+epoch 23 | loss: 100349082464.7111| eval_rmse: 276679.72127|  0:01:56s
+epoch 24 | loss: 88404070673.06668| eval_rmse: 276868.74198|  0:02:01s
+epoch 25 | loss: 77676144063.52591| eval_rmse: 289941.66083|  0:02:06s
+epoch 26 | loss: 68951521462.04448| eval_rmse: 152331.44958|  0:02:12s
+epoch 27 | loss: 59701974691.08148| eval_rmse: 184691.8653|  0:02:16s
+epoch 28 | loss: 53993421088.23703| eval_rmse: 212024.91295|  0:02:21s
+epoch 29 | loss: 45281595278.22222| eval_rmse: 208278.69268|  0:02:26s
+epoch 30 | loss: 40808186569.00741| eval_rmse: 193149.08914|  0:02:31s
+epoch 31 | loss: 36930744024.17778| eval_rmse: 264029.53631|  0:02:36s
+epoch 32 | loss: 32288438909.15555| eval_rmse: 239136.35623|  0:02:41s
+epoch 33 | loss: 30889788579.08148| eval_rmse: 330487.36887|  0:02:46s
+epoch 34 | loss: 28489959552.94815| eval_rmse: 222137.6922|  0:02:51s
+epoch 35 | loss: 23605946288.35556| eval_rmse: 144218.81979|  0:02:56s
+epoch 36 | loss: 21929060640.23704| eval_rmse: 143634.74725|  0:03:01s
+epoch 37 | loss: 22182439780.5037| eval_rmse: 190556.04512|  0:03:06s
+epoch 38 | loss: 21394883337.48148| eval_rmse: 152400.61849|  0:03:11s
+epoch 39 | loss: 20233584116.62222| eval_rmse: 173535.62662|  0:03:15s
+epoch 40 | loss: 19673822682.07408| eval_rmse: 143729.88674|  0:03:20s
+epoch 41 | loss: 17297034357.57037| eval_rmse: 203858.82597|  0:03:25s
+epoch 42 | loss: 17045848674.60741| eval_rmse: 181889.64328|  0:03:30s
+epoch 43 | loss: 17014624365.98518| eval_rmse: 150876.39838|  0:03:35s
+epoch 44 | loss: 19579345563.49629| eval_rmse: 138693.16623|  0:03:40s
+epoch 45 | loss: 18208071448.65186| eval_rmse: 292157.18822|  0:03:44s
+epoch 46 | loss: 18409255397.45186| eval_rmse: 133051.32348|  0:03:49s
+epoch 47 | loss: 22861424731.02223| eval_rmse: 202316.36476|  0:03:54s
+epoch 48 | loss: 19500964617.48148| eval_rmse: 254171.53526|  0:03:59s
+epoch 49 | loss: 17960001903.88149| eval_rmse: 162403.75738|  0:04:04s
+epoch 50 | loss: 17571494392.41482| eval_rmse: 161256.87142|  0:04:09s
+epoch 51 | loss: 17253249042.96296| eval_rmse: 159719.0146|  0:04:14s
+epoch 52 | loss: 16513467748.5037| eval_rmse: 152971.51441|  0:04:19s
+epoch 53 | loss: 16101105891.55555| eval_rmse: 181703.4435|  0:04:23s
+epoch 54 | loss: 16022212251.4963| eval_rmse: 129407.30355|  0:04:28s
+epoch 55 | loss: 16025847106.37037| eval_rmse: 185691.14974|  0:04:33s
+epoch 56 | loss: 14653710396.68148| eval_rmse: 181293.04281|  0:04:38s
+epoch 57 | loss: 14367937953.18518| eval_rmse: 234349.52808|  0:04:42s
+epoch 58 | loss: 15883249159.58518| eval_rmse: 134880.50169|  0:04:46s
+epoch 59 | loss: 15456519331.08148| eval_rmse: 150627.35791|  0:04:51s
+epoch 60 | loss: 13335597992.77037| eval_rmse: 168077.50563|  0:04:57s
+epoch 61 | loss: 13675369164.8| eval_rmse: 173933.74646|  0:05:02s
+epoch 62 | loss: 13693540750.22222| eval_rmse: 136418.69081|  0:05:06s
+epoch 63 | loss: 13681949081.6| eval_rmse: 162045.29977|  0:05:11s
+epoch 64 | loss: 13225056847.64444| eval_rmse: 239632.87356|  0:05:16s
+epoch 65 | loss: 13932418761.0074| eval_rmse: 138745.22582|  0:05:22s
+epoch 66 | loss: 13261087122.01481| eval_rmse: 134772.42406|  0:05:27s
+epoch 67 | loss: 12902302708.62222| eval_rmse: 184883.55383|  0:05:31s
+epoch 68 | loss: 13862863276.56296| eval_rmse: 135270.48557|  0:05:36s
+epoch 69 | loss: 13969888813.51111| eval_rmse: 148255.85722|  0:05:41s
+epoch 70 | loss: 13427788394.19259| eval_rmse: 139861.14489|  0:05:46s
+epoch 71 | loss: 13174971156.85926| eval_rmse: 172752.8858|  0:05:51s
+epoch 72 | loss: 12486806425.6| eval_rmse: 186037.11577|  0:05:56s
+epoch 73 | loss: 14578418206.34074| eval_rmse: 210713.34084|  0:06:01s
+epoch 74 | loss: 12915332285.62963| eval_rmse: 164901.34132|  0:06:05s
+
+Early stopping occurred at epoch 74 with best_epoch = 54 and best_eval_rmse = 129407.30355
+Saved Losses
+{'MSE - mean': 19598775414.53182, 'MSE - std': 3779551243.159361, 'R2 - mean': 0.855520308954295, 'R2 - std': 0.020856816612986915} 
+ 
+
+In get_device
+epoch 0  | loss: 424592610645.33325| eval_rmse: 651944.88476|  0:00:04s
+epoch 1  | loss: 419370399000.65186| eval_rmse: 644692.39624|  0:00:09s
+epoch 2  | loss: 410495766558.34064| eval_rmse: 635042.93115|  0:00:14s
+epoch 3  | loss: 399861716066.60754| eval_rmse: 620502.98574|  0:00:19s
+epoch 4  | loss: 388060824765.6295| eval_rmse: 603858.38094|  0:00:24s
+epoch 5  | loss: 375026950326.0444| eval_rmse: 596821.95136|  0:00:29s
+epoch 6  | loss: 362291267720.5335| eval_rmse: 595864.42974|  0:00:34s
+epoch 7  | loss: 348452015915.6149| eval_rmse: 579091.87493|  0:00:38s
+epoch 8  | loss: 334032964570.0741| eval_rmse: 562817.83487|  0:00:43s
+epoch 9  | loss: 320008037869.03705| eval_rmse: 527978.93425|  0:00:48s
+epoch 10 | loss: 305181130873.363| eval_rmse: 537984.17008|  0:00:53s
+epoch 11 | loss: 290264717236.1483| eval_rmse: 497260.51273|  0:00:58s
+epoch 12 | loss: 273858763161.59988| eval_rmse: 504096.03186|  0:01:03s
+epoch 13 | loss: 257622549997.03705| eval_rmse: 502789.36367|  0:01:08s
+epoch 14 | loss: 241243575515.97037| eval_rmse: 480422.7413|  0:01:13s
+epoch 15 | loss: 226054601841.77777| eval_rmse: 511515.01566|  0:01:17s
+epoch 16 | loss: 210989640423.34818| eval_rmse: 447293.01667|  0:01:22s
+epoch 17 | loss: 195205176797.86667| eval_rmse: 356224.6428|  0:01:27s
+epoch 18 | loss: 177985841713.30368| eval_rmse: 468011.48477|  0:01:32s
+epoch 19 | loss: 162132084387.08148| eval_rmse: 369653.35235|  0:01:37s
+epoch 20 | loss: 146850173716.85934| eval_rmse: 252893.35408|  0:01:42s
+epoch 21 | loss: 132270945560.65182| eval_rmse: 287046.94059|  0:01:47s
+epoch 22 | loss: 118363760018.01482| eval_rmse: 313215.84019|  0:01:51s
+epoch 23 | loss: 105415557241.36296| eval_rmse: 194813.79636|  0:01:56s
+epoch 24 | loss: 94399197214.34074| eval_rmse: 321289.00037|  0:02:01s
+epoch 25 | loss: 83184837305.83704| eval_rmse: 299730.91434|  0:02:06s
+epoch 26 | loss: 74764653757.62961| eval_rmse: 267753.9637|  0:02:11s
+epoch 27 | loss: 64954107168.23703| eval_rmse: 197204.58019|  0:02:16s
+epoch 28 | loss: 56671908188.91852| eval_rmse: 193638.96617|  0:02:21s
+epoch 29 | loss: 50368609416.53333| eval_rmse: 238477.89853|  0:02:26s
+epoch 30 | loss: 43342033722.7852| eval_rmse: 174001.96035|  0:02:31s
+epoch 31 | loss: 39217677524.38517| eval_rmse: 313423.74205|  0:02:36s
+epoch 32 | loss: 36510734586.3111| eval_rmse: 244102.35659|  0:02:41s
+epoch 33 | loss: 31048203612.91852| eval_rmse: 135152.43844|  0:02:45s
+epoch 34 | loss: 26832514734.45926| eval_rmse: 140624.22456|  0:02:50s
+epoch 35 | loss: 22922183331.08149| eval_rmse: 161727.86689|  0:02:55s
+epoch 36 | loss: 21289894411.37778| eval_rmse: 144510.00233|  0:03:00s
+epoch 37 | loss: 20934779464.05926| eval_rmse: 175095.78715|  0:03:05s
+epoch 38 | loss: 21390182058.66667| eval_rmse: 199683.09724|  0:03:10s
+epoch 39 | loss: 21211394874.78519| eval_rmse: 164906.01326|  0:03:14s
+epoch 40 | loss: 18519812767.28889| eval_rmse: 178825.85575|  0:03:19s
+epoch 41 | loss: 19568592042.66667| eval_rmse: 160432.17699|  0:03:24s
+epoch 42 | loss: 18409820258.6074| eval_rmse: 141877.69175|  0:03:29s
+epoch 43 | loss: 18895707924.85926| eval_rmse: 154671.62145|  0:03:33s
+epoch 44 | loss: 17297440510.10371| eval_rmse: 166758.83239|  0:03:38s
+epoch 45 | loss: 16783909095.34815| eval_rmse: 170031.21377|  0:03:43s
+epoch 46 | loss: 15386802270.81482| eval_rmse: 140839.24757|  0:03:48s
+epoch 47 | loss: 16413971766.99259| eval_rmse: 153214.22603|  0:03:52s
+epoch 48 | loss: 16223707158.75556| eval_rmse: 134229.73616|  0:03:57s
+epoch 49 | loss: 15408822162.01482| eval_rmse: 203706.05657|  0:04:02s
+epoch 50 | loss: 16028830314.19259| eval_rmse: 136293.46568|  0:04:07s
+epoch 51 | loss: 15900536035.55556| eval_rmse: 153745.63111|  0:04:12s
+epoch 52 | loss: 15253376464.59259| eval_rmse: 138317.72155|  0:04:17s
+epoch 53 | loss: 15818475501.03704| eval_rmse: 158309.69594|  0:04:22s
+epoch 54 | loss: 15841080509.62963| eval_rmse: 153991.5067|  0:04:27s
+epoch 55 | loss: 17574080982.28149| eval_rmse: 152587.12626|  0:04:32s
+epoch 56 | loss: 16450868747.37778| eval_rmse: 147807.73115|  0:04:37s
+epoch 57 | loss: 16070874324.38518| eval_rmse: 150954.97944|  0:04:41s
+epoch 58 | loss: 16074239609.36296| eval_rmse: 165526.85173|  0:04:46s
+epoch 59 | loss: 15143882653.3926| eval_rmse: 166733.16898|  0:04:51s
+epoch 60 | loss: 14152415103.05185| eval_rmse: 153892.07653|  0:04:56s
+epoch 61 | loss: 14579048220.44444| eval_rmse: 155252.11927|  0:05:01s
+epoch 62 | loss: 14254012051.91111| eval_rmse: 159461.74421|  0:05:06s
+epoch 63 | loss: 14187210448.59259| eval_rmse: 144443.80814|  0:05:11s
+epoch 64 | loss: 14998797399.22963| eval_rmse: 163917.96388|  0:05:15s
+epoch 65 | loss: 14345618549.57037| eval_rmse: 152401.96853|  0:05:20s
+epoch 66 | loss: 13578270970.31111| eval_rmse: 158614.71271|  0:05:25s
+epoch 67 | loss: 14335001160.05926| eval_rmse: 146033.93119|  0:05:30s
+epoch 68 | loss: 13345403740.91852| eval_rmse: 141985.00585|  0:05:35s
+
+Early stopping occurred at epoch 68 with best_epoch = 48 and best_eval_rmse = 134229.73616
+Saved Losses
+{'MSE - mean': 19282544745.78634, 'MSE - std': 3439187901.693483, 'R2 - mean': 0.8575049930495744, 'R2 - std': 0.019072527971258448} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 19282544745.78634, 'MSE - std': 3439187901.693483, 'R2 - mean': 0.8575049930495744, 'R2 - std': 0.019072527971258448}
+Train time: 297.8280354925995
+Inference time: 0.4049223053996684
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 9 finished with value: 19282544745.78634 and parameters: {'n_d': 22, 'n_steps': 4, 'gamma': 1.5027859760309275, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.0273297508270821, 'mask_type': 'entmax'}. Best is trial 1 with value: 15097435312.279827.
+In get_device
+In get_device
+epoch 0  | loss: 427092297257.7185| eval_rmse: 617619.98273|  0:00:09s
+epoch 1  | loss: 416168654832.82965| eval_rmse: 578305.51499|  0:00:18s
+epoch 2  | loss: 389547254184.7704| eval_rmse: 488424.78236|  0:00:27s
+epoch 3  | loss: 357719664594.4889| eval_rmse: 367647.79938|  0:00:37s
+epoch 4  | loss: 322798953600.94824| eval_rmse: 294292.13809|  0:00:46s
+epoch 5  | loss: 291691820312.6516| eval_rmse: 275324.66792|  0:00:55s
+epoch 6  | loss: 263767513133.5111| eval_rmse: 364373.44491|  0:01:05s
+epoch 7  | loss: 238028502235.97037| eval_rmse: 283683.24745|  0:01:14s
+epoch 8  | loss: 212949052256.71112| eval_rmse: 285511.48254|  0:01:23s
+epoch 9  | loss: 188630178019.5555| eval_rmse: 263333.49959|  0:01:33s
+epoch 10 | loss: 163566511414.99258| eval_rmse: 350033.00192|  0:01:42s
+epoch 11 | loss: 144686360378.7852| eval_rmse: 350083.42295|  0:01:51s
+epoch 12 | loss: 129570726919.58517| eval_rmse: 339716.82047|  0:02:00s
+epoch 13 | loss: 114691450591.76295| eval_rmse: 207796.90325|  0:02:10s
+epoch 14 | loss: 100319587350.75555| eval_rmse: 211354.84492|  0:02:19s
+epoch 15 | loss: 82544203108.50368| eval_rmse: 255090.31542|  0:02:28s
+epoch 16 | loss: 70910115081.48148| eval_rmse: 340570.41271|  0:02:37s
+epoch 17 | loss: 61272833145.36296| eval_rmse: 1180876.98362|  0:02:47s
+epoch 18 | loss: 49990204909.03704| eval_rmse: 652531.6208|  0:02:56s
+epoch 19 | loss: 41355149979.4963| eval_rmse: 709920.01161|  0:03:05s
+epoch 20 | loss: 38495331896.88888| eval_rmse: 257516.00743|  0:03:15s
+epoch 21 | loss: 31845246900.14815| eval_rmse: 502578.16732|  0:03:24s
+epoch 22 | loss: 31580019579.25926| eval_rmse: 691971.19788|  0:03:33s
+epoch 23 | loss: 27334335279.40741| eval_rmse: 197157.40056|  0:03:42s
+epoch 24 | loss: 25647248073.00741| eval_rmse: 249368.79194|  0:03:52s
+epoch 25 | loss: 26400976846.6963| eval_rmse: 280870.86724|  0:04:01s
+epoch 26 | loss: 28745288749.51111| eval_rmse: 299992.44416|  0:04:10s
+epoch 27 | loss: 30031679336.2963| eval_rmse: 216458.0721|  0:04:19s
+epoch 28 | loss: 25011965993.71852| eval_rmse: 195788.43083|  0:04:28s
+epoch 29 | loss: 24477726735.17036| eval_rmse: 169929.20076|  0:04:38s
+epoch 30 | loss: 25495014028.32593| eval_rmse: 153903.13603|  0:04:47s
+Trial 10 failed with parameters: {'n_d': 34, 'n_steps': 7, 'gamma': 1.576541698752349, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.006401508009667442, 'mask_type': 'entmax'} because of the following error: RuntimeError('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 40, in fit
+    self.model.fit(X, y, eval_set=[(X_val, y_val)], eval_name=["eval"], eval_metric=self.metric,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 258, in fit
+    self._train_epoch(train_dataloader)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 489, in _train_epoch
+    batch_logs = self._train_batch(X, y)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 527, in _train_batch
+    output, M_loss = self.network(X)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 616, in forward
+    return self.tabnet(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 492, in forward
+    steps_output, M_loss = self.encoder(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 181, in forward
+    out = self.feat_transformers[step](masked_x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 737, in forward
+    x = self.shared(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 772, in forward
+    scale = torch.sqrt(torch.FloatTensor([0.5]).to(x.device))
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Trial 10 failed with value None.

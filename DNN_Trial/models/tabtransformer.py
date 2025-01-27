@@ -56,8 +56,8 @@ class TabTransformer(BaseModelTorch):
         optimizer = optim.AdamW(self.model.parameters(), lr=learning_rate, weight_decay=weight_decay)
 
         # For some reason this has to be set explicitly to work with categorical data
-        X = np.array(X, dtype=np.float)
-        X_val = np.array(X_val, dtype=np.float)
+        X = np.array(X, dtype=float)
+        X_val = np.array(X_val, dtype=float)
 
         X = torch.tensor(X).float()
         X_val = torch.tensor(X_val).float()
@@ -152,7 +152,7 @@ class TabTransformer(BaseModelTorch):
 
     def predict_helper(self, X):
         self.model.eval()
-        X = np.array(X, dtype=np.float)
+        X = np.array(X, dtype=float)
         X = torch.tensor(X).float()
 
         test_dataset = TensorDataset(X)
@@ -193,7 +193,7 @@ class TabTransformer(BaseModelTorch):
             of the attention map.
             return array with the same shape as X. The number of columns is equal to the number of categorical values in X.
         """
-        X = np.array(X, dtype=np.float)
+        X = np.array(X, dtype=float)
         # Unroll and Rerun until first attention stage.
 
         X = torch.tensor(X).float()

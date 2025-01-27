@@ -8,7 +8,7 @@
 
 CONFIGS=(config/boston.yml
         config/socmob.yml
-        config/sensory.yml
+       	config/sensory.yml
         config/moneyball.yml
         #config/black_friday.yml
           )
@@ -21,7 +21,8 @@ for config in "${CONFIGS[@]}"; do
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/miniconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name VIME --optimize_hyperparameters --n_trials 20 --epochs 100
+    srun python3 train.py --config "$config" --model_name VIME --optimize_hyperparameters --n_trials 100 --epochs 100
+
 done
 
 

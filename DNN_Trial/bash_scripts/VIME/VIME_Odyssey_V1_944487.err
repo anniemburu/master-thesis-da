@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "train.py", line 189, in <module>
+    main(arguments)
+  File "train.py", line 148, in main
+    X, y = load_data(args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/load_data.py", line 186, in load_data
+    df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/home/mburu/.local/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv'
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-01-04 20:32:43,032] Using an existing study with name 'VIME_Abalone' instead of creating a new one.
+[I 2025-01-04 20:37:58,891] Trial 20 finished with value: 5.903332949471248 and parameters: {'p_m': 0.23710681707608086, 'alpha': 1.3599714159014447, 'K': 5, 'beta': 4.907845333067837}. Best is trial 8 with value: 4.638784670488211.
+[I 2025-01-04 20:49:06,330] Trial 21 finished with value: 4.6644478138228616 and parameters: {'p_m': 0.40442234712278835, 'alpha': 0.7683856919108543, 'K': 20, 'beta': 0.6717872506980473}. Best is trial 8 with value: 4.638784670488211.
+[I 2025-01-04 20:59:55,879] Trial 22 finished with value: 4.868502463789626 and parameters: {'p_m': 0.4586883625346406, 'alpha': 1.6789504967213569, 'K': 20, 'beta': 0.9972543736912765}. Best is trial 8 with value: 4.638784670488211.
+[I 2025-01-04 21:09:09,124] Trial 23 finished with value: 4.602941213165306 and parameters: {'p_m': 0.6487856156108985, 'alpha': 3.357727134862121, 'K': 20, 'beta': 0.16867169474637234}. Best is trial 23 with value: 4.602941213165306.
+[I 2025-01-04 21:20:04,525] Trial 24 finished with value: 4.735775303795814 and parameters: {'p_m': 0.6472085285377506, 'alpha': 3.311726782711502, 'K': 20, 'beta': 2.0951611682637488}. Best is trial 23 with value: 4.602941213165306.
+[I 2025-01-04 21:24:23,707] Trial 25 finished with value: 5.175801367910346 and parameters: {'p_m': 0.5837529386952998, 'alpha': 4.003408572697181, 'K': 2, 'beta': 2.949933886526654}. Best is trial 23 with value: 4.602941213165306.
+[I 2025-01-04 21:29:08,737] Trial 26 finished with value: 4.702653405740002 and parameters: {'p_m': 0.7423102053060935, 'alpha': 6.699006588784169, 'K': 3, 'beta': 1.355493842268489}. Best is trial 23 with value: 4.602941213165306.
+[I 2025-01-04 21:38:05,588] Trial 27 finished with value: 4.69977849731846 and parameters: {'p_m': 0.7699830535857163, 'alpha': 5.369729738720173, 'K': 15, 'beta': 0.8805316037841042}. Best is trial 23 with value: 4.602941213165306.
+[I 2025-01-04 21:46:23,433] Trial 28 finished with value: 4.937449078665585 and parameters: {'p_m': 0.37058466669360635, 'alpha': 4.533631877077995, 'K': 10, 'beta': 1.8977386521290007}. Best is trial 23 with value: 4.602941213165306.
+[I 2025-01-04 21:56:14,637] Trial 29 finished with value: 4.543469724668304 and parameters: {'p_m': 0.4865172654422525, 'alpha': 2.2025639381097686, 'K': 20, 'beta': 0.22034881046573626}. Best is trial 29 with value: 4.543469724668304.
+[I 2025-01-04 22:05:13,241] Trial 30 finished with value: 4.657824177866479 and parameters: {'p_m': 0.6209023617608542, 'alpha': 1.993299849472653, 'K': 20, 'beta': 0.14704330641075236}. Best is trial 29 with value: 4.543469724668304.
+[I 2025-01-04 22:16:07,500] Trial 31 finished with value: 4.8551747521201145 and parameters: {'p_m': 0.49321175783473786, 'alpha': 2.886761291738063, 'K': 20, 'beta': 0.7625017368291537}. Best is trial 29 with value: 4.543469724668304.
+[I 2025-01-04 22:26:36,405] Trial 32 finished with value: 4.646847999603783 and parameters: {'p_m': 0.7147377085528585, 'alpha': 3.5340329031586233, 'K': 20, 'beta': 0.5312081891010202}. Best is trial 29 with value: 4.543469724668304.
+[I 2025-01-04 22:37:26,627] Trial 33 finished with value: 4.833736251450947 and parameters: {'p_m': 0.6997245046865035, 'alpha': 3.6642476012133938, 'K': 20, 'beta': 1.5230775846905198}. Best is trial 29 with value: 4.543469724668304.
+[I 2025-01-04 22:47:47,258] Trial 34 finished with value: 4.593198495583627 and parameters: {'p_m': 0.8382711128958475, 'alpha': 2.5120183012361794, 'K': 20, 'beta': 0.9636551627084091}. Best is trial 29 with value: 4.543469724668304.
+[I 2025-01-04 22:53:48,800] Trial 35 finished with value: 4.880717677420577 and parameters: {'p_m': 0.7940292788212966, 'alpha': 2.4515952483536294, 'K': 5, 'beta': 2.4936669874096613}. Best is trial 29 with value: 4.543469724668304.
+[I 2025-01-04 23:02:13,717] Trial 36 finished with value: 4.48540081526779 and parameters: {'p_m': 0.8721504351545861, 'alpha': 3.038715869332491, 'K': 10, 'beta': 1.2414847045108695}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:12:38,524] Trial 37 finished with value: 4.5735424319777565 and parameters: {'p_m': 0.892282082250448, 'alpha': 0.18570239651856735, 'K': 20, 'beta': 3.4406605043468717}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:17:01,583] Trial 38 finished with value: 4.57683800491572 and parameters: {'p_m': 0.8998989156257514, 'alpha': 0.13005682766779272, 'K': 3, 'beta': 3.7342044183070806}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:21:16,323] Trial 39 finished with value: 4.603469635609875 and parameters: {'p_m': 0.8951702647994555, 'alpha': 0.26169799358626095, 'K': 3, 'beta': 3.50616842502322}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:25:32,560] Trial 40 finished with value: 4.751723901517289 and parameters: {'p_m': 0.8380775255756033, 'alpha': 0.8710247008708542, 'K': 3, 'beta': 4.374264504404425}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:29:53,661] Trial 41 finished with value: 4.693514700540084 and parameters: {'p_m': 0.8479425048692986, 'alpha': 0.14668482518342477, 'K': 3, 'beta': 2.7485980418520652}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:34:37,247] Trial 42 finished with value: 4.690708383904524 and parameters: {'p_m': 0.8472823709120125, 'alpha': 1.2241841113697625, 'K': 3, 'beta': 3.090741761856316}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:43:17,245] Trial 43 finished with value: 4.824205832363343 and parameters: {'p_m': 0.7995536004428264, 'alpha': 0.6465355804911765, 'K': 10, 'beta': 5.836479115385093}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:54:27,121] Trial 44 finished with value: 4.781514628655417 and parameters: {'p_m': 0.8668485495253443, 'alpha': 1.2956069516192252, 'K': 20, 'beta': 4.548591312531553}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-04 23:59:09,931] Trial 45 finished with value: 4.833603809524905 and parameters: {'p_m': 0.8186880610166125, 'alpha': 1.8116237518289349, 'K': 3, 'beta': 3.8237751333040304}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 00:08:16,187] Trial 46 finished with value: 4.755716402196082 and parameters: {'p_m': 0.7659381161445131, 'alpha': 1.6100576838218073, 'K': 15, 'beta': 1.8235700242145958}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 00:16:55,672] Trial 47 finished with value: 4.746702762294512 and parameters: {'p_m': 0.899353753399585, 'alpha': 2.8299654831025887, 'K': 10, 'beta': 5.666082600802973}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 00:21:12,217] Trial 48 finished with value: 4.922190757825748 and parameters: {'p_m': 0.5157956528274678, 'alpha': 0.5343827926843775, 'K': 2, 'beta': 2.5314632897098432}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 00:26:39,488] Trial 49 finished with value: 4.706751468837662 and parameters: {'p_m': 0.8650251055686033, 'alpha': 2.4048784892836497, 'K': 5, 'beta': 1.2581195327311436}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 00:37:58,612] Trial 50 finished with value: 4.81016905929532 and parameters: {'p_m': 0.7424106808961499, 'alpha': 1.0970372669874926, 'K': 20, 'beta': 3.656353806581328}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 00:49:10,074] Trial 51 finished with value: 4.910100615651393 and parameters: {'p_m': 0.8231815718445588, 'alpha': 2.997189098093011, 'K': 20, 'beta': 6.585140927135938}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 00:59:48,183] Trial 52 finished with value: 4.712967706140485 and parameters: {'p_m': 0.5547562742090971, 'alpha': 4.124931528590844, 'K': 20, 'beta': 0.5442281999316789}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 01:11:05,861] Trial 53 finished with value: 4.7909881969875 and parameters: {'p_m': 0.8681723965465912, 'alpha': 2.3135119856398694, 'K': 20, 'beta': 9.226089876357548}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 01:22:13,216] Trial 54 finished with value: 4.745133560527353 and parameters: {'p_m': 0.6714578966864783, 'alpha': 3.2912423864907088, 'K': 20, 'beta': 1.054916862346262}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 01:30:53,597] Trial 55 finished with value: 4.7403168733627545 and parameters: {'p_m': 0.6029408925919124, 'alpha': 5.779645308571537, 'K': 10, 'beta': 1.5568083000511423}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 01:42:02,650] Trial 56 finished with value: 4.994589923286066 and parameters: {'p_m': 0.7892801996866146, 'alpha': 2.061522013546524, 'K': 20, 'beta': 4.991462394409848}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 01:53:04,388] Trial 57 finished with value: 4.859450053821069 and parameters: {'p_m': 0.49694232038533, 'alpha': 5.003530964999024, 'K': 20, 'beta': 2.126891790802045}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:01:35,239] Trial 58 finished with value: 4.759203093079881 and parameters: {'p_m': 0.7393165085990474, 'alpha': 1.4385559091096891, 'K': 10, 'beta': 0.582693715542332}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:11:14,505] Trial 59 finished with value: 4.651004401076586 and parameters: {'p_m': 0.8738350442734926, 'alpha': 0.43833319517107694, 'K': 15, 'beta': 4.116907676039605}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:15:01,615] Trial 60 finished with value: 4.584821418614173 and parameters: {'p_m': 0.44768451254169794, 'alpha': 2.792708834620306, 'K': 2, 'beta': 0.12675207091847634}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:19:01,665] Trial 61 finished with value: 4.628125626798344 and parameters: {'p_m': 0.4361794591892464, 'alpha': 3.053002285100433, 'K': 2, 'beta': 0.280999246604218}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:23:18,255] Trial 62 finished with value: 4.7623111659576285 and parameters: {'p_m': 0.37859019709910124, 'alpha': 2.666746909816665, 'K': 2, 'beta': 0.9779356704211903}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:27:19,740] Trial 63 finished with value: 4.752779196749225 and parameters: {'p_m': 0.46600494788184754, 'alpha': 4.268443562777188, 'K': 2, 'beta': 0.184762447185262}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:31:31,599] Trial 64 finished with value: 4.744117855959839 and parameters: {'p_m': 0.5491562660231701, 'alpha': 3.83203730126958, 'K': 2, 'beta': 0.8138765079423969}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:42:43,328] Trial 65 finished with value: 4.897381799309358 and parameters: {'p_m': 0.42006800817391243, 'alpha': 1.8689169396689918, 'K': 20, 'beta': 1.2602866619948268}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:47:12,720] Trial 66 finished with value: 4.674091142015927 and parameters: {'p_m': 0.4804217555592652, 'alpha': 3.2100050433627905, 'K': 3, 'beta': 0.5892907142428595}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:52:39,600] Trial 67 finished with value: 4.538122824084438 and parameters: {'p_m': 0.5257937445247223, 'alpha': 0.9073130083243313, 'K': 5, 'beta': 0.11019073958812683}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 02:58:36,816] Trial 68 finished with value: 5.133741743718624 and parameters: {'p_m': 0.34057262867751265, 'alpha': 1.0932171164921054, 'K': 5, 'beta': 3.3358678232462666}. Best is trial 36 with value: 4.48540081526779.
+[I 2025-01-05 03:04:23,347] Trial 69 finished with value: 4.951964075520449 and parameters: {'p_m': 0.29863042494367564, 'alpha': 0.8358084620989186, 'K': 5, 'beta': 1.752274939160942}. Best is trial 36 with value: 4.48540081526779.

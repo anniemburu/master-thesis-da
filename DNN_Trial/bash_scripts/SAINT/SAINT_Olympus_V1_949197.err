@@ -1,0 +1,60 @@
+[I 2025-01-08 09:52:18,715] Using an existing study with name 'SAINT_Boston' instead of creating a new one.
+[I 2025-01-08 10:03:17,648] Trial 2 finished with value: 10.405608416442167 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'dropout': 0}. Best is trial 0 with value: 9.6270111888625.
+[I 2025-01-08 10:33:29,530] Using an existing study with name 'SAINT_Socmob' instead of creating a new one.
+[W 2025-01-08 10:33:46,226] Trial 2 failed with parameters: {'dim': 128, 'depth': 2, 'heads': 4, 'dropout': 0.7} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 400.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 400.44 MiB is free. Including non-PyTorch memory, this process has 7.39 GiB memory in use. Of the allocated memory 7.22 GiB is allocated by PyTorch, and 42.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 132, in fit
+    optimizer.step()
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/optimizer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/optimizer.py", line 89, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/adamw.py", line 216, in step
+    has_complex = self._init_group(
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/adamw.py", line 159, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 400.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 400.44 MiB is free. Including non-PyTorch memory, this process has 7.39 GiB memory in use. Of the allocated memory 7.22 GiB is allocated by PyTorch, and 42.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[W 2025-01-08 10:33:46,229] Trial 2 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 185, in <module>
+    main(arguments)
+  File "train.py", line 156, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 132, in fit
+    optimizer.step()
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/optimizer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/optimizer.py", line 89, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/adamw.py", line 216, in step
+    has_complex = self._init_group(
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/optim/adamw.py", line 159, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 400.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 400.44 MiB is free. Including non-PyTorch memory, this process has 7.39 GiB memory in use. Of the allocated memory 7.22 GiB is allocated by PyTorch, and 42.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-01-08 10:33:51,557] Using an existing study with name 'SAINT_Sensory' instead of creating a new one.
+[I 2025-01-08 10:45:34,066] Trial 1 finished with value: 0.6672528706724494 and parameters: {'dim': 32, 'depth': 6, 'heads': 4, 'dropout': 0.4}. Best is trial 1 with value: 0.6672528706724494.
+[I 2025-01-08 10:57:21,906] Using an existing study with name 'SAINT_Moneyball' instead of creating a new one.
+[I 2025-01-08 11:13:33,011] Trial 30 finished with value: 569.7608045697419 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}. Best is trial 18 with value: 472.816397197097.
+[I 2025-01-08 11:29:02,099] Using an existing study with name 'SAINT_Black_Friday' instead of creating a new one.
+[I 2025-01-08 19:56:56,468] Trial 1 finished with value: 12143957.483493093 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'dropout': 0.3}. Best is trial 1 with value: 12143957.483493093.

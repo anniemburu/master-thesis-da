@@ -1,0 +1,124 @@
+[I 2025-01-23 13:32:38,795] Using an existing study with name 'TabTransformer_Diamonds' instead of creating a new one.
+[W 2025-01-23 13:33:03,276] Trial 15 failed with parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 18.44 MiB is free. Including non-PyTorch memory, this process has 7.77 GiB memory in use. Of the allocated memory 7.05 GiB is allocated by PyTorch, and 594.89 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 126, in fit
+    out = self.model(x_categ, x_cont)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 465, in forward
+    x = self.transformer(x_categ)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 352, in forward
+    x = ff(x)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 266, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 276, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 298, in forward
+    return self.net(x)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/functional.py", line 1266, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 18.44 MiB is free. Including non-PyTorch memory, this process has 7.77 GiB memory in use. Of the allocated memory 7.05 GiB is allocated by PyTorch, and 594.89 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[W 2025-01-23 13:33:03,281] Trial 15 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 185, in <module>
+    main(arguments)
+  File "train.py", line 156, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 126, in fit
+    out = self.model(x_categ, x_cont)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 465, in forward
+    x = self.transformer(x_categ)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 352, in forward
+    x = ff(x)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 266, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 276, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 298, in forward
+    return self.net(x)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/mburu/miniconda3/envs/TabSurvey2/lib/python3.8/site-packages/torch/nn/functional.py", line 1266, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 18.44 MiB is free. Including non-PyTorch memory, this process has 7.77 GiB memory in use. Of the allocated memory 7.05 GiB is allocated by PyTorch, and 594.89 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1

@@ -1,0 +1,657 @@
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/boston.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/boston.yml', data_parallel=False, dataset='Boston', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[3], num_classes=1, num_features=13, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Boston...
+Dataset loaded! 
+
+X b4 encoding : [6.320e-03 1.800e+01 2.310e+00 0.000e+00 5.380e-01 6.575e+00 6.520e+01
+ 4.090e+00 1.000e+00 2.960e+02 1.530e+01 3.969e+02 4.980e+00] 
+
+(506, 13)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [3]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [3]
+Cat Idx Part II: [3] 
+ENDE 
+ 
+
+X after Nominal Encoding: [6.320e-03 1.800e+01 2.310e+00 0.000e+00 5.380e-01 6.575e+00 6.520e+01
+ 4.090e+00 1.000e+00 2.960e+02 1.530e+01 3.969e+02 4.980e+00] 
+ 
+
+Scaling the data...
+X after Scaling: [-0.41978194  0.28482986 -1.2879095   0.         -0.14421743  0.41367189
+ -0.12001342  0.1402136  -0.98284286 -0.66660821 -1.45900038  0.44105193
+ -1.0755623 ] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [ 1.          0.         -0.41978194  0.28482986 -1.2879095  -0.14421743
+  0.41367189 -0.12001342  0.1402136  -0.98284286 -0.66660821 -1.45900038
+  0.44105193 -1.0755623 ] 
+ 
+
+args.num_features: 14
+args.cat_idx: None
+Cat Dims: []
+New Shape: (506, 14)
+False 
+ 
+
+Using an existing study with name 'TabNet_Boston' instead of creating a new one.
+In get_device
+In get_device
+epoch 0  | loss: 638.67763| eval_rmse: 18.00647|  0:00:02s
+epoch 1  | loss: 321.20099| eval_rmse: 13.67429|  0:00:02s
+epoch 2  | loss: 161.06002| eval_rmse: 10.88637|  0:00:02s
+epoch 3  | loss: 67.57372| eval_rmse: 8.84413 |  0:00:02s
+epoch 4  | loss: 54.91347| eval_rmse: 7.78119 |  0:00:02s
+epoch 5  | loss: 44.83929| eval_rmse: 8.31166 |  0:00:03s
+epoch 6  | loss: 46.11523| eval_rmse: 7.0536  |  0:00:03s
+epoch 7  | loss: 29.31733| eval_rmse: 6.72454 |  0:00:03s
+epoch 8  | loss: 30.24881| eval_rmse: 6.61472 |  0:00:03s
+epoch 9  | loss: 25.86631| eval_rmse: 6.47245 |  0:00:03s
+epoch 10 | loss: 27.87377| eval_rmse: 6.31937 |  0:00:03s
+epoch 11 | loss: 30.06723| eval_rmse: 6.56373 |  0:00:03s
+epoch 12 | loss: 21.58526| eval_rmse: 6.17759 |  0:00:04s
+epoch 13 | loss: 25.01112| eval_rmse: 6.25232 |  0:00:04s
+epoch 14 | loss: 24.34117| eval_rmse: 6.50418 |  0:00:04s
+epoch 15 | loss: 20.56774| eval_rmse: 6.77517 |  0:00:04s
+epoch 16 | loss: 25.92096| eval_rmse: 7.50311 |  0:00:04s
+epoch 17 | loss: 26.34949| eval_rmse: 6.23928 |  0:00:04s
+epoch 18 | loss: 22.64786| eval_rmse: 6.3516  |  0:00:04s
+epoch 19 | loss: 24.90018| eval_rmse: 5.27014 |  0:00:04s
+epoch 20 | loss: 22.86575| eval_rmse: 6.70124 |  0:00:05s
+epoch 21 | loss: 23.19918| eval_rmse: 6.78342 |  0:00:05s
+epoch 22 | loss: 19.36437| eval_rmse: 6.41213 |  0:00:05s
+epoch 23 | loss: 18.47514| eval_rmse: 6.64434 |  0:00:05s
+epoch 24 | loss: 22.99758| eval_rmse: 6.72068 |  0:00:05s
+epoch 25 | loss: 18.31234| eval_rmse: 5.75525 |  0:00:05s
+epoch 26 | loss: 22.13091| eval_rmse: 5.47849 |  0:00:05s
+epoch 27 | loss: 20.48598| eval_rmse: 5.16596 |  0:00:06s
+epoch 28 | loss: 21.31629| eval_rmse: 5.96332 |  0:00:06s
+epoch 29 | loss: 15.98706| eval_rmse: 5.31468 |  0:00:06s
+epoch 30 | loss: 15.36908| eval_rmse: 5.18237 |  0:00:06s
+epoch 31 | loss: 13.65761| eval_rmse: 4.45721 |  0:00:06s
+epoch 32 | loss: 13.57143| eval_rmse: 4.39036 |  0:00:06s
+epoch 33 | loss: 15.44857| eval_rmse: 4.60336 |  0:00:06s
+epoch 34 | loss: 15.54392| eval_rmse: 4.81968 |  0:00:06s
+epoch 35 | loss: 17.87344| eval_rmse: 5.02305 |  0:00:07s
+epoch 36 | loss: 11.96452| eval_rmse: 4.63726 |  0:00:07s
+epoch 37 | loss: 14.94963| eval_rmse: 4.58613 |  0:00:07s
+epoch 38 | loss: 15.90417| eval_rmse: 4.47022 |  0:00:07s
+epoch 39 | loss: 12.56803| eval_rmse: 4.80305 |  0:00:07s
+epoch 40 | loss: 13.95154| eval_rmse: 4.5852  |  0:00:07s
+epoch 41 | loss: 11.91815| eval_rmse: 4.70533 |  0:00:07s
+epoch 42 | loss: 12.04702| eval_rmse: 4.69677 |  0:00:08s
+epoch 43 | loss: 13.27664| eval_rmse: 5.11808 |  0:00:08s
+epoch 44 | loss: 13.17762| eval_rmse: 4.70937 |  0:00:08s
+epoch 45 | loss: 14.92521| eval_rmse: 4.46805 |  0:00:08s
+epoch 46 | loss: 11.24146| eval_rmse: 4.54851 |  0:00:08s
+epoch 47 | loss: 11.86081| eval_rmse: 4.96109 |  0:00:08s
+epoch 48 | loss: 12.77438| eval_rmse: 5.05957 |  0:00:08s
+epoch 49 | loss: 12.45105| eval_rmse: 4.63823 |  0:00:08s
+epoch 50 | loss: 14.6524 | eval_rmse: 4.29752 |  0:00:09s
+epoch 51 | loss: 11.06797| eval_rmse: 4.28932 |  0:00:09s
+epoch 52 | loss: 12.12257| eval_rmse: 4.34747 |  0:00:09s
+epoch 53 | loss: 13.0822 | eval_rmse: 4.68558 |  0:00:09s
+epoch 54 | loss: 12.95758| eval_rmse: 4.39316 |  0:00:09s
+epoch 55 | loss: 13.30622| eval_rmse: 4.54484 |  0:00:09s
+epoch 56 | loss: 16.44863| eval_rmse: 4.51497 |  0:00:09s
+epoch 57 | loss: 13.97478| eval_rmse: 4.69331 |  0:00:10s
+epoch 58 | loss: 13.61736| eval_rmse: 4.12477 |  0:00:10s
+epoch 59 | loss: 11.52413| eval_rmse: 4.17093 |  0:00:10s
+epoch 60 | loss: 12.2544 | eval_rmse: 4.4591  |  0:00:10s
+epoch 61 | loss: 14.91484| eval_rmse: 4.10765 |  0:00:10s
+epoch 62 | loss: 11.42602| eval_rmse: 3.90817 |  0:00:10s
+epoch 63 | loss: 10.66247| eval_rmse: 4.03918 |  0:00:10s
+epoch 64 | loss: 10.18151| eval_rmse: 3.95468 |  0:00:10s
+epoch 65 | loss: 11.6133 | eval_rmse: 3.97092 |  0:00:10s
+epoch 66 | loss: 10.38587| eval_rmse: 4.47944 |  0:00:11s
+epoch 67 | loss: 11.75337| eval_rmse: 4.90833 |  0:00:11s
+epoch 68 | loss: 11.36722| eval_rmse: 4.89668 |  0:00:11s
+epoch 69 | loss: 9.71966 | eval_rmse: 4.52514 |  0:00:11s
+epoch 70 | loss: 9.2316  | eval_rmse: 4.32876 |  0:00:11s
+epoch 71 | loss: 8.73383 | eval_rmse: 4.21145 |  0:00:11s
+epoch 72 | loss: 9.04745 | eval_rmse: 4.22545 |  0:00:11s
+epoch 73 | loss: 7.59314 | eval_rmse: 4.38948 |  0:00:11s
+epoch 74 | loss: 9.92439 | eval_rmse: 4.50652 |  0:00:11s
+epoch 75 | loss: 11.28292| eval_rmse: 4.42643 |  0:00:11s
+epoch 76 | loss: 9.9922  | eval_rmse: 4.34841 |  0:00:12s
+epoch 77 | loss: 11.54944| eval_rmse: 4.55214 |  0:00:12s
+epoch 78 | loss: 9.5987  | eval_rmse: 4.70824 |  0:00:12s
+epoch 79 | loss: 11.90562| eval_rmse: 5.03433 |  0:00:12s
+epoch 80 | loss: 13.72541| eval_rmse: 4.79388 |  0:00:12s
+epoch 81 | loss: 8.99766 | eval_rmse: 4.77951 |  0:00:12s
+epoch 82 | loss: 10.50723| eval_rmse: 5.03459 |  0:00:12s
+
+Early stopping occurred at epoch 82 with best_epoch = 62 and best_eval_rmse = 3.90817
+Trial 1 failed with parameters: {'n_d': 46, 'n_steps': 8, 'gamma': 1.7378794947777991, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.04410115315174446, 'mask_type': 'sparsemax'} because of the following error: AttributeError("module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 52, in cross_validation
+    curr_model.predict(X_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel_torch.py", line 129, in predict
+    self.predictions = self.predict_helper(X)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 48, in predict_helper
+    X = np.array(X, dtype=np.float)
+  File "/home/mburu/.local/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Trial 1 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/socmob.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/socmob.yml', data_parallel=False, dataset='Socmob', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 1, 2, 3], num_classes=1, num_features=5, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Socmob...
+Dataset loaded! 
+
+X b4 encoding : ['Professional_Self-Employed' 'Professional_Self-Employed' 'intact'
+ 'white' 22.9] 
+
+(1156, 5)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 1, 2, 3]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 1, 2, 3]
+Cat Idx Part II: [0, 1, 2, 3] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['Professional_Self-Employed' 'Professional_Self-Employed' 'intact'
+ 'white' 22.9] 
+ 
+
+Scaling the data...
+X after Scaling: ['Professional_Self-Employed' 'Professional_Self-Employed' 'intact'
+ 'white' 0.13440189107338416] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0
+ 0.0 1.0 0.13440189107338416] 
+ 
+
+args.num_features: 39
+args.cat_idx: None
+Cat Dims: []
+New Shape: (1156, 39)
+False 
+ 
+
+Using an existing study with name 'TabNet_Socmob' instead of creating a new one.
+In get_device
+In get_device
+epoch 0  | loss: 2225.94463| eval_rmse: 34.43385|  0:00:00s
+epoch 1  | loss: 1917.56985| eval_rmse: 31.38105|  0:00:01s
+epoch 2  | loss: 1618.81304| eval_rmse: 28.0438 |  0:00:01s
+epoch 3  | loss: 1184.54979| eval_rmse: 27.71364|  0:00:01s
+epoch 4  | loss: 1078.20258| eval_rmse: 26.99478|  0:00:02s
+epoch 5  | loss: 980.72816| eval_rmse: 28.21629|  0:00:02s
+epoch 6  | loss: 744.19067| eval_rmse: 27.3471 |  0:00:02s
+epoch 7  | loss: 786.52944| eval_rmse: 32.20274|  0:00:03s
+epoch 8  | loss: 744.85592| eval_rmse: 42.16282|  0:00:03s
+epoch 9  | loss: 850.29507| eval_rmse: 36.72841|  0:00:03s
+epoch 10 | loss: 1046.16025| eval_rmse: 32.28887|  0:00:04s
+epoch 11 | loss: 766.24009| eval_rmse: 32.38666|  0:00:04s
+epoch 12 | loss: 729.12816| eval_rmse: 30.79618|  0:00:04s
+epoch 13 | loss: 576.22813| eval_rmse: 28.01828|  0:00:05s
+epoch 14 | loss: 586.6366| eval_rmse: 28.20001|  0:00:05s
+epoch 15 | loss: 616.71586| eval_rmse: 23.52884|  0:00:05s
+epoch 16 | loss: 473.3238| eval_rmse: 43.39989|  0:00:06s
+epoch 17 | loss: 493.23675| eval_rmse: 20.45522|  0:00:06s
+epoch 18 | loss: 403.04374| eval_rmse: 20.81481|  0:00:06s
+epoch 19 | loss: 321.79104| eval_rmse: 17.27608|  0:00:07s
+epoch 20 | loss: 397.09121| eval_rmse: 33.75464|  0:00:07s
+epoch 21 | loss: 281.23054| eval_rmse: 19.52736|  0:00:08s
+epoch 22 | loss: 426.47472| eval_rmse: 21.43862|  0:00:08s
+epoch 23 | loss: 481.85759| eval_rmse: 18.5594 |  0:00:08s
+epoch 24 | loss: 446.71591| eval_rmse: 20.42409|  0:00:09s
+epoch 25 | loss: 492.07082| eval_rmse: 19.10782|  0:00:09s
+epoch 26 | loss: 518.99003| eval_rmse: 19.71468|  0:00:10s
+epoch 27 | loss: 544.31983| eval_rmse: 30.04251|  0:00:10s
+epoch 28 | loss: 378.05738| eval_rmse: 27.42527|  0:00:10s
+epoch 29 | loss: 389.12806| eval_rmse: 19.81815|  0:00:11s
+epoch 30 | loss: 382.28284| eval_rmse: 29.41098|  0:00:11s
+epoch 31 | loss: 288.20398| eval_rmse: 27.28647|  0:00:12s
+epoch 32 | loss: 318.69522| eval_rmse: 28.13615|  0:00:12s
+epoch 33 | loss: 493.76766| eval_rmse: 27.1823 |  0:00:12s
+epoch 34 | loss: 321.36785| eval_rmse: 24.93257|  0:00:12s
+epoch 35 | loss: 304.87692| eval_rmse: 26.16277|  0:00:13s
+epoch 36 | loss: 265.95  | eval_rmse: 29.5819 |  0:00:13s
+epoch 37 | loss: 389.03808| eval_rmse: 34.12086|  0:00:13s
+epoch 38 | loss: 338.7933| eval_rmse: 37.43764|  0:00:14s
+epoch 39 | loss: 270.74972| eval_rmse: 34.56333|  0:00:14s
+
+Early stopping occurred at epoch 39 with best_epoch = 19 and best_eval_rmse = 17.27608
+Trial 1 failed with parameters: {'n_d': 22, 'n_steps': 6, 'gamma': 1.751315147816526, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.3567281915892079, 'mask_type': 'entmax'} because of the following error: AttributeError("module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 52, in cross_validation
+    curr_model.predict(X_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel_torch.py", line 129, in predict
+    self.predictions = self.predict_helper(X)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 48, in predict_helper
+    X = np.array(X, dtype=np.float)
+  File "/home/mburu/.local/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Trial 1 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/sensory.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/sensory.yml', data_parallel=False, dataset='Sensory', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], num_classes=1, num_features=11, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=False, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Sensory...
+Dataset loaded! 
+
+X b4 encoding : [1 1 1 1 1 1 3 3 1 2 1] 
+
+(576, 11)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Cat Idx Part II: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+ENDE 
+ 
+
+X after Nominal Encoding: [1 1 1 1 1 1 3 3 1 2 1] 
+ 
+
+X after Scaling: [1 1 1 1 1 1 3 3 1 2 1] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [1. 0. 1. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 1.
+ 0. 0. 1. 0. 1. 0. 0. 1. 0. 0. 1. 0.] 
+ 
+
+args.num_features: 36
+args.cat_idx: None
+Cat Dims: []
+New Shape: (576, 36)
+False 
+ 
+
+Using an existing study with name 'TabNet_Sensory' instead of creating a new one.
+In get_device
+In get_device
+epoch 0  | loss: 37.36718| eval_rmse: 63.55153|  0:00:00s
+epoch 1  | loss: 34.46461| eval_rmse: 66.41109|  0:00:00s
+epoch 2  | loss: 18.98704| eval_rmse: 57.38649|  0:00:01s
+epoch 3  | loss: 12.35461| eval_rmse: 58.98896|  0:00:01s
+epoch 4  | loss: 8.15701 | eval_rmse: 66.99458|  0:00:01s
+epoch 5  | loss: 5.05839 | eval_rmse: 63.1264 |  0:00:01s
+epoch 6  | loss: 4.15887 | eval_rmse: 38.02823|  0:00:01s
+epoch 7  | loss: 3.36345 | eval_rmse: 44.60491|  0:00:02s
+epoch 8  | loss: 2.88278 | eval_rmse: 45.27371|  0:00:02s
+epoch 9  | loss: 2.48365 | eval_rmse: 66.85733|  0:00:02s
+epoch 10 | loss: 3.43712 | eval_rmse: 51.17211|  0:00:02s
+epoch 11 | loss: 2.52468 | eval_rmse: 41.9633 |  0:00:02s
+epoch 12 | loss: 2.81365 | eval_rmse: 47.94426|  0:00:03s
+epoch 13 | loss: 1.77484 | eval_rmse: 45.377  |  0:00:03s
+epoch 14 | loss: 1.44013 | eval_rmse: 24.45602|  0:00:03s
+epoch 15 | loss: 1.63078 | eval_rmse: 19.14114|  0:00:03s
+epoch 16 | loss: 1.32782 | eval_rmse: 19.1265 |  0:00:03s
+epoch 17 | loss: 1.49176 | eval_rmse: 19.29565|  0:00:04s
+epoch 18 | loss: 1.38686 | eval_rmse: 20.53086|  0:00:04s
+epoch 19 | loss: 1.71684 | eval_rmse: 20.07064|  0:00:04s
+epoch 20 | loss: 1.78277 | eval_rmse: 18.46643|  0:00:04s
+epoch 21 | loss: 2.12127 | eval_rmse: 17.81792|  0:00:04s
+epoch 22 | loss: 1.70934 | eval_rmse: 13.41051|  0:00:05s
+epoch 23 | loss: 2.65883 | eval_rmse: 16.25564|  0:00:05s
+epoch 24 | loss: 2.36693 | eval_rmse: 16.19102|  0:00:05s
+epoch 25 | loss: 1.39347 | eval_rmse: 7.70734 |  0:00:05s
+epoch 26 | loss: 1.36618 | eval_rmse: 7.57244 |  0:00:05s
+epoch 27 | loss: 1.82453 | eval_rmse: 8.23845 |  0:00:06s
+epoch 28 | loss: 2.19498 | eval_rmse: 8.79624 |  0:00:06s
+epoch 29 | loss: 1.55977 | eval_rmse: 12.51365|  0:00:06s
+epoch 30 | loss: 1.25956 | eval_rmse: 9.74858 |  0:00:06s
+epoch 31 | loss: 2.08022 | eval_rmse: 10.08688|  0:00:06s
+epoch 32 | loss: 1.05872 | eval_rmse: 10.19564|  0:00:07s
+epoch 33 | loss: 1.01189 | eval_rmse: 7.87423 |  0:00:07s
+epoch 34 | loss: 0.86421 | eval_rmse: 7.98585 |  0:00:07s
+epoch 35 | loss: 0.82041 | eval_rmse: 7.80403 |  0:00:07s
+epoch 36 | loss: 1.00122 | eval_rmse: 6.96407 |  0:00:07s
+epoch 37 | loss: 0.89286 | eval_rmse: 8.99666 |  0:00:08s
+epoch 38 | loss: 0.87583 | eval_rmse: 6.8442  |  0:00:08s
+epoch 39 | loss: 0.97532 | eval_rmse: 6.49622 |  0:00:08s
+epoch 40 | loss: 0.9134  | eval_rmse: 4.86479 |  0:00:08s
+epoch 41 | loss: 0.9877  | eval_rmse: 5.22189 |  0:00:09s
+epoch 42 | loss: 0.97328 | eval_rmse: 4.91764 |  0:00:09s
+epoch 43 | loss: 0.76521 | eval_rmse: 5.60264 |  0:00:09s
+epoch 44 | loss: 0.76054 | eval_rmse: 4.37644 |  0:00:09s
+epoch 45 | loss: 0.95738 | eval_rmse: 5.39076 |  0:00:09s
+epoch 46 | loss: 0.56661 | eval_rmse: 4.48592 |  0:00:10s
+epoch 47 | loss: 0.71786 | eval_rmse: 4.65695 |  0:00:10s
+epoch 48 | loss: 0.80249 | eval_rmse: 3.42329 |  0:00:10s
+epoch 49 | loss: 1.18146 | eval_rmse: 3.20933 |  0:00:10s
+epoch 50 | loss: 0.81871 | eval_rmse: 4.88396 |  0:00:10s
+epoch 51 | loss: 0.51629 | eval_rmse: 3.86271 |  0:00:11s
+epoch 52 | loss: 0.58616 | eval_rmse: 4.5609  |  0:00:11s
+epoch 53 | loss: 0.61303 | eval_rmse: 5.0514  |  0:00:11s
+epoch 54 | loss: 0.7101  | eval_rmse: 4.08084 |  0:00:11s
+epoch 55 | loss: 0.5499  | eval_rmse: 4.90515 |  0:00:11s
+epoch 56 | loss: 0.48907 | eval_rmse: 4.96215 |  0:00:12s
+epoch 57 | loss: 0.58676 | eval_rmse: 4.93423 |  0:00:12s
+epoch 58 | loss: 0.53781 | eval_rmse: 6.35711 |  0:00:12s
+epoch 59 | loss: 0.68794 | eval_rmse: 5.54347 |  0:00:12s
+epoch 60 | loss: 0.55417 | eval_rmse: 4.01477 |  0:00:13s
+epoch 61 | loss: 0.67824 | eval_rmse: 3.93515 |  0:00:13s
+epoch 62 | loss: 0.67215 | eval_rmse: 4.28818 |  0:00:13s
+epoch 63 | loss: 0.57745 | eval_rmse: 4.66998 |  0:00:13s
+epoch 64 | loss: 0.60223 | eval_rmse: 4.40642 |  0:00:13s
+epoch 65 | loss: 0.54766 | eval_rmse: 4.16214 |  0:00:14s
+epoch 66 | loss: 0.52152 | eval_rmse: 4.35515 |  0:00:14s
+epoch 67 | loss: 0.53329 | eval_rmse: 4.70091 |  0:00:14s
+epoch 68 | loss: 0.73428 | eval_rmse: 5.3748  |  0:00:14s
+epoch 69 | loss: 0.66421 | eval_rmse: 4.58095 |  0:00:14s
+
+Early stopping occurred at epoch 69 with best_epoch = 49 and best_eval_rmse = 3.20933
+Trial 1 failed with parameters: {'n_d': 41, 'n_steps': 10, 'gamma': 1.0532318556977627, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 5, 'momentum': 0.00205428544240403, 'mask_type': 'entmax'} because of the following error: AttributeError("module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 52, in cross_validation
+    curr_model.predict(X_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel_torch.py", line 129, in predict
+    self.predictions = self.predict_helper(X)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 48, in predict_helper
+    X = np.array(X, dtype=np.float)
+  File "/home/mburu/.local/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Trial 1 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/moneyball.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/moneyball.yml', data_parallel=False, dataset='Moneyball', direction='minimize', dropna_idx=[9, 10, 12, 13], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 1, 8], num_classes=1, num_features=14, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Moneyball...
+Dataset loaded! 
+
+X b4 encoding : ['ARI' 'NL' 2012 688 81 0.3279999999999999 0.418 0.259 0 162] 
+
+(1232, 10)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 1, 8]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 1, 8]
+Cat Idx Part II: [0, 1, 8] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['ARI' 'NL' 2012 688 81 0.3279999999999999 0.418 0.259 0 162] 
+ 
+
+Scaling the data...
+X after Scaling: ['ARI' 'NL' 1.5554755871677342 -0.2910721732671802 0.008362450087033452
+ 0.11120590052485849 0.6212382045299186 -0.0211383889172301 0
+ 0.13005495722996097] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 1.0 1.0 0.0 1.5554755871677342 -0.2910721732671802
+ 0.008362450087033452 0.11120590052485849 0.6212382045299186
+ -0.0211383889172301 0.13005495722996097] 
+ 
+
+args.num_features: 50
+args.cat_idx: None
+Cat Dims: []
+New Shape: (1232, 50)
+False 
+ 
+
+Using an existing study with name 'TabNet_Moneyball' instead of creating a new one.
+In get_device
+In get_device
+epoch 0  | loss: 510150.8125| eval_rmse: 699.4403|  0:00:01s
+epoch 1  | loss: 488696.22768| eval_rmse: 669.81634|  0:00:01s
+epoch 2  | loss: 467209.03125| eval_rmse: 628.68959|  0:00:01s
+epoch 3  | loss: 434283.09375| eval_rmse: 586.88251|  0:00:02s
+epoch 4  | loss: 385642.25446| eval_rmse: 498.52647|  0:00:02s
+epoch 5  | loss: 307846.84375| eval_rmse: 295.33631|  0:00:02s
+epoch 6  | loss: 224678.37277| eval_rmse: 199.02651|  0:00:03s
+epoch 7  | loss: 118589.11607| eval_rmse: 371.71964|  0:00:03s
+epoch 8  | loss: 30235.21373| eval_rmse: 767.62853|  0:00:03s
+epoch 9  | loss: 5125.22761| eval_rmse: 903.93326|  0:00:04s
+epoch 10 | loss: 3436.78188| eval_rmse: 490.51632|  0:00:04s
+epoch 11 | loss: 3140.61516| eval_rmse: 417.06643|  0:00:04s
+epoch 12 | loss: 2523.12688| eval_rmse: 247.73152|  0:00:05s
+epoch 13 | loss: 2895.67222| eval_rmse: 193.94306|  0:00:05s
+epoch 14 | loss: 2234.63909| eval_rmse: 174.47498|  0:00:05s
+epoch 15 | loss: 2581.80409| eval_rmse: 179.13015|  0:00:06s
+epoch 16 | loss: 2509.33271| eval_rmse: 156.37963|  0:00:06s
+epoch 17 | loss: 1882.31426| eval_rmse: 129.13312|  0:00:06s
+epoch 18 | loss: 1699.67674| eval_rmse: 129.46667|  0:00:07s
+epoch 19 | loss: 1972.57403| eval_rmse: 136.85459|  0:00:07s
+epoch 20 | loss: 1964.86958| eval_rmse: 147.04659|  0:00:07s
+epoch 21 | loss: 1814.052| eval_rmse: 200.89183|  0:00:08s
+epoch 22 | loss: 1955.90824| eval_rmse: 187.57538|  0:00:08s
+epoch 23 | loss: 1822.59138| eval_rmse: 222.62453|  0:00:08s
+epoch 24 | loss: 1362.30532| eval_rmse: 270.44242|  0:00:09s
+epoch 25 | loss: 1383.56013| eval_rmse: 283.33678|  0:00:09s
+epoch 26 | loss: 1439.7915| eval_rmse: 315.5785|  0:00:09s
+epoch 27 | loss: 1453.82132| eval_rmse: 313.0691|  0:00:10s
+epoch 28 | loss: 1215.17984| eval_rmse: 332.91492|  0:00:10s
+epoch 29 | loss: 1128.3004| eval_rmse: 305.55614|  0:00:10s
+epoch 30 | loss: 1166.63938| eval_rmse: 294.68197|  0:00:11s
+epoch 31 | loss: 1193.36438| eval_rmse: 303.43163|  0:00:11s
+epoch 32 | loss: 1351.96448| eval_rmse: 279.79786|  0:00:11s
+epoch 33 | loss: 913.26692| eval_rmse: 302.96735|  0:00:12s
+epoch 34 | loss: 898.25863| eval_rmse: 257.40687|  0:00:12s
+epoch 35 | loss: 1361.83443| eval_rmse: 233.2279|  0:00:12s
+epoch 36 | loss: 1514.60004| eval_rmse: 260.26173|  0:00:12s
+epoch 37 | loss: 1336.87774| eval_rmse: 230.85559|  0:00:13s
+
+Early stopping occurred at epoch 37 with best_epoch = 17 and best_eval_rmse = 129.13312
+Trial 1 failed with parameters: {'n_d': 31, 'n_steps': 9, 'gamma': 1.1489403060357306, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.0013611852383036433, 'mask_type': 'sparsemax'} because of the following error: AttributeError("module 'numpy' has no attribute 'float'.\n`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\nThe aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:\n    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 52, in cross_validation
+    curr_model.predict(X_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel_torch.py", line 129, in predict
+    self.predictions = self.predict_helper(X)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 48, in predict_helper
+    X = np.array(X, dtype=np.float)
+  File "/home/mburu/.local/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Trial 1 failed with value None.
+
+
+----------------------------------------------------------------------------
+Training TabNet Vesion 1 with Dataset: config/black_friday.yml 
+
+
+
+----------------------------------------------------------------------------
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/black_friday.yml', data_parallel=False, dataset='Black_Friday', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabNet', n_trials=30, nominal_idx=[0, 2, 3, 5, 6, 7, 8], num_classes=1, num_features=9, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset Black_Friday...
+Dataset loaded! 
+
+X b4 encoding : ['F' '0-17' 10 'A' 2 0 1 6 14] 
+
+(166821, 9)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [0, 2, 3, 5, 6, 7, 8]
+Ordinal Idx: [1]
+Cat Dims: None 
+ 
+
+Normonal Idx: [0, 2, 3, 5, 6, 7, 8]
+Cat Idx Part II: [0, 1, 2, 3, 5, 6, 7, 8] 
+ENDE 
+ 
+
+X after Nominal Encoding: ['F' '0-17' 10 'A' 2 0 1 6 14] 
+ 
+
+Scaling the data...
+X after Scaling: ['F' '0-17' 10 'A' 0.1076520112629123 0 1 6 14] 
+ 
+
+Ordinal Idx: [0]
+One Hot Encoding...
+X after One Hot Encoding: ['0-17' 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0
+ 0.1076520112629123] 
+ 
+
+args.num_features: 71
+args.cat_idx: [0]
+Cat Dims: [8]
+New Shape: (166821, 71)
+True 
+ 
+
+Using an existing study with name 'TabNet_Black_Friday' instead of creating a new one.
+In get_device
+In get_device
+epoch 0  | loss: 29193023.27063| eval_rmse: 13036.06605|  0:01:10s
+epoch 1  | loss: 13690070.20345| eval_rmse: 5991.60489|  0:02:18s
+epoch 2  | loss: 12863717.50144| eval_rmse: 6377.64279|  0:03:24s
+epoch 3  | loss: 12803263.73321| eval_rmse: 6854.63576|  0:04:28s
+epoch 4  | loss: 12760643.67994| eval_rmse: 6224.84004|  0:05:32s
+epoch 5  | loss: 12691121.53503| eval_rmse: 6300.76943|  0:06:36s
+epoch 6  | loss: 12579633.35269| eval_rmse: 4755.8398|  0:07:41s
+epoch 7  | loss: 12561829.99664| eval_rmse: 6245.19308|  0:08:45s
+epoch 8  | loss: 12503061.58061| eval_rmse: 6103.1483|  0:09:49s
+epoch 9  | loss: 12472474.56046| eval_rmse: 6560.5461|  0:10:54s
+epoch 10 | loss: 12404604.25144| eval_rmse: 6525.76904|  0:11:59s
+epoch 11 | loss: 12336772.09933| eval_rmse: 3944.05725|  0:13:04s
+epoch 12 | loss: 12335841.72793| eval_rmse: 3613.47631|  0:14:13s
+epoch 13 | loss: 12251838.21785| eval_rmse: 4784.79758|  0:15:22s
+epoch 14 | loss: 12204442.37524| eval_rmse: 5591.91611|  0:16:32s
+epoch 15 | loss: 12168682.23608| eval_rmse: 5369.33428|  0:17:42s
+epoch 16 | loss: 12136107.97985| eval_rmse: 3617.68523|  0:18:51s
+epoch 17 | loss: 12083871.77591| eval_rmse: 5111.91873|  0:20:00s
+Trial 1 failed with parameters: {'n_d': 59, 'n_steps': 8, 'gamma': 1.3393986470044887, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.0011382616022391242, 'mask_type': 'sparsemax'} because of the following error: RuntimeError('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 40, in fit
+    self.model.fit(X, y, eval_set=[(X_val, y_val)], eval_name=["eval"], eval_metric=self.metric,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 258, in fit
+    self._train_epoch(train_dataloader)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 489, in _train_epoch
+    batch_logs = self._train_batch(X, y)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 527, in _train_batch
+    output, M_loss = self.network(X)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 616, in forward
+    return self.tabnet(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 492, in forward
+    steps_output, M_loss = self.encoder(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 181, in forward
+    out = self.feat_transformers[step](masked_x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 737, in forward
+    x = self.shared(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 772, in forward
+    scale = torch.sqrt(torch.FloatTensor([0.5]).to(x.device))
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Trial 1 failed with value None.

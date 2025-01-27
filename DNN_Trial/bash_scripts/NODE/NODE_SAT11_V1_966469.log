@@ -1,0 +1,1065 @@
+ Panda Version: 2.0.3
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/sat11.yml', data_parallel=False, dataset='SAT11', direction='minimize', dropna_idx=[116], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='NODE', n_trials=80, nominal_idx=[115], num_classes=1, num_features=117, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+ Panda Version: 2.0.3
+Loading dataset SAT11...
+Dataset loaded! 
+
+X b4 encoding : [99.0 264.0 72.0 264.0 0.375 0.0 0.2727 0.3939 0.8418 0.0 1 1.289 0.053
+ 0.101 0.0417 0.0556 0.4741 0 0.0 0.1818 0.053 0.1429 0.0455 0.0606 0.6931
+ 0.0 0.0 0.0 0.0 0.0 0.0186 0.3979 0.0076 0.0303 1.5208 0.3636 0.0208
+ 0.0909 0.0189 0.0227 0.0733 0.1356 0.0568 0.0871 1.3537 0.4456 0.0706 0.4
+ 0.5333 1.4407 5.7887 0.0705 5.0 6.0 0.5156 3147.3 0.1135 2706.0 3848.0
+ 3848.0 2841.0 3117.0 2891.0 3089.0 18.1338 0.0677 16.976 20.5128 20.5128
+ 17.052 18.0992 17.4347 17.8774 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.3361
+ 0.0783 0.2945 0.3732 0.3661 0.3046 0.3623 0.3112 0.3409 2.2246 0.6409
+ 8.1282 0.2196 8.0 6.0 10.0 1.3984 0.2637 0.8229 0.1537 1.0228 0.2076
+ 8.0888 0.2218 8.0 6.0 10.0 1.0672 0.3603 0.761 0.1447 0.9922 0.9986
+ 'MPhaseSAT_2011.02.15'] 
+
+(1725, 116)
+Data Type of X: <class 'numpy.ndarray'>
+Nominal Idx: [115]
+Ordinal Idx: None
+Cat Dims: None 
+ 
+
+Normonal Idx: [115]
+Cat Idx Part II: [115] 
+ENDE 
+ 
+
+X after Nominal Encoding: [99.0 264.0 72.0 264.0 0.375 0.0 0.2727 0.3939 0.8418 0.0 1 1.289 0.053
+ 0.101 0.0417 0.0556 0.4741 0 0.0 0.1818 0.053 0.1429 0.0455 0.0606 0.6931
+ 0.0 0.0 0.0 0.0 0.0 0.0186 0.3979 0.0076 0.0303 1.5208 0.3636 0.0208
+ 0.0909 0.0189 0.0227 0.0733 0.1356 0.0568 0.0871 1.3537 0.4456 0.0706 0.4
+ 0.5333 1.4407 5.7887 0.0705 5.0 6.0 0.5156 3147.3 0.1135 2706.0 3848.0
+ 3848.0 2841.0 3117.0 2891.0 3089.0 18.1338 0.0677 16.976 20.5128 20.5128
+ 17.052 18.0992 17.4347 17.8774 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.3361
+ 0.0783 0.2945 0.3732 0.3661 0.3046 0.3623 0.3112 0.3409 2.2246 0.6409
+ 8.1282 0.2196 8.0 6.0 10.0 1.3984 0.2637 0.8229 0.1537 1.0228 0.2076
+ 8.0888 0.2218 8.0 6.0 10.0 1.0672 0.3603 0.761 0.1447 0.9922 0.9986
+ 'MPhaseSAT_2011.02.15'] 
+ 
+
+Scaling the data...
+X after Scaling: [-0.23807820605682933 -0.3511017987252142 -0.26571936609258545
+ -0.3186781295310236 -0.05756106940886317 -0.11989912988618424
+ 0.4628191047228566 -0.8371077128699879 0.7558558924783767
+ -0.7963441306242555 0.0 0.8584301841435843 1.299825369521165
+ -0.7945825302352355 1.758481630931825 0.15326899896844898
+ -0.05028492417294217 0.0 -0.9136680874356776 -1.066578788860202
+ 1.299825369521165 -0.32038584110942664 1.2692517711383928
+ 0.9516917613782564 -0.2823162725168412 -0.7302212434914669
+ -0.6853563316919766 -0.5910036643953149 -1.0435935604791582
+ -0.6843452097450864 1.3715284767074152 -0.01402921215863019
+ 0.37129305083701447 1.7894611213585212 0.04320638388919711
+ -0.8221564642663389 -0.4042155767806336 -0.3980541515811726
+ -0.39252541607824637 -0.465067895836952 0.7424384483819148
+ -0.8431795039691565 1.276936856399501 -0.11187642620694017
+ -0.18079539244132495 1.4905056427921408 -0.923844131750058
+ 2.630335162405063 0.6140265465896517 0.18132537855705355
+ -0.1470062410704897 0.37877742514941165 -0.14207977847546374
+ -0.15792187508091032 0.0538958206910646 0.036168416061610566
+ -0.10320943362294686 -0.009810215781633136 0.21176793447148634
+ 0.2596094289341425 0.04869164643675625 -0.0710752539025202
+ -0.03590000295016209 -0.02297439909669294 -0.49762998474719494
+ -0.2798838254779024 -0.4215511520532774 -0.49901236161149265
+ -0.45036964086035425 -0.42868000295449976 -0.45990287061063795
+ -0.49173993612603073 -0.43453937720669944 -1.2916058581560592
+ -0.60606623194164 -0.8810303362316863 -1.9869161617175068
+ -1.4717969746717716 -1.0915564402261229 -1.2970100324763878
+ -1.158185384724279 -1.2237473624027744 1.1798941567480121
+ -0.34366721700025066 1.2827210652567984 0.5475374122678
+ 0.9317420791874134 1.1581948349548083 1.012031996646076
+ 1.1061584077511801 1.135333238414741 -0.2688716405559879
+ -0.19981890991763965 -0.3225318963895109 2.0570135302865147
+ -0.32273510828417473 -0.316312515237565 -0.3309347116276333
+ -0.4114398967492605 0.5336138217488675 -1.1621316540408118
+ 1.9676217929478597 -0.28556361565857596 -0.1858899168271591
+ -0.3227597361321129 2.048787089102613 -0.3228542673538684
+ -0.31623136374639765 -0.32959099778581386 -0.3622092704378394
+ 0.09620359515201012 -1.6641306136320433 2.587565392678132
+ 1.2755741999006365 0.989017853453499 'MPhaseSAT_2011.02.15'] 
+ 
+
+One Hot Encoding...
+X after One Hot Encoding: [0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ -0.23807820605682933 -0.3511017987252142 -0.26571936609258545
+ -0.3186781295310236 -0.05756106940886317 -0.11989912988618424
+ 0.4628191047228566 -0.8371077128699879 0.7558558924783767
+ -0.7963441306242555 0.0 0.8584301841435843 1.299825369521165
+ -0.7945825302352355 1.758481630931825 0.15326899896844898
+ -0.05028492417294217 0.0 -0.9136680874356776 -1.066578788860202
+ 1.299825369521165 -0.32038584110942664 1.2692517711383928
+ 0.9516917613782564 -0.2823162725168412 -0.7302212434914669
+ -0.6853563316919766 -0.5910036643953149 -1.0435935604791582
+ -0.6843452097450864 1.3715284767074152 -0.01402921215863019
+ 0.37129305083701447 1.7894611213585212 0.04320638388919711
+ -0.8221564642663389 -0.4042155767806336 -0.3980541515811726
+ -0.39252541607824637 -0.465067895836952 0.7424384483819148
+ -0.8431795039691565 1.276936856399501 -0.11187642620694017
+ -0.18079539244132495 1.4905056427921408 -0.923844131750058
+ 2.630335162405063 0.6140265465896517 0.18132537855705355
+ -0.1470062410704897 0.37877742514941165 -0.14207977847546374
+ -0.15792187508091032 0.0538958206910646 0.036168416061610566
+ -0.10320943362294686 -0.009810215781633136 0.21176793447148634
+ 0.2596094289341425 0.04869164643675625 -0.0710752539025202
+ -0.03590000295016209 -0.02297439909669294 -0.49762998474719494
+ -0.2798838254779024 -0.4215511520532774 -0.49901236161149265
+ -0.45036964086035425 -0.42868000295449976 -0.45990287061063795
+ -0.49173993612603073 -0.43453937720669944 -1.2916058581560592
+ -0.60606623194164 -0.8810303362316863 -1.9869161617175068
+ -1.4717969746717716 -1.0915564402261229 -1.2970100324763878
+ -1.158185384724279 -1.2237473624027744 1.1798941567480121
+ -0.34366721700025066 1.2827210652567984 0.5475374122678
+ 0.9317420791874134 1.1581948349548083 1.012031996646076
+ 1.1061584077511801 1.135333238414741 -0.2688716405559879
+ -0.19981890991763965 -0.3225318963895109 2.0570135302865147
+ -0.32273510828417473 -0.316312515237565 -0.3309347116276333
+ -0.4114398967492605 0.5336138217488675 -1.1621316540408118
+ 1.9676217929478597 -0.28556361565857596 -0.1858899168271591
+ -0.3227597361321129 2.048787089102613 -0.3228542673538684
+ -0.31623136374639765 -0.32959099778581386 -0.3622092704378394
+ 0.09620359515201012 -1.6641306136320433 2.587565392678132
+ 1.2755741999006365 0.989017853453499] 
+ 
+
+args.num_features: 130
+args.cat_idx: None
+Cat Dims: []
+New Shape: (1725, 130)
+False 
+ 
+
+A new study created in RDB with name: NODE_SAT11
+In get_device
+On: cuda
+On Device: cuda
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 14140176.00000
+Val MSE: 12608169.00000
+Val Loss: 12608169.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 12841320.00000
+Val MSE: 12607452.00000
+Val Loss: 12607452.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 12995809.00000
+Val MSE: 12606977.00000
+Val Loss: 12606977.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 13851804.00000
+Val MSE: 12606569.00000
+Val Loss: 12606569.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 12161266.00000
+Val MSE: 12606182.00000
+Val Loss: 12606182.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 12810479.00000
+Val MSE: 12605376.00000
+Val Loss: 12605376.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 12396831.00000
+Val MSE: 12604582.00000
+Val Loss: 12604582.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 13472797.00000
+Val MSE: 12603793.00000
+Val Loss: 12603793.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 10882278.00000
+Val MSE: 12603036.00000
+Val Loss: 12603036.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 12371770.00000
+Val MSE: 12602329.00000
+Val Loss: 12602329.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_avg.pth
+Loss 14991332.00000
+Val MSE: 12601670.00000
+Val Loss: 12601670.00000
+Saved logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_03:26:24/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_0.pt
+Saved output/NODE/SAT11/models/m_0.pt
+Saved Losses
+{'MSE - mean': 12601670.995840477, 'MSE - std': 0.0, 'R2 - mean': -1.1805408090743463, 'R2 - std': 0.0} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 14391085.00000
+Val MSE: 12450472.00000
+Val Loss: 12450472.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 14012012.00000
+Val MSE: 12449756.00000
+Val Loss: 12449756.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 11890144.00000
+Val MSE: 12449253.00000
+Val Loss: 12449253.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 13787775.00000
+Val MSE: 12448839.00000
+Val Loss: 12448839.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 13669108.00000
+Val MSE: 12448452.00000
+Val Loss: 12448452.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 12224194.00000
+Val MSE: 12447639.00000
+Val Loss: 12447639.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 12174766.00000
+Val MSE: 12446849.00000
+Val Loss: 12446849.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 13898800.00000
+Val MSE: 12446060.00000
+Val Loss: 12446060.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 10685704.00000
+Val MSE: 12445303.00000
+Val Loss: 12445303.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 13869700.00000
+Val MSE: 12444596.00000
+Val Loss: 12444596.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_avg.pth
+Loss 11672489.00000
+Val MSE: 12443939.00000
+Val Loss: 12443939.00000
+Saved logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_03:43:30/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_1.pt
+Saved output/NODE/SAT11/models/m_1.pt
+Saved Losses
+{'MSE - mean': 12522804.518145258, 'MSE - std': 78866.47769521922, 'R2 - mean': -1.1870224826680096, 'R2 - std': 0.006481673593663251} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 13763492.00000
+Val MSE: 13184196.00000
+Val Loss: 13184196.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 14364195.00000
+Val MSE: 13183445.00000
+Val Loss: 13183445.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 11532878.00000
+Val MSE: 13182918.00000
+Val Loss: 13182918.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 14093760.00000
+Val MSE: 13182480.00000
+Val Loss: 13182480.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 12211004.00000
+Val MSE: 13182071.00000
+Val Loss: 13182071.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 13480539.00000
+Val MSE: 13181231.00000
+Val Loss: 13181231.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 13751312.00000
+Val MSE: 13180398.00000
+Val Loss: 13180398.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 12787464.00000
+Val MSE: 13179558.00000
+Val Loss: 13179558.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 11850833.00000
+Val MSE: 13178752.00000
+Val Loss: 13178752.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 11873389.00000
+Val MSE: 13178001.00000
+Val Loss: 13178001.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_avg.pth
+Loss 13174026.00000
+Val MSE: 13177307.00000
+Val Loss: 13177307.00000
+Saved logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_03:59:36/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_2.pt
+Saved output/NODE/SAT11/models/m_2.pt
+Saved Losses
+{'MSE - mean': 12740972.222864242, 'MSE - std': 315183.9287898442, 'R2 - mean': -1.228957191899471, 'R2 - std': 0.05954030347899611} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 14228523.00000
+Val MSE: 12240295.00000
+Val Loss: 12240295.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 12764360.00000
+Val MSE: 12239594.00000
+Val Loss: 12239594.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 12027295.00000
+Val MSE: 12239096.00000
+Val Loss: 12239096.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 13443753.00000
+Val MSE: 12238683.00000
+Val Loss: 12238683.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 11765669.00000
+Val MSE: 12238300.00000
+Val Loss: 12238300.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 12849944.00000
+Val MSE: 12237515.00000
+Val Loss: 12237515.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 12387644.00000
+Val MSE: 12236731.00000
+Val Loss: 12236731.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 13232386.00000
+Val MSE: 12235945.00000
+Val Loss: 12235945.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 12937261.00000
+Val MSE: 12235192.00000
+Val Loss: 12235192.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 13004854.00000
+Val MSE: 12234494.00000
+Val Loss: 12234494.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_avg.pth
+Loss 12194562.00000
+Val MSE: 12233847.00000
+Val Loss: 12233847.00000
+Saved logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:15:46/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_3.pt
+Saved output/NODE/SAT11/models/m_3.pt
+Saved Losses
+{'MSE - mean': 12614190.853211816, 'MSE - std': 350323.0349240364, 'R2 - mean': -1.2075994754540953, 'R2 - std': 0.06346055435513816} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 13173135.00000
+Val MSE: 12864156.00000
+Val Loss: 12864156.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 14741469.00000
+Val MSE: 12863411.00000
+Val Loss: 12863411.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 11630638.00000
+Val MSE: 12862897.00000
+Val Loss: 12862897.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 13362646.00000
+Val MSE: 12862476.00000
+Val Loss: 12862476.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 13162866.00000
+Val MSE: 12862078.00000
+Val Loss: 12862078.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 13414408.00000
+Val MSE: 12861260.00000
+Val Loss: 12861260.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 13279998.00000
+Val MSE: 12860455.00000
+Val Loss: 12860455.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 12367316.00000
+Val MSE: 12859647.00000
+Val Loss: 12859647.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 12773506.00000
+Val MSE: 12858870.00000
+Val Loss: 12858870.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 12505322.00000
+Val MSE: 12858142.00000
+Val Loss: 12858142.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_avg.pth
+Loss 12786571.00000
+Val MSE: 12857466.00000
+Val Loss: 12857466.00000
+Saved logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:33:51/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_4.pt
+Saved output/NODE/SAT11/models/m_4.pt
+Saved Losses
+{'MSE - mean': 12662845.95033407, 'MSE - std': 328100.98589095095, 'R2 - mean': -1.212896383560047, 'R2 - std': 0.05774099504841209} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 12662845.95033407, 'MSE - std': 328100.98589095095, 'R2 - mean': -1.212896383560047, 'R2 - std': 0.05774099504841209}
+Train time: 351.4310073354
+Inference time: 0.25298055479995585
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 0 finished with value: 12662845.95033407 and parameters: {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}. Best is trial 0 with value: 12662845.95033407.
+In get_device
+On: cuda
+On Device: cuda
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 14406156.00000
+Val MSE: 12610213.00000
+Val Loss: 12610213.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 11170349.00000
+Val MSE: 12609152.00000
+Val Loss: 12609152.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 11689684.00000
+Val MSE: 12608473.00000
+Val Loss: 12608473.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 12410161.00000
+Val MSE: 12607935.00000
+Val Loss: 12607935.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 12804737.00000
+Val MSE: 12607443.00000
+Val Loss: 12607443.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 12022093.00000
+Val MSE: 12606390.00000
+Val Loss: 12606390.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 12873650.00000
+Val MSE: 12605384.00000
+Val Loss: 12605384.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 11184106.00000
+Val MSE: 12604410.00000
+Val Loss: 12604410.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 13437327.00000
+Val MSE: 12603505.00000
+Val Loss: 12603505.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 13302978.00000
+Val MSE: 12602680.00000
+Val Loss: 12602680.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_avg.pth
+Loss 13447943.00000
+Val MSE: 12601938.00000
+Val Loss: 12601938.00000
+Saved logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:50:10/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_0.pt
+Saved output/NODE/SAT11/models/m_0.pt
+Saved Losses
+{'MSE - mean': 12601936.89643957, 'MSE - std': 0.0, 'R2 - mean': -1.180586819409616, 'R2 - std': 0.0} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 13584796.00000
+Val MSE: 12452321.00000
+Val Loss: 12452321.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 12092100.00000
+Val MSE: 12451267.00000
+Val Loss: 12451267.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 12698528.00000
+Val MSE: 12450589.00000
+Val Loss: 12450589.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 13594254.00000
+Val MSE: 12450050.00000
+Val Loss: 12450050.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 12290675.00000
+Val MSE: 12449559.00000
+Val Loss: 12449559.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 11882317.00000
+Val MSE: 12448525.00000
+Val Loss: 12448525.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 13536494.00000
+Val MSE: 12447538.00000
+Val Loss: 12447538.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 13832902.00000
+Val MSE: 12446569.00000
+Val Loss: 12446569.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 13622106.00000
+Val MSE: 12445659.00000
+Val Loss: 12445659.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 13408218.00000
+Val MSE: 12444826.00000
+Val Loss: 12444826.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_avg.pth
+Loss 14363106.00000
+Val MSE: 12444071.00000
+Val Loss: 12444071.00000
+Saved logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:52:19/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_1.pt
+Saved output/NODE/SAT11/models/m_1.pt
+Saved Losses
+{'MSE - mean': 12523004.187849544, 'MSE - std': 78932.70859002415, 'R2 - mean': -1.187057248525157, 'R2 - std': 0.006470429115540854} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 12229544.00000
+Val MSE: 13186146.00000
+Val Loss: 13186146.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 12193494.00000
+Val MSE: 13185021.00000
+Val Loss: 13185021.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 14050494.00000
+Val MSE: 13184304.00000
+Val Loss: 13184304.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 11396806.00000
+Val MSE: 13183739.00000
+Val Loss: 13183739.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 12427874.00000
+Val MSE: 13183222.00000
+Val Loss: 13183222.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 11872967.00000
+Val MSE: 13182140.00000
+Val Loss: 13182140.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 14132410.00000
+Val MSE: 13181094.00000
+Val Loss: 13181094.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 12397337.00000
+Val MSE: 13180061.00000
+Val Loss: 13180061.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 13937828.00000
+Val MSE: 13179088.00000
+Val Loss: 13179088.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 11508936.00000
+Val MSE: 13178203.00000
+Val Loss: 13178203.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_avg.pth
+Loss 12899501.00000
+Val MSE: 13177405.00000
+Val Loss: 13177405.00000
+Saved logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:54:20/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_2.pt
+Saved output/NODE/SAT11/models/m_2.pt
+Saved Losses
+{'MSE - mean': 12741137.954842217, 'MSE - std': 315148.000567562, 'R2 - mean': -1.2289860942619557, 'R2 - std': 0.05953122859698668} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 12328972.00000
+Val MSE: 12242085.00000
+Val Loss: 12242085.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 14062414.00000
+Val MSE: 12241038.00000
+Val Loss: 12241038.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 12902840.00000
+Val MSE: 12240368.00000
+Val Loss: 12240368.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 12261472.00000
+Val MSE: 12239839.00000
+Val Loss: 12239839.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 12535331.00000
+Val MSE: 12239356.00000
+Val Loss: 12239356.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 12763654.00000
+Val MSE: 12238346.00000
+Val Loss: 12238346.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 13688755.00000
+Val MSE: 12237368.00000
+Val Loss: 12237368.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 12466924.00000
+Val MSE: 12236401.00000
+Val Loss: 12236401.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 13253296.00000
+Val MSE: 12235494.00000
+Val Loss: 12235494.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 12800994.00000
+Val MSE: 12234675.00000
+Val Loss: 12234675.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_avg.pth
+Loss 14801468.00000
+Val MSE: 12233936.00000
+Val Loss: 12233936.00000
+Saved logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:56:34/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_3.pt
+Saved output/NODE/SAT11/models/m_3.pt
+Saved Losses
+{'MSE - mean': 12614337.494854022, 'MSE - std': 350319.52080344054, 'R2 - mean': -1.2076250669453579, 'R2 - std': 0.0634575121460126} 
+ 
+
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 13095469.00000
+Val MSE: 12866048.00000
+Val Loss: 12866048.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 11081682.00000
+Val MSE: 12864954.00000
+Val Loss: 12864954.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 12281016.00000
+Val MSE: 12864255.00000
+Val Loss: 12864255.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 11171386.00000
+Val MSE: 12863702.00000
+Val Loss: 12863702.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 11539154.00000
+Val MSE: 12863203.00000
+Val Loss: 12863203.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 12347621.00000
+Val MSE: 12862155.00000
+Val Loss: 12862155.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 14238443.00000
+Val MSE: 12861148.00000
+Val Loss: 12861148.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 12573136.00000
+Val MSE: 12860153.00000
+Val Loss: 12860153.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 12231401.00000
+Val MSE: 12859217.00000
+Val Loss: 12859217.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 11270462.00000
+Val MSE: 12858365.00000
+Val Loss: 12858365.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_avg.pth
+Loss 13635794.00000
+Val MSE: 12857593.00000
+Val Loss: 12857593.00000
+Saved logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.01.23_04:58:42/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_4.pt
+Saved output/NODE/SAT11/models/m_4.pt
+Saved Losses
+{'MSE - mean': 12662988.571652068, 'MSE - std': 328095.5995120926, 'R2 - mean': -1.2129212542141312, 'R2 - std': 0.057738055704645415} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 12662988.571652068, 'MSE - std': 328095.5995120926, 'R2 - mean': -1.2129212542141312, 'R2 - std': 0.057738055704645415}
+Train time: 41.338526173799984
+Inference time: 0.11635421679998217
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 1 finished with value: 12662988.571652068 and parameters: {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}. Best is trial 0 with value: 12662845.95033407.
+In get_device
+On: cuda
+On Device: cuda
+In get_device
+On: cuda
+On Device: cuda
+Trial 2 failed with parameters: {'num_layers': 2, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 2} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 7.81 GiB. GPU 0 has a total capacty of 7.79 GiB of which 6.90 GiB is free. Including non-PyTorch memory, this process has 902.00 MiB memory in use. Of the allocated memory 330.44 MiB is allocated by PyTorch, and 437.56 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 64, in fit
+    res = self.model(torch.as_tensor(data.X_train[:1000], device=self.device))
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/arch.py", line 31, in forward
+    h = layer(layer_inp)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 221, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/odst.py", line 98, in forward
+    bin_matches = torch.einsum('btds,dcs->btdc', bins, self.bin_codes_1hot)
+  File "/home/mburu/miniconda3/envs/Test4Node/lib/python3.8/site-packages/torch/functional.py", line 377, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.81 GiB. GPU 0 has a total capacty of 7.79 GiB of which 6.90 GiB is free. Including non-PyTorch memory, this process has 902.00 MiB memory in use. Of the allocated memory 330.44 MiB is allocated by PyTorch, and 437.56 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Trial 2 failed with value None.

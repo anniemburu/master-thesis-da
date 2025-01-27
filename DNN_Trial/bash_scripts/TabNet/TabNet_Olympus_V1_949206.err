@@ -1,0 +1,370 @@
+[I 2025-01-08 18:48:22,769] Using an existing study with name 'TabNet_Boston' instead of creating a new one.
+[I 2025-01-08 18:50:39,633] Trial 2 finished with value: 13644.621211603346 and parameters: {'n_d': 26, 'n_steps': 9, 'gamma': 1.6808380789597384, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.002645851676168012, 'mask_type': 'entmax'}. Best is trial 2 with value: 13644.621211603346.
+[I 2025-01-08 18:52:07,464] Trial 3 finished with value: 17.262762705281318 and parameters: {'n_d': 56, 'n_steps': 10, 'gamma': 1.4003148115759712, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.07214048447341355, 'mask_type': 'entmax'}. Best is trial 3 with value: 17.262762705281318.
+[I 2025-01-08 18:52:35,371] Trial 4 finished with value: 1540.6772991257003 and parameters: {'n_d': 55, 'n_steps': 8, 'gamma': 1.7779673056985676, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.0012794396756010702, 'mask_type': 'entmax'}. Best is trial 3 with value: 17.262762705281318.
+[I 2025-01-08 18:53:39,012] Trial 5 finished with value: 17.82417264623889 and parameters: {'n_d': 20, 'n_steps': 10, 'gamma': 1.4882923062961337, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 4, 'momentum': 0.07723295100705448, 'mask_type': 'sparsemax'}. Best is trial 3 with value: 17.262762705281318.
+[I 2025-01-08 18:55:09,422] Trial 6 finished with value: 2566.997577507972 and parameters: {'n_d': 62, 'n_steps': 5, 'gamma': 1.5969402280896554, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.0018774405982574446, 'mask_type': 'entmax'}. Best is trial 3 with value: 17.262762705281318.
+[I 2025-01-08 18:55:42,625] Trial 7 finished with value: 11.328193267717513 and parameters: {'n_d': 58, 'n_steps': 4, 'gamma': 1.9328955844602542, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.05266367865618628, 'mask_type': 'entmax'}. Best is trial 7 with value: 11.328193267717513.
+[I 2025-01-08 18:56:06,075] Trial 8 finished with value: 16158.507587205011 and parameters: {'n_d': 34, 'n_steps': 7, 'gamma': 1.5435584421106818, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.0013121946202839672, 'mask_type': 'sparsemax'}. Best is trial 7 with value: 11.328193267717513.
+[I 2025-01-08 18:56:59,424] Trial 9 finished with value: 10.311919737380117 and parameters: {'n_d': 52, 'n_steps': 6, 'gamma': 1.050413339231028, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.07118274530382916, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 18:57:51,361] Trial 10 finished with value: 11.327769078766543 and parameters: {'n_d': 18, 'n_steps': 5, 'gamma': 1.0252599697414735, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.10123579064232369, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 18:58:54,190] Trial 11 finished with value: 13.127049539110924 and parameters: {'n_d': 64, 'n_steps': 9, 'gamma': 1.410031498600164, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.3646871175909174, 'mask_type': 'entmax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 18:59:49,399] Trial 12 finished with value: 17.694284171603805 and parameters: {'n_d': 45, 'n_steps': 3, 'gamma': 1.010438957306016, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.008810280909385484, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:00:42,417] Trial 13 finished with value: 11.068459660000949 and parameters: {'n_d': 8, 'n_steps': 6, 'gamma': 1.0016369730475188, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.2871157446920714, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:01:32,301] Trial 14 finished with value: 13.119902806923875 and parameters: {'n_d': 8, 'n_steps': 6, 'gamma': 1.1931924012631652, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.346911156825506, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:02:50,929] Trial 15 finished with value: 16.859703507219457 and parameters: {'n_d': 44, 'n_steps': 7, 'gamma': 1.2128903374996518, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.019415797006507057, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:03:34,896] Trial 16 finished with value: 13.248945535814661 and parameters: {'n_d': 45, 'n_steps': 6, 'gamma': 1.1821864065328271, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.18714347382736612, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:04:38,792] Trial 17 finished with value: 13.47784642187205 and parameters: {'n_d': 9, 'n_steps': 5, 'gamma': 1.1085029566392302, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.0390080188402051, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:05:08,546] Trial 18 finished with value: 11.22275440641993 and parameters: {'n_d': 34, 'n_steps': 3, 'gamma': 1.280326917915951, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.1917270536350881, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:06:20,418] Trial 19 finished with value: 21.419447786916173 and parameters: {'n_d': 50, 'n_steps': 8, 'gamma': 1.321272584465915, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.02418850376829837, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:07:09,569] Trial 20 finished with value: 12.421326474402031 and parameters: {'n_d': 27, 'n_steps': 6, 'gamma': 1.0701817889164569, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.12682068811903746, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:08:11,048] Trial 21 finished with value: 22.215962280968775 and parameters: {'n_d': 41, 'n_steps': 4, 'gamma': 1.1359332385593657, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.008731876920402911, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:09:05,300] Trial 22 finished with value: 15.004314148308424 and parameters: {'n_d': 15, 'n_steps': 7, 'gamma': 1.2809359616408238, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.20084505878110076, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:09:28,333] Trial 23 finished with value: 17.585428352859605 and parameters: {'n_d': 34, 'n_steps': 3, 'gamma': 1.2655360147947197, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.1960398434415317, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:10:00,315] Trial 24 finished with value: 11.229595135811538 and parameters: {'n_d': 28, 'n_steps': 4, 'gamma': 1.1058346534485364, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.1412326018398311, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:10:26,787] Trial 25 finished with value: 11.93525634665243 and parameters: {'n_d': 51, 'n_steps': 5, 'gamma': 1.0004514036764687, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.39301886247592527, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:10:56,279] Trial 26 finished with value: 11.089386504710614 and parameters: {'n_d': 38, 'n_steps': 3, 'gamma': 1.3783891739638303, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 2, 'momentum': 0.03862605241750386, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:12:00,033] Trial 27 finished with value: 18.312702983476207 and parameters: {'n_d': 37, 'n_steps': 8, 'gamma': 1.3750326436064506, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.031019692016057386, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:13:15,211] Trial 28 finished with value: 24.20158414203366 and parameters: {'n_d': 39, 'n_steps': 6, 'gamma': 1.9918443968157213, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.01910846830238138, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:14:08,126] Trial 29 finished with value: 21.442870963146852 and parameters: {'n_d': 49, 'n_steps': 4, 'gamma': 1.7111882197862784, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.013327157134288016, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:15:21,151] Trial 30 finished with value: 145.35883941092374 and parameters: {'n_d': 30, 'n_steps': 7, 'gamma': 1.1599921898561019, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.004728372229003477, 'mask_type': 'sparsemax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:17:21,557] Trial 31 finished with value: 18.26547947921575 and parameters: {'n_d': 24, 'n_steps': 9, 'gamma': 1.4895161256472869, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.05482749040187737, 'mask_type': 'entmax'}. Best is trial 9 with value: 10.311919737380117.
+[I 2025-01-08 19:18:19,731] Using an existing study with name 'TabNet_Socmob' instead of creating a new one.
+[I 2025-01-08 19:19:21,736] Trial 2 finished with value: 6855.929962343667 and parameters: {'n_d': 64, 'n_steps': 3, 'gamma': 1.5519562457109517, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.001702162235788082, 'mask_type': 'entmax'}. Best is trial 2 with value: 6855.929962343667.
+[I 2025-01-08 19:20:05,454] Trial 3 finished with value: 1395.2840591371603 and parameters: {'n_d': 16, 'n_steps': 7, 'gamma': 1.2449946870625581, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.001158699722161858, 'mask_type': 'entmax'}. Best is trial 3 with value: 1395.2840591371603.
+[I 2025-01-08 19:23:38,402] Trial 4 finished with value: 131.07340519673642 and parameters: {'n_d': 35, 'n_steps': 8, 'gamma': 1.2175298200505318, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.04645868647378726, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:24:13,580] Trial 5 finished with value: 4901.368174995926 and parameters: {'n_d': 61, 'n_steps': 3, 'gamma': 1.3215351332233374, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.0012981433483976168, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:26:12,341] Trial 6 finished with value: 329.88172473006546 and parameters: {'n_d': 64, 'n_steps': 6, 'gamma': 1.5493166190453973, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.0076649774555969195, 'mask_type': 'entmax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:28:12,897] Trial 7 finished with value: 370.24510821347565 and parameters: {'n_d': 59, 'n_steps': 4, 'gamma': 1.2349019221433053, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.006508339342479301, 'mask_type': 'entmax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:30:05,305] Trial 8 finished with value: 247.72537340349436 and parameters: {'n_d': 50, 'n_steps': 7, 'gamma': 1.4303424983215556, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.23834294342350426, 'mask_type': 'entmax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:32:16,050] Trial 9 finished with value: 220.28429062605306 and parameters: {'n_d': 45, 'n_steps': 7, 'gamma': 1.9189944180125285, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.1847256587094684, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:34:09,701] Trial 10 finished with value: 468.78159269191326 and parameters: {'n_d': 48, 'n_steps': 10, 'gamma': 1.434777827138109, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.0067386719117499645, 'mask_type': 'entmax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:35:30,382] Trial 11 finished with value: 10925.844574709337 and parameters: {'n_d': 52, 'n_steps': 9, 'gamma': 1.5148873753424887, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.0028556091957701313, 'mask_type': 'entmax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:37:35,117] Trial 12 finished with value: 300.86340913499333 and parameters: {'n_d': 26, 'n_steps': 9, 'gamma': 1.0200435207020613, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 5, 'momentum': 0.06586624533480068, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:39:54,559] Trial 13 finished with value: 149.79068527358837 and parameters: {'n_d': 37, 'n_steps': 6, 'gamma': 1.8782629299438212, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.06850688103039317, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:41:48,357] Trial 14 finished with value: 218.65531062069908 and parameters: {'n_d': 33, 'n_steps': 5, 'gamma': 1.9744307583799987, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.03789649737820764, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:44:58,872] Trial 15 finished with value: 246.64996129219443 and parameters: {'n_d': 36, 'n_steps': 8, 'gamma': 1.7517313212985233, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.08807593616458609, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:46:17,051] Trial 16 finished with value: 389.6683367681627 and parameters: {'n_d': 25, 'n_steps': 6, 'gamma': 1.0447990336182251, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.02480754367688059, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:48:52,587] Trial 17 finished with value: 187.45424403213525 and parameters: {'n_d': 8, 'n_steps': 5, 'gamma': 1.744266848931545, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.089515317986317, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:51:08,571] Trial 18 finished with value: 170.16846175030125 and parameters: {'n_d': 41, 'n_steps': 8, 'gamma': 1.688504168924019, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 4, 'momentum': 0.016234748263148736, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 131.07340519673642.
+[I 2025-01-08 19:55:00,798] Trial 19 finished with value: 124.51652140191399 and parameters: {'n_d': 28, 'n_steps': 8, 'gamma': 1.8543287956362964, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.04418766718029858, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 19:57:56,234] Trial 20 finished with value: 512.4605240975786 and parameters: {'n_d': 27, 'n_steps': 10, 'gamma': 1.6477544685100778, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.016089619907080344, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:00:48,281] Trial 21 finished with value: 297.54500967958575 and parameters: {'n_d': 19, 'n_steps': 8, 'gamma': 1.23987122694585, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.038432943522122065, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:02:31,131] Trial 22 finished with value: 215.66395156725685 and parameters: {'n_d': 32, 'n_steps': 9, 'gamma': 1.1025788103497318, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.3922626986723542, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:04:20,621] Trial 23 finished with value: 323.2269438195567 and parameters: {'n_d': 40, 'n_steps': 6, 'gamma': 1.8515291954297568, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.04610915027280268, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:08:14,005] Trial 24 finished with value: 224.1918883342953 and parameters: {'n_d': 30, 'n_steps': 8, 'gamma': 1.852024024115296, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.16636773173661346, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:10:35,602] Trial 25 finished with value: 179.86294297516326 and parameters: {'n_d': 21, 'n_steps': 5, 'gamma': 1.989408873188975, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.10553584183809467, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:13:31,721] Trial 26 finished with value: 235.29198676667107 and parameters: {'n_d': 39, 'n_steps': 7, 'gamma': 1.830029459495767, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.02598693838998723, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:16:15,706] Trial 27 finished with value: 211.49641207175986 and parameters: {'n_d': 35, 'n_steps': 9, 'gamma': 1.6413937687527684, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.05621005252879335, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:17:53,332] Trial 28 finished with value: 674.6123048347763 and parameters: {'n_d': 13, 'n_steps': 8, 'gamma': 1.146297152315308, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.01110505395373186, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:20:28,587] Trial 29 finished with value: 234.95150542111764 and parameters: {'n_d': 43, 'n_steps': 6, 'gamma': 1.3469933032496197, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.030030349750783725, 'mask_type': 'sparsemax'}. Best is trial 19 with value: 124.51652140191399.
+[I 2025-01-08 20:24:09,736] Trial 30 finished with value: 97.0297532025608 and parameters: {'n_d': 29, 'n_steps': 7, 'gamma': 1.7740361293896294, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.13153313619311685, 'mask_type': 'sparsemax'}. Best is trial 30 with value: 97.0297532025608.
+[I 2025-01-08 20:26:26,118] Trial 31 finished with value: 225.7163103508964 and parameters: {'n_d': 22, 'n_steps': 7, 'gamma': 1.7804437073606585, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.1278471905704282, 'mask_type': 'sparsemax'}. Best is trial 30 with value: 97.0297532025608.
+[I 2025-01-08 20:30:13,251] Using an existing study with name 'TabNet_Sensory' instead of creating a new one.
+[I 2025-01-08 20:31:21,458] Trial 2 finished with value: 2.9536999137354334 and parameters: {'n_d': 62, 'n_steps': 4, 'gamma': 1.284851952475202, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.007243977843279017, 'mask_type': 'sparsemax'}. Best is trial 2 with value: 2.9536999137354334.
+[I 2025-01-08 20:32:12,327] Trial 3 finished with value: 2.1832985978516097 and parameters: {'n_d': 59, 'n_steps': 7, 'gamma': 1.8047525672319384, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 4, 'momentum': 0.013241556928550086, 'mask_type': 'sparsemax'}. Best is trial 3 with value: 2.1832985978516097.
+[I 2025-01-08 20:33:23,869] Trial 4 finished with value: 2.796960723910871 and parameters: {'n_d': 26, 'n_steps': 4, 'gamma': 1.0991259901325048, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.008060736705712356, 'mask_type': 'sparsemax'}. Best is trial 3 with value: 2.1832985978516097.
+[I 2025-01-08 20:35:05,054] Trial 5 finished with value: 0.6851242871235752 and parameters: {'n_d': 8, 'n_steps': 10, 'gamma': 1.4213981589800861, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.3939307871673897, 'mask_type': 'sparsemax'}. Best is trial 5 with value: 0.6851242871235752.
+[I 2025-01-08 20:35:37,624] Trial 6 finished with value: 12.431582427123526 and parameters: {'n_d': 30, 'n_steps': 6, 'gamma': 1.9560498962769262, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.0017474862947623624, 'mask_type': 'entmax'}. Best is trial 5 with value: 0.6851242871235752.
+[I 2025-01-08 20:36:36,493] Trial 7 finished with value: 0.8393068224304615 and parameters: {'n_d': 50, 'n_steps': 10, 'gamma': 1.1813066019832537, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 2, 'momentum': 0.08258713192446203, 'mask_type': 'sparsemax'}. Best is trial 5 with value: 0.6851242871235752.
+[I 2025-01-08 20:38:06,706] Trial 8 finished with value: 1.0958428229681854 and parameters: {'n_d': 21, 'n_steps': 8, 'gamma': 1.3096372237927867, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.014418993698980977, 'mask_type': 'sparsemax'}. Best is trial 5 with value: 0.6851242871235752.
+[I 2025-01-08 20:39:37,657] Trial 9 finished with value: 1.0476581591854628 and parameters: {'n_d': 44, 'n_steps': 10, 'gamma': 1.4486131924750691, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.1777500005363947, 'mask_type': 'sparsemax'}. Best is trial 5 with value: 0.6851242871235752.
+[I 2025-01-08 20:40:56,815] Trial 10 finished with value: 2.235010367717337 and parameters: {'n_d': 43, 'n_steps': 4, 'gamma': 1.1555572460191965, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.006989167317429857, 'mask_type': 'entmax'}. Best is trial 5 with value: 0.6851242871235752.
+[I 2025-01-08 20:42:00,248] Trial 11 finished with value: 0.6142472026058163 and parameters: {'n_d': 36, 'n_steps': 3, 'gamma': 1.388821763310974, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.02703589407723621, 'mask_type': 'entmax'}. Best is trial 11 with value: 0.6142472026058163.
+[I 2025-01-08 20:42:55,304] Trial 12 finished with value: 0.630429909865585 and parameters: {'n_d': 9, 'n_steps': 3, 'gamma': 1.659544981911087, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.046260992185287654, 'mask_type': 'entmax'}. Best is trial 11 with value: 0.6142472026058163.
+[I 2025-01-08 20:43:55,302] Trial 13 finished with value: 0.592368825911538 and parameters: {'n_d': 11, 'n_steps': 3, 'gamma': 1.6622555430896173, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.047459670041427454, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:44:58,416] Trial 14 finished with value: 0.6365528670895045 and parameters: {'n_d': 17, 'n_steps': 3, 'gamma': 1.6336499219760467, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.04487784638764042, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:46:10,648] Trial 15 finished with value: 0.6188568186384774 and parameters: {'n_d': 35, 'n_steps': 5, 'gamma': 1.5784454137699069, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.03499655585011295, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:47:18,742] Trial 16 finished with value: 0.6532164502779446 and parameters: {'n_d': 16, 'n_steps': 5, 'gamma': 1.8510938535041779, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.11883538090615432, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:48:12,523] Trial 17 finished with value: 15.639707856621857 and parameters: {'n_d': 53, 'n_steps': 3, 'gamma': 1.7437412687467706, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.0020748802800577503, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:49:15,451] Trial 18 finished with value: 0.6690317122643483 and parameters: {'n_d': 37, 'n_steps': 5, 'gamma': 1.5129234346882494, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.021267062191198016, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:51:07,141] Trial 19 finished with value: 7.1924752295160825 and parameters: {'n_d': 27, 'n_steps': 8, 'gamma': 1.335426353228222, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.004235218421759673, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:52:20,565] Trial 20 finished with value: 0.7748180196666172 and parameters: {'n_d': 36, 'n_steps': 6, 'gamma': 1.9680041675813318, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.025260601748424302, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:53:18,253] Trial 21 finished with value: 0.6055643361040822 and parameters: {'n_d': 15, 'n_steps': 3, 'gamma': 1.7037457709247708, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 5, 'momentum': 0.06524494421196993, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:54:11,862] Trial 22 finished with value: 0.6367910443593855 and parameters: {'n_d': 14, 'n_steps': 4, 'gamma': 1.7261257794965486, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.07625986763217034, 'mask_type': 'entmax'}. Best is trial 13 with value: 0.592368825911538.
+[I 2025-01-08 20:54:50,171] Trial 23 finished with value: 0.5857579557933873 and parameters: {'n_d': 23, 'n_steps': 3, 'gamma': 1.541257363397062, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.20332771805016828, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 20:55:30,707] Trial 24 finished with value: 0.5957603566470867 and parameters: {'n_d': 21, 'n_steps': 3, 'gamma': 1.5316868763404632, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 5, 'momentum': 0.26625560046896, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 20:56:20,528] Trial 25 finished with value: 0.6288520856589441 and parameters: {'n_d': 22, 'n_steps': 4, 'gamma': 1.5541082824637558, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.34235716943634864, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 20:57:09,931] Trial 26 finished with value: 0.6548608643323012 and parameters: {'n_d': 21, 'n_steps': 5, 'gamma': 1.4795837653733444, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.1917998160708633, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 20:57:55,312] Trial 27 finished with value: 0.6144348044292742 and parameters: {'n_d': 11, 'n_steps': 3, 'gamma': 1.6006973132169768, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 5, 'momentum': 0.2190588110634708, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 20:58:37,465] Trial 28 finished with value: 0.6221547495742381 and parameters: {'n_d': 29, 'n_steps': 4, 'gamma': 1.853096731479065, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.13279694849095589, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 20:59:16,356] Trial 29 finished with value: 0.5884460398001605 and parameters: {'n_d': 23, 'n_steps': 3, 'gamma': 1.0009241566322065, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.30232985095625653, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 21:00:13,531] Trial 30 finished with value: 0.63330554612468 and parameters: {'n_d': 13, 'n_steps': 6, 'gamma': 1.2267244629336054, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.12038277997106338, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 21:01:01,707] Trial 31 finished with value: 0.6081539220754717 and parameters: {'n_d': 24, 'n_steps': 4, 'gamma': 1.0714169199165153, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.266333078282716, 'mask_type': 'entmax'}. Best is trial 23 with value: 0.5857579557933873.
+[I 2025-01-08 21:01:44,965] Using an existing study with name 'TabNet_Moneyball' instead of creating a new one.
+[I 2025-01-08 21:04:13,456] Trial 2 finished with value: 767.4537247846932 and parameters: {'n_d': 8, 'n_steps': 5, 'gamma': 1.809465122473925, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.20866806552193903, 'mask_type': 'sparsemax'}. Best is trial 2 with value: 767.4537247846932.
+[I 2025-01-08 21:07:59,504] Trial 3 finished with value: 745.2195813836257 and parameters: {'n_d': 43, 'n_steps': 7, 'gamma': 1.5668861877384987, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.05136925832833022, 'mask_type': 'sparsemax'}. Best is trial 3 with value: 745.2195813836257.
+[I 2025-01-08 21:10:29,859] Trial 4 finished with value: 654.3828013236541 and parameters: {'n_d': 55, 'n_steps': 9, 'gamma': 1.2218143160155686, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.2270882325902849, 'mask_type': 'entmax'}. Best is trial 4 with value: 654.3828013236541.
+[I 2025-01-08 21:12:10,477] Trial 5 finished with value: 557.2759011476558 and parameters: {'n_d': 50, 'n_steps': 4, 'gamma': 1.2070365750679004, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.05240020346701663, 'mask_type': 'entmax'}. Best is trial 5 with value: 557.2759011476558.
+[I 2025-01-08 21:13:15,854] Trial 6 finished with value: 257522.62731208978 and parameters: {'n_d': 37, 'n_steps': 7, 'gamma': 1.0014525270284809, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.0010026149346307653, 'mask_type': 'entmax'}. Best is trial 5 with value: 557.2759011476558.
+[I 2025-01-08 21:15:53,135] Trial 7 finished with value: 1512.9976830984824 and parameters: {'n_d': 41, 'n_steps': 3, 'gamma': 1.5905848635655158, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.007978097176199647, 'mask_type': 'entmax'}. Best is trial 5 with value: 557.2759011476558.
+[I 2025-01-08 21:18:12,418] Trial 8 finished with value: 543.0002993802785 and parameters: {'n_d': 55, 'n_steps': 4, 'gamma': 1.3548678767620057, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.24488147555334566, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:19:57,574] Trial 9 finished with value: 5493.939560727507 and parameters: {'n_d': 48, 'n_steps': 4, 'gamma': 1.0273446253505036, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.009717631069625617, 'mask_type': 'entmax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:21:14,706] Trial 10 finished with value: 8363.804621804273 and parameters: {'n_d': 15, 'n_steps': 5, 'gamma': 1.5195570209637386, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.005098330946653416, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:24:35,290] Trial 11 finished with value: 604.2556658232115 and parameters: {'n_d': 38, 'n_steps': 8, 'gamma': 1.3396943728411164, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.061039054976072746, 'mask_type': 'entmax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:26:59,267] Trial 12 finished with value: 875.3022823691945 and parameters: {'n_d': 25, 'n_steps': 10, 'gamma': 1.9371877111525804, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.31228872284766074, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:28:35,173] Trial 13 finished with value: 620.8068675587774 and parameters: {'n_d': 63, 'n_steps': 3, 'gamma': 1.2633956784534726, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.0599923024538139, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:30:28,277] Trial 14 finished with value: 559.5537065047222 and parameters: {'n_d': 56, 'n_steps': 5, 'gamma': 1.357409119712318, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.1046115186791197, 'mask_type': 'entmax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:32:39,656] Trial 15 finished with value: 637.4039890018788 and parameters: {'n_d': 50, 'n_steps': 4, 'gamma': 1.1642472694504096, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.023456681533843202, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:35:31,643] Trial 16 finished with value: 660.6863738731266 and parameters: {'n_d': 63, 'n_steps': 6, 'gamma': 1.4072729765035112, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.022980000464133118, 'mask_type': 'entmax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:37:38,892] Trial 17 finished with value: 553.2217101820451 and parameters: {'n_d': 29, 'n_steps': 4, 'gamma': 1.6613112928737683, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.12212292739414418, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:40:26,192] Trial 18 finished with value: 651.6888512155584 and parameters: {'n_d': 28, 'n_steps': 6, 'gamma': 1.7295623478387887, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.13111387731031146, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:42:12,309] Trial 19 finished with value: 582.5548520842686 and parameters: {'n_d': 28, 'n_steps': 3, 'gamma': 1.6923425278028017, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.13181289783872036, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:44:54,978] Trial 20 finished with value: 549.2891686048273 and parameters: {'n_d': 23, 'n_steps': 4, 'gamma': 1.9962575991858174, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.3956287849276404, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:47:33,270] Trial 21 finished with value: 595.7314990972519 and parameters: {'n_d': 20, 'n_steps': 5, 'gamma': 1.9989022110971026, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.3832452513983065, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:48:33,888] Trial 22 finished with value: 80748.46798764518 and parameters: {'n_d': 15, 'n_steps': 6, 'gamma': 1.838368720474231, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.0015508492342933863, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:51:16,596] Trial 23 finished with value: 566.6206350957561 and parameters: {'n_d': 31, 'n_steps': 4, 'gamma': 1.4544065130459436, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.19987671555896994, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:53:21,314] Trial 24 finished with value: 601.8683001755081 and parameters: {'n_d': 21, 'n_steps': 3, 'gamma': 1.691818437661048, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.3521148906717722, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:55:22,749] Trial 25 finished with value: 616.0087948618285 and parameters: {'n_d': 31, 'n_steps': 4, 'gamma': 1.8879238767021433, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.10045757670083681, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 21:57:53,678] Trial 26 finished with value: 598.9234542829297 and parameters: {'n_d': 33, 'n_steps': 5, 'gamma': 1.6159993954838228, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.1839667233645347, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 22:00:04,398] Trial 27 finished with value: 729.1176624006137 and parameters: {'n_d': 22, 'n_steps': 4, 'gamma': 1.7564531289335976, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.39668759446127405, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 22:02:19,555] Trial 28 finished with value: 642.7642191544885 and parameters: {'n_d': 10, 'n_steps': 3, 'gamma': 1.4823859413041887, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.037195350754763094, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 22:05:03,973] Trial 29 finished with value: 612.7294122148596 and parameters: {'n_d': 17, 'n_steps': 5, 'gamma': 1.9969098867850723, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.09119504629728889, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 22:07:44,624] Trial 30 finished with value: 597.4383275301765 and parameters: {'n_d': 26, 'n_steps': 6, 'gamma': 1.1161474759360086, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.23001141531340796, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 22:10:48,117] Trial 31 finished with value: 834.5686912131703 and parameters: {'n_d': 9, 'n_steps': 7, 'gamma': 1.8231329235892964, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.1635484844541436, 'mask_type': 'sparsemax'}. Best is trial 8 with value: 543.0002993802785.
+[I 2025-01-08 22:13:10,924] Using an existing study with name 'TabNet_Black_Friday' instead of creating a new one.
+[I 2025-01-09 01:25:25,285] Trial 2 finished with value: 12412431.55529416 and parameters: {'n_d': 39, 'n_steps': 10, 'gamma': 1.0682511031748487, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.03098519971526965, 'mask_type': 'entmax'}. Best is trial 2 with value: 12412431.55529416.
+[I 2025-01-09 04:14:58,791] Trial 3 finished with value: 12383725.673994575 and parameters: {'n_d': 27, 'n_steps': 8, 'gamma': 1.4334266342650124, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.009662335630523301, 'mask_type': 'entmax'}. Best is trial 3 with value: 12383725.673994575.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [32,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [33,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [34,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [35,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [36,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [37,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [38,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [39,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [40,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [41,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [42,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [43,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [44,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [45,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [46,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [47,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [48,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [49,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [50,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [51,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [52,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [53,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [54,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [55,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [56,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [57,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [58,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [59,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [60,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [61,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [62,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [63,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [64,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [65,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [66,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [67,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [68,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [69,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [70,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [71,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [72,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [73,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [74,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [75,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [76,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [77,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [78,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [79,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [80,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [81,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [82,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [83,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [84,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [85,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [86,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [87,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [88,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [89,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [90,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [91,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [92,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [93,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [94,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [95,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [96,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [97,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [98,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [99,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [100,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [101,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [102,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [103,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [104,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [105,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [106,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [107,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [108,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [109,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [110,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [111,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [112,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [113,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [114,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [115,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [116,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [117,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [118,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [119,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [120,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [121,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [122,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [123,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [124,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [125,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [126,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [127,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [0,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [1,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [2,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [3,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [4,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [5,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [6,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [7,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [8,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [9,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [10,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [11,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [12,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [13,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [14,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [15,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [16,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [17,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [18,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [19,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [20,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [21,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [22,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [23,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [24,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [25,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [26,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [27,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [28,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [29,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [30,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+../aten/src/ATen/native/cuda/ScatterGatherKernel.cu:144: operator(): block: [0,0,0], thread: [31,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+[W 2025-01-09 04:37:12,939] Trial 4 failed with parameters: {'n_d': 39, 'n_steps': 5, 'gamma': 1.8432669728858286, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.05305137956172081, 'mask_type': 'sparsemax'} because of the following error: RuntimeError('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 40, in fit
+    self.model.fit(X, y, eval_set=[(X_val, y_val)], eval_name=["eval"], eval_metric=self.metric,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 258, in fit
+    self._train_epoch(train_dataloader)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 489, in _train_epoch
+    batch_logs = self._train_batch(X, y)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 527, in _train_batch
+    output, M_loss = self.network(X)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 616, in forward
+    return self.tabnet(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 492, in forward
+    steps_output, M_loss = self.encoder(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 181, in forward
+    out = self.feat_transformers[step](masked_x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 737, in forward
+    x = self.shared(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 772, in forward
+    scale = torch.sqrt(torch.FloatTensor([0.5]).to(x.device))
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[W 2025-01-09 04:37:12,941] Trial 4 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 185, in <module>
+    main(arguments)
+  File "train.py", line 156, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 40, in fit
+    self.model.fit(X, y, eval_set=[(X_val, y_val)], eval_name=["eval"], eval_metric=self.metric,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 258, in fit
+    self._train_epoch(train_dataloader)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 489, in _train_epoch
+    batch_logs = self._train_batch(X, y)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 527, in _train_batch
+    output, M_loss = self.network(X)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 616, in forward
+    return self.tabnet(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 492, in forward
+    steps_output, M_loss = self.encoder(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 181, in forward
+    out = self.feat_transformers[step](masked_x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 737, in forward
+    x = self.shared(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 772, in forward
+    scale = torch.sqrt(torch.FloatTensor([0.5]).to(x.device))
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+srun: error: stud-000: task 0: Exited with exit code 1

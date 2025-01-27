@@ -5,7 +5,7 @@ from sklearn.pipeline import Pipeline
 
 import numpy as np
 import pandas as pd
-print(f" Panda Version: {pd.__version__}")
+#print(f" Panda Version: {pd.__version__}")
 import os
 
 
@@ -40,7 +40,7 @@ def get_catidx(args):
 
 def load_data(args):
     import pandas as pd
-    print(f" Panda Version: {pd.__version__}")
+    #print(f" Panda Version: {pd.__version__}")
     print("Loading dataset " + args.dataset + "...")
 
     ####~~~~~~~~~~~~~~~~~~~~ SPECIFY HOW DATASETS ARE LOADED AND STUFF ~~~~~~~~~~~~~~~~~ 
@@ -48,6 +48,9 @@ def load_data(args):
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/531-boston/raw_data.csv')
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/531-boston.csv')
         label_col = "MEDV"
+
+        #drop nulls
+        df.dropna(inplace=True)
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
@@ -57,6 +60,9 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -64,6 +70,9 @@ def load_data(args):
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         label_col = 'Score'
+
+        #drop nulls
+        df.dropna(inplace=True)
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
@@ -77,6 +86,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -92,6 +102,9 @@ def load_data(args):
         df.loc[df['Stay_In_Current_City_Years'] == '4+', 'Stay_In_Current_City_Years'] = 4
         df['Stay_In_Current_City_Years'] = df['Stay_In_Current_City_Years'].astype(int)
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -105,7 +118,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
-        df.dropna(axis=1, inplace=True) #drop missing
+        df.dropna(inplace=True) #drop missing
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -117,6 +130,9 @@ def load_data(args):
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42225-diamonds/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42225-diamonds.csv')
         label_col = 'price'
+
+        #drop nulls
+        df.dropna(inplace=True)
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
@@ -146,6 +162,9 @@ def load_data(args):
             median_val = df[idx].median()
             df[idx] = df[idx].fillna(median_val)
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -158,6 +177,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -174,6 +194,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -186,6 +207,9 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         label_col = 'total_(BRL)'
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
@@ -194,13 +218,20 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42726-abalone.csv')
         label_col = 'Class_number_of_rings'
 
+        #drop nulls
+        df.dropna(inplace=True)
+
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
     elif args.dataset == "NYC_Taxi":
+        pass
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016.csv')
         label_col = 'tip_amount'
+
+        #drop nulls
+        df.dropna(inplace=True)
 
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
@@ -214,6 +245,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -230,6 +262,7 @@ def load_data(args):
         drop_cols = get_colnames(df, args.dropna_idx) #get the columns to drop
 
         df.drop(columns=drop_cols, inplace=True) #drop
+        df.dropna(inplace=True)
 
         args.nominal_idx = get_colidx(df, norm_cols) #update index of norm columns
         args.num_features = df.shape[1] - 1 #update number of features 
@@ -237,15 +270,17 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
-    #####################################################################################
-    if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
-        args.one_hot_encode = False
-        print(f'No one Hot for this Baby!!! \n')
+    
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    print("Dataset loaded!")
+    print("Dataset loaded! \n")
+    #print(f"X b4 encoding : {X[0]} \n")
     print(X.shape)
+    #print(f"Data Type of X: {type(X)}")
+    #print(f"Nominal Idx: {args.nominal_idx}")
+    #print(f"Ordinal Idx: {args.ordinal_idx}")
+    #print(f"Cat Dims: {args.cat_dims} \n \n")
+    #print(f"Normonal Idx: {args.nominal_idx}")
+    
 
     # Preprocess target 
     if args.target_encode:
@@ -256,21 +291,46 @@ def load_data(args):
     num_idx = []
     args.cat_dims = []
     args.cat_idx = get_catidx(args)
+    #print(f"Cat Idx Part II: {args.cat_idx} ")
+    #print(f"ENDE \n \n")
+
+    #####################################################################################
+    # NO Encoding for XGBoost, CatBoost, LightGBM
+    if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
+        args.one_hot_encode = False
+        args.ordinal_encode = False
+        print(f'No one Hot for this Baby!!! \n')
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~
 
     
-    # Preprocess data
+    # Preprocess  Nominal data
     for i in range(args.num_features):
         if args.cat_idx and i in args.cat_idx:
             #Only Nominal
-            if args.nominal_idx and i in args.nominal_idx:
+            if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
                 le = LabelEncoder()
                 X[:, i] = le.fit_transform(X[:, i])
-
-                # Setting this?
                 args.cat_dims.append(len(le.classes_))
+            else:
+                if args.ordinal_idx and i in args.ordinal_idx:
+                    le = LabelEncoder()
+                    #X[:, i] = le.fit_transform(X[:, i])
+                    le.fit_transform(X[:, i])
+
+                    # Gets number of unique classes per ordinal feature
+                    #Covers future cases with None
+                    if np.any(X[:, i] == "None"):
+                        args.cat_dims.append(len(le.classes_))
+                    else:
+                        args.cat_dims.append(len(le.classes_)+1)
 
         else:
             num_idx.append(i)
+
+    args.num_idx = num_idx #update num_idx
+
+    #print(f"X after Nominal Encoding: {X[0]} \n \n")
     
     
     if args.scale:
@@ -278,9 +338,11 @@ def load_data(args):
         scaler = StandardScaler()
         X[:, num_idx] = scaler.fit_transform(X[:, num_idx])
 
+    #print(f"X after Scaling: {X[0]} \n \n")
+
 
     if args.one_hot_encode:
-        ohe = OneHotEncoder(sparse=False, handle_unknown='ignore')
+        ohe = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
         new_x1 = ohe.fit_transform(X[:, args.nominal_idx])
         new_x2 = X[:, num_idx]
 
@@ -288,6 +350,7 @@ def load_data(args):
             ord_len = len(args.ordinal_idx)
             new_ord = X[:, args.ordinal_idx]
             args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
+            print(f"Ordinal Idx: {args.ordinal_idx}")
             X = np.concatenate([new_ord, new_x1, new_x2], axis=1)
 
         else:
@@ -297,14 +360,23 @@ def load_data(args):
         args.num_features = X.shape[1]
         #args.cat_idx = get_catidx(args)
         #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
+
+        """
+        We have encoded nominal features. Therefore categorical data now is if we have 
+        odinal features.
+        """
         if args.ordinal_encode:
             args.cat_idx = args.ordinal_idx
         else:
-            args.cat_idx = []
+            args.cat_idx = None
             
-        print(f"args.num_features: {args.num_features}")
-        print(f"args.cat_idx: {args.cat_idx}")
+        print("One Hot Encoding...")
+        #print(f"X after One Hot Encoding: {X[0]} \n \n")
+        #print(f"args.num_features: {args.num_features}")
+        #print(f"args.cat_idx: {args.cat_idx}")
+        #print(f"Cat Dims: {args.cat_dims}")
         print("New Shape:", X.shape)
+        #print(f"{args.ordinal_encode} \n \n")
         
 
     # Ordinal Encode
@@ -326,7 +398,7 @@ def load_data(args):
             # Fit and transform the data
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
 
-        elif args.dataset == "House Prices Nominal":
+        elif args.dataset == "House_Prices_Nominal":
             categories = [
                     [None,'Grvl', 'Pave'],
                     ['None', 'Grvl', 'Pave'],
@@ -375,13 +447,13 @@ def load_data(args):
             # Fit and transform the data
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
         
-        elif args.dataset == "Brazillian Houses":
+        elif args.dataset == "Brazillian_Houses":
 
             encoder = OrdinalEncoder(categories=[[None,'not furnished','furnished']])
 
             # Fit and transform the data
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
 
-    #print(f'X after {X[0]} \n ')
-    #print(f'y : {y[0]}')
+            print("OE Done!!! \n")
+
     return X, y
