@@ -1,6 +1,0 @@
-[I 2025-01-23 12:11:14,047] Using an existing study with name 'LightGBM_Brazillian_Houses' instead of creating a new one.
-[I 2025-01-23 12:11:25,636] Trial 1 finished with value: 130241271.00847773 and parameters: {'num_leaves': 329, 'lambda_l1': 1.0360586645757879e-05, 'lambda_l2': 0.00028586578734205, 'learning_rate': 0.05267314879885228}. Best is trial 1 with value: 130241271.00847773.
-[I 2025-01-23 12:11:30,142] Trial 2 finished with value: 132157959.08680889 and parameters: {'num_leaves': 137, 'lambda_l1': 0.0004104366058788823, 'lambda_l2': 3.2684720841139208, 'learning_rate': 0.05630722600028315}. Best is trial 1 with value: 130241271.00847773.
-[I 2025-01-23 12:11:41,570] Trial 3 finished with value: 48745669.870724514 and parameters: {'num_leaves': 597, 'lambda_l1': 2.7323296764144983e-07, 'lambda_l2': 3.908118260140544e-08, 'learning_rate': 0.17447920689018478}. Best is trial 3 with value: 48745669.870724514.
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 969511 ON stud-000 CANCELLED AT 2025-01-23T12:11:42 ***
