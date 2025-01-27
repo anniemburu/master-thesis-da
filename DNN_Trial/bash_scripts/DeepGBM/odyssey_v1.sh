@@ -10,8 +10,8 @@ CONFIGS=(
     config/brazillian_houses.yml
     config/abalone.yml
     #config/nyc_taxi.yml
-    config/house_sales.yml
-    config/mip_2016.yml
+    #config/house_sales.yml
+    #config/mip_2016.yml
 )
 
 for config in "${CONFIGS[@]}"; do
