@@ -9,5 +9,5 @@
 
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate TabSurvey
-srun python3 train.py --config config/sat11.yml --model_name RandomForest --optimize_hyperparameters
+conda activate TabSurvey2
+srun python3 train.py --config config/sat11.yml --model_name RandomForest --optimize_hyperparameters --n_trials 200 --epochs 100

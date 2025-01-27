@@ -10,5 +10,5 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate Test4Node
-srun python3 train.py --config config/house_sales.yml --model_name NODE --optimize_hyperparameters --n_trials 93 --epochs 100
+srun python3 train.py --config config/house_sales.yml --model_name NODE --optimize_hyperparameters --n_trials 20 --epochs 100
 
