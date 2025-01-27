@@ -131,9 +131,9 @@ class Objective(object):
         model = self.model_name(trial_params, self.args)
 
         # Cross validate the chosen hyperparameters
-        sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+        sc, time = cross_validation(model, self.X, self.y, self.args, visual=False, save_model=False)
 
-        save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time)
+        save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time) #saved after every trial
         print(f"Hyperparam was saved!!! Hurrah!!!")
 
         return sc.get_objective_result()
@@ -154,7 +154,7 @@ def main(args):
                                 storage=storage_name,
                                 load_if_exists=True)
     study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
-    print("Best parameters:", study.best_trial.params)
+    print("Best parameters After Trials:", study.best_trial.params)
 
     # Run best trial again and save it!
     model = model_name(study.best_trial.params, args)
