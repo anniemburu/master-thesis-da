@@ -4,12 +4,16 @@ parameters: {
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.6117582754659866, 'alpha': 5.518205710187129, 'K': 10, 'beta': 0.15033079996867355ß
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    DeepGBM: {'n_trees': 200, 'maxleaf': 128, 'loss_de': 3, 'loss_dr': 0.9},
+    TabNet: {'n_d': 52, 'n_steps': 6, 'gamma': 1.050413339231028, 'cat_emb_dim': 2, 'n_independent': 3, 
+             'n_shared': 3, 'momentum': 0.07118274530382916, 'mask_type': 'sparsemax', 'n_a': 52, 
+             'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')},
+    TabTransformer: {'dim': 256, 'depth': 2, 'heads': 4, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.5},
+    SAINT: {'dim': 128, 'depth': 3, 'heads': 2, 'dropout': 0.1},
   },
   Socmob: {
     RandomForest: {},
@@ -33,83 +37,117 @@ parameters: {
       'objective': 'regression', 
       'metric': 'mse'},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.5282587749099882, 'alpha': 6.951871296200623, 'K': 10, 'beta': 0.708458329934869
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
+    DeepGBM: {'n_trees': 100, 'maxleaf': 128, 'loss_de': 6, 'loss_dr': 0.9},
+    TabNet: {
+      'n_d': 29, 'n_steps': 7, 'gamma': 1.7740361293896294, 'cat_emb_dim': 3, 'n_independent': 4, 
+      'n_shared': 5, 'momentum': 0.13153313619311685, 'mask_type': 'sparsemax', 'n_a': 29, 'cat_idxs': [], 
+      'cat_dims': [], 'device_name': device(type='cuda')
+    },
     TabTransformer: {},
-    SAINT: {},
+    SAINT: {'dim': 32, 'depth': 12, 'heads': 4, 'dropout': 0.7},
   },
   Sensory: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.5582176534331378, 'alpha': 9.613597687648259, 'K': 20, 'beta': 0.49652097114986354
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    DeepGBM: {'n_trees': 200, 'maxleaf': 64, 'loss_de': 3, 'loss_dr': 0.9},
+    TabNet: {
+      'n_d': 29, 'n_steps': 7, 'gamma': 1.7740361293896294, 'cat_emb_dim': 3, 'n_independent': 4, 
+      'n_shared': 5, 'momentum': 0.13153313619311685, 'mask_type': 'sparsemax', 'n_a': 29, 'cat_idxs': [], 
+      'cat_dims': [], 'device_name': device(type='cuda')
+    },
+    TabTransformer: {'dim': 256, 'depth': 12, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5},
+    SAINT: {'dim': 32, 'depth': 12, 'heads': 4, 'dropout': 0.7},
   },
   Moneyball: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.14534935488077078, 'alpha': 1.3731029290912213, 'K': 10, 'beta': 0.1392277141225916
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    DeepGBM: {'n_trees': 200, 'maxleaf': 128, 'loss_de': 2, 'loss_dr': 0.7},
+    TabNet: {
+      'n_d': 55, 'n_steps': 4, 'gamma': 1.3548678767620057, 'cat_emb_dim': 3, 'n_independent': 5, 
+      'n_shared': 1, 'momentum': 0.24488147555334566, 'mask_type': 'sparsemax', 'n_a': 55, 'cat_idxs': [], 
+      'cat_dims': [], 'device_name': device(type='cuda')
+    },
+    TabTransformer: {'dim': 64, 'depth': 12, 'heads': 2, 'weight_decay': -1, 'learning_rate': -3, 'dropout': 0.1},
+    SAINT: {'dim': 128, 'depth': 3, 'heads': 4, 'dropout': 0.2},
   },
   Black_Friday: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.5855804183944784, 'alpha': 7.637309503741228, 'K': 15, 'beta': 4.80545994193209
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    DeepGBM: {'n_trees': 100, 'maxleaf': 64, 'loss_de': 3, 'loss_dr': 0.9},
+    TabNet: {
+      'n_d': 27, 'n_steps': 8, 'gamma': 1.4334266342650124, 'cat_emb_dim': 2, 'n_independent': 4, 
+      'n_shared': 1, 'momentum': 0.009662335630523301, 'mask_type': 'entmax'
+    },
+    TabTransformer: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.3},
+    SAINT: {'dim': 128, 'depth': 3, 'heads': 2, 'dropout': 0.3},
   },
   SAT11: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.8537536712438457, 'alpha': 0.11047685312602139, 'K': 20, 'beta': 6.833123020518896
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    DeepGBM: {'n_trees': 100, 'maxleaf': 64, 'loss_de': 6, 'loss_dr': 0.9},
+    TabNet: {
+      'n_d': 43, 'n_steps': 9, 'gamma': 1.751938929868293, 'cat_emb_dim': 2, 'n_independent': 4, 
+      'n_shared': 3, 'momentum': 0.10895265262047434, 'mask_type': 'entmax', 'n_a': 43, 'cat_idxs': [], 
+      'cat_dims': [], 'device_name': device(type='cuda')
+    },
+    TabTransformer: {'dim': 128, 'depth': 1, 'heads': 4, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.1},
+    SAINT: {'dim': 128, 'depth': 2, 'heads': 2, 'dropout': 0.8},
   },
   Diamonds: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.10012243947201172, 'alpha': 1.5694259010968556, 'K': 15, 'beta': 0.886735888342867
+    },
     NODE: {},
-    DeepGBM: {},
+    DeepGBM: {'n_trees': 100, 'maxleaf': 128, 'loss_de': 2, 'loss_dr': 0.9},
     TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    TabTransformer: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5},
+    SAINT: {'dim': 32, 'depth': 3, 'heads': 4, 'dropout': 0.3},
   },
   House_Prices_Nominal: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.3192371226984188, 'alpha': 2.7921080594674033, 'K': 5, 'beta': 0.2746339727459741
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
+    DeepGBM: {'n_trees': 200, 'maxleaf': 64, 'loss_de': 5, 'loss_dr': 0.9},
+    TabNet: {'n_d': 41, 'n_steps': 10, 'gamma': 1.1224322533685716, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 4, 
+             'momentum': 0.32030669497532765, 'mask_type': 'entmax'},
+    TabTransformer: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5},
     SAINT: {},
   },
   Mercedes_Benz: {
@@ -117,23 +155,27 @@ parameters: {
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.19543335210332746, 'alpha': 9.619143087097799, 'K': 2, 'beta': 6.291092231131599
+    },
     NODE: {},
-    DeepGBM: {},
+    DeepGBM: {'n_trees': 200, 'maxleaf': 64, 'loss_de': 4, 'loss_dr': 0.9},
     TabNet: {},
     TabTransformer: {},
-    SAINT: {},
+    SAINT: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.2},
   },
   Allstate_Claims: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.6857855583349338, 'alpha': 2.431641575833991, 'K': 5, 'beta': 2.181737537614761
+    },
     NODE: {},
-    DeepGBM: {},
+    DeepGBM: {'n_trees': 200, 'maxleaf': 64, 'loss_de': 2, 'loss_dr': 0.9},
     TabNet: {},
-    TabTransformer: {},
+    TabTransformer: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -2, 'learning_rate': -4, 'dropout': 0.1},
     SAINT: {},
   },
   Brazillian_Houses: {
@@ -141,24 +183,30 @@ parameters: {
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.1810075803617375, 'alpha': 2.7005666026932427, 'K': 3, 'beta': 0.20031952285751176
+    },
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    DeepGBM: {'n_trees': 200, 'maxleaf': 128, 'loss_de': 3, 'loss_dr': 0.9},
+    TabNet: {'n_d': 49, 'n_steps': 8, 'gamma': 1.031522844648987, 'cat_emb_dim': 2, 'n_independent': 1, 
+              'n_shared': 4, 'momentum': 0.0015374105466576958, 'mask_type': 'entmax', 'n_a': 49, 
+              'cat_idxs': [0], 'cat_dims': [3], 'device_name': device(type='cuda')},
+    TabTransformer: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0},
+    SAINT: {'dim': 32, 'depth': 1, 'heads': 2, 'dropout': 0.5},
   },
   Abalone: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {'p_m': 0.8721504351545861, 'alpha': 3.038715869332491, 'K': 10, 'beta': 1.2414847045108695},
     NODE: {},
-    DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    DeepGBM: {'n_trees': 100, 'maxleaf': 128, 'loss_de': 2, 'loss_dr': 0.7},
+    TabNet: {'n_d': 33, 'n_steps': 9, 'gamma': 1.8704976362400025, 'cat_emb_dim': 1, 'n_independent': 5, 
+            'n_shared': 2, 'momentum': 0.1107777730479582, 'mask_type': 'entmax', 'n_a': 33, 'cat_idxs': [],
+            'cat_dims': [], 'device_name': device(type='cuda')},
+    TabTransformer: {'dim': 32, 'depth': 2, 'heads': 2, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0},
+    SAINT: {'dim': 64, 'depth': 12, 'heads': 8, 'dropout': 0},
   },
   NYC_Taxi: {
     RandomForest: {},
@@ -177,24 +225,30 @@ parameters: {
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.5947367391828347, 'alpha': 0.5119049368440656, 'K': 2, 'beta': 0.22422357596955864
+    },
     NODE: {},
     DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    TabNet: {'n_d': 55, 'n_steps': 7, 'gamma': 1.4741351670576621, 'cat_emb_dim': 2, 'n_independent': 5, 
+             'n_shared': 5, 'momentum': 0.35283418501370656, 'mask_type': 'entmax'},
+    TabTransformer: {'dim': 32, 'depth': 6, 'heads': 4, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.1},
+    SAINT: {'dim': 128, 'depth': 12, 'heads': 8, 'dropout': 0},
   },
   MIP: {
     RandomForest: {},
     XGBoost: {},
     LightGBM: {},
     CatBoost: {},
-    VIME: {},
+    VIME: {
+      'p_m': 0.7794279826211139, 'alpha': 1.8600788537267146, 'K': 15, 'beta': 0.10940866298283723
+    },
     NODE: {},
     DeepGBM: {},
-    TabNet: {},
-    TabTransformer: {},
-    SAINT: {},
+    TabNet: {'n_d': 37, 'n_steps': 3, 'gamma': 1.6749039824525354, 'cat_emb_dim': 1, 'n_independent': 4, 
+             'n_shared': 2, 'momentum': 0.2491546234839367, 'mask_type': 'entmax'},
+    TabTransformer: {'dim': 128, 'depth': 6, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.1},
+    SAINT: {'dim': 32, 'depth': 3, 'heads': 2, 'dropout': 0},
   }
 }
 
