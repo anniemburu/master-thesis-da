@@ -18,7 +18,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def cross_validation(model, X, y, args, visual, save_model=False):
+def cross_validation(model, X, y, args, visual, save_model=True):
     # Record some statistics and metrics
     sc = get_scorer(args)
     train_timer = Timer()
