@@ -1,0 +1,14 @@
+2025-01-08 20:30:07.900978
+TabNet - Socmob
+
+MSE - mean: 97.02975
+MSE - std: 42.83198
+R2 - mean: 0.94173
+R2 - std: 0.01551
+
+Train time: 43.989023
+Test time: 0.056108
+
+Best Parameters: {'n_d': 29, 'n_steps': 7, 'gamma': 1.7740361293896294, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.13153313619311685, 'mask_type': 'sparsemax', 'n_a': 29, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
