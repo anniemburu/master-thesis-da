@@ -71,3 +71,6 @@
 [I 2025-01-23 15:39:32,823] Trial 169 finished with value: 12274002.180875063 and parameters: {'learning_rate': 0.1341536833424851, 'max_depth': 9, 'l2_leaf_reg': 13.845005385428907}. Best is trial 75 with value: 11831048.178411959.
 [I 2025-01-23 15:39:46,761] Trial 170 finished with value: 12250681.478263007 and parameters: {'learning_rate': 0.11359785440380656, 'max_depth': 10, 'l2_leaf_reg': 5.991930578103417}. Best is trial 75 with value: 11831048.178411959.
 [I 2025-01-23 15:40:07,084] Trial 171 finished with value: 12204954.527527519 and parameters: {'learning_rate': 0.11425462914463436, 'max_depth': 11, 'l2_leaf_reg': 15.007078065739375}. Best is trial 75 with value: 11831048.178411959.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 969679 ON stud-000 CANCELLED AT 2025-01-26T15:20:27 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 969679.0 ON stud-000 CANCELLED AT 2025-01-26T15:20:27 DUE TO TIME LIMIT ***
