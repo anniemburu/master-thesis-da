@@ -1,0 +1,3636 @@
+Namespace(batch_size=128, cat_dims=None, cat_idx=None, config='config/sat11.yml', data_parallel=False, dataset='SAT11', direction='minimize', dropna_idx=[116], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='RandomForest', n_trials=200, nominal_idx=[115], num_classes=1, num_features=117, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256)
+Start hyperparameter optimization
+Loading dataset SAT11...
+Dataset loaded! 
+
+(1725, 116)
+Scaling the data...
+One Hot Encoding...
+New Shape: (1725, 130)
+A new study created in RDB with name: RandomForest_SAT11
+{'MSE - mean': 2307540.1337774177, 'MSE - std': 0.0, 'R2 - mean': 0.6007128394369778, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2674591.607605031, 'MSE - std': 367051.4738276135, 'R2 - mean': 0.5322798382014622, 'R2 - std': 0.0684330012355156} 
+ 
+
+{'MSE - mean': 2574565.806983125, 'MSE - std': 331403.34620034986, 'R2 - mean': 0.5492649167639987, 'R2 - std': 0.06081970261588311} 
+ 
+
+{'MSE - mean': 2601898.034691804, 'MSE - std': 290881.9097488686, 'R2 - mean': 0.5443855223552944, 'R2 - std': 0.05334512760412548} 
+ 
+
+{'MSE - mean': 2516847.8630796447, 'MSE - std': 310843.94010556216, 'R2 - mean': 0.5598665684311366, 'R2 - std': 0.05687893513146791} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 0 finished with value: 2516847.8630796447 and parameters: {'max_depth': 4, 'n_estimators': 27}. Best is trial 0 with value: 2516847.8630796447.
+{'MSE - mean': 3421940.6124460814, 'MSE - std': 0.0, 'R2 - mean': 0.407881609182586, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3829074.77737318, 'MSE - std': 407134.16492709867, 'R2 - mean': 0.3305806234523456, 'R2 - std': 0.07730098573024036} 
+ 
+
+{'MSE - mean': 3727685.7423062585, 'MSE - std': 362028.94685949275, 'R2 - mean': 0.34749467031683023, 'R2 - std': 0.06749665344231898} 
+ 
+
+{'MSE - mean': 3800060.8936049105, 'MSE - std': 337658.416672313, 'R2 - mean': 0.33465540351116085, 'R2 - std': 0.06254109837343656} 
+ 
+
+{'MSE - mean': 3734117.267668058, 'MSE - std': 329552.44239198224, 'R2 - mean': 0.34712455463453995, 'R2 - std': 0.06124565378502676} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 1 finished with value: 3734117.267668058 and parameters: {'max_depth': 2, 'n_estimators': 8}. Best is trial 0 with value: 2516847.8630796447.
+{'MSE - mean': 2841353.6843095697, 'MSE - std': 0.0, 'R2 - mean': 0.508343959805345, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3159688.0498546828, 'MSE - std': 318334.3655451131, 'R2 - mean': 0.4476349094450793, 'R2 - std': 0.06070905036026569} 
+ 
+
+{'MSE - mean': 3077492.8869273905, 'MSE - std': 284727.8264272065, 'R2 - mean': 0.4613246963809175, 'R2 - std': 0.053215408762821166} 
+ 
+
+{'MSE - mean': 3131805.2610258497, 'MSE - std': 263916.5650297533, 'R2 - mean': 0.4516732773115868, 'R2 - std': 0.04902407028696343} 
+ 
+
+{'MSE - mean': 3048918.2567759943, 'MSE - std': 288448.5821281591, 'R2 - mean': 0.46690581124389857, 'R2 - std': 0.053392957719132134} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 2 finished with value: 3048918.2567759943 and parameters: {'max_depth': 3, 'n_estimators': 70}. Best is trial 0 with value: 2516847.8630796447.
+{'MSE - mean': 1638268.780774639, 'MSE - std': 0.0, 'R2 - mean': 0.7165207745948364, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1907327.0594076044, 'MSE - std': 269058.2786329654, 'R2 - mean': 0.6664436863020833, 'R2 - std': 0.05007708829275309} 
+ 
+
+{'MSE - mean': 1800220.5607378073, 'MSE - std': 266842.9793878091, 'R2 - mean': 0.6848392918820903, 'R2 - std': 0.04846242314650072} 
+ 
+
+{'MSE - mean': 1808347.9926113822, 'MSE - std': 231521.15925547894, 'R2 - mean': 0.6833500256664522, 'R2 - std': 0.042048883272995365} 
+ 
+
+{'MSE - mean': 1748598.2122951734, 'MSE - std': 239085.3043115396, 'R2 - mean': 0.6942191217691314, 'R2 - std': 0.04344002610452588} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 3 finished with value: 1748598.2122951734 and parameters: {'max_depth': 11, 'n_estimators': 12}. Best is trial 3 with value: 1748598.2122951734.
+{'MSE - mean': 2760700.2804567586, 'MSE - std': 0.0, 'R2 - mean': 0.522299889820488, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3123599.2983376742, 'MSE - std': 362899.01788091566, 'R2 - mean': 0.45386584712040073, 'R2 - std': 0.0684340427000873} 
+ 
+
+{'MSE - mean': 3053751.0881795436, 'MSE - std': 312337.4399222913, 'R2 - mean': 0.4654229515473158, 'R2 - std': 0.05821751276309233} 
+ 
+
+{'MSE - mean': 3131258.035807442, 'MSE - std': 301973.48902625486, 'R2 - mean': 0.4517229495781311, 'R2 - std': 0.05572278937838276} 
+ 
+
+{'MSE - mean': 3053207.090107137, 'MSE - std': 311958.6366148555, 'R2 - mean': 0.4661242634783952, 'R2 - std': 0.057564005881295725} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 4 finished with value: 3053207.090107137 and parameters: {'max_depth': 3, 'n_estimators': 51}. Best is trial 3 with value: 1748598.2122951734.
+{'MSE - mean': 2007268.3600398519, 'MSE - std': 0.0, 'R2 - mean': 0.652670620009413, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2312094.55926783, 'MSE - std': 304826.1992279781, 'R2 - mean': 0.595691821516218, 'R2 - std': 0.05697879849319498} 
+ 
+
+{'MSE - mean': 2107911.4363378054, 'MSE - std': 381218.4455174817, 'R2 - mean': 0.6310288302352014, 'R2 - std': 0.06827735609675505} 
+ 
+
+{'MSE - mean': 2080851.0658400832, 'MSE - std': 333455.2718978902, 'R2 - mean': 0.6356796885878292, 'R2 - std': 0.05967612141318287} 
+ 
+
+{'MSE - mean': 2007175.800846918, 'MSE - std': 332665.16705607943, 'R2 - mean': 0.6490326100973532, 'R2 - std': 0.059684115348179495} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 5 finished with value: 2007175.800846918 and parameters: {'max_depth': 8, 'n_estimators': 7}. Best is trial 3 with value: 1748598.2122951734.
+{'MSE - mean': 2214436.5220111683, 'MSE - std': 0.0, 'R2 - mean': 0.6168231017185064, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2502793.8016377306, 'MSE - std': 288357.279626562, 'R2 - mean': 0.5624121944816289, 'R2 - std': 0.05441090723687747} 
+ 
+
+{'MSE - mean': 2377741.430552987, 'MSE - std': 294464.72030378616, 'R2 - mean': 0.5837967950128892, 'R2 - std': 0.053742908034361866} 
+ 
+
+{'MSE - mean': 2389636.7824343327, 'MSE - std': 255844.87842603648, 'R2 - mean': 0.5816107056594627, 'R2 - std': 0.046696488979107435} 
+ 
+
+{'MSE - mean': 2301736.883268515, 'MSE - std': 288566.8909402297, 'R2 - mean': 0.5975182834135743, 'R2 - std': 0.05250384544386384} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 6 finished with value: 2301736.883268515 and parameters: {'max_depth': 5, 'n_estimators': 5}. Best is trial 3 with value: 1748598.2122951734.
+{'MSE - mean': 1862996.541236856, 'MSE - std': 0.0, 'R2 - mean': 0.6776348163134708, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2196067.577427442, 'MSE - std': 333071.03619058616, 'R2 - mean': 0.6159106385031154, 'R2 - std': 0.06172417781035533} 
+ 
+
+{'MSE - mean': 2064357.7827807802, 'MSE - std': 329624.76157662313, 'R2 - mean': 0.6385760145223863, 'R2 - std': 0.0597273356548975} 
+ 
+
+{'MSE - mean': 2092224.1954464759, 'MSE - std': 289515.06601194135, 'R2 - mean': 0.6336239915077596, 'R2 - std': 0.05243170380730319} 
+ 
+
+{'MSE - mean': 2005128.225098749, 'MSE - std': 312086.544025159, 'R2 - mean': 0.6493247697652025, 'R2 - std': 0.05643868002413763} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 7 finished with value: 2005128.225098749 and parameters: {'max_depth': 8, 'n_estimators': 6}. Best is trial 3 with value: 1748598.2122951734.
+{'MSE - mean': 1795714.2302719897, 'MSE - std': 0.0, 'R2 - mean': 0.6892770679510629, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2208014.8803107487, 'MSE - std': 412300.6500387589, 'R2 - mean': 0.613695845742298, 'R2 - std': 0.07558122220876495} 
+ 
+
+{'MSE - mean': 2163755.8370135166, 'MSE - std': 342411.46277847444, 'R2 - mean': 0.6210515109106889, 'R2 - std': 0.06258241808889109} 
+ 
+
+{'MSE - mean': 2168736.755619483, 'MSE - std': 296662.49515577254, 'R2 - mean': 0.6201364924781987, 'R2 - std': 0.05422113118134813} 
+ 
+
+{'MSE - mean': 2086632.8121661574, 'MSE - std': 312043.48887292406, 'R2 - mean': 0.6350084377604099, 'R2 - std': 0.05689150972839713} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 8 finished with value: 2086632.8121661574 and parameters: {'max_depth': 8, 'n_estimators': 6}. Best is trial 3 with value: 1748598.2122951734.
+{'MSE - mean': 3388236.5046899174, 'MSE - std': 0.0, 'R2 - mean': 0.41371362800136113, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3772197.7856560275, 'MSE - std': 383961.2809661098, 'R2 - mean': 0.34055186467169024, 'R2 - std': 0.07316176332967089} 
+ 
+
+{'MSE - mean': 3652914.1761583113, 'MSE - std': 356007.49408361845, 'R2 - mean': 0.3606105511489693, 'R2 - std': 0.06612965206364496} 
+ 
+
+{'MSE - mean': 3730273.387885185, 'MSE - std': 336168.6255434657, 'R2 - mean': 0.34689427657571703, 'R2 - std': 0.06200207033680888} 
+ 
+
+{'MSE - mean': 3653886.2700651735, 'MSE - std': 337264.64818480395, 'R2 - mean': 0.36115551396230344, 'R2 - std': 0.06236134177538803} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 9 finished with value: 3653886.2700651735 and parameters: {'max_depth': 2, 'n_estimators': 77}. Best is trial 3 with value: 1748598.2122951734.
+{'MSE - mean': 1548858.3638293406, 'MSE - std': 0.0, 'R2 - mean': 0.7319919817839409, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1854704.9901366197, 'MSE - std': 305846.626307279, 'R2 - mean': 0.6755748020736687, 'R2 - std': 0.05641717971027216} 
+ 
+
+{'MSE - mean': 1701083.177150228, 'MSE - std': 330999.64058311004, 'R2 - mean': 0.7021695476657001, 'R2 - std': 0.05946842100799248} 
+ 
+
+{'MSE - mean': 1772564.823163347, 'MSE - std': 312249.0171319129, 'R2 - mean': 0.6895897835769712, 'R2 - std': 0.05592066895587087} 
+ 
+
+{'MSE - mean': 1709919.1654024157, 'MSE - std': 306100.4291161244, 'R2 - mean': 0.700957629531616, 'R2 - std': 0.05494186618392042} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 10 finished with value: 1709919.1654024157 and parameters: {'max_depth': 11, 'n_estimators': 14}. Best is trial 10 with value: 1709919.1654024157.
+{'MSE - mean': 1502683.586703516, 'MSE - std': 0.0, 'R2 - mean': 0.7399818734345012, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1821249.457859891, 'MSE - std': 318565.8711563749, 'R2 - mean': 0.681397349921319, 'R2 - std': 0.05858452351318222} 
+ 
+
+{'MSE - mean': 1679593.7172035084, 'MSE - std': 328312.1084662632, 'R2 - mean': 0.7059083362534543, 'R2 - std': 0.05907346696100241} 
+ 
+
+{'MSE - mean': 1706312.73010816, 'MSE - std': 288068.3033170594, 'R2 - mean': 0.701178167523927, 'R2 - std': 0.05181099654247034} 
+ 
+
+{'MSE - mean': 1632640.4798322148, 'MSE - std': 296811.522255558, 'R2 - mean': 0.7144466547530441, 'R2 - std': 0.05340144664310205} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 11 finished with value: 1632640.4798322148 and parameters: {'max_depth': 12, 'n_estimators': 14}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1454194.5589714504, 'MSE - std': 0.0, 'R2 - mean': 0.748372213397908, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1813974.3842987772, 'MSE - std': 359779.82532732666, 'R2 - mean': 0.6826013013902591, 'R2 - std': 0.06577091200764895} 
+ 
+
+{'MSE - mean': 1681240.6861504114, 'MSE - std': 348612.7044777974, 'R2 - mean': 0.7055706408030424, 'R2 - std': 0.06276190206113269} 
+ 
+
+{'MSE - mean': 1714962.437647406, 'MSE - std': 307505.41924422764, 'R2 - mean': 0.6996257841208529, 'R2 - std': 0.05532012496066624} 
+ 
+
+{'MSE - mean': 1648525.0309874965, 'MSE - std': 305456.02352291456, 'R2 - mean': 0.7116470474211322, 'R2 - std': 0.05501178115521756} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 12 finished with value: 1648525.0309874965 and parameters: {'max_depth': 12, 'n_estimators': 17}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1945620.2940919008, 'MSE - std': 0.0, 'R2 - mean': 0.6633379452906703, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2245994.975936142, 'MSE - std': 300374.68184424075, 'R2 - mean': 0.6072435371616544, 'R2 - std': 0.056094408129015894} 
+ 
+
+{'MSE - mean': 2144784.5960427485, 'MSE - std': 283966.632414824, 'R2 - mean': 0.624523798728461, 'R2 - std': 0.05191277904842808} 
+ 
+
+{'MSE - mean': 2157967.489087035, 'MSE - std': 246980.0644805429, 'R2 - mean': 0.6221346185584287, 'R2 - std': 0.045147835131408146} 
+ 
+
+{'MSE - mean': 2078592.1527061954, 'MSE - std': 272031.4281529548, 'R2 - mean': 0.6365070707215481, 'R2 - std': 0.04956744030476937} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 13 finished with value: 2078592.1527061954 and parameters: {'max_depth': 6, 'n_estimators': 25}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1492148.6968478456, 'MSE - std': 0.0, 'R2 - mean': 0.7418047870192928, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1846080.0800408516, 'MSE - std': 353931.3831930059, 'R2 - mean': 0.6770033933402326, 'R2 - std': 0.06480139367906007} 
+ 
+
+{'MSE - mean': 1709705.0014066568, 'MSE - std': 347430.4824722616, 'R2 - mean': 0.7005994691285502, 'R2 - std': 0.06255421648763367} 
+ 
+
+{'MSE - mean': 1731377.3963535158, 'MSE - std': 303216.1493413226, 'R2 - mean': 0.6967617786829094, 'R2 - std': 0.05457981407220064} 
+ 
+
+{'MSE - mean': 1648984.8658868943, 'MSE - std': 317342.3118398744, 'R2 - mean': 0.7115577238262778, 'R2 - std': 0.05708629304891889} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 14 finished with value: 1648984.8658868943 and parameters: {'max_depth': 12, 'n_estimators': 16}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1602850.1531644831, 'MSE - std': 0.0, 'R2 - mean': 0.7226494668080234, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1934382.9649395002, 'MSE - std': 331532.81177501706, 'R2 - mean': 0.6616172269134684, 'R2 - std': 0.061032239894555085} 
+ 
+
+{'MSE - mean': 1802664.18299636, 'MSE - std': 328596.5285201112, 'R2 - mean': 0.6843585849982065, 'R2 - std': 0.059309596801649586} 
+ 
+
+{'MSE - mean': 1842758.5044252467, 'MSE - std': 292923.91972853616, 'R2 - mean': 0.6772814493798387, 'R2 - std': 0.052806048424995734} 
+ 
+
+{'MSE - mean': 1782884.3895445932, 'MSE - std': 288068.00712725933, 'R2 - mean': 0.6881900464254395, 'R2 - std': 0.05202665622758741} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 15 finished with value: 1782884.3895445932 and parameters: {'max_depth': 9, 'n_estimators': 34}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 2055900.4357705817, 'MSE - std': 0.0, 'R2 - mean': 0.6442555276144558, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2340986.907469416, 'MSE - std': 285086.47169883444, 'R2 - mean': 0.5906776049777096, 'R2 - std': 0.05357792263674627} 
+ 
+
+{'MSE - mean': 2238118.096698829, 'MSE - std': 274493.80446408974, 'R2 - mean': 0.6082133943821786, 'R2 - std': 0.050286549057594755} 
+ 
+
+{'MSE - mean': 2252881.4045281135, 'MSE - std': 239089.94602672878, 'R2 - mean': 0.6055366008444674, 'R2 - std': 0.043795529829218985} 
+ 
+
+{'MSE - mean': 2159494.752673027, 'MSE - std': 283928.6333071458, 'R2 - mean': 0.6223648256804656, 'R2 - std': 0.0516448966592173} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 16 finished with value: 2159494.752673027 and parameters: {'max_depth': 6, 'n_estimators': 10}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 2046202.097434576, 'MSE - std': 0.0, 'R2 - mean': 0.6459336877988354, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2352782.6170917205, 'MSE - std': 306580.5196571447, 'R2 - mean': 0.5885826773073783, 'R2 - std': 0.05735101049145708} 
+ 
+
+{'MSE - mean': 2246671.7673383392, 'MSE - std': 291856.3029293683, 'R2 - mean': 0.6066956938158773, 'R2 - std': 0.05337529082201917} 
+ 
+
+{'MSE - mean': 2233272.2452943875, 'MSE - std': 253818.277006835, 'R2 - mean': 0.6089581350909945, 'R2 - std': 0.04639016247353963} 
+ 
+
+{'MSE - mean': 2157137.936578593, 'MSE - std': 273358.2009903898, 'R2 - mean': 0.6227857738498237, 'R2 - std': 0.0498643370961234} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 17 finished with value: 2157137.936578593 and parameters: {'max_depth': 6, 'n_estimators': 18}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1526368.1969962749, 'MSE - std': 0.0, 'R2 - mean': 0.7358835868416016, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1903594.8283981741, 'MSE - std': 377226.63140189927, 'R2 - mean': 0.6669205678449563, 'R2 - std': 0.06896301899664525} 
+ 
+
+{'MSE - mean': 1789191.6937350596, 'MSE - std': 347912.02250096167, 'R2 - mean': 0.6866562435807357, 'R2 - std': 0.06284578309573974} 
+ 
+
+{'MSE - mean': 1794872.7432982568, 'MSE - std': 301461.2819632909, 'R2 - mean': 0.6856244765098248, 'R2 - std': 0.05445537594722327} 
+ 
+
+{'MSE - mean': 1735018.1968918878, 'MSE - std': 295014.22087826434, 'R2 - mean': 0.696525172075844, 'R2 - std': 0.053363011824060884} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 18 finished with value: 1735018.1968918878 and parameters: {'max_depth': 10, 'n_estimators': 21}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 2319180.966098862, 'MSE - std': 0.0, 'R2 - mean': 0.5986985581613534, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2654200.1959139355, 'MSE - std': 335019.2298150738, 'R2 - mean': 0.5358930800462116, 'R2 - std': 0.06280547811514181} 
+ 
+
+{'MSE - mean': 2555798.464022827, 'MSE - std': 306905.6172651934, 'R2 - mean': 0.5525817002776, 'R2 - std': 0.056450912109277614} 
+ 
+
+{'MSE - mean': 2600436.0657725567, 'MSE - std': 276804.6963142053, 'R2 - mean': 0.5446630568503138, 'R2 - std': 0.050775425647280895} 
+ 
+
+{'MSE - mean': 2509303.2556735724, 'MSE - std': 307436.86868596234, 'R2 - mean': 0.5611963070895011, 'R2 - std': 0.0561774735424831} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 19 finished with value: 2509303.2556735724 and parameters: {'max_depth': 4, 'n_estimators': 37}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1904832.0613041401, 'MSE - std': 0.0, 'R2 - mean': 0.6703957716815587, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2182222.824868536, 'MSE - std': 277390.76356439583, 'R2 - mean': 0.6184187355634365, 'R2 - std': 0.05197703611812221} 
+ 
+
+{'MSE - mean': 2087940.5095529521, 'MSE - std': 262821.9938217247, 'R2 - mean': 0.6344889539034203, 'R2 - std': 0.04814123690495731} 
+ 
+
+{'MSE - mean': 2094434.2693546596, 'MSE - std': 227888.25567897712, 'R2 - mean': 0.6332704592237522, 'R2 - std': 0.041744918324360815} 
+ 
+
+{'MSE - mean': 2041729.1956364072, 'MSE - std': 229472.7540334822, 'R2 - mean': 0.6429894567244958, 'R2 - std': 0.042094491497152865} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 20 finished with value: 2041729.1956364072 and parameters: {'max_depth': 7, 'n_estimators': 10}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1544494.5873592638, 'MSE - std': 0.0, 'R2 - mean': 0.7327470715397217, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1783850.4876777849, 'MSE - std': 239355.90031852107, 'R2 - mean': 0.6880573304569098, 'R2 - std': 0.044689741082811985} 
+ 
+
+{'MSE - mean': 1707730.6458273616, 'MSE - std': 223120.20375766075, 'R2 - mean': 0.7010337705902234, 'R2 - std': 0.0408439057359373} 
+ 
+
+{'MSE - mean': 1717842.2430547928, 'MSE - std': 194019.84998735157, 'R2 - mean': 0.6991995873965953, 'R2 - std': 0.0355142388456794} 
+ 
+
+{'MSE - mean': 1638916.8294588109, 'MSE - std': 234588.67277956702, 'R2 - mean': 0.7133758999514017, 'R2 - std': 0.04257793183371673} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 21 finished with value: 1638916.8294588109 and parameters: {'max_depth': 12, 'n_estimators': 16}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1523133.7508839974, 'MSE - std': 0.0, 'R2 - mean': 0.7364432619628535, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1821247.8100717317, 'MSE - std': 298114.05918773427, 'R2 - mean': 0.6814307190638429, 'R2 - std': 0.05501254289901053} 
+ 
+
+{'MSE - mean': 1652989.969988289, 'MSE - std': 340395.94056923786, 'R2 - mean': 0.7105997693715477, 'R2 - std': 0.060985683367905844} 
+ 
+
+{'MSE - mean': 1720060.3594630777, 'MSE - std': 316855.42239310284, 'R2 - mean': 0.6987919945467856, 'R2 - std': 0.056636656158575466} 
+ 
+
+{'MSE - mean': 1670542.442269307, 'MSE - std': 300209.898991965, 'R2 - mean': 0.7078629632223341, 'R2 - std': 0.05380797847448731} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 22 finished with value: 1670542.442269307 and parameters: {'max_depth': 12, 'n_estimators': 13}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1728274.727134359, 'MSE - std': 0.0, 'R2 - mean': 0.7009465194693449, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2055562.7123688906, 'MSE - std': 327287.9852345316, 'R2 - mean': 0.6404596413787301, 'R2 - std': 0.060486878090614815} 
+ 
+
+{'MSE - mean': 1899929.9633330554, 'MSE - std': 346200.4072751628, 'R2 - mean': 0.6673611524527153, 'R2 - std': 0.06234172661142314} 
+ 
+
+{'MSE - mean': 1914485.257817247, 'MSE - std': 300876.40534060006, 'R2 - mean': 0.6647475869400743, 'R2 - std': 0.054178965768429614} 
+ 
+
+{'MSE - mean': 1832337.5340775154, 'MSE - std': 315300.3062082589, 'R2 - mean': 0.6795405525263248, 'R2 - std': 0.05677689308806279} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 23 finished with value: 1832337.5340775154 and parameters: {'max_depth': 9, 'n_estimators': 20}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1576628.1557900298, 'MSE - std': 0.0, 'R2 - mean': 0.7271868123227023, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1922730.5160744577, 'MSE - std': 346102.36028442776, 'R2 - mean': 0.6636287997811526, 'R2 - std': 0.06355801254154969} 
+ 
+
+{'MSE - mean': 1819659.6357674384, 'MSE - std': 317970.29514955584, 'R2 - mean': 0.6813532021029817, 'R2 - std': 0.057631497587285696} 
+ 
+
+{'MSE - mean': 1824227.5768222031, 'MSE - std': 275483.99173919554, 'R2 - mean': 0.6805076330167543, 'R2 - std': 0.04993182448953511} 
+ 
+
+{'MSE - mean': 1753042.0042024632, 'MSE - std': 284574.571528185, 'R2 - mean': 0.6933804247641586, 'R2 - std': 0.05154982780738594} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 24 finished with value: 1753042.0042024632 and parameters: {'max_depth': 10, 'n_estimators': 31}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1534744.4174475372, 'MSE - std': 0.0, 'R2 - mean': 0.7344342004446858, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1864610.406883185, 'MSE - std': 329865.98943564785, 'R2 - mean': 0.673805935665893, 'R2 - std': 0.060628264778792795} 
+ 
+
+{'MSE - mean': 1792720.4836120307, 'MSE - std': 287884.2987384067, 'R2 - mean': 0.6860655404036291, 'R2 - std': 0.05245112146919246} 
+ 
+
+{'MSE - mean': 1811919.7430753931, 'MSE - std': 251523.08400403862, 'R2 - mean': 0.682658313685753, 'R2 - std': 0.04580576043744949} 
+ 
+
+{'MSE - mean': 1722321.4294614461, 'MSE - std': 287615.2301937, 'R2 - mean': 0.6987280413869446, 'R2 - std': 0.052071861354902466} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 25 finished with value: 1722321.4294614461 and parameters: {'max_depth': 12, 'n_estimators': 10}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1820668.4697975297, 'MSE - std': 0.0, 'R2 - mean': 0.6849590899890279, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2282366.0983024323, 'MSE - std': 461697.62850490236, 'R2 - mean': 0.6006302537880985, 'R2 - std': 0.08432883620092935} 
+ 
+
+{'MSE - mean': 2110975.0345243975, 'MSE - std': 448173.6199256937, 'R2 - mean': 0.6303048638605091, 'R2 - std': 0.0806353936508942} 
+ 
+
+{'MSE - mean': 2095164.724418283, 'MSE - std': 389094.58093750116, 'R2 - mean': 0.6330313640341944, 'R2 - std': 0.06999179553002852} 
+ 
+
+{'MSE - mean': 2019271.292876333, 'MSE - std': 379677.3974531462, 'R2 - mean': 0.6468019522816651, 'R2 - std': 0.0683929642283428} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 26 finished with value: 2019271.292876333 and parameters: {'max_depth': 7, 'n_estimators': 17}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1530373.277621437, 'MSE - std': 0.0, 'R2 - mean': 0.7351905643250098, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1834737.831572296, 'MSE - std': 304364.5539508591, 'R2 - mean': 0.6790645309621153, 'R2 - std': 0.05612603336289457} 
+ 
+
+{'MSE - mean': 1743051.8939615553, 'MSE - std': 280305.4466926956, 'R2 - mean': 0.6947934889553401, 'R2 - std': 0.05094004305527989} 
+ 
+
+{'MSE - mean': 1762413.0656494345, 'MSE - std': 245056.9780511796, 'R2 - mean': 0.6913515489544095, 'R2 - std': 0.04451636601032643} 
+ 
+
+{'MSE - mean': 1684823.9312793382, 'MSE - std': 268556.5733369124, 'R2 - mean': 0.7053163754795321, 'R2 - std': 0.048635696702312624} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 27 finished with value: 1684823.9312793382 and parameters: {'max_depth': 10, 'n_estimators': 41}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1623648.2794555603, 'MSE - std': 0.0, 'R2 - mean': 0.7190506454179916, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1958316.1627710052, 'MSE - std': 334667.8833154449, 'R2 - mean': 0.6574321421184552, 'R2 - std': 0.06161850329953639} 
+ 
+
+{'MSE - mean': 1854114.0452758956, 'MSE - std': 310458.62418281997, 'R2 - mean': 0.6753386984963675, 'R2 - std': 0.05632509347718851} 
+ 
+
+{'MSE - mean': 1875969.945904712, 'MSE - std': 271516.95927512005, 'R2 - mean': 0.6714584705767839, 'R2 - std': 0.04923977683270169} 
+ 
+
+{'MSE - mean': 1811674.3085389151, 'MSE - std': 274796.0758022246, 'R2 - mean': 0.6831457881825249, 'R2 - std': 0.049859984649990294} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 28 finished with value: 1811674.3085389151 and parameters: {'max_depth': 9, 'n_estimators': 25}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 2821987.960904209, 'MSE - std': 0.0, 'R2 - mean': 0.5116949241494049, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3186831.047813914, 'MSE - std': 364843.0869097051, 'R2 - mean': 0.44281906419618045, 'R2 - std': 0.06887585995322443} 
+ 
+
+{'MSE - mean': 3080874.2262801626, 'MSE - std': 333457.66563329374, 'R2 - mean': 0.4606966720942068, 'R2 - std': 0.06165879594868796} 
+ 
+
+{'MSE - mean': 3166161.638983023, 'MSE - std': 324372.22349308524, 'R2 - mean': 0.4456269229323061, 'R2 - std': 0.059436077913917494} 
+ 
+
+{'MSE - mean': 3112867.4924393096, 'MSE - std': 309087.26231012755, 'R2 - mean': 0.4557328031337076, 'R2 - std': 0.05687383532707929} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 29 finished with value: 3112867.4924393096 and parameters: {'max_depth': 3, 'n_estimators': 25}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 2166141.3746678955, 'MSE - std': 0.0, 'R2 - mean': 0.6251798934247035, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2463241.137043258, 'MSE - std': 297099.7623753627, 'R2 - mean': 0.5693060595742069, 'R2 - std': 0.0558738338504966} 
+ 
+
+{'MSE - mean': 2371229.7079802104, 'MSE - std': 275277.5303073483, 'R2 - mean': 0.5849075355069112, 'R2 - std': 0.050676118392454915} 
+ 
+
+{'MSE - mean': 2383219.6083141393, 'MSE - std': 239300.15075034415, 'R2 - mean': 0.5827124291899036, 'R2 - std': 0.0440511884825311} 
+ 
+
+{'MSE - mean': 2296074.862569094, 'MSE - std': 276022.60154412047, 'R2 - mean': 0.5984914552092541, 'R2 - std': 0.05048085195255861} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 30 finished with value: 2296074.862569094 and parameters: {'max_depth': 5, 'n_estimators': 15}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1492926.4813188103, 'MSE - std': 0.0, 'R2 - mean': 0.7416702024249034, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1870991.298796936, 'MSE - std': 378064.8174781258, 'R2 - mean': 0.6726135284804539, 'R2 - std': 0.06905667394444959} 
+ 
+
+{'MSE - mean': 1764435.6694964692, 'MSE - std': 343506.7322209024, 'R2 - mean': 0.6909816678936739, 'R2 - std': 0.06208053829653051} 
+ 
+
+{'MSE - mean': 1751670.2572655806, 'MSE - std': 298306.09038215363, 'R2 - mean': 0.6931849936100916, 'R2 - std': 0.05389859793193256} 
+ 
+
+{'MSE - mean': 1657254.2809694284, 'MSE - std': 326874.17329469585, 'R2 - mean': 0.7100802540406287, 'R2 - std': 0.05887143948711621} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 31 finished with value: 1657254.2809694284 and parameters: {'max_depth': 12, 'n_estimators': 17}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1473983.6832168354, 'MSE - std': 0.0, 'R2 - mean': 0.7449479855310523, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1849959.2993941403, 'MSE - std': 375975.6161773049, 'R2 - mean': 0.6762902174605279, 'R2 - std': 0.06865776807052448} 
+ 
+
+{'MSE - mean': 1716447.251106019, 'MSE - std': 360401.6880039761, 'R2 - mean': 0.6993945564277547, 'R2 - std': 0.06488615956048704} 
+ 
+
+{'MSE - mean': 1762211.164235155, 'MSE - std': 322024.9055147131, 'R2 - mean': 0.6913416201449364, 'R2 - std': 0.05789826962187326} 
+ 
+
+{'MSE - mean': 1671834.529642167, 'MSE - std': 340046.72640510136, 'R2 - mean': 0.7075373756810841, 'R2 - std': 0.06108172959005285} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 32 finished with value: 1671834.529642167 and parameters: {'max_depth': 12, 'n_estimators': 12}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1702084.5486276227, 'MSE - std': 0.0, 'R2 - mean': 0.7054783591793112, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2039541.2555914181, 'MSE - std': 337456.7069637956, 'R2 - mean': 0.6432413946705245, 'R2 - std': 0.062236964508786685} 
+ 
+
+{'MSE - mean': 1919466.4345086564, 'MSE - std': 323657.14065867173, 'R2 - mean': 0.6639120139689831, 'R2 - std': 0.05862458675227997} 
+ 
+
+{'MSE - mean': 1963813.8180769938, 'MSE - std': 290629.540502307, 'R2 - mean': 0.6560850183910574, 'R2 - std': 0.05254918846411719} 
+ 
+
+{'MSE - mean': 1844644.3548515565, 'MSE - std': 352672.46520223405, 'R2 - mean': 0.67732906705596, 'R2 - std': 0.06335907339361} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 33 finished with value: 1844644.3548515565 and parameters: {'max_depth': 10, 'n_estimators': 8}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1567119.5291314884, 'MSE - std': 0.0, 'R2 - mean': 0.728832145586366, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1822058.8384087845, 'MSE - std': 254939.30927729595, 'R2 - mean': 0.681358906537297, 'R2 - std': 0.04747323904906897} 
+ 
+
+{'MSE - mean': 1725540.816849883, 'MSE - std': 248919.3133952156, 'R2 - mean': 0.697912968260094, 'R2 - std': 0.04528295709113649} 
+ 
+
+{'MSE - mean': 1803603.897087477, 'MSE - std': 254464.44137521897, 'R2 - mean': 0.6841728748458864, 'R2 - std': 0.04587243347896139} 
+ 
+
+{'MSE - mean': 1749861.2308266878, 'MSE - std': 251703.8304174095, 'R2 - mean': 0.693998483322847, 'R2 - std': 0.04549279558782326} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 34 finished with value: 1749861.2308266878 and parameters: {'max_depth': 11, 'n_estimators': 15}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1871269.9002341968, 'MSE - std': 0.0, 'R2 - mean': 0.6762032286353146, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2235203.3852707753, 'MSE - std': 363933.4850365787, 'R2 - mean': 0.6090255168162126, 'R2 - std': 0.06717771181910193} 
+ 
+
+{'MSE - mean': 2094216.3290432265, 'MSE - std': 357845.0610734573, 'R2 - mean': 0.6333245882489646, 'R2 - std': 0.06472598438922997} 
+ 
+
+{'MSE - mean': 2096089.8997660386, 'MSE - std': 309919.9035279275, 'R2 - mean': 0.6329318002176064, 'R2 - std': 0.056058475172616536} 
+ 
+
+{'MSE - mean': 2012267.7938601733, 'MSE - std': 323951.9393925345, 'R2 - mean': 0.6480678183246245, 'R2 - std': 0.05856994355031425} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 35 finished with value: 2012267.7938601733 and parameters: {'max_depth': 7, 'n_estimators': 21}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1663931.9022996738, 'MSE - std': 0.0, 'R2 - mean': 0.7120801346358943, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1961836.7180458133, 'MSE - std': 297904.8157461395, 'R2 - mean': 0.6568767305053783, 'R2 - std': 0.05520340413051594} 
+ 
+
+{'MSE - mean': 1908614.8151420138, 'MSE - std': 254617.34961944452, 'R2 - mean': 0.6658146162753449, 'R2 - std': 0.046812200928874496} 
+ 
+
+{'MSE - mean': 1903532.364976484, 'MSE - std': 220680.74212417836, 'R2 - mean': 0.6666480444226439, 'R2 - std': 0.04056624735274536} 
+ 
+
+{'MSE - mean': 1847565.461189593, 'MSE - std': 226912.25007378293, 'R2 - mean': 0.6768924289044949, 'R2 - std': 0.04166876519739025} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 36 finished with value: 1847565.461189593 and parameters: {'max_depth': 9, 'n_estimators': 11}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1473342.8695307632, 'MSE - std': 0.0, 'R2 - mean': 0.7450588692697212, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1757845.4497634463, 'MSE - std': 284502.5802326831, 'R2 - mean': 0.6925261720918026, 'R2 - std': 0.052532697177918586} 
+ 
+
+{'MSE - mean': 1762570.9759504918, 'MSE - std': 232391.494325542, 'R2 - mean': 0.6913447855412075, 'R2 - std': 0.042925293983327804} 
+ 
+
+{'MSE - mean': 1843705.0521998687, 'MSE - std': 245463.98913621294, 'R2 - mean': 0.6770866207499835, 'R2 - std': 0.044629826767616274} 
+ 
+
+{'MSE - mean': 1771145.827379952, 'MSE - std': 263175.6455221477, 'R2 - mean': 0.6902054252864497, 'R2 - std': 0.04776891541274491} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 37 finished with value: 1771145.827379952 and parameters: {'max_depth': 11, 'n_estimators': 8}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 3343568.071573827, 'MSE - std': 0.0, 'R2 - mean': 0.421442868140958, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3733306.5995829646, 'MSE - std': 389738.52800913784, 'R2 - mean': 0.3473349966569477, 'R2 - std': 0.07410787148401027} 
+ 
+
+{'MSE - mean': 3625769.0349878054, 'MSE - std': 352693.54366258124, 'R2 - mean': 0.365346361968383, 'R2 - std': 0.06565162834759698} 
+ 
+
+{'MSE - mean': 3729368.166352558, 'MSE - std': 354249.7591594742, 'R2 - mean': 0.3470376092910765, 'R2 - std': 0.06510171658500703} 
+ 
+
+{'MSE - mean': 3664832.213998656, 'MSE - std': 342131.3637720704, 'R2 - mean': 0.35924240650795536, 'R2 - std': 0.06313806381472428} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 38 finished with value: 3664832.213998656 and parameters: {'max_depth': 2, 'n_estimators': 48}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1715032.571315367, 'MSE - std': 0.0, 'R2 - mean': 0.7032378871120143, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2038370.7843110817, 'MSE - std': 323338.21299571486, 'R2 - mean': 0.6434686584680522, 'R2 - std': 0.05976922864396211} 
+ 
+
+{'MSE - mean': 1916117.112181656, 'MSE - std': 315579.3413503167, 'R2 - mean': 0.6645144248655025, 'R2 - std': 0.05716137123654032} 
+ 
+
+{'MSE - mean': 1935273.4303046144, 'MSE - std': 275306.4366981069, 'R2 - mean': 0.6610973342497949, 'R2 - std': 0.04985575489408476} 
+ 
+
+{'MSE - mean': 1878311.348296266, 'MSE - std': 271318.3046107105, 'R2 - mean': 0.6715217296449502, 'R2 - std': 0.04922549252435553} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 39 finished with value: 1878311.348296266 and parameters: {'max_depth': 8, 'n_estimators': 30}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1506408.6555887426, 'MSE - std': 0.0, 'R2 - mean': 0.7393373029863811, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1925280.2026604428, 'MSE - std': 418871.54707170033, 'R2 - mean': 0.6630657823198091, 'R2 - std': 0.07627152066657206} 
+ 
+
+{'MSE - mean': 1850091.8027570266, 'MSE - std': 358155.7011378783, 'R2 - mean': 0.6759348691763293, 'R2 - std': 0.06488032600798341} 
+ 
+
+{'MSE - mean': 1857824.1817961663, 'MSE - std': 310460.9456115031, 'R2 - mean': 0.6745564071758446, 'R2 - std': 0.056238714420201646} 
+ 
+
+{'MSE - mean': 1797881.863451621, 'MSE - std': 302458.46841189003, 'R2 - mean': 0.685498307995168, 'R2 - std': 0.0548555847099384} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 40 finished with value: 1797881.863451621 and parameters: {'max_depth': 10, 'n_estimators': 18}. Best is trial 11 with value: 1632640.4798322148.
+{'MSE - mean': 1434579.4867577595, 'MSE - std': 0.0, 'R2 - mean': 0.7517663240241108, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1728361.5050690118, 'MSE - std': 293782.01831125247, 'R2 - mean': 0.6976606327502567, 'R2 - std': 0.05410569127385412} 
+ 
+
+{'MSE - mean': 1624328.4897093836, 'MSE - std': 281397.0849617828, 'R2 - mean': 0.7155815760608908, 'R2 - std': 0.05093071408394281} 
+ 
+
+{'MSE - mean': 1648952.7654820806, 'MSE - std': 247401.10032239373, 'R2 - mean': 0.7112209156687761, 'R2 - std': 0.044749293904946925} 
+ 
+
+{'MSE - mean': 1586426.604695057, 'MSE - std': 254173.02509047624, 'R2 - mean': 0.7225374815064465, 'R2 - std': 0.04598106233468688} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 41 finished with value: 1586426.604695057 and parameters: {'max_depth': 12, 'n_estimators': 96}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1481694.4583212337, 'MSE - std': 0.0, 'R2 - mean': 0.7436137450330831, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1766360.49408862, 'MSE - std': 284666.0357673861, 'R2 - mean': 0.6910387264835917, 'R2 - std': 0.052575018549491426} 
+ 
+
+{'MSE - mean': 1680754.0874596422, 'MSE - std': 262068.84908015604, 'R2 - mean': 0.705709667755334, 'R2 - std': 0.04767838174600102} 
+ 
+
+{'MSE - mean': 1712251.257581967, 'MSE - std': 233422.95607071772, 'R2 - mean': 0.700141144004765, 'R2 - std': 0.04240219846564567} 
+ 
+
+{'MSE - mean': 1641679.2854907578, 'MSE - std': 252013.16258482085, 'R2 - mean': 0.7128719656768467, 'R2 - std': 0.045679890866347155} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 42 finished with value: 1641679.2854907578 and parameters: {'max_depth': 11, 'n_estimators': 69}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1495141.0202760918, 'MSE - std': 0.0, 'R2 - mean': 0.7412870078016482, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1801620.5394517612, 'MSE - std': 306479.5191756693, 'R2 - mean': 0.6848451567303526, 'R2 - std': 0.05644185107129557} 
+ 
+
+{'MSE - mean': 1697113.1504872728, 'MSE - std': 290625.85193414806, 'R2 - mean': 0.702835144430647, 'R2 - std': 0.052640931632615386} 
+ 
+
+{'MSE - mean': 1715989.4221041824, 'MSE - std': 253804.01937282842, 'R2 - mean': 0.6994800150161646, 'R2 - std': 0.04595727844994784} 
+ 
+
+{'MSE - mean': 1647360.0923084884, 'MSE - std': 265279.33171030675, 'R2 - mean': 0.7118756064052395, 'R2 - std': 0.048002707189912355} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 43 finished with value: 1647360.0923084884 and parameters: {'max_depth': 11, 'n_estimators': 100}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1509992.5753171155, 'MSE - std': 0.0, 'R2 - mean': 0.7387171564021111, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1819334.6900014426, 'MSE - std': 309342.11468432704, 'R2 - mean': 0.6817466902585796, 'R2 - std': 0.05697046614353152} 
+ 
+
+{'MSE - mean': 1719994.870553938, 'MSE - std': 289018.73422664695, 'R2 - mean': 0.6988261381440628, 'R2 - std': 0.05241346285596281} 
+ 
+
+{'MSE - mean': 1728813.2624262194, 'MSE - std': 250763.1624783019, 'R2 - mean': 0.6972332369360872, 'R2 - std': 0.04547516156310119} 
+ 
+
+{'MSE - mean': 1660700.6654586573, 'MSE - std': 262417.6716373301, 'R2 - mean': 0.7095427493767117, 'R2 - std': 0.04754459634338782} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 44 finished with value: 1660700.6654586573 and parameters: {'max_depth': 11, 'n_estimators': 100}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1708225.7458139039, 'MSE - std': 0.0, 'R2 - mean': 0.7044157119251749, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2006620.6155494004, 'MSE - std': 298394.8697354966, 'R2 - mean': 0.6490542790649527, 'R2 - std': 0.05536143286022227} 
+ 
+
+{'MSE - mean': 1896489.9489418932, 'MSE - std': 289166.37594610447, 'R2 - mean': 0.6679679449002077, 'R2 - std': 0.0525234456493477} 
+ 
+
+{'MSE - mean': 1922443.397677648, 'MSE - std': 254428.06299068354, 'R2 - mean': 0.6633562625795, 'R2 - std': 0.04618264932462593} 
+ 
+
+{'MSE - mean': 1859301.9538603972, 'MSE - std': 260258.1009287918, 'R2 - mean': 0.6748484475574198, 'R2 - std': 0.047271037022472914} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 45 finished with value: 1859301.9538603972 and parameters: {'max_depth': 8, 'n_estimators': 69}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1546935.4788841843, 'MSE - std': 0.0, 'R2 - mean': 0.7323247098082999, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1913533.8318544833, 'MSE - std': 366598.3529702991, 'R2 - mean': 0.6652018788883802, 'R2 - std': 0.06712283091991966} 
+ 
+
+{'MSE - mean': 1812081.3900726382, 'MSE - std': 331935.8835990589, 'R2 - mean': 0.6826559145390135, 'R2 - std': 0.0601077061736395} 
+ 
+
+{'MSE - mean': 1825463.5507501855, 'MSE - std': 288397.84983372374, 'R2 - mean': 0.6802722547782507, 'R2 - std': 0.05221827034341213} 
+ 
+
+{'MSE - mean': 1766352.1184849446, 'MSE - std': 283752.18330219894, 'R2 - mean': 0.6910511950912485, 'R2 - std': 0.05144064952166536} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 46 finished with value: 1766352.1184849446 and parameters: {'max_depth': 9, 'n_estimators': 100}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1426686.490908739, 'MSE - std': 0.0, 'R2 - mean': 0.75313209524289, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1773216.3680078494, 'MSE - std': 346529.8770991106, 'R2 - mean': 0.6897412585655991, 'R2 - std': 0.06339083667729101} 
+ 
+
+{'MSE - mean': 1683832.5049836442, 'MSE - std': 309893.93952309375, 'R2 - mean': 0.7051065877967492, 'R2 - std': 0.05613482698997643} 
+ 
+
+{'MSE - mean': 1711453.7386690243, 'MSE - std': 272606.83770911593, 'R2 - mean': 0.7002331031180518, 'R2 - std': 0.04934158144644773} 
+ 
+
+{'MSE - mean': 1647027.1269544219, 'MSE - std': 275780.2450515774, 'R2 - mean': 0.7119054441827762, 'R2 - std': 0.049926420975613284} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 47 finished with value: 1647027.1269544219 and parameters: {'max_depth': 11, 'n_estimators': 73}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1591609.0871733872, 'MSE - std': 0.0, 'R2 - mean': 0.7245945741782422, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1898670.1338832807, 'MSE - std': 307061.0467098934, 'R2 - mean': 0.6678941770567557, 'R2 - std': 0.056700397121486557} 
+ 
+
+{'MSE - mean': 1774208.7694692474, 'MSE - std': 306331.3892959537, 'R2 - mean': 0.6893588160121049, 'R2 - std': 0.05536019755615499} 
+ 
+
+{'MSE - mean': 1785181.1820374604, 'MSE - std': 265970.6216176762, 'R2 - mean': 0.6873805913610065, 'R2 - std': 0.04806561893290278} 
+ 
+
+{'MSE - mean': 1719208.880688884, 'MSE - std': 272032.4896622901, 'R2 - mean': 0.6993298678121012, 'R2 - std': 0.04918723218012136} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 48 finished with value: 1719208.880688884 and parameters: {'max_depth': 10, 'n_estimators': 63}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1513412.3768111195, 'MSE - std': 0.0, 'R2 - mean': 0.7381254081554643, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1811616.7778770658, 'MSE - std': 298204.4010659462, 'R2 - mean': 0.6831126651938584, 'R2 - std': 0.05501274296160591} 
+ 
+
+{'MSE - mean': 1716081.06313054, 'MSE - std': 278456.5593786438, 'R2 - mean': 0.6995206460420617, 'R2 - std': 0.050557342985991155} 
+ 
+
+{'MSE - mean': 1728119.5036534814, 'MSE - std': 242050.22980038114, 'R2 - mean': 0.6973613614484048, 'R2 - std': 0.04394338661529825} 
+ 
+
+{'MSE - mean': 1659248.8243462734, 'MSE - std': 256599.5574237784, 'R2 - mean': 0.7098010808325942, 'R2 - std': 0.04651670082031586} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 49 finished with value: 1659248.8243462734 and parameters: {'max_depth': 11, 'n_estimators': 77}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 2126054.384801409, 'MSE - std': 0.0, 'R2 - mean': 0.6321163796530518, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2430651.3800411904, 'MSE - std': 304596.9952397812, 'R2 - mean': 0.5749858435932022, 'R2 - std': 0.057130536059849635} 
+ 
+
+{'MSE - mean': 2306958.7922172872, 'MSE - std': 304060.18960815994, 'R2 - mean': 0.5961612775035794, 'R2 - std': 0.05543221178078105} 
+ 
+
+{'MSE - mean': 2326073.4052926595, 'MSE - std': 265396.9752606013, 'R2 - mean': 0.5927196664377081, 'R2 - std': 0.04837439030487313} 
+ 
+
+{'MSE - mean': 2237251.0891187424, 'MSE - std': 296489.5596542618, 'R2 - mean': 0.6087746545886766, 'R2 - std': 0.05388057059836608} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 50 finished with value: 2237251.0891187424 and parameters: {'max_depth': 5, 'n_estimators': 61}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1503636.3871986638, 'MSE - std': 0.0, 'R2 - mean': 0.7398170047942023, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1810735.3462788137, 'MSE - std': 307098.9590801499, 'R2 - mean': 0.6832522230111893, 'R2 - std': 0.05656478178301305} 
+ 
+
+{'MSE - mean': 1705493.7109289442, 'MSE - std': 291590.0959697318, 'R2 - mean': 0.701368796094806, 'R2 - std': 0.052815434606700365} 
+ 
+
+{'MSE - mean': 1714207.4965299098, 'MSE - std': 252975.05455919332, 'R2 - mean': 0.6997937558860523, 'R2 - std': 0.045820790635895337} 
+ 
+
+{'MSE - mean': 1634699.3707600874, 'MSE - std': 276556.0898571953, 'R2 - mean': 0.7140787985334585, 'R2 - std': 0.049958839631757866} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 51 finished with value: 1634699.3707600874 and parameters: {'max_depth': 11, 'n_estimators': 81}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1623595.599055067, 'MSE - std': 0.0, 'R2 - mean': 0.719059761015689, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1965008.2847588751, 'MSE - std': 341412.6857038081, 'R2 - mean': 0.6562524305416917, 'R2 - std': 0.06280733047399734} 
+ 
+
+{'MSE - mean': 1836061.0925687507, 'MSE - std': 333111.34983229224, 'R2 - mean': 0.6785038528824638, 'R2 - std': 0.060167201197065034} 
+ 
+
+{'MSE - mean': 1837903.0957023054, 'MSE - std': 288500.5328711733, 'R2 - mean': 0.6781298040489551, 'R2 - std': 0.05211035225850643} 
+ 
+
+{'MSE - mean': 1772439.4945834936, 'MSE - std': 289357.8722954198, 'R2 - mean': 0.690008679485101, 'R2 - std': 0.05231464208531279} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 52 finished with value: 1772439.4945834936 and parameters: {'max_depth': 9, 'n_estimators': 83}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1496045.896564457, 'MSE - std': 0.0, 'R2 - mean': 0.7411304317670417, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1777946.3275149516, 'MSE - std': 281900.4309504946, 'R2 - mean': 0.6890196950335679, 'R2 - std': 0.052110736733473884} 
+ 
+
+{'MSE - mean': 1673791.4820377643, 'MSE - std': 273267.32757406234, 'R2 - mean': 0.7069413596224177, 'R2 - std': 0.04952499078116095} 
+ 
+
+{'MSE - mean': 1693078.7837578733, 'MSE - std': 239002.6658063252, 'R2 - mean': 0.7035092222861538, 'R2 - std': 0.04329991032312293} 
+ 
+
+{'MSE - mean': 1634446.3190559626, 'MSE - std': 243821.41636473854, 'R2 - mean': 0.7141581198003812, 'R2 - std': 0.04419843730570659} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 53 finished with value: 1634446.3190559626 and parameters: {'max_depth': 11, 'n_estimators': 86}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1479954.640399619, 'MSE - std': 0.0, 'R2 - mean': 0.7439147959000428, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1766164.6936142142, 'MSE - std': 286210.0532145953, 'R2 - mean': 0.6910704262075664, 'R2 - std': 0.052844369692476356} 
+ 
+
+{'MSE - mean': 1652606.930126379, 'MSE - std': 283551.63140208845, 'R2 - mean': 0.7106481629786173, 'R2 - std': 0.05126656310842244} 
+ 
+
+{'MSE - mean': 1681544.9050875292, 'MSE - std': 250625.94625785624, 'R2 - mean': 0.7055263545642778, 'R2 - std': 0.04527575658133162} 
+ 
+
+{'MSE - mean': 1611652.2690764745, 'MSE - std': 264179.1328330301, 'R2 - mean': 0.7181291873873381, 'R2 - std': 0.04769948519505858} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 54 finished with value: 1611652.2690764745 and parameters: {'max_depth': 12, 'n_estimators': 86}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1406329.9416028967, 'MSE - std': 0.0, 'R2 - mean': 0.7566545079854521, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1708819.1296200044, 'MSE - std': 302489.1880171079, 'R2 - mean': 0.7010596904642143, 'R2 - std': 0.05559481752123768} 
+ 
+
+{'MSE - mean': 1626313.4486238013, 'MSE - std': 273155.96406594163, 'R2 - mean': 0.715212558063612, 'R2 - std': 0.049609775374603655} 
+ 
+
+{'MSE - mean': 1658546.319366661, 'MSE - std': 243058.6542330332, 'R2 - mean': 0.7095240815332802, 'R2 - std': 0.04407860768272269} 
+ 
+
+{'MSE - mean': 1600462.4974865206, 'MSE - std': 246489.20660928346, 'R2 - mean': 0.7200747327180939, 'R2 - std': 0.04471693064033298} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 55 finished with value: 1600462.4974865206 and parameters: {'max_depth': 12, 'n_estimators': 87}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1479425.156315187, 'MSE - std': 0.0, 'R2 - mean': 0.7440064156268427, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1830515.2255664978, 'MSE - std': 351090.0692513108, 'R2 - mean': 0.6797264435788948, 'R2 - std': 0.06427997204794783} 
+ 
+
+{'MSE - mean': 1727443.7419243613, 'MSE - std': 321595.42798104143, 'R2 - mean': 0.6974801528363517, 'R2 - std': 0.05818073784154503} 
+ 
+
+{'MSE - mean': 1752836.4065083526, 'MSE - std': 281961.1262528173, 'R2 - mean': 0.6929934391496977, 'R2 - std': 0.050981766259692966} 
+ 
+
+{'MSE - mean': 1701783.7394227877, 'MSE - std': 272079.32784466346, 'R2 - mean': 0.7023517753134121, 'R2 - std': 0.04929123873244324} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 56 finished with value: 1701783.7394227877 and parameters: {'max_depth': 10, 'n_estimators': 86}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1672374.741495597, 'MSE - std': 0.0, 'R2 - mean': 0.7106192208080979, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2005752.787950918, 'MSE - std': 333378.046455321, 'R2 - mean': 0.6491492618619905, 'R2 - std': 0.06146995894610746} 
+ 
+
+{'MSE - mean': 1908436.9306101345, 'MSE - std': 305015.90136502864, 'R2 - mean': 0.6658328368757171, 'R2 - std': 0.05545917945391347} 
+ 
+
+{'MSE - mean': 1917823.6881593177, 'MSE - std': 264651.3909202106, 'R2 - mean': 0.6641343116426973, 'R2 - std': 0.04811907525272746} 
+ 
+
+{'MSE - mean': 1854065.8959274446, 'MSE - std': 268872.6673612112, 'R2 - mean': 0.6757385241394224, 'R2 - std': 0.04889772298603201} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 57 finished with value: 1854065.8959274446 and parameters: {'max_depth': 8, 'n_estimators': 52}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1451039.3152777334, 'MSE - std': 0.0, 'R2 - mean': 0.7489181836616132, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1744587.7222538595, 'MSE - std': 293548.406976126, 'R2 - mean': 0.694827047056845, 'R2 - std': 0.054091136604768275} 
+ 
+
+{'MSE - mean': 1649489.854370828, 'MSE - std': 274835.07862706424, 'R2 - mean': 0.7111749392102564, 'R2 - std': 0.04985052184798347} 
+ 
+
+{'MSE - mean': 1688963.5104704818, 'MSE - std': 247639.35250799623, 'R2 - mean': 0.7042119886113861, 'R2 - std': 0.0448247023360349} 
+ 
+
+{'MSE - mean': 1619904.3509320305, 'MSE - std': 261030.39898274845, 'R2 - mean': 0.7166750636656964, 'R2 - std': 0.04720927992300667} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 58 finished with value: 1619904.3509320305 and parameters: {'max_depth': 12, 'n_estimators': 86}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1501507.1427467098, 'MSE - std': 0.0, 'R2 - mean': 0.7401854404105197, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1803383.2668102528, 'MSE - std': 301876.12406354304, 'R2 - mean': 0.6845447365653645, 'R2 - std': 0.05564070384515518} 
+ 
+
+{'MSE - mean': 1672636.27999009, 'MSE - std': 308127.1576987689, 'R2 - mean': 0.7071372012856454, 'R2 - std': 0.05554065364394915} 
+ 
+
+{'MSE - mean': 1692296.4124177594, 'MSE - std': 269009.8909052639, 'R2 - mean': 0.7036413803692001, 'R2 - std': 0.04847922696410713} 
+ 
+
+{'MSE - mean': 1623081.058269088, 'MSE - std': 277589.8379328638, 'R2 - mean': 0.7161298936034223, 'R2 - std': 0.050040385778242116} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 59 finished with value: 1623081.058269088 and parameters: {'max_depth': 12, 'n_estimators': 55}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1405495.897946091, 'MSE - std': 0.0, 'R2 - mean': 0.7567988274356913, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1716566.612686443, 'MSE - std': 311070.714740352, 'R2 - mean': 0.6996926855645633, 'R2 - std': 0.05710614187112789} 
+ 
+
+{'MSE - mean': 1625015.4572975535, 'MSE - std': 285084.5859602552, 'R2 - mean': 0.7154355770264065, 'R2 - std': 0.05166963862942798} 
+ 
+
+{'MSE - mean': 1650948.9477907373, 'MSE - std': 250943.32756934932, 'R2 - mean': 0.7108519338635112, 'R2 - std': 0.04544604516353462} 
+ 
+
+{'MSE - mean': 1592420.0999224784, 'MSE - std': 253141.35784657038, 'R2 - mean': 0.7214783616728602, 'R2 - std': 0.04586892508827778} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 60 finished with value: 1592420.0999224784 and parameters: {'max_depth': 12, 'n_estimators': 56}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1401740.396715848, 'MSE - std': 0.0, 'R2 - mean': 0.7574486637703945, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1751380.2261596518, 'MSE - std': 349639.82944380364, 'R2 - mean': 0.6935499839667694, 'R2 - std': 0.06389867980362518} 
+ 
+
+{'MSE - mean': 1653519.1879654888, 'MSE - std': 317257.3705188586, 'R2 - mean': 0.7104111466470417, 'R2 - std': 0.0573639706984448} 
+ 
+
+{'MSE - mean': 1676844.9665198133, 'MSE - std': 277707.49935300887, 'R2 - mean': 0.7062919610542319, 'R2 - std': 0.050188364394180666} 
+ 
+
+{'MSE - mean': 1618803.5642518885, 'MSE - std': 274175.8225417211, 'R2 - mean': 0.7168457593638367, 'R2 - std': 0.04960471924615351} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 61 finished with value: 1618803.5642518885 and parameters: {'max_depth': 12, 'n_estimators': 59}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1448591.979132616, 'MSE - std': 0.0, 'R2 - mean': 0.7493416605433467, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1721079.4888933399, 'MSE - std': 272487.5097607239, 'R2 - mean': 0.6989669058741339, 'R2 - std': 0.05037475466921282} 
+ 
+
+{'MSE - mean': 1627116.211006483, 'MSE - std': 259148.26611977495, 'R2 - mean': 0.7151110625468071, 'R2 - std': 0.04704265647260177} 
+ 
+
+{'MSE - mean': 1663954.179242869, 'MSE - std': 233322.68553661718, 'R2 - mean': 0.7086059243934928, 'R2 - std': 0.04226948205479375} 
+ 
+
+{'MSE - mean': 1615697.0540516581, 'MSE - std': 229927.3385130531, 'R2 - mean': 0.7174448111310209, 'R2 - std': 0.04173572768719658} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 62 finished with value: 1615697.0540516581 and parameters: {'max_depth': 12, 'n_estimators': 59}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 2730125.684176835, 'MSE - std': 0.0, 'R2 - mean': 0.5275903909715935, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3132551.197496115, 'MSE - std': 402425.51331928, 'R2 - mean': 0.45223843257614466, 'R2 - std': 0.07535195839544889} 
+ 
+
+{'MSE - mean': 3060608.951640779, 'MSE - std': 343970.30296855076, 'R2 - mean': 0.4641818115589036, 'R2 - std': 0.063800995491747} 
+ 
+
+{'MSE - mean': 3132030.712742009, 'MSE - std': 322552.1366688041, 'R2 - mean': 0.45155790071449253, 'R2 - std': 0.05942234128950457} 
+ 
+
+{'MSE - mean': 3049806.4738125, 'MSE - std': 332077.10936744313, 'R2 - mean': 0.46669051458113336, 'R2 - std': 0.061162044808921234} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 63 finished with value: 3049806.4738125 and parameters: {'max_depth': 3, 'n_estimators': 48}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1435221.2314994552, 'MSE - std': 0.0, 'R2 - mean': 0.751655279179444, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1804064.398146112, 'MSE - std': 368843.16664665693, 'R2 - mean': 0.6843174537043463, 'R2 - std': 0.0673378254750977} 
+ 
+
+{'MSE - mean': 1705104.204139174, 'MSE - std': 332088.98564050166, 'R2 - mean': 0.7013667430040814, 'R2 - std': 0.060035642394569266} 
+ 
+
+{'MSE - mean': 1714859.7642191576, 'MSE - std': 288093.44602962676, 'R2 - mean': 0.6996267455051146, 'R2 - std': 0.05207966534248932} 
+ 
+
+{'MSE - mean': 1639888.5276254178, 'MSE - std': 298129.1870678857, 'R2 - mean': 0.7131342034075467, 'R2 - std': 0.053848295327637366} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 64 finished with value: 1639888.5276254178 and parameters: {'max_depth': 12, 'n_estimators': 60}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 2294039.0016586394, 'MSE - std': 0.0, 'R2 - mean': 0.6030490192629245, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2656134.308506315, 'MSE - std': 362095.3068476757, 'R2 - mean': 0.5355114844817639, 'R2 - std': 0.06753753478116065} 
+ 
+
+{'MSE - mean': 2556843.397984963, 'MSE - std': 327301.15182360716, 'R2 - mean': 0.5523702123773425, 'R2 - std': 0.06007755389543286} 
+ 
+
+{'MSE - mean': 2591833.0813819566, 'MSE - std': 289857.49398878845, 'R2 - mean': 0.5461491080962663, 'R2 - std': 0.05313276556863997} 
+ 
+
+{'MSE - mean': 2507758.2091273777, 'MSE - std': 309011.698865372, 'R2 - mean': 0.5614577438974122, 'R2 - std': 0.056532202698516366} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 65 finished with value: 2507758.2091273777 and parameters: {'max_depth': 4, 'n_estimators': 89}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1507805.5243081958, 'MSE - std': 0.0, 'R2 - mean': 0.7390955946249509, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1814748.8751081647, 'MSE - std': 306943.35079996893, 'R2 - mean': 0.6825514983631574, 'R2 - std': 0.056544096261793464} 
+ 
+
+{'MSE - mean': 1733060.8766239702, 'MSE - std': 275962.5673762949, 'R2 - mean': 0.6965327966008507, 'R2 - std': 0.050223931369397616} 
+ 
+
+{'MSE - mean': 1760974.2564142994, 'MSE - std': 243831.8565295448, 'R2 - mean': 0.6915952119986215, 'R2 - std': 0.04432800115909789} 
+ 
+
+{'MSE - mean': 1715361.701130546, 'MSE - std': 236400.50804718997, 'R2 - mean': 0.70000512933126, 'R2 - std': 0.04306836643728252} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 66 finished with value: 1715361.701130546 and parameters: {'max_depth': 10, 'n_estimators': 43}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1471835.3840756952, 'MSE - std': 0.0, 'R2 - mean': 0.7453197182916443, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1742294.4677735458, 'MSE - std': 270459.0836978506, 'R2 - mean': 0.6952649192830678, 'R2 - std': 0.05005479900857651} 
+ 
+
+{'MSE - mean': 1662130.5649610786, 'MSE - std': 248229.55759680865, 'R2 - mean': 0.7089798736774462, 'R2 - std': 0.045238500018668686} 
+ 
+
+{'MSE - mean': 1691551.189537129, 'MSE - std': 220930.20255244692, 'R2 - mean': 0.7037734055672884, 'R2 - std': 0.04020215595587612} 
+ 
+
+{'MSE - mean': 1627352.5238903011, 'MSE - std': 235656.52590841803, 'R2 - mean': 0.7153897230591701, 'R2 - std': 0.04281034925212901} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 67 finished with value: 1627352.5238903011 and parameters: {'max_depth': 12, 'n_estimators': 66}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1541677.491900958, 'MSE - std': 0.0, 'R2 - mean': 0.7332345300372434, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1871365.5485475422, 'MSE - std': 329688.0566465842, 'R2 - mean': 0.6726264151986459, 'R2 - std': 0.060608114838597515} 
+ 
+
+{'MSE - mean': 1753596.5999794584, 'MSE - std': 316546.77425397676, 'R2 - mean': 0.6929364789332806, 'R2 - std': 0.05721794386963702} 
+ 
+
+{'MSE - mean': 1765334.9282023024, 'MSE - std': 274890.45139173215, 'R2 - mean': 0.6908325192303568, 'R2 - std': 0.049686011761825695} 
+ 
+
+{'MSE - mean': 1698863.7890160338, 'MSE - std': 279509.31575166056, 'R2 - mean': 0.7028677749893368, 'R2 - std': 0.05054057119357941} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 68 finished with value: 1698863.7890160338 and parameters: {'max_depth': 10, 'n_estimators': 57}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1586872.9713837858, 'MSE - std': 0.0, 'R2 - mean': 0.7254140919833918, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1911491.5872846993, 'MSE - std': 324618.6159009135, 'R2 - mean': 0.6656264671346275, 'R2 - std': 0.059787624848764376} 
+ 
+
+{'MSE - mean': 1790814.401926624, 'MSE - std': 315241.91238609824, 'R2 - mean': 0.6864327030704604, 'R2 - std': 0.05699858738898267} 
+ 
+
+{'MSE - mean': 1811482.818553471, 'MSE - std': 275344.59833309986, 'R2 - mean': 0.6827597630404884, 'R2 - std': 0.04977048009258033} 
+ 
+
+{'MSE - mean': 1747636.7771382343, 'MSE - std': 277411.2223442976, 'R2 - mean': 0.6943497286103895, 'R2 - std': 0.05018953833781216} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 69 finished with value: 1747636.7771382343 and parameters: {'max_depth': 9, 'n_estimators': 91}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1463678.3017155654, 'MSE - std': 0.0, 'R2 - mean': 0.7467311859434433, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1772115.5088437467, 'MSE - std': 308437.20712818136, 'R2 - mean': 0.6899951432406457, 'R2 - std': 0.05673604270279764} 
+ 
+
+{'MSE - mean': 1651011.708431757, 'MSE - std': 304556.4010860318, 'R2 - mean': 0.7109076027311344, 'R2 - std': 0.05496041865074456} 
+ 
+
+{'MSE - mean': 1679363.242567183, 'MSE - std': 268286.0032602401, 'R2 - mean': 0.705893562115256, 'R2 - std': 0.04838292595112316} 
+ 
+
+{'MSE - mean': 1614628.371291407, 'MSE - std': 272661.544543135, 'R2 - mean': 0.7176025681358452, 'R2 - std': 0.04920497237916381} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 70 finished with value: 1614628.371291407 and parameters: {'max_depth': 12, 'n_estimators': 72}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1483779.3558075645, 'MSE - std': 0.0, 'R2 - mean': 0.7432529830315056, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1776180.0794303515, 'MSE - std': 292400.72362278705, 'R2 - mean': 0.6893111917163305, 'R2 - std': 0.05394179131517507} 
+ 
+
+{'MSE - mean': 1653857.3897356105, 'MSE - std': 294829.56027462945, 'R2 - mean': 0.7104277705802892, 'R2 - std': 0.05321307207220964} 
+ 
+
+{'MSE - mean': 1684951.7090429352, 'MSE - std': 260948.12183335613, 'R2 - mean': 0.7049284670462551, 'R2 - std': 0.04705794616852666} 
+ 
+
+{'MSE - mean': 1608514.1443930822, 'MSE - std': 279008.8582627559, 'R2 - mean': 0.7186697175440714, 'R2 - std': 0.050267764014872506} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 71 finished with value: 1608514.1443930822 and parameters: {'max_depth': 12, 'n_estimators': 75}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1401823.5501163423, 'MSE - std': 0.0, 'R2 - mean': 0.7574342752513441, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1717088.0228710538, 'MSE - std': 315264.4727547114, 'R2 - mean': 0.6995948360016648, 'R2 - std': 0.057839439249679325} 
+ 
+
+{'MSE - mean': 1628612.9015358482, 'MSE - std': 286211.1447482367, 'R2 - mean': 0.7147999459380673, 'R2 - std': 0.05189082666041337} 
+ 
+
+{'MSE - mean': 1654317.0167832994, 'MSE - std': 251832.72058160914, 'R2 - mean': 0.7102578204687218, 'R2 - std': 0.04562221092805162} 
+ 
+
+{'MSE - mean': 1594718.7869140606, 'MSE - std': 254840.28594124265, 'R2 - mean': 0.7210718387369214, 'R2 - std': 0.046183123198747886} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 72 finished with value: 1594718.7869140606 and parameters: {'max_depth': 12, 'n_estimators': 73}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1503276.2658215056, 'MSE - std': 0.0, 'R2 - mean': 0.7398793187015702, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1801443.3596778922, 'MSE - std': 298167.0938563865, 'R2 - mean': 0.6848895473449503, 'R2 - std': 0.05498977135661992} 
+ 
+
+{'MSE - mean': 1696739.370084413, 'MSE - std': 284947.2374190672, 'R2 - mean': 0.7029096106581466, 'R2 - std': 0.051627144018678996} 
+ 
+
+{'MSE - mean': 1724180.1260907277, 'MSE - std': 251306.94649205977, 'R2 - mean': 0.6980516303241662, 'R2 - std': 0.045495290068534415} 
+ 
+
+{'MSE - mean': 1654526.2649986395, 'MSE - std': 264444.2976210189, 'R2 - mean': 0.7106262792647472, 'R2 - std': 0.04783664200852203} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 73 finished with value: 1654526.2649986395 and parameters: {'max_depth': 11, 'n_estimators': 76}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1578441.8993216194, 'MSE - std': 0.0, 'R2 - mean': 0.7268729696752367, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1842239.2024586624, 'MSE - std': 263797.303137043, 'R2 - mean': 0.6778200098420581, 'R2 - std': 0.04905295983317859} 
+ 
+
+{'MSE - mean': 1771379.3205777288, 'MSE - std': 237560.35825717586, 'R2 - mean': 0.6898696350447184, 'R2 - std': 0.043526032600955715} 
+ 
+
+{'MSE - mean': 1770249.9051256278, 'MSE - std': 205742.6052115814, 'R2 - mean': 0.6900080394968037, 'R2 - std': 0.03769541222564977} 
+ 
+
+{'MSE - mean': 1708858.6630361204, 'MSE - std': 221222.86070966753, 'R2 - mean': 0.70115471683776, 'R2 - std': 0.04041966038035068} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 74 finished with value: 1708858.6630361204 and parameters: {'max_depth': 10, 'n_estimators': 70}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1436143.3459996358, 'MSE - std': 0.0, 'R2 - mean': 0.7514957203162625, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1753390.0533541539, 'MSE - std': 317246.7073545181, 'R2 - mean': 0.6932513576056958, 'R2 - std': 0.05824436271056682} 
+ 
+
+{'MSE - mean': 1638019.4160202108, 'MSE - std': 306133.54951045354, 'R2 - mean': 0.7131676894060249, 'R2 - std': 0.055271370555966676} 
+ 
+
+{'MSE - mean': 1668785.143228391, 'MSE - std': 270421.71235654585, 'R2 - mean': 0.7077347335615959, 'R2 - std': 0.04878262323792952} 
+ 
+
+{'MSE - mean': 1611601.9333673292, 'MSE - std': 267548.1264579031, 'R2 - mean': 0.71813095111636, 'R2 - std': 0.04833343378824819} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 75 finished with value: 1611601.9333673292 and parameters: {'max_depth': 12, 'n_estimators': 92}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1460136.3941289317, 'MSE - std': 0.0, 'R2 - mean': 0.7473440629212009, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1827676.6316916377, 'MSE - std': 367540.237562706, 'R2 - mean': 0.6801956049888163, 'R2 - std': 0.06714845793238466} 
+ 
+
+{'MSE - mean': 1699168.821034341, 'MSE - std': 350835.7625513162, 'R2 - mean': 0.7024234789271802, 'R2 - std': 0.06319889525488355} 
+ 
+
+{'MSE - mean': 1722933.5420097928, 'MSE - std': 306608.19477444806, 'R2 - mean': 0.6982247021363878, 'R2 - std': 0.05521290112550686} 
+ 
+
+{'MSE - mean': 1654473.5274154798, 'MSE - std': 306519.10621573153, 'R2 - mean': 0.7106006173920506, 'R2 - std': 0.05523970197437158} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 76 finished with value: 1654473.5274154798 and parameters: {'max_depth': 11, 'n_estimators': 77}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1489718.0159860193, 'MSE - std': 0.0, 'R2 - mean': 0.742225381939982, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1845068.3661707132, 'MSE - std': 355350.35018469393, 'R2 - mean': 0.6771777973634729, 'R2 - std': 0.065047584576509} 
+ 
+
+{'MSE - mean': 1743843.7963455908, 'MSE - std': 323535.79089515243, 'R2 - mean': 0.6946054569640493, 'R2 - std': 0.058551164045922324} 
+ 
+
+{'MSE - mean': 1745480.9286635797, 'MSE - std': 280204.5620601022, 'R2 - mean': 0.6942813153572802, 'R2 - std': 0.05070990348731791} 
+ 
+
+{'MSE - mean': 1688831.230292093, 'MSE - std': 275042.59775852284, 'R2 - mean': 0.7046102178754429, 'R2 - std': 0.04983914483890455} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 77 finished with value: 1688831.230292093 and parameters: {'max_depth': 10, 'n_estimators': 92}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1633858.1652396203, 'MSE - std': 0.0, 'R2 - mean': 0.7172839691878725, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1931129.3229661845, 'MSE - std': 297271.1577265643, 'R2 - mean': 0.6622409055976333, 'R2 - std': 0.055043063590239194} 
+ 
+
+{'MSE - mean': 1819705.9190618105, 'MSE - std': 289385.1712729407, 'R2 - mean': 0.6814025651257444, 'R2 - std': 0.0524801323487462} 
+ 
+
+{'MSE - mean': 1835120.4395395264, 'MSE - std': 252033.04414138975, 'R2 - mean': 0.6786421685686529, 'R2 - std': 0.045699918883556526} 
+ 
+
+{'MSE - mean': 1765048.2806642286, 'MSE - std': 265437.28839241946, 'R2 - mean': 0.6913160451791469, 'R2 - std': 0.04809672194779009} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 78 finished with value: 1765048.2806642286 and parameters: {'max_depth': 9, 'n_estimators': 94}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1484189.6411228233, 'MSE - std': 0.0, 'R2 - mean': 0.7431819889646408, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1786099.7456276405, 'MSE - std': 301910.10450481717, 'R2 - mean': 0.687563306876797, 'R2 - std': 0.055618682087843874} 
+ 
+
+{'MSE - mean': 1670829.6624892342, 'MSE - std': 295534.86810901016, 'R2 - mean': 0.7074443166998637, 'R2 - std': 0.0534116182863071} 
+ 
+
+{'MSE - mean': 1692290.07794308, 'MSE - std': 258625.77596889398, 'R2 - mean': 0.7036354199516585, 'R2 - std': 0.0467239104665598} 
+ 
+
+{'MSE - mean': 1640909.397518813, 'MSE - std': 253119.99304648524, 'R2 - mean': 0.7130264331866454, 'R2 - std': 0.04581772108855348} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 79 finished with value: 1640909.397518813 and parameters: {'max_depth': 12, 'n_estimators': 66}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1524670.730681016, 'MSE - std': 0.0, 'R2 - mean': 0.7361773093625017, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1792444.3556701292, 'MSE - std': 267773.6249891131, 'R2 - mean': 0.6865104159962226, 'R2 - std': 0.04966689336627905} 
+ 
+
+{'MSE - mean': 1704348.5330857679, 'MSE - std': 251641.72429634433, 'R2 - mean': 0.7016016822195458, 'R2 - std': 0.04582604241641768} 
+ 
+
+{'MSE - mean': 1709576.5927175814, 'MSE - std': 218116.1751857698, 'R2 - mean': 0.7006293266739767, 'R2 - std': 0.03972223619818603} 
+ 
+
+{'MSE - mean': 1645484.0573617087, 'MSE - std': 233433.38462077506, 'R2 - mean': 0.7122296084011789, 'R2 - std': 0.042432899776817405} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 80 finished with value: 1645484.0573617087 and parameters: {'max_depth': 11, 'n_estimators': 81}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1436993.5710412436, 'MSE - std': 0.0, 'R2 - mean': 0.7513486009064052, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1760105.7480895806, 'MSE - std': 323112.17704833695, 'R2 - mean': 0.6920689513131171, 'R2 - std': 0.059279649593288075} 
+ 
+
+{'MSE - mean': 1664621.4969273582, 'MSE - std': 296370.49517672625, 'R2 - mean': 0.708496138511174, 'R2 - std': 0.05368820040209354} 
+ 
+
+{'MSE - mean': 1687950.8876971095, 'MSE - std': 259825.6804658398, 'R2 - mean': 0.7043687554352648, 'R2 - std': 0.04704171574227947} 
+ 
+
+{'MSE - mean': 1617326.299550584, 'MSE - std': 271953.7408955699, 'R2 - mean': 0.7171076726326716, 'R2 - std': 0.04918799102861887} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 81 finished with value: 1617326.299550584 and parameters: {'max_depth': 12, 'n_estimators': 72}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1494016.6894530896, 'MSE - std': 0.0, 'R2 - mean': 0.7414815573374411, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1770006.4673730014, 'MSE - std': 275989.77791991166, 'R2 - mean': 0.6904159790290288, 'R2 - std': 0.051065578308412296} 
+ 
+
+{'MSE - mean': 1650273.534816054, 'MSE - std': 281872.6461038054, 'R2 - mean': 0.711070940942176, 'R2 - std': 0.05090890978256008} 
+ 
+
+{'MSE - mean': 1662301.5770836328, 'MSE - std': 244996.2507234403, 'R2 - mean': 0.7089084845635755, 'R2 - std': 0.04424721996018149} 
+ 
+
+{'MSE - mean': 1595025.933757124, 'MSE - std': 257143.11002789243, 'R2 - mean': 0.7210489040625683, 'R2 - std': 0.04643072605301194} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 82 finished with value: 1595025.933757124 and parameters: {'max_depth': 12, 'n_estimators': 53}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1526573.528043186, 'MSE - std': 0.0, 'R2 - mean': 0.7358480572100705, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1833149.4932699152, 'MSE - std': 306575.9652267293, 'R2 - mean': 0.6793383625877862, 'R2 - std': 0.056509694622284334} 
+ 
+
+{'MSE - mean': 1704102.1082143849, 'MSE - std': 309783.26318434504, 'R2 - mean': 0.7016264965096193, 'R2 - std': 0.05587860847382486} 
+ 
+
+{'MSE - mean': 1716742.9136805392, 'MSE - std': 269172.1057248603, 'R2 - mean': 0.6993599237663549, 'R2 - std': 0.048551274130858656} 
+ 
+
+{'MSE - mean': 1647724.335041176, 'MSE - std': 277519.6475745025, 'R2 - mean': 0.7118209834009394, 'R2 - std': 0.050068882598381506} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 83 finished with value: 1647724.335041176 and parameters: {'max_depth': 11, 'n_estimators': 53}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1452543.206972814, 'MSE - std': 0.0, 'R2 - mean': 0.7486579564889919, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1739607.5547485447, 'MSE - std': 287064.34777573077, 'R2 - mean': 0.6957073382493736, 'R2 - std': 0.05295061823961833} 
+ 
+
+{'MSE - mean': 1653181.0903261553, 'MSE - std': 264341.3714896824, 'R2 - mean': 0.7105311972284918, 'R2 - std': 0.048048644497399075} 
+ 
+
+{'MSE - mean': 1680681.590173171, 'MSE - std': 233829.21756335726, 'R2 - mean': 0.7056653442143775, 'R2 - std': 0.04245625696164199} 
+ 
+
+{'MSE - mean': 1605565.625391875, 'MSE - std': 257508.28151563017, 'R2 - mean': 0.7191779743231728, 'R2 - std': 0.04660892290090874} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 84 finished with value: 1605565.625391875 and parameters: {'max_depth': 12, 'n_estimators': 65}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1486385.2437932547, 'MSE - std': 0.0, 'R2 - mean': 0.7428020709978118, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1795154.3634348956, 'MSE - std': 308769.1196416409, 'R2 - mean': 0.6859707926937908, 'R2 - std': 0.056831278304021016} 
+ 
+
+{'MSE - mean': 1667179.018166922, 'MSE - std': 310345.4378953075, 'R2 - mean': 0.7080828726712661, 'R2 - std': 0.05595609252774233} 
+ 
+
+{'MSE - mean': 1699217.3390686703, 'MSE - std': 274435.93083893525, 'R2 - mean': 0.70242086257314, 'R2 - std': 0.04944176668853768} 
+ 
+
+{'MSE - mean': 1643873.669512577, 'MSE - std': 269265.20597374334, 'R2 - mean': 0.7125026542159413, 'R2 - std': 0.048602065033725356} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 85 finished with value: 1643873.669512577 and parameters: {'max_depth': 11, 'n_estimators': 47}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1486825.4347808566, 'MSE - std': 0.0, 'R2 - mean': 0.7427259021776157, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1858527.7035789143, 'MSE - std': 371702.2687980577, 'R2 - mean': 0.6748006290197677, 'R2 - std': 0.06792527315784808} 
+ 
+
+{'MSE - mean': 1745810.7027928906, 'MSE - std': 342809.90206255997, 'R2 - mean': 0.694250339646905, 'R2 - std': 0.06190700802551301} 
+ 
+
+{'MSE - mean': 1767099.5890068505, 'MSE - std': 299163.20252129814, 'R2 - mean': 0.6904855821047328, 'R2 - std': 0.05400813299918101} 
+ 
+
+{'MSE - mean': 1696785.9912532617, 'MSE - std': 302282.8237105996, 'R2 - mean': 0.7031965574356599, 'R2 - std': 0.0545873457817793} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 86 finished with value: 1696785.9912532617 and parameters: {'max_depth': 10, 'n_estimators': 64}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1442658.0156377887, 'MSE - std': 0.0, 'R2 - mean': 0.7503684489402427, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1761035.3805066154, 'MSE - std': 318377.3648688267, 'R2 - mean': 0.6919142465604768, 'R2 - std': 0.058454202379765896} 
+ 
+
+{'MSE - mean': 1667395.7588652682, 'MSE - std': 291741.07548100705, 'R2 - mean': 0.7080148518405648, 'R2 - std': 0.052880886572309674} 
+ 
+
+{'MSE - mean': 1693329.137575435, 'MSE - std': 256616.95527787282, 'R2 - mean': 0.7034300169219965, 'R2 - std': 0.04647960044144829} 
+ 
+
+{'MSE - mean': 1634235.8789466938, 'MSE - std': 258166.3460839189, 'R2 - mean': 0.7141661218288251, 'R2 - std': 0.046790366530291914} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 87 finished with value: 1634235.8789466938 and parameters: {'max_depth': 12, 'n_estimators': 37}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1469389.5780324335, 'MSE - std': 0.0, 'R2 - mean': 0.745742930410908, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1788272.4228108167, 'MSE - std': 318882.84477838315, 'R2 - mean': 0.6871563876182295, 'R2 - std': 0.0585865427926785} 
+ 
+
+{'MSE - mean': 1685047.0391180243, 'MSE - std': 298499.2553977615, 'R2 - mean': 0.704931888186275, 'R2 - std': 0.05403880246472339} 
+ 
+
+{'MSE - mean': 1706563.9613837388, 'MSE - std': 261180.56577036873, 'R2 - mean': 0.7011184313217578, 'R2 - std': 0.047262791799032} 
+ 
+
+{'MSE - mean': 1640546.6686194919, 'MSE - std': 268338.1488431809, 'R2 - mean': 0.7130600271646533, 'R2 - std': 0.04855331127751389} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 88 finished with value: 1640546.6686194919 and parameters: {'max_depth': 11, 'n_estimators': 94}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1500908.6360961804, 'MSE - std': 0.0, 'R2 - mean': 0.7402890035154772, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1837842.335432682, 'MSE - std': 336933.69933650154, 'R2 - mean': 0.6784696374303057, 'R2 - std': 0.06181936608517147} 
+ 
+
+{'MSE - mean': 1725099.5340426348, 'MSE - std': 317969.74231773155, 'R2 - mean': 0.6979110771299796, 'R2 - std': 0.0574777797991572} 
+ 
+
+{'MSE - mean': 1767073.1576297714, 'MSE - std': 284805.06140746054, 'R2 - mean': 0.6905141202063153, 'R2 - std': 0.051399574834544444} 
+ 
+
+{'MSE - mean': 1694199.727177871, 'MSE - std': 293484.7285055182, 'R2 - mean': 0.703665097137334, 'R2 - std': 0.052965326502328894} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 89 finished with value: 1694199.727177871 and parameters: {'max_depth': 10, 'n_estimators': 79}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1413452.5275877663, 'MSE - std': 0.0, 'R2 - mean': 0.755422045289729, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1760748.8995103855, 'MSE - std': 347296.3719226192, 'R2 - mean': 0.6919175041684242, 'R2 - std': 0.06350454112130471} 
+ 
+
+{'MSE - mean': 1679614.5458978275, 'MSE - std': 305900.9861147852, 'R2 - mean': 0.7058389112381095, 'R2 - std': 0.055463161752807445} 
+ 
+
+{'MSE - mean': 1685848.626161168, 'MSE - std': 265137.98530140455, 'R2 - mean': 0.7047144084420675, 'R2 - std': 0.04807197991895572} 
+ 
+
+{'MSE - mean': 1617255.7995087248, 'MSE - std': 273967.92599214736, 'R2 - mean': 0.7171042176300938, 'R2 - std': 0.0496262197787177} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 90 finished with value: 1617255.7995087248 and parameters: {'max_depth': 12, 'n_estimators': 66}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1427800.1466948618, 'MSE - std': 0.0, 'R2 - mean': 0.7529393928711408, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1745041.208122238, 'MSE - std': 317241.0614273761, 'R2 - mean': 0.6947095207203979, 'R2 - std': 0.05822987215074282} 
+ 
+
+{'MSE - mean': 1644837.3961190528, 'MSE - std': 295256.1632159181, 'R2 - mean': 0.7119662312203515, 'R2 - std': 0.05344218173271916} 
+ 
+
+{'MSE - mean': 1656728.9481557384, 'MSE - std': 256527.5393934582, 'R2 - mean': 0.7098419873518148, 'R2 - std': 0.04642830308447405} 
+ 
+
+{'MSE - mean': 1597312.908734355, 'MSE - std': 258391.49702709523, 'R2 - mean': 0.7206236969083916, 'R2 - std': 0.046791568745795854} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 91 finished with value: 1597312.908734355 and parameters: {'max_depth': 12, 'n_estimators': 74}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1515615.0672103313, 'MSE - std': 0.0, 'R2 - mean': 0.7377442637574854, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1851403.7322193542, 'MSE - std': 335788.6650090228, 'R2 - mean': 0.6761029458594401, 'R2 - std': 0.06164131789804522} 
+ 
+
+{'MSE - mean': 1739297.8961765177, 'MSE - std': 316709.3125387293, 'R2 - mean': 0.6954280717716834, 'R2 - std': 0.057271479503501824} 
+ 
+
+{'MSE - mean': 1740150.7005830607, 'MSE - std': 274282.2876392738, 'R2 - mean': 0.6952348256927486, 'R2 - std': 0.04959968553863113} 
+ 
+
+{'MSE - mean': 1681010.1218674784, 'MSE - std': 272350.9699879232, 'R2 - mean': 0.7059910694833305, 'R2 - std': 0.049304058315260316} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 92 finished with value: 1681010.1218674784 and parameters: {'max_depth': 11, 'n_estimators': 75}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1495699.7267163761, 'MSE - std': 0.0, 'R2 - mean': 0.7411903315597645, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1793185.4599294406, 'MSE - std': 297485.7332130646, 'R2 - mean': 0.6863329195107428, 'R2 - std': 0.05485741204902178} 
+ 
+
+{'MSE - mean': 1681125.9325974341, 'MSE - std': 290022.72837708524, 'R2 - mean': 0.7056460031914593, 'R2 - std': 0.05246154947826865} 
+ 
+
+{'MSE - mean': 1690760.567548929, 'MSE - std': 251720.80923795738, 'R2 - mean': 0.7039077031916666, 'R2 - std': 0.04553268815821728} 
+ 
+
+{'MSE - mean': 1626655.2976425905, 'MSE - std': 259091.943452103, 'R2 - mean': 0.7155084082624572, 'R2 - std': 0.04687095033481429} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 93 finished with value: 1626655.2976425905 and parameters: {'max_depth': 12, 'n_estimators': 85}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1741954.027849011, 'MSE - std': 0.0, 'R2 - mean': 0.6985795100895775, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1968336.4685062207, 'MSE - std': 226382.44065720995, 'R2 - mean': 0.6558572165096658, 'R2 - std': 0.04272229357991175} 
+ 
+
+{'MSE - mean': 1858051.1127635494, 'MSE - std': 241850.62678132267, 'R2 - mean': 0.6747702120503986, 'R2 - std': 0.043956786125310926} 
+ 
+
+{'MSE - mean': 1917121.2789947365, 'MSE - std': 233102.22622624, 'R2 - mean': 0.6643392345882563, 'R2 - std': 0.04213745551521713} 
+ 
+
+{'MSE - mean': 1926516.035396458, 'MSE - std': 209337.91842065807, 'R2 - mean': 0.6632160523498196, 'R2 - std': 0.03775577146875005} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 94 finished with value: 1926516.035396458 and parameters: {'max_depth': 11, 'n_estimators': 5}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1515949.6725856403, 'MSE - std': 0.0, 'R2 - mean': 0.737686365033099, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1831353.1903137625, 'MSE - std': 315403.51772812207, 'R2 - mean': 0.6796378141570409, 'R2 - std': 0.058048550876058036} 
+ 
+
+{'MSE - mean': 1740021.5370388029, 'MSE - std': 288101.59280490637, 'R2 - mean': 0.6953115146467367, 'R2 - std': 0.05232353785141299} 
+ 
+
+{'MSE - mean': 1757557.0068944613, 'MSE - std': 251345.12913863917, 'R2 - mean': 0.6921926938375431, 'R2 - std': 0.0456343685141557} 
+ 
+
+{'MSE - mean': 1702445.8961005255, 'MSE - std': 250376.5909288271, 'R2 - mean': 0.7022523168323282, 'R2 - std': 0.045505829636843714} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 95 finished with value: 1702445.8961005255 and parameters: {'max_depth': 10, 'n_estimators': 96}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1612721.7785744336, 'MSE - std': 0.0, 'R2 - mean': 0.7209413217481027, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1931703.6749679297, 'MSE - std': 318981.8963934961, 'R2 - mean': 0.6621054753848714, 'R2 - std': 0.05883584636323119} 
+ 
+
+{'MSE - mean': 1814294.6042544374, 'MSE - std': 308873.3504034824, 'R2 - mean': 0.682329255203035, 'R2 - std': 0.0559086196555202} 
+ 
+
+{'MSE - mean': 1831654.2587922607, 'MSE - std': 269176.7686096295, 'R2 - mean': 0.6792334066568367, 'R2 - std': 0.0487143012728522} 
+ 
+
+{'MSE - mean': 1758762.7514972673, 'MSE - std': 281456.20183297066, 'R2 - mean': 0.6923993743302653, 'R2 - std': 0.05091009072780011} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 96 finished with value: 1758762.7514972673 and parameters: {'max_depth': 9, 'n_estimators': 81}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1495979.5469006284, 'MSE - std': 0.0, 'R2 - mean': 0.7411419126372927, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1773181.3897234816, 'MSE - std': 277201.84282285336, 'R2 - mean': 0.6898595075835249, 'R2 - std': 0.0512824050537678} 
+ 
+
+{'MSE - mean': 1676759.2827416528, 'MSE - std': 264237.9354657863, 'R2 - mean': 0.7064227903999378, 'R2 - std': 0.047978551326387155} 
+ 
+
+{'MSE - mean': 1700200.5997419264, 'MSE - std': 232410.73755861144, 'R2 - mean': 0.7022624596397493, 'R2 - std': 0.04217085601024228} 
+ 
+
+{'MSE - mean': 1640001.8708584253, 'MSE - std': 240223.53877750481, 'R2 - mean': 0.7131853660746178, 'R2 - std': 0.0435883518528613} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 97 finished with value: 1640001.8708584253 and parameters: {'max_depth': 12, 'n_estimators': 43}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1478829.9705968422, 'MSE - std': 0.0, 'R2 - mean': 0.7441094040914881, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1794563.868213777, 'MSE - std': 315733.8976169346, 'R2 - mean': 0.6860626589620908, 'R2 - std': 0.05804674512939717} 
+ 
+
+{'MSE - mean': 1686586.4195093133, 'MSE - std': 299627.8607323383, 'R2 - mean': 0.7046687157352496, 'R2 - std': 0.05420935138304224} 
+ 
+
+{'MSE - mean': 1703516.9513725357, 'MSE - std': 261137.07113849782, 'R2 - mean': 0.7016572164262194, 'R2 - std': 0.04723555564712323} 
+ 
+
+{'MSE - mean': 1637680.025921311, 'MSE - std': 268126.9455868148, 'R2 - mean': 0.7135656033369537, 'R2 - std': 0.04849945246182663} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 98 finished with value: 1637680.025921311 and parameters: {'max_depth': 11, 'n_estimators': 68}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1453329.2925888004, 'MSE - std': 0.0, 'R2 - mean': 0.7485219354989462, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1745509.5510497831, 'MSE - std': 292180.2584609827, 'R2 - mean': 0.6946682595647788, 'R2 - std': 0.0538536759341674} 
+ 
+
+{'MSE - mean': 1648903.7072448845, 'MSE - std': 274914.98153198324, 'R2 - mean': 0.7112798227267705, 'R2 - std': 0.04985345527093612} 
+ 
+
+{'MSE - mean': 1674843.6594027136, 'MSE - std': 242285.63444186986, 'R2 - mean': 0.7066876042882413, 'R2 - std': 0.043900918696536666} 
+ 
+
+{'MSE - mean': 1611688.9129680728, 'MSE - std': 250830.52229426664, 'R2 - mean': 0.7181203054787775, 'R2 - std': 0.045438520618174674} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 99 finished with value: 1611688.9129680728 and parameters: {'max_depth': 12, 'n_estimators': 55}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1502186.8107692637, 'MSE - std': 0.0, 'R2 - mean': 0.7400678334788445, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1837248.1567383353, 'MSE - std': 335061.3459690716, 'R2 - mean': 0.6785764413250277, 'R2 - std': 0.061491392153816826} 
+ 
+
+{'MSE - mean': 1731048.037323499, 'MSE - std': 312091.3345521173, 'R2 - mean': 0.6968686978057071, 'R2 - std': 0.056480151383646086} 
+ 
+
+{'MSE - mean': 1749061.9313078541, 'MSE - std': 272073.9825053655, 'R2 - mean': 0.693669823147059, 'R2 - std': 0.04922605024257896} 
+ 
+
+{'MSE - mean': 1687706.5598619138, 'MSE - std': 272538.6724597835, 'R2 - mean': 0.7048142257545778, 'R2 - std': 0.049349306539219054} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 100 finished with value: 1687706.5598619138 and parameters: {'max_depth': 10, 'n_estimators': 88}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 2145737.8092089514, 'MSE - std': 0.0, 'R2 - mean': 0.6287104416471204, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2432561.080208943, 'MSE - std': 286823.27099999203, 'R2 - mean': 0.57468105748957, 'R2 - std': 0.05402938415755043} 
+ 
+
+{'MSE - mean': 2312757.2677892647, 'MSE - std': 289051.8398696025, 'R2 - mean': 0.5951638174084131, 'R2 - std': 0.0527750238536062} 
+ 
+
+{'MSE - mean': 2339943.810112912, 'MSE - std': 254716.6049741324, 'R2 - mean': 0.590303274424834, 'R2 - std': 0.04647340090145314} 
+ 
+
+{'MSE - mean': 2243060.1228432497, 'MSE - std': 299082.32063347, 'R2 - mean': 0.6077602484484036, 'R2 - std': 0.054284485456860376} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 101 finished with value: 2243060.1228432497 and parameters: {'max_depth': 5, 'n_estimators': 55}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1411204.4743937599, 'MSE - std': 0.0, 'R2 - mean': 0.7558110390773083, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1737226.8495359542, 'MSE - std': 326022.37514219445, 'R2 - mean': 0.6960601207981635, 'R2 - std': 0.059750918279144805} 
+ 
+
+{'MSE - mean': 1647418.3229059067, 'MSE - std': 294943.2752917501, 'R2 - mean': 0.7114992750330461, 'R2 - std': 0.053449506924239755} 
+ 
+
+{'MSE - mean': 1668957.1470678323, 'MSE - std': 258138.36322542967, 'R2 - mean': 0.7076883919800049, 'R2 - std': 0.046756880047380586} 
+ 
+
+{'MSE - mean': 1613299.0071714714, 'MSE - std': 256319.4214293067, 'R2 - mean': 0.7178229077746148, 'R2 - std': 0.046473630232389866} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 102 finished with value: 1613299.0071714714 and parameters: {'max_depth': 12, 'n_estimators': 63}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1455370.8692577374, 'MSE - std': 0.0, 'R2 - mean': 0.7481686695516809, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1753936.8479263885, 'MSE - std': 298565.9786686511, 'R2 - mean': 0.6931860746655616, 'R2 - std': 0.054982594886119396} 
+ 
+
+{'MSE - mean': 1647514.2361073287, 'MSE - std': 286494.8638719845, 'R2 - mean': 0.7115216565899534, 'R2 - std': 0.05184378094448346} 
+ 
+
+{'MSE - mean': 1663139.392443724, 'MSE - std': 249583.486633993, 'R2 - mean': 0.7087371270361902, 'R2 - std': 0.04515632880861808} 
+ 
+
+{'MSE - mean': 1608700.3846084713, 'MSE - std': 248370.601594978, 'R2 - mean': 0.7186522381681335, 'R2 - std': 0.04499458789913259} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 103 finished with value: 1608700.3846084713 and parameters: {'max_depth': 12, 'n_estimators': 74}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1501634.472957862, 'MSE - std': 0.0, 'R2 - mean': 0.740163407719638, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1787375.2250811998, 'MSE - std': 285740.7521233378, 'R2 - mean': 0.6873666944460395, 'R2 - std': 0.05279671327359842} 
+ 
+
+{'MSE - mean': 1675837.231975738, 'MSE - std': 281626.1696433684, 'R2 - mean': 0.7065835784225949, 'R2 - std': 0.05095984577292032} 
+ 
+
+{'MSE - mean': 1688770.6423923846, 'MSE - std': 244922.01592754526, 'R2 - mean': 0.7042645589752841, 'R2 - std': 0.0443149293634875} 
+ 
+
+{'MSE - mean': 1631162.554302754, 'MSE - std': 247516.06485676995, 'R2 - mean': 0.714734110371589, 'R2 - std': 0.04482740676586352} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 104 finished with value: 1631162.554302754 and parameters: {'max_depth': 11, 'n_estimators': 74}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1430492.3380515124, 'MSE - std': 0.0, 'R2 - mean': 0.7524735472605902, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1722556.06232853, 'MSE - std': 292063.7242770175, 'R2 - mean': 0.6986773522943119, 'R2 - std': 0.053796194966278243} 
+ 
+
+{'MSE - mean': 1622694.2745738793, 'MSE - std': 277150.19874817145, 'R2 - mean': 0.715866921559821, 'R2 - std': 0.050202752032473416} 
+ 
+
+{'MSE - mean': 1647311.2320917821, 'MSE - std': 243776.86168282645, 'R2 - mean': 0.7115077908899441, 'R2 - std': 0.044127579746873674} 
+ 
+
+{'MSE - mean': 1590263.0706052464, 'MSE - std': 246088.8001301924, 'R2 - mean': 0.721872182842628, 'R2 - std': 0.044581129613871284} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 105 finished with value: 1590263.0706052464 and parameters: {'max_depth': 12, 'n_estimators': 83}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1505208.309926225, 'MSE - std': 0.0, 'R2 - mean': 0.7395450058142822, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1791223.4517627195, 'MSE - std': 286015.1418364943, 'R2 - mean': 0.6866941448425166, 'R2 - std': 0.052850860971765556} 
+ 
+
+{'MSE - mean': 1673551.766946992, 'MSE - std': 286757.19994665147, 'R2 - mean': 0.7069866306380007, 'R2 - std': 0.05182385837132464} 
+ 
+
+{'MSE - mean': 1699070.0320108524, 'MSE - std': 252241.5793372322, 'R2 - mean': 0.7024619314110645, 'R2 - std': 0.045559882919637175} 
+ 
+
+{'MSE - mean': 1643293.292585143, 'MSE - std': 251683.9886069174, 'R2 - mean': 0.7126158776664069, 'R2 - std': 0.04552991152579113} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 106 finished with value: 1643293.292585143 and parameters: {'max_depth': 11, 'n_estimators': 100}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1448168.1601839892, 'MSE - std': 0.0, 'R2 - mean': 0.7494149964139186, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1717219.7582389025, 'MSE - std': 269051.59805491334, 'R2 - mean': 0.699646578531389, 'R2 - std': 0.04976841788252956} 
+ 
+
+{'MSE - mean': 1635395.543349732, 'MSE - std': 248293.33303251094, 'R2 - mean': 0.7136593941123331, 'R2 - std': 0.04521041487715513} 
+ 
+
+{'MSE - mean': 1657537.268021423, 'MSE - std': 218421.50154141407, 'R2 - mean': 0.7097294815779239, 'R2 - std': 0.039740644780975644} 
+ 
+
+{'MSE - mean': 1591959.8528841655, 'MSE - std': 235303.95528511945, 'R2 - mean': 0.7215761885130089, 'R2 - std': 0.0427180633796677} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 107 finished with value: 1591959.8528841655 and parameters: {'max_depth': 12, 'n_estimators': 80}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1524219.5294237009, 'MSE - std': 0.0, 'R2 - mean': 0.7362553833540386, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1785788.6800886756, 'MSE - std': 261569.15066497482, 'R2 - mean': 0.6876828880901236, 'R2 - std': 0.04857249526391505} 
+ 
+
+{'MSE - mean': 1700845.4449072161, 'MSE - std': 245036.7049904626, 'R2 - mean': 0.7022193933916249, 'R2 - std': 0.04467077534813098} 
+ 
+
+{'MSE - mean': 1723315.232824557, 'MSE - std': 215747.33880534448, 'R2 - mean': 0.6982250853253034, 'R2 - std': 0.03929977249855821} 
+ 
+
+{'MSE - mean': 1651802.290101402, 'MSE - std': 240195.61875473813, 'R2 - mean': 0.7111181294243945, 'R2 - std': 0.043594724902391364} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 108 finished with value: 1651802.290101402 and parameters: {'max_depth': 11, 'n_estimators': 49}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1424293.3743301032, 'MSE - std': 0.0, 'R2 - mean': 0.7535461901960363, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1751718.0380588234, 'MSE - std': 327424.6637287204, 'R2 - mean': 0.6935269176014944, 'R2 - std': 0.06001927259454187} 
+ 
+
+{'MSE - mean': 1661991.5353894315, 'MSE - std': 295927.2954197893, 'R2 - mean': 0.7089482652092535, 'R2 - std': 0.0536393323901776} 
+ 
+
+{'MSE - mean': 1687671.2379702204, 'MSE - std': 260111.63854154383, 'R2 - mean': 0.7044112465067646, 'R2 - std': 0.04711302474441828} 
+ 
+
+{'MSE - mean': 1621143.299246457, 'MSE - std': 268011.78729142627, 'R2 - mean': 0.7164395592926154, 'R2 - std': 0.04852247844403236} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 109 finished with value: 1621143.299246457 and parameters: {'max_depth': 12, 'n_estimators': 82}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1987342.2483543216, 'MSE - std': 0.0, 'R2 - mean': 0.656118551613945, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2319159.972533883, 'MSE - std': 331817.72417956137, 'R2 - mean': 0.5944141637453393, 'R2 - std': 0.061704387868605604} 
+ 
+
+{'MSE - mean': 2172263.729267115, 'MSE - std': 341407.4017332491, 'R2 - mean': 0.6197089378256492, 'R2 - std': 0.06178947197034494} 
+ 
+
+{'MSE - mean': 2179856.86932822, 'MSE - std': 295959.8415269355, 'R2 - mean': 0.6182991952070327, 'R2 - std': 0.053566932500683326} 
+ 
+
+{'MSE - mean': 2088889.2838357042, 'MSE - std': 321207.39200502785, 'R2 - mean': 0.6346922850439268, 'R2 - std': 0.05805571964611361} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 110 finished with value: 2088889.2838357042 and parameters: {'max_depth': 6, 'n_estimators': 62}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1447502.993808233, 'MSE - std': 0.0, 'R2 - mean': 0.7495300940408635, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1751530.8406496067, 'MSE - std': 304027.8468413736, 'R2 - mean': 0.6935974572351571, 'R2 - std': 0.055932636805706426} 
+ 
+
+{'MSE - mean': 1648241.0712527253, 'MSE - std': 288026.92124311853, 'R2 - mean': 0.711386812227046, 'R2 - std': 0.052139833225160935} 
+ 
+
+{'MSE - mean': 1682803.0352312757, 'MSE - std': 256521.38036186385, 'R2 - mean': 0.7052861853073962, 'R2 - std': 0.046374288167032415} 
+ 
+
+{'MSE - mean': 1606615.0925879357, 'MSE - std': 275428.7299522406, 'R2 - mean': 0.7189871881344978, 'R2 - std': 0.049712469223245716} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 111 finished with value: 1606615.0925879357 and parameters: {'max_depth': 12, 'n_estimators': 71}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1450319.321390848, 'MSE - std': 0.0, 'R2 - mean': 0.749042768413362, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1731412.5197471012, 'MSE - std': 281093.1983562533, 'R2 - mean': 0.6971482872493274, 'R2 - std': 0.05189448116403461} 
+ 
+
+{'MSE - mean': 1626372.7212142993, 'MSE - std': 273390.39728269266, 'R2 - mean': 0.7152382183196119, 'R2 - std': 0.049495952653843496} 
+ 
+
+{'MSE - mean': 1672316.6649127132, 'MSE - std': 249778.44158870162, 'R2 - mean': 0.7071383751557413, 'R2 - std': 0.045102210308049624} 
+ 
+
+{'MSE - mean': 1605422.7511993116, 'MSE - std': 260404.6825108343, 'R2 - mean': 0.7192184483074292, 'R2 - std': 0.04702212425165151} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 112 finished with value: 1605422.7511993116 and parameters: {'max_depth': 12, 'n_estimators': 72}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1492979.380031663, 'MSE - std': 0.0, 'R2 - mean': 0.741661049051342, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1808019.8901587417, 'MSE - std': 315040.51012707874, 'R2 - mean': 0.683713640911989, 'R2 - std': 0.05794740813935295} 
+ 
+
+{'MSE - mean': 1695989.2448927995, 'MSE - std': 302107.17685090966, 'R2 - mean': 0.7030268555565785, 'R2 - std': 0.054631510381175315} 
+ 
+
+{'MSE - mean': 1724420.7005865448, 'MSE - std': 266226.60037497437, 'R2 - mean': 0.6979988386298172, 'R2 - std': 0.04810711285811845} 
+ 
+
+{'MSE - mean': 1676151.312114425, 'MSE - std': 256945.5538663059, 'R2 - mean': 0.7068599684016267, 'R2 - std': 0.046535082780267925} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 113 finished with value: 1676151.312114425 and parameters: {'max_depth': 10, 'n_estimators': 68}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1398662.2579756891, 'MSE - std': 0.0, 'R2 - mean': 0.7579812921131853, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1724681.4486137016, 'MSE - std': 326019.1906380125, 'R2 - mean': 0.698251222538681, 'R2 - std': 0.059730069574504385} 
+ 
+
+{'MSE - mean': 1652360.466025303, 'MSE - std': 285166.0174143232, 'R2 - mean': 0.7106246403422217, 'R2 - std': 0.0518136765458572} 
+ 
+
+{'MSE - mean': 1662714.0332230942, 'MSE - std': 247611.252121379, 'R2 - mean': 0.7087757342935523, 'R2 - std': 0.04498608861225271} 
+ 
+
+{'MSE - mean': 1601068.8913030059, 'MSE - std': 253474.9688452197, 'R2 - mean': 0.7199500272809333, 'R2 - std': 0.046026707789878794} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 114 finished with value: 1601068.8913030059 and parameters: {'max_depth': 12, 'n_estimators': 78}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1461644.4137713425, 'MSE - std': 0.0, 'R2 - mean': 0.7470831214657186, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1807088.0243076696, 'MSE - std': 345443.6105363271, 'R2 - mean': 0.6838272166013177, 'R2 - std': 0.06325590486440097} 
+ 
+
+{'MSE - mean': 1691136.1380998495, 'MSE - std': 326257.3705995798, 'R2 - mean': 0.7038453317790924, 'R2 - std': 0.05889812847069705} 
+ 
+
+{'MSE - mean': 1705295.994627732, 'MSE - std': 283609.6058203677, 'R2 - mean': 0.7013258439802006, 'R2 - std': 0.05119360906714181} 
+ 
+
+{'MSE - mean': 1643047.8304561288, 'MSE - std': 282571.8715332559, 'R2 - mean': 0.7126151059087507, 'R2 - std': 0.051053092237602175} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 115 finished with value: 1643047.8304561288 and parameters: {'max_depth': 11, 'n_estimators': 79}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1408047.7925643013, 'MSE - std': 0.0, 'R2 - mean': 0.7563572581900491, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1669751.6618891107, 'MSE - std': 261703.8693248094, 'R2 - mean': 0.7079489268263081, 'R2 - std': 0.04840833136374101} 
+ 
+
+{'MSE - mean': 1604538.2191152454, 'MSE - std': 232733.45924016103, 'R2 - mean': 0.7190559735992936, 'R2 - std': 0.04253207424578632} 
+ 
+
+{'MSE - mean': 1632527.233652322, 'MSE - std': 207301.23514269968, 'R2 - mean': 0.7141040456752532, 'R2 - std': 0.03781927782535624} 
+ 
+
+{'MSE - mean': 1587372.8917459226, 'MSE - std': 206239.42408121473, 'R2 - mean': 0.7223963104847246, 'R2 - std': 0.037673397017879515} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 116 finished with value: 1587372.8917459226 and parameters: {'max_depth': 12, 'n_estimators': 70}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1437005.617359749, 'MSE - std': 0.0, 'R2 - mean': 0.7513465164614845, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1738009.2478051172, 'MSE - std': 301003.6304453681, 'R2 - mean': 0.6959639407873808, 'R2 - std': 0.05538257567410376} 
+ 
+
+{'MSE - mean': 1649161.9768165497, 'MSE - std': 276024.9967275182, 'R2 - mean': 0.7112206649682943, 'R2 - std': 0.050103443570911343} 
+ 
+
+{'MSE - mean': 1692810.0802394089, 'MSE - std': 250714.61846302004, 'R2 - mean': 0.703529228484544, 'R2 - std': 0.045389876391088775} 
+ 
+
+{'MSE - mean': 1638250.6937143435, 'MSE - std': 249385.57007335476, 'R2 - mean': 0.7134757338501085, 'R2 - std': 0.045209784106844265} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 117 finished with value: 1638250.6937143435 and parameters: {'max_depth': 11, 'n_estimators': 58}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1405343.2871921663, 'MSE - std': 0.0, 'R2 - mean': 0.7568252345666937, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1682491.9848331243, 'MSE - std': 277148.697640958, 'R2 - mean': 0.7056988040268921, 'R2 - std': 0.05112643053980154} 
+ 
+
+{'MSE - mean': 1616664.2700526689, 'MSE - std': 244692.00327994672, 'R2 - mean': 0.7169183299309575, 'R2 - std': 0.044658296610873546} 
+ 
+
+{'MSE - mean': 1647883.3343609613, 'MSE - std': 218699.616553667, 'R2 - mean': 0.711403707135944, 'R2 - std': 0.039837241192788676} 
+ 
+
+{'MSE - mean': 1594904.7935464531, 'MSE - std': 222464.65106149972, 'R2 - mean': 0.7210619063995287, 'R2 - std': 0.0405305795757027} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 118 finished with value: 1594904.7935464531 and parameters: {'max_depth': 12, 'n_estimators': 84}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1485788.770711979, 'MSE - std': 0.0, 'R2 - mean': 0.7429052822223919, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1796354.466478961, 'MSE - std': 310565.69576698216, 'R2 - mean': 0.685758284639181, 'R2 - std': 0.05714699758321101} 
+ 
+
+{'MSE - mean': 1717826.366194848, 'MSE - std': 276828.51369265275, 'R2 - mean': 0.6991922120470594, 'R2 - std': 0.05037982764014425} 
+ 
+
+{'MSE - mean': 1735381.3894065781, 'MSE - std': 241661.03536742448, 'R2 - mean': 0.6960720102990838, 'R2 - std': 0.04396364693280337} 
+ 
+
+{'MSE - mean': 1676287.342532919, 'MSE - std': 246350.3000109994, 'R2 - mean': 0.7068184728274246, 'R2 - std': 0.04481280652668255} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 119 finished with value: 1676287.342532919 and parameters: {'max_depth': 11, 'n_estimators': 23}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1539058.8573733505, 'MSE - std': 0.0, 'R2 - mean': 0.7336876476796087, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1836081.6487579104, 'MSE - std': 297022.7913845597, 'R2 - mean': 0.6788417042542136, 'R2 - std': 0.054845943425395005} 
+ 
+
+{'MSE - mean': 1744505.1979429482, 'MSE - std': 274931.84323085257, 'R2 - mean': 0.6945471007324991, 'R2 - std': 0.0499870379588019} 
+ 
+
+{'MSE - mean': 1760823.019310623, 'MSE - std': 239769.58251475013, 'R2 - mean': 0.6916363323058303, 'R2 - std': 0.04358263061613082} 
+ 
+
+{'MSE - mean': 1702239.2495194026, 'MSE - std': 244376.337830079, 'R2 - mean': 0.7022971299380872, 'R2 - std': 0.044431598865688135} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 120 finished with value: 1702239.2495194026 and parameters: {'max_depth': 10, 'n_estimators': 88}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1442731.531336454, 'MSE - std': 0.0, 'R2 - mean': 0.7503557280890873, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1721592.4156898118, 'MSE - std': 278860.88435335783, 'R2 - mean': 0.6988670123757026, 'R2 - std': 0.05148871571338476} 
+ 
+
+{'MSE - mean': 1643681.58894888, 'MSE - std': 252947.5355255886, 'R2 - mean': 0.7121969980253677, 'R2 - std': 0.046073516601728225} 
+ 
+
+{'MSE - mean': 1672171.4275147791, 'MSE - std': 224548.1117731447, 'R2 - mean': 0.7071574585391358, 'R2 - std': 0.04084443136753367} 
+ 
+
+{'MSE - mean': 1606285.2844734034, 'MSE - std': 240211.19661702335, 'R2 - mean': 0.7190636543052399, 'R2 - std': 0.04360784389846533} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 121 finished with value: 1606285.2844734034 and parameters: {'max_depth': 12, 'n_estimators': 70}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1412601.1135159149, 'MSE - std': 0.0, 'R2 - mean': 0.7555693704444411, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1743205.0636091244, 'MSE - std': 330603.9500932095, 'R2 - mean': 0.695008594724888, 'R2 - std': 0.060560775719553095} 
+ 
+
+{'MSE - mean': 1659705.0906639497, 'MSE - std': 294636.16915643384, 'R2 - mean': 0.709341249216264, 'R2 - std': 0.05344082403345152} 
+ 
+
+{'MSE - mean': 1676756.029187428, 'MSE - std': 256865.83588515295, 'R2 - mean': 0.7063180078556645, 'R2 - std': 0.046576401964987225} 
+ 
+
+{'MSE - mean': 1612030.9259523745, 'MSE - std': 263707.038342051, 'R2 - mean': 0.7180310321453741, 'R2 - std': 0.04779402397840727} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 122 finished with value: 1612030.9259523745 and parameters: {'max_depth': 12, 'n_estimators': 83}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1487459.0021510308, 'MSE - std': 0.0, 'R2 - mean': 0.7426162723113529, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1799597.1513128188, 'MSE - std': 312138.14916178805, 'R2 - mean': 0.6851893953093895, 'R2 - std': 0.057426877001963306} 
+ 
+
+{'MSE - mean': 1684771.9330956943, 'MSE - std': 302197.19431521033, 'R2 - mean': 0.704993958501826, 'R2 - std': 0.05461689831256897} 
+ 
+
+{'MSE - mean': 1713508.9013812793, 'MSE - std': 266401.5732455965, 'R2 - mean': 0.6999119902299475, 'R2 - std': 0.04811167623886392} 
+ 
+
+{'MSE - mean': 1655314.9591421646, 'MSE - std': 265182.9146749482, 'R2 - mean': 0.7104941593676446, 'R2 - std': 0.0479553534763943} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 123 finished with value: 1655314.9591421646 and parameters: {'max_depth': 11, 'n_estimators': 64}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1464387.886061376, 'MSE - std': 0.0, 'R2 - mean': 0.7466084024154469, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1801814.187602032, 'MSE - std': 337426.301540656, 'R2 - mean': 0.684761278182689, 'R2 - std': 0.061847124232757955} 
+ 
+
+{'MSE - mean': 1688811.008033099, 'MSE - std': 318502.39637975645, 'R2 - mean': 0.7042590420350526, 'R2 - std': 0.05753581586913095} 
+ 
+
+{'MSE - mean': 1717013.8026253798, 'MSE - std': 280123.23224462976, 'R2 - mean': 0.6992774725494844, 'R2 - std': 0.050569019017710236} 
+ 
+
+{'MSE - mean': 1658955.8255533553, 'MSE - std': 276148.7552050992, 'R2 - mean': 0.7098411194973446, 'R2 - std': 0.04992136912071802} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 124 finished with value: 1658955.8255533553 and parameters: {'max_depth': 12, 'n_estimators': 79}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1412481.6369158607, 'MSE - std': 0.0, 'R2 - mean': 0.7555900441790777, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1754850.4543405876, 'MSE - std': 342368.8174247269, 'R2 - mean': 0.6929556579647828, 'R2 - std': 0.06263438621429496} 
+ 
+
+{'MSE - mean': 1636205.1388929358, 'MSE - std': 326033.2700587722, 'R2 - mean': 0.7134598731063226, 'R2 - std': 0.058789652446402066} 
+ 
+
+{'MSE - mean': 1660830.3383817717, 'MSE - std': 285556.42391392123, 'R2 - mean': 0.709109241419055, 'R2 - std': 0.05146796493267764} 
+ 
+
+{'MSE - mean': 1604075.2328712393, 'MSE - std': 279496.9498882812, 'R2 - mean': 0.7194326127152847, 'R2 - std': 0.05045244405505393} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 125 finished with value: 1604075.2328712393 and parameters: {'max_depth': 12, 'n_estimators': 95}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1471506.2736265196, 'MSE - std': 0.0, 'R2 - mean': 0.7453766661968354, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1778802.0062063779, 'MSE - std': 307295.7325798584, 'R2 - mean': 0.6888291702867151, 'R2 - std': 0.05654749591012037} 
+ 
+
+{'MSE - mean': 1684026.2480686407, 'MSE - std': 284462.06572352245, 'R2 - mean': 0.7051181027225221, 'R2 - std': 0.051598496447086126} 
+ 
+
+{'MSE - mean': 1697133.9462717122, 'MSE - std': 247395.30186185555, 'R2 - mean': 0.7027762096787964, 'R2 - std': 0.04486933268708953} 
+ 
+
+{'MSE - mean': 1636667.281189734, 'MSE - std': 252167.44169539277, 'R2 - mean': 0.7137494930304384, 'R2 - std': 0.04574120027600371} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 126 finished with value: 1636667.281189734 and parameters: {'max_depth': 11, 'n_estimators': 94}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1442393.3805392957, 'MSE - std': 0.0, 'R2 - mean': 0.750414240298545, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1768095.3659833549, 'MSE - std': 325701.985444059, 'R2 - mean': 0.6906693485131314, 'R2 - std': 0.059744891785413534} 
+ 
+
+{'MSE - mean': 1668131.6572813608, 'MSE - std': 301175.4887044798, 'R2 - mean': 0.7078818509527963, 'R2 - std': 0.054517659616905696} 
+ 
+
+{'MSE - mean': 1690579.4786360157, 'MSE - std': 263707.64171331516, 'R2 - mean': 0.7039087457560051, 'R2 - std': 0.04771255707141362} 
+ 
+
+{'MSE - mean': 1625002.532625061, 'MSE - std': 269879.08335195837, 'R2 - mean': 0.7157712505154209, 'R2 - std': 0.048826904043805276} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 127 finished with value: 1625002.532625061 and parameters: {'max_depth': 12, 'n_estimators': 89}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1573329.2178490234, 'MSE - std': 0.0, 'R2 - mean': 0.7277576468421357, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1866947.124177312, 'MSE - std': 293617.9063282885, 'R2 - mean': 0.6734564523484026, 'R2 - std': 0.05430119449373311} 
+ 
+
+{'MSE - mean': 1747275.2507626212, 'MSE - std': 293457.0346477236, 'R2 - mean': 0.6940823317414755, 'R2 - std': 0.05307165235577903} 
+ 
+
+{'MSE - mean': 1751365.6408052796, 'MSE - std': 254239.97966543277, 'R2 - mean': 0.6933088206598229, 'R2 - std': 0.04598092181557279} 
+ 
+
+{'MSE - mean': 1687941.0399180304, 'MSE - std': 260386.4316723342, 'R2 - mean': 0.7048049108901993, 'R2 - std': 0.04711726328160059} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 128 finished with value: 1687941.0399180304 and parameters: {'max_depth': 10, 'n_estimators': 97}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1472538.5102951373, 'MSE - std': 0.0, 'R2 - mean': 0.7451980522510113, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1752726.2669857494, 'MSE - std': 280187.75669061195, 'R2 - mean': 0.6934272339741092, 'R2 - std': 0.05177081827690211} 
+ 
+
+{'MSE - mean': 1655716.8560609706, 'MSE - std': 266755.389102995, 'R2 - mean': 0.7101010887089112, 'R2 - std': 0.048402960792440955} 
+ 
+
+{'MSE - mean': 1664248.4743023666, 'MSE - std': 231489.07909676532, 'R2 - mean': 0.7085552787052557, 'R2 - std': 0.04200361348512931} 
+ 
+
+{'MSE - mean': 1602068.48419898, 'MSE - std': 241526.72661609054, 'R2 - mean': 0.7198132726141352, 'R2 - std': 0.04379968657486009} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 129 finished with value: 1602068.48419898 and parameters: {'max_depth': 12, 'n_estimators': 85}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1492982.0837304883, 'MSE - std': 0.0, 'R2 - mean': 0.7416605812145269, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1802216.4432191858, 'MSE - std': 309234.3594886974, 'R2 - mean': 0.6847366240996517, 'R2 - std': 0.056923957114875245} 
+ 
+
+{'MSE - mean': 1701010.0984684562, 'MSE - std': 290234.458948618, 'R2 - mean': 0.7021485401744926, 'R2 - std': 0.05259823417700164} 
+ 
+
+{'MSE - mean': 1712684.4634709735, 'MSE - std': 252162.45411546458, 'R2 - mean': 0.700056229145167, 'R2 - std': 0.04569533865980578} 
+ 
+
+{'MSE - mean': 1651684.584981348, 'MSE - std': 256422.8213623418, 'R2 - mean': 0.7111257540708622, 'R2 - std': 0.0464821332181498} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 130 finished with value: 1651684.584981348 and parameters: {'max_depth': 11, 'n_estimators': 84}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1471110.5703801918, 'MSE - std': 0.0, 'R2 - mean': 0.7454451370430577, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1772870.3595592338, 'MSE - std': 301759.789179042, 'R2 - mean': 0.689874106918348, 'R2 - std': 0.05557103012470971} 
+ 
+
+{'MSE - mean': 1680580.7912941168, 'MSE - std': 278820.2092114378, 'R2 - mean': 0.7057253940725164, 'R2 - std': 0.05060915136252931} 
+ 
+
+{'MSE - mean': 1701521.9893690294, 'MSE - std': 244174.39081314526, 'R2 - mean': 0.7020100709006395, 'R2 - std': 0.04429870799516627} 
+ 
+
+{'MSE - mean': 1638721.7480756883, 'MSE - std': 251937.26943265842, 'R2 - mean': 0.7133895676148075, 'R2 - std': 0.04569324026487784} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 131 finished with value: 1638721.7480756883 and parameters: {'max_depth': 12, 'n_estimators': 76}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1419951.2574530405, 'MSE - std': 0.0, 'R2 - mean': 0.7542975320658035, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1765251.515751447, 'MSE - std': 345300.2582984065, 'R2 - mean': 0.6911343358205679, 'R2 - std': 0.06316319624523564} 
+ 
+
+{'MSE - mean': 1648748.5439675904, 'MSE - std': 326548.7157983798, 'R2 - mean': 0.7112611259186407, 'R2 - std': 0.05890587066877566} 
+ 
+
+{'MSE - mean': 1684012.154065371, 'MSE - std': 289320.089923882, 'R2 - mean': 0.7050467542807854, 'R2 - std': 0.05213714073474906} 
+ 
+
+{'MSE - mean': 1619829.6247226563, 'MSE - std': 288864.1200256002, 'R2 - mean': 0.7166675913431468, 'R2 - std': 0.05210374815035706} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 132 finished with value: 1619829.6247226563 and parameters: {'max_depth': 11, 'n_estimators': 79}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1440025.619146575, 'MSE - std': 0.0, 'R2 - mean': 0.7508239478956312, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1723429.359074918, 'MSE - std': 283403.739928343, 'R2 - mean': 0.698538835827146, 'R2 - std': 0.05228511206848513} 
+ 
+
+{'MSE - mean': 1629491.9719897548, 'MSE - std': 266821.26087518485, 'R2 - mean': 0.7146836584326449, 'R2 - std': 0.04841280020065722} 
+ 
+
+{'MSE - mean': 1660312.2956429757, 'MSE - std': 237160.00082546685, 'R2 - mean': 0.7092356736351129, 'R2 - std': 0.04297547012557266} 
+ 
+
+{'MSE - mean': 1596741.43434881, 'MSE - std': 247307.31977836098, 'R2 - mean': 0.7207360514474255, 'R2 - std': 0.04479450396326444} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 133 finished with value: 1596741.43434881 and parameters: {'max_depth': 12, 'n_estimators': 92}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1416969.7488785766, 'MSE - std': 0.0, 'R2 - mean': 0.7548134399260682, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1754852.0986172822, 'MSE - std': 337882.34973870567, 'R2 - mean': 0.6929626277673282, 'R2 - std': 0.061850812158740054} 
+ 
+
+{'MSE - mean': 1663774.0196732453, 'MSE - std': 304466.89109256497, 'R2 - mean': 0.7086259359502721, 'R2 - std': 0.05514550833565919} 
+ 
+
+{'MSE - mean': 1680662.131963456, 'MSE - std': 265293.59366343386, 'R2 - mean': 0.7056318200503701, 'R2 - std': 0.04803815678463145} 
+ 
+
+{'MSE - mean': 1622121.8059059612, 'MSE - std': 264598.62390186114, 'R2 - mean': 0.7162716860284186, 'R2 - std': 0.047947456636772794} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 134 finished with value: 1622121.8059059612 and parameters: {'max_depth': 12, 'n_estimators': 89}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 2777521.4737893767, 'MSE - std': 0.0, 'R2 - mean': 0.5193892203917108, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 3124738.1885685367, 'MSE - std': 347216.71477916, 'R2 - mean': 0.4536923026429466, 'R2 - std': 0.06569691774876418} 
+ 
+
+{'MSE - mean': 3053652.234683884, 'MSE - std': 300797.9227999039, 'R2 - mean': 0.46545786779258175, 'R2 - std': 0.05616268376516454} 
+ 
+
+{'MSE - mean': 3139801.4532117187, 'MSE - std': 300207.6053823799, 'R2 - mean': 0.45023923053143905, 'R2 - std': 0.05532184058794617} 
+ 
+
+{'MSE - mean': 3052804.2448404506, 'MSE - std': 319958.96943376, 'R2 - mean': 0.46619487348816097, 'R2 - std': 0.05887898611117603} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 135 finished with value: 3052804.2448404506 and parameters: {'max_depth': 3, 'n_estimators': 100}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1428249.5509079613, 'MSE - std': 0.0, 'R2 - mean': 0.7528616298326709, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1748113.7053362909, 'MSE - std': 319864.15442832944, 'R2 - mean': 0.6941686557949307, 'R2 - std': 0.05869297403774021} 
+ 
+
+{'MSE - mean': 1658570.2326256887, 'MSE - std': 290249.5223118358, 'R2 - mean': 0.7095548385400493, 'R2 - std': 0.05263122685119805} 
+ 
+
+{'MSE - mean': 1677104.293677813, 'MSE - std': 253405.05748492517, 'R2 - mean': 0.7062680482323845, 'R2 - std': 0.0459341213203908} 
+ 
+
+{'MSE - mean': 1614460.4358461234, 'MSE - std': 258975.50120290954, 'R2 - mean': 0.7176173292652901, 'R2 - std': 0.04693803916906406} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 136 finished with value: 1614460.4358461234 and parameters: {'max_depth': 11, 'n_estimators': 93}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1384725.5359683516, 'MSE - std': 0.0, 'R2 - mean': 0.76039284460426, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1757283.4650043906, 'MSE - std': 372557.9290360389, 'R2 - mean': 0.6924818927528942, 'R2 - std': 0.06791095185136586} 
+ 
+
+{'MSE - mean': 1656975.7626801722, 'MSE - std': 335642.98088327335, 'R2 - mean': 0.7097831435205171, 'R2 - std': 0.060607464973280026} 
+ 
+
+{'MSE - mean': 1692110.6974395001, 'MSE - std': 296977.3541598478, 'R2 - mean': 0.7036004345759785, 'R2 - std': 0.05356889281611255} 
+ 
+
+{'MSE - mean': 1618807.8890093963, 'MSE - std': 303396.8457350684, 'R2 - mean': 0.7168138175812049, 'R2 - std': 0.054718141267833115} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 137 finished with value: 1618807.8890093963 and parameters: {'max_depth': 12, 'n_estimators': 84}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1400498.1711934141, 'MSE - std': 0.0, 'R2 - mean': 0.7576636133153108, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1725750.2937774968, 'MSE - std': 325252.12258408265, 'R2 - mean': 0.6980657858783863, 'R2 - std': 0.0595978274369246} 
+ 
+
+{'MSE - mean': 1632113.7034345847, 'MSE - std': 296751.72158847994, 'R2 - mean': 0.7141797102406265, 'R2 - std': 0.053733147499207844} 
+ 
+
+{'MSE - mean': 1657522.0822587546, 'MSE - std': 260735.39334488637, 'R2 - mean': 0.7096911141869604, 'R2 - std': 0.04717924160822939} 
+ 
+
+{'MSE - mean': 1598613.481289538, 'MSE - std': 261280.0209483527, 'R2 - mean': 0.7203872643943777, 'R2 - std': 0.047311047209089394} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 138 finished with value: 1598613.481289538 and parameters: {'max_depth': 12, 'n_estimators': 89}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1449961.4950518322, 'MSE - std': 0.0, 'R2 - mean': 0.7491046851968619, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1761810.8701983672, 'MSE - std': 311849.375146535, 'R2 - mean': 0.6917893638672165, 'R2 - std': 0.05731532132964545} 
+ 
+
+{'MSE - mean': 1671988.1477355107, 'MSE - std': 284551.5737567941, 'R2 - mean': 0.7072163000833228, 'R2 - std': 0.051633433239636185} 
+ 
+
+{'MSE - mean': 1683805.1593407087, 'MSE - std': 247277.42291894203, 'R2 - mean': 0.7051033097524699, 'R2 - std': 0.044865384825038636} 
+ 
+
+{'MSE - mean': 1624739.7699083698, 'MSE - std': 250742.45756058578, 'R2 - mean': 0.7158308865509344, 'R2 - std': 0.04550434946537377} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 139 finished with value: 1624739.7699083698 and parameters: {'max_depth': 11, 'n_estimators': 78}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1676991.3337732626, 'MSE - std': 0.0, 'R2 - mean': 0.7098203848550223, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2015429.9906389038, 'MSE - std': 338438.6568656411, 'R2 - mean': 0.647450920097008, 'R2 - std': 0.06236946475801425} 
+ 
+
+{'MSE - mean': 1948865.614081392, 'MSE - std': 291928.2710307332, 'R2 - mean': 0.6587370685869626, 'R2 - std': 0.05336716579454129} 
+ 
+
+{'MSE - mean': 2014219.8895358131, 'MSE - std': 277002.0406617286, 'R2 - mean': 0.6472353553675417, 'R2 - std': 0.05032801416360416} 
+ 
+
+{'MSE - mean': 1934477.6644934504, 'MSE - std': 294651.3095905681, 'R2 - mean': 0.6616468608915056, 'R2 - std': 0.05345178363338799} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 140 finished with value: 1934477.6644934504 and parameters: {'max_depth': 10, 'n_estimators': 6}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1415804.0895515778, 'MSE - std': 0.0, 'R2 - mean': 0.7550151407745381, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1714801.0286888846, 'MSE - std': 298996.93913730676, 'R2 - mean': 0.7000205804191677, 'R2 - std': 0.054994560355370425} 
+ 
+
+{'MSE - mean': 1631487.6895012679, 'MSE - std': 271075.02906421915, 'R2 - mean': 0.714311602124202, 'R2 - std': 0.049241591991606465} 
+ 
+
+{'MSE - mean': 1663489.0561250886, 'MSE - std': 241212.59489090118, 'R2 - mean': 0.7086622787744408, 'R2 - std': 0.043752661054287344} 
+ 
+
+{'MSE - mean': 1598501.619765833, 'MSE - std': 251873.5402645439, 'R2 - mean': 0.7204130790795182, 'R2 - std': 0.04564823666588138} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 141 finished with value: 1598501.619765833 and parameters: {'max_depth': 12, 'n_estimators': 91}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1435163.2889186596, 'MSE - std': 0.0, 'R2 - mean': 0.7516653053229648, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1757269.9489278523, 'MSE - std': 322106.66000919277, 'R2 - mean': 0.692565859653095, 'R2 - std': 0.059099445669869854} 
+ 
+
+{'MSE - mean': 1658810.5143893892, 'MSE - std': 297585.26080344256, 'R2 - mean': 0.7095155118879689, 'R2 - std': 0.05388021659901645} 
+ 
+
+{'MSE - mean': 1689258.949229734, 'MSE - std': 263057.1461456044, 'R2 - mean': 0.7041404775536103, 'R2 - std': 0.04758131238053754} 
+ 
+
+{'MSE - mean': 1619273.2839242078, 'MSE - std': 273772.21024721337, 'R2 - mean': 0.716768575394737, 'R2 - std': 0.049487982891038444} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 142 finished with value: 1619273.2839242078 and parameters: {'max_depth': 12, 'n_estimators': 90}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1426252.683503319, 'MSE - std': 0.0, 'R2 - mean': 0.7532071594745391, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1744928.0939101044, 'MSE - std': 318675.4104067853, 'R2 - mean': 0.6947269564014165, 'R2 - std': 0.05848020307312263} 
+ 
+
+{'MSE - mean': 1625577.375724069, 'MSE - std': 310148.13556589396, 'R2 - mean': 0.7153450586796356, 'R2 - std': 0.05594790777225416} 
+ 
+
+{'MSE - mean': 1639692.6365464032, 'MSE - std': 269706.5465658882, 'R2 - mean': 0.7128301361830225, 'R2 - std': 0.04864772136042351} 
+ 
+
+{'MSE - mean': 1591902.3729258215, 'MSE - std': 259478.19599360722, 'R2 - mean': 0.7215861858222699, 'R2 - std': 0.046903669962903544} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 143 finished with value: 1591902.3729258215 and parameters: {'max_depth': 12, 'n_estimators': 84}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1501878.7636050726, 'MSE - std': 0.0, 'R2 - mean': 0.7401211366806866, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1802135.1070111927, 'MSE - std': 300256.3434061201, 'R2 - mean': 0.6847653519229606, 'R2 - std': 0.05535578475772601} 
+ 
+
+{'MSE - mean': 1676860.1132280342, 'MSE - std': 302473.5183535082, 'R2 - mean': 0.7063968805243391, 'R2 - std': 0.05457735791235812} 
+ 
+
+{'MSE - mean': 1703752.2889090823, 'MSE - std': 266058.7140415507, 'R2 - mean': 0.7016339759848025, 'R2 - std': 0.04797991013412224} 
+ 
+
+{'MSE - mean': 1642230.5307017344, 'MSE - std': 267898.29858669965, 'R2 - mean': 0.7127890390261441, 'R2 - std': 0.04836733553761234} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 144 finished with value: 1642230.5307017344 and parameters: {'max_depth': 11, 'n_estimators': 81}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1392877.2677232507, 'MSE - std': 0.0, 'R2 - mean': 0.7589823027989668, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1699796.5135601824, 'MSE - std': 306919.24583693175, 'R2 - mean': 0.7026283550577965, 'R2 - std': 0.05635394774117025} 
+ 
+
+{'MSE - mean': 1632613.0363475245, 'MSE - std': 268005.326186206, 'R2 - mean': 0.7140969153038693, 'R2 - std': 0.04878764220830213} 
+ 
+
+{'MSE - mean': 1672936.461095553, 'MSE - std': 242380.02578257286, 'R2 - mean': 0.7069938389129131, 'R2 - std': 0.04400609738242256} 
+ 
+
+{'MSE - mean': 1604878.8816809037, 'MSE - std': 255980.07340770416, 'R2 - mean': 0.7192834763363192, 'R2 - std': 0.046404418296754214} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 145 finished with value: 1604878.8816809037 and parameters: {'max_depth': 12, 'n_estimators': 75}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1446474.585876212, 'MSE - std': 0.0, 'R2 - mean': 0.7497080454780092, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1771547.0670290566, 'MSE - std': 325072.48115284473, 'R2 - mean': 0.6900675155221079, 'R2 - std': 0.059640529955901245} 
+ 
+
+{'MSE - mean': 1666620.1610158968, 'MSE - std': 304084.5110813221, 'R2 - mean': 0.7081498060812977, 'R2 - std': 0.05500242727384335} 
+ 
+
+{'MSE - mean': 1709108.727373784, 'MSE - std': 273434.4111905464, 'R2 - mean': 0.7006645257778077, 'R2 - std': 0.0493663703159982} 
+ 
+
+{'MSE - mean': 1648418.457270793, 'MSE - std': 273031.75148541364, 'R2 - mean': 0.7116828568793024, 'R2 - std': 0.04934820458324378} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 146 finished with value: 1648418.457270793 and parameters: {'max_depth': 11, 'n_estimators': 90}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1479601.9757429599, 'MSE - std': 0.0, 'R2 - mean': 0.7439758195274664, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1786264.455457298, 'MSE - std': 306662.4797143381, 'R2 - mean': 0.687526852655924, 'R2 - std': 0.05644896687154244} 
+ 
+
+{'MSE - mean': 1682697.5188728303, 'MSE - std': 290080.68707978516, 'R2 - mean': 0.7053562895431043, 'R2 - std': 0.05253666859128854} 
+ 
+
+{'MSE - mean': 1706664.1828268566, 'MSE - std': 254623.85337152885, 'R2 - mean': 0.7011104227770886, 'R2 - std': 0.04608859201350624} 
+ 
+
+{'MSE - mean': 1642228.4822729393, 'MSE - std': 261676.29504429534, 'R2 - mean': 0.7127753236250858, 'R2 - std': 0.04736672142131404} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 147 finished with value: 1642228.4822729393 and parameters: {'max_depth': 11, 'n_estimators': 68}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1451116.5152735037, 'MSE - std': 0.0, 'R2 - mean': 0.7489048252949893, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1734212.7094415552, 'MSE - std': 283096.1941680516, 'R2 - mean': 0.6966559847744368, 'R2 - std': 0.05224884052055245} 
+ 
+
+{'MSE - mean': 1629282.0762992185, 'MSE - std': 274681.3529253975, 'R2 - mean': 0.7147270305013101, 'R2 - std': 0.049730134504344964} 
+ 
+
+{'MSE - mean': 1651150.6790865522, 'MSE - std': 240877.75239175913, 'R2 - mean': 0.7108458527077512, 'R2 - std': 0.04358905059256081} 
+ 
+
+{'MSE - mean': 1592276.6284062066, 'MSE - std': 245524.5174150478, 'R2 - mean': 0.7215264679273404, 'R2 - std': 0.04445566815518962} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 148 finished with value: 1592276.6284062066 and parameters: {'max_depth': 12, 'n_estimators': 85}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1430723.42443137, 'MSE - std': 0.0, 'R2 - mean': 0.7524335610332187, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1741573.0180343376, 'MSE - std': 310849.59360296733, 'R2 - mean': 0.6953255901877217, 'R2 - std': 0.057107970845497014} 
+ 
+
+{'MSE - mean': 1677717.5872916596, 'MSE - std': 269394.40472923557, 'R2 - mean': 0.7062001339133607, 'R2 - std': 0.049099133989733076} 
+ 
+
+{'MSE - mean': 1692169.4999217142, 'MSE - std': 234641.39087246434, 'R2 - mean': 0.7036285490239931, 'R2 - std': 0.04275374679997057} 
+ 
+
+{'MSE - mean': 1639287.5199365749, 'MSE - std': 235013.36361374523, 'R2 - mean': 0.7132859891032861, 'R2 - std': 0.04284122883262505} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 149 finished with value: 1639287.5199365749 and parameters: {'max_depth': 12, 'n_estimators': 30}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1450953.2703370743, 'MSE - std': 0.0, 'R2 - mean': 0.7489330725207639, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1779432.7528559552, 'MSE - std': 328479.48251888074, 'R2 - mean': 0.6886847429767857, 'R2 - std': 0.06024832954397813} 
+ 
+
+{'MSE - mean': 1669217.9417735233, 'MSE - std': 310204.96899274003, 'R2 - mean': 0.7076947146397075, 'R2 - std': 0.0560594819854474} 
+ 
+
+{'MSE - mean': 1692716.5562445363, 'MSE - std': 271711.05376302236, 'R2 - mean': 0.7035366984036082, 'R2 - std': 0.04908020412973566} 
+ 
+
+{'MSE - mean': 1628428.608781981, 'MSE - std': 274942.3178512224, 'R2 - mean': 0.7151753724407797, 'R2 - std': 0.04968830932228759} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 150 finished with value: 1628428.608781981 and parameters: {'max_depth': 11, 'n_estimators': 99}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1394530.8464907059, 'MSE - std': 0.0, 'R2 - mean': 0.7586961743970553, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1717717.9976686654, 'MSE - std': 323187.1511779595, 'R2 - mean': 0.6994719936347807, 'R2 - std': 0.059224180762274536} 
+ 
+
+{'MSE - mean': 1628092.8594717577, 'MSE - std': 292743.267360065, 'R2 - mean': 0.7148830403783681, 'R2 - std': 0.053040894111126974} 
+ 
+
+{'MSE - mean': 1664103.7829421253, 'MSE - std': 261082.98540129143, 'R2 - mean': 0.7085370362579635, 'R2 - std': 0.04723153227420657} 
+ 
+
+{'MSE - mean': 1591957.5373339774, 'MSE - std': 274502.7927621968, 'R2 - mean': 0.7215354207223496, 'R2 - std': 0.04960328726517533} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 151 finished with value: 1591957.5373339774 and parameters: {'max_depth': 12, 'n_estimators': 82}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1839558.0031114987, 'MSE - std': 0.0, 'R2 - mean': 0.6816905236005644, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 2175563.450914481, 'MSE - std': 336005.4478029824, 'R2 - mean': 0.6194870068746143, 'R2 - std': 0.06220351672594998} 
+ 
+
+{'MSE - mean': 2054751.0414761647, 'MSE - std': 323199.19118726876, 'R2 - mean': 0.6402471959265736, 'R2 - std': 0.05866420738118946} 
+ 
+
+{'MSE - mean': 2057901.9102016683, 'MSE - std': 279951.90981533704, 'R2 - mean': 0.6396286627485364, 'R2 - std': 0.05081598833658952} 
+ 
+
+{'MSE - mean': 1984599.8954261076, 'MSE - std': 290157.19692613126, 'R2 - mean': 0.652924452904482, 'R2 - std': 0.0526585594180403} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 152 finished with value: 1984599.8954261076 and parameters: {'max_depth': 7, 'n_estimators': 86}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1454177.5387699958, 'MSE - std': 0.0, 'R2 - mean': 0.7483751585028757, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1751705.6502354322, 'MSE - std': 297528.1114654364, 'R2 - mean': 0.6935774396464662, 'R2 - std': 0.05479771885640955} 
+ 
+
+{'MSE - mean': 1644394.8894117456, 'MSE - std': 286437.6316965174, 'R2 - mean': 0.7120689876900478, 'R2 - std': 0.05182407445071807} 
+ 
+
+{'MSE - mean': 1666844.8895471357, 'MSE - std': 251091.40797161768, 'R2 - mean': 0.7080884628439355, 'R2 - std': 0.04540743059959162} 
+ 
+
+{'MSE - mean': 1604584.8200083352, 'MSE - std': 256793.26541332933, 'R2 - mean': 0.7193635049072586, 'R2 - std': 0.04645399979597252} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 153 finished with value: 1604584.8200083352 and parameters: {'max_depth': 12, 'n_estimators': 92}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1425941.4504574703, 'MSE - std': 0.0, 'R2 - mean': 0.7532610139481108, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1727236.095110632, 'MSE - std': 301294.64465316175, 'R2 - mean': 0.6978450375224763, 'R2 - std': 0.05541597642563456} 
+ 
+
+{'MSE - mean': 1632327.8224103332, 'MSE - std': 280239.4257030202, 'R2 - mean': 0.7141688178672873, 'R2 - std': 0.050795851913605417} 
+ 
+
+{'MSE - mean': 1666825.5728708336, 'MSE - std': 249941.76551603733, 'R2 - mean': 0.7080809917179552, 'R2 - std': 0.045236587077222924} 
+ 
+
+{'MSE - mean': 1601501.3668708063, 'MSE - std': 258931.8761326133, 'R2 - mean': 0.7198906166512938, 'R2 - std': 0.04685027227861831} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 154 finished with value: 1601501.3668708063 and parameters: {'max_depth': 12, 'n_estimators': 83}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1463677.1430057618, 'MSE - std': 0.0, 'R2 - mean': 0.7467313864417752, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1810921.0408640003, 'MSE - std': 347243.89785823855, 'R2 - mean': 0.6831548553174289, 'R2 - std': 0.06357653112434619} 
+ 
+
+{'MSE - mean': 1690417.8059053433, 'MSE - std': 330798.44165925425, 'R2 - mean': 0.7039716731129001, 'R2 - std': 0.05967688005246526} 
+ 
+
+{'MSE - mean': 1712176.1654513925, 'MSE - std': 288948.06693166983, 'R2 - mean': 0.7001207103711381, 'R2 - std': 0.05211033728265978} 
+ 
+
+{'MSE - mean': 1649097.8059548172, 'MSE - std': 287590.5180181639, 'R2 - mean': 0.7115561553100667, 'R2 - std': 0.051917890993135735} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 155 finished with value: 1649097.8059548172 and parameters: {'max_depth': 11, 'n_estimators': 72}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1456595.1550111836, 'MSE - std': 0.0, 'R2 - mean': 0.7479568242298789, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1751235.1861398285, 'MSE - std': 294640.0311286448, 'R2 - mean': 0.6936642793346361, 'R2 - std': 0.054292544895242656} 
+ 
+
+{'MSE - mean': 1660324.2077740703, 'MSE - std': 272772.39096084825, 'R2 - mean': 0.7092759833715999, 'R2 - std': 0.04952343781830437} 
+ 
+
+{'MSE - mean': 1674238.8218385112, 'MSE - std': 237454.0637819458, 'R2 - mean': 0.7067914632989288, 'R2 - std': 0.04310390573929596} 
+ 
+
+{'MSE - mean': 1602948.7387604173, 'MSE - std': 255805.88286115392, 'R2 - mean': 0.7196379892602915, 'R2 - std': 0.04633023061770308} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 156 finished with value: 1602948.7387604173 and parameters: {'max_depth': 12, 'n_estimators': 89}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1522448.2832595832, 'MSE - std': 0.0, 'R2 - mean': 0.7365618724335464, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1872582.361652854, 'MSE - std': 350134.0783932707, 'R2 - mean': 0.6723808227002968, 'R2 - std': 0.06418104973324967} 
+ 
+
+{'MSE - mean': 1751501.9679628874, 'MSE - std': 333241.9121905855, 'R2 - mean': 0.6932827717683133, 'R2 - std': 0.06016577969459468} 
+ 
+
+{'MSE - mean': 1762207.1255812857, 'MSE - std': 289190.99264885945, 'R2 - mean': 0.6913650151286841, 'R2 - std': 0.052210862435707786} 
+ 
+
+{'MSE - mean': 1704474.1971464243, 'MSE - std': 283262.2606102787, 'R2 - mean': 0.7018841361139984, 'R2 - std': 0.05121900965695295} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 157 finished with value: 1704474.1971464243 and parameters: {'max_depth': 10, 'n_estimators': 82}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1487740.610261872, 'MSE - std': 0.0, 'R2 - mean': 0.74256754401349, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1755468.0867667352, 'MSE - std': 267727.47650486324, 'R2 - mean': 0.6929685207357763, 'R2 - std': 0.049599023277713705} 
+ 
+
+{'MSE - mean': 1661299.5081702236, 'MSE - std': 255970.26553921503, 'R2 - mean': 0.7091362577651705, 'R2 - std': 0.046506273928421896} 
+ 
+
+{'MSE - mean': 1690145.9699836103, 'MSE - std': 227237.62388217263, 'R2 - mean': 0.7040276972313536, 'R2 - std': 0.041236116551053595} 
+ 
+
+{'MSE - mean': 1618833.4298709838, 'MSE - std': 248297.12780326823, 'R2 - mean': 0.7168780805355912, 'R2 - std': 0.04495401262215618} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 158 finished with value: 1618833.4298709838 and parameters: {'max_depth': 12, 'n_estimators': 75}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1451876.5761840702, 'MSE - std': 0.0, 'R2 - mean': 0.7487733075118778, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1788284.0536714552, 'MSE - std': 336407.47748738504, 'R2 - mean': 0.6871260096888641, 'R2 - std': 0.0616472978230137} 
+ 
+
+{'MSE - mean': 1681187.1370995857, 'MSE - std': 313665.6813945185, 'R2 - mean': 0.7055904712271204, 'R2 - std': 0.05670507530825672} 
+ 
+
+{'MSE - mean': 1690985.1923965835, 'MSE - std': 272172.0511483954, 'R2 - mean': 0.7038347399322171, 'R2 - std': 0.049202103119948104} 
+ 
+
+{'MSE - mean': 1632366.845530425, 'MSE - std': 270197.22925734246, 'R2 - mean': 0.7144888363659601, 'R2 - std': 0.048894955204180086} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 159 finished with value: 1632366.845530425 and parameters: {'max_depth': 11, 'n_estimators': 96}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1538357.8709233627, 'MSE - std': 0.0, 'R2 - mean': 0.7338089434634227, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1832084.937814913, 'MSE - std': 293727.0668915503, 'R2 - mean': 0.679545074224379, 'R2 - std': 0.054263869239043694} 
+ 
+
+{'MSE - mean': 1818599.9474698973, 'MSE - std': 240584.18446014388, 'R2 - mean': 0.6815435521721073, 'R2 - std': 0.044396315516152925} 
+ 
+
+{'MSE - mean': 1836936.7360269777, 'MSE - std': 210758.8095502193, 'R2 - mean': 0.6782843352225919, 'R2 - std': 0.0388605469458341} 
+ 
+
+{'MSE - mean': 1818409.7301335137, 'MSE - std': 192115.6433816004, 'R2 - mean': 0.6820102912166754, 'R2 - std': 0.03554778023200446} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 160 finished with value: 1818409.7301335137 and parameters: {'max_depth': 11, 'n_estimators': 7}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1424757.0906200886, 'MSE - std': 0.0, 'R2 - mean': 0.7534659506552263, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1745075.4995841675, 'MSE - std': 320318.4089640789, 'R2 - mean': 0.6946985539092678, 'R2 - std': 0.05876739674595838} 
+ 
+
+{'MSE - mean': 1641140.3305434224, 'MSE - std': 300012.71218829346, 'R2 - mean': 0.7126118261568938, 'R2 - std': 0.05426025487192609} 
+ 
+
+{'MSE - mean': 1655676.2005005954, 'MSE - std': 261035.62046618728, 'R2 - mean': 0.7100248085405747, 'R2 - std': 0.04720391323308079} 
+ 
+
+{'MSE - mean': 1604947.9241445377, 'MSE - std': 254568.47450138064, 'R2 - mean': 0.7192969725769309, 'R2 - std': 0.046113551622937995} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 161 finished with value: 1604947.9241445377 and parameters: {'max_depth': 12, 'n_estimators': 78}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1485345.6310525178, 'MSE - std': 0.0, 'R2 - mean': 0.7429819612685195, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1788614.01214386, 'MSE - std': 303268.3810913423, 'R2 - mean': 0.6871219846999916, 'R2 - std': 0.05585997656852776} 
+ 
+
+{'MSE - mean': 1662689.5740547145, 'MSE - std': 305005.57731945906, 'R2 - mean': 0.7088730123999069, 'R2 - std': 0.055013080870182716} 
+ 
+
+{'MSE - mean': 1673423.802124605, 'MSE - std': 264796.09627740295, 'R2 - mean': 0.7069428687472177, 'R2 - std': 0.04775987503838339} 
+ 
+
+{'MSE - mean': 1609151.309023655, 'MSE - std': 269476.1428413432, 'R2 - mean': 0.7185680763887247, 'R2 - std': 0.04863523765520433} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 162 finished with value: 1609151.309023655 and parameters: {'max_depth': 12, 'n_estimators': 70}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1432768.0886283251, 'MSE - std': 0.0, 'R2 - mean': 0.7520797608329289, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1738468.8635390834, 'MSE - std': 305700.77491075813, 'R2 - mean': 0.6958760695927372, 'R2 - std': 0.056203691240191755} 
+ 
+
+{'MSE - mean': 1651781.5025485875, 'MSE - std': 278085.19012169354, 'R2 - mean': 0.7107560957381507, 'R2 - std': 0.050484984191918374} 
+ 
+
+{'MSE - mean': 1672598.42845057, 'MSE - std': 243512.96256213903, 'R2 - mean': 0.7070663721002834, 'R2 - std': 0.044185884660321036} 
+ 
+
+{'MSE - mean': 1605778.7260396709, 'MSE - std': 255535.4004238086, 'R2 - mean': 0.7191381593585617, 'R2 - std': 0.046312267413814674} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 163 finished with value: 1605778.7260396709 and parameters: {'max_depth': 12, 'n_estimators': 86}. Best is trial 41 with value: 1586426.604695057.
+{'MSE - mean': 1389058.963699356, 'MSE - std': 0.0, 'R2 - mean': 0.7596430062682371, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1717847.7264402783, 'MSE - std': 328788.7627409224, 'R2 - mean': 0.6994402753112658, 'R2 - std': 0.06020273095697126} 
+ 
+
+{'MSE - mean': 1606642.4065826451, 'MSE - std': 311129.04075171344, 'R2 - mean': 0.7186419693640254, 'R2 - std': 0.056157421463625} 
+ 
+
+{'MSE - mean': 1636606.886863707, 'MSE - std': 274398.56091979326, 'R2 - mean': 0.7133552455143348, 'R2 - std': 0.049488284838647104} 
+ 
+
+{'MSE - mean': 1578412.5636674408, 'MSE - std': 271628.37332828244, 'R2 - mean': 0.7239212935066395, 'R2 - std': 0.04904933995192585} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 164 finished with value: 1578412.5636674408 and parameters: {'max_depth': 12, 'n_estimators': 79}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1456621.8602712813, 'MSE - std': 0.0, 'R2 - mean': 0.7479522032625896, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1777260.0125089712, 'MSE - std': 320638.1522376897, 'R2 - mean': 0.6890769029681716, 'R2 - std': 0.05887530029441801} 
+ 
+
+{'MSE - mean': 1691401.2804813192, 'MSE - std': 288587.3527681447, 'R2 - mean': 0.7038083930383133, 'R2 - std': 0.05239180205476138} 
+ 
+
+{'MSE - mean': 1704306.6524396148, 'MSE - std': 250921.5833870017, 'R2 - mean': 0.7015063275727984, 'R2 - std': 0.045547493983001126} 
+ 
+
+{'MSE - mean': 1638906.9799159665, 'MSE - std': 259764.85803963902, 'R2 - mean': 0.7133414728520057, 'R2 - std': 0.047116260692302264} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 165 finished with value: 1638906.9799159665 and parameters: {'max_depth': 12, 'n_estimators': 93}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1454842.9463617506, 'MSE - std': 0.0, 'R2 - mean': 0.7482600191369164, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1762944.970066363, 'MSE - std': 308102.0237046124, 'R2 - mean': 0.6915973509404993, 'R2 - std': 0.05666266819641713} 
+ 
+
+{'MSE - mean': 1692821.856001175, 'MSE - std': 270405.38750731974, 'R2 - mean': 0.7035643467218078, 'R2 - std': 0.0492631365304513} 
+ 
+
+{'MSE - mean': 1705323.7184378807, 'MSE - std': 235176.9437846677, 'R2 - mean': 0.7013317671140555, 'R2 - std': 0.04283801700275431} 
+ 
+
+{'MSE - mean': 1632334.161810069, 'MSE - std': 256039.95277537327, 'R2 - mean': 0.7144852808167201, 'R2 - std': 0.046477265963988885} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 166 finished with value: 1632334.161810069 and parameters: {'max_depth': 11, 'n_estimators': 82}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1448781.5709619164, 'MSE - std': 0.0, 'R2 - mean': 0.7493088543606594, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1737415.2215386322, 'MSE - std': 288633.6505767157, 'R2 - mean': 0.69608769825062, 'R2 - std': 0.053221156110039414} 
+ 
+
+{'MSE - mean': 1646509.5109746146, 'MSE - std': 268453.50793596584, 'R2 - mean': 0.711699212435193, 'R2 - std': 0.04874183407228028} 
+ 
+
+{'MSE - mean': 1682088.1239890659, 'MSE - std': 240516.06506518548, 'R2 - mean': 0.705418203430824, 'R2 - std': 0.04359103134689717} 
+ 
+
+{'MSE - mean': 1614277.6078776806, 'MSE - std': 254305.81280167826, 'R2 - mean': 0.7176620043818958, 'R2 - std': 0.04604112355304555} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 167 finished with value: 1614277.6078776806 and parameters: {'max_depth': 12, 'n_estimators': 100}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1443408.3268685034, 'MSE - std': 0.0, 'R2 - mean': 0.7502386182012383, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1779994.9713267034, 'MSE - std': 336586.6444582001, 'R2 - mean': 0.6885734360739431, 'R2 - std': 0.06166518212729516} 
+ 
+
+{'MSE - mean': 1668642.5665929911, 'MSE - std': 316742.4225324339, 'R2 - mean': 0.7077872830223341, 'R2 - std': 0.057213695507637934} 
+ 
+
+{'MSE - mean': 1696885.6275178713, 'MSE - std': 278634.7665762578, 'R2 - mean': 0.7028000402985503, 'R2 - std': 0.05029585455271971} 
+ 
+
+{'MSE - mean': 1630983.245178524, 'MSE - std': 281926.1649936215, 'R2 - mean': 0.7147216848150029, 'R2 - std': 0.05091405326682733} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 168 finished with value: 1630983.245178524 and parameters: {'max_depth': 11, 'n_estimators': 61}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1447851.8461246903, 'MSE - std': 0.0, 'R2 - mean': 0.7494697300849542, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1758736.9049611911, 'MSE - std': 310885.058836501, 'R2 - mean': 0.6923278020723812, 'R2 - std': 0.05714192801257301} 
+ 
+
+{'MSE - mean': 1679188.0074930985, 'MSE - std': 277649.1804093095, 'R2 - mean': 0.705951882784324, 'R2 - std': 0.05047802599633932} 
+ 
+
+{'MSE - mean': 1691995.7769608155, 'MSE - std': 241472.3947218098, 'R2 - mean': 0.7036660264715089, 'R2 - std': 0.04389417670504642} 
+ 
+
+{'MSE - mean': 1616559.2681686655, 'MSE - std': 263457.399526263, 'R2 - mean': 0.7172410316684138, 'R2 - std': 0.0477334480555831} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 169 finished with value: 1616559.2681686655 and parameters: {'max_depth': 12, 'n_estimators': 77}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1441982.1453671048, 'MSE - std': 0.0, 'R2 - mean': 0.750485398724708, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1755926.1024947301, 'MSE - std': 313943.95712762536, 'R2 - mean': 0.6928137703551249, 'R2 - std': 0.05767162836958306} 
+ 
+
+{'MSE - mean': 1654419.1637710072, 'MSE - std': 293793.33330777177, 'R2 - mean': 0.7102942931622218, 'R2 - std': 0.053183473320369} 
+ 
+
+{'MSE - mean': 1673763.631335956, 'MSE - std': 256629.14350903855, 'R2 - mean': 0.7068624756999915, 'R2 - std': 0.04644021413706022} 
+ 
+
+{'MSE - mean': 1611408.5052712345, 'MSE - std': 261226.83787225123, 'R2 - mean': 0.7181587950396271, 'R2 - std': 0.04728405771260443} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 170 finished with value: 1611408.5052712345 and parameters: {'max_depth': 11, 'n_estimators': 73}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1384351.149967527, 'MSE - std': 0.0, 'R2 - mean': 0.7604576268028601, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1708309.9679753068, 'MSE - std': 323958.81800777966, 'R2 - mean': 0.701113889564444, 'R2 - std': 0.05934373723841613} 
+ 
+
+{'MSE - mean': 1626201.00988396, 'MSE - std': 288877.0889283045, 'R2 - mean': 0.7152088482810348, 'R2 - std': 0.05239391016196045} 
+ 
+
+{'MSE - mean': 1660805.5519305123, 'MSE - std': 257254.5478150454, 'R2 - mean': 0.7091106772446713, 'R2 - std': 0.046587599600225356} 
+ 
+
+{'MSE - mean': 1597918.229969044, 'MSE - std': 262227.349739039, 'R2 - mean': 0.7205001426827311, 'R2 - std': 0.04748898020665189} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 171 finished with value: 1597918.229969044 and parameters: {'max_depth': 12, 'n_estimators': 80}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1412924.791252563, 'MSE - std': 0.0, 'R2 - mean': 0.7555133625932613, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1721627.7942346805, 'MSE - std': 308703.0029821176, 'R2 - mean': 0.698812562971526, 'R2 - std': 0.05670079962173524} 
+ 
+
+{'MSE - mean': 1627065.6957794784, 'MSE - std': 285334.3248926673, 'R2 - mean': 0.7150811910283311, 'R2 - std': 0.05169774627129097} 
+ 
+
+{'MSE - mean': 1652556.5514768069, 'MSE - std': 251020.13643134633, 'R2 - mean': 0.7105738926418812, 'R2 - std': 0.04544711149656895} 
+ 
+
+{'MSE - mean': 1596225.3938556253, 'MSE - std': 251200.48644654127, 'R2 - mean': 0.7208181963426507, 'R2 - std': 0.04552070944042558} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 172 finished with value: 1596225.3938556253 and parameters: {'max_depth': 12, 'n_estimators': 86}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1388980.1331977095, 'MSE - std': 0.0, 'R2 - mean': 0.7596566467708259, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1719603.8265968524, 'MSE - std': 330623.69339914306, 'R2 - mean': 0.6991305984459758, 'R2 - std': 0.06052604832485009} 
+ 
+
+{'MSE - mean': 1639511.5525033223, 'MSE - std': 292752.846550704, 'R2 - mean': 0.7128719436830985, 'R2 - std': 0.05310289529206149} 
+ 
+
+{'MSE - mean': 1677339.4064806409, 'MSE - std': 261860.6718891614, 'R2 - mean': 0.7062101890431368, 'R2 - std': 0.047413869710759594} 
+ 
+
+{'MSE - mean': 1601649.4933162802, 'MSE - std': 278877.5017908551, 'R2 - mean': 0.7198297241903311, 'R2 - std': 0.05040264857387706} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 173 finished with value: 1601649.4933162802 and parameters: {'max_depth': 12, 'n_estimators': 86}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1353099.8483920998, 'MSE - std': 0.0, 'R2 - mean': 0.7658652222276574, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1691430.1087362622, 'MSE - std': 338330.26034416223, 'R2 - mean': 0.7040387677291777, 'R2 - std': 0.06182645449847962} 
+ 
+
+{'MSE - mean': 1624110.1701788604, 'MSE - std': 292190.90499952895, 'R2 - mean': 0.7155506204895872, 'R2 - std': 0.05304135957146784} 
+ 
+
+{'MSE - mean': 1657601.1374401473, 'MSE - std': 259608.50985208983, 'R2 - mean': 0.709653704398006, 'R2 - std': 0.047056989141526624} 
+ 
+
+{'MSE - mean': 1590765.7940453645, 'MSE - std': 267927.4439412512, 'R2 - mean': 0.7217319219521713, 'R2 - std': 0.04852856415345074} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 174 finished with value: 1590765.7940453645 and parameters: {'max_depth': 12, 'n_estimators': 67}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1457664.2805539528, 'MSE - std': 0.0, 'R2 - mean': 0.7477718271864866, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1786191.3258559864, 'MSE - std': 328527.04530203366, 'R2 - mean': 0.6875042584700926, 'R2 - std': 0.060267568716394104} 
+ 
+
+{'MSE - mean': 1678893.6341553542, 'MSE - std': 308186.5273150189, 'R2 - mean': 0.706000311950204, 'R2 - std': 0.055728459647369354} 
+ 
+
+{'MSE - mean': 1696199.8490089076, 'MSE - std': 268575.3468424461, 'R2 - mean': 0.7029270577067904, 'R2 - std': 0.04855492339542236} 
+ 
+
+{'MSE - mean': 1630012.1708752925, 'MSE - std': 274279.79964282515, 'R2 - mean': 0.7148967029497031, 'R2 - std': 0.04958985881924845} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 175 finished with value: 1630012.1708752925 and parameters: {'max_depth': 11, 'n_estimators': 68}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1447705.613847516, 'MSE - std': 0.0, 'R2 - mean': 0.7494950335108322, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1734507.7390690325, 'MSE - std': 286802.1252215166, 'R2 - mean': 0.69659846241258, 'R2 - std': 0.05289657109825219} 
+ 
+
+{'MSE - mean': 1622644.227939669, 'MSE - std': 282601.9513947088, 'R2 - mean': 0.7158882515761099, 'R2 - std': 0.05108382086905634} 
+ 
+
+{'MSE - mean': 1645579.058017119, 'MSE - std': 247943.37355758782, 'R2 - mean': 0.7118207108336676, 'R2 - std': 0.04479734622732312} 
+ 
+
+{'MSE - mean': 1587616.793528078, 'MSE - std': 250238.3456061127, 'R2 - mean': 0.7223415469727752, 'R2 - std': 0.04525697466106564} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 176 finished with value: 1587616.793528078 and parameters: {'max_depth': 12, 'n_estimators': 65}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1389864.8449151544, 'MSE - std': 0.0, 'R2 - mean': 0.7595035599298194, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1725554.3553319187, 'MSE - std': 335689.5104167644, 'R2 - mean': 0.6980831244359442, 'R2 - std': 0.06142043549387516} 
+ 
+
+{'MSE - mean': 1658362.7055327196, 'MSE - std': 290093.7788739607, 'R2 - mean': 0.7095612259739142, 'R2 - std': 0.05271122803227115} 
+ 
+
+{'MSE - mean': 1685470.3630659329, 'MSE - std': 255578.31617108043, 'R2 - mean': 0.7047797254639763, 'R2 - std': 0.04639443298373395} 
+ 
+
+{'MSE - mean': 1612182.9094503236, 'MSE - std': 271551.88083921676, 'R2 - mean': 0.7179853441441585, 'R2 - std': 0.04918849650488681} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 177 finished with value: 1612182.9094503236 and parameters: {'max_depth': 12, 'n_estimators': 57}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1429962.3708264779, 'MSE - std': 0.0, 'R2 - mean': 0.7525652505880331, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1760756.1740361336, 'MSE - std': 330793.8032096557, 'R2 - mean': 0.6919429269925403, 'R2 - std': 0.0606223235954928} 
+ 
+
+{'MSE - mean': 1676759.2026698506, 'MSE - std': 295060.46141769306, 'R2 - mean': 0.7063578690341576, 'R2 - std': 0.053531534508836943} 
+ 
+
+{'MSE - mean': 1683987.477037848, 'MSE - std': 255836.37499392766, 'R2 - mean': 0.7050545044317332, 'R2 - std': 0.04641460080635898} 
+ 
+
+{'MSE - mean': 1635326.425951554, 'MSE - std': 248663.21036156223, 'R2 - mean': 0.7139776723800162, 'R2 - std': 0.045187872702130885} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 178 finished with value: 1635326.425951554 and parameters: {'max_depth': 11, 'n_estimators': 66}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1482691.802821789, 'MSE - std': 0.0, 'R2 - mean': 0.7434411686830986, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1793792.2455472725, 'MSE - std': 311100.44272548356, 'R2 - mean': 0.6862049202003881, 'R2 - std': 0.05723624848271047} 
+ 
+
+{'MSE - mean': 1674370.5217565224, 'MSE - std': 305033.4733582033, 'R2 - mean': 0.7068173524642992, 'R2 - std': 0.05507936838101636} 
+ 
+
+{'MSE - mean': 1694900.5541989082, 'MSE - std': 266549.2667369084, 'R2 - mean': 0.7031731108200385, 'R2 - std': 0.04811594441995369} 
+ 
+
+{'MSE - mean': 1615080.8219192808, 'MSE - std': 286920.8391231845, 'R2 - mean': 0.7175073725667498, 'R2 - std': 0.05171072930477947} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 179 finished with value: 1615080.8219192808 and parameters: {'max_depth': 12, 'n_estimators': 65}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1486065.138489459, 'MSE - std': 0.0, 'R2 - mean': 0.7428574606900485, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1799168.977289143, 'MSE - std': 313103.8387996842, 'R2 - mean': 0.6852626153182322, 'R2 - std': 0.057594845371816306} 
+ 
+
+{'MSE - mean': 1692496.1994443575, 'MSE - std': 296840.3145019978, 'R2 - mean': 0.7036369396237164, 'R2 - std': 0.05372779289748619} 
+ 
+
+{'MSE - mean': 1699941.915600929, 'MSE - std': 257394.53238654154, 'R2 - mean': 0.7022863780457204, 'R2 - std': 0.046588398201207276} 
+ 
+
+{'MSE - mean': 1637014.145380212, 'MSE - std': 262376.01510388573, 'R2 - mean': 0.7136876824689116, 'R2 - std': 0.0475009689139551} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 180 finished with value: 1637014.145380212 and parameters: {'max_depth': 11, 'n_estimators': 62}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1484674.768742118, 'MSE - std': 0.0, 'R2 - mean': 0.7430980444963373, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1772120.4436522676, 'MSE - std': 287445.67491014954, 'R2 - mean': 0.6900282357223383, 'R2 - std': 0.05306980877399903} 
+ 
+
+{'MSE - mean': 1664536.850109448, 'MSE - std': 279699.4873351411, 'R2 - mean': 0.7085563648050268, 'R2 - std': 0.05063779422014827} 
+ 
+
+{'MSE - mean': 1669401.1557847972, 'MSE - std': 242373.34181127526, 'R2 - mean': 0.7076529518913066, 'R2 - std': 0.043881523643665675} 
+ 
+
+{'MSE - mean': 1602198.8575316279, 'MSE - std': 255069.52977304815, 'R2 - mean': 0.7197850123327474, 'R2 - std': 0.04614345084679685} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 181 finished with value: 1602198.8575316279 and parameters: {'max_depth': 12, 'n_estimators': 72}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1418159.0961601736, 'MSE - std': 0.0, 'R2 - mean': 0.7546076402123207, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1739393.5358007643, 'MSE - std': 321234.4396405907, 'R2 - mean': 0.6956894463465405, 'R2 - std': 0.05891819386578023} 
+ 
+
+{'MSE - mean': 1653091.0156115312, 'MSE - std': 289293.3230987116, 'R2 - mean': 0.710510036353973, 'R2 - std': 0.0524741411421594} 
+ 
+
+{'MSE - mean': 1683326.6341916348, 'MSE - std': 255950.28420551948, 'R2 - mean': 0.705174191355723, 'R2 - std': 0.04637418831625518} 
+ 
+
+{'MSE - mean': 1617648.5180679734, 'MSE - std': 263937.2996340636, 'R2 - mean': 0.7170532336237283, 'R2 - std': 0.04780061562797511} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 182 finished with value: 1617648.5180679734 and parameters: {'max_depth': 12, 'n_estimators': 80}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1432482.3341646914, 'MSE - std': 0.0, 'R2 - mean': 0.7521292065984576, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1803740.6955142464, 'MSE - std': 371258.3613495551, 'R2 - mean': 0.6843700828191418, 'R2 - std': 0.06775912377931581} 
+ 
+
+{'MSE - mean': 1699103.0933540568, 'MSE - std': 337322.64893763955, 'R2 - mean': 0.702417242627018, 'R2 - std': 0.06092836661049165} 
+ 
+
+{'MSE - mean': 1698037.927131483, 'MSE - std': 292135.80891765846, 'R2 - mean': 0.7025734176135068, 'R2 - std': 0.052766206659623255} 
+ 
+
+{'MSE - mean': 1617114.021568937, 'MSE - std': 307358.7133099747, 'R2 - mean': 0.717110448079396, 'R2 - std': 0.05543211227494057} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 183 finished with value: 1617114.021568937 and parameters: {'max_depth': 12, 'n_estimators': 75}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1497744.3610701303, 'MSE - std': 0.0, 'R2 - mean': 0.7408365365234183, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1760433.3963231333, 'MSE - std': 262689.0352530031, 'R2 - mean': 0.6921094624856243, 'R2 - std': 0.04872707403779392} 
+ 
+
+{'MSE - mean': 1692025.030055467, 'MSE - std': 235293.63636158555, 'R2 - mean': 0.7037517293174477, 'R2 - std': 0.04305775094943045} 
+ 
+
+{'MSE - mean': 1718841.988524424, 'MSE - std': 208997.05564617607, 'R2 - mean': 0.6989990197790237, 'R2 - std': 0.038186937314836654} 
+ 
+
+{'MSE - mean': 1656848.8858465918, 'MSE - std': 224313.1617482879, 'R2 - mean': 0.7102385834458842, 'R2 - std': 0.04088893384371199} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 184 finished with value: 1656848.8858465918 and parameters: {'max_depth': 11, 'n_estimators': 53}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1469318.986893477, 'MSE - std': 0.0, 'R2 - mean': 0.7457551452083983, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1792830.3933547465, 'MSE - std': 323511.4064612696, 'R2 - mean': 0.686352835865842, 'R2 - std': 0.05940230934255625} 
+ 
+
+{'MSE - mean': 1692150.6949068897, 'MSE - std': 300076.4737520563, 'R2 - mean': 0.7036827134699403, 'R2 - std': 0.054342177164996654} 
+ 
+
+{'MSE - mean': 1689331.2447924628, 'MSE - std': 259919.72889999067, 'R2 - mean': 0.704134430976181, 'R2 - std': 0.04706820912665199} 
+ 
+
+{'MSE - mean': 1626579.8104464482, 'MSE - std': 264192.32090862206, 'R2 - mean': 0.7155042222841768, 'R2 - std': 0.0478479013736413} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 185 finished with value: 1626579.8104464482 and parameters: {'max_depth': 12, 'n_estimators': 69}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1419005.6957488966, 'MSE - std': 0.0, 'R2 - mean': 0.7544611481357727, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1742874.3630297515, 'MSE - std': 323868.6672808549, 'R2 - mean': 0.6950772471960014, 'R2 - std': 0.05938390093977136} 
+ 
+
+{'MSE - mean': 1655278.9867257038, 'MSE - std': 292015.71133053803, 'R2 - mean': 0.7101251735462218, 'R2 - std': 0.052951348444583546} 
+ 
+
+{'MSE - mean': 1691649.2500873564, 'MSE - std': 260620.9314673286, 'R2 - mean': 0.7037148359427812, 'R2 - std': 0.04718221339811255} 
+ 
+
+{'MSE - mean': 1634244.434040511, 'MSE - std': 259845.8534527865, 'R2 - mean': 0.7141589757981353, 'R2 - std': 0.047087676075474524} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 186 finished with value: 1634244.434040511 and parameters: {'max_depth': 12, 'n_estimators': 80}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1466181.2224446097, 'MSE - std': 0.0, 'R2 - mean': 0.7462980909361733, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1810451.0594161286, 'MSE - std': 344269.8369715188, 'R2 - mean': 0.6832417497853748, 'R2 - std': 0.0630563411507985} 
+ 
+
+{'MSE - mean': 1707063.8879575373, 'MSE - std': 316847.4315450267, 'R2 - mean': 0.7010529583867441, 'R2 - std': 0.057316778316361346} 
+ 
+
+{'MSE - mean': 1732098.7313562282, 'MSE - std': 277802.9001099543, 'R2 - mean': 0.6966284408869552, 'R2 - std': 0.050225878516388316} 
+ 
+
+{'MSE - mean': 1661422.9316816223, 'MSE - std': 285866.8145941063, 'R2 - mean': 0.7093901136746291, 'R2 - std': 0.05166771010556811} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 187 finished with value: 1661422.9316816223 and parameters: {'max_depth': 11, 'n_estimators': 84}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1448963.211401928, 'MSE - std': 0.0, 'R2 - mean': 0.749277424053349, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1743647.3907850655, 'MSE - std': 294684.1793831374, 'R2 - mean': 0.6949894419776879, 'R2 - std': 0.054287982075661156} 
+ 
+
+{'MSE - mean': 1649886.1865497835, 'MSE - std': 274726.84110787086, 'R2 - mean': 0.7111036111732955, 'R2 - std': 0.04984097607686077} 
+ 
+
+{'MSE - mean': 1660337.6399789574, 'MSE - std': 238608.10245081488, 'R2 - mean': 0.7092261928456742, 'R2 - std': 0.04328586687304899} 
+ 
+
+{'MSE - mean': 1594174.2621076636, 'MSE - std': 251112.38824379267, 'R2 - mean': 0.7211780558265414, 'R2 - std': 0.045500781659381866} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 188 finished with value: 1594174.2621076636 and parameters: {'max_depth': 12, 'n_estimators': 93}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1481230.5235292253, 'MSE - std': 0.0, 'R2 - mean': 0.7436940223825756, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1781575.0299548232, 'MSE - std': 300344.5064255978, 'R2 - mean': 0.688356096128532, 'R2 - std': 0.05533792625404366} 
+ 
+
+{'MSE - mean': 1681131.6769396227, 'MSE - std': 283400.09884124884, 'R2 - mean': 0.7056352362364736, 'R2 - std': 0.05136790262870131} 
+ 
+
+{'MSE - mean': 1686513.8961280817, 'MSE - std': 245608.66610850694, 'R2 - mean': 0.7046444539521602, 'R2 - std': 0.04451899610232167} 
+ 
+
+{'MSE - mean': 1632458.9055952814, 'MSE - std': 244840.0733133458, 'R2 - mean': 0.7144990736446095, 'R2 - std': 0.04442979775216248} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 189 finished with value: 1632458.9055952814 and parameters: {'max_depth': 11, 'n_estimators': 60}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1442794.6447696823, 'MSE - std': 0.0, 'R2 - mean': 0.7503448072027381, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1744348.2248528283, 'MSE - std': 301553.580083146, 'R2 - mean': 0.6948559275050279, 'R2 - std': 0.05548887969771016} 
+ 
+
+{'MSE - mean': 1648228.2030384683, 'MSE - std': 281249.2814115164, 'R2 - mean': 0.7113876089435619, 'R2 - std': 0.05098303798756638} 
+ 
+
+{'MSE - mean': 1673366.1008553589, 'MSE - std': 247430.0111967586, 'R2 - mean': 0.706938563366318, 'R2 - std': 0.0448200250053077} 
+ 
+
+{'MSE - mean': 1602849.7901103634, 'MSE - std': 262426.1585227385, 'R2 - mean': 0.7196515488003837, 'R2 - std': 0.04747154629636782} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 190 finished with value: 1602849.7901103634 and parameters: {'max_depth': 12, 'n_estimators': 73}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1395480.3677455003, 'MSE - std': 0.0, 'R2 - mean': 0.7585318731828873, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1756464.1102341688, 'MSE - std': 360983.74248866865, 'R2 - mean': 0.6926437173824944, 'R2 - std': 0.06588815580039292} 
+ 
+
+{'MSE - mean': 1663694.9958030863, 'MSE - std': 322622.16096450173, 'R2 - mean': 0.7086158213843691, 'R2 - std': 0.05834708443739622} 
+ 
+
+{'MSE - mean': 1688113.0721987307, 'MSE - std': 282581.88445766334, 'R2 - mean': 0.7043083496625575, 'R2 - std': 0.05107787813389572} 
+ 
+
+{'MSE - mean': 1615206.634148692, 'MSE - std': 291793.44059709745, 'R2 - mean': 0.7174502008857745, 'R2 - std': 0.05270666677016834} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 191 finished with value: 1615206.634148692 and parameters: {'max_depth': 12, 'n_estimators': 95}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1425846.171318541, 'MSE - std': 0.0, 'R2 - mean': 0.7532775006545768, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1753631.1288086586, 'MSE - std': 327784.9574901175, 'R2 - mean': 0.6931922070639971, 'R2 - std': 0.060085293590579736} 
+ 
+
+{'MSE - mean': 1645657.0536000489, 'MSE - std': 308132.20226418145, 'R2 - mean': 0.7118159374874345, 'R2 - std': 0.05568226833574453} 
+ 
+
+{'MSE - mean': 1665420.737935754, 'MSE - std': 269036.98669457145, 'R2 - mean': 0.708314065232553, 'R2 - std': 0.04860221788281809} 
+ 
+
+{'MSE - mean': 1598314.3038180366, 'MSE - std': 275531.8750484928, 'R2 - mean': 0.7204355715370674, 'R2 - std': 0.04977413110105147} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 192 finished with value: 1598314.3038180366 and parameters: {'max_depth': 12, 'n_estimators': 91}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1471622.260531311, 'MSE - std': 0.0, 'R2 - mean': 0.7453565963045727, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1761885.2952672755, 'MSE - std': 290263.0347359646, 'R2 - mean': 0.6918112817586253, 'R2 - std': 0.05354531454594741} 
+ 
+
+{'MSE - mean': 1645016.0034725647, 'MSE - std': 288938.1980377159, 'R2 - mean': 0.7119736598913763, 'R2 - std': 0.05219620155866101} 
+ 
+
+{'MSE - mean': 1677749.0112878326, 'MSE - std': 256570.28494325856, 'R2 - mean': 0.7061880458283968, 'R2 - std': 0.04630067583871227} 
+ 
+
+{'MSE - mean': 1615109.9117088749, 'MSE - std': 261452.24435246736, 'R2 - mean': 0.7175300956267703, 'R2 - std': 0.047218327384738516} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 193 finished with value: 1615109.9117088749 and parameters: {'max_depth': 12, 'n_estimators': 78}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1459957.8024778704, 'MSE - std': 0.0, 'R2 - mean': 0.7473749656787342, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1775088.6023716999, 'MSE - std': 315130.7998938295, 'R2 - mean': 0.6894650553624454, 'R2 - std': 0.05790991031628878} 
+ 
+
+{'MSE - mean': 1690883.9633303098, 'MSE - std': 283523.87877096253, 'R2 - mean': 0.7039038807116181, 'R2 - std': 0.05150402408377004} 
+ 
+
+{'MSE - mean': 1714582.404957348, 'MSE - std': 248946.16040752467, 'R2 - mean': 0.699709519706051, 'R2 - std': 0.04519155192457146} 
+ 
+
+{'MSE - mean': 1647815.649234391, 'MSE - std': 259635.4199726903, 'R2 - mean': 0.7117844695536885, 'R2 - std': 0.04708544093000336} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 194 finished with value: 1647815.649234391 and parameters: {'max_depth': 11, 'n_estimators': 86}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1422098.6575439938, 'MSE - std': 0.0, 'R2 - mean': 0.7539259548731218, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1732920.5817760443, 'MSE - std': 310821.92423205054, 'R2 - mean': 0.6968368121227677, 'R2 - std': 0.05708914275035398} 
+ 
+
+{'MSE - mean': 1625481.9056711346, 'MSE - std': 295792.1296595991, 'R2 - mean': 0.7153633797125609, 'R2 - std': 0.05347193245026038} 
+ 
+
+{'MSE - mean': 1659929.9827634636, 'MSE - std': 263020.43270912993, 'R2 - mean': 0.7092854895407461, 'R2 - std': 0.04748955587069472} 
+ 
+
+{'MSE - mean': 1591356.6316381146, 'MSE - std': 272310.51458994386, 'R2 - mean': 0.7216584113542648, 'R2 - std': 0.049158550733829194} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 195 finished with value: 1591356.6316381146 and parameters: {'max_depth': 12, 'n_estimators': 82}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1508484.7047910104, 'MSE - std': 0.0, 'R2 - mean': 0.7389780720551271, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1808667.8710416232, 'MSE - std': 300183.1662506128, 'R2 - mean': 0.6836245010145795, 'R2 - std': 0.05535357104054761} 
+ 
+
+{'MSE - mean': 1696791.7505314338, 'MSE - std': 291729.0207498212, 'R2 - mean': 0.7029023971019793, 'R2 - std': 0.05278212866498599} 
+ 
+
+{'MSE - mean': 1719569.823434291, 'MSE - std': 255706.64437249347, 'R2 - mean': 0.6988608874055493, 'R2 - std': 0.04624355340676544} 
+ 
+
+{'MSE - mean': 1659936.2898901806, 'MSE - std': 257940.5816710873, 'R2 - mean': 0.7096927908112539, 'R2 - std': 0.04669147150079501} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 196 finished with value: 1659936.2898901806 and parameters: {'max_depth': 11, 'n_estimators': 77}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1435620.9420976508, 'MSE - std': 0.0, 'R2 - mean': 0.7515861149176986, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1720551.4347027203, 'MSE - std': 284930.4926050694, 'R2 - mean': 0.6990390054634966, 'R2 - std': 0.052547109454201935} 
+ 
+
+{'MSE - mean': 1644096.953606074, 'MSE - std': 256542.71724274926, 'R2 - mean': 0.7121169512059046, 'R2 - std': 0.04672113516397748} 
+ 
+
+{'MSE - mean': 1674730.0117229135, 'MSE - std': 228420.17659674655, 'R2 - mean': 0.7067037096646565, 'R2 - std': 0.04153381640554685} 
+ 
+
+{'MSE - mean': 1610431.1690657656, 'MSE - std': 241408.33939486375, 'R2 - mean': 0.7183359347615206, 'R2 - std': 0.04383241913223824} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 197 finished with value: 1610431.1690657656 and parameters: {'max_depth': 12, 'n_estimators': 70}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1406198.4460437228, 'MSE - std': 0.0, 'R2 - mean': 0.7566772614308551, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1713330.564507442, 'MSE - std': 307132.11846371926, 'R2 - mean': 0.7002642430793504, 'R2 - std': 0.05641301835150475} 
+ 
+
+{'MSE - mean': 1625250.9825247487, 'MSE - std': 280004.97195436864, 'R2 - mean': 0.7153966250806479, 'R2 - std': 0.050789733835535415} 
+ 
+
+{'MSE - mean': 1646023.623891203, 'MSE - std': 245146.07100133804, 'R2 - mean': 0.7117166498810545, 'R2 - std': 0.04444462228124192} 
+ 
+
+{'MSE - mean': 1589207.4169993903, 'MSE - std': 246960.73040912297, 'R2 - mean': 0.7220437125069912, 'R2 - std': 0.04479790675576123} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 198 finished with value: 1589207.4169993903 and parameters: {'max_depth': 12, 'n_estimators': 83}. Best is trial 164 with value: 1578412.5636674408.
+{'MSE - mean': 1459609.5998401018, 'MSE - std': 0.0, 'R2 - mean': 0.7474352172169415, 'R2 - std': 0.0} 
+ 
+
+{'MSE - mean': 1781889.7303915152, 'MSE - std': 322280.1305514134, 'R2 - mean': 0.6882656511792477, 'R2 - std': 0.059169566037693855} 
+ 
+
+{'MSE - mean': 1671780.6982972994, 'MSE - std': 305762.9576370242, 'R2 - mean': 0.7072530080338385, 'R2 - std': 0.05527263763116884} 
+ 
+
+{'MSE - mean': 1691742.8548875842, 'MSE - std': 267046.25588914496, 'R2 - mean': 0.7037127941487122, 'R2 - std': 0.048258654105633736} 
+ 
+
+{'MSE - mean': 1633472.0190015712, 'MSE - std': 265768.55247930886, 'R2 - mean': 0.7143045670829553, 'R2 - std': 0.04808181332304356} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 199 finished with value: 1633472.0190015712 and parameters: {'max_depth': 11, 'n_estimators': 86}. Best is trial 164 with value: 1578412.5636674408.
+Best parameters After Trials: {'max_depth': 12, 'n_estimators': 79}
+Saved Losses
+{'MSE - mean': 1422642.1386868705, 'MSE - std': 0.0, 'R2 - mean': 0.7538319131534644, 'R2 - std': 0.0} 
+ 
+
+Saved Losses
+{'MSE - mean': 1733139.495831489, 'MSE - std': 310497.3571446185, 'R2 - mean': 0.6967991030404501, 'R2 - std': 0.05703281011301431} 
+ 
+
+Saved Losses
+{'MSE - mean': 1636468.9229308467, 'MSE - std': 288032.64605319535, 'R2 - mean': 0.7134354596943542, 'R2 - std': 0.05217308704389543} 
+ 
+
+Saved Losses
+{'MSE - mean': 1659845.156444513, 'MSE - std': 252708.22854462094, 'R2 - mean': 0.709298211579767, 'R2 - std': 0.04574793683492604} 
+ 
+
+Saved Losses
+{'MSE - mean': 1604577.2841234792, 'MSE - std': 251609.43913713715, 'R2 - mean': 0.719359607191189, 'R2 - std': 0.04559852745780364} 
+ 
+
+Saving model.....
+Results After CV: {'MSE - mean': 1604577.2841234792, 'MSE - std': 251609.43913713715, 'R2 - mean': 0.719359607191189, 'R2 - std': 0.04559852745780364}
+Train time: 3.9448765596001065
+Inference time: 0.035828098599904476
+Finished cross validation
