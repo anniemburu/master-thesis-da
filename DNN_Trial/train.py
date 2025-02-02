@@ -26,7 +26,7 @@ def cross_validation(model, X, y, args, visual, save_model=True):
 
     if args.objective == "regression":
         kf = KFold(n_splits=args.num_splits, shuffle=args.shuffle, random_state=args.seed)
-    elif args.objective == "classification" or args.objective == "binary":
+    elif args.objective == "classification" or args.objective == "binary" or args.objective == "probabilistic_regression":
         kf = StratifiedKFold(n_splits=args.num_splits, shuffle=args.shuffle, random_state=args.seed)
     else:
         raise NotImplementedError("Objective" + args.objective + "is not yet implemented.")
@@ -54,6 +54,9 @@ def cross_validation(model, X, y, args, visual, save_model=True):
 
         # Save model weights and the truth/prediction pairs for traceability
         curr_model.save_model_and_predictions(y_test, i)
+
+        #print(f"Probabilities: {curr_model.prediction_probabilities}")
+        
 
         #save the losses
         if save_model:
