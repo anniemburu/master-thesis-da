@@ -1,5 +1,5 @@
 import sklearn.datasets
-from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder, OrdinalEncoder
+from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder, OrdinalEncoder, KBinsDiscretizer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
@@ -280,13 +280,19 @@ def load_data(args):
     #print(f"Ordinal Idx: {args.ordinal_idx}")
     #print(f"Cat Dims: {args.cat_dims} \n \n")
     #print(f"Normonal Idx: {args.nominal_idx}")
-    
+
 
     # Preprocess target 
     if args.target_encode:
         le = LabelEncoder()
         y = le.fit_transform(y)
 
+    ## Create binned y 4 Probability Regression
+    if args.objective == "probabilistic_regression":
+        binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy='quantile')
+        y = binning.fit_transform(y.reshape(-1, 1)).flatten()
+        args.num_classes = args.num_bins
+    
 
     num_idx = []
     args.cat_dims = []

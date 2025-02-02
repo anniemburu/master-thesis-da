@@ -129,6 +129,8 @@ class VIME(BaseModelTorch):
             loss_func_supervised = nn.MSELoss()
             y = y.float()
             y_val = y_val.float()
+        elif self.args.objective == "probabilistic_regression":
+            loss_func_supervised = nn.CrossEntropyLoss()
         elif self.args.objective == "classification":
             loss_func_supervised = nn.CrossEntropyLoss()
         else:
@@ -169,6 +171,12 @@ class VIME(BaseModelTorch):
                 if self.args.objective == "regression" or self.args.objective == "binary":
                     y_hat = y_hat.squeeze()
 
+                if self.args.objective == "probabilistic_regression":
+                    batch_y = batch_y.long()
+
+                #print(f"Result from the model: {y_hat} \n") ##IMPORTANT
+                #print(f"How our y looks: {batch_y} \n") ##IMPORTANT
+
                 y_loss = loss_func_supervised(y_hat, batch_y.to(self.device))
                 yu_loss = torch.mean(torch.var(yv_hats, dim=0))
                 loss = y_loss + beta * yu_loss
@@ -188,7 +196,10 @@ class VIME(BaseModelTorch):
                 if self.args.objective == "regression" or self.args.objective == "binary":
                     y_hat = y_hat.squeeze()
 
-                val_loss += loss_func_supervised(y_hat, batch_val_y.to(self.device))
+                if self.args.objective == "probabilistic_regression":
+                    batch_val_y = batch_val_y.long()
+
+                val_loss += loss_func_supervised(y_hat, batch_val_y.to(self.device)) ##ERROR HERE
                 val_dim += 1
 
             val_loss /= val_dim
@@ -274,9 +285,9 @@ class VIMESemi(nn.Module):
 
         out = self.output_layer(x)
 
-        if self.args.objective == "classification":
+        if self.args.objective in ["classification", "probabilistic_regression"]:
             out = F.softmax(out, dim=1)
-
+        #print(f"Output shape in VIME: {out.shape} \n \n Output VIME: {out}")
         return out
 
 

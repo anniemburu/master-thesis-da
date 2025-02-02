@@ -89,7 +89,7 @@ class BaseModel:
 
         if self.args.objective == "regression":
             self.predictions = self.model.predict(X)
-        elif self.args.objective == "classification" or self.args.objective == "binary":
+        elif self.args.objective == "classification" or self.args.objective == "binary" or self.args.objective == "probabilistic_regression":
             self.prediction_probabilities = self.predict_proba(X)
             self.predictions = np.argmax(self.prediction_probabilities, axis=1)
 
@@ -111,6 +111,12 @@ class BaseModel:
         if self.prediction_probabilities.shape[1] == 1:
             self.prediction_probabilities = np.concatenate((1 - self.prediction_probabilities,
                                                             self.prediction_probabilities), 1)
+            
+        ## For Prob Reg
+        if self.args.objective == "probabilistic_regression":
+            self.prediction_probabilities = np.clip(self.prediction_probabilities, 1e-5, 1)
+            self.prediction_probabilities /= self.prediction_probabilities.sum(axis=1, keepdims=True)
+
         return self.prediction_probabilities
 
     def save_model_and_predictions(self, y_true: np.ndarray, filename_extension=""):
