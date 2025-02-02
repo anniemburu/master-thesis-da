@@ -28,6 +28,7 @@ def get_parser():
                help="Direction of optimization.")
 
     parser.add('--num_splits', type=int, default=5, help="Number of splits done for cross validation")
+    parser.add('--num_bins', type=int, default=10, help="Number of bins for probailistic regression")
     parser.add('--shuffle', action="store_true", help="Shuffle data during cross-validation")
     parser.add('--seed', type=int, default=123, help="Seed for KFold initialization.")
 
