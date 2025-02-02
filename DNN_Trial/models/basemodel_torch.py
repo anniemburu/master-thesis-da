@@ -56,6 +56,8 @@ class BaseModelTorch(BaseModel):
             loss_func = nn.MSELoss()
             y = y.float()
             y_val = y_val.float()
+        elif self.args.objective == "probabilistic_regression":
+            loss_func = nn.CrossEntropyLoss()
         elif self.args.objective == "classification":
             loss_func = nn.CrossEntropyLoss()
         else:
@@ -78,14 +80,12 @@ class BaseModelTorch(BaseModel):
 
         for epoch in range(self.args.epochs):
             for i, (batch_X, batch_y) in enumerate(train_loader):
-
                 out = self.model(batch_X.to(self.device))
-
                 if self.args.objective == "regression" or self.args.objective == "binary":
                     out = out.squeeze()
-
+                
                 loss = loss_func(out, batch_y.to(self.device))
-                loss_history.append(loss.item())
+                loss_history.append(loss.item()) #training loss
 
                 optimizer.zero_grad()
                 loss.backward()
@@ -96,6 +96,7 @@ class BaseModelTorch(BaseModel):
             val_dim = 0
             for val_i, (batch_val_X, batch_val_y) in enumerate(val_loader):
                 out = self.model(batch_val_X.to(self.device))
+                
 
                 if self.args.objective == "regression" or self.args.objective == "binary":
                     out = out.squeeze()
@@ -139,8 +140,14 @@ class BaseModelTorch(BaseModel):
         # If binary task returns only probability for the true class, adapt it to return (N x 2)
         if probas.shape[1] == 1:
             probas = np.concatenate((1 - probas, probas), 1)
+        
+        ## For Prob Reg
+        if self.args.objective == "probabilistic_regression":
+            probas = np.clip(probas, 1e-5, 1)
+            probas /= probas.sum(axis=1, keepdims=True)
 
         self.prediction_probabilities = probas
+
         return self.prediction_probabilities
 
     def predict_helper(self, X):
