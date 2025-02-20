@@ -20,7 +20,7 @@ shuffle: True
 seed: 221 # Don't change
 
 # Preprocessing parameters
-scale: True
+scale: False
 target_encode: False
 one_hot_encode: True
 ordinal_encode : True  #Set True if there is ordinal features
