@@ -56,8 +56,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Socmob":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
 
         #drop nulls
@@ -99,8 +99,18 @@ def load_data(args):
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/41540-black_friday.csv')
         label_col = 'Purchase'
 
-        df.loc[df['Stay_In_Current_City_Years'] == '4+', 'Stay_In_Current_City_Years'] = 4
-        df['Stay_In_Current_City_Years'] = df['Stay_In_Current_City_Years'].astype(int)
+        #Age
+        df['Age'] = df['Age'].astype(str)
+
+        #Occupation
+        df['Occupation'] = df['Occupation'].astype(str)
+       
+        #City_Years
+        df['Stay_In_Current_City_Years'] = df['Stay_In_Current_City_Years'].astype(str)
+        
+        #MS
+        df['Marital_Status'] = df['Marital_Status'].astype(str)
+        
 
         #drop nulls
         df.dropna(inplace=True)
