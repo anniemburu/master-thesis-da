@@ -38,7 +38,7 @@ class NODE(BaseModelTorch):
                 node_lib.Lambda(lambda x: x[..., 0].mean(dim=-1)),  # average first channels of every tree
             ).to(self.device)
 
-        elif args.objective == "classification" or args.objective == "binary":
+        elif args.objective == "classification" or args.objective == "binary" or args.objective == "probabilistic_regression":
             self.model = nn.Sequential(
                 node_lib.DenseBlock(args.num_features,
                                     # layer_dim=1024, num_layers=2, depth=6,
@@ -67,7 +67,7 @@ class NODE(BaseModelTorch):
 
         if self.args.objective == "regression":
             loss_func = F.mse_loss
-        elif self.args.objective == "classification":
+        elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
             loss_func = F.cross_entropy
             data.y_train = data.y_train.astype(int)
         elif self.args.objective == "binary":
@@ -109,7 +109,7 @@ class NODE(BaseModelTorch):
                     loss = self.trainer.evaluate_mse(data.X_valid, data.y_valid, device=self.device,
                                                      batch_size=self.args.batch_size)
                     print("Val MSE: %0.5f" % loss)
-                elif self.args.objective == "classification":
+                elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                     loss = self.trainer.evaluate_logloss(data.X_valid, data.y_valid, device=self.device,
                                                          batch_size=self.args.batch_size)
                     print("Val LogLoss: %0.5f" % loss)
@@ -144,7 +144,7 @@ class NODE(BaseModelTorch):
         with torch.no_grad():
             prediction = process_in_chunks(self.model, X_test, batch_size=self.args.val_batch_size)
 
-            if self.args.objective == "classification":
+            if self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                 prediction = F.softmax(prediction, dim=1)
             elif self.args.objective == "binary":
                 prediction = torch.sigmoid(prediction)
