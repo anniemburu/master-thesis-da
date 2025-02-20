@@ -18,7 +18,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def cross_validation(model, X, y, args, visual, save_model=True):
+def cross_validation(model, X, y, args, visual=False, save_model=True):
     # Record some statistics and metrics
     sc = get_scorer(args)
     train_timer = Timer()
@@ -134,7 +134,7 @@ class Objective(object):
         model = self.model_name(trial_params, self.args)
 
         # Cross validate the chosen hyperparameters
-        sc, time = cross_validation(model, self.X, self.y, self.args, visual=False, save_model=False)
+        sc, time = cross_validation(model, self.X, self.y, self.args, visual=True, save_model=False)
 
         save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time) #saved after every trial
         print(f"Hyperparam was saved!!! Hurrah!!!")
@@ -161,7 +161,7 @@ def main(args):
 
     # Run best trial again and save it!
     model = model_name(study.best_trial.params, args)
-    cross_validation(model, X, y, args, visual=False, save_model=True)
+    cross_validation(model, X, y, args, visual=True, save_model=True)
     
 
 
