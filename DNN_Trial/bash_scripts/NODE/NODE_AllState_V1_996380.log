@@ -1,0 +1,17 @@
+Namespace(batch_size=32, cat_dims=None, cat_idx=None, config='config/allstate.yml', data_parallel=False, dataset='Allstate_Claims', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='NODE', n_trials=1, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116], num_bins=10, num_classes=1, num_features=131, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=64)
+Start hyperparameter optimization
+Loading dataset Allstate_Claims...
+Dataset loaded! 
+
+(188318, 130)
+Scaling the data...
+One Hot Encoding...
+New Shape: (188318, 1153)
+A new study created in RDB with name: NODE_Allstate_Claims
+In get_device
+On: cuda
+On Device: cuda
+In get_device
+On: cuda
+On Device: cuda
+Saved logs/Allstate_Claims_2025.02.20_11:15:52/checkpoint_temp_100.pth
