@@ -102,8 +102,8 @@ def losses_history(args):
     }
 
     for i in np.arange(folds):
-        loss_path = path + f'/loss_{i}.txt'
-        val_loss_path = path + f'/val_loss_{i}.txt'
+        loss_path = path + f'loss_{i}.txt' #changed this
+        val_loss_path = path + f'val_loss_{i}.txt' #changed this
 
         loss_file = np.loadtxt(loss_path)
         val_loss_file = np.loadtxt(val_loss_path)
@@ -152,10 +152,11 @@ def main(args):
     study_name = args.model_name + "_" + args.dataset
     storage_name = "sqlite:///{}.db".format(study_name)
 
-    study = optuna.create_study(direction=args.direction,
-                                study_name=study_name,
-                                storage=storage_name,
-                                load_if_exists=True)
+    study = optuna.create_study(direction=args.direction, #changed this
+                                #study_name=study_name,
+                                #storage=storage_name,
+                                load_if_exists=True,
+                                storage=None)
     study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
     print("Best parameters After Trials:", study.best_trial.params)
 
