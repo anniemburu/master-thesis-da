@@ -6,7 +6,8 @@
 #SBATCH --partition=STUD
 #SBATCH --gres=gpu:1
 
-CONFIGS=(config/boston.yml
+CONFIGS=(
+	config/boston.yml
         config/socmob.yml
        	config/sensory.yml
         config/moneyball.yml
