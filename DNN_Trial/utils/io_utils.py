@@ -10,6 +10,12 @@ output_dir = "output/"
 def save_loss_to_file(args, arr, name, extension=""):
     filename = get_output_path(args, directory="logging", filename=name, extension=extension, file_type="txt")
     np.savetxt(filename, arr)
+    #Check if file is created
+    if os.path.exists(filename):
+        print(f"Log file exists at: {filename}")
+    else:
+        print("Log file does NOT exist.")
+        
     print(f"File name : {filename} . The file was saved")
 
 
