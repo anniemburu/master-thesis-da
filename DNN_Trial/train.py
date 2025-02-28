@@ -134,7 +134,7 @@ class Objective(object):
         model = self.model_name(trial_params, self.args)
 
         # Cross validate the chosen hyperparameters
-        sc, time = cross_validation(model, self.X, self.y, self.args, visual=True, save_model=False)
+        sc, time = cross_validation(model, self.X, self.y, self.args, visual=True, save_model=True)
 
         save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time) #saved after every trial
         print(f"Hyperparam was saved!!! Hurrah!!!")
@@ -153,10 +153,9 @@ def main(args):
     storage_name = "sqlite:///{}.db".format(study_name)
 
     study = optuna.create_study(direction=args.direction, #changed this
-                                #study_name=study_name,
-                                #storage=storage_name,
-                                load_if_exists=True,
-                                storage=None)
+                                study_name=study_name,
+                                storage=storage_name,
+                                load_if_exists=True)
     study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
     print("Best parameters After Trials:", study.best_trial.params)
 
