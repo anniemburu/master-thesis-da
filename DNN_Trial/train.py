@@ -59,6 +59,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=True):
         
 
         #save the losses
+        print(f"State of save is {save_model} b4 loss saving")
         if save_model:
             save_loss_to_file(args, loss_history, "loss", extension=i)
             save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
@@ -68,7 +69,6 @@ def cross_validation(model, X, y, args, visual=False, save_model=True):
         sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities)
 
         print(f'{sc.get_results()} \n \n')
-
     # Best run is saved to file
     if save_model:
         print("Saving model.....")
@@ -93,8 +93,8 @@ def cross_validation(model, X, y, args, visual=False, save_model=True):
     return sc, (train_timer.get_average_time(), test_timer.get_average_time())
 
 def losses_history(args):
-    
     path = get_output_path(args, filename="", directory='logging',file_type = None)
+    print(f"Loss path :{path}")
     folds = 5
     loss_dict = {
         'train' : [],
@@ -134,7 +134,7 @@ class Objective(object):
         model = self.model_name(trial_params, self.args)
 
         # Cross validate the chosen hyperparameters
-        sc, time = cross_validation(model, self.X, self.y, self.args, visual=True, save_model=False)
+        sc, time = cross_validation(model, self.X, self.y, self.args, visual=True, save_model=False)#Dont save model during HPT
 
         save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time) #saved after every trial
         print(f"Hyperparam was saved!!! Hurrah!!!")
@@ -153,16 +153,15 @@ def main(args):
     storage_name = "sqlite:///{}.db".format(study_name)
 
     study = optuna.create_study(direction=args.direction, #changed this
-                                #study_name=study_name,
-                                #storage=storage_name,
-                                load_if_exists=True,
-                                storage=None)
+                                study_name=study_name,
+                                storage=storage_name,
+                                load_if_exists=True)
     study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
     print("Best parameters After Trials:", study.best_trial.params)
 
     # Run best trial again and save it!
     model = model_name(study.best_trial.params, args)
-    cross_validation(model, X, y, args, visual=True, save_model=True)
+    cross_validation(model, X, y, args, visual=True, save_model=True) 
     
 
 
