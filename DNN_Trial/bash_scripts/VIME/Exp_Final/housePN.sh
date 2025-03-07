@@ -8,7 +8,7 @@
 
 
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
-source ~/miniconda3/etc/profile.d/conda.sh
+source ~/anaconda3/etc/profile.d/conda.sh
 conda activate TabSurvey
 srun python3 train.py --config config/house_prices_nominal.yml --model_name VIME --optimize_hyperparameters --n_trials 32 --epochs 100 --batch_size 64 --val_batch_size 128
 
