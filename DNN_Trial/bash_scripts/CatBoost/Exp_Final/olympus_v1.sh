@@ -10,7 +10,6 @@ CONFIGS=("config/boston.yml"
         "config/socmob.yml"
         "config/sensory.yml"
         "config/moneyball.yml"
-        #config/black_friday.yml
           )
 
 for config in "${CONFIGS[@]}"; do
@@ -19,8 +18,8 @@ for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
-    source ~/miniconda3/etc/profile.d/conda.sh
-    conda activate TabSurvey2
+    source ~/anaconda3/etc/profile.d/conda.sh
+    conda activate TabSurvey
     srun python3 train.py --config "$config" --model_name CatBoost --optimize_hyperparameters --n_trials 100  --epochs 100
 done
 
