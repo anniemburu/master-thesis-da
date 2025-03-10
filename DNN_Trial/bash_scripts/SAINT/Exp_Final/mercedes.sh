@@ -8,8 +8,8 @@
 
 
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate TabSurvey2
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate TabSurvey
 srun python3 train.py --config brazillian_houses --model_name SAINT --optimize_hyperparameters --n_trials 1 --epochs 100 --batch_size 64 --val_batch_size 128
 
 
