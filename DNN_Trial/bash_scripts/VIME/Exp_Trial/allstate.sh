@@ -10,4 +10,4 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate TabSurvey
-srun python3 train.py --config config/allstate.yml --model_name VIME 
+srun python3 train.py --config config/allstate.yml --model_name VIME --objective probabilistic_regression
