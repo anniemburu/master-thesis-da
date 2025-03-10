@@ -9,7 +9,7 @@ from models import str2model
 from utils.load_data import load_data
 from utils.scorer import get_scorer
 from utils.timer import Timer
-from utils.io_utils import save_results_to_file, save_hyperparameters_to_file, save_loss_to_file, get_output_path
+from utils.io_utils import update_yaml, save_results_to_file, save_hyperparameters_to_file, save_loss_to_file, get_output_path
 from utils.parser import get_parser, get_given_parameters_parser
 from utils.visualization import loss_vizualization
 
@@ -159,9 +159,13 @@ def main(args):
     study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
     print("Best parameters After Trials:", study.best_trial.params)
 
+    ##Save the best parameters
+    update_yaml(args.dataset, args.model_name, study.best_trial.params)
+    print("Parameters saved to YAML file!!!")
+
     # Run best trial again and save it!
     model = model_name(study.best_trial.params, args)
-    cross_validation(model, X, y, args, visual=True, save_model=True) 
+    cross_validation(model, X, y, args, visual=True, save_model=True)
     
 
 
@@ -177,6 +181,8 @@ def main_once(args):
     sc, time = cross_validation(model, X, y, args, visual=True)
     print(sc.get_results())
     print(time)
+
+
 
 
 if __name__ == "__main__":
