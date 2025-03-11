@@ -12,11 +12,45 @@ from utils.timer import Timer
 from utils.io_utils import update_yaml, save_results_to_file, save_hyperparameters_to_file, save_loss_to_file, get_output_path
 from utils.parser import get_parser, get_given_parameters_parser
 from utils.visualization import loss_vizualization
+from sklearn.preprocessing import KBinsDiscretizer
 
 from sklearn.model_selection import KFold, StratifiedKFold  # , train_test_split
 import warnings
 warnings.filterwarnings("ignore")
 
+#Calculates Freedman-Diaconis Rule
+def freedman_diaconis(y):
+    #calc IQR
+    q1 = np.percentile(y, 25)
+    q3 = np.percentile(y, 75)
+    iqr = q3 - q1
+
+    #calc bin width
+    n = len(y)
+    bin_width = 2 * (iqr / (n ** (1/3)))
+
+    #calc num of bins
+    data_range = np.max(y) - np.min(y)
+    num_bins = int(np.round(data_range / bin_width))
+
+    return num_bins
+
+# Sturges' Rule
+def sturges(y): 
+    n = len(y)
+    num_bins = 1 + int(np.log2(n))
+
+    return num_bins
+
+def bin_finder(args, y):
+    if args.y_distribution == "normal" :
+        bins = sturges(y)
+    elif args.y_distribution == "skewed" or args.y_distribution == "bimodial":
+        bins = freedman_diaconis(y)
+    else:
+        raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
+
+    return bins
 
 def cross_validation(model, X, y, args, visual=False, save_model=True):
     # Record some statistics and metrics
@@ -24,9 +58,9 @@ def cross_validation(model, X, y, args, visual=False, save_model=True):
     train_timer = Timer()
     test_timer = Timer()
 
-    if args.objective == "regression":
+    if args.objective == "regression" or args.objective == "probabilistic_regression":
         kf = KFold(n_splits=args.num_splits, shuffle=args.shuffle, random_state=args.seed)
-    elif args.objective == "classification" or args.objective == "binary" or args.objective == "probabilistic_regression":
+    elif args.objective == "classification" or args.objective == "binary":
         kf = StratifiedKFold(n_splits=args.num_splits, shuffle=args.shuffle, random_state=args.seed)
     else:
         raise NotImplementedError("Objective" + args.objective + "is not yet implemented.")
@@ -35,6 +69,24 @@ def cross_validation(model, X, y, args, visual=False, save_model=True):
 
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
+
+        #Bin the target variable
+        if args.objective == "probabilistic_regression":
+            args.num_bins = bin_finder(args, y_train)
+
+            if args.y_distribution == "bimodial":
+                strategy = 'kmeans'
+            else:
+                strategy = 'quantile'
+            
+            binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=strategy)
+            y_train = binning.fit_transform(y_train.reshape(-1, 1)).flatten()
+            y_test = binning.transform(y_test.reshape(-1, 1)).flatten()
+            args.num_classes = args.num_bins
+
+            y_train = y_train.astype(int)  # For NumPy arrays
+            y_test = y_test.astype(int)
+        
 
         # X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.05, random_state=args.seed)
 
