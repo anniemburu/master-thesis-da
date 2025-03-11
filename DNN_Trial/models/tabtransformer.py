@@ -71,6 +71,8 @@ class TabTransformer(BaseModelTorch):
             y_val = y_val.float()
         elif self.args.objective == "classification":
             loss_func = nn.CrossEntropyLoss()
+        elif self.args.objective == "probabilistic_regression":
+            loss_func = nn.CrossEntropyLoss()
         else:
             loss_func = nn.BCEWithLogitsLoss()
             y = y.float()
