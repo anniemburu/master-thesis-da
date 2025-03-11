@@ -12,7 +12,7 @@ data_parallel: False
 
 # Optuna parameters - https://optuna.org/
 n_trials: 100
-direction: minimize
+direction: maximize  # maximize - class, minimize - reg
 
 # Cross validation parameters
 num_splits: 5
