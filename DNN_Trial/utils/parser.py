@@ -26,6 +26,9 @@ def get_parser():
     parser.add('--n_trials', type=int, default=100, help="Number of trials for the hyperparameter optimization")
     parser.add('--direction', type=str, default="minimize", choices=['minimize', 'maximize'],
                help="Direction of optimization.")
+    parser.add('--y_distribution', required=True, type=str, default="quantile", choices=["uniform","quantile", 
+                                                                                         "kmeans"],
+               help="Set the distribution of the target variable") 
 
     parser.add('--num_splits', type=int, default=5, help="Number of splits done for cross validation")
     parser.add('--num_bins', type=int, default=10, help="Number of bins for probailistic regression")
