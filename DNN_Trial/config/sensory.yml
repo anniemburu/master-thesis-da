@@ -5,7 +5,7 @@ model_name: VIME # LinearModel, KNN, SVM, DecisionTree, RandomForest, XGBoost, C
 objective: regreprobabilistic_regressionssion # Don't change (regression , probabilistic_regression)
 # optimize_hyperparameters: True
 
-y_distribution : quantile
+y_distribution : normal
 
 # GPU parameters
 use_gpu: True
