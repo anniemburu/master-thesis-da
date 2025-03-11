@@ -27,7 +27,7 @@ class TabNet(BaseModelTorch):
         if args.objective == "regression":
             self.model = TabNetRegressor(**self.params)
             self.metric = ["rmse"]
-        elif args.objective == "classification" or args.objective == "binary":
+        elif args.objective == "classification" or args.objective == "probabilistic_regression" or args.objective == "binary":
             self.model = TabNetClassifier(**self.params)
             self.metric = ["logloss"]
 
@@ -49,7 +49,7 @@ class TabNet(BaseModelTorch):
 
         if self.args.objective == "regression":
             return self.model.predict(X)
-        elif self.args.objective == "classification" or self.args.objective == "binary":
+        elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression" or self.args.objective == "binary":
             return self.model.predict_proba(X)
 
     def save_model(self, filename_extension=""):
