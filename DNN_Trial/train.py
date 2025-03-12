@@ -52,7 +52,7 @@ def bin_finder(args, y):
 
     return bins
 
-def cross_validation(model, X, y, args, visual=False, save_model=True):
+def cross_validation(model, X, y, args, visual=False, save_model=False):
     # Record some statistics and metrics
     sc = get_scorer(args)
     train_timer = Timer()
@@ -186,7 +186,7 @@ class Objective(object):
         model = self.model_name(trial_params, self.args)
 
         # Cross validate the chosen hyperparameters
-        sc, time = cross_validation(model, self.X, self.y, self.args, visual=True, save_model=False)#Dont save model during HPT
+        sc, time = cross_validation(model, self.X, self.y, self.args, visual=False, save_model=False)#Dont save model during HPT
 
         save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time) #saved after every trial
         print(f"Hyperparam was saved!!! Hurrah!!!")
