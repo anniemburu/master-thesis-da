@@ -26,6 +26,7 @@ scale: True
 target_encode: False
 one_hot_encode: False
 ordinal_encode : True  #Set True if there is ordinal features
+frequency_reg : False  ### DONT CHANGE, CANT FREQ REG
 
 # Training parameters
 batch_size: 128

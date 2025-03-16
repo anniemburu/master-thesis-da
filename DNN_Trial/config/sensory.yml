@@ -26,6 +26,7 @@ scale: False
 target_encode: False
 one_hot_encode: True
 ordinal_encode : False
+frequency_reg : False
 
 # Training parameters
 batch_size: 128
