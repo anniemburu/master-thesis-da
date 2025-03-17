@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=SAINT_Olympus_V1
+#SBATCH --job-name=SAINT_Olympus_BR
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -22,7 +22,5 @@ for config in "${CONFIGS[@]}"; do
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
     srun python3 train.py --config "$config" --model_name SAINT
-done
-
 
 

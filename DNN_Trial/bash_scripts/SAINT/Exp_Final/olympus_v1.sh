@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=SAINT_Olympus_V1
+#SBATCH --job-name=SAINT_Olympus_BR
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de

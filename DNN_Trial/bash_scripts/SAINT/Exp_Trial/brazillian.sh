@@ -10,7 +10,7 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate TabSurvey
-srun python3 train.py --config config/allstate.yml --model_name SAINT --optimize_hyperparameters --n_trials 1 --epochs 100 --batch_size 64 --val_batch_size 128
+srun python3 train.py --config config/brazillian_houses.yml --model_name SAINT 
 
 
 
