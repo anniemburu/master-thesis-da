@@ -38,6 +38,7 @@ def get_parser():
     parser.add('--target_encode', action="store_true", help="Encode the targets that they start at 0. (0, 1, 2,...)")
     parser.add('--one_hot_encode', action="store_true", help="OneHotEncode the categorical features")
     parser.add('--ordinal_encode', action="store_true", help="Encode Ordinal categorical features")
+    parser.add('--frequency_reg', action="store_true", help="Perform frequency regularization")
 
     parser.add('--batch_size', type=int, default=128, help="Batch size used for training")
     parser.add('--val_batch_size', type=int, default=128, help="Batch size used for training and testing")
