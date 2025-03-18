@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=TabNet_Diamonds_V1
+#SBATCH --job-name=TabNet_Diamonds_BR
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -10,5 +10,5 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate TabSurvey
-srun python3 train.py --config config/diamonds.yml --model_name TabNet --optimize_hyperparameters --n_trials 69 --epochs 100
+srun python3 train.py --config config/diamonds.yml --model_name TabNet --optimize_hyperparameters --n_trials 50 --epochs 100
 

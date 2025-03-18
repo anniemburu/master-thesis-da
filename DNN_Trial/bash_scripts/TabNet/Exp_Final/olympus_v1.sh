@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=TabNet_Olympus_V1
+#SBATCH --job-name=TabNet_Olympus_BR
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -10,7 +10,7 @@ CONFIGS=("config/boston.yml"
         "config/socmob.yml"
         "config/sensory.yml"
         "config/moneyball.yml"
-        "config/black_friday.yml"
+        #"config/black_friday.yml"
           )
 
 for config in "${CONFIGS[@]}"; do
