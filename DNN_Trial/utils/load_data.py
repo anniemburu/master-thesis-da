@@ -306,7 +306,7 @@ def load_data(args):
     #print(f"Cat Dims: {args.cat_dims} \n \n")
     #print(f"Normonal Idx: {args.nominal_idx}")
 
-
+    """
     # Preprocess target 
     if args.target_encode:
         le = LabelEncoder()
@@ -386,16 +386,17 @@ def load_data(args):
 
         else:
             X = np.concatenate([new_x1, new_x2], axis=1)
+            args.ordinal_idx = []
 
         #change the num of features after one hot encoding;
         args.num_features = X.shape[1]
         #args.cat_idx = get_catidx(args)
         #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
 
-        """
-        We have encoded nominal features. Therefore categorical data now is if we have 
-        odinal features.
-        """
+        
+        #We have encoded nominal features. Therefore categorical data now is if we have 
+        #odinal features.
+        
         if args.ordinal_encode:
             args.cat_idx = args.ordinal_idx
         else:
@@ -486,5 +487,5 @@ def load_data(args):
             X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
 
             print("OE Done!!! \n")
-
+    """
     return X, y
