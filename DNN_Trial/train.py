@@ -3,13 +3,14 @@ import sys
 import numpy as np
 import pandas as pd
 
-import optuna
+import optuna 
 
 from models import str2model
 from utils.load_data import load_data
+from utils.data_encoding import encoding
 from utils.scorer import get_scorer
 from utils.timer import Timer
-from utils.io_utils import update_yaml, save_results_to_file, save_hyperparameters_to_file, save_loss_to_file, get_output_path
+from utils.io_utils import update_yaml, save_results_to_file, save_hyperparameters_to_file, save_loss_to_file, get_output_path, save_regularization_to_file
 from utils.parser import get_parser, get_given_parameters_parser
 from utils.visualization import loss_vizualization
 from sklearn.preprocessing import KBinsDiscretizer
@@ -65,11 +66,56 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
     else:
         raise NotImplementedError("Objective" + args.objective + "is not yet implemented.")
 
+    #temp hold
+    num_features_temp = args.num_features
+    num_classes_temp = args.num_classes
+    cat_idx_temp = args.cat_idx
+    nominal_idx_temp = args.nominal_idx
+    ordinal_idx_temp = args.ordinal_idx
+    num_idx_temp = args.num_idx
+    cat_dims_temp = args.cat_dims
+
+    args_temps = {
+        'num_features' : num_features_temp,
+        'num_classes' : num_classes_temp,
+        'cat_idx' : cat_idx_temp,
+        'nominal_idx' : nominal_idx_temp,
+        'ordinal_idx' : ordinal_idx_temp,
+        'num_idx' : num_idx_temp,
+        'cat_dims' : cat_dims_temp 
+    }
+
     for i, (train_index, test_index) in enumerate(kf.split(X, y)):
+        print(f"Fold {i+1}")
 
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
+        print("Before encoding...")
+        print(X_train[:5,:])
+        print(X_test[:5,:])
+
+        #Check Values
+        for key, value in args_temps.items():
+            print(f"{key} : {value}")
+
+        if args.frequency_reg:
+            #Need to Clean here
+            X_train,y_train,X_test,y_test,frequency_map = encoding(args, X_train, y_train, X_test, y_test, args_temps)
+        else:
+            print("Doing encoding : WE ARE IN TRAIN.PY")
+            X_train,y_train,X_test,y_test = encoding(args, X_train, y_train, X_test, y_test, args_temps)
+
+        print("After encoding : : WE ARE IN TRAIN.PY")
+        #Check Values
+        print(f"num_features :{args.num_features}")
+        print(f"num_classes : {args.num_classes}")
+        print(f"cat_idx : {args.cat_idx}")
+        print(f"nominal_idx : {args.nominal_idx}")
+        print(f"ordinal_idx : {args.ordinal_idx}")
+        print(f"num_idx : {args.num_idx}")
+        print(f"cat_dims : {args.cat_dims}")
+        
         #Bin the target variable
         if args.objective == "probabilistic_regression":
             args.num_bins = bin_finder(args, y_train)
@@ -84,6 +130,12 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
             y_test = binning.transform(y_test.reshape(-1, 1)).flatten()
             args.num_classes = args.num_bins
 
+            #print(f"Number of bins: {args.num_bins}")
+            #print(f"Unique values in y_train: {np.unique(y_train), len(np.unique(y_train))}")
+            #print(f"Unique values in y_test: {np.unique(y_test), len(np.unique(y_test))}")
+            #print(f"Missing bin in train: {np.setdiff1d(np.unique(y_test),np.unique(y_train))}")
+            #print(f"Missing bin in test: {np.setdiff1d(np.unique(y_train),np.unique(y_test))}")
+
             y_train = y_train.astype(int)  # For NumPy arrays
             y_test = y_test.astype(int)
         
@@ -95,7 +147,10 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
 
         # Train model
         train_timer.start()
-        loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+        if args.frequency_reg: ## For frequency regularization
+            loss_history, val_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train, X_test, y_test, frequency_map)
+        else:
+            loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
         
         train_timer.end()
 
@@ -103,6 +158,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         test_timer.start()
         curr_model.predict(X_test)
         test_timer.end()
+
 
         # Save model weights and the truth/prediction pairs for traceability
         curr_model.save_model_and_predictions(y_test, i)
@@ -115,10 +171,14 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         if save_model:
             save_loss_to_file(args, loss_history, "loss", extension=i)
             save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
-            print('Saved Losses')
-            
+            if args.frequency_reg:
+                save_regularization_to_file(args, lambda_reg_history, "lambda_reg", extension=i)
+            print('Saved Losses and Regularization')
+        
+        print("B4 Evaluation")
         # Compute scores on the output
         sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities)
+        print("After Evaluation")
 
         print(f'{sc.get_results()} \n \n')
     # Best run is saved to file
@@ -225,12 +285,16 @@ def main_once(args):
     print("Train model with given hyperparameters")
     X, y = load_data(args)
 
+    print("I am in Main Once")
+
     model_name = str2model(args.model_name)
 
     parameters = args.parameters[args.dataset][args.model_name]
     model = model_name(parameters, args)
 
-    sc, time = cross_validation(model, X, y, args, visual=True)
+    print("Almost Cross Validating")
+
+    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
     print(sc.get_results())
     print(time)
 
