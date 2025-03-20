@@ -1,0 +1,14 @@
+2025-01-27 17:02:06.129542
+CatBoost - Brazillian_Houses
+
+MSE - mean: 19005417.60848
+MSE - std: 16613393.55843
+R2 - mean: 0.79889
+R2 - std: 0.26486
+
+Train time: 1.908512
+Test time: 0.108329
+
+Best Parameters: {'learning_rate': 0.2370947635349344, 'max_depth': 11, 'l2_leaf_reg': 1.9608435677762768, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 6, 7]}
+
+
