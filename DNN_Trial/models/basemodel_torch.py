@@ -17,6 +17,7 @@ class BaseModelTorch(BaseModel):
         super().__init__(params, args)
         self.device = self.get_device()
         #self.gpus = args.gpu_ids if args.use_gpu and torch.cuda.is_available() and args.data_parallel else None
+        self.lambda_reg = nn.Parameter(torch.tensor(0.01))  # Learnable lambda_reg
 
     def to_device(self):
         print("On Device:", self.device)
@@ -43,8 +44,11 @@ class BaseModelTorch(BaseModel):
         
         return torch.device('cpu')
 
-    def fit(self, X, y, X_val=None, y_val=None):
-        optimizer = optim.AdamW(self.model.parameters(), lr=self.params["learning_rate"])
+    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None):
+        if self.args.frequency_reg:
+            optimizer = optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params["learning_rate"])
+        else:
+            optimizer = optim.AdamW(self.model.parameters(), lr=self.params["learning_rate"])
 
         X = torch.tensor(X).float()
         X_val = torch.tensor(X_val).float()
@@ -77,19 +81,42 @@ class BaseModelTorch(BaseModel):
 
         loss_history = []
         val_loss_history = []
+        lambda_reg_history = []  # To track lambda_reg values
 
         for epoch in range(self.args.epochs):
             for i, (batch_X, batch_y) in enumerate(train_loader):
                 out = self.model(batch_X.to(self.device))
                 if self.args.objective == "regression" or self.args.objective == "binary":
                     out = out.squeeze()
-                
-                loss = loss_func(out, batch_y.to(self.device))
-                loss_history.append(loss.item()) #training loss
 
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                # Frequency regularization term
+                if frequency_map is not None:
+                    if self.args.ordinal_encode :
+                        idx_buff = len(self.args.ordinal_idx)
+                    else:
+                        idx_buff = 0  # Ordinal feat are stored b4 OHE
+
+                    weights = self.model_semi.input_layer.weight  # Get weights for one-hot encoded features
+                    penalty = 0.0
+                    for i, col in enumerate(frequency_map.keys()):
+                        penalty += torch.sum(torch.abs(weights[:, i + idx_buff])) / (frequency_map[col] + 1e-8)  #i add len ordinal
+                    penalty *= self.model_semi.lambda_reg  # Use the learnable lambda_reg
+                else:
+                    penalty = 0.0
+
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                
+                loss = loss_func(out, batch_y.to(self.device)) + penalty
+                loss_history.append(loss.item()) #training loss
+                
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
+
+            # Save lambda_reg value for this epoch
+            lambda_reg_history.append(self.lambda_reg.item())
 
             # Early Stopping
             val_loss = 0.0
@@ -107,7 +134,10 @@ class BaseModelTorch(BaseModel):
             val_loss /= val_dim
             val_loss_history.append(val_loss.item())
 
-            print("Epoch %d, Val Loss: %.5f" % (epoch, val_loss))
+            if self.args.frequency_reg:
+                print("Epoch %d, Val Loss: %.5f, Lambda: %.5f" % (epoch, val_loss, self.lambda_reg.item())) 
+            else:
+                print("Epoch %d, Val Loss: %.5f" % (epoch, val_loss))
 
             if val_loss < min_val_loss:
                 min_val_loss = val_loss
@@ -123,7 +153,10 @@ class BaseModelTorch(BaseModel):
 
         # Load best model
         self.load_model(filename_extension="best", directory="tmp")
-        return loss_history, val_loss_history
+        if self.args.frequency_reg:
+            return loss_history, val_loss_history, lambda_reg_history
+        else:
+            return loss_history, val_loss_history , []
 
     def predict(self, X):
         if self.args.objective == "regression":
