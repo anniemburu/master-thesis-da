@@ -1,6 +1,8 @@
 from pytorch_tabnet.tab_model import TabNetClassifier, TabNetRegressor
 import numpy as np
 import torch
+from pytorch_tabnet.metrics import Metric
+from sklearn.metrics import log_loss
 from models.basemodel_torch import BaseModelTorch
 from utils.io_utils import save_model_to_file, load_model_from_file
 
@@ -9,6 +11,36 @@ from utils.io_utils import save_model_to_file, load_model_from_file
 
     See the implementation: https://github.com/dreamquark-ai/tabnet
 '''
+#custom loss
+
+"""def CustomLogLossFactory(args):
+    class CustomLogLoss(Metric):
+        def __init__(self):
+            self._name = "custom_logloss"
+            self._maximize = False  # Log loss should be minimized
+            self.classes = list(range(args.num_classes))
+
+        def __call__(self, y_true, y_pred):
+            return log_loss(y_true, y_pred, labels=self.classes)
+        
+    return CustomLogLoss"""
+
+
+
+# Define a global variable
+gb_num_classes = None  # Global variable to store the number of classes
+
+# Define the CustomLogLoss class
+class CustomLogLoss(Metric):
+    def __init__(self):
+        self._name = "custom_logloss"
+        self._maximize = False  # Log loss should be minimized
+        if gb_num_classes is None:
+            raise ValueError("num_classes must be set as a global variable")
+        self.classes = list(range(gb_num_classes))  # Use the global variable
+
+    def __call__(self, y_true, y_pred):
+        return log_loss(y_true, y_pred, labels=self.classes)
 
 
 class TabNet(BaseModelTorch):
@@ -24,12 +56,19 @@ class TabNet(BaseModelTorch):
 
         self.params["device_name"] = self.device
 
+        global gb_num_classes
+        gb_num_classes = args.num_classes  # Set the global variable
+
         if args.objective == "regression":
             self.model = TabNetRegressor(**self.params)
             self.metric = ["rmse"]
-        elif args.objective == "classification" or args.objective == "probabilistic_regression" or args.objective == "binary":
+        elif args.objective == "classification" or args.objective == "binary":
             self.model = TabNetClassifier(**self.params)
             self.metric = ["logloss"]
+        elif args.objective == "probabilistic_regression":
+            self.model = TabNetClassifier(**self.params)
+            self.metric = [CustomLogLoss]
+            
 
     def fit(self, X, y, X_val=None, y_val=None):
         if self.args.objective == "regression":
@@ -41,8 +80,9 @@ class TabNet(BaseModelTorch):
                        max_epochs=self.args.epochs, patience=self.args.early_stopping_rounds,
                        batch_size=self.args.batch_size)
         history = self.model.history
+        print(f"Self Metric: {self.metric}")
         self.save_model(filename_extension="best")
-        return history['loss'], history["eval_" + self.metric[0]]
+        return history['loss'], history["eval_custom_logloss"]
 
     def predict_helper(self, X):
         X = np.array(X, dtype=float)

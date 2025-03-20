@@ -34,7 +34,7 @@ class VIME(BaseModelTorch):
 
         self.encoder_layer = None
 
-    def fit(self, X, y, X_val=None, y_val=None):
+    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None):
         
         X = X.astype(float)
         X_val = X_val.astype(float)
@@ -48,11 +48,20 @@ class VIME(BaseModelTorch):
         else:
             self.encoder_layer = self.model_self.input_layer
 
-        loss_history, val_loss_history = self.fit_semi(X, y, X, X_val, y_val, p_m=self.params["p_m"],
-                                                       K=self.params["K"], beta=self.params["beta"])
+        if self.args.frequency_reg:
+            loss_history, val_loss_history, lambda_reg_history = self.fit_semi(X, y, X, X_val, y_val, p_m=self.params["p_m"],
+                                                       K=self.params["K"], beta=self.params["beta"],
+                                                       frequency_map=frequency_map)
+        else:
+            loss_history, val_loss_history, _ = self.fit_semi(X, y, X, X_val, y_val, p_m=self.params["p_m"],
+                                                        K=self.params["K"], beta=self.params["beta"])
 
         self.load_model(filename_extension="best", directory="tmp")
-        return loss_history, val_loss_history
+
+        if self.args.frequency_reg:
+            return loss_history, val_loss_history, lambda_reg_history
+        else:
+            return loss_history, val_loss_history
 
     def predict_helper(self, X):
         self.model_self.eval()
@@ -117,7 +126,7 @@ class VIME(BaseModelTorch):
 
         print("Fitted encoder")
 
-    def fit_semi(self, X, y, x_unlab, X_val=None, y_val=None, p_m=0.3, K=3, beta=1):
+    def fit_semi(self, X, y, x_unlab, X_val=None, y_val=None, p_m=0.3, K=3, beta=1, frequency_map=None):
         X = torch.tensor(X).float()
         y = torch.tensor(y)
         x_unlab = torch.tensor(x_unlab).float()
@@ -138,7 +147,7 @@ class VIME(BaseModelTorch):
             y = y.float()
             y_val = y_val.float()
 
-        optimizer = optim.AdamW(self.model_semi.parameters())
+        optimizer = optim.AdamW(list(self.model_semi.parameters()) + [self.model_semi.lambda_reg], lr=0.01)
 
         train_dataset = TensorDataset(X, y, x_unlab)
         train_loader = DataLoader(dataset=train_dataset, batch_size=self.args.batch_size, shuffle=True, num_workers=2,
@@ -152,6 +161,7 @@ class VIME(BaseModelTorch):
 
         loss_history = []
         val_loss_history = []
+        lambda_reg_history = [] # For frequency regularization
 
         for epoch in range(self.args.epochs):
             for i, (batch_X, batch_y, batch_unlab) in enumerate(train_loader):
@@ -177,14 +187,37 @@ class VIME(BaseModelTorch):
                 #print(f"Result from the model: {y_hat} \n") ##IMPORTANT
                 #print(f"How our y looks: {batch_y} \n") ##IMPORTANT
 
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                # Frequency regularization term
+                if frequency_map is not None:
+                    if self.args.ordinal_encode :
+                        idx_buff = len(self.args.ordinal_idx)
+                    else:
+                        idx_buff = 0  # Ordinal feat are stored b4 OHE
+
+                    weights = self.model_semi.input_layer.weight  # Get weights for one-hot encoded features
+            
+                    penalty = 0.0
+                    for i, col in enumerate(frequency_map.keys()):
+                        penalty += torch.sum(torch.abs(weights[:, i + idx_buff])) / (frequency_map[col] + 1e-8)  #i add len ordinal
+                    penalty *=  torch.exp(self.model_semi.lambda_reg)   # Use the learnable lambda_reg
+                else:
+                    penalty = 0.0
+                     
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
                 y_loss = loss_func_supervised(y_hat, batch_y.to(self.device))
                 yu_loss = torch.mean(torch.var(yv_hats, dim=0))
-                loss = y_loss + beta * yu_loss
+                loss = y_loss + beta * yu_loss + penalty  # Add the penalty term
                 loss_history.append(loss.item())
 
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
+
+            #Only save if we have it
+            if self.args.frequency_reg:
+                lambda_reg_history.append(torch.exp(self.model_semi.lambda_reg).item())
 
             # Early Stopping
             val_loss = 0.0
@@ -205,7 +238,10 @@ class VIME(BaseModelTorch):
             val_loss /= val_dim
             val_loss_history.append(val_loss.item())
 
-            print("Epoch %d, Val Loss: %.5f" % (epoch, val_loss))
+            if self.args.frequency_reg:
+                print("Epoch %d, Val Loss: %.5f, Lambda: %.5f" % (epoch, val_loss, torch.exp(self.model_semi.lambda_reg).item()))
+            else:
+                print("Epoch %d, Val Loss: %.5f" % (epoch, val_loss))
 
             if val_loss < min_val_loss:
                 min_val_loss = val_loss
@@ -217,7 +253,11 @@ class VIME(BaseModelTorch):
                 print("Early stopping applies.")
                 break
 
-        return loss_history, val_loss_history
+        if self.args.frequency_reg:
+            return loss_history, val_loss_history, lambda_reg_history
+        else:
+            return loss_history, val_loss_history , lambda_reg_history
+        
 
     def save_model(self, filename_extension="", directory="models"):
         filename_self = get_output_path(self.args, directory=directory, filename="m_self", extension=filename_extension,
@@ -276,6 +316,9 @@ class VIMESemi(nn.Module):
         self.layers.extend([nn.Linear(hidden_dim, hidden_dim) for _ in range(n_layers - 1)])
 
         self.output_layer = nn.Linear(hidden_dim, output_dim)
+
+        # Add lambda_reg as a trainable parameter
+        self.lambda_reg =  nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
 
     def forward(self, x):
         x = F.relu(self.input_layer(x))
