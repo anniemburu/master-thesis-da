@@ -19,6 +19,10 @@ def save_loss_to_file(args, arr, name, extension=""):
         
     print(f"File name : {filename} . The file was saved")
 
+def save_regularization_to_file(args, arr, name, extension=""):
+    filename = get_output_path(args, directory="freq_reg", filename=name, extension=extension, file_type="txt")
+    np.savetxt(filename, arr)
+
 
 def save_predictions_to_file(arr, args, extension=""):
     filename = get_output_path(args, directory="predictions", filename="p", extension=extension, file_type="npy")
