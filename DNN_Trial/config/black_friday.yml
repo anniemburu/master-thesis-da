@@ -38,9 +38,9 @@ logging_period: 100
 # About the data
 num_classes: 1  # always 1 for regression
 num_features: 9  #without target variable
-#cat_idx: [0, 1, 2, 3, 5, 6, 7, 8]
+#cat_idx: [0, 1, 2, 3, 5, 6, 7, 8] #comment out
 nominal_idx : [0, 2, 3, 4, 5, 6, 7, 8]
 ordinal_idx : [1]
 
 # cat_dims: will be automatically set.
-#cat_dims: [9, 16, 7, 15, 6, 5, 2, 42]
+#cat_dims: [0, 1, 2, 3, 5, 6, 7, 8] #comment out
