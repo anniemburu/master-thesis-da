@@ -20,14 +20,14 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #Calculates Freedman-Diaconis Rule
-def freedman_diaconis(y):
+def freedman_diaconis(y, args):
     #calc IQR
     q1 = np.percentile(y, 25)
     q3 = np.percentile(y, 75)
     iqr = q3 - q1
 
     #calc bin width
-    n = len(y)
+    n = len(y) // args.num_splits
     bin_width = 2 * (iqr / (n ** (1/3)))
 
     #calc num of bins
@@ -37,21 +37,131 @@ def freedman_diaconis(y):
     return num_bins
 
 # Sturges' Rule
-def sturges(y): 
-    n = len(y)
+def sturges(y,args): 
+    n = len(y) // args.num_splits
     num_bins = 1 + int(np.log2(n))
 
     return num_bins
 
 def bin_finder(args, y):
     if args.y_distribution == "normal" :
-        bins = sturges(y)
+        bins = sturges(y, args)
     elif args.y_distribution == "skewed" or args.y_distribution == "bimodial":
-        bins = freedman_diaconis(y)
+        bins = freedman_diaconis(y,args)
     else:
         raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
 
     return bins
+
+def bin_shifter(args, y_train, y_test):
+    def find_earliest_gap(arr):
+        expected = 0
+        for num in arr:
+            if num != expected:
+                return expected
+            expected += 1
+
+        return expected
+    
+    def shift_array(arr, shift_value, max_diff):
+        """
+        Shifts elements greater than `shift_value` by `max_diff` without creating duplicates.
+        """
+        shifted_arr = []
+        existing_values = set(arr)  # Track existing values to avoid duplicates
+
+        for x in arr:
+            if x > shift_value:
+                shifted_arr.append(x - max_diff)
+            else:
+                shifted_arr.append(x)
+
+        return np.array(shifted_arr)
+
+    #train_unique, train_len = np.unique(y_train), len(np.unique(y_train))
+    #test_unique, test_len = np.unique(y_test), len(np.unique(y_test))
+    #comb = np.union1d(train_unique, test_unique)
+
+    comb = np.unique(np.concatenate([y_train, y_test]))
+    comb_len = len(comb)
+
+    max_class = np.max(y_train)
+    max_diff = np.abs(comb_len - max_class)
+
+    if max_diff == 0: max_diff = 1 #shift by one if zero
+ 
+    print(f"MAX : {max_class} , Max diff : {max_diff}, LEN : {comb_len} , BINS : {args.num_bins}")
+
+    if comb_len != args.num_bins: #means some classes are missing
+        print("WE ARE HERE")
+        
+        if comb_len == np.max(comb): # when the max class is the same as number of classes ##added or np.max(comb) > comb_len
+            print("IN THE SHIIIIIT")
+            #y_train = np.where(y_train == max_class, max_class - max_diff, y_train)
+            #y_test  = np.where(y_test == max_class, max_class - max_diff, y_test)
+
+            #find the gaps.. missing classes
+            train_gap = find_earliest_gap(y_train)
+            test_gap = find_earliest_gap(y_test)
+
+            y_train_shift = shift_array(y_train, train_gap, max_diff)
+            y_test_shift = shift_array(y_test, test_gap, max_diff)
+
+            print(f"Length orig Train: {len(y_train_shift)}, Length shift : {len(y_train)}")
+            print(f"Length orig Test: {len(y_test_shift)}, Length shift : {len(y_test)}")
+
+            # Ensure same length
+            if len(np.unique(y_train_shift)) != len(np.unique(y_train)):
+                print("Warning: Length mismatch in y_train_shift!")
+
+            if len(np.unique(y_test_shift)) != len(np.unique(y_test)):
+                print("Warning: Length mismatch in y_test_shift!")
+
+
+            args.num_classes = comb_len
+            args.bin_alt = sorted(np.unique(np.concatenate([y_train_shift, y_test_shift])).tolist())
+
+            #print(f"Train after shift : {np.unique(y_train)}")
+            #print(f"Test after shift : {np.unique(y_test)}")
+            #print(f"Num Classes after shift : {args.num_classes}")
+            #print(f"Bin alt after shift : {args.bin_alt} \n")
+            print(f"Train after shift I : {np.unique(y_train_shift)},  Length : {len(np.unique(y_train_shift))}")
+            print(f"Test after shift I : {np.unique(y_test_shift)}, Length : {len(np.unique(y_test_shift))} \n")
+
+            return y_train_shift, y_test_shift
+        
+        elif comb_len < np.max(comb):
+            print("IN THE SHIIIIIT II")
+            #First shift
+            train_gap = find_earliest_gap(y_train)
+            test_gap = find_earliest_gap(y_test)
+
+            y_train_shift = shift_array(y_train, train_gap, max_diff)
+            y_test_shift = shift_array(y_test, test_gap, max_diff)
+
+            #Second shift
+            train_gap2 = find_earliest_gap(y_train_shift)
+            test_gap2 = find_earliest_gap(y_test_shift)
+
+            y_train_shift2 = shift_array(y_train, train_gap2, max_diff)
+            y_test_shift2 = shift_array(y_test, test_gap2, max_diff)
+
+            print(f"Train after shift II : {np.unique(y_train_shift2)},  Length : {len(np.unique(y_train_shift2))}")
+            print(f"Test after shift II : {np.unique(y_test_shift2)}, Length : {len(np.unique(y_test_shift2))} \n")
+
+            return y_train_shift2, y_test_shift2
+        
+        else:
+            args.num_classes = comb_len
+            args.bin_alt = [x for x in range(comb_len)]
+
+            return y_train, y_test
+
+    else:
+        args.num_classes = comb_len
+        args.bin_alt = [x for x in range(comb_len)]
+
+        return y_train, y_test
 
 def cross_validation(model, X, y, args, visual=False, save_model=False):
     # Record some statistics and metrics
@@ -74,6 +184,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
     ordinal_idx_temp = args.ordinal_idx
     num_idx_temp = args.num_idx
     cat_dims_temp = args.cat_dims
+    bin_alt_temp = args.bin_alt
 
     args_temps = {
         'num_features' : num_features_temp,
@@ -82,7 +193,8 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         'nominal_idx' : nominal_idx_temp,
         'ordinal_idx' : ordinal_idx_temp,
         'num_idx' : num_idx_temp,
-        'cat_dims' : cat_dims_temp 
+        'cat_dims' : cat_dims_temp,
+        'bin_alt' :  bin_alt_temp
     }
 
     for i, (train_index, test_index) in enumerate(kf.split(X, y)):
@@ -91,9 +203,9 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
-        print("Before encoding...")
-        print(X_train[:5,:])
-        print(X_test[:5,:])
+        #print("Before encoding...")
+        #print(X_train[:5,:])
+        #print(X_test[:5,:])
 
         #Check Values
         for key, value in args_temps.items():
@@ -103,18 +215,18 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
             #Need to Clean here
             X_train,y_train,X_test,y_test,frequency_map = encoding(args, X_train, y_train, X_test, y_test, args_temps)
         else:
-            print("Doing encoding : WE ARE IN TRAIN.PY")
+            #print("Doing encoding : WE ARE IN TRAIN.PY")
             X_train,y_train,X_test,y_test = encoding(args, X_train, y_train, X_test, y_test, args_temps)
 
-        print("After encoding : : WE ARE IN TRAIN.PY")
+        #print("After encoding : : WE ARE IN TRAIN.PY")
         #Check Values
-        print(f"num_features :{args.num_features}")
-        print(f"num_classes : {args.num_classes}")
-        print(f"cat_idx : {args.cat_idx}")
-        print(f"nominal_idx : {args.nominal_idx}")
-        print(f"ordinal_idx : {args.ordinal_idx}")
-        print(f"num_idx : {args.num_idx}")
-        print(f"cat_dims : {args.cat_dims}")
+        #print(f"num_features :{args.num_features}")
+        #print(f"num_classes : {args.num_classes}")
+        #print(f"cat_idx : {args.cat_idx}")
+        #print(f"nominal_idx : {args.nominal_idx}")
+        #print(f"ordinal_idx : {args.ordinal_idx}")
+        #print(f"num_idx : {args.num_idx}")
+        #print(f"cat_dims : {args.cat_dims}")
         
         #Bin the target variable
         if args.objective == "probabilistic_regression":
@@ -131,19 +243,26 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
             args.num_classes = args.num_bins
 
             #print(f"Number of bins: {args.num_bins}")
-            #print(f"Unique values in y_train: {np.unique(y_train), len(np.unique(y_train))}")
-            #print(f"Unique values in y_test: {np.unique(y_test), len(np.unique(y_test))}")
-            #print(f"Missing bin in train: {np.setdiff1d(np.unique(y_test),np.unique(y_train))}")
-            #print(f"Missing bin in test: {np.setdiff1d(np.unique(y_train),np.unique(y_test))}")
+            print(f"Number of Classes B4 Bin Verifier: {args.num_classes}")
+            print(f"Unique values in y_train: {np.unique(y_train), len(np.unique(y_train))}")
+            print(f"Unique values in y_test: {np.unique(y_test), len(np.unique(y_test))}")
 
             y_train = y_train.astype(int)  # For NumPy arrays
             y_test = y_test.astype(int)
+
+            #Rectify bin
+            y_train, y_test = bin_shifter(args, y_train, y_test)
+            print("VERIFY SHIFT")
+            print(f"Train after shift : {np.unique(y_train)}, Length : {len(np.unique(y_train))}")
+            print(f"Test after shift : {np.unique(y_test)}, Length : {len(np.unique(y_test))}")
+            print(f"Number of Classes After Bin Verifier: {args.num_classes}")
         
 
         # X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.05, random_state=args.seed)
 
         # Create a new unfitted version of the model
         curr_model = model.clone()
+        print(curr_model.params)
 
         # Train model
         train_timer.start()
@@ -176,6 +295,13 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
             print('Saved Losses and Regularization')
         
         print("B4 Evaluation")
+        print(f"Number of classes : {args.num_classes}")
+        print(f"Unique y_true : {np.unique(y_test)} \n")
+        print(f"Prediction shape : {curr_model.predictions.shape}")
+        print(f"Probabilities shape : {curr_model.prediction_probabilities.shape} \n")
+        
+
+        #y_test = bin_shifter(args,y_train,y_test)
         # Compute scores on the output
         sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities)
         print("After Evaluation")
