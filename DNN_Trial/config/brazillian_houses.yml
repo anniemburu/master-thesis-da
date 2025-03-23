@@ -40,3 +40,7 @@ num_classes: 1  # always 1 for regression
 num_features: 12  #without target variable
 nominal_idx : [0, 6] 
 ordinal_idx : [7]
+
+#Dummies
+cat_idx: [0]
+cat_dims: [2]

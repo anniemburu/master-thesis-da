@@ -40,3 +40,7 @@ num_classes: 1  # always 1 for regression
 num_features: 21  #without target variable
 nominal_idx : [14]
 dropna_idx : [0]
+
+#Dummies
+cat_idx: [0]
+cat_dims: [2]
