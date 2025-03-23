@@ -38,15 +38,15 @@ def frequency_mapper(X_onehot, onehot_encoder):
     return frequency_map
 
 def encoding(args, X_train, y_train, X_val, y_val, args_temps):
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print("INSIDE ENCODING")
-    print("Checking if the args dict holds..... \n")
+    #print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    #print("INSIDE ENCODING")
+    #print("Checking if the args dict holds..... \n")
 
     for key, value in args_temps.items():
         print(f"{key} : {value}")
 
 
-    print("See if it updates our args")
+    #print("See if it updates our args")
     #Reset after ever fold
     args.num_features = args_temps["num_features"]
     args.num_classes = args_temps["num_classes"]
@@ -55,16 +55,17 @@ def encoding(args, X_train, y_train, X_val, y_val, args_temps):
     args.ordinal_idx = args_temps["ordinal_idx"]
     args.num_idx = args_temps["num_idx"]
     args.cat_dims = args_temps["cat_dims"]
+    args.bin_alt = args_temps["bin_alt"]
     
-    print(f"num_features :{args.num_features}")
-    print(f"num_classes : {args.num_classes}")
-    print(f"cat_idx : {args.cat_idx}")
-    print(f"nominal_idx : {args.nominal_idx}")
-    print(f"ordinal_idx : {args.ordinal_idx}")
-    print(f"num_idx : {args.num_idx}")
-    print(f"cat_dims : {args.cat_dims}")
-
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    #print(f"num_features :{args.num_features}")
+    #print(f"num_classes : {args.num_classes}")
+    #print(f"cat_idx : {args.cat_idx}")
+    #print(f"nominal_idx : {args.nominal_idx}")
+    #print(f"ordinal_idx : {args.ordinal_idx}")
+    #print(f"num_idx : {args.num_idx}")
+    #print(f"cat_dims : {args.cat_dims}")
+    #print(f"bin_alt : {args.bin_alt}")
+    #print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
     # Preprocess target 
     if args.target_encode:
@@ -74,7 +75,7 @@ def encoding(args, X_train, y_train, X_val, y_val, args_temps):
 
     num_idx = [] # Index of numerical features
     args.cat_dims = [] # dimensions for categorical features
-    args.cat_idx = get_catidx(args)
+    args.cat_idx = get_catidx(args) # Index of categorical features
 
     #print(f"Nominal Index : {args.nominal_idx}")
     #print(f"Ordinal Index : {args.ordinal_idx}")
@@ -132,10 +133,10 @@ def encoding(args, X_train, y_train, X_val, y_val, args_temps):
 
     #Encode Nominal Features
     if args.one_hot_encode:
-        print("One Hot Encoding...")
-        print(f"Nominal Index : {args.nominal_idx}")
-        print(f"Ordinal Index : {args.ordinal_idx}")
-        print(f"Numerical Index : {num_idx}")
+        #print("One Hot Encoding...")
+        #print(f"Nominal Index : {args.nominal_idx}")
+        #print(f"Ordinal Index : {args.ordinal_idx}")
+        #print(f"Numerical Index : {num_idx}")
         ohe = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
         new_x1 = ohe.fit_transform(X_train[:, args.nominal_idx])
         new_x2 = X_train[:, num_idx]
@@ -151,21 +152,25 @@ def encoding(args, X_train, y_train, X_val, y_val, args_temps):
             new_ord_val = X_val[:, args.ordinal_idx]
 
             args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
-            print(f"Ordinal Idx Updated: {args.ordinal_idx}")
+            #print(f"Ordinal Idx Updated: {args.ordinal_idx}")
             X_train = np.concatenate([new_ord, new_x1, new_x2], axis=1)
             X_val = np.concatenate([new_ord_val, new_x1_val, new_x2_val], axis=1)
+
+            #Update Nominal idx
+            args.nominal_idx = [x+len(args.ordinal_idx) for x in range(new_x1.shape[1])]
 
         else:
             X_train = np.concatenate([new_x1, new_x2], axis=1)
             X_val = np.concatenate([new_x1_val, new_x2_val], axis=1)
 
+            args.nominal_idx = [x for x in range(new_x1.shape[1])]
+
         #change the num of features after one hot encoding;
         args.num_features = X_train.shape[1] #here is the issue
         #args.cat_idx = get_catidx(args)
-        #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
-
-        #Update Nominal idx
-        args.nominal_idx = [x+len(args.ordinal_idx) for x in range(new_x1.shape[1])]
+        #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int...
+        
+        
 
         """
         We have encoded nominal features. Therefore categorical data now is if we have 
@@ -181,19 +186,19 @@ def encoding(args, X_train, y_train, X_val, y_val, args_temps):
         #print("One Hot Encoding...")
         #print("New Shape:", X_train.shape)
 
-    print("After OHE")
-    print(f"Numerical Index V1 : {num_idx}")
-    print(f"Cat Dims V1 : {args.cat_dims}")
-    print(f"Cat Idx V1 : {args.cat_idx} \n \n")
-    print(f"Train: {X_train[:10,:5]} \n \n ")
-    print(f"Val : {X_val[:10,:5]} \n \n")
+    #print("After OHE")
+    #print(f"Numerical Index V1 : {num_idx}")
+    #print(f"Cat Dims V1 : {args.cat_dims}")
+    #print(f"Cat Idx V1 : {args.cat_idx} \n \n")
+    #print(f"Train: {X_train[:10,:5]} \n \n ")
+    #print(f"Val : {X_val[:10,:5]} \n \n")
        
         
 
     # Ordinal Encode
     if args.ordinal_encode:
         if args.dataset == "Black_Friday":
-            print(f"Ordinal Index b4 using OE : {args.ordinal_idx}")
+            #print(f"Ordinal Index b4 using OE : {args.ordinal_idx}")
             ordinal_encoder = OrdinalEncoder(categories=[[None,'0-17','18-25','26-35','36-45','46-50','51-55','55+']])
             X_train[:, args.ordinal_idx] = ordinal_encoder.fit_transform(X_train[:, args.ordinal_idx])
             X_val[:, args.ordinal_idx] = ordinal_encoder.transform(X_val[:, args.ordinal_idx])
@@ -270,17 +275,21 @@ def encoding(args, X_train, y_train, X_val, y_val, args_temps):
             X_train[:, args.ordinal_idx] = encoder.fit_transform(X_train[:, args.ordinal_idx])
             X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
 
-            print("OHE Done!!! \n")
+            #print("OHE Done!!! \n")
 
     #print("After Ordinal")
     #print(f"Numerical Index V1 : {num_idx}")
     #print(f"Cat Dims V1 : {args.cat_dims}")
     #print(f"Cat Idx V1 : {args.cat_idx} \n \n")
-    print(f"Train shape : {X_train.shape}")
-    print(f"Val shape : {X_val.shape}")
+    #print(f"Train shape : {X_train.shape}")
+    #print(f"Val shape : {X_val.shape}")
     #print(y_train[:10])
     #print(f"X_traiN after encoding : {X_train[:10,:]}")
     #print(f"X_val after encoding : {X_val[:10,:]}")
+
+    #print("Check Cat Args and Dims")
+    #print(f"Cat Dims Final : {args.cat_dims}")
+    #print(f"Cat Idx Final : {args.cat_idx} \n \n")
 
     if args.frequency_reg:
         return X_train, y_train, X_val, y_val, freqency_map
