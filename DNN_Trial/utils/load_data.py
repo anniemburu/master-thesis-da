@@ -45,7 +45,7 @@ def load_data(args):
 
     ####~~~~~~~~~~~~~~~~~~~~ SPECIFY HOW DATASETS ARE LOADED AND STUFF ~~~~~~~~~~~~~~~~~ 
     if args.dataset == "Boston":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/531-boston/raw_data.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/531-boston/raw_data.csv')
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/531-boston.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/531-boston.csv')
         label_col = "MEDV"
@@ -69,8 +69,8 @@ def load_data(args):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Sensory":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/546-sensory.csv')
         label_col = 'Score'
 

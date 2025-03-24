@@ -219,14 +219,16 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
             X_train,y_train,X_test,y_test = encoding(args, X_train, y_train, X_test, y_test, args_temps)
 
         #print("After encoding : : WE ARE IN TRAIN.PY")
-        #Check Values
-        #print(f"num_features :{args.num_features}")
-        #print(f"num_classes : {args.num_classes}")
-        #print(f"cat_idx : {args.cat_idx}")
-        #print(f"nominal_idx : {args.nominal_idx}")
-        #print(f"ordinal_idx : {args.ordinal_idx}")
-        #print(f"num_idx : {args.num_idx}")
-        #print(f"cat_dims : {args.cat_dims}")
+        #Check Valuesprint("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print(f"num_features :{args.num_features}")
+        print(f"num_classes : {args.num_classes}")
+        print(f"cat_idx : {args.cat_idx}")
+        print(f"nominal_idx : {args.nominal_idx}")
+        print(f"ordinal_idx : {args.ordinal_idx}")
+        print(f"num_idx : {args.num_idx}")
+        print(f"cat_dims : {args.cat_dims}")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
         
         #Bin the target variable
         if args.objective == "probabilistic_regression":
