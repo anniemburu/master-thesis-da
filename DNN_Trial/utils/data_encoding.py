@@ -156,19 +156,21 @@ def encoding(args, X_train, y_train, X_val, y_val, args_temps):
             new_ord = X_train[:, args.ordinal_idx]
             new_ord_val = X_val[:, args.ordinal_idx]
 
-            args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
+            
             #print(f"Ordinal Idx Updated: {args.ordinal_idx}")
             X_train = np.concatenate([new_ord, new_x1, new_x2], axis=1)
             X_val = np.concatenate([new_ord_val, new_x1_val, new_x2_val], axis=1)
 
-            #Update Nominal idx
-            args.nominal_idx = [x+len(args.ordinal_idx) for x in range(new_x1.shape[1])]
+            args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
+            args.nominal_idx = [x+len(args.ordinal_idx) for x in range(new_x1.shape[1])]  #Update Nominal idx
+            args.num_idx = [x for x in range(X_train.shape[1])][-len(num_idx):]
 
         else:
             X_train = np.concatenate([new_x1, new_x2], axis=1)
             X_val = np.concatenate([new_x1_val, new_x2_val], axis=1)
 
-            args.nominal_idx = [x for x in range(new_x1.shape[1])]
+            args.nominal_idx = [x for x in range(X_train.shape[1])][-len(num_idx):]
+            args.num_idx = [x for x in range(new_x1.shape[1])]
 
         #change the num of features after one hot encoding;
         args.num_features = X_train.shape[1] #here is the issue

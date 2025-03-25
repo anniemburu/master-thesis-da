@@ -124,7 +124,7 @@ def bin_shifter(args, y_train, y_test):
             #print(f"Train after shift : {np.unique(y_train)}")
             #print(f"Test after shift : {np.unique(y_test)}")
             #print(f"Num Classes after shift : {args.num_classes}")
-            #print(f"Bin alt after shift : {args.bin_alt} \n")
+            print(f"Bin alt after shift : {args.bin_alt} \n")
             print(f"Train after shift I : {np.unique(y_train_shift)},  Length : {len(np.unique(y_train_shift))}")
             print(f"Test after shift I : {np.unique(y_test_shift)}, Length : {len(np.unique(y_test_shift))} \n")
 
@@ -425,8 +425,6 @@ def main_once(args):
     sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
     print(sc.get_results())
     print(time)
-
-
 
 
 if __name__ == "__main__":
