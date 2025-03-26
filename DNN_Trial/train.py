@@ -2,6 +2,7 @@ import logging
 import sys
 import numpy as np
 import pandas as pd
+import copy
 
 import optuna 
 
@@ -367,16 +368,18 @@ class Objective(object):
         self.args = args
 
     def __call__(self, trial):
+        args_cp = copy.deepcopy(self.args)
+
         # Define hyperparameters to optimize
-        trial_params = self.model_name.define_trial_parameters(trial, self.args)
+        trial_params = self.model_name.define_trial_parameters(trial, args_cp)
 
         # Create model
-        model = self.model_name(trial_params, self.args)
+        model = self.model_name(trial_params, args_cp)
 
         # Cross validate the chosen hyperparameters
-        sc, time = cross_validation(model, self.X, self.y, self.args, visual=False, save_model=False)#Dont save model during HPT
+        sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
 
-        save_hyperparameters_to_file(self.args, trial_params, sc.get_results(), time) #saved after every trial
+        save_hyperparameters_to_file(args_cp, trial_params, sc.get_results(), time) #saved after every trial
         print(f"Hyperparam was saved!!! Hurrah!!!")
 
         return sc.get_objective_result()
