@@ -99,7 +99,7 @@ class NODE(BaseModelTorch):
         for batch in node_lib.iterate_minibatches(data.X_train, data.y_train, batch_size=self.args.batch_size, shuffle=True,
                                                   epochs=self.args.epochs):
             
-            #if self.args.frequency_reg:
+            """#if self.args.frequency_reg:
             # Unpack batch
             batch_X, batch_y = batch
 
@@ -108,7 +108,7 @@ class NODE(BaseModelTorch):
 
             # Compute supervised loss
             if self.args.objective == "regression" or self.args.objective == "binary":
-                out = out.squeeze()
+                out = out.squeeze()"""
 
             #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             # Frequency regularization term
@@ -133,20 +133,21 @@ class NODE(BaseModelTorch):
 
                     break
 
-            #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            loss = loss_func(out, torch.as_tensor(batch_y, device=self.device)) + penalty
-            loss_history.append(loss.item() + penalty)
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                loss = loss_func(out, torch.as_tensor(batch_y, device=self.device)) + penalty
+                loss_history.append(loss.item() + penalty)
 
-            # Backward pass and optimization
+
+            """# Backward pass and optimization
             self.trainer.optimizer.zero_grad()
             loss.backward()
             self.trainer.optimizer.step()
 
             # Save lambda_reg value for this step
-            lambda_reg_history.append(torch.exp(self.log_lambda_reg).item())
+            lambda_reg_history.append(torch.exp(self.log_lambda_reg).item())"""
 
-            #metrics = self.trainer.train_on_batch(*batch, device=self.device)
-            #loss_history.append(metrics['loss'].item())
+            metrics = self.trainer.train_on_batch(*batch, device=self.device)
+            loss_history.append(metrics['loss'].item())
 
             if self.trainer.step % self.args.logging_period == 0:
                 self.trainer.save_checkpoint()
