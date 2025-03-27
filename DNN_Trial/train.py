@@ -54,7 +54,7 @@ def bin_finder(args, y):
 
     return bins
 
-def bin_shifter(args, y_train, y_test):
+"""def bin_shifter(args, y_train, y_test):
     def find_earliest_gap(arr):
         expected = 0
         for num in arr:
@@ -65,9 +65,6 @@ def bin_shifter(args, y_train, y_test):
         return expected
     
     def shift_array(arr, shift_value, max_diff):
-        """
-        Shifts elements greater than `shift_value` by `max_diff` without creating duplicates.
-        """
         shifted_arr = []
         existing_values = set(arr)  # Track existing values to avoid duplicates
 
@@ -162,7 +159,40 @@ def bin_shifter(args, y_train, y_test):
         args.num_classes = comb_len
         args.bin_alt = [x for x in range(comb_len)]
 
-        return y_train, y_test
+        return y_train, y_test"""
+
+def bin_shifter(args, y_train, y_test):
+    """
+    Shifts class labels so that they are contiguous (without gaps).
+    """
+    def get_contiguous_labels(arr):
+        """ Renumber labels to remove gaps """
+        unique_vals = np.unique(arr)
+        mapping = {old_label: new_label for new_label, old_label in enumerate(unique_vals)}
+        return np.vectorize(mapping.get)(arr), mapping
+
+    # Get contiguous labels
+    comb = np.unique(np.concatenate([y_train, y_test]))
+    comb_len = len(comb)
+
+    if comb_len != args.num_bins:
+        print("WE ARE IN THE GUTTERS!!!!!")
+        y_train_shift, train_mapping = get_contiguous_labels(y_train)
+        y_test_shift = np.vectorize(train_mapping.get)(y_test)  # Apply same mapping to test
+
+        # Update arguments
+        args.num_classes = len(np.unique(y_train_shift))  # Set correct number of classes
+        args.bin_alt = sorted(list(np.unique(y_train_shift)))  # Ensure proper bin numbering
+
+        print(f"Final Train Labels: {np.unique(y_train_shift)}, Length: {len(np.unique(y_train_shift))}")
+        print(f"Final Test Labels: {np.unique(y_test_shift)}, Length: {len(np.unique(y_test_shift))}")
+        print(f"Final Num Classes: {args.num_classes}")
+        print(f"Final Bin Labels: {args.bin_alt}")
+
+        return y_train_shift, y_test_shift
+
+    else:
+        y_train, y_test
 
 def cross_validation(model, X, y, args, visual=False, save_model=False):
     # Record some statistics and metrics
@@ -221,7 +251,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
 
         #print("After encoding : : WE ARE IN TRAIN.PY")
         #Check Valuesprint("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        """print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print(f"num_features :{args.num_features}")
         print(f"num_classes : {args.num_classes}")
         print(f"cat_idx : {args.cat_idx}")
@@ -229,7 +259,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         print(f"ordinal_idx : {args.ordinal_idx}")
         print(f"num_idx : {args.num_idx}")
         print(f"cat_dims : {args.cat_dims}")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")"""
         
         #Bin the target variable
         if args.objective == "probabilistic_regression":
@@ -297,11 +327,15 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
                 save_regularization_to_file(args, lambda_reg_history, "lambda_reg", extension=i)
             print('Saved Losses and Regularization')
         
+        print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
         print("B4 Evaluation")
         print(f"Number of classes : {args.num_classes}")
+        print(f"Class label len :{len(args.bin_alt)}")
+        print(f"Class labels : {args.bin_alt}")
         print(f"Unique y_true : {np.unique(y_test)} \n")
         print(f"Prediction shape : {curr_model.predictions.shape}")
         print(f"Probabilities shape : {curr_model.prediction_probabilities.shape} \n")
+        print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
         
 
         #y_test = bin_shifter(args,y_train,y_test)
