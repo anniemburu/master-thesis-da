@@ -108,7 +108,7 @@ class NODE(BaseModelTorch):
 
             # Compute supervised loss
             if self.args.objective == "regression" or self.args.objective == "binary":
-                out = out.squeeze()
+                out = out.squeeze()"""
 
             #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             # Frequency regularization term
@@ -133,14 +133,13 @@ class NODE(BaseModelTorch):
 
                     break
 
-                loss = loss_func(out, torch.as_tensor(batch_y, device=self.device)) + penalty
-                loss_history.append(loss.item() + penalty)
 
-            else:
-                loss = loss_func(out, torch.as_tensor(batch_y, device=self.device))
-                loss_history.append(loss.item())
+                #loss = loss_func(out, torch.as_tensor(batch_y, device=self.device)) + penalty
+                #loss_history.append(loss.item() + penalty)
 
-            # Backward pass and optimization
+
+
+            """# Backward pass and optimization
             self.trainer.optimizer.zero_grad()
             loss.backward()
             self.trainer.optimizer.step()

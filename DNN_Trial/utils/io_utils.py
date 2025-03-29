@@ -135,6 +135,7 @@ def get_predictions_from_file(args):
 
 def update_yaml(dataset_name, model_name, parameters):
     file_path = "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/config/results_params.yml"
+    #file_path = '/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/config/results_params.yml'
     # Load existing data
     try:
         with open(file_path, 'r') as file:
