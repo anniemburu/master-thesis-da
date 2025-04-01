@@ -192,6 +192,8 @@ def bin_shifter(args, y_train, y_test):
         return y_train_shift, y_test_shift
 
     else:
+        print("No need to shift labels.")
+        args.bin_alt = [x for x in range(args.num_bins)]
         return y_train, y_test
 
 def cross_validation(model, X, y, args, visual=False, save_model=False):
