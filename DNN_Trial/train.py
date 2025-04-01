@@ -165,6 +165,9 @@ def bin_shifter(args, y_train, y_test):
     """
     Shifts class labels so that they are contiguous (without gaps).
     """
+
+    y_test = impute_missing_test(y_train,y_test) #missing y classes
+    
     def get_contiguous_labels(arr):
         """ Renumber labels to remove gaps """
         unique_vals = np.unique(arr)
@@ -195,6 +198,29 @@ def bin_shifter(args, y_train, y_test):
         print("No need to shift labels.")
         args.bin_alt = [x for x in range(args.num_bins)]
         return y_train, y_test
+
+def impute_missing_test(train,test):
+    missing_arr = [x for x in np.unique(test) if x not in np.unique(train)] #missing vals
+
+    
+    if len(missing_arr) > 0: #there is missing array
+        results = []
+        for x in missing_arr:
+            gr_array = [a for a in np.unique(train) if a > x]
+            if len(gr_array) > 0:
+                rep_val = min(gr_array)
+            else:
+                ls_array = [a for a in np.unique(train) if a < x]
+                rep_val = max(ls_array)
+            results.append(rep_val)
+
+        for old, new in zip(missing_arr,results):
+            test = np.where(test == old, new, test)
+        
+        return test
+
+    else:
+        return test
 
 def cross_validation(model, X, y, args, visual=False, save_model=False):
     # Record some statistics and metrics
@@ -287,6 +313,8 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
 
             #Rectify bin
             y_train, y_test = bin_shifter(args, y_train, y_test)
+
+
             print("VERIFY SHIFT")
             print(f"Train after shift : {np.unique(y_train)}, Length : {len(np.unique(y_train))}")
             print(f"Test after shift : {np.unique(y_test)}, Length : {len(np.unique(y_test))}")
