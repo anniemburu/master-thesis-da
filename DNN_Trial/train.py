@@ -192,7 +192,7 @@ def bin_shifter(args, y_train, y_test):
         return y_train_shift, y_test_shift
 
     else:
-        y_train, y_test
+        return y_train, y_test
 
 def cross_validation(model, X, y, args, visual=False, save_model=False):
     # Record some statistics and metrics
