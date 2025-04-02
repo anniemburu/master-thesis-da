@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=TabTransformer_Titans_V1
+#SBATCH --job-name=TabTransformer_Odyssey_V1
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -7,11 +7,11 @@
 #SBATCH --gres=gpu:1
 
 CONFIGS=(
-    "config/sat11.yml"
-    "config/diamonds.yml"
-    "config/house_prices_nominal.yml"
-    "config/mercedes_benz.yml"
-    "config/allstate.yml")
+    config/brazillian_houses.yml
+    config/abalone.yml
+    #config/house_sales.yml
+    #config/mip_2016.yml
+)
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
@@ -21,8 +21,5 @@ for config in "${CONFIGS[@]}"; do
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/miniconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name TabTransformer --optimize_hyperparameters
+    srun python3 train.py --config "$config" --model_name TabTransformer --optimize_hyperparameters --optimize_hyperparameters --n_trials 50 --epochs 100
 done
-
-
-
