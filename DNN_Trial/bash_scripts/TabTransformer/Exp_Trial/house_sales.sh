@@ -8,7 +8,7 @@
 
 
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
-source ~/miniconda3/etc/profile.d/conda.sh
+source ~/anaconda3/etc/profile.d/conda.sh
 conda activate TabSurvey
 srun python3 train.py --config config/house_sales.yml --model_name TabTransformer --epochs 100
 
