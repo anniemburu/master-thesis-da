@@ -1,0 +1,98 @@
+[I 2025-03-30 13:41:07,449] Using an existing study with name 'TabNet_House_Prices_Nominal' instead of creating a new one.
+../aten/src/ATen/native/cuda/Indexing.cu:1292: indexSelectLargeIndex: block: [1,0,0], thread: [78,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1292: indexSelectLargeIndex: block: [1,0,0], thread: [79,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+[W 2025-03-30 13:41:09,974] Trial 3 failed with parameters: {'n_d': 53, 'n_steps': 5, 'gamma': 1.2770630730444088, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.16405390910920947, 'mask_type': 'sparsemax'} because of the following error: RuntimeError('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1.\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 416, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 307, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 79, in fit
+    self.model.fit(X, y, eval_set=[(X_val, y_val)], eval_name=["eval"], eval_metric=self.metric,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 258, in fit
+    self._train_epoch(train_dataloader)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 489, in _train_epoch
+    batch_logs = self._train_batch(X, y)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 527, in _train_batch
+    output, M_loss = self.network(X)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 615, in forward
+    x = self.embedder(x)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 890, in forward
+    self.embeddings[cat_feat_counter](x[:, feat_init_idx].long())
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 162, in forward
+    return F.embedding(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/functional.py", line 2233, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[W 2025-03-30 13:41:09,989] Trial 3 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 475, in <module>
+    main(arguments)
+  File "train.py", line 438, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 416, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 307, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabnet.py", line 79, in fit
+    self.model.fit(X, y, eval_set=[(X_val, y_val)], eval_name=["eval"], eval_metric=self.metric,
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 258, in fit
+    self._train_epoch(train_dataloader)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 489, in _train_epoch
+    batch_logs = self._train_batch(X, y)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/abstract_model.py", line 527, in _train_batch
+    output, M_loss = self.network(X)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 615, in forward
+    x = self.embedder(x)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/pytorch_tabnet/tab_network.py", line 890, in forward
+    self.embeddings[cat_feat_counter](x[:, feat_init_idx].long())
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 162, in forward
+    return F.embedding(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/functional.py", line 2233, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+srun: error: stud-000: task 0: Exited with exit code 1
