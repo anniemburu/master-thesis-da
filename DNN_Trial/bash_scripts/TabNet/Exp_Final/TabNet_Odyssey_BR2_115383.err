@@ -1,0 +1,95 @@
+[I 2025-03-29 15:33:44,080] Using an existing study with name 'TabNet_Brazillian_Houses' instead of creating a new one.
+[W 2025-03-29 15:38:16,873] Trial 1 failed with parameters: {'n_d': 12, 'n_steps': 10, 'gamma': 1.229058118951327, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.008442704193527406, 'mask_type': 'entmax'} because of the following error: TypeError("int() argument must be a string, a bytes-like object or a number, not 'NoneType'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 414, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 287, in cross_validation
+    y_train, y_test = bin_shifter(args, y_train, y_test)
+  File "train.py", line 181, in bin_shifter
+    y_test_shift = np.vectorize(train_mapping.get)(y_test)  # Apply same mapping to test
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/numpy/lib/function_base.py", line 2329, in __call__
+    return self._vectorize_call(func=func, args=vargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/numpy/lib/function_base.py", line 2415, in _vectorize_call
+    res = asanyarray(outputs, dtype=otypes[0])
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+[W 2025-03-29 15:38:16,900] Trial 1 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 473, in <module>
+    main(arguments)
+  File "train.py", line 436, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 414, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 287, in cross_validation
+    y_train, y_test = bin_shifter(args, y_train, y_test)
+  File "train.py", line 181, in bin_shifter
+    y_test_shift = np.vectorize(train_mapping.get)(y_test)  # Apply same mapping to test
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/numpy/lib/function_base.py", line 2329, in __call__
+    return self._vectorize_call(func=func, args=vargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/numpy/lib/function_base.py", line 2415, in _vectorize_call
+    res = asanyarray(outputs, dtype=otypes[0])
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-03-29 15:38:22,691] Using an existing study with name 'TabNet_Abalone' instead of creating a new one.
+[I 2025-03-29 15:44:12,386] Trial 1 finished with value: 1.55166 and parameters: {'n_d': 52, 'n_steps': 7, 'gamma': 1.630439921740125, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 3, 'momentum': 0.04616469986074698, 'mask_type': 'sparsemax'}. Best is trial 1 with value: 1.55166.
+[I 2025-03-29 15:49:25,499] Trial 2 finished with value: 1.53576 and parameters: {'n_d': 10, 'n_steps': 4, 'gamma': 1.709998341541754, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.051738737310139164, 'mask_type': 'entmax'}. Best is trial 1 with value: 1.55166.
+[I 2025-03-29 15:57:07,932] Trial 3 finished with value: 1.53474 and parameters: {'n_d': 63, 'n_steps': 6, 'gamma': 1.4670825980529338, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.041751385955530254, 'mask_type': 'sparsemax'}. Best is trial 1 with value: 1.55166.
+[I 2025-03-29 16:04:25,854] Trial 4 finished with value: 1.68566 and parameters: {'n_d': 54, 'n_steps': 9, 'gamma': 1.3354873299114638, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 1, 'momentum': 0.001962276885528902, 'mask_type': 'entmax'}. Best is trial 4 with value: 1.68566.
+[I 2025-03-29 16:12:04,520] Trial 5 finished with value: 1.5500599999999998 and parameters: {'n_d': 10, 'n_steps': 5, 'gamma': 1.9639669565467415, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.09826438522268824, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 1.68566.
+[I 2025-03-29 16:22:12,600] Trial 6 finished with value: 1.53516 and parameters: {'n_d': 9, 'n_steps': 9, 'gamma': 1.6570211762406062, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.02777147544590047, 'mask_type': 'entmax'}. Best is trial 4 with value: 1.68566.
+[I 2025-03-29 16:28:46,953] Trial 7 finished with value: 1.5382399999999998 and parameters: {'n_d': 36, 'n_steps': 4, 'gamma': 1.6026050843192046, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.23372777789973834, 'mask_type': 'entmax'}. Best is trial 4 with value: 1.68566.
+[I 2025-03-29 16:34:07,622] Trial 8 finished with value: 1.53514 and parameters: {'n_d': 26, 'n_steps': 6, 'gamma': 1.7026492730212142, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.0910123829099607, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 1.68566.
+[I 2025-03-29 16:46:57,455] Trial 9 finished with value: 1.55404 and parameters: {'n_d': 51, 'n_steps': 10, 'gamma': 1.2331226874228418, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 5, 'momentum': 0.019238320360113578, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 1.68566.
+[I 2025-03-29 16:54:15,380] Trial 10 finished with value: 1.5440800000000001 and parameters: {'n_d': 64, 'n_steps': 5, 'gamma': 1.509610377733999, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.02300272262442557, 'mask_type': 'sparsemax'}. Best is trial 4 with value: 1.68566.
+[I 2025-03-29 17:01:21,227] Trial 11 finished with value: 1.7355 and parameters: {'n_d': 47, 'n_steps': 8, 'gamma': 1.005964303433626, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.001219476125909255, 'mask_type': 'entmax'}. Best is trial 11 with value: 1.7355.
+[I 2025-03-29 17:10:38,168] Trial 12 finished with value: 1.9151600000000002 and parameters: {'n_d': 47, 'n_steps': 8, 'gamma': 1.0457418434535732, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.0010559346885603107, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 17:19:55,514] Trial 13 finished with value: 1.8611799999999998 and parameters: {'n_d': 41, 'n_steps': 8, 'gamma': 1.0158052334899628, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.001319133685927733, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 17:27:45,868] Trial 14 finished with value: 1.563 and parameters: {'n_d': 37, 'n_steps': 8, 'gamma': 1.0158642155697744, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.004374308485807669, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 17:37:04,473] Trial 15 finished with value: 1.5494800000000002 and parameters: {'n_d': 40, 'n_steps': 8, 'gamma': 1.191041214019362, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.006201682583621929, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 17:46:54,167] Trial 16 finished with value: 1.58524 and parameters: {'n_d': 28, 'n_steps': 10, 'gamma': 1.133520033466873, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.0032907661886405174, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 17:54:28,915] Trial 17 finished with value: 1.54606 and parameters: {'n_d': 44, 'n_steps': 7, 'gamma': 1.2998451376388624, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.00911423909900272, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 18:04:08,489] Trial 18 finished with value: 1.8592399999999998 and parameters: {'n_d': 28, 'n_steps': 9, 'gamma': 1.1056789475439133, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.0010744338141821688, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 18:09:15,408] Trial 19 finished with value: 1.6509 and parameters: {'n_d': 22, 'n_steps': 3, 'gamma': 1.4105676537631693, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.0026668467865983876, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 18:17:29,541] Trial 20 finished with value: 1.5450000000000002 and parameters: {'n_d': 58, 'n_steps': 7, 'gamma': 1.8477963869856817, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.008101004063315416, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 18:25:30,620] Trial 21 finished with value: 1.7012 and parameters: {'n_d': 43, 'n_steps': 8, 'gamma': 1.0873072806479263, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.001631157589146143, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 18:36:20,558] Trial 22 finished with value: 1.72 and parameters: {'n_d': 31, 'n_steps': 9, 'gamma': 1.0943189018076551, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.0010578411523844951, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 18:47:31,955] Trial 23 finished with value: 1.6110599999999997 and parameters: {'n_d': 22, 'n_steps': 9, 'gamma': 1.196462089833286, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.0020998643375643453, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 18:57:32,396] Trial 24 finished with value: 1.7970200000000003 and parameters: {'n_d': 33, 'n_steps': 10, 'gamma': 1.0030226666856912, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.001102750081099459, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 19:06:49,064] Trial 25 finished with value: 1.5817 and parameters: {'n_d': 48, 'n_steps': 8, 'gamma': 1.2977578434891854, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.003918841287662943, 'mask_type': 'entmax'}. Best is trial 12 with value: 1.9151600000000002.
+[I 2025-03-29 19:17:16,369] Trial 26 finished with value: 1.9802199999999999 and parameters: {'n_d': 40, 'n_steps': 9, 'gamma': 1.1304466263357698, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.0010018968408334428, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 19:24:56,365] Trial 27 finished with value: 1.7010800000000004 and parameters: {'n_d': 39, 'n_steps': 7, 'gamma': 1.1580014583477292, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.0016325124547974645, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 19:31:59,840] Trial 28 finished with value: 1.5395 and parameters: {'n_d': 43, 'n_steps': 8, 'gamma': 1.2462338246442908, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.3802342754549397, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 19:41:44,635] Trial 29 finished with value: 1.5467400000000002 and parameters: {'n_d': 56, 'n_steps': 10, 'gamma': 1.0460078145896217, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.011533101983122336, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 19:49:21,435] Trial 30 finished with value: 1.56816 and parameters: {'n_d': 50, 'n_steps': 6, 'gamma': 1.3648907963078536, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.004750742533503323, 'mask_type': 'sparsemax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 19:58:37,011] Trial 31 finished with value: 1.6096600000000003 and parameters: {'n_d': 46, 'n_steps': 9, 'gamma': 1.0759024400384807, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 2, 'momentum': 0.0022302536760203514, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 20:10:16,039] Trial 32 finished with value: 1.7990000000000002 and parameters: {'n_d': 32, 'n_steps': 9, 'gamma': 1.1260844158246757, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.0010382250034822738, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 20:20:03,697] Trial 33 finished with value: 1.66234 and parameters: {'n_d': 16, 'n_steps': 7, 'gamma': 1.1480905535453585, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.001526921124287383, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 20:30:08,080] Trial 34 finished with value: 1.5934199999999998 and parameters: {'n_d': 40, 'n_steps': 9, 'gamma': 1.2442902573692818, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.002971704872276244, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 20:40:06,686] Trial 35 finished with value: 1.67266 and parameters: {'n_d': 27, 'n_steps': 8, 'gamma': 1.0779390098674722, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.001576634043682417, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 20:49:07,351] Trial 36 finished with value: 1.63976 and parameters: {'n_d': 33, 'n_steps': 10, 'gamma': 1.1961034740009175, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.0023367594892442006, 'mask_type': 'entmax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 21:03:32,411] Trial 37 finished with value: 1.8348399999999998 and parameters: {'n_d': 60, 'n_steps': 9, 'gamma': 1.0541856462434276, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.001407277343977679, 'mask_type': 'sparsemax'}. Best is trial 26 with value: 1.9802199999999999.
+[I 2025-03-29 21:11:31,537] Trial 38 finished with value: 2.01126 and parameters: {'n_d': 53, 'n_steps': 7, 'gamma': 1.5201517622984089, 'cat_emb_dim': 1, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.0010256167294651825, 'mask_type': 'entmax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 21:20:36,258] Trial 39 finished with value: 1.6331 and parameters: {'n_d': 55, 'n_steps': 7, 'gamma': 1.5819718866566983, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.0020168637900587496, 'mask_type': 'entmax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 21:27:49,328] Trial 40 finished with value: 1.5407 and parameters: {'n_d': 52, 'n_steps': 6, 'gamma': 1.4959410191004232, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 3, 'momentum': 0.014711245591070852, 'mask_type': 'sparsemax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 21:35:05,164] Trial 41 finished with value: 1.52864 and parameters: {'n_d': 50, 'n_steps': 5, 'gamma': 1.5663090407114713, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.050028606098492225, 'mask_type': 'entmax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 21:41:49,173] Trial 42 finished with value: 1.8973799999999996 and parameters: {'n_d': 36, 'n_steps': 8, 'gamma': 1.4247236292328156, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.0011056732261417851, 'mask_type': 'entmax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 21:48:35,752] Trial 43 finished with value: 1.9153600000000002 and parameters: {'n_d': 36, 'n_steps': 7, 'gamma': 1.7764464430666456, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.0010014730202422177, 'mask_type': 'entmax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 21:55:11,606] Trial 44 finished with value: 1.53328 and parameters: {'n_d': 36, 'n_steps': 7, 'gamma': 1.7812354302716848, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.09253379359308522, 'mask_type': 'entmax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 22:00:24,679] Trial 45 finished with value: 1.68098 and parameters: {'n_d': 36, 'n_steps': 6, 'gamma': 1.9785270700108932, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.0018203058917263622, 'mask_type': 'entmax'}. Best is trial 38 with value: 2.01126.
+[I 2025-03-29 22:06:02,413] Trial 46 finished with value: 2.26032 and parameters: {'n_d': 47, 'n_steps': 7, 'gamma': 1.8370117235962122, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.0010080119264888568, 'mask_type': 'sparsemax'}. Best is trial 46 with value: 2.26032.
+[I 2025-03-29 22:12:06,164] Trial 47 finished with value: 1.6434000000000002 and parameters: {'n_d': 47, 'n_steps': 7, 'gamma': 1.913830399851388, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.003604998023701013, 'mask_type': 'sparsemax'}. Best is trial 46 with value: 2.26032.
+[I 2025-03-29 22:19:12,804] Trial 48 finished with value: 1.9525 and parameters: {'n_d': 54, 'n_steps': 6, 'gamma': 1.725997385506088, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 5, 'momentum': 0.001376806031274719, 'mask_type': 'sparsemax'}. Best is trial 46 with value: 2.26032.
+[I 2025-03-29 22:25:39,058] Trial 49 finished with value: 1.5410000000000001 and parameters: {'n_d': 61, 'n_steps': 6, 'gamma': 1.7328367715435786, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 5, 'momentum': 0.13291796232148795, 'mask_type': 'sparsemax'}. Best is trial 46 with value: 2.26032.
+[I 2025-03-29 22:31:25,308] Trial 50 finished with value: 1.54448 and parameters: {'n_d': 53, 'n_steps': 5, 'gamma': 1.7935703845575093, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 5, 'momentum': 0.03664223099624989, 'mask_type': 'sparsemax'}. Best is trial 46 with value: 2.26032.

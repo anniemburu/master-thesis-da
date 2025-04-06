@@ -2,8 +2,10 @@
 dataset: Abalone
 model_name: VIME # LinearModel, KNN, SVM, DecisionTree, RandomForest, XGBoost, CatBoost, LightGBM, ModelTree
                 # MLP, TabNet, VIME, TabTransformer, RLN, DNFNet, STG, NAM, DeepFM, SAINT
-objective: regression # Don't change
+objective: probabilistic_regression  # Don't change (regression , probabilistic_regression)
 # optimize_hyperparameters: True
+
+y_distribution : normal 
 
 # GPU parameters
 use_gpu: True
@@ -12,7 +14,7 @@ data_parallel: False
 
 # Optuna parameters - https://optuna.org/
 n_trials: 100
-direction: minimize
+direction: maximize  # maximize - class, minimize - reg
 
 # Cross validation parameters
 num_splits: 5
@@ -24,12 +26,13 @@ scale: True
 target_encode: False
 one_hot_encode: True
 ordinal_encode : False
+frequency_reg : False
 
 # Training parameters
 batch_size: 128
 val_batch_size: 256
 early_stopping_rounds: 20
-epochs: 500
+epochs: 100
 logging_period: 100
 
 # About the data
@@ -43,3 +46,7 @@ nominal_idx : [0]
 
 # cat_dims: will be automatically set.
 #cat_dims: [9, 16, 7, 15, 6, 5, 2, 42]
+
+#Dummies
+cat_idx: [0]
+cat_dims: [2]

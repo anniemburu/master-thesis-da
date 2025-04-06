@@ -65,7 +65,7 @@ class SAINT(BaseModelTorch):
 
         if self.args.objective == 'binary':
             criterion = nn.BCEWithLogitsLoss()
-        elif self.args.objective == 'classification':
+        elif self.args.objective == 'classification' or self.args.objective == 'probabilistic_regression':
             criterion = nn.CrossEntropyLoss()
         else:
             criterion = nn.MSELoss()
@@ -122,7 +122,7 @@ class SAINT(BaseModelTorch):
 
                 if self.args.objective == "regression":
                     y_gts = y_gts.to(self.device)
-                elif self.args.objective == "classification":
+                elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                     y_gts = y_gts.to(self.device).squeeze()
                 else:
                     y_gts = y_gts.to(self.device).float()
@@ -153,7 +153,7 @@ class SAINT(BaseModelTorch):
 
                     if self.args.objective == "regression":
                         y_gts = y_gts.to(self.device)
-                    elif self.args.objective == "classification":
+                    elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                         y_gts = y_gts.to(self.device).squeeze()
                     else:
                         y_gts = y_gts.to(self.device).float()
@@ -206,7 +206,7 @@ class SAINT(BaseModelTorch):
 
                 if self.args.objective == "binary":
                     y_outs = torch.sigmoid(y_outs)
-                elif self.args.objective == "classification":
+                elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                     y_outs = F.softmax(y_outs, dim=1)
 
                 predictions.append(y_outs.detach().cpu().numpy())

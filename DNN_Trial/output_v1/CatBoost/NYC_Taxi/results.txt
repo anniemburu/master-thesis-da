@@ -1,0 +1,1414 @@
+2025-01-23 16:40:08.769812
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.89724
+MSE - std: 0.26331
+R2 - mean: 0.47132
+R2 - std: 0.01381
+
+Train time: 4.446963
+Test time: 0.681999
+
+Best Parameters: {'learning_rate': 0.20417623729677792, 'max_depth': 3, 'l2_leaf_reg': 8.417532375212886, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:40:24.426867
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.85681
+MSE - std: 0.26511
+R2 - mean: 0.47681
+R2 - std: 0.01520
+
+Train time: 4.570359
+Test time: 0.711156
+
+Best Parameters: {'learning_rate': 0.10834931484108594, 'max_depth': 6, 'l2_leaf_reg': 1.0742339598734185, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:40:45.698152
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.86781
+MSE - std: 0.25777
+R2 - mean: 0.47529
+R2 - std: 0.01340
+
+Train time: 5.650110
+Test time: 0.869201
+
+Best Parameters: {'learning_rate': 0.045329087236589884, 'max_depth': 10, 'l2_leaf_reg': 2.587083913251418, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:41:01.555515
+CatBoost - NYC_Taxi
+
+MSE - mean: 4.11420
+MSE - std: 0.27814
+R2 - mean: 0.44190
+R2 - std: 0.01401
+
+Train time: 4.272794
+Test time: 0.594895
+
+Best Parameters: {'learning_rate': 0.01831251817902285, 'max_depth': 6, 'l2_leaf_reg': 2.8401300876092255, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:41:16.156211
+CatBoost - NYC_Taxi
+
+MSE - mean: 4.06669
+MSE - std: 0.27521
+R2 - mean: 0.44835
+R2 - std: 0.01363
+
+Train time: 4.161398
+Test time: 0.668545
+
+Best Parameters: {'learning_rate': 0.0304483277204295, 'max_depth': 3, 'l2_leaf_reg': 2.069983606639448, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:41:31.351739
+CatBoost - NYC_Taxi
+
+MSE - mean: 4.30341
+MSE - std: 0.28685
+R2 - mean: 0.41621
+R2 - std: 0.01363
+
+Train time: 4.137155
+Test time: 0.636134
+
+Best Parameters: {'learning_rate': 0.019839032014747134, 'max_depth': 2, 'l2_leaf_reg': 0.9746415468432754, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:41:47.369024
+CatBoost - NYC_Taxi
+
+MSE - mean: 4.28927
+MSE - std: 0.28659
+R2 - mean: 0.41814
+R2 - std: 0.01369
+
+Train time: 4.147240
+Test time: 0.700626
+
+Best Parameters: {'learning_rate': 0.020439613599825313, 'max_depth': 2, 'l2_leaf_reg': 13.203014380646351, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:42:03.040842
+CatBoost - NYC_Taxi
+
+MSE - mean: 4.03249
+MSE - std: 0.27211
+R2 - mean: 0.45298
+R2 - std: 0.01365
+
+Train time: 4.083073
+Test time: 0.640361
+
+Best Parameters: {'learning_rate': 0.030116842283524774, 'max_depth': 4, 'l2_leaf_reg': 1.3661786431374314, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:42:22.271673
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.84069
+MSE - std: 0.27193
+R2 - mean: 0.47906
+R2 - std: 0.01574
+
+Train time: 4.854873
+Test time: 0.711045
+
+Best Parameters: {'learning_rate': 0.1090102023904786, 'max_depth': 8, 'l2_leaf_reg': 0.52761291333474, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:42:42.540580
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.85198
+MSE - std: 0.27839
+R2 - mean: 0.47755
+R2 - std: 0.01693
+
+Train time: 4.939071
+Test time: 0.761079
+
+Best Parameters: {'learning_rate': 0.10791505096180275, 'max_depth': 8, 'l2_leaf_reg': 0.5098015230213861, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:43:08.998627
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.79715
+MSE - std: 0.26714
+R2 - mean: 0.48495
+R2 - std: 0.01557
+
+Train time: 6.457719
+Test time: 0.882680
+
+Best Parameters: {'learning_rate': 0.0991414196340065, 'max_depth': 11, 'l2_leaf_reg': 0.5058742482021872, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:43:40.838040
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.77730
+MSE - std: 0.27612
+R2 - mean: 0.48771
+R2 - std: 0.01685
+
+Train time: 7.994743
+Test time: 0.882012
+
+Best Parameters: {'learning_rate': 0.09336699298362372, 'max_depth': 12, 'l2_leaf_reg': 0.5285294621252828, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:44:11.274177
+CatBoost - NYC_Taxi
+
+MSE - mean: 4.45855
+MSE - std: 0.28605
+R2 - mean: 0.39509
+R2 - std: 0.01314
+
+Train time: 7.689755
+Test time: 0.763587
+
+Best Parameters: {'learning_rate': 0.010110982548711536, 'max_depth': 12, 'l2_leaf_reg': 5.119271269051695, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:44:42.565576
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.82557
+MSE - std: 0.27781
+R2 - mean: 0.48115
+R2 - std: 0.01667
+
+Train time: 8.144071
+Test time: 0.897331
+
+Best Parameters: {'learning_rate': 0.06854811419090082, 'max_depth': 12, 'l2_leaf_reg': 0.7498094425396782, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:44:59.577610
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.85364
+MSE - std: 0.26337
+R2 - mean: 0.47724
+R2 - std: 0.01484
+
+Train time: 4.805765
+Test time: 0.673497
+
+Best Parameters: {'learning_rate': 0.06915077914288875, 'max_depth': 8, 'l2_leaf_reg': 1.673809251549698, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:45:15.730327
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.81744
+MSE - std: 0.23288
+R2 - mean: 0.48191
+R2 - std: 0.01416
+
+Train time: 4.373005
+Test time: 0.756277
+
+Best Parameters: {'learning_rate': 0.16868836243523708, 'max_depth': 6, 'l2_leaf_reg': 0.7553954328720486, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:45:36.850084
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.77406
+MSE - std: 0.25083
+R2 - mean: 0.48798
+R2 - std: 0.01391
+
+Train time: 5.699776
+Test time: 0.824934
+
+Best Parameters: {'learning_rate': 0.14443105267489934, 'max_depth': 10, 'l2_leaf_reg': 4.88867148588658, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:45:55.031004
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.79406
+MSE - std: 0.25309
+R2 - mean: 0.48530
+R2 - std: 0.01282
+
+Train time: 5.051990
+Test time: 0.763152
+
+Best Parameters: {'learning_rate': 0.18420949188180058, 'max_depth': 9, 'l2_leaf_reg': 4.8636466236654705, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:46:10.734185
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.86699
+MSE - std: 0.26397
+R2 - mean: 0.47543
+R2 - std: 0.01448
+
+Train time: 4.507074
+Test time: 0.675330
+
+Best Parameters: {'learning_rate': 0.1416561756203974, 'max_depth': 5, 'l2_leaf_reg': 8.620568695707261, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:46:29.116158
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.76351
+MSE - std: 0.24597
+R2 - mean: 0.48940
+R2 - std: 0.01300
+
+Train time: 5.070646
+Test time: 0.773266
+
+Best Parameters: {'learning_rate': 0.2114092637660644, 'max_depth': 9, 'l2_leaf_reg': 4.307520274601933, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:46:48.589544
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.77252
+MSE - std: 0.26365
+R2 - mean: 0.48831
+R2 - std: 0.01367
+
+Train time: 5.322152
+Test time: 0.819638
+
+Best Parameters: {'learning_rate': 0.276064926450481, 'max_depth': 9, 'l2_leaf_reg': 4.070940882588602, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:47:04.689581
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.81455
+MSE - std: 0.24925
+R2 - mean: 0.48247
+R2 - std: 0.01252
+
+Train time: 4.476701
+Test time: 0.712487
+
+Best Parameters: {'learning_rate': 0.29129680556620746, 'max_depth': 7, 'l2_leaf_reg': 6.682036941243063, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:47:23.049334
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.79462
+MSE - std: 0.22695
+R2 - mean: 0.48504
+R2 - std: 0.01097
+
+Train time: 5.075588
+Test time: 0.768514
+
+Best Parameters: {'learning_rate': 0.22756328065072287, 'max_depth': 9, 'l2_leaf_reg': 3.590306526563252, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:47:39.569868
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.88962
+MSE - std: 0.26791
+R2 - mean: 0.47238
+R2 - std: 0.01462
+
+Train time: 4.319892
+Test time: 0.755959
+
+Best Parameters: {'learning_rate': 0.14486649513185798, 'max_depth': 4, 'l2_leaf_reg': 15.102058687118973, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:47:59.228696
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.71615
+MSE - std: 0.24067
+R2 - mean: 0.49572
+R2 - std: 0.01612
+
+Train time: 5.412714
+Test time: 0.805697
+
+Best Parameters: {'learning_rate': 0.29956826175788004, 'max_depth': 10, 'l2_leaf_reg': 3.906131395477328, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:48:15.264344
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.81218
+MSE - std: 0.25972
+R2 - mean: 0.48283
+R2 - std: 0.01556
+
+Train time: 4.656511
+Test time: 0.679962
+
+Best Parameters: {'learning_rate': 0.24581975834785783, 'max_depth': 7, 'l2_leaf_reg': 3.7467641789490176, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:48:30.899154
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.84646
+MSE - std: 0.26306
+R2 - mean: 0.47822
+R2 - std: 0.01442
+
+Train time: 4.331830
+Test time: 0.684080
+
+Best Parameters: {'learning_rate': 0.2784341383484547, 'max_depth': 5, 'l2_leaf_reg': 7.474626499313402, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:48:48.610121
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.82569
+MSE - std: 0.25383
+R2 - mean: 0.48097
+R2 - std: 0.01391
+
+Train time: 4.875963
+Test time: 0.705959
+
+Best Parameters: {'learning_rate': 0.201789266288236, 'max_depth': 7, 'l2_leaf_reg': 25.7574894605815, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:49:10.599284
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.79578
+MSE - std: 0.26096
+R2 - mean: 0.48510
+R2 - std: 0.01471
+
+Train time: 5.497632
+Test time: 0.787949
+
+Best Parameters: {'learning_rate': 0.16265661183811098, 'max_depth': 10, 'l2_leaf_reg': 12.058779894624383, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:49:35.472538
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.78657
+MSE - std: 0.25642
+R2 - mean: 0.48629
+R2 - std: 0.01526
+
+Train time: 5.393119
+Test time: 0.795882
+
+Best Parameters: {'learning_rate': 0.21728481154316925, 'max_depth': 10, 'l2_leaf_reg': 5.78566260856399, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:49:54.216181
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.77764
+MSE - std: 0.24808
+R2 - mean: 0.48750
+R2 - std: 0.01232
+
+Train time: 4.901389
+Test time: 0.753240
+
+Best Parameters: {'learning_rate': 0.28781504024204685, 'max_depth': 9, 'l2_leaf_reg': 3.8332899688482462, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:50:18.093264
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.78304
+MSE - std: 0.25972
+R2 - mean: 0.48683
+R2 - std: 0.01451
+
+Train time: 5.560913
+Test time: 0.951092
+
+Best Parameters: {'learning_rate': 0.13172305988352803, 'max_depth': 10, 'l2_leaf_reg': 2.9325628681180977, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:50:34.488654
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.83974
+MSE - std: 0.25395
+R2 - mean: 0.47908
+R2 - std: 0.01314
+
+Train time: 4.601231
+Test time: 0.681630
+
+Best Parameters: {'learning_rate': 0.22950891458495334, 'max_depth': 8, 'l2_leaf_reg': 4.5680043144084665, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:51:00.284780
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.76378
+MSE - std: 0.26699
+R2 - mean: 0.48949
+R2 - std: 0.01542
+
+Train time: 6.412190
+Test time: 0.871913
+
+Best Parameters: {'learning_rate': 0.1816232108733716, 'max_depth': 11, 'l2_leaf_reg': 9.978696124296993, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:51:23.475632
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72658
+MSE - std: 0.26685
+R2 - mean: 0.49454
+R2 - std: 0.01651
+
+Train time: 6.327217
+Test time: 0.820795
+
+Best Parameters: {'learning_rate': 0.29970570321193757, 'max_depth': 11, 'l2_leaf_reg': 9.68381570672431, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:51:47.179212
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74363
+MSE - std: 0.25573
+R2 - mean: 0.49214
+R2 - std: 0.01525
+
+Train time: 6.312130
+Test time: 0.816798
+
+Best Parameters: {'learning_rate': 0.22004109862944538, 'max_depth': 11, 'l2_leaf_reg': 9.282544860975154, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:52:10.724978
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.85593
+MSE - std: 0.26867
+R2 - mean: 0.47697
+R2 - std: 0.01484
+
+Train time: 6.442203
+Test time: 0.874522
+
+Best Parameters: {'learning_rate': 0.04641722858987308, 'max_depth': 11, 'l2_leaf_reg': 6.273327983874617, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:52:27.534981
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.82836
+MSE - std: 0.24993
+R2 - mean: 0.48058
+R2 - std: 0.01361
+
+Train time: 4.567311
+Test time: 0.702407
+
+Best Parameters: {'learning_rate': 0.23646676352189902, 'max_depth': 6, 'l2_leaf_reg': 16.88113864930935, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:52:43.494242
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.94889
+MSE - std: 0.26963
+R2 - mean: 0.46434
+R2 - std: 0.01391
+
+Train time: 4.367678
+Test time: 0.679470
+
+Best Parameters: {'learning_rate': 0.08021544737750547, 'max_depth': 3, 'l2_leaf_reg': 19.458325963588265, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:53:06.295961
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74807
+MSE - std: 0.26398
+R2 - mean: 0.49155
+R2 - std: 0.01740
+
+Train time: 6.148365
+Test time: 0.853001
+
+Best Parameters: {'learning_rate': 0.19283528347250173, 'max_depth': 11, 'l2_leaf_reg': 11.051715306918933, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:53:30.076966
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.73305
+MSE - std: 0.26567
+R2 - mean: 0.49363
+R2 - std: 0.01659
+
+Train time: 6.471265
+Test time: 0.831031
+
+Best Parameters: {'learning_rate': 0.217055740037172, 'max_depth': 11, 'l2_leaf_reg': 9.559191350597377, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:53:54.516030
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.71005
+MSE - std: 0.25645
+R2 - mean: 0.49670
+R2 - std: 0.01568
+
+Train time: 6.469785
+Test time: 0.876646
+
+Best Parameters: {'learning_rate': 0.25491618400225, 'max_depth': 11, 'l2_leaf_reg': 10.848511538927644, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:54:25.574437
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.70080
+MSE - std: 0.28352
+R2 - mean: 0.49817
+R2 - std: 0.01791
+
+Train time: 7.757044
+Test time: 0.854078
+
+Best Parameters: {'learning_rate': 0.25968604657649375, 'max_depth': 12, 'l2_leaf_reg': 9.056854302331029, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:54:54.986224
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72969
+MSE - std: 0.27460
+R2 - mean: 0.49417
+R2 - std: 0.01694
+
+Train time: 7.785738
+Test time: 0.835678
+
+Best Parameters: {'learning_rate': 0.2466749097572434, 'max_depth': 12, 'l2_leaf_reg': 19.91339305465559, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:55:23.790249
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72432
+MSE - std: 0.23965
+R2 - mean: 0.49464
+R2 - std: 0.01450
+
+Train time: 7.418171
+Test time: 0.855871
+
+Best Parameters: {'learning_rate': 0.2585092256738591, 'max_depth': 12, 'l2_leaf_reg': 26.5294108984826, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:55:52.482158
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72636
+MSE - std: 0.24250
+R2 - mean: 0.49441
+R2 - std: 0.01342
+
+Train time: 7.491647
+Test time: 0.897048
+
+Best Parameters: {'learning_rate': 0.29580104508856747, 'max_depth': 12, 'l2_leaf_reg': 24.847935793349837, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:56:22.393304
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.77320
+MSE - std: 0.26064
+R2 - mean: 0.48816
+R2 - std: 0.01533
+
+Train time: 7.593230
+Test time: 0.889134
+
+Best Parameters: {'learning_rate': 0.16562260451193747, 'max_depth': 12, 'l2_leaf_reg': 29.603086547321407, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:56:42.696917
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74996
+MSE - std: 0.26077
+R2 - mean: 0.49129
+R2 - std: 0.01645
+
+Train time: 5.438306
+Test time: 0.799891
+
+Best Parameters: {'learning_rate': 0.26117551973920633, 'max_depth': 10, 'l2_leaf_reg': 23.610292463621043, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:57:00.051072
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.83965
+MSE - std: 0.26220
+R2 - mean: 0.47914
+R2 - std: 0.01449
+
+Train time: 4.787048
+Test time: 0.710467
+
+Best Parameters: {'learning_rate': 0.11110331260753646, 'max_depth': 8, 'l2_leaf_reg': 15.153496264552572, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:57:29.103112
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.73466
+MSE - std: 0.26827
+R2 - mean: 0.49345
+R2 - std: 0.01636
+
+Train time: 7.673627
+Test time: 0.862224
+
+Best Parameters: {'learning_rate': 0.29784737878473466, 'max_depth': 12, 'l2_leaf_reg': 29.928168521646597, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:57:58.651038
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.73710
+MSE - std: 0.25527
+R2 - mean: 0.49298
+R2 - std: 0.01673
+
+Train time: 7.530146
+Test time: 0.793432
+
+Best Parameters: {'learning_rate': 0.2608751785644835, 'max_depth': 12, 'l2_leaf_reg': 21.637250675644957, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:58:21.993983
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.70182
+MSE - std: 0.24321
+R2 - mean: 0.49772
+R2 - std: 0.01514
+
+Train time: 6.034516
+Test time: 0.793596
+
+Best Parameters: {'learning_rate': 0.29522081254302823, 'max_depth': 11, 'l2_leaf_reg': 13.71055535314852, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:58:43.295299
+CatBoost - NYC_Taxi
+
+MSE - mean: 4.36781
+MSE - std: 0.28413
+R2 - mean: 0.40743
+R2 - std: 0.01345
+
+Train time: 5.384535
+Test time: 0.828878
+
+Best Parameters: {'learning_rate': 0.01139083313833597, 'max_depth': 10, 'l2_leaf_reg': 17.399687050422816, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:59:00.837333
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.82296
+MSE - std: 0.25309
+R2 - mean: 0.48136
+R2 - std: 0.01317
+
+Train time: 4.985480
+Test time: 0.736924
+
+Best Parameters: {'learning_rate': 0.12611232357175953, 'max_depth': 9, 'l2_leaf_reg': 13.575855302359969, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:59:19.601150
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.81511
+MSE - std: 0.23059
+R2 - mean: 0.48228
+R2 - std: 0.01059
+
+Train time: 5.209087
+Test time: 0.793453
+
+Best Parameters: {'learning_rate': 0.17265906568653222, 'max_depth': 10, 'l2_leaf_reg': 1.984204957296068, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 16:59:43.774897
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.89878
+MSE - std: 0.26643
+R2 - mean: 0.47112
+R2 - std: 0.01473
+
+Train time: 6.324698
+Test time: 0.793387
+
+Best Parameters: {'learning_rate': 0.03463803022915183, 'max_depth': 11, 'l2_leaf_reg': 7.44687491258749, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:00:00.922131
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.79581
+MSE - std: 0.25132
+R2 - mean: 0.48503
+R2 - std: 0.01354
+
+Train time: 4.895979
+Test time: 0.705551
+
+Best Parameters: {'learning_rate': 0.2542880553956145, 'max_depth': 8, 'l2_leaf_reg': 11.542235858814937, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:00:29.823757
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.73190
+MSE - std: 0.24355
+R2 - mean: 0.49364
+R2 - std: 0.01436
+
+Train time: 7.507986
+Test time: 0.852092
+
+Best Parameters: {'learning_rate': 0.1971721244471271, 'max_depth': 12, 'l2_leaf_reg': 14.24566110277566, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:00:50.198621
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.78087
+MSE - std: 0.25576
+R2 - mean: 0.48708
+R2 - std: 0.01498
+
+Train time: 5.566651
+Test time: 0.842334
+
+Best Parameters: {'learning_rate': 0.15640009850100225, 'max_depth': 10, 'l2_leaf_reg': 17.731518532665095, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:01:14.936701
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74544
+MSE - std: 0.27249
+R2 - mean: 0.49193
+R2 - std: 0.01980
+
+Train time: 5.971092
+Test time: 0.908600
+
+Best Parameters: {'learning_rate': 0.2993116950372476, 'max_depth': 11, 'l2_leaf_reg': 7.635505486693612, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:01:32.899150
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.78528
+MSE - std: 0.26344
+R2 - mean: 0.48653
+R2 - std: 0.01551
+
+Train time: 4.935497
+Test time: 0.755832
+
+Best Parameters: {'learning_rate': 0.2548296214256417, 'max_depth': 9, 'l2_leaf_reg': 23.82349754172174, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:01:55.833035
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.71759
+MSE - std: 0.26543
+R2 - mean: 0.49575
+R2 - std: 0.01652
+
+Train time: 6.272705
+Test time: 0.830164
+
+Best Parameters: {'learning_rate': 0.29845769217037477, 'max_depth': 11, 'l2_leaf_reg': 10.816955757905912, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:02:24.955299
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.70518
+MSE - std: 0.26039
+R2 - mean: 0.49737
+R2 - std: 0.01690
+
+Train time: 7.646044
+Test time: 0.827936
+
+Best Parameters: {'learning_rate': 0.2615732774127339, 'max_depth': 12, 'l2_leaf_reg': 12.721319063657019, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:02:45.248744
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.78239
+MSE - std: 0.25619
+R2 - mean: 0.48688
+R2 - std: 0.01453
+
+Train time: 5.570129
+Test time: 0.893987
+
+Best Parameters: {'learning_rate': 0.19741119438529628, 'max_depth': 10, 'l2_leaf_reg': 12.819887102972098, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:03:10.107943
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72046
+MSE - std: 0.26125
+R2 - mean: 0.49531
+R2 - std: 0.01648
+
+Train time: 6.431438
+Test time: 0.767598
+
+Best Parameters: {'learning_rate': 0.2391538451901674, 'max_depth': 11, 'l2_leaf_reg': 8.352505819761788, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:03:26.255290
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.81830
+MSE - std: 0.25831
+R2 - mean: 0.48201
+R2 - std: 0.01457
+
+Train time: 4.654891
+Test time: 0.651162
+
+Best Parameters: {'learning_rate': 0.22981654145349592, 'max_depth': 7, 'l2_leaf_reg': 10.821232034652054, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:03:42.014358
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.87784
+MSE - std: 0.26504
+R2 - mean: 0.47396
+R2 - std: 0.01474
+
+Train time: 4.594029
+Test time: 0.715235
+
+Best Parameters: {'learning_rate': 0.18446618299699227, 'max_depth': 4, 'l2_leaf_reg': 5.528384570843165, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:03:58.491978
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.85853
+MSE - std: 0.26364
+R2 - mean: 0.47658
+R2 - std: 0.01439
+
+Train time: 4.702213
+Test time: 0.697755
+
+Best Parameters: {'learning_rate': 0.20699354214836688, 'max_depth': 5, 'l2_leaf_reg': 7.9647838665999995, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:04:16.577416
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.78347
+MSE - std: 0.25503
+R2 - mean: 0.48670
+R2 - std: 0.01548
+
+Train time: 4.953512
+Test time: 0.725244
+
+Best Parameters: {'learning_rate': 0.26460892726638646, 'max_depth': 9, 'l2_leaf_reg': 3.31672389088366, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:04:43.229746
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74477
+MSE - std: 0.25407
+R2 - mean: 0.49198
+R2 - std: 0.01482
+
+Train time: 6.434540
+Test time: 0.855142
+
+Best Parameters: {'learning_rate': 0.23649417783368323, 'max_depth': 11, 'l2_leaf_reg': 6.745216790414921, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:05:15.111359
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.73322
+MSE - std: 0.27031
+R2 - mean: 0.49367
+R2 - std: 0.01609
+
+Train time: 7.893367
+Test time: 0.820376
+
+Best Parameters: {'learning_rate': 0.2636893672186388, 'max_depth': 12, 'l2_leaf_reg': 8.7642801039765, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:05:38.166161
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.97712
+MSE - std: 0.27077
+R2 - mean: 0.46050
+R2 - std: 0.01448
+
+Train time: 6.036612
+Test time: 0.773960
+
+Best Parameters: {'learning_rate': 0.024153828519331556, 'max_depth': 11, 'l2_leaf_reg': 15.515221321211662, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:05:58.905445
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74965
+MSE - std: 0.25032
+R2 - mean: 0.49129
+R2 - std: 0.01436
+
+Train time: 5.433779
+Test time: 0.888009
+
+Best Parameters: {'learning_rate': 0.2721651361257713, 'max_depth': 10, 'l2_leaf_reg': 12.33593354316164, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:06:28.847639
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.71327
+MSE - std: 0.27710
+R2 - mean: 0.49640
+R2 - std: 0.01813
+
+Train time: 7.703444
+Test time: 0.836549
+
+Best Parameters: {'learning_rate': 0.23833942405095232, 'max_depth': 12, 'l2_leaf_reg': 10.5114275208412, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:06:53.700591
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74917
+MSE - std: 0.26931
+R2 - mean: 0.49150
+R2 - std: 0.01574
+
+Train time: 6.435584
+Test time: 0.805440
+
+Best Parameters: {'learning_rate': 0.22334025972210564, 'max_depth': 11, 'l2_leaf_reg': 10.58029210552211, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:07:11.094834
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.80375
+MSE - std: 0.26327
+R2 - mean: 0.48403
+R2 - std: 0.01450
+
+Train time: 4.850463
+Test time: 0.707200
+
+Best Parameters: {'learning_rate': 0.20276460808487298, 'max_depth': 8, 'l2_leaf_reg': 8.745991049153481, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:07:29.073606
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.78562
+MSE - std: 0.29205
+R2 - mean: 0.48663
+R2 - std: 0.01991
+
+Train time: 4.894761
+Test time: 0.781904
+
+Best Parameters: {'learning_rate': 0.24153904218183883, 'max_depth': 9, 'l2_leaf_reg': 1.4579857517353594, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:07:50.113482
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.86174
+MSE - std: 0.26896
+R2 - mean: 0.47618
+R2 - std: 0.01476
+
+Train time: 5.661745
+Test time: 0.867191
+
+Best Parameters: {'learning_rate': 0.05461446447398533, 'max_depth': 10, 'l2_leaf_reg': 6.885656255063277, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:08:04.556281
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.94570
+MSE - std: 0.27064
+R2 - mean: 0.46478
+R2 - std: 0.01390
+
+Train time: 4.156617
+Test time: 0.591929
+
+Best Parameters: {'learning_rate': 0.17653310646190842, 'max_depth': 2, 'l2_leaf_reg': 2.3751349477048307, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:08:34.566589
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.69390
+MSE - std: 0.24878
+R2 - mean: 0.49887
+R2 - std: 0.01447
+
+Train time: 7.781749
+Test time: 0.814240
+
+Best Parameters: {'learning_rate': 0.2716400923443705, 'max_depth': 12, 'l2_leaf_reg': 12.653546442090827, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:08:58.115536
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72182
+MSE - std: 0.23819
+R2 - mean: 0.49499
+R2 - std: 0.01382
+
+Train time: 6.308184
+Test time: 0.904216
+
+Best Parameters: {'learning_rate': 0.27693782477751294, 'max_depth': 11, 'l2_leaf_reg': 13.366616201726057, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:09:27.677718
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72383
+MSE - std: 0.25677
+R2 - mean: 0.49484
+R2 - std: 0.01503
+
+Train time: 7.611612
+Test time: 0.844709
+
+Best Parameters: {'learning_rate': 0.21360502876108994, 'max_depth': 12, 'l2_leaf_reg': 11.724687775405684, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:09:58.937733
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72874
+MSE - std: 0.25816
+R2 - mean: 0.49419
+R2 - std: 0.01503
+
+Train time: 7.950247
+Test time: 0.885000
+
+Best Parameters: {'learning_rate': 0.24402075436730955, 'max_depth': 12, 'l2_leaf_reg': 10.18563409304926, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:10:22.665511
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.80290
+MSE - std: 0.27000
+R2 - mean: 0.48418
+R2 - std: 0.01606
+
+Train time: 6.201937
+Test time: 0.835425
+
+Best Parameters: {'learning_rate': 0.15175689720419147, 'max_depth': 11, 'l2_leaf_reg': 15.744248052310303, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:10:52.582115
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.71216
+MSE - std: 0.24901
+R2 - mean: 0.49638
+R2 - std: 0.01439
+
+Train time: 7.743186
+Test time: 0.912258
+
+Best Parameters: {'learning_rate': 0.2752563499604672, 'max_depth': 12, 'l2_leaf_reg': 8.359303395642536, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:11:20.419708
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.70629
+MSE - std: 0.25998
+R2 - mean: 0.49715
+R2 - std: 0.01918
+
+Train time: 7.220046
+Test time: 0.833841
+
+Best Parameters: {'learning_rate': 0.2806417862809853, 'max_depth': 12, 'l2_leaf_reg': 9.460768827448714, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:11:50.344638
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.69642
+MSE - std: 0.28521
+R2 - mean: 0.49877
+R2 - std: 0.01839
+
+Train time: 7.738947
+Test time: 0.783700
+
+Best Parameters: {'learning_rate': 0.27677491105872065, 'max_depth': 12, 'l2_leaf_reg': 9.50851516385535, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:12:20.657119
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.70342
+MSE - std: 0.29043
+R2 - mean: 0.49783
+R2 - std: 0.01984
+
+Train time: 7.779844
+Test time: 0.882844
+
+Best Parameters: {'learning_rate': 0.2772007077459433, 'max_depth': 12, 'l2_leaf_reg': 6.072565190916608, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:12:48.987667
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.73773
+MSE - std: 0.26805
+R2 - mean: 0.49293
+R2 - std: 0.01983
+
+Train time: 7.400923
+Test time: 0.793779
+
+Best Parameters: {'learning_rate': 0.2751450486112265, 'max_depth': 12, 'l2_leaf_reg': 6.012155757598408, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:13:16.687582
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74004
+MSE - std: 0.26589
+R2 - mean: 0.49264
+R2 - std: 0.01845
+
+Train time: 7.285196
+Test time: 0.809961
+
+Best Parameters: {'learning_rate': 0.225572487015709, 'max_depth': 12, 'l2_leaf_reg': 9.420283803181349, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:13:47.264283
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.71267
+MSE - std: 0.26837
+R2 - mean: 0.49643
+R2 - std: 0.01682
+
+Train time: 7.951884
+Test time: 0.848899
+
+Best Parameters: {'learning_rate': 0.271189150327097, 'max_depth': 12, 'l2_leaf_reg': 7.194133332752185, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:14:17.128401
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.69577
+MSE - std: 0.24986
+R2 - mean: 0.49863
+R2 - std: 0.01406
+
+Train time: 7.612087
+Test time: 0.915063
+
+Best Parameters: {'learning_rate': 0.2753725257478739, 'max_depth': 12, 'l2_leaf_reg': 5.323163688093401, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:14:38.862432
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72083
+MSE - std: 0.26067
+R2 - mean: 0.49526
+R2 - std: 0.01579
+
+Train time: 5.554872
+Test time: 0.872971
+
+Best Parameters: {'learning_rate': 0.2759767928967529, 'max_depth': 10, 'l2_leaf_reg': 5.2456827928677034, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:15:02.448484
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74028
+MSE - std: 0.24322
+R2 - mean: 0.49247
+R2 - std: 0.01560
+
+Train time: 6.402147
+Test time: 0.839050
+
+Best Parameters: {'learning_rate': 0.18748469634683443, 'max_depth': 11, 'l2_leaf_reg': 6.240359045177848, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:15:32.780591
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.72997
+MSE - std: 0.25745
+R2 - mean: 0.49399
+R2 - std: 0.01592
+
+Train time: 7.826077
+Test time: 0.828791
+
+Best Parameters: {'learning_rate': 0.2507412100712927, 'max_depth': 12, 'l2_leaf_reg': 8.183890252051242, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:15:56.271503
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.75166
+MSE - std: 0.25462
+R2 - mean: 0.49103
+R2 - std: 0.01508
+
+Train time: 6.116438
+Test time: 0.822772
+
+Best Parameters: {'learning_rate': 0.21326373954585787, 'max_depth': 11, 'l2_leaf_reg': 12.190500387382157, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:16:16.833044
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74949
+MSE - std: 0.27088
+R2 - mean: 0.49139
+R2 - std: 0.01862
+
+Train time: 5.677290
+Test time: 0.816797
+
+Best Parameters: {'learning_rate': 0.2842720663850087, 'max_depth': 10, 'l2_leaf_reg': 13.799057204569912, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:16:47.396267
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.68947
+MSE - std: 0.24270
+R2 - mean: 0.49938
+R2 - std: 0.01580
+
+Train time: 7.760867
+Test time: 0.850258
+
+Best Parameters: {'learning_rate': 0.22318457003579037, 'max_depth': 12, 'l2_leaf_reg': 4.728803792840531, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:17:10.959311
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.71888
+MSE - std: 0.26041
+R2 - mean: 0.49554
+R2 - std: 0.01581
+
+Train time: 6.360811
+Test time: 0.866497
+
+Best Parameters: {'learning_rate': 0.20719036489391116, 'max_depth': 11, 'l2_leaf_reg': 4.560962626438008, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:17:39.320594
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.74264
+MSE - std: 0.28781
+R2 - mean: 0.49236
+R2 - std: 0.02215
+
+Train time: 7.358778
+Test time: 0.784015
+
+Best Parameters: {'learning_rate': 0.2536768543842043, 'max_depth': 12, 'l2_leaf_reg': 5.504359588564171, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+
+2025-01-23 17:18:09.932844
+CatBoost - NYC_Taxi
+
+MSE - mean: 3.68947
+MSE - std: 0.24270
+R2 - mean: 0.49938
+R2 - std: 0.01580
+
+Train time: 8.020837
+Test time: 0.823431
+
+Best Parameters: {'learning_rate': 0.22318457003579037, 'max_depth': 12, 'l2_leaf_reg': 4.728803792840531, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/NYC_Taxi/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 3, 4, 11]}
+
+

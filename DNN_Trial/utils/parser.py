@@ -12,9 +12,10 @@ def get_parser():
 
     parser.add('--model_name', required=True, help="Name of the model that should be trained")
     parser.add('--dataset', required=True, help="Name of the dataset that will be used")
-    parser.add('--objective', required=True, type=str, default="regression", choices=["regression", "classification",
-                                                                                      "binary"],
-               help="Set the type of the task")
+    parser.add('--objective', required=True, type=str, default="regression", choices=["regression", 
+                                                                                      "probabilistic_regression",
+                                                                                      "classification", "binary"],
+               help="Set the type of the task") 
 
     parser.add('--use_gpu', action="store_true", help="Set to true if GPU is available")
     parser.add('--gpu_ids', type=int, action="append", help="IDs of the GPUs used when data_parallel is true")
@@ -25,8 +26,11 @@ def get_parser():
     parser.add('--n_trials', type=int, default=100, help="Number of trials for the hyperparameter optimization")
     parser.add('--direction', type=str, default="minimize", choices=['minimize', 'maximize'],
                help="Direction of optimization.")
+    parser.add('--y_distribution', required=True, type=str, default="quantile", choices=["normal","skewed","bimodial"],
+               help="Set the distribution of the target variable") 
 
     parser.add('--num_splits', type=int, default=5, help="Number of splits done for cross validation")
+    parser.add('--num_bins', type=int, default=10, help="Number of bins for probailistic regression")
     parser.add('--shuffle', action="store_true", help="Shuffle data during cross-validation")
     parser.add('--seed', type=int, default=123, help="Seed for KFold initialization.")
 
@@ -34,6 +38,7 @@ def get_parser():
     parser.add('--target_encode', action="store_true", help="Encode the targets that they start at 0. (0, 1, 2,...)")
     parser.add('--one_hot_encode', action="store_true", help="OneHotEncode the categorical features")
     parser.add('--ordinal_encode', action="store_true", help="Encode Ordinal categorical features")
+    parser.add('--frequency_reg', action="store_true", help="Perform frequency regularization")
 
     parser.add('--batch_size', type=int, default=128, help="Batch size used for training")
     parser.add('--val_batch_size', type=int, default=128, help="Batch size used for training and testing")
@@ -46,8 +51,11 @@ def get_parser():
     parser.add('--cat_idx', type=int, action="append", help="Indices of the categorical features")
     parser.add('--nominal_idx', type=int, action="append", help="Indices of the nominal features")
     parser.add('--ordinal_idx', type=int, action="append", help="Indices of the ordinal features")
+    parser.add('--num_idx', type=int, action="append", help="Indices of the numerical features")
     parser.add('--cat_dims', type=int, action="append", help="Cardinality of the categorical features (is set "
                                                              "automatically, when the load_data function is used.")
+    parser.add('--bin_alt', type=int, action="append", help="Alternative Bins")
+    
     parser.add('--dropna_idx', type=int, action="append", help="Indices of columns to be dropped")
     parser.add('--miss_cat_idx', type=int, action="append", help="Indices of categorical columns with missing values")
     parser.add('--miss_num_idx', type=int, action="append", help="Indices of numerical columns with missing values")

@@ -1,0 +1,14 @@
+2025-01-08 19:18:14.451170
+TabNet - Boston
+
+MSE - mean: 10.31192
+MSE - std: 2.39698
+R2 - mean: 0.87577
+R2 - std: 0.02747
+
+Train time: 10.235509
+Test time: 0.022944
+
+Best Parameters: {'n_d': 52, 'n_steps': 6, 'gamma': 1.050413339231028, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.07118274530382916, 'mask_type': 'sparsemax', 'n_a': 52, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

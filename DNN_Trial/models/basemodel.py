@@ -57,7 +57,7 @@ class BaseModel:
         self.prediction_probabilities = None  # Only used by binary / multi-class-classification
 
     def fit(self, X: np.ndarray, y: np.ndarray, X_val: tp.Union[None, np.ndarray] = None,
-            y_val: tp.Union[None, np.ndarray] = None) -> tp.Tuple[list, list]:
+            y_val: tp.Union[None, np.ndarray] = None, frequency_map: dict = None) -> tp.Tuple[list, list, list]:
         """Trains the model.
 
         The training is done on the trainings dataset (X, y). If a validation set (X_val, y_val) is provided,
@@ -70,13 +70,14 @@ class BaseModel:
         :param y: labels of trainings data
         :param X_val: validation data
         :param y_val: labels of validation data
-        :return: loss history, validation loss history
+        :return: loss history, validation loss history , lambda reg history
         """
 
         self.model.fit(X, y)
 
-        # Should return loss history and validation loss history
-        return [], []
+        # Should return loss history and validation loss history and lambda reg
+
+        return [], [] , []
 
     def predict(self, X: np.ndarray) -> tp.Tuple[np.ndarray, np.ndarray]:
         """
@@ -89,7 +90,7 @@ class BaseModel:
 
         if self.args.objective == "regression":
             self.predictions = self.model.predict(X)
-        elif self.args.objective == "classification" or self.args.objective == "binary":
+        elif self.args.objective == "classification" or self.args.objective == "binary" or self.args.objective == "probabilistic_regression":
             self.prediction_probabilities = self.predict_proba(X)
             self.predictions = np.argmax(self.prediction_probabilities, axis=1)
 
@@ -111,6 +112,12 @@ class BaseModel:
         if self.prediction_probabilities.shape[1] == 1:
             self.prediction_probabilities = np.concatenate((1 - self.prediction_probabilities,
                                                             self.prediction_probabilities), 1)
+            
+        ## For Prob Reg
+        if self.args.objective == "probabilistic_regression":
+            self.prediction_probabilities = np.clip(self.prediction_probabilities, 1e-5, 1)
+            self.prediction_probabilities /= self.prediction_probabilities.sum(axis=1, keepdims=True)
+
         return self.prediction_probabilities
 
     def save_model_and_predictions(self, y_true: np.ndarray, filename_extension=""):

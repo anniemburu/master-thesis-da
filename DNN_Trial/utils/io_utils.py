@@ -3,12 +3,24 @@ import os
 import pickle
 import datetime
 import json
+import yaml
 
 output_dir = "output/"
 
 
 def save_loss_to_file(args, arr, name, extension=""):
     filename = get_output_path(args, directory="logging", filename=name, extension=extension, file_type="txt")
+    np.savetxt(filename, arr)
+    #Check if file is created
+    if os.path.exists(filename):
+        print(f"Log file exists at: {filename}")
+    else:
+        print("Log file does NOT exist.")
+        
+    print(f"File name : {filename} . The file was saved")
+
+def save_regularization_to_file(args, arr, name, extension=""):
+    filename = get_output_path(args, directory="freq_reg", filename=name, extension=extension, file_type="txt")
     np.savetxt(filename, arr)
 
 
@@ -118,3 +130,30 @@ def get_predictions_from_file(args):
         content.append(np.load(dir_path + "/" + file))
 
     return content
+
+
+
+def update_yaml(dataset_name, model_name, parameters):
+    file_path = "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/config/results_params.yml"
+    #file_path = '/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/config/results_params.yml'
+    # Load existing data
+    try:
+        with open(file_path, 'r') as file:
+            data = yaml.safe_load(file) or {}
+    except FileNotFoundError:
+        data = {}
+
+    # Ensure structure exists
+    if "parameters" not in data:
+        data["parameters"] = {}
+    if dataset_name not in data["parameters"]:
+        data["parameters"][dataset_name] = {}
+    if model_name not in data["parameters"][dataset_name]:
+        data["parameters"][dataset_name][model_name] = {}
+
+    # Overwrite the model parameters
+    data["parameters"][dataset_name][model_name] = parameters  # This ensures overwriting
+
+    # Save updated YAML file
+    with open(file_path, 'w') as file:
+        yaml.dump(data, file, default_flow_style=False)

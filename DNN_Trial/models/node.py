@@ -38,7 +38,7 @@ class NODE(BaseModelTorch):
                 node_lib.Lambda(lambda x: x[..., 0].mean(dim=-1)),  # average first channels of every tree
             ).to(self.device)
 
-        elif args.objective == "classification" or args.objective == "binary":
+        elif args.objective == "classification" or args.objective == "binary" or args.objective == "probabilistic_regression":
             self.model = nn.Sequential(
                 node_lib.DenseBlock(args.num_features,
                                     # layer_dim=1024, num_layers=2, depth=6,
@@ -51,10 +51,13 @@ class NODE(BaseModelTorch):
 
         print("On:", self.device)
 
+        # Add lambda_reg as a trainable parameter
+        self.lambda_reg =  nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
+
         self.trainer = None
         self.to_device()
 
-    def fit(self, X, y, X_val=None, y_val=None):
+    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None):
         data = node_lib.Dataset(self.args.dataset, random_state=815,
                                 X_train=np.array(X, dtype=np.float32), y_train=np.array(y, dtype=np.float32),
                                 X_valid=np.array(X_val, dtype=np.float32), y_valid=np.array(y_val, dtype=np.float32))
@@ -67,7 +70,7 @@ class NODE(BaseModelTorch):
 
         if self.args.objective == "regression":
             loss_func = F.mse_loss
-        elif self.args.objective == "classification":
+        elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
             loss_func = F.cross_entropy
             data.y_train = data.y_train.astype(int)
         elif self.args.objective == "binary":
@@ -89,11 +92,60 @@ class NODE(BaseModelTorch):
 
         loss_history = []
         val_loss_history = []
+        lambda_reg_history = []
 
         early_stopping = self.args.early_stopping_rounds + self.args.logging_period
 
         for batch in node_lib.iterate_minibatches(data.X_train, data.y_train, batch_size=self.args.batch_size, shuffle=True,
                                                   epochs=self.args.epochs):
+            
+            """#if self.args.frequency_reg:
+            # Unpack batch
+            batch_X, batch_y = batch
+
+            # Forward pass
+            out = self.model(torch.as_tensor(batch_X, device=self.device))
+
+            # Compute supervised loss
+            if self.args.objective == "regression" or self.args.objective == "binary":
+                out = out.squeeze()"""
+
+            #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            # Frequency regularization term
+            if frequency_map is not None:
+                if self.args.ordinal_encode :
+                    idx_buff = len(self.args.ordinal_idx)
+                else:
+                    idx_buff = 0  # Ordinal feat are stored b4 OHE
+                for name, param in self.model.named_parameters():
+                    if "feature_selection_logits" in name:
+                        logit = param
+                        print(f"Logit shape: {logit.shape}")
+
+                        weights = torch.sum(torch.abs(logit[i + idx_buff, :, :]))  # Get weights for one-hot encoded features
+                
+                        penalty = 0.0
+                        for i, col in enumerate(frequency_map.keys()):
+                            penalty +=  weights / (frequency_map[col] + 1e-8)  #i add len ordinal
+                        penalty *=  torch.exp(self.model.lambda_reg)   # Use the learnable lambda_reg
+                    else:
+                        penalty = 0.0
+
+                    break
+
+
+                #loss = loss_func(out, torch.as_tensor(batch_y, device=self.device)) + penalty
+                #loss_history.append(loss.item() + penalty)
+
+
+
+            """# Backward pass and optimization
+            self.trainer.optimizer.zero_grad()
+            loss.backward()
+            self.trainer.optimizer.step()
+
+            # Save lambda_reg value for this step
+            lambda_reg_history.append(torch.exp(self.log_lambda_reg).item())"""
 
             metrics = self.trainer.train_on_batch(*batch, device=self.device)
             loss_history.append(metrics['loss'].item())
@@ -103,13 +155,14 @@ class NODE(BaseModelTorch):
                 self.trainer.average_checkpoints(out_tag='avg')
                 self.trainer.load_checkpoint(tag='avg')
 
-                print("Loss %.5f" % (metrics['loss']))
+                #print("Loss %.5f" % (metrics['loss']))
+                print("Loss %.5f" % (loss))
 
                 if self.args.objective == "regression":
                     loss = self.trainer.evaluate_mse(data.X_valid, data.y_valid, device=self.device,
                                                      batch_size=self.args.batch_size)
                     print("Val MSE: %0.5f" % loss)
-                elif self.args.objective == "classification":
+                elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                     loss = self.trainer.evaluate_logloss(data.X_valid, data.y_valid, device=self.device,
                                                          batch_size=self.args.batch_size)
                     print("Val LogLoss: %0.5f" % loss)
@@ -139,12 +192,12 @@ class NODE(BaseModelTorch):
         return loss_history, val_loss_history
 
     def predict_helper(self, X):
-        X_test = torch.as_tensor(np.array(X, dtype=np.float), device=self.device, dtype=torch.float32)
+        X_test = torch.as_tensor(np.array(X, dtype=float), device=self.device, dtype=torch.float32)
         self.model.train(False)
         with torch.no_grad():
             prediction = process_in_chunks(self.model, X_test, batch_size=self.args.val_batch_size)
 
-            if self.args.objective == "classification":
+            if self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                 prediction = F.softmax(prediction, dim=1)
             elif self.args.objective == "binary":
                 prediction = torch.sigmoid(prediction)

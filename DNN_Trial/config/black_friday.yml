@@ -2,8 +2,10 @@
 dataset: Black_Friday
 model_name: VIME # LinearModel, KNN, SVM, DecisionTree, RandomForest, XGBoost, CatBoost, LightGBM, ModelTree
                 # MLP, TabNet, VIME, TabTransformer, RLN, DNFNet, STG, NAM, DeepFM, SAINT
-objective: regression # Don't change
+objective: probabilistic_regression # Don't change (regression , probabilistic_regression)
 # optimize_hyperparameters: True
+
+y_distribution : bimodial
 
 # GPU parameters
 use_gpu: True
@@ -12,7 +14,7 @@ data_parallel: False
 
 # Optuna parameters - https://optuna.org/
 n_trials: 100
-direction: minimize
+direction: maximize  # maximize - class, minimize - reg
 
 # Cross validation parameters
 num_splits: 5
@@ -20,24 +22,26 @@ shuffle: True
 seed: 221 # Don't change
 
 # Preprocessing parameters
-scale: True
+scale: False
 target_encode: False
 one_hot_encode: True
 ordinal_encode : True  #Set True if there is ordinal features
+frequency_reg : False
 
 # Training parameters
 batch_size: 128
 val_batch_size: 256
 early_stopping_rounds: 20
-epochs: 500
+epochs: 100
 logging_period: 100
 
 # About the data
 num_classes: 1  # always 1 for regression
 num_features: 9  #without target variable
-#cat_idx: [0, 1, 2, 3, 5, 6, 7, 8]
-nominal_idx : [0, 2, 3, 5, 6, 7, 8]
+#cat_idx: [0, 1, 2, 3, 5, 6, 7, 8] #comment out
+nominal_idx : [0, 2, 3, 4, 5, 6, 7, 8]
 ordinal_idx : [1]
 
 # cat_dims: will be automatically set.
-#cat_dims: [9, 16, 7, 15, 6, 5, 2, 42]
+cat_idx: [0]
+cat_dims: [2]
