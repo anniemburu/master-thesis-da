@@ -212,7 +212,7 @@ parameters:
       dim: 32
       dropout: 0.3
       heads: 4
-     TabNet:
+    TabNet:
       cat_emb_dim: 2
       gamma: 1.793948107179346
       mask_type: 'sparsemax'
@@ -234,6 +234,11 @@ parameters:
       learning_rate: -3
       weight_decay: -3
   SAT11:
+    VIME:
+      'p_m': 0.8537536712438457
+      'alpha': 0.11047685312602139
+      'K': 20
+      'beta': 6.833123020518896
     SAINT:
       depth: 2
       dim: 32
@@ -256,7 +261,7 @@ parameters:
       learning_rate: -3
       weight_decay: -4
   Sensory:
-     TabNet:
+    TabNet:
       cat_emb_dim: 2
       gamma: 1.2848422903260368
       mask_type: 'sparsemax'
