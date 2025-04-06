@@ -37,7 +37,8 @@ class CustomLogLoss(Metric):
         self._maximize = False  # Log loss should be minimized
         if gb_num_classes is None:
             raise ValueError("num_classes must be set as a global variable")
-        self.classes = list(range(gb_num_classes))  # Use the global variable
+        #self.classes = list(range(gb_num_classes))  # Use the global variable
+        self.classes = gb_num_classes
 
     def __call__(self, y_true, y_pred):
         return log_loss(y_true, y_pred, labels=self.classes)
@@ -57,7 +58,10 @@ class TabNet(BaseModelTorch):
         self.params["device_name"] = self.device
 
         global gb_num_classes
-        gb_num_classes = args.num_classes  # Set the global variable
+        #gb_num_classes = args.num_classes  # Set the global variable
+        gb_num_classes = args.bin_alt
+
+        print(f"TabNet Classes REVAMP: {gb_num_classes}")
 
         if args.objective == "regression":
             self.model = TabNetRegressor(**self.params)
@@ -68,6 +72,7 @@ class TabNet(BaseModelTorch):
         elif args.objective == "probabilistic_regression":
             self.model = TabNetClassifier(**self.params)
             self.metric = [CustomLogLoss]
+            
             
 
     def fit(self, X, y, X_val=None, y_val=None):
