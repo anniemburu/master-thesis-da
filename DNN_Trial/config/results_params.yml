@@ -1,5 +1,24 @@
 parameters:
   Abalone:
+    SAINT:
+      depth: 3
+      dim: 128
+      dropout: 0.8
+      heads: 4
+    TabNet:
+      cat_emb_dim: 1
+      gamma: 1.8370117235962122
+      mask_type: 'sparsemax'
+      momentum: 0.0010080119264888568
+      n_d: 47
+      n_independent: 2
+      n_shared: 2
+      n_steps: 7
+    VIME:
+      K: 2
+      alpha: 1.1041260180067325
+      beta: 0.18806809637682864
+      p_m: 0.7192123464423629
     TabTransformer:
       depth: 1
       dim: 256
@@ -8,6 +27,20 @@ parameters:
       learning_rate: -3
       weight_decay: -4
   Allstate_Claims:
+    TabNet:
+      cat_emb_dim: 1
+      gamma: 1.4921895070384743
+      mask_type: 'sparsemax'
+      momentum: 0.0017812705579288248
+      n_d: 12
+      n_independent: 2
+      n_shared: 5
+      n_steps: 6
+    VIME:
+      K: 2
+      alpha: 2.0916451478003033
+      beta: 6.440938841203512
+      p_m: 0.39298609993780165
     TabTransformer:
       depth: 6
       dim: 64
@@ -16,6 +49,16 @@ parameters:
       learning_rate: -3
       weight_decay: -4
   Black_Friday:
+    SAINT:
+      depth: 3
+      dim: 64
+      dropout: 0.1
+      heads: 2
+    VIME:
+      K: 10
+      alpha: 5.728440904520896
+      beta: 3.2670966130278716
+      p_m: 0.27092490370527944
     TabTransformer:
       depth: 2
       dim: 256
@@ -24,6 +67,25 @@ parameters:
       learning_rate: -5
       weight_decay: -4
   Boston:
+    SAINT:
+      depth: 1
+      dim: 64
+      dropout: 0.2
+      heads: 4
+    TabNet:
+      cat_emb_dim: 3
+      gamma: 1.123911559954574
+      mask_type: 'sparsemax'
+      momentum: 0.0017492683262505184
+      n_d: 47
+      n_independent: 5
+      n_shared: 2
+      n_steps: 7
+    VIME:
+      K: 15
+      alpha: 2.0437388183588707
+      beta: 0.12216986637163613
+      p_m: 0.1424087402217248
     TabTransformer:
       depth: 12
       dim: 64
@@ -31,6 +93,17 @@ parameters:
       heads: 2
       learning_rate: -6
       weight_decay: -6
+  Diamonds:
+    SAINT:
+      depth: 6
+      dim: 128
+      dropout: 0.6
+      heads: 2
+    VIME:
+      K: 10
+      alpha: 3.563299246825732
+      beta: 0.15752439579445252
+      p_m: 0.20832777474756226
   Brazillian_Houses:
     TabTransformer:
       depth: 6
@@ -40,6 +113,16 @@ parameters:
       learning_rate: -3
       weight_decay: -5
   House_Prices_Nominal:
+    SAINT:
+      depth: 6
+      dim: 256
+      dropout: 0.8
+      heads: 2
+    VIME:
+      K: 2
+      alpha: 7.392529892948591
+      beta: 0.13686686663303674
+      p_m: 0.4533998401084272
     TabTransformer:
       depth: 6
       dim: 64
@@ -48,6 +131,25 @@ parameters:
       learning_rate: -3
       weight_decay: -4
   House_Sales:
+    SAINT:
+      depth: 2
+      dim: 64
+      dropout: 0.2
+      heads: 2
+    TabNet:
+      cat_emb_dim: 1
+      gamma: 1.7628506672787196
+      mask_type: 'entmax'
+      momentum: 0.0010624672219206063
+      n_d: 14
+      n_independent: 3
+      n_shared: 4
+      n_steps: 9
+    VIME:
+      K: 2
+      alpha: 5.30369993450495
+      beta: 0.7526404582250219
+      p_m: 0.17566515114241862
     TabTransformer:
       depth: 12
       dim: 256
@@ -56,6 +158,25 @@ parameters:
       learning_rate: -3
       weight_decay: -6
   MIP:
+    SAINT:
+      depth: 6
+      dim: 32
+      dropout: 0.5
+      heads: 2
+    TabNet:
+      cat_emb_dim: 2
+      gamma: 1.5848384082400053
+      mask_type: 'sparsemax'
+      momentum: 0.0010078945202086514
+      n_d: 14
+      n_independent: 5
+      n_shared: 5
+      n_steps: 10
+    VIME:
+      K: 5
+      alpha: 7.7200083785423885
+      beta: 4.472104505092457
+      p_m: 0.477310157887738
     TabTransformer:
       depth: 12
       dim: 32
@@ -64,6 +185,20 @@ parameters:
       learning_rate: -3
       weight_decay: -6
   Mercedes_Benz:
+    TabNet:
+      cat_emb_dim: 2
+      gamma: 1.3877609999918645
+      mask_type: 'entmax'
+      momentum: 0.001069771757489611
+      n_d: 33
+      n_independent: 5
+      n_shared: 3
+      n_steps: 9
+    VIME:
+      K: 5
+      alpha: 9.185652076825491
+      beta: 5.171301238849644
+      p_m: 0.48409631079830795
     TabTransformer:
       depth: 2
       dim: 256
@@ -77,6 +212,20 @@ parameters:
       dim: 32
       dropout: 0.3
       heads: 4
+     TabNet:
+      cat_emb_dim: 2
+      gamma: 1.793948107179346
+      mask_type: 'sparsemax'
+      momentum: 0.0010414004281684049
+      n_d: 61
+      n_independent: 4
+      n_shared: 5
+      n_steps: 9
+    VIME:
+      K: 10
+      alpha: 4.400917496865748
+      beta: 0.11734115912167242
+      p_m: 0.5347336204472701
     TabTransformer:
       depth: 12
       dim: 128
@@ -85,6 +234,20 @@ parameters:
       learning_rate: -3
       weight_decay: -3
   SAT11:
+    SAINT:
+      depth: 2
+      dim: 32
+      dropout: 0.6
+      heads: 2
+    TabNet:
+      cat_emb_dim: 3
+      gamma: 1.0136194191205694
+      mask_type: 'entmax'
+      momentum: 0.0010133373717923582
+      n_d: 14
+      n_independent: 5
+      n_shared: 4
+      n_steps: 3
     TabTransformer:
       depth: 3
       dim: 64
@@ -93,6 +256,20 @@ parameters:
       learning_rate: -3
       weight_decay: -4
   Sensory:
+     TabNet:
+      cat_emb_dim: 2
+      gamma: 1.2848422903260368
+      mask_type: 'sparsemax'
+      momentum: 0.0012898569410406914
+      n_d: 64
+      n_independent: 5
+      n_shared: 3
+      n_steps: 10
+    VIME:
+      K: 20
+      alpha: 2.521258635577424
+      beta: 0.5252873769361092
+      p_m: 0.12232315368922127
     TabTransformer:
       depth: 2
       dim: 128
@@ -101,6 +278,20 @@ parameters:
       learning_rate: -3
       weight_decay: -4
   Socmob:
+    TabNet:
+      cat_emb_dim: 2
+      gamma: 1.9936897444554504
+      mask_type: 'sparsemax'
+      momentum: 0.0010174761003975195
+      n_d: 49
+      n_independent: 5
+      n_shared: 5
+      n_steps: 6
+    VIME:
+      K: 15
+      alpha: 0.46038625013906986
+      beta: 7.650427995444653
+      p_m: 0.1083150633383621
     TabTransformer:
       depth: 2
       dim: 32
