@@ -72,6 +72,9 @@ class ProbRegScorer(Scorer):
     def __init__(self):
         self.loglosses = []
         #self.kld_loss = []
+        self.aucs = []
+        self.accs = []
+        self.f1s = []
 
     def eval(self, y_true, y_prediction, y_probabilities):
         #print(f"Unique classes in y_true: {np.unique(y_true)}")
@@ -82,7 +85,19 @@ class ProbRegScorer(Scorer):
 
         # CrossEntropyLoss 
         loss_fn = nn.CrossEntropyLoss()
+
         logloss = loss_fn(y_logits, y_true)
+        auc = roc_auc_score(y_true, y_probabilities, multi_class='ovo', average="macro")
+        acc = accuracy_score(y_true, y_prediction)
+        f1 = f1_score(y_true, y_prediction, average="weighted")  # use here macro or weighted?
+
+        #self.loglosses.append(logloss)
+        self.loglosses.append(round(logloss.item(), 5))
+        self.aucs.append(auc)
+        self.accs.append(acc)
+        self.f1s.append(f1)
+
+        return {"Log Loss": logloss, "AUC": auc, "Accuracy": acc, "F1 score": f1}
         
         # KLDivergence
         #y_true_onehot = torch.nn.functional.one_hot(y_true, num_classes=y_probabilities.shape[1]).type(torch.float32) 
@@ -95,25 +110,33 @@ class ProbRegScorer(Scorer):
         #print(f"Log Loss: {logloss.item()} KLD Loss: {kld_loss.item()}")
 
 
-        self.loglosses.append(round(logloss.item(), 4))
+        
         #self.kld_loss.append(round(kld_loss.item(), 4))
         
         #return {"Log Loss": logloss, "KL Divergence": kld_loss}
-        return {"Log Loss": logloss}
+        #return {"Log Loss": logloss}
 
     def get_results(self):
         logloss_mean = np.mean(self.loglosses)
         logloss_std = np.std(self.loglosses)
 
-        #kld_loss_mean = np.mean(self.kld_loss)
-        #kld_loss_std = np.std(self.kld_loss)
+        auc_mean = np.mean(self.aucs)
+        auc_std = np.std(self.aucs)
 
+        acc_mean = np.mean(self.accs)
+        acc_std = np.std(self.accs)
+
+        f1_mean = np.mean(self.f1s)
+        f1_std = np.std(self.f1s)
 
         return {"Log Loss - mean": logloss_mean,
                 "Log Loss - std": logloss_std,
-                #"KL Divergence - mean": kld_loss_mean,
-                #"KL Divergence - std": kld_loss_std
-                }
+                "AUC - mean": auc_mean,
+                "AUC - std": auc_std,
+                "Accuracy - mean": acc_mean,
+                "Accuracy - std": acc_std,
+                "F1 score - mean": f1_mean,
+                "F1 score - std": f1_std}
     
     def get_objective_result(self):
         return np.mean(self.loglosses)
