@@ -64,7 +64,7 @@ def loss_vizualization(args, loss_hist):
     path = get_output_path(args, 'visualization', file_type = None)
     os.makedirs(path, exist_ok=True)
 
-    axes[0, 0].figure.savefig(f'{path}/loss_curve.png', dpi=300)
+    axes[0, 0].figure.savefig(f'{path}/loss_curve_exp.png', dpi=300)
     #axes[0, 1].figure.savefig(f'{path}/kf_1.png', dpi=300)
     #axes[0, 2].figure.savefig(f'{path}/kf_2.png', dpi=300)
     #axes[1, 0].figure.savefig(f'{path}/kf_3.png', dpi=300)
