@@ -1,0 +1,110 @@
+parameters:
+  Abalone:
+    TabTransformer:
+      depth: 1
+      dim: 256
+      dropout: 0.5
+      heads: 8
+      learning_rate: -3
+      weight_decay: -4
+  Allstate_Claims:
+    TabTransformer:
+      depth: 6
+      dim: 64
+      dropout: 0.5
+      heads: 8
+      learning_rate: -3
+      weight_decay: -4
+  Black_Friday:
+    TabTransformer:
+      depth: 2
+      dim: 256
+      dropout: 0
+      heads: 4
+      learning_rate: -5
+      weight_decay: -4
+  Boston:
+    TabTransformer:
+      depth: 12
+      dim: 64
+      dropout: 0.1
+      heads: 2
+      learning_rate: -6
+      weight_decay: -6
+  Brazillian_Houses:
+    TabTransformer:
+      depth: 6
+      dim: 256
+      dropout: 0
+      heads: 2
+      learning_rate: -3
+      weight_decay: -5
+  House_Prices_Nominal:
+    TabTransformer:
+      depth: 6
+      dim: 64
+      dropout: 0.3
+      heads: 4
+      learning_rate: -3
+      weight_decay: -4
+  House_Sales:
+    TabTransformer:
+      depth: 12
+      dim: 256
+      dropout: 0.4
+      heads: 2
+      learning_rate: -3
+      weight_decay: -6
+  MIP:
+    TabTransformer:
+      depth: 12
+      dim: 32
+      dropout: 0.2
+      heads: 2
+      learning_rate: -3
+      weight_decay: -6
+  Mercedes_Benz:
+    TabTransformer:
+      depth: 2
+      dim: 256
+      dropout: 0.5
+      heads: 2
+      learning_rate: -3
+      weight_decay: -4
+  Moneyball:
+    SAINT:
+      depth: 3
+      dim: 32
+      dropout: 0.3
+      heads: 4
+    TabTransformer:
+      depth: 12
+      dim: 128
+      dropout: 0.5
+      heads: 4
+      learning_rate: -3
+      weight_decay: -3
+  SAT11:
+    TabTransformer:
+      depth: 3
+      dim: 64
+      dropout: 0.1
+      heads: 8
+      learning_rate: -3
+      weight_decay: -4
+  Sensory:
+    TabTransformer:
+      depth: 2
+      dim: 128
+      dropout: 0.4
+      heads: 2
+      learning_rate: -3
+      weight_decay: -4
+  Socmob:
+    TabTransformer:
+      depth: 2
+      dim: 32
+      dropout: 0.3
+      heads: 8
+      learning_rate: -3
+      weight_decay: -6
