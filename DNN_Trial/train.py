@@ -54,113 +54,6 @@ def bin_finder(args, y):
 
     return bins
 
-"""def bin_shifter(args, y_train, y_test):
-    def find_earliest_gap(arr):
-        expected = 0
-        for num in arr:
-            if num != expected:
-                return expected
-            expected += 1
-
-        return expected
-    
-    def shift_array(arr, shift_value, max_diff):
-        shifted_arr = []
-        existing_values = set(arr)  # Track existing values to avoid duplicates
-
-        for x in arr:
-            if x > shift_value:
-                shifted_arr.append(x - max_diff)
-            else:
-                shifted_arr.append(x)
-
-        return np.array(shifted_arr)
-
-    #train_unique, train_len = np.unique(y_train), len(np.unique(y_train))
-    #test_unique, test_len = np.unique(y_test), len(np.unique(y_test))
-    #comb = np.union1d(train_unique, test_unique)
-
-    comb = np.unique(np.concatenate([y_train, y_test]))
-    comb_len = len(comb)
-
-    max_class = np.max(y_train)
-    max_diff = np.abs(comb_len - max_class)
-
-    if max_diff == 0: max_diff = 1 #shift by one if zero
- 
-    print(f"MAX : {max_class} , Max diff : {max_diff}, LEN : {comb_len} , BINS : {args.num_bins}")
-
-    if comb_len != args.num_bins: #means some classes are missing
-        print("WE ARE HERE")
-        
-        if comb_len == np.max(comb): # when the max class is the same as number of classes ##added or np.max(comb) > comb_len
-            print("IN THE SHIIIIIT")
-            #y_train = np.where(y_train == max_class, max_class - max_diff, y_train)
-            #y_test  = np.where(y_test == max_class, max_class - max_diff, y_test)
-
-            #find the gaps.. missing classes
-            train_gap = find_earliest_gap(y_train)
-            test_gap = find_earliest_gap(y_test)
-
-            y_train_shift = shift_array(y_train, train_gap, max_diff)
-            y_test_shift = shift_array(y_test, test_gap, max_diff)
-
-            print(f"Length orig Train: {len(y_train_shift)}, Length shift : {len(y_train)}")
-            print(f"Length orig Test: {len(y_test_shift)}, Length shift : {len(y_test)}")
-
-            # Ensure same length
-            if len(np.unique(y_train_shift)) != len(np.unique(y_train)):
-                print("Warning: Length mismatch in y_train_shift!")
-
-            if len(np.unique(y_test_shift)) != len(np.unique(y_test)):
-                print("Warning: Length mismatch in y_test_shift!")
-
-
-            args.num_classes = comb_len
-            args.bin_alt = sorted(np.unique(np.concatenate([y_train_shift, y_test_shift])).tolist())
-
-            #print(f"Train after shift : {np.unique(y_train)}")
-            #print(f"Test after shift : {np.unique(y_test)}")
-            #print(f"Num Classes after shift : {args.num_classes}")
-            print(f"Bin alt after shift : {args.bin_alt} \n")
-            print(f"Train after shift I : {np.unique(y_train_shift)},  Length : {len(np.unique(y_train_shift))}")
-            print(f"Test after shift I : {np.unique(y_test_shift)}, Length : {len(np.unique(y_test_shift))} \n")
-
-            return y_train_shift, y_test_shift
-        
-        elif comb_len < np.max(comb):
-            print("IN THE SHIIIIIT II")
-            #First shift
-            train_gap = find_earliest_gap(y_train)
-            test_gap = find_earliest_gap(y_test)
-
-            y_train_shift = shift_array(y_train, train_gap, max_diff)
-            y_test_shift = shift_array(y_test, test_gap, max_diff)
-
-            #Second shift
-            train_gap2 = find_earliest_gap(y_train_shift)
-            test_gap2 = find_earliest_gap(y_test_shift)
-
-            y_train_shift2 = shift_array(y_train, train_gap2, max_diff)
-            y_test_shift2 = shift_array(y_test, test_gap2, max_diff)
-
-            print(f"Train after shift II : {np.unique(y_train_shift2)},  Length : {len(np.unique(y_train_shift2))}")
-            print(f"Test after shift II : {np.unique(y_test_shift2)}, Length : {len(np.unique(y_test_shift2))} \n")
-
-            return y_train_shift2, y_test_shift2
-        
-        else:
-            args.num_classes = comb_len
-            args.bin_alt = [x for x in range(comb_len)]
-
-            return y_train, y_test
-
-    else:
-        args.num_classes = comb_len
-        args.bin_alt = [x for x in range(comb_len)]
-
-        return y_train, y_test"""
-
 def bin_shifter(args, y_train, y_test):
     """
     Shifts class labels so that they are contiguous (without gaps).
@@ -187,8 +80,8 @@ def bin_shifter(args, y_train, y_test):
         args.num_classes = len(np.unique(y_train_shift))  # Set correct number of classes
         args.bin_alt = sorted(list(np.unique(y_train_shift)))  # Ensure proper bin numbering
 
-        print(f"Final Train Labels: {np.unique(y_train_shift)}, Length: {len(np.unique(y_train_shift))}")
-        print(f"Final Test Labels: {np.unique(y_test_shift)}, Length: {len(np.unique(y_test_shift))}")
+        print(f"Final Train Labels Length: {len(np.unique(y_train_shift))}")
+        print(f"Final Test Labels Length: {len(np.unique(y_test_shift))}")
         print(f"Final Num Classes: {args.num_classes}")
         print(f"Final Bin Labels: {args.bin_alt}")
 
@@ -362,7 +255,8 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         print(f"Number of classes : {args.num_classes}")
         print(f"Class label len :{len(args.bin_alt)}")
         print(f"Class labels : {args.bin_alt}")
-        print(f"Unique y_true : {np.unique(y_test)} \n")
+        print(f"Unique y_true : {len(np.unique(y_test))}")
+        print(f"Unique train : {len(np.unique(y_train))}\n")
         print(f"Prediction shape : {curr_model.predictions.shape}")
         print(f"Probabilities shape : {curr_model.prediction_probabilities.shape} \n")
         print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
@@ -370,7 +264,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
 
         #y_test = bin_shifter(args,y_train,y_test)
         # Compute scores on the output
-        sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities)
+        sc.eval(y_test, curr_model.predictions, curr_model.prediction_probabilities,labels=np.unique(y_train))
         print("After Evaluation")
 
         print(f'{sc.get_results()} \n \n')

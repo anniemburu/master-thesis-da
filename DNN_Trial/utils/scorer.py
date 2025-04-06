@@ -76,9 +76,10 @@ class ProbRegScorer(Scorer):
         self.accs = []
         self.f1s = []
 
-    def eval(self, y_true, y_prediction, y_probabilities):
-        #print(f"Unique classes in y_true: {np.unique(y_true)}")
-        #print(f"Unique classes in y_pred: {np.unique(y_probabilities)}") 
+    def eval(self, y_true, y_prediction, y_probabilities,labels=None):
+        print("IN SCORER EVAL")
+        print(f"y_true classes: {len(np.unique(y_true))}")
+        print(f"Probabilities shape: {y_probabilities.shape}")
         y_probabilities = torch.tensor(y_probabilities)
         y_true = torch.tensor(y_true, dtype=torch.long)
         y_logits = torch.log(y_probabilities + 1e-9)
@@ -87,7 +88,7 @@ class ProbRegScorer(Scorer):
         loss_fn = nn.CrossEntropyLoss()
 
         logloss = loss_fn(y_logits, y_true)
-        auc = roc_auc_score(y_true, y_probabilities, multi_class='ovo', average="macro")
+        auc = roc_auc_score(y_true, y_probabilities, multi_class='ovo', average="macro", labels=labels)
         acc = accuracy_score(y_true, y_prediction)
         f1 = f1_score(y_true, y_prediction, average="weighted")  # use here macro or weighted?
 
@@ -96,6 +97,8 @@ class ProbRegScorer(Scorer):
         self.aucs.append(auc)
         self.accs.append(acc)
         self.f1s.append(f1)
+
+        print("DONE IN SCORER EVAL")
 
         return {"Log Loss": logloss, "AUC": auc, "Accuracy": acc, "F1 score": f1}
         
