@@ -1,15 +1,27 @@
 #!/bin/bash
-#SBATCH --job-name=VIME_Olympus_V1
+#SBATCH --job-name=VIME_Hercules
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
 #SBATCH --partition=STUD
 #SBATCH --gres=gpu:1
 
-CONFIGS=(config/boston.yml
-        config/socmob.yml
-       	config/sensory.yml
-        config/moneyball.yml )
+CONFIGS=(
+    config/abalone.yml
+    config/allstate.yml
+    config/black_friday.yml
+    config/boston.yml
+    config/brazillian_houses.yml
+    config/diamonds.yml
+    config/house_prices_nominal.yml
+    config/house_sales.yml
+    config/mercedes_benz.yml
+    config/mip_2016.yml
+    config/moneyball.yml
+    config/sat11.yml
+    config/sensory.yml
+    config/socmob.yml
+)
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
@@ -22,6 +34,3 @@ for config in "${CONFIGS[@]}"; do
     srun python3 train.py --config "$config" --model_name VIME --objective probabilistic_regression
 
 done
-
-
-
