@@ -1,0 +1,24 @@
+2025-03-29 18:27:08.960813
+TabNet - Sensory
+
+Log Loss - mean: 8.20962
+Log Loss - std: 0.14726
+
+Train time: 7.923728
+Test time: 0.037669
+
+Best Parameters: {'n_d': 31, 'n_steps': 9, 'gamma': 1.381778179583, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.0013090692959266549, 'mask_type': 'sparsemax', 'n_a': 31, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-03-30 06:09:55.078669
+TabNet - Sensory
+
+Log Loss - mean: 8.49620
+Log Loss - std: 0.09209
+
+Train time: 8.498129
+Test time: 0.043221
+
+Best Parameters: {'n_d': 64, 'n_steps': 10, 'gamma': 1.2848422903260368, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.0012898569410406914, 'mask_type': 'sparsemax', 'n_a': 64, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

@@ -1,0 +1,24 @@
+2025-03-29 17:37:06.302504
+TabNet - Socmob
+
+Log Loss - mean: 9.33594
+Log Loss - std: 0.28003
+
+Train time: 9.485460
+Test time: 0.038870
+
+Best Parameters: {'n_d': 37, 'n_steps': 4, 'gamma': 1.4907564955519783, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.0010266022807011962, 'mask_type': 'entmax', 'n_a': 37, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-03-30 04:53:11.932774
+TabNet - Socmob
+
+Log Loss - mean: 9.34298
+Log Loss - std: 0.46085
+
+Train time: 29.525204
+Test time: 0.063896
+
+Best Parameters: {'n_d': 49, 'n_steps': 6, 'gamma': 1.9936897444554504, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.0010174761003975195, 'mask_type': 'sparsemax', 'n_a': 49, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
