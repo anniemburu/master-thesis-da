@@ -50,10 +50,10 @@ parameters:
       p_m: 0.39298609993780165
   Black_Friday:
     SAINT:
-      depth: 3
-      dim: 64
-      dropout: 0.1
-      heads: 2
+      depth: 6
+      dim: 256
+      dropout: 0.6
+      heads: 8
     TabTransformer:
       depth: 2
       dim: 256
@@ -94,6 +94,11 @@ parameters:
       beta: 0.12216986637163613
       p_m: 0.1424087402217248
   Brazillian_Houses:
+    SAINT:
+      depth: 1
+      dim: 64
+      dropout: 0.3
+      heads: 8
     TabTransformer:
       depth: 6
       dim: 256
@@ -101,6 +106,11 @@ parameters:
       heads: 2
       learning_rate: -3
       weight_decay: -5
+    VIME:
+      K: 5
+      alpha: 2.655182278718539
+      beta: 9.991174696990383
+      p_m: 0.645573767288089
   Diamonds:
     SAINT:
       depth: 6
