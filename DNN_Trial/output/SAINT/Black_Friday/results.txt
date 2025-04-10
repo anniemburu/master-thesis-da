@@ -1,0 +1,30 @@
+2025-04-01 13:30:45.614888
+SAINT - Black_Friday
+
+Log Loss - mean: 2.14168
+Log Loss - std: 0.00557
+
+Train time: 10686.488404
+Test time: 5.723548
+
+Best Parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.1}
+
+
+2025-04-08 10:39:24.156516
+SAINT - Black_Friday
+
+Log Loss - mean: 2.13521
+Log Loss - std: 0.00400
+AUC - mean: 0.93402
+AUC - std: 0.00074
+Accuracy - mean: 0.21136
+Accuracy - std: 0.00145
+F1 score - mean: 0.15908
+F1 score - std: 0.00784
+
+Train time: 16527.439078
+Test time: 6.740925
+
+Best Parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'dropout': 0.6}
+
+
