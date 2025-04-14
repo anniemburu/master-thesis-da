@@ -8,7 +8,7 @@ parameters:
     TabNet:
       cat_emb_dim: 1
       gamma: 1.8370117235962122
-      mask_type: sparsemax
+      mask_type: 'sparsemax'
       momentum: 0.0010080119264888568
       n_d: 47
       n_independent: 2
@@ -30,7 +30,7 @@ parameters:
     TabNet:
       cat_emb_dim: 1
       gamma: 1.4921895070384743
-      mask_type: sparsemax
+      mask_type: 'sparsemax'
       momentum: 0.0017812705579288248
       n_d: 12
       n_independent: 2
@@ -75,7 +75,7 @@ parameters:
     TabNet:
       cat_emb_dim: 3
       gamma: 1.123911559954574
-      mask_type: sparsemax
+      mask_type: 'sparsemax'
       momentum: 0.0017492683262505184
       n_d: 47
       n_independent: 5
@@ -139,7 +139,7 @@ parameters:
     TabNet:
       cat_emb_dim: 1
       gamma: 1.7628506672787196
-      mask_type: entmax
+      mask_type: 'entmax'
       momentum: 0.0010624672219206063
       n_d: 14
       n_independent: 3
@@ -166,7 +166,7 @@ parameters:
     TabNet:
       cat_emb_dim: 2
       gamma: 1.5848384082400053
-      mask_type: sparsemax
+      mask_type: 'sparsemax'
       momentum: 0.0010078945202086514
       n_d: 14
       n_independent: 5
@@ -193,7 +193,7 @@ parameters:
     TabNet:
       cat_emb_dim: 2
       gamma: 1.3877609999918645
-      mask_type: entmax
+      mask_type: 'entmax'
       momentum: 0.001069771757489611
       n_d: 33
       n_independent: 5
@@ -220,7 +220,7 @@ parameters:
     TabNet:
       cat_emb_dim: 2
       gamma: 1.793948107179346
-      mask_type: sparsemax
+      mask_type: 'sparsemax'
       momentum: 0.0010414004281684049
       n_d: 61
       n_independent: 4
@@ -247,7 +247,7 @@ parameters:
     TabNet:
       cat_emb_dim: 3
       gamma: 1.0136194191205694
-      mask_type: entmax
+      mask_type: 'entmax'
       momentum: 0.0010133373717923582
       n_d: 14
       n_independent: 5
@@ -274,7 +274,7 @@ parameters:
     TabNet:
       cat_emb_dim: 2
       gamma: 1.2848422903260368
-      mask_type: sparsemax
+      mask_type: 'sparsemax'
       momentum: 0.0012898569410406914
       n_d: 64
       n_independent: 5
@@ -301,7 +301,7 @@ parameters:
     TabNet:
       cat_emb_dim: 2
       gamma: 1.9936897444554504
-      mask_type: sparsemax
+      mask_type: 'sparsemax'
       momentum: 0.0010174761003975195
       n_d: 49
       n_independent: 5
