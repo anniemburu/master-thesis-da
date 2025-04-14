@@ -6,14 +6,14 @@ parameters:
       dropout: 0.8
       heads: 4
     TabNet:
-      cat_emb_dim: 1
-      gamma: 1.8370117235962122
-      mask_type: 'sparsemax'
-      momentum: 0.0010080119264888568
-      n_d: 47
-      n_independent: 2
-      n_shared: 2
-      n_steps: 7
+      'n_d': 50
+      'n_steps': 5
+      'gamma': 1.5663090407114713
+      'cat_emb_dim': 2
+      'n_independent': 3
+      'n_shared': 4
+      'momentum': 0.050028606098492225
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 1
       dim: 256
@@ -28,14 +28,14 @@ parameters:
       p_m: 0.7192123464423629
   Allstate_Claims:
     TabNet:
-      cat_emb_dim: 1
-      gamma: 1.4921895070384743
-      mask_type: 'sparsemax'
-      momentum: 0.0017812705579288248
-      n_d: 12
-      n_independent: 2
-      n_shared: 5
-      n_steps: 6
+      'n_d': 10
+      'n_steps': 7
+      'gamma': 1.9472126033649575
+      'cat_emb_dim': 1
+      'n_independent': 1
+      'n_shared': 3
+      'momentum': 0.016286304749596685
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 6
       dim: 64
@@ -58,6 +58,15 @@ parameters:
       #dim: 256
       #dropout: 0.6
       #heads: 8
+    TabNet:
+      'n_d': 49
+      'n_steps': 9
+      'gamma': 1.369955001148331
+      'cat_emb_dim': 2
+      'n_independent': 2
+      'n_shared': 1
+      'momentum': 0.004367655077816197
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 2
       dim: 256
@@ -77,14 +86,14 @@ parameters:
       dropout: 0.2
       heads: 4
     TabNet:
-      cat_emb_dim: 3
-      gamma: 1.123911559954574
-      mask_type: 'sparsemax'
-      momentum: 0.0017492683262505184
-      n_d: 47
-      n_independent: 5
-      n_shared: 2
-      n_steps: 7
+      'n_d': 38
+      'n_steps': 9
+      'gamma': 1.3891716282954787
+      'cat_emb_dim': 1
+      'n_independent': 5
+      'n_shared': 2
+      'momentum': 0.3466244172420148
+      'mask_type': 'sparsemax'
     TabTransformer:
       depth: 12
       dim: 64
@@ -103,6 +112,15 @@ parameters:
       dim: 64
       dropout: 0.3
       heads: 8
+    TabNet:
+      'n_d': 12
+      'n_steps': 10
+      'gamma': 1.229058118951327
+      'cat_emb_dim': 3
+      'n_independent': 1
+      'n_shared': 1
+      'momentum': 0.008442704193527406
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 6
       dim: 256
@@ -127,12 +145,30 @@ parameters:
       alpha: 3.563299246825732
       beta: 0.15752439579445252
       p_m: 0.20832777474756226
+    TabNet:
+    'n_d': 62
+    'n_steps': 3
+    'gamma': 1.1240342936418037
+    'cat_emb_dim': 3
+    'n_independent': 2
+    'n_shared': 5
+    'momentum': 0.034019709479691004
+    'mask_type': 'entmax'
   House_Prices_Nominal:
     SAINT:
       depth: 6
       dim: 256
       dropout: 0.8
       heads: 2
+    TabNet:
+      'n_d': 26
+      'n_steps': 8
+      'gamma': 1.3514142331293966
+      'cat_emb_dim': 1
+      'n_independent': 1
+      'n_shared': 1
+      'momentum': 0.23057141586702234
+      'mask_type': 'sparsemax'
     TabTransformer:
       depth: 6
       dim: 64
@@ -152,14 +188,14 @@ parameters:
       dropout: 0.2
       heads: 2
     TabNet:
-      cat_emb_dim: 1
-      gamma: 1.7628506672787196
-      mask_type: 'entmax'
-      momentum: 0.0010624672219206063
-      n_d: 14
-      n_independent: 3
-      n_shared: 4
-      n_steps: 9
+      'n_d': 12
+      'n_steps': 10
+      'gamma': 1.8872748870570282
+      'cat_emb_dim': 3
+      'n_independent': 5
+      'n_shared': 2
+      'momentum': 0.21533303564600936
+      'mask_type': 'sparsemax'
     TabTransformer:
       depth: 12
       dim: 256
@@ -179,14 +215,14 @@ parameters:
       dropout: 0.5
       heads: 2
     TabNet:
-      cat_emb_dim: 2
-      gamma: 1.5848384082400053
-      mask_type: 'sparsemax'
-      momentum: 0.0010078945202086514
-      n_d: 14
-      n_independent: 5
-      n_shared: 5
-      n_steps: 10
+      'n_d': 41
+      'n_steps': 5
+      'gamma': 1.3721100029473874
+      'cat_emb_dim': 3
+      'n_independent': 2
+      'n_shared': 5
+      'momentum': 0.04082891418919128
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 12
       dim: 32
@@ -206,14 +242,14 @@ parameters:
       dropout: 0
       heads: 4
     TabNet:
-      cat_emb_dim: 2
-      gamma: 1.3877609999918645
-      mask_type: 'entmax'
-      momentum: 0.001069771757489611
-      n_d: 33
-      n_independent: 5
-      n_shared: 3
-      n_steps: 9
+      'n_d': 45
+      'n_steps': 9
+      'gamma': 1.3995975194223993
+      'cat_emb_dim': 2
+      'n_independent': 4
+      'n_shared': 3
+      'momentum': 0.11909378922311181
+      'mask_type': 'sparsemax'
     TabTransformer:
       depth: 2
       dim: 256
@@ -233,14 +269,14 @@ parameters:
       dropout: 0.3
       heads: 4
     TabNet:
-      cat_emb_dim: 2
-      gamma: 1.793948107179346
-      mask_type: 'sparsemax'
-      momentum: 0.0010414004281684049
-      n_d: 61
-      n_independent: 4
-      n_shared: 5
-      n_steps: 9
+      'n_d': 54
+      'n_steps': 3
+      'gamma': 1.146064969013056
+      'cat_emb_dim': 1
+      'n_independent': 3
+      'n_shared': 4
+      'momentum': 0.17635802666090059
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 12
       dim: 128
@@ -260,14 +296,14 @@ parameters:
       dropout: 0.6
       heads: 2
     TabNet:
-      cat_emb_dim: 3
-      gamma: 1.0136194191205694
-      mask_type: 'entmax'
-      momentum: 0.0010133373717923582
-      n_d: 14
-      n_independent: 5
-      n_shared: 4
-      n_steps: 3
+      'n_d': 36, 
+      'n_steps': 6
+      'gamma': 1.2879697909916161
+      'cat_emb_dim': 3
+      'n_independent': 5
+      'n_shared': 2
+      'momentum': 0.09808991167616203
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 3
       dim: 64
@@ -287,14 +323,14 @@ parameters:
       dropout: 0
       heads: 8
     TabNet:
-      cat_emb_dim: 2
-      gamma: 1.2848422903260368
-      mask_type: 'sparsemax'
-      momentum: 0.0012898569410406914
-      n_d: 64
-      n_independent: 5
-      n_shared: 3
-      n_steps: 10
+      'n_d': 61
+      'n_steps': 10
+      'gamma': 1.2289798549170807
+      'cat_emb_dim': 2
+      'n_independent': 5
+      'n_shared': 3
+      'momentum': 0.1398011911245908
+      'mask_type': 'sparsemax'
     TabTransformer:
       depth: 2
       dim: 128
@@ -314,14 +350,14 @@ parameters:
       dropout: 0.2
       heads: 2
     TabNet:
-      cat_emb_dim: 2
-      gamma: 1.9936897444554504
-      mask_type: 'sparsemax'
-      momentum: 0.0010174761003975195
-      n_d: 49
-      n_independent: 5
-      n_shared: 5
-      n_steps: 6
+      'n_d': 43
+      'n_steps': 7
+      'gamma': 1.981041493912566
+      'cat_emb_dim': 2
+      'n_independent': 3
+      'n_shared': 5
+      'momentum': 0.044332295217345545
+      'mask_type': 'entmax'
     TabTransformer:
       depth: 2
       dim: 32
