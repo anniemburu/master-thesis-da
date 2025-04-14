@@ -117,6 +117,15 @@ parameters:
       dim: 128
       dropout: 0.6
       heads: 2
+    TabNet:
+      cat_emb_dim: 1
+      gamma: 1.3943964936907358
+      mask_type: sparsemax
+      momentum: 0.0017623393850073233
+      n_d: 12
+      n_independent: 3
+      n_shared: 1
+      n_steps: 10
     VIME:
       K: 10
       alpha: 3.563299246825732
@@ -276,6 +285,11 @@ parameters:
       beta: 6.833123020518896
       p_m: 0.8537536712438457
   Sensory:
+    NODE:
+      num_layers: 8
+      total_tree_count: 1024
+      tree_depth: 6
+      tree_output_dim: 2
     SAINT:
       depth: 1
       dim: 128
