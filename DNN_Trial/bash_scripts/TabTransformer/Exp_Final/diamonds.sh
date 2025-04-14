@@ -9,6 +9,6 @@
 
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/anaconda3/etc/profile.d/conda.sh
-conda activate TabSurvey2
+conda activate TabSurvey
 srun python3 train.py --config config/diamonds.yml --model_name TabTransformer --optimize_hyperparameters --n_trials 8 --epochs 100 --batch_size 64 --val_batch_size 128
 
