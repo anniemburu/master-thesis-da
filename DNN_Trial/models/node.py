@@ -156,7 +156,7 @@ class NODE(BaseModelTorch):
                 self.trainer.load_checkpoint(tag='avg')
 
                 #print("Loss %.5f" % (metrics['loss']))
-                print("Loss %.5f" % (loss))
+                #print("Loss %.5f" % (loss))
 
                 if self.args.objective == "regression":
                     loss = self.trainer.evaluate_mse(data.X_valid, data.y_valid, device=self.device,

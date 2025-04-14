@@ -1,0 +1,4230 @@
+Namespace(batch_size=64, bin_alt=None, cat_dims=[2], cat_idx=[0], config='config/sat11.yml', data_parallel=False, dataset='SAT11', direction='maximize', dropna_idx=[116], early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='NODE', n_trials=60, nominal_idx=[115], num_bins=10, num_classes=1, num_features=117, num_idx=None, num_splits=5, objective='probabilistic_regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=128, y_distribution='bimodial')
+Start hyperparameter optimization
+Loading dataset SAT11...
+Dataset loaded! 
+
+(1725, 116)
+Using an existing study with name 'NODE_SAT11' instead of creating a new one.
+In get_device
+On: cuda
+On Device: cuda
+Fold 1
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [1.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ ...
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.76868
+Val Loss: 0.76868
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.71531
+Val Loss: 0.71531
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.67829
+Val Loss: 0.67829
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.65133
+Val Loss: 0.65133
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.63060
+Val Loss: 0.63060
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.59372
+Val Loss: 0.59372
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.57008
+Val Loss: 0.57008
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.55167
+Val Loss: 0.55167
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.53710
+Val Loss: 0.53710
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.52484
+Val Loss: 0.52484
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.51470
+Val Loss: 0.51470
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.50657
+Val Loss: 0.50657
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.49878
+Val Loss: 0.49878
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.49180
+Val Loss: 0.49180
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.48599
+Val Loss: 0.48599
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.47981
+Val Loss: 0.47981
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.47352
+Val Loss: 0.47352
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.46762
+Val Loss: 0.46762
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.46200
+Val Loss: 0.46200
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.45579
+Val Loss: 0.45579
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.44958
+Val Loss: 0.44958
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_avg.pth
+Val LogLoss: 0.44313
+Val Loss: 0.44313
+Saved logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:01:41/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_0.pt
+Saved output/NODE/SAT11/models/m_0.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.44313, 'Log Loss - std': 0.0, 'AUC - mean': 0.8181712962962964, 'AUC - std': 0.0, 'Accuracy - mean': 0.8521739130434782, 'Accuracy - std': 0.0, 'F1 score - mean': 0.834441764274195, 'F1 score - std': 0.0} 
+ 
+
+Fold 2
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ ...
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.83100
+Val Loss: 0.83100
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.79004
+Val Loss: 0.79004
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.75915
+Val Loss: 0.75915
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.73369
+Val Loss: 0.73369
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.71234
+Val Loss: 0.71234
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.66683
+Val Loss: 0.66683
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.63645
+Val Loss: 0.63645
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.61602
+Val Loss: 0.61602
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.60158
+Val Loss: 0.60158
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.59270
+Val Loss: 0.59270
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.58599
+Val Loss: 0.58599
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.58055
+Val Loss: 0.58055
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.57713
+Val Loss: 0.57713
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.57390
+Val Loss: 0.57390
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.56995
+Val Loss: 0.56995
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.56589
+Val Loss: 0.56589
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.56242
+Val Loss: 0.56242
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.55726
+Val Loss: 0.55726
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.55288
+Val Loss: 0.55288
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.54750
+Val Loss: 0.54750
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.54133
+Val Loss: 0.54133
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_avg.pth
+Val LogLoss: 0.53470
+Val Loss: 0.53470
+Saved logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:15:13/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_1.pt
+Saved output/NODE/SAT11/models/m_1.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.488915, 'Log Loss - std': 0.045784999999999965, 'AUC - mean': 0.8267717973338105, 'AUC - std': 0.008600501037514086, 'Accuracy - mean': 0.8318840579710145, 'Accuracy - std': 0.020289855072463725, 'F1 score - mean': 0.8121872964723321, 'F1 score - std': 0.02225446780186291} 
+ 
+
+Fold 3
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ ...
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.79187
+Val Loss: 0.79187
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.74403
+Val Loss: 0.74403
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.70915
+Val Loss: 0.70915
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.68175
+Val Loss: 0.68175
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.65954
+Val Loss: 0.65954
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.61727
+Val Loss: 0.61727
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.59074
+Val Loss: 0.59074
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.56823
+Val Loss: 0.56823
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.54934
+Val Loss: 0.54934
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.53465
+Val Loss: 0.53465
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.52306
+Val Loss: 0.52306
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.51360
+Val Loss: 0.51360
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.50555
+Val Loss: 0.50555
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.49801
+Val Loss: 0.49801
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.49016
+Val Loss: 0.49016
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.48232
+Val Loss: 0.48232
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.47387
+Val Loss: 0.47387
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.46438
+Val Loss: 0.46438
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.45442
+Val Loss: 0.45442
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.44460
+Val Loss: 0.44460
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.43539
+Val Loss: 0.43539
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_avg.pth
+Val LogLoss: 0.42688
+Val Loss: 0.42688
+Saved logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:26:47/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_2.pt
+Saved output/NODE/SAT11/models/m_2.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.46823666666666663, 'Log Loss - std': 0.04746259322409126, 'AUC - mean': 0.8484416849072308, 'AUC - std': 0.0314401092070868, 'Accuracy - mean': 0.8386473429951691, 'Accuracy - std': 0.01912945881470849, 'F1 score - mean': 0.8187778764646928, 'F1 score - std': 0.02042169713892992} 
+ 
+
+Fold 4
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ ...
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.80227
+Val Loss: 0.80227
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.75904
+Val Loss: 0.75904
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.72584
+Val Loss: 0.72584
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.69907
+Val Loss: 0.69907
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.67728
+Val Loss: 0.67728
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.63336
+Val Loss: 0.63336
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.59916
+Val Loss: 0.59916
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.57639
+Val Loss: 0.57639
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.55995
+Val Loss: 0.55995
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.54837
+Val Loss: 0.54837
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.53939
+Val Loss: 0.53939
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.53196
+Val Loss: 0.53196
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.52474
+Val Loss: 0.52474
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.51801
+Val Loss: 0.51801
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.51151
+Val Loss: 0.51151
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.50568
+Val Loss: 0.50568
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.49927
+Val Loss: 0.49927
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.49366
+Val Loss: 0.49366
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.48845
+Val Loss: 0.48845
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.48231
+Val Loss: 0.48231
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.47627
+Val Loss: 0.47627
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_avg.pth
+Val LogLoss: 0.47181
+Val Loss: 0.47181
+Saved logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:36:58/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_3.pt
+Saved output/NODE/SAT11/models/m_3.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.46913, 'Log Loss - std': 0.04113292416057967, 'AUC - mean': 0.8480801829139103, 'AUC - std': 0.027235131747224618, 'Accuracy - mean': 0.8391304347826087, 'Accuracy - std': 0.016587714698926916, 'F1 score - mean': 0.8185846213161387, 'F1 score - std': 0.017688875831520835} 
+ 
+
+Fold 5
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [1.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 1.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ ...
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.77983
+Val Loss: 0.77983
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.72886
+Val Loss: 0.72886
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.69016
+Val Loss: 0.69016
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.65851
+Val Loss: 0.65851
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.63236
+Val Loss: 0.63236
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.57825
+Val Loss: 0.57825
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.54316
+Val Loss: 0.54316
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.51867
+Val Loss: 0.51867
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.49841
+Val Loss: 0.49841
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.48180
+Val Loss: 0.48180
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.46839
+Val Loss: 0.46839
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.45752
+Val Loss: 0.45752
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.44876
+Val Loss: 0.44876
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.44081
+Val Loss: 0.44081
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.43359
+Val Loss: 0.43359
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.42635
+Val Loss: 0.42635
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.41896
+Val Loss: 0.41896
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.41153
+Val Loss: 0.41153
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.40354
+Val Loss: 0.40354
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.39556
+Val Loss: 0.39556
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.38774
+Val Loss: 0.38774
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_avg.pth
+Val LogLoss: 0.37978
+Val Loss: 0.37978
+Saved logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:46:06/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_4.pt
+Saved output/NODE/SAT11/models/m_4.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.45126, 'Log Loss - std': 0.05129211986260656, 'AUC - mean': 0.8618813915596941, 'AUC - std': 0.036814336356490146, 'Accuracy - mean': 0.846376811594203, 'Accuracy - std': 0.02074034066086759, 'F1 score - mean': 0.8271042079054659, 'F1 score - std': 0.023251892076958925} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 1 finished with value: 0.45126 and parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}. Best is trial 1 with value: 0.45126.
+In get_device
+On: cuda
+On Device: cuda
+Fold 1
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [1.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ ...
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.77407
+Val Loss: 0.77407
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.72673
+Val Loss: 0.72673
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.69167
+Val Loss: 0.69167
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.66492
+Val Loss: 0.66492
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.64380
+Val Loss: 0.64380
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.60651
+Val Loss: 0.60651
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.58275
+Val Loss: 0.58275
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.56388
+Val Loss: 0.56388
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.54868
+Val Loss: 0.54868
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.53633
+Val Loss: 0.53633
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.52561
+Val Loss: 0.52561
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.51628
+Val Loss: 0.51628
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.50744
+Val Loss: 0.50744
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.49927
+Val Loss: 0.49927
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.49122
+Val Loss: 0.49122
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.48364
+Val Loss: 0.48364
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.47585
+Val Loss: 0.47585
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.46846
+Val Loss: 0.46846
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.46077
+Val Loss: 0.46077
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.45310
+Val Loss: 0.45310
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.44516
+Val Loss: 0.44516
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_avg.pth
+Val LogLoss: 0.43713
+Val Loss: 0.43713
+Saved logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_17:54:52/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_0.pt
+Saved output/NODE/SAT11/models/m_0.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.43713, 'Log Loss - std': 0.0, 'AUC - mean': 0.8153682818156502, 'AUC - std': 0.0, 'Accuracy - mean': 0.8521739130434782, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8343917928676111, 'F1 score - std': 0.0} 
+ 
+
+Fold 2
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ ...
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.82710
+Val Loss: 0.82710
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.79125
+Val Loss: 0.79125
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.76131
+Val Loss: 0.76131
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.73642
+Val Loss: 0.73642
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.71570
+Val Loss: 0.71570
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.67171
+Val Loss: 0.67171
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.64248
+Val Loss: 0.64248
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.62368
+Val Loss: 0.62368
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.60966
+Val Loss: 0.60966
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.60001
+Val Loss: 0.60001
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.59249
+Val Loss: 0.59249
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.58684
+Val Loss: 0.58684
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.58271
+Val Loss: 0.58271
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.57887
+Val Loss: 0.57887
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.57426
+Val Loss: 0.57426
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.56996
+Val Loss: 0.56996
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.56513
+Val Loss: 0.56513
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.55992
+Val Loss: 0.55992
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.55334
+Val Loss: 0.55334
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.54583
+Val Loss: 0.54583
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.53778
+Val Loss: 0.53778
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_avg.pth
+Val LogLoss: 0.53041
+Val Loss: 0.53041
+Saved logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:00:23/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_1.pt
+Saved output/NODE/SAT11/models/m_1.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.48377000000000003, 'Log Loss - std': 0.046640000000000015, 'AUC - mean': 0.8252378267185703, 'AUC - std': 0.00986954490292008, 'Accuracy - mean': 0.8318840579710145, 'Accuracy - std': 0.020289855072463725, 'F1 score - mean': 0.812175383254907, 'F1 score - std': 0.022216409612704158} 
+ 
+
+Fold 3
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ ...
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.78793
+Val Loss: 0.78793
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.74583
+Val Loss: 0.74583
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.71289
+Val Loss: 0.71289
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.68681
+Val Loss: 0.68681
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.66513
+Val Loss: 0.66513
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.62438
+Val Loss: 0.62438
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.59906
+Val Loss: 0.59906
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.57982
+Val Loss: 0.57982
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.56214
+Val Loss: 0.56214
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.54705
+Val Loss: 0.54705
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.53440
+Val Loss: 0.53440
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.52288
+Val Loss: 0.52288
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.51263
+Val Loss: 0.51263
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.50400
+Val Loss: 0.50400
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.49602
+Val Loss: 0.49602
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.48791
+Val Loss: 0.48791
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.48007
+Val Loss: 0.48007
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.47203
+Val Loss: 0.47203
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.46399
+Val Loss: 0.46399
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.45596
+Val Loss: 0.45596
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.44743
+Val Loss: 0.44743
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_avg.pth
+Val LogLoss: 0.43899
+Val Loss: 0.43899
+Saved logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:06:04/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_2.pt
+Saved output/NODE/SAT11/models/m_2.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.46884333333333333, 'Log Loss - std': 0.043540829369939936, 'AUC - mean': 0.8456175593391141, 'AUC - std': 0.02992667062053887, 'Accuracy - mean': 0.8357487922705314, 'Accuracy - std': 0.01744489863310894, 'F1 score - mean': 0.8159354255693395, 'F1 score - std': 0.018902955865832603} 
+ 
+
+Fold 4
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ ...
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.80275
+Val Loss: 0.80275
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.76331
+Val Loss: 0.76331
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.73005
+Val Loss: 0.73005
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.70320
+Val Loss: 0.70320
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.68140
+Val Loss: 0.68140
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.63766
+Val Loss: 0.63766
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.60601
+Val Loss: 0.60601
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.58616
+Val Loss: 0.58616
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.57080
+Val Loss: 0.57080
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.55822
+Val Loss: 0.55822
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.54810
+Val Loss: 0.54810
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.53894
+Val Loss: 0.53894
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.53090
+Val Loss: 0.53090
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.52408
+Val Loss: 0.52408
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.51734
+Val Loss: 0.51734
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.51081
+Val Loss: 0.51081
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.50405
+Val Loss: 0.50405
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.49726
+Val Loss: 0.49726
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.48954
+Val Loss: 0.48954
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.48338
+Val Loss: 0.48338
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.47716
+Val Loss: 0.47716
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_avg.pth
+Val LogLoss: 0.47121
+Val Loss: 0.47121
+Saved logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:12:07/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_3.pt
+Saved output/NODE/SAT11/models/m_3.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.46943500000000005, 'Log Loss - std': 0.037721387500992076, 'AUC - mean': 0.8449117187831318, 'AUC - std': 0.025946075685815702, 'Accuracy - mean': 0.8369565217391304, 'Accuracy - std': 0.01525185882597764, 'F1 score - mean': 0.8164682058598591, 'F1 score - std': 0.01639642857036586} 
+ 
+
+Fold 5
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [1.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 1.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ ...
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.77461
+Val Loss: 0.77461
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.72892
+Val Loss: 0.72892
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.69233
+Val Loss: 0.69233
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.66220
+Val Loss: 0.66220
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.63695
+Val Loss: 0.63695
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.58599
+Val Loss: 0.58599
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.55471
+Val Loss: 0.55471
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.53269
+Val Loss: 0.53269
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.51391
+Val Loss: 0.51391
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.49744
+Val Loss: 0.49744
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.48327
+Val Loss: 0.48327
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.47134
+Val Loss: 0.47134
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.46089
+Val Loss: 0.46089
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.45174
+Val Loss: 0.45174
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.44381
+Val Loss: 0.44381
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.43623
+Val Loss: 0.43623
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.42806
+Val Loss: 0.42806
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.41972
+Val Loss: 0.41972
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.41181
+Val Loss: 0.41181
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.40287
+Val Loss: 0.40287
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.39332
+Val Loss: 0.39332
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_avg.pth
+Val LogLoss: 0.38435
+Val Loss: 0.38435
+Saved logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:18:53/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_4.pt
+Saved output/NODE/SAT11/models/m_4.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.45241800000000004, 'Log Loss - std': 0.047923226268689396, 'AUC - mean': 0.8585486676835339, 'AUC - std': 0.03581095608949836, 'Accuracy - mean': 0.8440579710144928, 'Accuracy - std': 0.019693087248073067, 'F1 score - mean': 0.8248382311056052, 'F1 score - std': 0.022255417011329916} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 2 finished with value: 0.45241800000000004 and parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}. Best is trial 2 with value: 0.45241800000000004.
+In get_device
+On: cuda
+On Device: cuda
+Fold 1
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [1.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ ...
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.77407
+Val Loss: 0.77407
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.72674
+Val Loss: 0.72674
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.69167
+Val Loss: 0.69167
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.66492
+Val Loss: 0.66492
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.64380
+Val Loss: 0.64380
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.60651
+Val Loss: 0.60651
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.58275
+Val Loss: 0.58275
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.56388
+Val Loss: 0.56388
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.54868
+Val Loss: 0.54868
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.53632
+Val Loss: 0.53632
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.52560
+Val Loss: 0.52560
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.51626
+Val Loss: 0.51626
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.50742
+Val Loss: 0.50742
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.49926
+Val Loss: 0.49926
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.49122
+Val Loss: 0.49122
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.48364
+Val Loss: 0.48364
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.47584
+Val Loss: 0.47584
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.46844
+Val Loss: 0.46844
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.46073
+Val Loss: 0.46073
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.45304
+Val Loss: 0.45304
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.44511
+Val Loss: 0.44511
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_avg.pth
+Val LogLoss: 0.43710
+Val Loss: 0.43710
+Saved logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:25:31/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_0.pt
+Saved output/NODE/SAT11/models/m_0.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.4371, 'Log Loss - std': 0.0, 'AUC - mean': 0.8154535644667223, 'AUC - std': 0.0, 'Accuracy - mean': 0.8521739130434782, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8343917928676111, 'F1 score - std': 0.0} 
+ 
+
+Fold 2
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ ...
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]
+ [0.0 0.0 0.0 ... 2.5554593677083233 1.2724838377231176
+  0.9898050177516838]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.82710
+Val Loss: 0.82710
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.79125
+Val Loss: 0.79125
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.76131
+Val Loss: 0.76131
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.73642
+Val Loss: 0.73642
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.71570
+Val Loss: 0.71570
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.67171
+Val Loss: 0.67171
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.64248
+Val Loss: 0.64248
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.62368
+Val Loss: 0.62368
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.60966
+Val Loss: 0.60966
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.60001
+Val Loss: 0.60001
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.59249
+Val Loss: 0.59249
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.58684
+Val Loss: 0.58684
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.58271
+Val Loss: 0.58271
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.57887
+Val Loss: 0.57887
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.57426
+Val Loss: 0.57426
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.56996
+Val Loss: 0.56996
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.56513
+Val Loss: 0.56513
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.55992
+Val Loss: 0.55992
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.55334
+Val Loss: 0.55334
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.54583
+Val Loss: 0.54583
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.53778
+Val Loss: 0.53778
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_avg.pth
+Val LogLoss: 0.53041
+Val Loss: 0.53041
+Saved logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:31:11/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_1.pt
+Saved output/NODE/SAT11/models/m_1.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.48375500000000005, 'Log Loss - std': 0.04665500000000003, 'AUC - mean': 0.8252804680441064, 'AUC - std': 0.009826903577384027, 'Accuracy - mean': 0.8318840579710145, 'Accuracy - std': 0.020289855072463725, 'F1 score - mean': 0.812175383254907, 'F1 score - std': 0.022216409612704158} 
+ 
+
+Fold 3
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ ...
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]
+ [0.0 0.0 0.0 ... 2.572681656950333 1.2836416330199947 0.9931480745530373]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.78793
+Val Loss: 0.78793
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.74583
+Val Loss: 0.74583
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.71289
+Val Loss: 0.71289
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.68681
+Val Loss: 0.68681
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.66513
+Val Loss: 0.66513
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.62438
+Val Loss: 0.62438
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.59906
+Val Loss: 0.59906
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.57982
+Val Loss: 0.57982
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.56214
+Val Loss: 0.56214
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.54705
+Val Loss: 0.54705
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.53440
+Val Loss: 0.53440
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.52288
+Val Loss: 0.52288
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.51263
+Val Loss: 0.51263
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.50400
+Val Loss: 0.50400
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.49602
+Val Loss: 0.49602
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.48791
+Val Loss: 0.48791
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.48007
+Val Loss: 0.48007
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.47203
+Val Loss: 0.47203
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.46399
+Val Loss: 0.46399
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.45596
+Val Loss: 0.45596
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.44743
+Val Loss: 0.44743
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_avg.pth
+Val LogLoss: 0.43899
+Val Loss: 0.43899
+Saved logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:37:38/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_2.pt
+Saved output/NODE/SAT11/models/m_2.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.4688333333333334, 'Log Loss - std': 0.04354811464218504, 'AUC - mean': 0.8456459868894716, 'AUC - std': 0.029897949845454592, 'Accuracy - mean': 0.8357487922705314, 'Accuracy - std': 0.01744489863310894, 'F1 score - mean': 0.8159354255693395, 'F1 score - std': 0.018902955865832603} 
+ 
+
+Fold 4
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ ...
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]
+ [0.0 0.0 0.0 ... 2.5776931347039733 1.2593157823662984
+  0.9810282088831183]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.80275
+Val Loss: 0.80275
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.76331
+Val Loss: 0.76331
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.73005
+Val Loss: 0.73005
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.70320
+Val Loss: 0.70320
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.68140
+Val Loss: 0.68140
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.63766
+Val Loss: 0.63766
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.60601
+Val Loss: 0.60601
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.58616
+Val Loss: 0.58616
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.57080
+Val Loss: 0.57080
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.55822
+Val Loss: 0.55822
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.54810
+Val Loss: 0.54810
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.53894
+Val Loss: 0.53894
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.53090
+Val Loss: 0.53090
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.52408
+Val Loss: 0.52408
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.51734
+Val Loss: 0.51734
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.51081
+Val Loss: 0.51081
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.50405
+Val Loss: 0.50405
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.49726
+Val Loss: 0.49726
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.48954
+Val Loss: 0.48954
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.48338
+Val Loss: 0.48338
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.47716
+Val Loss: 0.47716
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_avg.pth
+Val LogLoss: 0.47121
+Val Loss: 0.47121
+Saved logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:45:22/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_3.pt
+Saved output/NODE/SAT11/models/m_3.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.4694275, 'Log Loss - std': 0.037727812270922916, 'AUC - mean': 0.8449330394458998, 'AUC - std': 0.025921813900513888, 'Accuracy - mean': 0.8369565217391304, 'Accuracy - std': 0.01525185882597764, 'F1 score - mean': 0.8164682058598591, 'F1 score - std': 0.01639642857036586} 
+ 
+
+Fold 5
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 0.0 1.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 1.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [1.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 1.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ ...
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]
+ [0.0 0.0 0.0 ... 2.6560947038188796 1.2792309188622057
+  0.9870369058550037]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_100.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.77461
+Val Loss: 0.77461
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_100.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_200.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.72892
+Val Loss: 0.72892
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_200.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_300.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.69233
+Val Loss: 0.69233
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_300.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_400.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.66220
+Val Loss: 0.66220
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_400.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_500.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.63695
+Val Loss: 0.63695
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_500.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_600.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.58599
+Val Loss: 0.58599
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_600.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_700.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.55471
+Val Loss: 0.55471
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_700.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_800.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.53269
+Val Loss: 0.53269
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_800.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_900.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.51391
+Val Loss: 0.51391
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_900.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1000.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.49744
+Val Loss: 0.49744
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1000.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1100.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.48327
+Val Loss: 0.48327
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1100.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1200.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.47134
+Val Loss: 0.47134
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1200.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1300.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.46089
+Val Loss: 0.46089
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1300.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1400.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.45174
+Val Loss: 0.45174
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1400.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1500.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.44381
+Val Loss: 0.44381
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1500.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1600.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.43623
+Val Loss: 0.43623
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1600.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1700.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.42806
+Val Loss: 0.42806
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1700.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1800.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.41972
+Val Loss: 0.41972
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1800.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1900.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.41181
+Val Loss: 0.41181
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_1900.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_2000.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.40287
+Val Loss: 0.40287
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_2000.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_2100.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.39332
+Val Loss: 0.39332
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_2100.pth
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_avg.pth
+Val LogLoss: 0.38435
+Val Loss: 0.38435
+Saved logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_temp_2200.pth
+Loaded logs/SAT11_2025.04.13_18:53:23/checkpoint_best.pth
+Saving at output/NODE/SAT11/models/m_4.pt
+Saved output/NODE/SAT11/models/m_4.pt
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 3
+Class label len :3
+Class labels : [0, 1, 2]
+Unique y_true : 3
+Unique train : 3
+
+Prediction shape : (345,)
+Probabilities shape : (345, 3) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 3
+Probabilities shape: (345, 3)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 0.452412, 'Log Loss - std': 0.04792514179426078, 'AUC - mean': 0.8585657242137483, 'AUC - std': 0.03579039989483799, 'Accuracy - mean': 0.8440579710144928, 'Accuracy - std': 0.019693087248073067, 'F1 score - mean': 0.8248382311056052, 'F1 score - std': 0.022255417011329916} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 3 finished with value: 0.452412 and parameters: {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}. Best is trial 2 with value: 0.45241800000000004.
+In get_device
+On: cuda
+On Device: cuda
+Fold 1
+num_features : 116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :116
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [115]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (1380, 116)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+Cat Dims V1 : []
+Cat Idx V1 : [115] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [1.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 1.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]
+ [0.0 0.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 1.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [1.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ ...
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]
+ [0.0 0.0 0.0 ... 2.579169386727153 1.2837928753303054 0.9948004955077808]] 
+ 
+ 
+Val : (1380, 130) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 3
+Unique values in y_train: (array([0., 1., 2.]), 3)
+Unique values in y_test: (array([0., 1., 2.]), 3)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [0 1 2], Length : 3
+Test after shift : [0 1 2], Length : 3
+Number of Classes After Bin Verifier: 3
+In get_device
+On: cuda
+On Device: cuda
+{'num_layers': 2, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 2}
+Trial 4 failed with parameters: {'num_layers': 2, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 2} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 7.81 GiB. GPU 0 has a total capacty of 7.79 GiB of which 7.08 GiB is free. Including non-PyTorch memory, this process has 720.00 MiB memory in use. Of the allocated memory 397.75 MiB is allocated by PyTorch, and 188.25 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 338, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 67, in fit
+    res = self.model(torch.as_tensor(data.X_train[:1000], device=self.device))
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/arch.py", line 31, in forward
+    h = layer(layer_inp)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 221, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/odst.py", line 98, in forward
+    bin_matches = torch.einsum('btds,dcs->btdc', bins, self.bin_codes_1hot)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/functional.py", line 377, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.81 GiB. GPU 0 has a total capacty of 7.79 GiB of which 7.08 GiB is free. Including non-PyTorch memory, this process has 720.00 MiB memory in use. Of the allocated memory 397.75 MiB is allocated by PyTorch, and 188.25 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Trial 4 failed with value None.

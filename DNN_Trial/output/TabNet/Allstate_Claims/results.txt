@@ -1,0 +1,12 @@
+2025-04-01 21:48:05.923099
+TabNet - Allstate_Claims
+
+Log Loss - mean: 6.53826
+Log Loss - std: 0.05011
+
+Train time: 16020.878437
+Test time: 49.475327
+
+Best Parameters: {'n_d': 12, 'n_steps': 6, 'gamma': 1.4921895070384743, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 5, 'momentum': 0.0017812705579288248, 'mask_type': 'sparsemax', 'n_a': 12, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

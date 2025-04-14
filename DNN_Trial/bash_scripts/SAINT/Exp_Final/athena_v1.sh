@@ -7,9 +7,10 @@
 #SBATCH --gres=gpu:1
 
 CONFIGS=(
-        "config/socmob.yml"
-        "config/sensory.yml"
-        "config/moneyball.yml"
+        #"config/socmob.yml"
+        #"config/sensory.yml"
+        "config/brazillian_houses.yml"
+	#"config/black_friday.yml"
         )
 
 for config in "${CONFIGS[@]}"; do

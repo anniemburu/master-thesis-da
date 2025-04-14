@@ -8,7 +8,7 @@
 
 CONFIGS=(
     config/brazillian_houses.yml
-    config/abalone.yml
+    #config/abalone.yml
 )
 
 for config in "${CONFIGS[@]}"; do
