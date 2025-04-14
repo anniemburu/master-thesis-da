@@ -1,12 +1,13 @@
-Namespace(batch_size=64, bin_alt=None, cat_dims=[2], cat_idx=[0], config='config/mercedes_benz.yml', data_parallel=False, dataset='Mercedes_Benz', direction='maximize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=2, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8], num_bins=10, num_classes=1, num_features=377, num_idx=None, num_splits=5, objective='probabilistic_regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=128, y_distribution='bimodial')
+Namespace(batch_size=64, bin_alt=None, cat_dims=[2], cat_idx=[0], config='config/mercedes_benz.yml', data_parallel=False, dataset='Mercedes_Benz', direction='maximize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='NODE', n_trials=40, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8], num_bins=10, num_classes=1, num_features=377, num_idx=None, num_splits=5, objective='probabilistic_regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=128, y_distribution='bimodial')
 Start hyperparameter optimization
 Loading dataset Mercedes_Benz...
 Dataset loaded! 
 
 (4209, 376)
-A new study created in RDB with name: SAINT_Mercedes_Benz
+Using an existing study with name 'NODE_Mercedes_Benz' instead of creating a new one.
 In get_device
-Using dim 8 and batch size 64
+On: cuda
+On Device: cuda
 Fold 1
 num_features : 376
 num_classes : 1
@@ -127,25 +128,21 @@ Test after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 
  24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 41 42 43], Length : 43
 Number of Classes After Bin Verifier: 47
 In get_device
-Using dim 8 and batch size 64
-{'dim': 64, 'depth': 3, 'heads': 4, 'dropout': 0.6}
-Trial 0 failed with parameters: {'dim': 64, 'depth': 3, 'heads': 4, 'dropout': 0.6} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 310.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 212.44 MiB is free. Including non-PyTorch memory, this process has 7.58 GiB memory in use. Of the allocated memory 7.12 GiB is allocated by PyTorch, and 337.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+On: cuda
+On Device: cuda
+{'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}
+Saved logs/Mercedes_Benz_2025.04.13_14:09:40/checkpoint_temp_100.pth
+Trial 1 failed with parameters: {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 100.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 78.44 MiB is free. Including non-PyTorch memory, this process has 7.71 GiB memory in use. Of the allocated memory 7.26 GiB is allocated by PyTorch, and 318.80 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
 Traceback (most recent call last):
   File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
     value_or_values = func(trial)
-  File "train.py", line 416, in __call__
+  File "train.py", line 338, in __call__
     sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
-  File "train.py", line 307, in cross_validation
+  File "train.py", line 228, in cross_validation
     loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
-  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 132, in fit
-    optimizer.step()
-  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 373, in wrapper
-    out = func(*args, **kwargs)
-  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
-    ret = func(self, *args, **kwargs)
-  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 173, in step
-    self._init_group(
-  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 121, in _init_group
-    state["exp_avg"] = torch.zeros_like(
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 310.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 212.44 MiB is free. Including non-PyTorch memory, this process has 7.58 GiB memory in use. Of the allocated memory 7.12 GiB is allocated by PyTorch, and 337.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
-Trial 0 failed with value None.
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 96, in average_checkpoints
+    averaged_ckpt['model'][key] = sum(values) / len(values)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 100.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 78.44 MiB is free. Including non-PyTorch memory, this process has 7.71 GiB memory in use. Of the allocated memory 7.26 GiB is allocated by PyTorch, and 318.80 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Trial 1 failed with value None.

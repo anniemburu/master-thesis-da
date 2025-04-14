@@ -7,7 +7,7 @@
 #SBATCH --gres=gpu:1
 
 CONFIGS=(
-    config/abalone.yml
+    #config/abalone.yml
     config/allstate.yml
     config/black_friday.yml
     config/boston.yml

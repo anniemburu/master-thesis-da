@@ -1,0 +1,60 @@
+[I 2025-04-14 09:49:38,897] Using an existing study with name 'NODE_House_Sales' instead of creating a new one.
+[W 2025-04-14 09:50:01,976] Trial 2 failed with parameters: {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 2.08 GiB. GPU 0 has a total capacty of 7.79 GiB of which 2.04 GiB is free. Including non-PyTorch memory, this process has 5.74 GiB memory in use. Of the allocated memory 5.61 GiB is allocated by PyTorch, and 36.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 338, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 220, in cross_validation
+    curr_model = model.clone()
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel.py", line 140, in clone
+    return self.__class__(self.params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 42, in __init__
+    self.model = nn.Sequential(
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.08 GiB. GPU 0 has a total capacty of 7.79 GiB of which 2.04 GiB is free. Including non-PyTorch memory, this process has 5.74 GiB memory in use. Of the allocated memory 5.61 GiB is allocated by PyTorch, and 36.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[W 2025-04-14 09:50:02,456] Trial 2 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 397, in <module>
+    main(arguments)
+  File "train.py", line 360, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 338, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 220, in cross_validation
+    curr_model = model.clone()
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel.py", line 140, in clone
+    return self.__class__(self.params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 42, in __init__
+    self.model = nn.Sequential(
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/mburu/anaconda3/envs/Tab4Node/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.08 GiB. GPU 0 has a total capacty of 7.79 GiB of which 2.04 GiB is free. Including non-PyTorch memory, this process has 5.74 GiB memory in use. Of the allocated memory 5.61 GiB is allocated by PyTorch, and 36.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1

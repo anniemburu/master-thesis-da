@@ -1,0 +1,40 @@
+[I 2025-04-14 09:46:07,328] Using an existing study with name 'NODE_Diamonds' instead of creating a new one.
+[W 2025-04-14 09:50:32,378] Trial 3 failed with parameters: {'num_layers': 4, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 2} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 182.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 66.44 MiB is free. Including non-PyTorch memory, this process has 7.72 GiB memory in use. Of the allocated memory 7.05 GiB is allocated by PyTorch, and 552.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 338, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 96, in average_checkpoints
+    averaged_ckpt['model'][key] = sum(values) / len(values)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 182.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 66.44 MiB is free. Including non-PyTorch memory, this process has 7.72 GiB memory in use. Of the allocated memory 7.05 GiB is allocated by PyTorch, and 552.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[W 2025-04-14 09:50:32,379] Trial 3 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 397, in <module>
+    main(arguments)
+  File "train.py", line 360, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 338, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 96, in average_checkpoints
+    averaged_ckpt['model'][key] = sum(values) / len(values)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 182.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 66.44 MiB is free. Including non-PyTorch memory, this process has 7.72 GiB memory in use. Of the allocated memory 7.05 GiB is allocated by PyTorch, and 552.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
