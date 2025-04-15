@@ -382,8 +382,11 @@ def main_once(args):
     model = model_name(parameters, args)
 
     print("Almost Cross Validating")
-
-    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
+    print(f"Model Name: {args.model_name}")
+    if args.model_name == "TabPFN":
+        sc, time = cross_validation(model, X, y, args, visual=False, save_model=False)
+    else:
+        sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
     print(sc.get_results())
     print(time)
 
