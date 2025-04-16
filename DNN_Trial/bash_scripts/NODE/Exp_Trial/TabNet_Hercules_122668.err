@@ -1,0 +1,101 @@
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 389, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 150, in fit
+    metrics = self.trainer.train_on_batch(*batch, device=self.device)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 123, in train_on_batch
+    loss = self.loss_function(self.model(x_batch), y_batch).mean()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/arch.py", line 31, in forward
+    h = layer(layer_inp)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 221, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/odst.py", line 84, in forward
+    feature_selectors = self.choice_function(feature_logits, dim=0)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 186, in <lambda>
+    entmax15 = lambda input, dim=-1: Entmax15Function.apply(input, dim)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/autograd/function.py", line 539, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 118, in forward
+    tau_star, _ = Entmax15Function._threshold_and_support(input, dim)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 135, in _threshold_and_support
+    Xsrt, _ = torch.sort(input, descending=True, dim=dim)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 848.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 564.44 MiB is free. Including non-PyTorch memory, this process has 7.23 GiB memory in use. Of the allocated memory 5.77 GiB is allocated by PyTorch, and 1.33 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 389, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
+  File "train.py", line 220, in cross_validation
+    curr_model = model.clone()
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/basemodel.py", line 140, in clone
+    return self.__class__(self.params, self.args)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 42, in __init__
+    self.model = nn.Sequential(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.21 GiB. GPU 0 has a total capacty of 7.79 GiB of which 7.33 GiB is free. Including non-PyTorch memory, this process has 468.00 MiB memory in use. Of the allocated memory 365.06 MiB is allocated by PyTorch, and 2.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 389, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 156, in fit
+    self.trainer.load_checkpoint(tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 73, in load_checkpoint
+    checkpoint = torch.load(path)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/serialization.py", line 993, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/serialization.py", line 447, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+srun: error: stud-000: task 0: Exited with exit code 1
+/var/spool/slurm/d/job122668/slurm_script: line 27: printf: write error: Input/output error
+/var/spool/slurm/d/job122668/slurm_script: line 28: printf: write error: Input/output error
+/var/spool/slurm/d/job122668/slurm_script: line 29: printf: write error: Input/output error
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 389, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 154, in fit
+    self.trainer.save_checkpoint()
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 57, in save_checkpoint
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: 'logs/House_Prices_Nominal_2025.04.16_10:13:22'
+srun: error: stud-000: task 0: Exited with exit code 1
+/var/spool/slurm/d/job122668/slurm_script: line 27: printf: write error: Input/output error
+/var/spool/slurm/d/job122668/slurm_script: line 28: printf: write error: Input/output err
