@@ -1,0 +1,1073 @@
+Namespace(batch_size=64, bin_alt=None, cat_dims=[2], cat_idx=[0], config='config/diamonds.yml', data_parallel=False, dataset='Diamonds', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='TabTransformer', n_trials=8, nominal_idx=None, num_bins=10, num_classes=1, num_features=9, num_idx=None, num_splits=5, objective='probabilistic_regression', one_hot_encode=False, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1, 2, 3], scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=128, y_distribution='normal')
+Start hyperparameter optimization
+Loading dataset Diamonds...
+Dataset loaded! 
+
+(53940, 9)
+A new study created in RDB with name: TabTransformer_Diamonds
+In get_device
+[2]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+Fold 1
+num_features : 9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (43152, 9)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 4, 5, 6, 7, 8]
+Cat Dims V1 : [6, 8, 9]
+Cat Idx V1 : [1, 2, 3] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.1950384527976465 'Ideal' 'E' 'SI2' -0.17767576091934348]
+ [-1.236976378485391 'Premium' 'E' 'SI1' -1.3637394355688461]
+ [-1.069224675734413 'Premium' 'I' 'VS2' 0.45024030213039123]
+ [-1.1740694899537742 'Very Good' 'J' 'VVS2' 0.7293141079302727]
+ [-1.1740694899537742 'Very Good' 'I' 'VVS1' 0.3804718506804196]
+ [-1.1321315642660297 'Very Good' 'H' 'SI1' 0.10139804488053805]
+ [-1.2160074156415188 'Fair' 'E' 'VS2' 2.3339884912795954]
+ [-1.1950384527976465 'Very Good' 'H' 'VS1' -1.6428132413687278]
+ [-1.0482557128905408 'Good' 'J' 'SI1' 1.5665355253299222]
+ [-1.1950384527976465 'Ideal' 'J' 'VS1' 0.7293141079302727]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.1950384527976465 5 6 2 -0.17767576091934348 -1.0997679290240274
+  -1.5847483029459433 -1.5624470539339794 -1.5635817068251905]
+ [-1.236976378485391 4 6 3 -1.3637394355688461 1.5843835902987453
+  -1.6380368496537203 -1.6869504169773575 -1.7324417222907198]
+ [-1.069224675734413 4 2 4 0.45024030213039123 0.24230783063735892
+  -1.3627126916635395 -1.3401196199279468 -1.2821483477159754]
+ [-1.1740694899537742 3 1 6 0.7293141079302727 -0.20505075591643654
+  -1.5936297273972397 -1.580233248654462 -1.493223367047887]
+ [-1.1740694899537742 3 2 7 0.3804718506804196 -0.20505075591643654
+  -1.5847483029459433 -1.5624470539339794 -1.5072950350033474]
+ [-1.1321315642660297 3 3 3 0.10139804488053805 -1.0997679290240274
+  -1.4781712095303894 -1.4468367882508424 -1.4228650272705832]
+ [-1.2160074156415188 1 6 4 2.3339884912795954 1.5843835902987453
+  -1.6557996985563126 -1.7403090011388052 -1.4791516990924258]
+ [-1.1950384527976465 3 3 5 -1.6428132413687278 1.5843835902987453
+  -1.5403411806894627 -1.5001953724122905 -1.6198683786470336]
+ [-1.0482557128905408 2 1 3 1.5665355253299222 -1.0997679290240274
+  -1.318305569407059 -1.2956541331267404 -1.1414316681613677]
+ [-1.1950384527976465 5 1 5 0.7293141079302727 -0.652409342470232
+  -1.6025111518485355 -1.6335918328159098 -1.5213667029588085]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 14
+Unique values in y_train: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+Unique values in y_test: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Test after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Number of Classes After Bin Verifier: 14
+In get_device
+[6, 8, 9]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+{'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}
+Epoch 0: Val Loss 2.67074
+Epoch 1: Val Loss 2.68178
+Epoch 2: Val Loss 2.68155
+Epoch 3: Val Loss 2.68155
+Epoch 4: Val Loss 2.68178
+Epoch 5: Val Loss 2.68178
+Epoch 6: Val Loss 2.68249
+Epoch 7: Val Loss 2.68178
+Epoch 8: Val Loss 2.68178
+Epoch 9: Val Loss 2.68178
+Epoch 10: Val Loss 2.68202
+Epoch 11: Val Loss 2.68202
+Epoch 12: Val Loss 2.68202
+Epoch 13: Val Loss 2.68249
+Epoch 14: Val Loss 2.68178
+Epoch 15: Val Loss 2.68178
+Epoch 16: Val Loss 2.68155
+Epoch 17: Val Loss 2.68225
+Epoch 18: Val Loss 2.68108
+Epoch 19: Val Loss 2.68061
+Epoch 20: Val Loss 2.68249
+Epoch 21: Val Loss 2.68202
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 14
+Class label len :14
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Unique y_true : 14
+Unique train : 14
+
+Prediction shape : (10788,)
+Probabilities shape : (10788, 14) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 14
+Probabilities shape: (10788, 14)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 10.54715, 'Log Loss - std': 0.0, 'AUC - mean': 0.5066109286734337, 'AUC - std': 0.0, 'Accuracy - mean': 0.0838895068594735, 'Accuracy - std': 0.0, 'F1 score - mean': 0.023701496224580464, 'F1 score - std': 0.0} 
+ 
+
+Fold 2
+num_features : 9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (43152, 9)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 4, 5, 6, 7, 8]
+Cat Dims V1 : [6, 8, 9]
+Cat Idx V1 : [1, 2, 3] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.241399929719489 'Premium' 'E' 'SI1' -1.3617245236890496]
+ [-1.1991826034964022 'Good' 'E' 'VS1' -3.3871902928108906]
+ [-1.0725306248271413 'Premium' 'I' 'VS2' 0.4542103037994991]
+ [-1.0303132986040544 'Good' 'J' 'SI2' 1.08280312869938]
+ [-1.1780739403848586 'Very Good' 'J' 'VVS2' 0.73358489264389]
+ [-1.1780739403848586 'Very Good' 'I' 'VVS1' 0.38436665658840014]
+ [-1.1358566141617716 'Very Good' 'H' 'SI1' 0.10499206774400914]
+ [-1.2202912666079455 'Fair' 'E' 'VS2' 2.339988778499142]
+ [-1.1991826034964022 'Very Good' 'H' 'VS1' -1.6410991125334407]
+ [-1.051421961715598 'Good' 'J' 'SI1' 1.571708659177068]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.241399929719489 4 6 3 -1.3617245236890496 1.5949518123380095
+  -1.6437879201752599 -1.6514473425787888 -1.7685832176092422]
+ [-1.1991826034964022 2 6 5 -3.3871902928108906 3.3941876961159525
+  -1.5010019420077028 -1.4510608771835314 -1.7685832176092422]
+ [-1.0725306248271413 4 2 4 0.4542103037994991 0.24552489950455236
+  -1.3671400874756174 -1.3116615969085696 -1.307955447116008]
+ [-1.0303132986040544 2 1 2 1.08280312869938 0.24552489950455236
+  -1.242202356579005 -1.2071121367023494 -1.135220033181045]
+ [-1.1780739403848586 3 1 6 0.73358489264389 -0.20428407143993338
+  -1.5991673019978982 -1.5468978823725676 -1.5238747145347116]
+ [-1.1780739403848586 3 2 7 0.38436665658840014 -0.20428407143993338
+  -1.5902431783624258 -1.5294729723381975 -1.5382693323626249]
+ [-1.1358566141617716 3 3 3 0.10499206774400914 -1.1039020133289048
+  -1.4831536947367576 -1.416211057114791 -1.4519016253951438]
+ [-1.2202912666079455 1 6 4 2.339988778499142 1.5949518123380095
+  -1.6616361674462046 -1.7037220726818993 -1.5094800967067976]
+ [-1.1991826034964022 3 3 5 -1.6410991125334407 1.5949518123380095
+  -1.5456225601850642 -1.4684857872179018 -1.6534262749859334]
+ [-1.051421961715598 2 1 3 1.571708659177068 -1.1039020133289048
+  -1.3225194692982558 -1.2680993218226444 -1.164009268836872]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 14
+Unique values in y_train: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+Unique values in y_test: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Test after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Number of Classes After Bin Verifier: 14
+In get_device
+[6, 8, 9]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+{'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}
+Epoch 0: Val Loss 2.66285
+Epoch 1: Val Loss 2.69305
+Epoch 2: Val Loss 2.69231
+Epoch 3: Val Loss 2.69415
+Epoch 4: Val Loss 2.69119
+Epoch 5: Val Loss 2.69103
+Epoch 6: Val Loss 2.69062
+Epoch 7: Val Loss 2.68193
+Epoch 8: Val Loss 2.68441
+Epoch 9: Val Loss 2.69080
+Epoch 10: Val Loss 2.68220
+Epoch 11: Val Loss 2.68244
+Epoch 12: Val Loss 2.68197
+Epoch 13: Val Loss 2.68267
+Epoch 14: Val Loss 2.68244
+Epoch 15: Val Loss 2.68244
+Epoch 16: Val Loss 2.68197
+Epoch 17: Val Loss 2.68197
+Epoch 18: Val Loss 2.68173
+Epoch 19: Val Loss 2.68244
+Epoch 20: Val Loss 2.68197
+Epoch 21: Val Loss 2.68197
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 14
+Class label len :14
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Unique y_true : 14
+Unique train : 14
+
+Prediction shape : (10788,)
+Probabilities shape : (10788, 14) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 14
+Probabilities shape: (10788, 14)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 10.505215, 'Log Loss - std': 0.0419350000000005, 'AUC - mean': 0.508514443279604, 'AUC - std': 0.0019035146061703312, 'Accuracy - mean': 0.08741193919169449, 'Accuracy - std': 0.003522432332220986, 'F1 score - mean': 0.023897605530159245, 'F1 score - std': 0.00019610930557877916} 
+ 
+
+Fold 3
+num_features : 9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (43152, 9)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 4, 5, 6, 7, 8]
+Cat Dims V1 : [6, 8, 9]
+Cat Idx V1 : [1, 2, 3] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.2007760315615899 'Ideal' 'E' 'SI2' -0.17299106375200937]
+ [-1.2431374791872112 'Premium' 'E' 'SI1' -1.358384470113667]
+ [-1.2007760315615899 'Good' 'E' 'VS1' -3.380526163318843]
+ [-1.0736916886847254 'Premium' 'I' 'VS2' 0.45457015138063084]
+ [-1.031330241059104 'Good' 'J' 'SI2' 1.082131366513271]
+ [-1.179595307748779 'Very Good' 'J' 'VVS2' 0.733486246995137]
+ [-1.179595307748779 'Very Good' 'I' 'VVS1' 0.38484112747700305]
+ [-1.2219567553744004 'Fair' 'E' 'VS2' 2.3372537967785516]
+ [-1.2007760315615899 'Very Good' 'H' 'VS1' -1.6373005657281732]
+ [-1.0525109648719149 'Good' 'J' 'SI1' 1.5702345338386605]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.2007760315615899 5 6 2 -0.17299106375200937 -1.0991811176282293
+  -1.5887751661204468 -1.52741996295235 -1.5654913782973074]
+ [-1.2431374791872112 4 6 3 -1.358384470113667 1.580885495554982
+  -1.642349354189251 -1.6494018572095064 -1.7351080246385664]
+ [-1.2007760315615899 2 6 5 -3.380526163318843 3.367596571010456
+  -1.4994848526724398 -1.449003030929892 -1.7351080246385664]
+ [-1.0736916886847254 4 2 4 0.45457015138063084 0.2408521889633763
+  -1.3655493825004286 -1.309595151778856 -1.282796967728543]
+ [-1.031330241059104 2 1 2 1.082131366513271 0.2408521889633763
+  -1.2405429436732185 -1.2050392424155796 -1.113180321387284]
+ [-1.179595307748779 3 1 6 0.733486246995137 -0.20582557990049227
+  -1.5977041974652477 -1.5448459478462293 -1.4948177756551164]
+ [-1.179595307748779 3 2 7 0.38484112747700305 -0.20582557990049227
+  -1.5887751661204468 -1.52741996295235 -1.5089524961835543]
+ [-1.2219567553744004 1 6 4 2.3372537967785516 1.580885495554982
+  -1.6602074168788525 -1.701679811891145 -1.4806830551266779]
+ [-1.2007760315615899 3 3 5 -1.6373005657281732 1.580885495554982
+  -1.5441300093964432 -1.4664290158237718 -1.6220302604110604]
+ [-1.0525109648719149 2 1 3 1.5702345338386605 -1.0991811176282293
+  -1.320904225776425 -1.2660301895441572 -1.1414497624441604]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 14
+Unique values in y_train: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+Unique values in y_test: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Test after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Number of Classes After Bin Verifier: 14
+In get_device
+[6, 8, 9]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+{'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}
+Epoch 0: Val Loss 2.67788
+Epoch 1: Val Loss 2.67741
+Epoch 2: Val Loss 2.67765
+Epoch 3: Val Loss 2.67741
+Epoch 4: Val Loss 2.67835
+Epoch 5: Val Loss 2.67671
+Epoch 6: Val Loss 2.67788
+Epoch 7: Val Loss 2.67788
+Epoch 8: Val Loss 2.67788
+Epoch 9: Val Loss 2.67765
+Epoch 10: Val Loss 2.67812
+Epoch 11: Val Loss 2.67765
+Epoch 12: Val Loss 2.67718
+Epoch 13: Val Loss 2.67694
+Epoch 14: Val Loss 2.67718
+Epoch 15: Val Loss 2.67718
+Epoch 16: Val Loss 2.67788
+Epoch 17: Val Loss 2.67765
+Epoch 18: Val Loss 2.67788
+Epoch 19: Val Loss 2.67765
+Epoch 20: Val Loss 2.67812
+Epoch 21: Val Loss 2.67788
+Epoch 22: Val Loss 2.67812
+Epoch 23: Val Loss 2.67812
+Epoch 24: Val Loss 2.67812
+Epoch 25: Val Loss 2.68298
+Epoch 26: Val Loss 2.68321
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 14
+Class label len :14
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Unique y_true : 14
+Unique train : 14
+
+Prediction shape : (10788,)
+Probabilities shape : (10788, 14) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 14
+Probabilities shape: (10788, 14)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 10.545163333333333, 'Log Loss - std': 0.06606134640535949, 'AUC - mean': 0.5065846985089224, 'AUC - std': 0.00314060636351471, 'Accuracy - mean': 0.08398220244716352, 'Accuracy - std': 0.00563896042106068, 'F1 score - mean': 0.022427664960339672, 'F1 score - std': 0.0020849675770682904} 
+ 
+
+Fold 4
+num_features : 9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (43152, 9)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 4, 5, 6, 7, 8]
+Cat Dims V1 : [6, 8, 9]
+Cat Idx V1 : [1, 2, 3] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.2007693433003284 'Ideal' 'E' 'SI2' -0.17623676016550302]
+ [-1.2007693433003284 'Good' 'E' 'VS1' -3.3952118794129094]
+ [-1.0318275851408616 'Good' 'J' 'SI2' 1.0833621995400016]
+ [-1.1796516235303949 'Very Good' 'J' 'VVS2' 0.7334735996218053]
+ [-1.1374161839905281 'Very Good' 'H' 'SI1' 0.10367411976905298]
+ [-1.2007693433003284 'Very Good' 'H' 'VS1' -1.6457688798219283]
+ [-1.0529453049107949 'Good' 'J' 'SI1' 1.5732062394254782]
+ [-1.2007693433003284 'Ideal' 'J' 'VS1' 0.7334735996218053]
+ [-1.2218870630702616 'Premium' 'F' 'SI1' -0.9459916799855358]
+ [-1.2641225026101284 'Premium' 'E' 'SI2' -1.0859471199528112]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.2007693433003284 5 6 2 -0.17623676016550302 -1.1001014896248056
+  -1.5915444854651115 -1.5301186577850108 -1.5696115327877844]
+ [-1.2007693433003284 2 6 5 -3.3952118794129094 3.3772680777522917
+  -1.5023022126050385 -1.4517413942698225 -1.739235168570439]
+ [-1.0318275851408616 2 1 2 1.0833621995400016 0.2431093805883235
+  -1.2434996213108258 -1.2079010188892378 -1.1172818373673723]
+ [-1.1796516235303949 3 1 6 0.7334735996218053 -0.20462757614938623
+  -1.600468712751119 -1.5475358274550528 -1.4989350178783452]
+ [-1.1374161839905281 3 3 3 0.10367411976905298 -1.1001014896248056
+  -1.4844537580330235 -1.416907054929739 -1.428258502968906]
+ [-1.2007693433003284 3 3 5 -1.6457688798219283 1.5863202508014527
+  -1.5469233490350751 -1.4691585639398648 -1.6261527447153359]
+ [-1.0529453049107949 2 1 3 1.5732062394254782 -1.1001014896248056
+  -1.3238176668848918 -1.2688611127343836 -1.1455524433311481]
+ [-1.2007693433003284 5 1 5 0.7334735996218053 -0.652364532887096
+  -1.6093929400371263 -1.5997873364651782 -1.527205623842121]
+ [-1.2218870630702616 4 5 3 -0.9459916799855358 1.5863202508014527
+  -1.6540140764671631 -1.6520388454753037 -1.7109645626066634]
+ [-1.2641225026101284 4 6 2 -1.0859471199528112 2.0340572075391625
+  -1.7343321220412289 -1.7304161089904915 -1.7957763804979907]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 14
+Unique values in y_train: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+Unique values in y_test: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Test after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Number of Classes After Bin Verifier: 14
+In get_device
+[6, 8, 9]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+{'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}
+Epoch 0: Val Loss 2.67875
+Epoch 1: Val Loss 2.67875
+Epoch 2: Val Loss 2.67946
+Epoch 3: Val Loss 2.67875
+Epoch 4: Val Loss 2.67875
+Epoch 5: Val Loss 2.67922
+Epoch 6: Val Loss 2.67899
+Epoch 7: Val Loss 2.67758
+Epoch 8: Val Loss 2.67828
+Epoch 9: Val Loss 2.67899
+Epoch 10: Val Loss 2.67922
+Epoch 11: Val Loss 2.67875
+Epoch 12: Val Loss 2.67852
+Epoch 13: Val Loss 2.67946
+Epoch 14: Val Loss 2.67946
+Epoch 15: Val Loss 2.67828
+Epoch 16: Val Loss 2.67852
+Epoch 17: Val Loss 2.67875
+Epoch 18: Val Loss 2.67922
+Epoch 19: Val Loss 2.67875
+Epoch 20: Val Loss 2.67875
+Epoch 21: Val Loss 2.67899
+Epoch 22: Val Loss 2.67852
+Epoch 23: Val Loss 2.67828
+Epoch 24: Val Loss 2.67946
+Epoch 25: Val Loss 2.67899
+Epoch 26: Val Loss 2.67922
+Epoch 27: Val Loss 2.67852
+Epoch 28: Val Loss 2.67922
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 14
+Class label len :14
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Unique y_true : 14
+Unique train : 14
+
+Prediction shape : (10788,)
+Probabilities shape : (10788, 14) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 14
+Probabilities shape: (10788, 14)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 10.568337499999998, 'Log Loss - std': 0.06988706689187935, 'AUC - mean': 0.5049385238816918, 'AUC - std': 0.00394046050074419, 'Accuracy - mean': 0.08198924731182795, 'Accuracy - std': 0.005980302374219699, 'F1 score - mean': 0.019505471030849753, 'F1 score - std': 0.005373822608973315} 
+ 
+
+Fold 5
+num_features : 9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (43152, 9)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 4, 5, 6, 7, 8]
+Cat Dims V1 : [6, 8, 9]
+Cat Idx V1 : [1, 2, 3] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.1951587568816937 'Ideal' 'E' 'SI2' -0.16918805719128635]
+ [-1.2373782800036142 'Premium' 'E' 'SI1' -1.354043921120755]
+ [-1.1951587568816937 'Good' 'E' 'VS1' -3.375268630176903]
+ [-1.0685001875159332 'Premium' 'I' 'VS2' 0.4580885766537244]
+ [-1.0262806643940128 'Good' 'J' 'SI2' 1.085365210498735]
+ [-1.1740489953207336 'Very Good' 'I' 'VVS1' 0.3883911728931665]
+ [-1.1318294721988134 'Very Good' 'H' 'SI1' 0.10960155785094007]
+ [-1.2162685184426538 'Fair' 'E' 'VS2' 2.3399184781887565]
+ [-1.1951587568816937 'Ideal' 'J' 'VS1' 0.7368781916959508]
+ [-1.2162685184426538 'Premium' 'F' 'SI1' -0.9358594985574128]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.1951587568816937 5 6 2 -0.16918805719128635 -1.095468028782346
+  -1.5839349366235063 -1.5322976251522233 -1.56187701865597]
+ [-1.2373782800036142 4 6 3 -1.354043921120755 1.5812091849357435
+  -1.6374236122792667 -1.6548711768767947 -1.731354397531372]
+ [-1.1951587568816937 2 6 5 -3.375268630176903 3.3656606607478032
+  -1.4947871438639058 -1.4535003419007129 -1.731354397531372]
+ [-1.0685001875159332 4 2 4 0.4580885766537244 0.24287057807669882
+  -1.3610654547245045 -1.313416282786917 -1.2794147205303008]
+ [-1.0262806643940128 2 1 2 1.085365210498735 0.24287057807669882
+  -1.236258544861064 -1.2083532384515707 -1.1099373416548988]
+ [-1.1740489953207336 3 2 7 0.3883911728931665 -0.2032422908763161
+  -1.5839349366235063 -1.5322976251522233 -1.5053845590308361]
+ [-1.1318294721988134 3 3 3 0.10960155785094007 -1.095468028782346
+  -1.4769575853119854 -1.418479327122264 -1.4206458695931359]
+ [-1.2162685184426538 1 6 4 2.3399184781887565 1.5812091849357435
+  -1.6552531708311868 -1.7074026990444682 -1.4771383292182692]
+ [-1.1951587568816937 5 1 5 0.7368781916959508 -0.649355159829331
+  -1.6017644951754264 -1.602339654709121 -1.51950767393712]
+ [-1.2162685184426538 4 5 3 -0.9358594985574128 1.5812091849357435
+  -1.646338391555227 -1.6548711768767947 -1.7031081677188051]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 14
+Unique values in y_train: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+Unique values in y_test: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Test after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Number of Classes After Bin Verifier: 14
+In get_device
+[6, 8, 9]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+{'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}
+Epoch 0: Val Loss 2.68865
+Epoch 1: Val Loss 2.68794
+Epoch 2: Val Loss 2.68865
+Epoch 3: Val Loss 2.68818
+Epoch 4: Val Loss 2.68865
+Epoch 5: Val Loss 2.68865
+Epoch 6: Val Loss 2.68818
+Epoch 7: Val Loss 2.68818
+Epoch 8: Val Loss 2.68865
+Epoch 9: Val Loss 2.68841
+Epoch 10: Val Loss 2.68841
+Epoch 11: Val Loss 2.68841
+Epoch 12: Val Loss 2.68794
+Epoch 13: Val Loss 2.68818
+Epoch 14: Val Loss 2.68818
+Epoch 15: Val Loss 2.68841
+Epoch 16: Val Loss 2.68841
+Epoch 17: Val Loss 2.68794
+Epoch 18: Val Loss 2.68794
+Epoch 19: Val Loss 2.68818
+Epoch 20: Val Loss 2.68794
+Epoch 21: Val Loss 2.68818
+Epoch 22: Val Loss 2.68794
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+State of save is False b4 loss saving
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 14
+Class label len :14
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Unique y_true : 14
+Unique train : 14
+
+Prediction shape : (10788,)
+Probabilities shape : (10788, 14) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 14
+Probabilities shape: (10788, 14)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 10.603585999999998, 'Log Loss - std': 0.09421883412566714, 'AUC - mean': 0.5039508191053534, 'AUC - std': 0.0040403002446781746, 'Accuracy - mean': 0.0789395624768261, 'Accuracy - std': 0.008112553455049734, 'F1 score - mean': 0.017274637257718016, 'F1 score - std': 0.00655811351224961} 
+ 
+
+Finished cross validation
+Hyperparam was saved!!! Hurrah!!!
+Trial 0 finished with value: 10.603585999999998 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 0 with value: 10.603585999999998.
+In get_device
+[2]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+Fold 1
+num_features : 9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : None
+ordinal_idx : [1, 2, 3]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (43152, 9)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [0, 4, 5, 6, 7, 8]
+Cat Dims V1 : [6, 8, 9]
+Cat Idx V1 : [1, 2, 3] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.1950384527976465 'Ideal' 'E' 'SI2' -0.17767576091934348]
+ [-1.236976378485391 'Premium' 'E' 'SI1' -1.3637394355688461]
+ [-1.069224675734413 'Premium' 'I' 'VS2' 0.45024030213039123]
+ [-1.1740694899537742 'Very Good' 'J' 'VVS2' 0.7293141079302727]
+ [-1.1740694899537742 'Very Good' 'I' 'VVS1' 0.3804718506804196]
+ [-1.1321315642660297 'Very Good' 'H' 'SI1' 0.10139804488053805]
+ [-1.2160074156415188 'Fair' 'E' 'VS2' 2.3339884912795954]
+ [-1.1950384527976465 'Very Good' 'H' 'VS1' -1.6428132413687278]
+ [-1.0482557128905408 'Good' 'J' 'SI1' 1.5665355253299222]
+ [-1.1950384527976465 'Ideal' 'J' 'VS1' 0.7293141079302727]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [0, 4, 5, 6, 7, 8] 
+
+
+OHE Idx : None
+
+
+Ordinal Idx V2: [1, 2, 3]
+
+
+Cat Dims V2 : [6, 8, 9]
+Cat Idx V2 : [1, 2, 3] 
+ 
+
+Train: [[-1.1950384527976465 5 6 2 -0.17767576091934348 -1.0997679290240274
+  -1.5847483029459433 -1.5624470539339794 -1.5635817068251905]
+ [-1.236976378485391 4 6 3 -1.3637394355688461 1.5843835902987453
+  -1.6380368496537203 -1.6869504169773575 -1.7324417222907198]
+ [-1.069224675734413 4 2 4 0.45024030213039123 0.24230783063735892
+  -1.3627126916635395 -1.3401196199279468 -1.2821483477159754]
+ [-1.1740694899537742 3 1 6 0.7293141079302727 -0.20505075591643654
+  -1.5936297273972397 -1.580233248654462 -1.493223367047887]
+ [-1.1740694899537742 3 2 7 0.3804718506804196 -0.20505075591643654
+  -1.5847483029459433 -1.5624470539339794 -1.5072950350033474]
+ [-1.1321315642660297 3 3 3 0.10139804488053805 -1.0997679290240274
+  -1.4781712095303894 -1.4468367882508424 -1.4228650272705832]
+ [-1.2160074156415188 1 6 4 2.3339884912795954 1.5843835902987453
+  -1.6557996985563126 -1.7403090011388052 -1.4791516990924258]
+ [-1.1950384527976465 3 3 5 -1.6428132413687278 1.5843835902987453
+  -1.5403411806894627 -1.5001953724122905 -1.6198683786470336]
+ [-1.0482557128905408 2 1 3 1.5665355253299222 -1.0997679290240274
+  -1.318305569407059 -1.2956541331267404 -1.1414316681613677]
+ [-1.1950384527976465 5 1 5 0.7293141079302727 -0.652409342470232
+  -1.6025111518485355 -1.6335918328159098 -1.5213667029588085]] 
+ 
+ 
+Val : (43152, 9) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 14
+Unique values in y_train: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+Unique values in y_test: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13.]), 14)
+No need to shift labels.
+VERIFY SHIFT
+Train after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Test after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13], Length : 14
+Number of Classes After Bin Verifier: 14
+In get_device
+[6, 8, 9]
+On Device: cuda
+Using dim 256 and batch size 64
+On Device: cuda
+{'dim': 256, 'depth': 6, 'heads': 8, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.4}
+Epoch 0: Val Loss 2.53685
+Trial 1 failed with parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0.4} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 18.44 MiB is free. Including non-PyTorch memory, this process has 7.77 GiB memory in use. Of the allocated memory 7.57 GiB is allocated by PyTorch, and 67.36 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 338, in __call__
+    sc, time = cross_validation(model, self.X, self.y, args_cp, visual=False, save_model=False)#Dont save model during HPT
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 128, in fit
+    out = self.model(x_categ, x_cont)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 467, in forward
+    x = self.transformer(x_categ)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 354, in forward
+    x = ff(x)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 268, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 278, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 300, in forward
+    return self.net(x)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 18.44 MiB is free. Including non-PyTorch memory, this process has 7.77 GiB memory in use. Of the allocated memory 7.57 GiB is allocated by PyTorch, and 67.36 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Trial 1 failed with value None.
