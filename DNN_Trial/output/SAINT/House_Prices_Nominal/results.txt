@@ -10,3 +10,21 @@ Test time: 0.223302
 Best Parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'dropout': 0.8}
 
 
+2025-04-12 14:34:46.858099
+SAINT - House_Prices_Nominal
+
+Log Loss - mean: 0.98480
+Log Loss - std: 0.01946
+AUC - mean: 0.93287
+AUC - std: 0.00532
+Accuracy - mean: 0.61918
+Accuracy - std: 0.01325
+F1 score - mean: 0.61305
+F1 score - std: 0.01687
+
+Train time: 181.348306
+Test time: 0.204824
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.8, 'heads': 2}
+
+

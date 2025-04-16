@@ -10,3 +10,21 @@ Test time: 1.182378
 Best Parameters: {'dim': 128, 'depth': 6, 'heads': 2, 'dropout': 0.6}
 
 
+2025-04-12 14:20:18.131775
+SAINT - Diamonds
+
+Log Loss - mean: 0.69660
+Log Loss - std: 0.03391
+AUC - mean: 0.97965
+AUC - std: 0.00148
+Accuracy - mean: 0.71737
+Accuracy - std: 0.01187
+F1 score - mean: 0.71769
+F1 score - std: 0.01213
+
+Train time: 2381.344179
+Test time: 0.888511
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+

@@ -10,3 +10,39 @@ Test time: 0.179224
 Best Parameters: {'dim': 64, 'depth': 6, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}
 
 
+2025-04-13 04:34:57.186893
+TabTransformer - House_Prices_Nominal
+
+Log Loss - mean: 2.37175
+Log Loss - std: 0.21030
+AUC - mean: 0.89943
+AUC - std: 0.00725
+Accuracy - mean: 0.57260
+Accuracy - std: 0.01427
+F1 score - mean: 0.57210
+F1 score - std: 0.01424
+
+Train time: 98.278485
+Test time: 0.164656
+
+Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0.3, 'heads': 4, 'learning_rate': -3, 'weight_decay': -4}
+
+
+2025-04-15 23:24:16.406520
+TabTransformer - House_Prices_Nominal
+
+Log Loss - mean: 1.76375
+Log Loss - std: 0.77222
+AUC - mean: 0.88980
+AUC - std: 0.04522
+Accuracy - mean: 0.54315
+Accuracy - std: 0.04729
+F1 score - mean: 0.52886
+F1 score - std: 0.07306
+
+Train time: 152.697830
+Test time: 0.212293
+
+Best Parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'weight_decay': -4, 'learning_rate': -4, 'dropout': 0.5}
+
+

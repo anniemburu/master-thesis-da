@@ -28,3 +28,21 @@ Test time: 6.740925
 Best Parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'dropout': 0.6}
 
 
+2025-04-12 12:08:49.056330
+SAINT - Black_Friday
+
+Log Loss - mean: 2.13574
+Log Loss - std: 0.00482
+AUC - mean: 0.93523
+AUC - std: 0.00086
+Accuracy - mean: 0.20886
+Accuracy - std: 0.00206
+F1 score - mean: 0.15563
+F1 score - std: 0.00345
+
+Train time: 17946.900172
+Test time: 5.004895
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+

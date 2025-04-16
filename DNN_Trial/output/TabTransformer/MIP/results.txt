@@ -10,3 +10,39 @@ Test time: 0.171982
 Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.2}
 
 
+2025-04-13 04:44:05.225044
+TabTransformer - MIP
+
+Log Loss - mean: 6.09571
+Log Loss - std: 0.33567
+AUC - mean: 0.52206
+AUC - std: 0.00360
+Accuracy - mean: 0.41743
+Accuracy - std: 0.02228
+F1 score - mean: 0.31766
+F1 score - std: 0.01817
+
+Train time: 36.278468
+Test time: 0.148967
+
+Best Parameters: {'depth': 12, 'dim': 32, 'dropout': 0.2, 'heads': 2, 'learning_rate': -3, 'weight_decay': -6}
+
+
+2025-04-15 23:43:22.915125
+TabTransformer - MIP
+
+Log Loss - mean: 3.71508
+Log Loss - std: 0.18713
+AUC - mean: 0.50739
+AUC - std: 0.02682
+Accuracy - mean: 0.18807
+Accuracy - std: 0.09635
+F1 score - mean: 0.11479
+F1 score - std: 0.06381
+
+Train time: 60.229026
+Test time: 0.157340
+
+Best Parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -5, 'dropout': 0.5}
+
+

@@ -10,3 +10,21 @@ Test time: 0.174414
 Best Parameters: {'dim': 64, 'depth': 1, 'heads': 4, 'dropout': 0.2}
 
 
+2025-04-12 12:19:15.919556
+SAINT - Boston
+
+Log Loss - mean: 1.05302
+Log Loss - std: 0.04646
+AUC - mean: 0.89371
+AUC - std: 0.00471
+Accuracy - mean: 0.56725
+Accuracy - std: 0.02657
+F1 score - mean: 0.56280
+F1 score - std: 0.02983
+
+Train time: 49.431483
+Test time: 0.120270
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+

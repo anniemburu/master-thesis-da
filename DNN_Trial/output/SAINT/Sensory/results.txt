@@ -16,3 +16,21 @@ Test time: 0.142295
 Best Parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'dropout': 0}
 
 
+2025-04-12 16:43:46.889711
+SAINT - Sensory
+
+Log Loss - mean: 1.66123
+Log Loss - std: 0.02848
+AUC - mean: 0.60649
+AUC - std: 0.03348
+Accuracy - mean: 0.26738
+Accuracy - std: 0.02558
+F1 score - mean: 0.21348
+F1 score - std: 0.05093
+
+Train time: 56.772445
+Test time: 0.148212
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
