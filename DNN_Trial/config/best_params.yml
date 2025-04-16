@@ -27,7 +27,11 @@ parameters:
       'K': 5
       'beta': 6.4014651115487045
     TabPFN:
-
+    NODE:
+      'num_layers': 2
+      'total_tree_count': 1024
+      'tree_depth': 6
+      'tree_output_dim': 3
   Allstate_Claims:
     SAINT:
       depth: 3
@@ -88,6 +92,11 @@ parameters:
       'K': 20
       'beta': 0.439542113129748
     TabPFN:
+    NODE:
+      'num_layers': 4 
+      'total_tree_count': 1024 
+      'tree_depth': 8 
+      'tree_output_dim': 2
   Boston:
     SAINT:
       depth: 1
@@ -116,6 +125,11 @@ parameters:
       'K': 5
       'beta': 6.256477558016467
     TabPFN:
+    NODE:
+      'num_layers': 4
+      'total_tree_count': 1024
+      'tree_depth': 8
+      'tree_output_dim': 3
   Brazillian_Houses:
     SAINT:
       depth: 1
@@ -144,6 +158,11 @@ parameters:
       'K': 2
       'beta': 0.6147927648659613
     TabPFN:
+    NODE:
+      'num_layers': 2
+      'total_tree_count': 1024
+      'tree_depth': 6
+      'tree_output_dim': 3
   Diamonds:
     SAINT:
       depth: 6
@@ -165,6 +184,11 @@ parameters:
     'momentum': 0.034019709479691004
     'mask_type': 'entmax'
     TabPFN:
+    NODE:
+      'num_layers': 4
+      'total_tree_count': 2048
+      'tree_depth': 6 
+      'tree_output_dim': 2
   House_Prices_Nominal:
     SAINT:
       depth: 6
@@ -193,6 +217,11 @@ parameters:
       'K': 5
       'beta': 9.215465499679352
     TabPFN:
+    NODE:
+      'num_layers': 4
+      'total_tree_count': 2048
+      'tree_depth': 6
+      'tree_output_dim': 3
   House_Sales:
     SAINT:
       depth: 2
@@ -221,6 +250,11 @@ parameters:
       'K': 10
       'beta': 9.616064030906852
     TabPFN:
+    NODE:
+      'num_layers': 8
+      'total_tree_count': 2048
+      'tree_depth': 8
+      'tree_output_dim': 3
   MIP:
     SAINT:
       depth: 6
@@ -249,6 +283,11 @@ parameters:
       'K': 15
       'beta': 1.7253793413889102
     TabPFN:
+    NODE:
+      'num_layers': 8
+      'total_tree_count': 1024
+      'tree_depth': 8
+      'tree_output_dim': 3
   Mercedes_Benz:
     SAINT:
       depth: 1
@@ -277,6 +316,11 @@ parameters:
       'K': 10
       'beta': 7.172592551015013
     TabPFN:
+    NODE:
+      'num_layers': 8
+      'total_tree_count': 1024
+      'tree_depth': 8
+      'tree_output_dim': 2
   Moneyball:
     SAINT:
       depth: 3
@@ -305,6 +349,11 @@ parameters:
       'K': 2
       'beta': 7.226806178614233
     TabPFN:
+    NODE:
+      'num_layers': 8
+      'total_tree_count': 2084
+      'tree_depth': 6
+      'tree_output_dim': 3
   SAT11:
     SAINT:
       depth: 2
@@ -333,6 +382,11 @@ parameters:
       'K': 10
       'beta': 2.5330822863761133
     TabPFN:
+    NODE:
+      'num_layers': 2
+      'total_tree_count': 1024
+      'tree_depth': 8
+      'tree_output_dim': 3
   Sensory:
     SAINT:
       depth: 1
@@ -361,6 +415,11 @@ parameters:
       'K': 20, 
       'beta': 3.3992951958538677
     TabPFN:
+    NODE:
+      'num_layers': 4
+      'total_tree_count': 1024
+      'tree_depth': 6
+      'tree_output_dim': 3
   Socmob:
     SAINT:
       depth: 1
@@ -389,3 +448,8 @@ parameters:
       'K': 5
       'beta': 0.2518866370695383
     TabPFN:
+    NODE:
+      'num_layers': 2
+      'total_tree_count': 2048
+      'tree_depth': 6
+      'tree_output_dim': 2
