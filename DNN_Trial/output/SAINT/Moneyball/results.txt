@@ -10,3 +10,21 @@ Test time: 0.164344
 Best Parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'dropout': 0.3}
 
 
+2025-04-12 16:14:00.351972
+SAINT - Moneyball
+
+Log Loss - mean: 0.89731
+Log Loss - std: 0.04006
+AUC - mean: 0.92975
+AUC - std: 0.00626
+Accuracy - mean: 0.61119
+Accuracy - std: 0.00997
+F1 score - mean: 0.61315
+F1 score - std: 0.01272
+
+Train time: 66.729460
+Test time: 0.129487
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+

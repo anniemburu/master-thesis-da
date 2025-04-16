@@ -10,3 +10,39 @@ Test time: 49.475327
 Best Parameters: {'n_d': 12, 'n_steps': 6, 'gamma': 1.4921895070384743, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 5, 'momentum': 0.0017812705579288248, 'mask_type': 'sparsemax', 'n_a': 12, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
 
 
+2025-04-13 06:56:17.871697
+TabNet - Allstate_Claims
+
+Log Loss - mean: 6.53781
+Log Loss - std: 0.05002
+AUC - mean: 0.50004
+AUC - std: 0.00003
+Accuracy - mean: 0.00144
+Accuracy - std: 0.00011
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 8144.015080
+Test time: 23.704708
+
+Best Parameters: {'cat_emb_dim': 1, 'gamma': 1.4921895070384743, 'mask_type': 'sparsemax', 'momentum': 0.0017812705579288248, 'n_d': 12, 'n_independent': 2, 'n_shared': 5, 'n_steps': 6, 'n_a': 12, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-04-14 18:27:40.376276
+TabNet - Allstate_Claims
+
+Log Loss - mean: 6.53779
+Log Loss - std: 0.05008
+AUC - mean: 0.50002
+AUC - std: 0.00003
+Accuracy - mean: 0.00144
+Accuracy - std: 0.00011
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 7357.287849
+Test time: 23.796331
+
+Best Parameters: {'n_d': 10, 'n_steps': 7, 'gamma': 1.9472126033649575, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 3, 'momentum': 0.016286304749596685, 'mask_type': 'entmax', 'n_a': 10, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

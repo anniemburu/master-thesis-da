@@ -10,3 +10,39 @@ Test time: 0.699376
 Best Parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0}
 
 
+2025-04-13 04:31:37.122056
+TabTransformer - Brazillian_Houses
+
+Log Loss - mean: 11.47297
+Log Loss - std: 0.01402
+AUC - mean: 0.50013
+AUC - std: 0.00016
+Accuracy - mean: 0.00468
+Accuracy - std: 0.00122
+F1 score - mean: 0.00006
+F1 score - std: 0.00004
+
+Train time: 63.329028
+Test time: 0.686684
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0, 'heads': 2, 'learning_rate': -3, 'weight_decay': -5}
+
+
+2025-04-15 23:19:21.082537
+TabTransformer - Brazillian_Houses
+
+Log Loss - mean: 7.26072
+Log Loss - std: 0.00691
+AUC - mean: 0.50271
+AUC - std: 0.00564
+Accuracy - mean: 0.00047
+Accuracy - std: 0.00059
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 33.204504
+Test time: 0.577300
+
+Best Parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -6, 'learning_rate': -6, 'dropout': 0.2}
+
+

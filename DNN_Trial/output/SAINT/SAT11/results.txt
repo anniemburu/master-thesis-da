@@ -10,3 +10,21 @@ Test time: 0.228015
 Best Parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'dropout': 0.6}
 
 
+2025-04-12 16:33:35.127353
+SAINT - SAT11
+
+Log Loss - mean: 0.38056
+Log Loss - std: 0.09025
+AUC - mean: 0.89027
+AUC - std: 0.04080
+Accuracy - mean: 0.87014
+Accuracy - std: 0.03124
+F1 score - mean: 0.85882
+F1 score - std: 0.03704
+
+Train time: 390.884317
+Test time: 0.192043
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+

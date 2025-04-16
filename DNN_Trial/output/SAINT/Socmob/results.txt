@@ -16,3 +16,21 @@ Test time: 0.155333
 Best Parameters: {'dim': 64, 'depth': 1, 'heads': 2, 'dropout': 0.2}
 
 
+2025-04-12 16:59:36.634165
+SAINT - Socmob
+
+Log Loss - mean: 2.96932
+Log Loss - std: 0.14847
+AUC - mean: 0.81191
+AUC - std: 0.00665
+Accuracy - mean: 0.23877
+Accuracy - std: 0.02088
+F1 score - mean: 0.17602
+F1 score - std: 0.02093
+
+Train time: 115.099368
+Test time: 0.136840
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+

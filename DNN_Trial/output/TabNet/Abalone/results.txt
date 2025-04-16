@@ -10,3 +10,57 @@ Test time: 0.107664
 Best Parameters: {'n_d': 47, 'n_steps': 7, 'gamma': 1.8370117235962122, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.0010080119264888568, 'mask_type': 'sparsemax', 'n_a': 47, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
 
 
+2025-04-13 00:19:27.126157
+TabNet - Abalone
+
+Log Loss - mean: 2.26033
+Log Loss - std: 0.56491
+AUC - mean: 0.77541
+AUC - std: 0.02761
+Accuracy - mean: 0.27770
+Accuracy - std: 0.05115
+F1 score - mean: 0.24451
+F1 score - std: 0.04953
+
+Train time: 68.727079
+Test time: 0.126986
+
+Best Parameters: {'cat_emb_dim': 1, 'gamma': 1.8370117235962122, 'mask_type': 'sparsemax', 'momentum': 0.0010080119264888568, 'n_d': 47, 'n_independent': 2, 'n_shared': 2, 'n_steps': 7, 'n_a': 47, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-04-14 12:09:10.434611
+TabNet - Abalone
+
+Log Loss - mean: 2.26033
+Log Loss - std: 0.56491
+AUC - mean: 0.77541
+AUC - std: 0.02761
+Accuracy - mean: 0.27770
+Accuracy - std: 0.05115
+F1 score - mean: 0.24451
+F1 score - std: 0.04953
+
+Train time: 63.648482
+Test time: 0.114225
+
+Best Parameters: {'cat_emb_dim': 1, 'gamma': 1.8370117235962122, 'mask_type': 'sparsemax', 'momentum': 0.0010080119264888568, 'n_d': 47, 'n_independent': 2, 'n_shared': 2, 'n_steps': 7, 'n_a': 47, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-04-14 12:23:59.051032
+TabNet - Abalone
+
+Log Loss - mean: 1.52864
+Log Loss - std: 0.05294
+AUC - mean: 0.83144
+AUC - std: 0.00587
+Accuracy - mean: 0.36869
+Accuracy - std: 0.03709
+F1 score - mean: 0.35107
+F1 score - std: 0.03176
+
+Train time: 85.698749
+Test time: 0.119613
+
+Best Parameters: {'n_d': 50, 'n_steps': 5, 'gamma': 1.5663090407114713, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.050028606098492225, 'mask_type': 'entmax', 'n_a': 50, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

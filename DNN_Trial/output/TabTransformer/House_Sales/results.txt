@@ -10,3 +10,39 @@ Test time: 0.505326
 Best Parameters: {'dim': 256, 'depth': 12, 'heads': 2, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.4}
 
 
+2025-04-13 04:41:00.425840
+TabTransformer - House_Sales
+
+Log Loss - mean: 10.56768
+Log Loss - std: 0.07673
+AUC - mean: 0.52946
+AUC - std: 0.00512
+Accuracy - mean: 0.04428
+Accuracy - std: 0.00584
+F1 score - mean: 0.01135
+F1 score - std: 0.00260
+
+Train time: 358.904015
+Test time: 0.616749
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.4, 'heads': 2, 'learning_rate': -3, 'weight_decay': -6}
+
+
+2025-04-15 23:36:17.306838
+TabTransformer - House_Sales
+
+Log Loss - mean: 5.15029
+Log Loss - std: 0.04913
+AUC - mean: 0.52816
+AUC - std: 0.01272
+Accuracy - mean: 0.00782
+Accuracy - std: 0.00228
+F1 score - mean: 0.00161
+F1 score - std: 0.00080
+
+Train time: 781.904497
+Test time: 0.499997
+
+Best Parameters: {'dim': 64, 'depth': 12, 'heads': 8, 'weight_decay': -3, 'learning_rate': -6, 'dropout': 0.2}
+
+

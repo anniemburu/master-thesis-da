@@ -10,3 +10,39 @@ Test time: 0.235660
 Best Parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.5}
 
 
+2025-04-13 04:42:18.586168
+TabTransformer - Mercedes_Benz
+
+Log Loss - mean: 7.59670
+Log Loss - std: 0.35805
+AUC - mean: 0.58466
+AUC - std: 0.00875
+Accuracy - mean: 0.18079
+Accuracy - std: 0.07093
+F1 score - mean: 0.11744
+F1 score - std: 0.07239
+
+Train time: 48.951781
+Test time: 0.240617
+
+Best Parameters: {'depth': 2, 'dim': 256, 'dropout': 0.5, 'heads': 2, 'learning_rate': -3, 'weight_decay': -4}
+
+
+2025-04-15 23:40:41.972511
+TabTransformer - Mercedes_Benz
+
+Log Loss - mean: 3.44970
+Log Loss - std: 0.38579
+AUC - mean: 0.63302
+AUC - std: 0.01817
+Accuracy - mean: 0.10667
+Accuracy - std: 0.04389
+F1 score - mean: 0.05321
+F1 score - std: 0.03743
+
+Train time: 192.311191
+Test time: 0.281401
+
+Best Parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'weight_decay': -6, 'learning_rate': -6, 'dropout': 0.5}
+
+
