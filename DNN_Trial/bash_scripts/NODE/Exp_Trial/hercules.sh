@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=TabNet_Hercules
+#SBATCH --job-name=NODE_Hercules
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -18,7 +18,7 @@ CONFIGS=(
     config/mercedes_benz.yml
     config/mip_2016.yml
     config/moneyball.yml
-    config/sat11.yml
+    #config/sat11.yml
     #config/sensory.yml
     config/socmob.yml
 )
@@ -31,6 +31,6 @@ for config in "${CONFIGS[@]}"; do
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name NODE --objective probabilistic_regression --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name NODE --objective probabilistic_regression --batch_size 32 --val_batch_size 64
 
 done
