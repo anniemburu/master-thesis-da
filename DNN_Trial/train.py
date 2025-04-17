@@ -20,100 +20,6 @@ from sklearn.model_selection import KFold, StratifiedKFold  # , train_test_split
 import warnings
 warnings.filterwarnings("ignore")
 
-#Calculates Freedman-Diaconis Rule
-def freedman_diaconis(y, args):
-    #calc IQR
-    q1 = np.percentile(y, 25)
-    q3 = np.percentile(y, 75)
-    iqr = q3 - q1
-
-    #calc bin width
-    n = len(y) // args.num_splits
-    bin_width = 2 * (iqr / (n ** (1/3)))
-
-    #calc num of bins
-    data_range = np.max(y) - np.min(y)
-    num_bins = int(np.round(data_range / bin_width))
-
-    return num_bins
-
-# Sturges' Rule
-def sturges(y,args): 
-    n = len(y) // args.num_splits
-    num_bins = 1 + int(np.log2(n))
-
-    return num_bins
-
-def bin_finder(args, y):
-    if args.y_distribution == "normal" :
-        bins = sturges(y, args)
-    elif args.y_distribution == "skewed" or args.y_distribution == "bimodial":
-        bins = freedman_diaconis(y,args)
-    else:
-        raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
-
-    return bins
-
-def bin_shifter(args, y_train, y_test):
-    """
-    Shifts class labels so that they are contiguous (without gaps).
-    """
-
-    y_test = impute_missing_test(y_train,y_test) #missing y classes
-    
-    def get_contiguous_labels(arr):
-        """ Renumber labels to remove gaps """
-        unique_vals = np.unique(arr)
-        mapping = {old_label: new_label for new_label, old_label in enumerate(unique_vals)}
-        return np.vectorize(mapping.get)(arr), mapping
-
-    # Get contiguous labels
-    comb = np.unique(np.concatenate([y_train, y_test]))
-    comb_len = len(comb)
-
-    if comb_len != args.num_bins:
-        print("WE ARE IN THE GUTTERS!!!!!")
-        y_train_shift, train_mapping = get_contiguous_labels(y_train)
-        y_test_shift = np.vectorize(train_mapping.get)(y_test)  # Apply same mapping to test
-
-        # Update arguments
-        args.num_classes = len(np.unique(y_train_shift))  # Set correct number of classes
-        args.bin_alt = sorted(list(np.unique(y_train_shift)))  # Ensure proper bin numbering
-
-        print(f"Final Train Labels Length: {len(np.unique(y_train_shift))}")
-        print(f"Final Test Labels Length: {len(np.unique(y_test_shift))}")
-        print(f"Final Num Classes: {args.num_classes}")
-        print(f"Final Bin Labels: {args.bin_alt}")
-
-        return y_train_shift, y_test_shift
-
-    else:
-        print("No need to shift labels.")
-        args.bin_alt = [x for x in range(args.num_bins)]
-        return y_train, y_test
-
-def impute_missing_test(train,test):
-    missing_arr = [x for x in np.unique(test) if x not in np.unique(train)] #missing vals
-
-    
-    if len(missing_arr) > 0: #there is missing array
-        results = []
-        for x in missing_arr:
-            gr_array = [a for a in np.unique(train) if a > x]
-            if len(gr_array) > 0:
-                rep_val = min(gr_array)
-            else:
-                ls_array = [a for a in np.unique(train) if a < x]
-                rep_val = max(ls_array)
-            results.append(rep_val)
-
-        for old, new in zip(missing_arr,results):
-            test = np.where(test == old, new, test)
-        
-        return test
-
-    else:
-        return test
 
 def cross_validation(model, X, y, args, visual=False, save_model=False):
     # Record some statistics and metrics
@@ -121,33 +27,20 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
     train_timer = Timer()
     test_timer = Timer()
 
-    if args.objective == "regression" or args.objective == "probabilistic_regression":
+    if args.frequency_reg:
+        #Need to Clean here
+        X,y,frequency_map = encoding(args, X, y)
+    else:
+        #print("Doing encoding : WE ARE IN TRAIN.PY")
+        X,y = encoding(args, X, y)
+
+    if args.objective == "regression":
         kf = KFold(n_splits=args.num_splits, shuffle=args.shuffle, random_state=args.seed)
-    elif args.objective == "classification" or args.objective == "binary":
+    elif args.objective == "classification" or args.objective == "binary" or args.objective == "probabilistic_regression":
         kf = StratifiedKFold(n_splits=args.num_splits, shuffle=args.shuffle, random_state=args.seed)
     else:
         raise NotImplementedError("Objective" + args.objective + "is not yet implemented.")
 
-    #temp hold
-    num_features_temp = args.num_features
-    num_classes_temp = args.num_classes
-    cat_idx_temp = args.cat_idx
-    nominal_idx_temp = args.nominal_idx
-    ordinal_idx_temp = args.ordinal_idx
-    num_idx_temp = args.num_idx
-    cat_dims_temp = args.cat_dims
-    bin_alt_temp = args.bin_alt
-
-    args_temps = {
-        'num_features' : num_features_temp,
-        'num_classes' : num_classes_temp,
-        'cat_idx' : cat_idx_temp,
-        'nominal_idx' : nominal_idx_temp,
-        'ordinal_idx' : ordinal_idx_temp,
-        'num_idx' : num_idx_temp,
-        'cat_dims' : cat_dims_temp,
-        'bin_alt' :  bin_alt_temp
-    }
 
     for i, (train_index, test_index) in enumerate(kf.split(X, y)):
         print(f"Fold {i+1}")
@@ -158,17 +51,6 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         #print("Before encoding...")
         #print(X_train[:5,:])
         #print(X_test[:5,:])
-
-        #Check Values
-        for key, value in args_temps.items():
-            print(f"{key} : {value}")
-
-        if args.frequency_reg:
-            #Need to Clean here
-            X_train,y_train,X_test,y_test,frequency_map = encoding(args, X_train, y_train, X_test, y_test, args_temps)
-        else:
-            #print("Doing encoding : WE ARE IN TRAIN.PY")
-            X_train,y_train,X_test,y_test = encoding(args, X_train, y_train, X_test, y_test, args_temps)
 
         #print("After encoding : : WE ARE IN TRAIN.PY")
         #Check Valuesprint("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -182,39 +64,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
         print(f"cat_dims : {args.cat_dims}")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")"""
         
-        #Bin the target variable
-        if args.objective == "probabilistic_regression":
-            args.num_bins = bin_finder(args, y_train)
-
-            if args.y_distribution == "bimodial":
-                strategy = 'kmeans'
-            else:
-                strategy = 'quantile'
-            
-            binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=strategy)
-            y_train = binning.fit_transform(y_train.reshape(-1, 1)).flatten()
-            y_test = binning.transform(y_test.reshape(-1, 1)).flatten()
-            args.num_classes = args.num_bins
-
-            #print(f"Number of bins: {args.num_bins}")
-            print(f"Number of Classes B4 Bin Verifier: {args.num_classes}")
-            print(f"Unique values in y_train: {np.unique(y_train), len(np.unique(y_train))}")
-            print(f"Unique values in y_test: {np.unique(y_test), len(np.unique(y_test))}")
-
-            y_train = y_train.astype(int)  # For NumPy arrays
-            y_test = y_test.astype(int)
-
-            #Rectify bin
-            y_train, y_test = bin_shifter(args, y_train, y_test)
-
-
-            print("VERIFY SHIFT")
-            print(f"Train after shift : {np.unique(y_train)}, Length : {len(np.unique(y_train))}")
-            print(f"Test after shift : {np.unique(y_test)}, Length : {len(np.unique(y_test))}")
-            print(f"Number of Classes After Bin Verifier: {args.num_classes}")
         
-
-        # X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.05, random_state=args.seed)
 
         # Create a new unfitted version of the model
         curr_model = model.clone()
