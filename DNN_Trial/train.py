@@ -243,7 +243,7 @@ def cross_validation(model, X, y, args, visual=False, save_model=False):
 
         #save the losses
         print(f"State of save is {save_model} b4 loss saving")
-        if save_model:
+        if save_model and args.model_name != "TabPFN":
             save_loss_to_file(args, loss_history, "loss", extension=i)
             save_loss_to_file(args, val_loss_history, "val_loss", extension=i)
             if args.frequency_reg:
@@ -384,7 +384,7 @@ def main_once(args):
     print("Almost Cross Validating")
     print(f"Model Name: {args.model_name}")
     if args.model_name == "TabPFN":
-        sc, time = cross_validation(model, X, y, args, visual=False, save_model=False)
+        sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
     else:
         sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
     print(sc.get_results())
