@@ -16,3 +16,21 @@ Test time: 0.411718
 Best Parameters: {'n_d': 12, 'n_steps': 10, 'gamma': 1.229058118951327, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 1, 'momentum': 0.008442704193527406, 'mask_type': 'entmax', 'n_a': 12, 'cat_idxs': [0], 'cat_dims': [3], 'device_name': device(type='cpu')}
 
 
+2025-04-18 19:10:42.349295
+TabNet - Brazillian_Houses
+
+Log Loss - mean: 6.00071
+Log Loss - std: 0.06973
+AUC - mean: 0.89620
+AUC - std: 0.00719
+Accuracy - mean: 0.01515
+Accuracy - std: 0.00269
+F1 score - mean: 0.00257
+F1 score - std: 0.00110
+
+Train time: 67.110496
+Test time: 0.207249
+
+Best Parameters: {'n_d': 35, 'n_steps': 3, 'gamma': 1.8830178798654342, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.021221705429572718, 'mask_type': 'entmax', 'n_a': 35, 'cat_idxs': [0], 'cat_dims': [3], 'device_name': device(type='cuda')}
+
+

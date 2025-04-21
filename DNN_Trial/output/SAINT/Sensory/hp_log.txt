@@ -1,0 +1,26 @@
+2025-03-31 09:54:14.558169
+Parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'dropout': 0.5}
+
+Log Loss - mean: 1.65644
+Log Loss - std: 0.03586
+
+Train time: 85.325600
+Test time: 0.149709
+
+---------------------------------------
+2025-04-07 00:39:46.105331
+Parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'dropout': 0}
+
+Log Loss - mean: 1.66368
+Log Loss - std: 0.04337
+AUC - mean: 0.60871
+AUC - std: 0.05252
+Accuracy - mean: 0.26391
+Accuracy - std: 0.05360
+F1 score - mean: 0.22532
+F1 score - std: 0.06211
+
+Train time: 77.285079
+Test time: 0.147100
+
+---------------------------------------

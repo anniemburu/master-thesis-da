@@ -193,3 +193,79 @@ Traceback (most recent call last):
     Xsrt, _ = torch.sort(input, descending=True, dim=dim)
 torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 968.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 112.44 MiB is free. Including non-PyTorch memory, this process has 7.67 GiB memory in use. Of the allocated memory 5.79 GiB is allocated by PyTorch, and 1.76 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
 srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 389, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 93, in average_checkpoints
+    averaged_ckpt = deepcopy(checkpoints[0])
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 296, in _reconstruct
+    value = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/_tensor.py", line 122, in __deepcopy__
+    new_storage = self._typed_storage()._deepcopy(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 799, in _deepcopy
+    return self._new_wrapped_storage(copy.deepcopy(self._untyped_storage, memo))
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 111, in __deepcopy__
+    new_storage = self.clone()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 125, in clone
+    return type(self)(self.nbytes(), device=self.device).copy_(self)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 98.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 60.44 MiB is free. Including non-PyTorch memory, this process has 7.72 GiB memory in use. Of the allocated memory 7.28 GiB is allocated by PyTorch, and 319.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 389, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=True, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 67, in fit
+    res = self.model(torch.as_tensor(data.X_train[:1000], device=self.device))
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/arch.py", line 31, in forward
+    h = layer(layer_inp)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 218, in __call__
+    self.initialize(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/odst.py", line 117, in initialize
+    feature_selectors = self.choice_function(self.feature_selection_logits, dim=0)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 186, in <lambda>
+    entmax15 = lambda input, dim=-1: Entmax15Function.apply(input, dim)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/autograd/function.py", line 539, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 118, in forward
+    tau_star, _ = Entmax15Function._threshold_and_support(input, dim)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 135, in _threshold_and_support
+    Xsrt, _ = torch.sort(input, descending=True, dim=dim)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.19 GiB. GPU 0 has a total capacty of 7.79 GiB of which 2.29 GiB is free. Including non-PyTorch memory, this process has 5.50 GiB memory in use. Of the allocated memory 5.36 GiB is allocated by PyTorch, and 18.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1

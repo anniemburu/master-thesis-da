@@ -12,7 +12,7 @@ CONFIGS=(
     config/black_friday.yml
     #config/boston.yml
     config/brazillian_houses.yml
-    config/diamonds.yml
+    #config/diamonds.yml
     config/house_prices_nominal.yml
     config/house_sales.yml
     config/mercedes_benz.yml
@@ -31,6 +31,6 @@ for config in "${CONFIGS[@]}"; do
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name NODE --objective probabilistic_regression --batch_size 32 --val_batch_size 64
+    srun python3 train.py --config "$config" --model_name NODE --objective probabilistic_regression --batch_size 16 --val_batch_size 64
 
 done
