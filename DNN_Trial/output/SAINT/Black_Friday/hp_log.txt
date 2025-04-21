@@ -1,0 +1,36 @@
+2025-03-31 16:56:40.287568
+Parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.1}
+
+Log Loss - mean: 2.14006
+Log Loss - std: 0.00471
+
+Train time: 10801.160473
+Test time: 5.617159
+
+---------------------------------------
+2025-04-01 06:35:41.229557
+Parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.8}
+
+Log Loss - mean: 2.13398
+Log Loss - std: 0.00462
+
+Train time: 21281.632223
+Test time: 5.410653
+
+---------------------------------------
+2025-04-07 23:19:11.221081
+Parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'dropout': 0.6}
+
+Log Loss - mean: 2.13661
+Log Loss - std: 0.00540
+AUC - mean: 0.93470
+AUC - std: 0.00026
+Accuracy - mean: 0.20981
+Accuracy - std: 0.00171
+F1 score - mean: 0.15552
+F1 score - std: 0.00219
+
+Train time: 18037.797153
+Test time: 6.501936
+
+---------------------------------------

@@ -1,0 +1,32 @@
+2025-04-13 16:44:20.575605
+Parameters: {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 2}
+
+Log Loss - mean: 1.40094
+Log Loss - std: 0.01686
+AUC - mean: 0.88922
+AUC - std: 0.00843
+Accuracy - mean: 0.54549
+Accuracy - std: 0.01553
+F1 score - mean: 0.54140
+F1 score - std: 0.01722
+
+Train time: 52.240994
+Test time: 0.033611
+
+---------------------------------------
+2025-04-13 17:26:53.365562
+Parameters: {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}
+
+Log Loss - mean: 1.38661
+Log Loss - std: 0.01874
+AUC - mean: 0.88885
+AUC - std: 0.00533
+Accuracy - mean: 0.53958
+Accuracy - std: 0.02080
+F1 score - mean: 0.53689
+F1 score - std: 0.02141
+
+Train time: 91.453782
+Test time: 0.046293
+
+---------------------------------------
