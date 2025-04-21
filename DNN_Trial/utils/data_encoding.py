@@ -122,6 +122,24 @@ def encoding(args, X,y):
     print(f"X shape : {X.shape}")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
+    ## DO for TabPFN
+    if args.model_name == "TabPFN":
+        args.one_hot_encode = False
+        args.ordinal_encode = False
+
+        if args.nominal_idx is not None and args.ordinal_idx is not None:
+            args.cat_idx = sorted(args.nominal_idx + args.ordinal_idx)
+        elif args.ordinal_idx is not None:
+            args.cat_idx = args.ordinal_idx
+        else:
+            args.cat_idx = args.nominal_idx
+
+        for idx in args.cat_idx:
+            le = LabelEncoder()
+            X[:, idx] = le.fit_transform(X[:, idx])
+
+        X[:, args.cat_idx] = X[:, args.cat_idx].astype(float)
+
     # Preprocess target 
     if args.target_encode:
         le = LabelEncoder()
@@ -254,6 +272,7 @@ def encoding(args, X,y):
 
     # Ordinal Encode
     if args.ordinal_encode:
+        print("Ordinal Encoding...")
         if args.dataset == "Black_Friday":
             #print(f"Ordinal Index b4 using OE : {args.ordinal_idx}")
             ordinal_encoder = OrdinalEncoder(categories=[[None,'0-17','18-25','26-35','36-45','46-50','51-55','55+']])
@@ -332,6 +351,11 @@ def encoding(args, X,y):
 
             #print("OHE Done!!! \n")
 
+    #Do for TabNet
+    
+
+        
+        
     
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("After ORDINAL")
