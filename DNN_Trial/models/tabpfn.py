@@ -15,7 +15,7 @@ class TabPFN(BaseModel):
             raise ValueError("Objective must be either 'regression' or 'classification' or 'probabilistic_regression'.")
         
 
-    def fit(self, X, y, X_val=None, y_val=None):
+    def fit(self, X, y, X_val=None, y_val=None,overwrite_warning=True):
 
         self.model.fit(X, y)
 
