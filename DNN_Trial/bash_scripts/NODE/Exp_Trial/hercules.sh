@@ -12,7 +12,7 @@ CONFIGS=(
     config/black_friday.yml
     #config/boston.yml
     config/brazillian_houses.yml
-    config/diamonds.yml
+    #config/diamonds.yml
     config/house_prices_nominal.yml
     config/house_sales.yml
     config/mercedes_benz.yml
