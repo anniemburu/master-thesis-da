@@ -12,6 +12,11 @@ from models.deepgbm_lib.utils.tree_model_interpreter import ModelInterpreter
 
 import models.deepgbm_lib.config as config
 
+from utils.parser import get_parser, get_given_parameters_parser ##Added args
+
+parser = get_parser()
+args = parser.parse_args()
+
 
 
 def TrainGBDT(train_x, train_y, test_x, test_y):
@@ -33,6 +38,12 @@ def TrainGBDT(train_x, train_y, test_x, test_y):
         objective = "binary"
         metric = "auc"
         boost_from_average = True
+    elif task == 'multi-class':
+        objective = "multiclass"
+        metric = "multi_logloss"
+        boost_from_average = True
+        num_class = args.num_classes
+
     else:
         print ("Classification not yet implemented!")
         # TODO: implement classification
