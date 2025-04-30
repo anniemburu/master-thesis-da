@@ -185,8 +185,9 @@ class LightGBM(BaseModel):
         val = lgb.Dataset(X_val, label=y_val, categorical_feature=self.args.cat_idx)
         self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs, valid_sets=[train,val],
                                valid_names=["train","eval"], callbacks=[lgb.early_stopping(self.args.early_stopping_rounds),
-                                                                lgb.log_evaluation(self.args.logging_period)],
-                               categorical_feature=self.args.cat_idx, evals_result = evals_result)
+                               lgb.log_evaluation(self.args.logging_period),
+                               lgb.record_evaluation(evals_result)],
+                               )
         
         #print(f"Train Loss : {evals_result['train']['l2']} \n")
         #print(f"Eval Loss : {evals_result['eval']['l2']} \n")
