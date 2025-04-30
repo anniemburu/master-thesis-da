@@ -6,6 +6,7 @@ import pandas as pd
 import copy
 import time
 import torch
+import yaml
 
 import optuna 
 
@@ -842,7 +843,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
         print("B4 Evaluation")
         print(f"Number of classes : {args.num_classes}")
-        print(f"Class label len :{len(args.bin_alt)}")
+        #print(f"Class label len :{len(args.bin_alt)}")
         print(f"Class labels : {args.bin_alt}")
         print(f"Unique y_true : {len(np.unique(y_test))}")
         print(f"Unique train : {len(np.unique(y_train))}\n")
@@ -1008,14 +1009,33 @@ def main_once(args):
     # that would be used *after* nested CV determines the best approach/model.
     # Let's assume we use the main dataset X, y for nested CV.
 
+    print(f"Dataset: {args.dataset}, Model: {args.model_name}, Objective: {args.objective}")
+    
+
     if args.objective == "probabilistic_regression": 
-        args.best_params_file = "config/best_params_class.yaml"
+        args.best_params_file = "config/best_params_class.yml"
+
+        with open(args.best_params_file, 'r') as file:
+            args.parameters = yaml.safe_load(file)
+            args.parameters =args.parameters['parameters']
+            
     elif args.objective == "regression":
-        args.best_params_file = "config/best_params_reg.yaml"
+        args.best_params_file = "config/best_params_reg.yml"
+
+        with open(args.best_params_file, 'r') as file:
+            args.parameters = yaml.safe_load(file)
+            args.parameters =args.parameters['parameters']
+            
+            print(f"Parameters: {args.parameters}")
+            print(len(args.parameters))
+            print(args.parameters.keys())
+
+    print(f"Best Params File: {args.best_params_file}")
 
     X, X_test, y, y_test = load_data(args, is_test=True) # Use the main dataset
 
     model_name = str2model(args.model_name)
+    #print(f"Params for {args.model_name}: {args.parameters}")
 
     parameters = args.parameters[args.dataset][args.model_name]
 
@@ -1054,10 +1074,18 @@ def main_once(args):
         args.num_features = X.shape[1]
         args.objective = "regression"
         args.class_comp = True
-        args.best_params_file = "config/best_params_reg.yaml"
+        args.best_params_file = "config/best_params_reg.yml"
 
-        print("After classificATION: THE ARGS .....")
+        with open(args.best_params_file, 'r') as file:
+            args.parameters = yaml.safe_load(file)
+            args.parameters =args.parameters['parameters']
+
+        print("After Classification: THE ARGS .....")
         print(args, "\n\n")
+
+        parameters = args.parameters[args.dataset][args.model_name]
+
+        print(f"Parameters for {args.model_name}: {parameters}")
 
         
         print("After Classifications --- ")
@@ -1092,7 +1120,7 @@ if __name__ == "__main__":
         parser.add_argument('--no_save_results', action='store_false', dest='save_results')
         arguments = parser.parse_args()
         print("Running Mode: Nested CV with Hyperparameter Optimization")
-        print(arguments)
+        print(f"Arguements: {arguments}")
         main(arguments)
     else:
         # Re-parse with the parser that includes predefined parameters
@@ -1103,7 +1131,7 @@ if __name__ == "__main__":
         parser.add_argument('--class_comp', action='store_false', default=False, help='Convert Classification to Regression')
         arguments = parser.parse_args()
         print("Running Mode: Nested CV with Predefined Hyperparameters")
-        print(arguments)
+        print(f"Arguements: {arguments}")
         main_once(arguments)
 
     
