@@ -1,48 +1,14 @@
-2025-03-27 06:19:08.676160
+2025-01-31 13:15:22.025115
 VIME - House_Prices_Nominal
 
-Log Loss - mean: 3.27374
-Log Loss - std: 1.23213
+MSE - mean: 1180899722.88562
+MSE - std: 598248915.34315
+R2 - mean: 0.81776
+R2 - std: 0.07629
 
-Train time: 8.886953
-Test time: 0.044647
+Train time: 139.449714
+Test time: 0.045833
 
-Best Parameters: {'p_m': 0.4533998401084272, 'alpha': 7.392529892948591, 'K': 2, 'beta': 0.13686686663303674}
-
-
-2025-04-13 09:28:42.368800
-VIME - House_Prices_Nominal
-
-Log Loss - mean: 4.37076
-Log Loss - std: 1.58843
-AUC - mean: 0.74838
-AUC - std: 0.07469
-Accuracy - mean: 0.41507
-Accuracy - std: 0.02786
-F1 score - mean: 0.31607
-F1 score - std: 0.04907
-
-Train time: 6.436861
-Test time: 0.040435
-
-Best Parameters: {'K': 2, 'alpha': 7.392529892948591, 'beta': 0.13686686663303674, 'p_m': 0.4533998401084272}
-
-
-2025-04-15 14:49:11.382947
-VIME - House_Prices_Nominal
-
-Log Loss - mean: 1.06864
-Log Loss - std: 0.05276
-AUC - mean: 0.92263
-AUC - std: 0.00589
-Accuracy - mean: 0.61781
-Accuracy - std: 0.02927
-F1 score - mean: 0.61632
-F1 score - std: 0.03323
-
-Train time: 32.298892
-Test time: 0.043052
-
-Best Parameters: {'p_m': 0.1397565108017948, 'alpha': 5.721208340490568, 'K': 5, 'beta': 9.215465499679352}
+Best Parameters: {'p_m': 0.6189603587975631, 'alpha': 2.269328779984874, 'K': 20, 'beta': 0.20886579322966808}
 
 

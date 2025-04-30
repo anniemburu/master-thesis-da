@@ -1,0 +1,14 @@
+2025-01-27 18:44:10.924757
+CatBoost - Sensory
+
+MSE - mean: 0.47632
+MSE - std: 0.04530
+R2 - mean: 0.28521
+R2 - std: 0.07564
+
+Train time: 0.708694
+Test time: 0.009395
+
+Best Parameters: {'learning_rate': 0.1690834325576087, 'max_depth': 5, 'l2_leaf_reg': 0.9479202249624208, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+

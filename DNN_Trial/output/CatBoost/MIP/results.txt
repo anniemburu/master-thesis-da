@@ -1,0 +1,14 @@
+2025-01-27 18:00:54.132623
+CatBoost - MIP
+
+MSE - mean: 921024.55240
+MSE - std: 333614.42811
+R2 - mean: 0.99887
+R2 - std: 0.00036
+
+Train time: 0.948495
+Test time: 0.019937
+
+Best Parameters: {'learning_rate': 0.2682539692420618, 'max_depth': 2, 'l2_leaf_reg': 0.595594931273915, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/MIP/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [144, 145]}
+
+

@@ -1,0 +1,14 @@
+2025-01-27 17:09:56.000147
+CatBoost - Abalone
+
+MSE - mean: 4.56574
+MSE - std: 0.43923
+R2 - mean: 0.56026
+R2 - std: 0.01272
+
+Train time: 1.088459
+Test time: 0.005929
+
+Best Parameters: {'learning_rate': 0.21626767556712503, 'max_depth': 6, 'l2_leaf_reg': 21.130356608849873, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Abalone/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0]}
+
+

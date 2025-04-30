@@ -1,48 +1,14 @@
-2025-03-27 14:01:19.151088
+2025-02-02 20:04:23.935633
 VIME - Boston
 
-Log Loss - mean: 3.97528
-Log Loss - std: 1.00095
+MSE - mean: 9.17009
+MSE - std: 1.83221
+R2 - mean: 0.88802
+R2 - std: 0.03017
 
-Train time: 8.676654
-Test time: 0.037799
+Train time: 20.376729
+Test time: 0.034909
 
-Best Parameters: {'p_m': 0.1424087402217248, 'alpha': 2.0437388183588707, 'K': 15, 'beta': 0.12216986637163613}
-
-
-2025-04-13 09:02:51.969901
-VIME - Boston
-
-Log Loss - mean: 3.14626
-Log Loss - std: 1.03546
-AUC - mean: 0.81328
-AUC - std: 0.06165
-Accuracy - mean: 0.52957
-Accuracy - std: 0.07282
-F1 score - mean: 0.49619
-F1 score - std: 0.08730
-
-Train time: 8.285992
-Test time: 0.039935
-
-Best Parameters: {'K': 15, 'alpha': 2.0437388183588707, 'beta': 0.12216986637163613, 'p_m': 0.1424087402217248}
-
-
-2025-04-15 12:31:17.814512
-VIME - Boston
-
-Log Loss - mean: 1.27798
-Log Loss - std: 0.10634
-AUC - mean: 0.88689
-AUC - std: 0.00832
-Accuracy - mean: 0.55337
-Accuracy - std: 0.02435
-F1 score - mean: 0.54555
-F1 score - std: 0.02565
-
-Train time: 7.610559
-Test time: 0.041793
-
-Best Parameters: {'p_m': 0.17811243449647995, 'alpha': 4.815559536808929, 'K': 5, 'beta': 6.256477558016467}
+Best Parameters: {'p_m': 0.8681902625624857, 'alpha': 1.1876583336706839, 'K': 10, 'beta': 0.11595464794430743}
 
 

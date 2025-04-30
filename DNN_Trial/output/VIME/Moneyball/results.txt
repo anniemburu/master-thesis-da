@@ -1,48 +1,14 @@
-2025-03-28 01:48:40.913375
+2025-02-03 19:02:01.225703
 VIME - Moneyball
 
-Log Loss - mean: 3.55196
-Log Loss - std: 1.23610
+MSE - mean: 629.10621
+MSE - std: 132.61292
+R2 - mean: 0.92367
+R2 - std: 0.02064
 
-Train time: 16.411859
-Test time: 0.044161
+Train time: 20.751239
+Test time: 0.044168
 
-Best Parameters: {'p_m': 0.5347336204472701, 'alpha': 4.400917496865748, 'K': 10, 'beta': 0.11734115912167242}
-
-
-2025-04-13 09:44:12.887667
-VIME - Moneyball
-
-Log Loss - mean: 3.53027
-Log Loss - std: 1.05556
-AUC - mean: 0.81633
-AUC - std: 0.05774
-Accuracy - mean: 0.48863
-Accuracy - std: 0.04214
-F1 score - mean: 0.41200
-F1 score - std: 0.05032
-
-Train time: 10.624194
-Test time: 0.036540
-
-Best Parameters: {'K': 10, 'alpha': 4.400917496865748, 'beta': 0.11734115912167242, 'p_m': 0.5347336204472701}
-
-
-2025-04-15 15:32:53.940384
-VIME - Moneyball
-
-Log Loss - mean: 1.27781
-Log Loss - std: 0.18111
-AUC - mean: 0.90829
-AUC - std: 0.01014
-Accuracy - mean: 0.57869
-Accuracy - std: 0.02444
-F1 score - mean: 0.57683
-F1 score - std: 0.02570
-
-Train time: 13.435275
-Test time: 0.041125
-
-Best Parameters: {'p_m': 0.3091372793215567, 'alpha': 2.243690829654084, 'K': 2, 'beta': 7.226806178614233}
+Best Parameters: {'p_m': 0.8630138087609165, 'alpha': 7.843131897478414, 'K': 2, 'beta': 0.10453040003771896}
 
 
