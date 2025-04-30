@@ -2,6 +2,7 @@ import sklearn.datasets
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder, OrdinalEncoder, KBinsDiscretizer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
 
 import numpy as np
 import pandas as pd
@@ -38,7 +39,7 @@ def get_catidx(args):
         cat_idx = args.nominal_idx
     return cat_idx
 
-def load_data(args):
+def load_data(args, is_test=False):
     import pandas as pd
     #print(f" Panda Version: {pd.__version__}")
     print("Loading dataset " + args.dataset + "...")
@@ -246,6 +247,9 @@ def load_data(args):
         X = df.drop(label_col, axis=1).to_numpy()
         y = df[label_col].to_numpy()
 
+        print("In Abalone")
+        print(df.info())
+
     elif args.dataset == "NYC_Taxi":
         pass
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016/raw_data.csv') #CLUSTER
@@ -306,186 +310,11 @@ def load_data(args):
     #print(f"Cat Dims: {args.cat_dims} \n \n")
     #print(f"Normonal Idx: {args.nominal_idx}")
 
-    """
-    # Preprocess target 
-    if args.target_encode:
-        le = LabelEncoder()
-        y = le.fit_transform(y)
+    #Split to train and Split
 
-    ## Create binned y 4 Probability Regression
-    #if args.objective == "probabilistic_regression":
-    #    binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy='quantile')
-    #    y = binning.fit_transform(y.reshape(-1, 1)).flatten()
-    #    args.num_classes = args.num_bins
-    
+    X_, X_test, y_, y_test = train_test_split(X, y, test_size=0.5, shuffle=True, random_state=40)
 
-    num_idx = []
-    args.cat_dims = []
-    args.cat_idx = get_catidx(args)
-    #print(f"Cat Idx Part II: {args.cat_idx} ")
-    #print(f"ENDE \n \n")
-
-    #####################################################################################
-    # NO Encoding for XGBoost, CatBoost, LightGBM
-    if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
-        args.one_hot_encode = False
-        args.ordinal_encode = False
-        print(f'No one Hot for this Baby!!! \n')
-
-    #~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    
-    # Preprocess  Nominal data
-    for i in range(args.num_features):
-        if args.cat_idx and i in args.cat_idx:
-            #Only Nominal
-            if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
-                le = LabelEncoder()
-                X[:, i] = le.fit_transform(X[:, i])
-                args.cat_dims.append(len(le.classes_))
-            else:
-                if args.ordinal_idx and i in args.ordinal_idx:
-                    le = LabelEncoder()
-                    #X[:, i] = le.fit_transform(X[:, i])
-                    le.fit_transform(X[:, i])
-
-                    # Gets number of unique classes per ordinal feature
-                    #Covers future cases with None
-                    if np.any(X[:, i] == "None"):
-                        args.cat_dims.append(len(le.classes_))
-                    else:
-                        args.cat_dims.append(len(le.classes_)+1)
-
-        else:
-            num_idx.append(i)
-
-    args.num_idx = num_idx #update num_idx
-
-    #print(f"X after Nominal Encoding: {X[0]} \n \n")
-    
-    
-    if args.scale:
-        print("Scaling the data...")
-        scaler = StandardScaler()
-        X[:, num_idx] = scaler.fit_transform(X[:, num_idx])
-
-    #print(f"X after Scaling: {X[0]} \n \n")
-
-
-    if args.one_hot_encode:
-        ohe = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
-        new_x1 = ohe.fit_transform(X[:, args.nominal_idx])
-        new_x2 = X[:, num_idx]
-
-        if args.ordinal_encode:
-            ord_len = len(args.ordinal_idx)
-            new_ord = X[:, args.ordinal_idx]
-            args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
-            print(f"Ordinal Idx: {args.ordinal_idx}")
-            X = np.concatenate([new_ord, new_x1, new_x2], axis=1)
-
-        else:
-            X = np.concatenate([new_x1, new_x2], axis=1)
-            args.ordinal_idx = []
-
-        #change the num of features after one hot encoding;
-        args.num_features = X.shape[1]
-        #args.cat_idx = get_catidx(args)
-        #args.cat_idx = args.ordinal_idx  ##coz the norminal are now int....
-
-        
-        #We have encoded nominal features. Therefore categorical data now is if we have 
-        #odinal features.
-        
-        if args.ordinal_encode:
-            args.cat_idx = args.ordinal_idx
-        else:
-            args.cat_idx = None
-            
-        print("One Hot Encoding...")
-        #print(f"X after One Hot Encoding: {X[0]} \n \n")
-        #print(f"args.num_features: {args.num_features}")
-        #print(f"args.cat_idx: {args.cat_idx}")
-        #print(f"Cat Dims: {args.cat_dims}")
-        print("New Shape:", X.shape)
-        #print(f"{args.ordinal_encode} \n \n")
-        
-
-    # Ordinal Encode
-    if args.ordinal_encode:
-        if args.dataset == "Black_Friday":
-            ordinal_encoder = OrdinalEncoder(categories=[[None,'0-17','18-25','26-35','36-45','46-50','51-55','55+']])
-            X[:, args.ordinal_idx] = ordinal_encoder.fit_transform(X[:, args.ordinal_idx])
-
-        elif args.dataset == "Diamonds":
-            categories = [
-                            [None, 'Fair', 'Good', 'Very Good', 'Premium', 'Ideal'],  # For 'cut'
-                            [None, 'J', 'I', 'H', 'G', 'F', 'E', 'D'],  # For 'color'
-                            [None, 'I1', 'SI2', 'SI1', 'VS2', 'VS1', 'VVS2', 'VVS1', 'IF']  # For 'clarity'
-                        ]
-
-            # Create the OrdinalEncoder
-            encoder = OrdinalEncoder(categories=categories, dtype=int)
-
-            # Fit and transform the data
-            X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
-
-        elif args.dataset == "House_Prices_Nominal":
-            categories = [
-                    [None,'Grvl', 'Pave'],
-                    ['None', 'Grvl', 'Pave'],
-                    [None, 'Low','Bnk','HLS','Lvl'],
-                    [None,'NoSeWa','AllPub'],
-                    [None,'Inside', 'FR2', 'FR3', 'Corner', 'CulDSac'],
-                    [None,'Sev', 'Mod', 'Gtl'],
-                    [None,'RRNe','RRNn','RRAe','RRAn','Artery','Feedr','Norm','PosN','PosA'],
-                    [None,'RRNn','RRAe','RRAn','Artery','Feedr','Norm','PosN','PosA'],
-                    [None, '1Fam','TwnhsE', 'Twnhs', 'Duplex', '2fmCon'],
-                    [None,"1Story", "1.5Unf","SFoyer","SLvl","1.5Fin", "2Story","2.5Unf","2.5Fin"],
-                    [None,"Flat", "Shed", "Gambrel", "Mansard", "Gable","Hip"],
-                    [None,'Roll','Tar&Grv','Membran','CompShg','WdShngl','WdShake','Metal','ClyTile'],
-                    [None,'CBlock','AsphShn','ImStucc','AsbShng','Plywood','Wd Sdng','WdShing','MetalSd','VinylSd','HdBoard','Stucco','BrkComm','CemntBd','BrkFace','Stone'],
-                    [None, 'Other','CBlock','AsphShn','ImStucc','AsbShng','Plywood','Wd Sdng','Wd Shng','MetalSd','VinylSd','HdBoard','Stucco','Brk Cmn','CmentBd','BrkFace','Stone'],
-                    ['None', 'BrkCmn','BrkFace','Stone'],
-                    [None,'Fa','TA','Gd','Ex'],
-                    [None,'Po','Fa','TA','Gd','Ex'],
-                    [None,'Wood', 'Slab', 'BrkTil','CBlock', 'Stone','PConc'],
-                    ['None','Fa','TA','Gd','Ex'],
-                    ['None','Po','Fa','TA','Gd'],
-                    ['None', 'No','Mn', 'Av', 'Gd'],
-                    ['None','Unf','LwQ','Rec','BLQ','ALQ','GLQ'],
-                    ['None','Unf','LwQ','Rec','BLQ','ALQ','GLQ'],
-                    [None,'OthW','Grav','Wall','Floor', 'GasW','GasA'],
-                    ['None','Po','Fa','TA','Gd','Ex'],
-                    ['None', 'N', 'Y'],
-                    ['None', 'Mix','FuseP','FuseF', 'FuseA','SBrkr'],
-                    [None,'Fa','TA','Gd','Ex'],
-                    [None, 'Sev','Maj1','Maj2','Min1','Min2','Mod','Typ'],
-                    ['None','Po','Fa','TA','Gd','Ex'],
-                    ['None','CarPort', 'Detchd','Basment','2Types','BuiltIn','Attchd'],
-                    ['None','Unf','RFn','Fin'],
-                    ['None','Po','Fa','TA','Gd','Ex'],
-                    ['None','Po','Fa','TA','Gd','Ex'],
-                    ['None', 'N','P','Y'],
-                    ['None','Fa','Gd','Ex'],
-                    ['None','MnWw','MnPrv','GdWo','GdPrv'],
-                    ['None','Othr','Shed','Gar2','TenC'],
-                    [None, 'Oth','COD', 'ConLD','ConLw','ConLI','Con','WD','CWD','New'],
-                    [None,'Abnorml','AdjLand','Family','Alloca','Partial','Normal']
-                ]
-            # Create the OrdinalEncoder
-            encoder = OrdinalEncoder(categories=categories, dtype=int)
-
-            # Fit and transform the data
-            X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
-        
-        elif args.dataset == "Brazillian_Houses":
-
-            encoder = OrdinalEncoder(categories=[[None,'not furnished','furnished']])
-
-            # Fit and transform the data
-            X[:, args.ordinal_idx] = encoder.fit_transform(X[:, args.ordinal_idx])
-
-            print("OE Done!!! \n")
-    """
-    return X, y
+    if is_test:
+        return X_, X_test, y_, y_test
+    else:
+        return X_, y_

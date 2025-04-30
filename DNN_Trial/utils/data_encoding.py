@@ -39,17 +39,17 @@ def frequency_mapper(X_onehot, onehot_encoder):
     return frequency_map
 
 
-def encoding(args, X_train, y_train, X_val, y_val, args_temps):
+def encoding(args, X_train, y_train, X_val, y_val):
 
     #Reset after ever fold
-    args.num_features = args_temps["num_features"]
-    args.num_classes = args_temps["num_classes"]
-    args.cat_idx = args_temps["cat_idx"]
-    args.nominal_idx = args_temps["nominal_idx"]
-    args.ordinal_idx = args_temps["ordinal_idx"]
-    args.num_idx = args_temps["num_idx"]
-    args.cat_dims = args_temps["cat_dims"]
-    args.bin_alt = args_temps["bin_alt"]
+    #args.num_features = args_temps["num_features"]
+    #args.num_classes = args_temps["num_classes"]
+    #args.cat_idx = args_temps["cat_idx"]
+    #args.nominal_idx = args_temps["nominal_idx"]
+    #args.ordinal_idx = args_temps["ordinal_idx"]
+    #args.num_idx = args_temps["num_idx"]
+    #args.cat_dims = args_temps["cat_dims"]
+    #args.bin_alt = args_temps["bin_alt"]
 
 
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
