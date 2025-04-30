@@ -2,8 +2,12 @@ import math
 
 import torch
 import torch.nn as nn
+from utils.parser import get_parser, get_given_parameters_parser ##Added args
 
 import models.deepgbm_lib.config as config
+
+parser = get_parser()
+args = parser.parse_args()
 
 '''
     CatNN:
@@ -22,7 +26,7 @@ class CatNN(nn.Module):
                  deep_layers_activation='relu',
                  is_batch_norm=True, use_wide=False,
                  use_fm=True, use_deep=True,
-                 use_cuda=True, ):
+                 use_cuda=True,):
         super(CatNN, self).__init__()
 
         # Set all class variables
@@ -42,6 +46,7 @@ class CatNN(nn.Module):
         self.use_deep = use_deep
         self.use_cuda = use_cuda
         self.task = config.config['task']
+        self.num_classes = args.num_classes  # Number of classes for multi-class classification
 
         if self.use_fm or self.use_wide:
             self.bias = torch.nn.Parameter(torch.randn(1))
@@ -104,13 +109,24 @@ class CatNN(nn.Module):
 
             print("Init deep part succeed")
 
-        # Set correct loss
+        # Set correct loss  ## ORIGINAL
+        #if self.task == 'binary':
+        #    self.criterion = nn.BCELoss()
+        #elif self.task == 'regression':
+        #    self.criterion = nn.MSELoss()
+        #else:
+        #    print("Task not yet implemented.")
         if self.task == 'binary':
+            self.output_layer = nn.Linear(self.deep_layers[-1], 1)
             self.criterion = nn.BCELoss()
+        elif self.task == 'probabilistic_regression':
+            self.output_layer = nn.Linear(self.deep_layers[-1], self.num_classes)
+            self.criterion = nn.CrossEntropyLoss()
         elif self.task == 'regression':
+            self.output_layer = nn.Linear(self.deep_layers[-1], 1)
             self.criterion = nn.MSELoss()
         else:
-            print("Task not yet implemented.")
+            raise ValueError("Invalid task type. Choose from 'binary', 'probabilistic_regression', or 'regression'.")
 
         print("Init CatNN succeed!")
 
@@ -187,6 +203,8 @@ class CatNN(nn.Module):
 
         if self.task == 'binary':
             return nn.Sigmoid()(total_sum)
+        elif self.task == 'probabilistic_regression':
+            return nn.Softmax(dim=1)(total_sum)
 
         return total_sum
 

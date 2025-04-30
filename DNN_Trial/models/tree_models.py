@@ -31,6 +31,7 @@ class XGBoost(BaseModel):
         if args.objective == "regression":
             self.params["objective"] = "reg:squarederror"
             self.params["eval_metric"] = "rmse"
+            self.params.pop("num_class", None)
         elif args.objective == "classification":
             self.params["objective"] = "multi:softprob"
             self.params["num_class"] = args.num_classes
@@ -45,15 +46,13 @@ class XGBoost(BaseModel):
 
         train = xgb.DMatrix(X, label=y, enable_categorical=True, feature_types=feature_types)
         val = xgb.DMatrix(X_val, label=y_val, enable_categorical=True, feature_types=feature_types)
-
         eval_list = [(train, "train"),(val, "eval")]
         evals_result = {}
         self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs, evals=eval_list, 
-                               evals_result=evals_result,
-                               early_stopping_rounds=self.args.early_stopping_rounds,
-                               verbose_eval=self.args.logging_period)
+                            evals_result=evals_result,
+                            early_stopping_rounds=self.args.early_stopping_rounds,
+                            verbose_eval=self.args.logging_period)
         
-
         return evals_result['train']['rmse'], evals_result['eval']['rmse']
 
     def predict(self, X):
@@ -71,7 +70,7 @@ class XGBoost(BaseModel):
         return self.prediction_probabilities
     
     def feature_types(self):
-        feat_types = np.empty(np.max(np.concatenate([self.args.cat_idx, self.args.num_idx])) + 1, dtype=object)
+        feat_types = np.empty(int(np.max(np.concatenate([self.args.cat_idx, self.args.num_idx])) + 1), dtype=object)
 
         feat_types[self.args.cat_idx] = "c"
         feat_types[self.args.num_idx] = "q"
@@ -186,8 +185,9 @@ class LightGBM(BaseModel):
         val = lgb.Dataset(X_val, label=y_val, categorical_feature=self.args.cat_idx)
         self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs, valid_sets=[train,val],
                                valid_names=["train","eval"], callbacks=[lgb.early_stopping(self.args.early_stopping_rounds),
-                                                                lgb.log_evaluation(self.args.logging_period)],
-                               categorical_feature=self.args.cat_idx, evals_result = evals_result)
+                               lgb.log_evaluation(self.args.logging_period),
+                               lgb.record_evaluation(evals_result)],
+                               )
         
         #print(f"Train Loss : {evals_result['train']['l2']} \n")
         #print(f"Eval Loss : {evals_result['eval']['l2']} \n")

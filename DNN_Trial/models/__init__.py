@@ -37,7 +37,7 @@ def str2model(model):
         from models.tree_models import LightGBM
         return LightGBM
 
-    elif model == "MLP":
+    elif model == "MLPOLD":
         from models.mlp import MLP
         return MLP
 
@@ -96,6 +96,18 @@ def str2model(model):
     elif model == "TabPFN":
         from models.tabpfn import TabPFN
         return TabPFN
+    
+    elif model == "MLP":
+        from models.mlp import MLP
+        return MLP
+    
+    elif model == "ResNet":
+        from models.resnet import ResNet
+        return ResNet
+    
+    elif model == "FTTransformer":
+        from models.ft_transformer import FTTransformer
+        return FTTransformer
 
     else:
         raise NotImplementedError("Model \"" + model + "\" not yet implemented")

@@ -5,6 +5,10 @@ from torch.nn.parameter import Parameter
 import math
 
 import models.deepgbm_lib.config as config
+from utils.parser import get_parser, get_given_parameters_parser ##Added args
+
+parser = get_parser()
+args = parser.parse_args()
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -16,9 +20,10 @@ else:
 
 
 class EmbeddingModel(nn.Module):
-    def __init__(self, n_models, max_ntree_per_split, n_output, out_bias=None):
+    def __init__(self,n_models, max_ntree_per_split, n_output, out_bias=None):
         super(EmbeddingModel, self).__init__()
         self.task = config.config['task']
+        self.num_classes = args.num_classes  # Number of classes for multi-class classification
         self.n_models = n_models
         self.maxleaf = config.config['maxleaf'] + 1
         self.fcs = nn.ModuleList()
@@ -35,11 +40,14 @@ class EmbeddingModel(nn.Module):
         self.bn = nn.BatchNorm1d(embsize * n_models)
         self.tanh = nn.Tanh()
         self.sigmoid = nn.Sigmoid()
+        self.softmax = nn.Softmax(dim=1)  # Softmax for multi-class classification
         self.dropout = torch.nn.Dropout()
         if self.task == 'regression':
             self.criterion = nn.MSELoss()
         elif self.task == 'binary':
             self.criterion = nn.BCELoss()
+        elif self.task == 'probabilistic_regression':
+            self.criterion = nn.CrossEntropyLoss()
         else:
             print("Classification task not yet implemented!")
             # TODO: Implement classification
@@ -70,6 +78,8 @@ class EmbeddingModel(nn.Module):
 
         if self.task == 'binary':
             return self.sigmoid(sum_out), out
+        elif self.task == 'probabilistic_regression':
+            return self.softmax(sum_out), out  # Apply softmax for multi-class classification
 
         # TODO: Implement classification
         return sum_out, out

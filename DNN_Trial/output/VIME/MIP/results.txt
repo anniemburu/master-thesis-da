@@ -1,48 +1,14 @@
-2025-03-27 09:40:11.701196
+2025-02-03 02:44:50.881837
 VIME - MIP
 
-Log Loss - mean: 9.39796
-Log Loss - std: 0.43222
+MSE - mean: 35337896.93287
+MSE - std: 26255061.50068
+R2 - mean: 0.95741
+R2 - std: 0.02815
 
-Train time: 12.475383
-Test time: 0.127728
+Train time: 84.057160
+Test time: 0.110171
 
-Best Parameters: {'p_m': 0.477310157887738, 'alpha': 7.7200083785423885, 'K': 5, 'beta': 4.472104505092457}
-
-
-2025-04-13 09:42:36.398341
-VIME - MIP
-
-Log Loss - mean: 9.59380
-Log Loss - std: 0.38715
-AUC - mean: 0.50037
-AUC - std: 0.00054
-Accuracy - mean: 0.16606
-Accuracy - std: 0.03413
-F1 score - mean: 0.04878
-F1 score - std: 0.01763
-
-Train time: 22.092285
-Test time: 0.094172
-
-Best Parameters: {'K': 5, 'alpha': 7.7200083785423885, 'beta': 4.472104505092457, 'p_m': 0.477310157887738}
-
-
-2025-04-15 15:29:54.069894
-VIME - MIP
-
-Log Loss - mean: 9.40124
-Log Loss - std: 0.43807
-AUC - mean: 0.49992
-AUC - std: 0.00014
-Accuracy - mean: 0.18349
-Accuracy - std: 0.03805
-F1 score - mean: 0.05870
-F1 score - std: 0.02015
-
-Train time: 34.575852
-Test time: 0.111788
-
-Best Parameters: {'p_m': 0.6371585586541122, 'alpha': 7.099842406463476, 'K': 15, 'beta': 1.7253793413889102}
+Best Parameters: {'p_m': 0.2021625763442114, 'alpha': 0.9520979355669961, 'K': 10, 'beta': 0.11515567629529239}
 
 

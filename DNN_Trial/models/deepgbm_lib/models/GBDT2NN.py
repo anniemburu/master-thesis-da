@@ -7,10 +7,12 @@ from torch.autograd import Variable
 from models.deepgbm_lib.models.EmbeddingModel import BatchDense
 
 import models.deepgbm_lib.config as config
+from utils.parser import get_parser, get_given_parameters_parser ##Added args
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-
+parser = get_parser()
+args = parser.parse_args()
 '''
 
     GBDT2NN Network
@@ -22,6 +24,7 @@ class GBDT2NN(nn.Module):
         super(GBDT2NN, self).__init__()
         #print('Init GBDT2NN')
         self.task = config.config['task']
+        self.num_classes = args.num_classes  # Number of classes for multi-class classification
         self.n_models = len(used_features)
         tree_layers = config.config['tree_layers']
         n_feature = len(used_features[0])
@@ -29,6 +32,7 @@ class GBDT2NN(nn.Module):
         self.used_features = Variable(torch.from_numpy(used_features).to(device), requires_grad=False)
         self.relu = nn.ReLU()
         self.sigmoid = nn.Sigmoid()
+        self.softmax = nn.Softmax(dim=1)  # Softmax for multi-class classification
         assert len(tree_layers) > 0
         self.bdenses = nn.ModuleList()
         self.bns = nn.ModuleList()
@@ -44,8 +48,11 @@ class GBDT2NN(nn.Module):
             self.criterion = nn.MSELoss()
         elif self.task == 'binary':
             self.criterion = nn.BCELoss()
+        elif self.task == 'probabilistic_regression':
+            self.criterion = nn.CrossEntropyLoss()
         else:
-            print ("Classification not yet implemented")
+            print("Not implemented yet")
+            #print ("Classification not yet implemented")
             # TODO: implement Classification
 
     def batchmul(self, x, f):
@@ -69,6 +76,8 @@ class GBDT2NN(nn.Module):
         
         if self.task == 'binary':
             return self.sigmoid(out), pred
+        elif self.task == 'probabilistic_regression':
+            return self.softmax(out), pred
         
         # TODO: implement classification
         return out, pred

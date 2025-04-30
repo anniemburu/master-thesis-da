@@ -6,6 +6,12 @@ from models.deepgbm_lib.models.GBDT2NN import GBDT2NN
 
 import models.deepgbm_lib.config as config
 
+from utils.parser import get_parser, get_given_parameters_parser ##Added args
+
+parser = get_parser()
+args = parser.parse_args()
+
+
 '''
 
     Define DeepGBM network.
@@ -40,6 +46,8 @@ class DeepGBM(torch.nn.Module):
             self.criterion = nn.MSELoss()
         elif self.task == 'binary':
             self.criterion = nn.BCELoss()
+        elif self.task == 'probabilistic_regression':
+            self.criterion = nn.CrossEntropyLoss()
         elif self.task == 'classification':
             print("Classification not yet implemented")
 
@@ -53,6 +61,8 @@ class DeepGBM(torch.nn.Module):
 
         if self.task == 'binary':
             return nn.Sigmoid()(out), gbdt2nn_pred
+        elif self.task == 'probabilistic_regression':
+            return nn.Softmax(dim=1)(out), gbdt2nn_pred
 
         return out, gbdt2nn_pred
 

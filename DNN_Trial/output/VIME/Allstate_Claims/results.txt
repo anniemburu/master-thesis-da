@@ -1,48 +1,14 @@
-2025-03-28 01:13:02.415556
+2025-01-29 16:51:30.050921
 VIME - Allstate_Claims
 
-Log Loss - mean: 6.74420
-Log Loss - std: 0.31923
+MSE - mean: 3750977.09563
+MSE - std: 197789.36807
+R2 - mean: 0.55538
+R2 - std: 0.00890
 
-Train time: 21775.717958
-Test time: 4.228573
+Train time: 34178.484121
+Test time: 2.762592
 
-Best Parameters: {'p_m': 0.39298609993780165, 'alpha': 2.0916451478003033, 'K': 2, 'beta': 6.440938841203512}
-
-
-2025-04-13 05:29:26.813312
-VIME - Allstate_Claims
-
-Log Loss - mean: 7.78064
-Log Loss - std: 1.89803
-AUC - mean: 0.50145
-AUC - std: 0.00289
-Accuracy - mean: 0.00160
-Accuracy - std: 0.00036
-F1 score - mean: 0.00001
-F1 score - std: 0.00001
-
-Train time: 10985.373750
-Test time: 2.530338
-
-Best Parameters: {'K': 2, 'alpha': 2.0916451478003033, 'beta': 6.440938841203512, 'p_m': 0.39298609993780165}
-
-
-2025-04-15 05:31:14.000037
-VIME - Allstate_Claims
-
-Log Loss - mean: 6.71728
-Log Loss - std: 0.10811
-AUC - mean: 0.50000
-AUC - std: 0.00000
-Accuracy - mean: 0.00162
-Accuracy - std: 0.00038
-F1 score - mean: 0.00001
-F1 score - std: 0.00000
-
-Train time: 10361.865438
-Test time: 2.661564
-
-Best Parameters: {'K': 2, 'alpha': 2.0916451478003033, 'beta': 6.440938841203512, 'p_m': 0.39298609993780165}
+Best Parameters: {'p_m': 0.49872702063803265, 'alpha': 3.314726834416219, 'K': 3, 'beta': 8.43839397201792}
 
 
