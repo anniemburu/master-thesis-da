@@ -44,7 +44,8 @@ class BaseModelTorch(BaseModel):
         
         return torch.device('cpu')
 
-    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None):
+    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
+        
         if self.args.frequency_reg:
             optimizer = optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params["learning_rate"])
         else:
@@ -61,7 +62,7 @@ class BaseModelTorch(BaseModel):
             y = y.float()
             y_val = y_val.float()
         elif self.args.objective == "probabilistic_regression":
-            loss_func = nn.CrossEntropyLoss()
+            loss_func = nn.CrossEntropyLoss(weight=class_weights)
         elif self.args.objective == "classification":
             loss_func = nn.CrossEntropyLoss()
         else:

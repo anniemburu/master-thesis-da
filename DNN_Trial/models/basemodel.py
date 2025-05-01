@@ -57,7 +57,7 @@ class BaseModel:
         self.prediction_probabilities = None  # Only used by binary / multi-class-classification
 
     def fit(self, X: np.ndarray, y: np.ndarray, X_val: tp.Union[None, np.ndarray] = None,
-            y_val: tp.Union[None, np.ndarray] = None, frequency_map: dict = None) -> tp.Tuple[list, list, list]:
+            y_val: tp.Union[None, np.ndarray] = None, frequency_map: dict = None, class_weights: dict = None) -> tp.Tuple[list, list, list]:
         """Trains the model.
 
         The training is done on the trainings dataset (X, y). If a validation set (X_val, y_val) is provided,
