@@ -366,6 +366,9 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
         try:
             predictions = curr_model.predict(X_val_inner_proc) # Get predictions directly
             #probabilities = curr_model.prediction_probabilities # Assumes model stores probabilities
+            probababilities = curr_model.predict_proba(X_val_inner_proc) # Get probabilities
+            #print(f"Predictions Tesst: {predictions}")
+            #print(f"Prediction Probs : {curr_model.prediction_probabilities}")
         except Exception as e:
              print(f"ERROR during prediction in inner fold {i+1}: {e}")
              print(f"Skipping inner fold {i+1} due to prediction error.")
@@ -391,6 +394,12 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
             print(f"ERROR during evaluation in inner fold {i+1}: {e}")
             print(f"y_true shape: {y_val_inner_proc.shape}, unique: {np.unique(y_val_inner_proc)}")
             print(f"predictions shape: {predictions.shape}, unique: {np.unique(predictions)}")
+            print(f"y_val_inner_proc shape: {y_val_inner_proc.shape}")
+            print(f"predictions: {predictions[:10]}")
+            if hasattr(curr_model, 'prediction_probabilities') and curr_model.prediction_probabilities is not None:
+                print(f"probabilities: {curr_model.prediction_probabilities[:10]}")
+            else:
+                print("probabilities: None")
             # print(f"probabilities shape: {probabilities.shape}")
             print(f"eval labels: {np.unique(y_train_inner_proc)}")
             print(f"Skipping inner fold {i+1} due to evaluation error.")
