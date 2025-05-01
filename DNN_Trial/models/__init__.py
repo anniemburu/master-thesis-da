@@ -107,8 +107,8 @@ def str2model(model):
 
     
     elif model == "FTTransformer":
-        from models.rtdl_models import FTTransformer
-        return FTTransformer
+        from models.rtdl_models import FTTransformerWrapper
+        return FTTransformerWrapper
 
     else:
         raise NotImplementedError("Model \"" + model + "\" not yet implemented")
