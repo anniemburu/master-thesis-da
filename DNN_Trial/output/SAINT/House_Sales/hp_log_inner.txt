@@ -1,0 +1,96 @@
+2025-05-02 17:53:33.242363
+Parameters: {'dim': 256, 'depth': 1, 'heads': 4, 'dropout': 0.6}
+
+Log Loss - mean: 3.58719
+Log Loss - std: 0.11441
+AUC - mean: 0.87742
+AUC - std: 0.00342
+Accuracy - mean: 0.06814
+Accuracy - std: 0.00822
+F1 score - mean: 0.04788
+F1 score - std: 0.00678
+
+Train time: 1108.114352
+Test time: 0.727847
+
+---------------------------------------
+2025-05-02 19:08:54.943493
+Parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'dropout': 0.8}
+
+Log Loss - mean: 3.56866
+Log Loss - std: 0.10097
+AUC - mean: 0.88174
+AUC - std: 0.00302
+Accuracy - mean: 0.07034
+Accuracy - std: 0.00831
+F1 score - mean: 0.04019
+F1 score - std: 0.01147
+
+Train time: 1540.545910
+Test time: 1.021738
+
+---------------------------------------
+2025-05-02 20:45:26.848894
+Parameters: {'dim': 256, 'depth': 12, 'heads': 8, 'dropout': 0.8}
+
+Log Loss - mean: 4.26744
+Log Loss - std: 0.64836
+AUC - mean: 0.66765
+AUC - std: 0.17693
+Accuracy - mean: 0.03621
+Accuracy - std: 0.02781
+F1 score - mean: 0.01506
+F1 score - std: 0.01820
+
+Train time: 1694.382599
+Test time: 1.460155
+
+---------------------------------------
+2025-05-02 21:41:11.222997
+Parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'dropout': 0.6}
+
+Log Loss - mean: 3.56609
+Log Loss - std: 0.11143
+AUC - mean: 0.88212
+AUC - std: 0.00242
+Accuracy - mean: 0.07149
+Accuracy - std: 0.00860
+F1 score - mean: 0.04503
+F1 score - std: 0.00761
+
+Train time: 1090.757031
+Test time: 1.161558
+
+---------------------------------------
+2025-05-02 22:15:54.684965
+Parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'dropout': 0.5}
+
+Log Loss - mean: 3.58889
+Log Loss - std: 0.10465
+AUC - mean: 0.87707
+AUC - std: 0.00241
+Accuracy - mean: 0.07034
+Accuracy - std: 0.00719
+F1 score - mean: 0.04972
+F1 score - std: 0.00570
+
+Train time: 803.050273
+Test time: 0.880926
+
+---------------------------------------
+2025-05-03 00:07:24.126044
+Parameters: {'dim': 64, 'depth': 12, 'heads': 8, 'dropout': 0.7}
+
+Log Loss - mean: 3.52124
+Log Loss - std: 0.10185
+AUC - mean: 0.88407
+AUC - std: 0.00183
+Accuracy - mean: 0.07496
+Accuracy - std: 0.00665
+F1 score - mean: 0.04173
+F1 score - std: 0.00804
+
+Train time: 1741.950543
+Test time: 1.367276
+
+---------------------------------------

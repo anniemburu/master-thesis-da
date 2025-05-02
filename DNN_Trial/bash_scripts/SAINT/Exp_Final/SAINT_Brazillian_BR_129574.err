@@ -1,0 +1,54 @@
+[I 2025-05-02 11:30:31,712] A new study created in memory with name: SAINT_Brazillian_Houses_outer1
+[W 2025-05-02 11:30:31,758] Trial 0 failed with parameters: {'dim': 256, 'depth': 12, 'heads': 8, 'dropout': 0.2} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 11:30:31,759] Trial 0 failed with value None.
+[I 2025-05-02 11:30:31,760] A new study created in memory with name: SAINT_Brazillian_Houses_outer2
+[W 2025-05-02 11:30:31,802] Trial 0 failed with parameters: {'dim': 128, 'depth': 12, 'heads': 2, 'dropout': 0.7} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 11:30:31,802] Trial 0 failed with value None.
+[I 2025-05-02 11:30:31,802] A new study created in memory with name: SAINT_Brazillian_Houses_outer3
+[W 2025-05-02 11:30:31,845] Trial 0 failed with parameters: {'dim': 256, 'depth': 12, 'heads': 2, 'dropout': 0.3} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 11:30:31,845] Trial 0 failed with value None.
+[I 2025-05-02 11:30:31,846] A new study created in memory with name: SAINT_Brazillian_Houses_outer4
+[W 2025-05-02 11:30:31,888] Trial 0 failed with parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'dropout': 0.8} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 11:30:31,888] Trial 0 failed with value None.
+[I 2025-05-02 11:30:31,888] A new study created in memory with name: SAINT_Brazillian_Houses_outer5
+[W 2025-05-02 11:30:31,931] Trial 0 failed with parameters: {'dim': 256, 'depth': 3, 'heads': 4, 'dropout': 0.7} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 11:30:31,931] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 1176, in <module>
+    main(arguments)
+  File "train.py", line 1047, in main
+    agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
+  File "train.py", line 698, in nested_cross_validation
+    best_hp_idx = best_loss_dict.index(min(best_loss_dict))
+ValueError: min() arg is an empty sequence
+srun: error: stud-000: task 0: Exited with exit code 1
