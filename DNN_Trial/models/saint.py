@@ -10,6 +10,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from torch import einsum
 from einops import rearrange
+from sklearn.utils.class_weight import compute_class_weight
 
 from models.saint_lib.models.pretrainmodel import SAINT as SAINTModel
 from models.saint_lib.data_openml import DataSetCatCon
@@ -61,12 +62,12 @@ class SAINT(BaseModelTorch):
             self.model.transformer = nn.DataParallel(self.model.transformer, device_ids=self.args.gpu_ids)
             self.model.mlpfory = nn.DataParallel(self.model.mlpfory, device_ids=self.args.gpu_ids)
 
-    def fit(self, X, y, X_val=None, y_val=None):
+    def fit(self, X, y, X_val=None, y_val=None,class_weights=None):
 
         if self.args.objective == 'binary':
             criterion = nn.BCEWithLogitsLoss()
         elif self.args.objective == 'classification' or self.args.objective == 'probabilistic_regression':
-            criterion = nn.CrossEntropyLoss()
+            criterion = nn.CrossEntropyLoss(weight=class_weights)
         else:
             criterion = nn.MSELoss()
 

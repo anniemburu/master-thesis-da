@@ -21,6 +21,7 @@ from utils.visualization import loss_vizualization
 from sklearn.preprocessing import KBinsDiscretizer
 
 from sklearn.model_selection import KFold, StratifiedKFold, train_test_split
+from sklearn.utils.class_weight import compute_class_weight
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -161,6 +162,23 @@ def set_all_seeds(seed):
     torch.manual_seed(seed)  # For PyTorch
     # tf.random.set_seed(seed)  # For TensorFlow
 
+def custom_class_weights(y):
+    """
+    Calculate custom class weights based on the distribution of classes in y.
+    This is useful for handling imbalanced datasets.
+    """
+    unique_classes = np.unique(y)
+    unique_classes.sort()
+
+    class_weights = compute_class_weight(
+        'balanced',
+        classes = unique_classes,
+        y = y
+    )
+    class_weights = torch.tensor(class_weights, dtype=torch.float32)
+    
+    return class_weights
+
 # --- Bin Means --- *
 def pred_map(train_pred, train_classes):
 
@@ -276,6 +294,14 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
             # Decide how to handle: skip fold? return NaN? For now, skip.
             continue # Skip to next inner fold
 
+        try:
+            class_weights = custom_class_weights(y_train_inner_proc)
+        except Exception as e:
+            print(f"Y unique : {np.unique(y_train_inner_proc)}")
+            print(f"ERROR calculating class weights in inner fold {i+1}: {e}")
+            print(f"Skipping inner fold {i+1} due to class weight calculation error.")
+            continue
+
         print(f"After Debugging -- Inner Fold {i+1}") 
         print(f"DEBUG Inner Fold {i+1}: num_features: {args.num_features}")
         print(f"DEBUG Inner Fold {i+1}: num_classes: {args.num_classes}")
@@ -314,7 +340,12 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
                 print(f"y_val_inner_proc: {y_val_inner_proc[:10]}")
                 print(f"Looking for Issue in XGB: {args.objective}")
                 print(f"Still running??")
-                _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+
+                if args.weighted_loss:
+                    # Use class weights for loss function
+                    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, class_weights = class_weights)
+                else:
+                    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
 
         except Exception as e:
              print(f"ERROR!!! during model fitting in inner fold {i+1}: {e}")
@@ -335,6 +366,9 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
         try:
             predictions = curr_model.predict(X_val_inner_proc) # Get predictions directly
             #probabilities = curr_model.prediction_probabilities # Assumes model stores probabilities
+            probababilities = curr_model.predict_proba(X_val_inner_proc) # Get probabilities
+            #print(f"Predictions Tesst: {predictions}")
+            #print(f"Prediction Probs : {curr_model.prediction_probabilities}")
         except Exception as e:
              print(f"ERROR during prediction in inner fold {i+1}: {e}")
              print(f"Skipping inner fold {i+1} due to prediction error.")
@@ -360,6 +394,12 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
             print(f"ERROR during evaluation in inner fold {i+1}: {e}")
             print(f"y_true shape: {y_val_inner_proc.shape}, unique: {np.unique(y_val_inner_proc)}")
             print(f"predictions shape: {predictions.shape}, unique: {np.unique(predictions)}")
+            print(f"y_val_inner_proc shape: {y_val_inner_proc.shape}")
+            print(f"predictions: {predictions[:10]}")
+            if hasattr(curr_model, 'prediction_probabilities') and curr_model.prediction_probabilities is not None:
+                print(f"probabilities: {curr_model.prediction_probabilities[:10]}")
+            else:
+                print("probabilities: None")
             # print(f"probabilities shape: {probabilities.shape}")
             print(f"eval labels: {np.unique(y_train_inner_proc)}")
             print(f"Skipping inner fold {i+1} due to evaluation error.")
@@ -540,6 +580,14 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
             all_outer_fold_results.append(None)
             continue # Skip to next outer fold
         
+        try:
+            class_weights = custom_class_weights(y_train_outer_proc)
+        except Exception as e:
+            print(f"Y unique : {np.unique(y_train_outer_proc)}")
+            print(f"ERROR calculating class weights in outer fold {i+1}: {e}")
+            print(f"Skipping outer fold {i+1} due to class weight calculation error.")
+            all_outer_fold_results.append(None)
+            continue
         print(f"After Debugging -- Outer Fold {i+1}")  
         
         print(f"DEBUG Outer Fold {i+1}: num_features: {args.num_features}")
@@ -571,6 +619,10 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
                 loss_history, val_loss_history, lambda_reg_history = final_model.fit(
                     X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, frequency_map_outer) # Use test set for validation monitoring if desired
             else:
+                if args.weighted_loss:
+                    loss_history, val_loss_history = final_model.fit(
+                        X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, class_weights = class_weights)
+                else:
                  loss_history, val_loss_history = final_model.fit(
                     X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc) # Use test set for validation monitoring if desired
         except Exception as e:

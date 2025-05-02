@@ -98,16 +98,17 @@ def str2model(model):
         return TabPFN
     
     elif model == "MLP":
-        from models.mlp import MLP
+        from models.rtdl_models import MLP
         return MLP
     
-    elif model == "ResNet":
-        from models.resnet import ResNet
-        return ResNet
+    elif model == "ResMLP":
+        from models.rtdl_models import ResMLP
+        return ResMLP
+
     
     elif model == "FTTransformer":
-        from models.ft_transformer import FTTransformer
-        return FTTransformer
+        from models.rtdl_models import FTTransformerWrapper
+        return FTTransformerWrapper
 
     else:
         raise NotImplementedError("Model \"" + model + "\" not yet implemented")

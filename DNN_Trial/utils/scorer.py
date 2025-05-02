@@ -78,8 +78,8 @@ class ProbRegScorer(Scorer):
 
     def eval(self, y_true, y_prediction, y_probabilities,labels=None):
         print("IN SCORER EVAL")
-        print(f"y_true classes: {len(np.unique(y_true))}")
-        print(f"Probabilities shape: {y_probabilities.shape}")
+        #print(f"y_true classes: {len(np.unique(y_true))}")
+        #print(f"Probabilities shape: {y_probabilities.shape}")
         y_probabilities = torch.tensor(y_probabilities)
         y_true = torch.tensor(y_true, dtype=torch.long)
         y_logits = torch.log(y_probabilities + 1e-9)
