@@ -349,6 +349,7 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
 
         except Exception as e:
              print(f"ERROR!!! during model fitting in inner fold {i+1}: {e}")
+             print(f"The Model: {curr_model} , Model Type: {type(curr_model)}")
              print(f"Model params: {curr_model.params}")
              print(f"Args for fold: num_classes={args.num_classes}, bin_alt={args.bin_alt}")
              print(f"Train data shapes: X={X_train_inner_proc.shape}, y={y_train_inner_proc.shape}")
@@ -366,7 +367,7 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
         try:
             predictions = curr_model.predict(X_val_inner_proc) # Get predictions directly
             #probabilities = curr_model.prediction_probabilities # Assumes model stores probabilities
-            probababilities = curr_model.predict_proba(X_val_inner_proc) # Get probabilities
+            #probababilities = curr_model.predict_proba(X_val_inner_proc) # Get probabilities
             #print(f"Predictions Tesst: {predictions}")
             #print(f"Prediction Probs : {curr_model.prediction_probabilities}")
         except Exception as e:
@@ -1028,11 +1029,19 @@ class Objective(object):
             print(f"Trial {trial.number} failed completely during inner CV.")
             # Report failure, Optuna will handle based on direction
             raise optuna.TrialPruned("All inner CV folds failed.")
-
-        print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
-        print(f"Score: {inner_sc.get_objective_result()}")
         
-        save_hyperparameters_to_file_inner(args_trial, trial_params, inner_sc.get_results(), time)
+        try:
+            print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+            print(f"Score: {inner_sc.get_objective_result()}")
+            
+            save_hyperparameters_to_file_inner(args_trial, trial_params, inner_sc.get_results(), time)
+
+        except Exception as e:
+            print(f"ERROR saving hyperparameters to file coz inner_cs issues: {e}")
+            print(f"Results: {inner_sc.get_results()}")
+            print(f"Score: {inner_sc.get_objective_result()}")
+            # Report failure to Optuna
+            #raise optuna.TrialPruned(f"Saving hyperparameters failed: {e}")
         
         return avg_score  # inner_sc.get_objective_result() ## return the mean score of the loss
 
