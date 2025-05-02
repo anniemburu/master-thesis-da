@@ -135,6 +135,10 @@ def binning(args, y, y_val):
         y = binning.fit_transform(y.reshape(-1, 1)).flatten()
         y_val = binning.transform(y_val.reshape(-1, 1)).flatten()
 
+        if args.num_bins < 3:
+            print("Make Multiclass")
+            args.num_bins += args.num_bins + 1
+
         args.num_classes = args.num_bins
 
         print(f"Number of bins: {args.num_bins}")
@@ -692,6 +696,8 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
 
         except Exception as e:
             print(f"ERROR during evaluation or saving for outer fold {i+1}: {e}")
+            print(f"y_true shape: {y_test_outer_proc.shape}, unique: {np.unique(y_test_outer_proc)}")
+            print(f"predictions shape: {predictions_outer.shape}, unique: {np.unique(predictions_outer)}")
             all_outer_fold_results.append(None) # Indicate failure for this fold
             continue
 
