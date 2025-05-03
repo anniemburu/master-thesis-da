@@ -1029,10 +1029,16 @@ class Objective(object):
             # Report failure, Optuna will handle based on direction
             raise optuna.TrialPruned("All inner CV folds failed.")
 
-        print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
-        print(f"Score: {inner_sc.get_objective_result()}")
-        
-        save_hyperparameters_to_file_inner(args_trial, trial_params, inner_sc.get_results(), time)
+        try:
+            print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+            print(f"Score: {inner_sc.get_objective_result()}")
+            
+            save_hyperparameters_to_file_inner(args_trial, trial_params, inner_sc.get_results(), time)
+
+        except Exception as e:
+            print(f"ERROR saving hyperparameters to file, issues with inner_sc: {e}")
+            # Report failure to Optuna
+            raise optuna.TrialPruned(f"Saving hyperparameters failed: {e}")
         
         return avg_score  # inner_sc.get_objective_result() ## return the mean score of the loss
 
