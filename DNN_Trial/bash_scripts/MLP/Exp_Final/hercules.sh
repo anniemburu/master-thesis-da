@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=NODE_Olympus_BR
+#SBATCH --job-name=MLP_Hercules
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -8,12 +8,21 @@
 #SBATCH --account=long
 
 CONFIGS=(
-	config/boston.yml
-        config/socmob.yml
-       	config/sensory.yml
-        config/moneyball.yml
-        #config/black_friday.yml
-          )
+    config/abalone.yml
+    config/allstate.yml
+    config/black_friday.yml
+    config/boston.yml
+    config/brazillian_houses.yml
+    config/diamonds.yml
+    config/house_prices_nominal.yml
+    config/house_sales.yml
+    config/mercedes_benz.yml
+    config/mip_2016.yml
+    config/moneyball.yml
+    config/sat11.yml
+    config/sensory.yml
+    config/socmob.yml
+)
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
@@ -22,10 +31,7 @@ for config in "${CONFIGS[@]}"; do
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
-    conda activate Tab4Node
-    srun python3 train.py --config "$config" --model_name NODE 
+    conda activate TabSurvey
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --batch_size 64 --val_batch_size 128
 
 done
-
-
-

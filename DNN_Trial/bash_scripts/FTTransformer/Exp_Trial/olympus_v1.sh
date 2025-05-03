@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=NODE_Olympus_BR
+#SBATCH --job-name=FTTransformer_Olympus_V1
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -7,24 +7,23 @@
 #SBATCH --gres=gpu:1
 #SBATCH --account=long
 
-CONFIGS=(
-	config/boston.yml
-        config/socmob.yml
-       	config/sensory.yml
-        config/moneyball.yml
-        #config/black_friday.yml
+
+CONFIGS=("config/boston.yml"
+        "config/socmob.yml"
+        "config/sensory.yml"
+        "config/moneyball.yml"
+        #"config/black_friday.yml"
           )
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
-    printf 'Training VIME Vesion 1 with Dataset: %s \n\n'  "$config" 
+    printf 'Training TabTransformer Vesion 1 with Dataset: %s \n\n'  "$config" 
     printf "\n\n----------------------------------------------------------------------------\n"
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
-    conda activate Tab4Node
-    srun python3 train.py --config "$config" --model_name NODE 
-
+    conda activate TabSurvey
+    srun python3 train.py --config "$config" --model_name FTTransformer --epochs 100
 done
 
 
