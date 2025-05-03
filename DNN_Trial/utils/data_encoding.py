@@ -95,7 +95,7 @@ def encoding(args, X_train, y_train, X_val, y_val):
 
     args.num_idx = [] # Index of numerical features
     args.cat_dims = [] # dimensions for categorical features
-    args.cat_idx = get_catidx(args) # Index of categorical features
+    args.cat_idx = get_catidx(args) # Index of categorical features b4 encoding
 
     #print(f"Nominal Index : {args.nominal_idx}")
     #print(f"Ordinal Index : {args.ordinal_idx}")
@@ -141,9 +141,10 @@ def encoding(args, X_train, y_train, X_val, y_val):
 
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n")
     print("AFTER SEPARATING CATEGORICALS AND NUMERICALS")
+    print(f"Ordinal Index : {args.ordinal_idx}")
     print(f"Numerical Index V1 : {args.num_idx}")
-    print(f"Cat Dims V1 : {args.cat_dims}")
-    print(f"Cat Idx V1 : {args.cat_idx} \n \n")
+    print(f"Cat Idx V1 : {args.cat_idx} ")
+    print(f"Cat Dims V1 : {args.cat_dims}\n \n")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n")
 
     # Encode the numerical features
@@ -200,10 +201,10 @@ def encoding(args, X_train, y_train, X_val, y_val):
         We have encoded nominal features. Therefore categorical data now is if we have 
         odinal features.
         """
-        if args.ordinal_encode:
+        """if args.ordinal_encode:
             args.cat_idx = args.ordinal_idx
         else:
-            args.cat_idx = None
+            args.cat_idx = None"""
 
         freqency_map = frequency_mapper(new_x1, ohe) #mapping only OHE
 
@@ -304,6 +305,19 @@ def encoding(args, X_train, y_train, X_val, y_val):
             X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
 
             #print("OHE Done!!! \n")
+
+    args.cat_idx = get_catidx(args) # Index of categorical features
+
+    for i in range(args.cat_idx):
+        le = LabelEncoder()
+        le.fit_transform(X_train[:, i])
+
+        # Gets number of unique classes per ordinal feature
+        #Covers future cases with None
+        if np.any(X_train[:, i] == "None"):
+            args.cat_dims.append(len(le.classes_))
+        else:
+            args.cat_dims.append(len(le.classes_)+1)
 
     #Do for TabNet
     
