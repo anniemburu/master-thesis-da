@@ -93,14 +93,22 @@ def encoding(args, X_train, y_train, X_val, y_val):
         y_train = le.fit_transform(y_train)
         y_val = le.transform(y_val)
 
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("AFTER getting cat idx")
+    print(f"Nominal Index : {args.nominal_idx}")
+    print(f"Ordinal Index : {args.ordinal_idx}")
+    print(f"Cat Idx : {args.cat_idx}")
+    print(f"Cat dims : {args.cat_dims}")
     args.num_idx = [] # Index of numerical features
     args.cat_dims = [] # dimensions for categorical features
     args.cat_idx = get_catidx(args) # Index of categorical features b4 encoding
 
-    #print(f"Nominal Index : {args.nominal_idx}")
-    #print(f"Ordinal Index : {args.ordinal_idx}")
-    #print(f"Cat Idx : {args.cat_idx}")
-    #print(f"Cat dims : {args.cat_dims}")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("BEFORE getting cat idx")
+    print(f"Nominal Index : {args.nominal_idx}")
+    print(f"Ordinal Index : {args.ordinal_idx}")
+    print(f"Cat Idx : {args.cat_idx}")
+    print(f"Cat dims : {args.cat_dims}")
 
     #print(f"X_train shape before encoding : {X_train.shape}")
     #print(f"X_train before encoding : {X_train[:10,:]}")
@@ -123,7 +131,7 @@ def encoding(args, X_train, y_train, X_val, y_val):
                 X_train[:, i] = le.fit_transform(X_train[:, i])
                 X_val[:, i] = le.transform(X_val[:, i])
                 args.cat_dims.append(len(le.classes_))
-            else:
+            """else:
                 if args.ordinal_idx and i in args.ordinal_idx:
                     le = LabelEncoder()
                     #X_train[:, i] = le.fit_transform(X_train[:, i])
@@ -134,7 +142,7 @@ def encoding(args, X_train, y_train, X_val, y_val):
                     if np.any(X_train[:, i] == "None"):
                         args.cat_dims.append(len(le.classes_))
                     else:
-                        args.cat_dims.append(len(le.classes_)+1)
+                        args.cat_dims.append(len(le.classes_)+1)"""
 
         else:
             args.num_idx.append(i)
@@ -307,8 +315,10 @@ def encoding(args, X_train, y_train, X_val, y_val):
             #print("OHE Done!!! \n")
 
     args.cat_idx = get_catidx(args) # Index of categorical features
+    print(F"Cat Idx V3 : {args.cat_idx} \n \n")
+    
 
-    for i in range(args.cat_idx):
+    for i in args.cat_idx:
         le = LabelEncoder()
         le.fit_transform(X_train[:, i])
 
@@ -331,6 +341,7 @@ def encoding(args, X_train, y_train, X_val, y_val):
     print(f"Train: {X_train[:10,:]} \n \n ")
     print(f"Val : {X_train.shape} \n \n")
     print("FINISHED ENCODING")
+    
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
     
 

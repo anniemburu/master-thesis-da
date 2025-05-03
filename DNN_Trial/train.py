@@ -285,9 +285,9 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
                 X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, frequency_map = encoding(
                     args, X_train_inner, y_train_inner, X_val_inner, y_val_inner) # Pass original state for reference if needed by encoding
             else:
-                 X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc = encoding(
+                X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc = encoding(
                     args, X_train_inner, y_train_inner, X_val_inner, y_val_inner) # Pass original state
-                 
+                
             # Binning
             if args.objective == "probabilistic_regression":
                 y_train_inner_proc, y_val_inner_proc = binning(args, y_train_inner_proc, y_val_inner_proc) # Modifies args inplace
