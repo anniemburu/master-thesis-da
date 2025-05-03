@@ -135,6 +135,10 @@ def binning(args, y, y_val):
         y = binning.fit_transform(y.reshape(-1, 1)).flatten()
         y_val = binning.transform(y_val.reshape(-1, 1)).flatten()
 
+        if args.num_bins < 3:
+            print("Make Multiclass")
+            args.num_bins += args.num_bins + 1
+
         args.num_classes = args.num_bins
 
         print(f"Number of bins: {args.num_bins}")
@@ -349,6 +353,7 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
 
         except Exception as e:
              print(f"ERROR!!! during model fitting in inner fold {i+1}: {e}")
+             print(f"The Model: {curr_model} , Model Type: {type(curr_model)}")
              print(f"Model params: {curr_model.params}")
              print(f"Args for fold: num_classes={args.num_classes}, bin_alt={args.bin_alt}")
              print(f"Train data shapes: X={X_train_inner_proc.shape}, y={y_train_inner_proc.shape}")
@@ -366,7 +371,7 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
         try:
             predictions = curr_model.predict(X_val_inner_proc) # Get predictions directly
             #probabilities = curr_model.prediction_probabilities # Assumes model stores probabilities
-            probababilities = curr_model.predict_proba(X_val_inner_proc) # Get probabilities
+            #probababilities = curr_model.predict_proba(X_val_inner_proc) # Get probabilities
             #print(f"Predictions Tesst: {predictions}")
             #print(f"Prediction Probs : {curr_model.prediction_probabilities}")
         except Exception as e:
@@ -691,6 +696,8 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
 
         except Exception as e:
             print(f"ERROR during evaluation or saving for outer fold {i+1}: {e}")
+            print(f"y_true shape: {y_test_outer_proc.shape}, unique: {np.unique(y_test_outer_proc)}")
+            print(f"predictions shape: {predictions_outer.shape}, unique: {np.unique(predictions_outer)}")
             all_outer_fold_results.append(None) # Indicate failure for this fold
             continue
 
@@ -1036,9 +1043,12 @@ class Objective(object):
             save_hyperparameters_to_file_inner(args_trial, trial_params, inner_sc.get_results(), time)
 
         except Exception as e:
-            print(f"ERROR saving hyperparameters to file, issues with inner_sc: {e}")
+            print(f"ERROR saving hyperparameters to file coz inner_cs issues: {e}")
+            #print(f"Results: {inner_sc.get_results()}")
+            #print(f"Score: {inner_sc.get_objective_result()}")
             # Report failure to Optuna
-            raise optuna.TrialPruned(f"Saving hyperparameters failed: {e}")
+            #raise optuna.TrialPruned(f"Saving hyperparameters failed: {e}")
+
         
         return avg_score  # inner_sc.get_objective_result() ## return the mean score of the loss
 

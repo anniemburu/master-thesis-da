@@ -180,7 +180,7 @@ def encoding(args, X_train, y_train, X_val, y_val):
 
             args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
             args.nominal_idx = [x+len(args.ordinal_idx) for x in range(new_x1.shape[1])]  #Update Nominal idx
-            args.args.num_idx = [x for x in range(X_train.shape[1])][-len(args.num_idx):]
+            args.num_idx = [x for x in range(X_train.shape[1])][-len(args.num_idx):]
 
         else:
             X_train = np.concatenate([new_x1, new_x2], axis=1)
