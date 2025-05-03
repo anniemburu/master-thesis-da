@@ -9,4 +9,4 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate TabSurvey
-srun python3 train.py --config config/allstate.yml --model_name XGBoost --optimize_hyperparameters --n_trials 100 --epochs 100
+srun python3 train.py --config config/allstate.yml --model_name XGBoost --optimize_hyperparameters --n_trials 5 --epochs 100
