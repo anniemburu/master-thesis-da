@@ -1193,7 +1193,7 @@ if __name__ == "__main__":
     else:
         # Re-parse with the parser that includes predefined parameters
         parser = get_given_parameters_parser() # Assumes this parser loads yaml/dict params
-        parser.add_argument('--outer_splits', type=int, default=2, help='Number of outer folds for nested cross-validation')
+        parser.add_argument('--outer_splits', type=int, default=3, help='Number of outer folds for nested cross-validation')
         parser.add_argument('--save_results', action='store_false', default=False, help='Save aggregated results file')
         parser.add_argument('--no_save_results', action='store_false', dest='save_results')
         parser.add_argument('--class_comp', action='store_false', default=False, help='Convert Classification to Regression')

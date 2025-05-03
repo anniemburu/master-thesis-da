@@ -1,0 +1,5 @@
+[I 2025-05-03 22:01:42,478] A new study created in memory with name: FTTransformer_Allstate_Claims_outer1
+[I 2025-05-03 22:07:43,970] Trial 0 finished with value: 0.0 and parameters: {'learning_rate': 6.764084557706674e-05, 'weight_decay': 0.002698806817038747}. Best is trial 0 with value: 0.0.
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=129718.0. Some of your processes may have been killed by the cgroup out-of-memory handler.
+srun: error: stud-000: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=129718.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.
