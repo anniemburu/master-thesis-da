@@ -10,6 +10,6 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate Tab4Node
-srun python3 train.py --config config/allstate.yml --model_name NODE --optimize_hyperparameters --n_trials 1 --epochs 100 --batch_size 32 --val_batch_size 64
+srun python3 train.py --config config/allstate.yml --model_name NODE --optimize_hyperparameters --n_trials 5 --epochs 100 --batch_size 16 --val_batch_size 32
 
 

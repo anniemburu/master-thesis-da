@@ -8,7 +8,6 @@
 #SBATCH --account=long
 
 CONFIGS=(
-    #config/brazillian_houses.yml
     config/abalone.yml
     config/house_sales.yml
     config/mip_2016.yml
@@ -22,5 +21,5 @@ for config in "${CONFIGS[@]}"; do
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name SAINT --optimize_hyperparameters --n_trials 5 --epochs 100 --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --optimize_hyperparameters --n_trials 5 --epochs 100 --batch_size 32 --val_batch_size 64
 done
