@@ -19,6 +19,24 @@ parameters:
       n_independent: 5
       n_shared: 3
       n_steps: 3
+  House_Prices_Nominal:
+    SAINT:
+      depth: 1
+      dim: 128
+      dropout: 0.7
+      heads: 2
+  House_Sales:
+    SAINT:
+      depth: 6
+      dim: 256
+      dropout: 0.6
+      heads: 8
+  MIP:
+    SAINT:
+      depth: 3
+      dim: 32
+      dropout: 0.6
+      heads: 2
   Sensory:
     CatBoost:
       cat_features:

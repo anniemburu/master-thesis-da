@@ -6,7 +6,7 @@ import warnings
 from typing import Dict, Literal
 
 warnings.simplefilter("ignore")
-import delu  # Deep Learning Utilities: https://github.com/Yura52/delu
+#import delu  # Deep Learning Utilities: https://github.com/Yura52/delu
 import numpy as np
 import scipy.special
 import sklearn.datasets
