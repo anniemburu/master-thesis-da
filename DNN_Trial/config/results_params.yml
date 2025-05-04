@@ -20,8 +20,63 @@ parameters:
       n_shared: 3
       n_steps: 3
   Sensory:
+    CatBoost:
+      cat_features:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      iterations: 100
+      l2_leaf_reg: 6.95744871678338
+      learning_rate: 0.05530415735222704
+      max_depth: 7
+      od_type: Iter
+      od_wait: 20
+      train_dir: output/CatBoost/Sensory/catboost_info
+      verbose: 100
+    FTTransformer:
+      learning_rate: 4.364152874908026e-05
+      weight_decay: 0.002341876478964325
+    LightGBM:
+      lambda_l1: 4.461474995829296
+      lambda_l2: 8.432996723408692e-07
+      learning_rate: 0.24353813468212518
+      metric: mse
+      num_leaves: 2
+      objective: regression
+      verbosity: -1
+    MLP:
+      d_block: 64
+      d_in: 36
+      d_out: 1
+      dropout: 0.2988315664912782
+      n_blocks: 5
+    ResMLP:
+      d_block: 256
+      d_hidden: 3
+      d_hidden_multiplier: 3.33915392400188
+      d_in: 36
+      d_out: 5
+      dropout1: 0.40849463601508723
+      dropout2: 0.15414743646121437
+      n_blocks: 3
     VIME:
-      K: 3
-      alpha: 6.285259113099741
-      beta: 1.7138736615322863
-      p_m: 0.25864895183088943
+      K: 2
+      alpha: 0.1520096061553826
+      beta: 4.9374222964506105
+      p_m: 0.3163873348621128
+    XGBoost:
+      alpha: 0.00016769241948958821
+      eta: 0.010598816788850126
+      eval_metric: rmse
+      lambda: 0.24856123444616526
+      max_depth: 4
+      objective: reg:squarederror
+      verbosity: 1
