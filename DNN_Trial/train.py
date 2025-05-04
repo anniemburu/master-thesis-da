@@ -331,27 +331,27 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
 
         # Train model
         inner_train_timer.start()
-        try:
-            if args.frequency_reg:
-                # We don't typically save loss/reg history during HPO CV
-                _ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, frequency_map)
+        #try:
+        if args.frequency_reg:
+            # We don't typically save loss/reg history during HPO CV
+            _ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, frequency_map)
+        else:
+    
+            print("**** Data b4 Fitting ****")
+            print(f"X_train_inner_proc: {X_train_inner_proc[:10,:]}")
+            print(f"y_train_inner_proc: {y_train_inner_proc[:10]}")
+            print(f"X_val_inner_proc WHAT: {X_val_inner_proc[:10,:]}")
+            print(f"y_val_inner_proc: {y_val_inner_proc[:10]}")
+            print(f"Looking for Issue in XGB: {args.objective}")
+            print(f"Still running??")
+
+            if args.weighted_loss:
+                # Use class weights for loss function
+                _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, class_weights = class_weights)
             else:
-        
-                print("**** Data b4 Fitting ****")
-                print(f"X_train_inner_proc: {X_train_inner_proc[:10,:]}")
-                print(f"y_train_inner_proc: {y_train_inner_proc[:10]}")
-                print(f"X_val_inner_proc WHAT: {X_val_inner_proc[:10,:]}")
-                print(f"y_val_inner_proc: {y_val_inner_proc[:10]}")
-                print(f"Looking for Issue in XGB: {args.objective}")
-                print(f"Still running??")
+                _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
 
-                if args.weighted_loss:
-                    # Use class weights for loss function
-                    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, class_weights = class_weights)
-                else:
-                    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
-
-        except Exception as e:
+        """except Exception as e:
              print(f"ERROR!!! during model fitting in inner fold {i+1}: {e}")
              print(f"The Model: {curr_model} , Model Type: {type(curr_model)}")
              print(f"Model params: {curr_model.params}")
@@ -363,7 +363,7 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
              print(f"Skipping inner fold {i+1} due to fitting error.")
              inner_train_timer.end() # Still record time spent
              continue # Skip to next inner fold
-    
+    """
         inner_train_timer.end()
 
         # Test model
@@ -506,20 +506,20 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
 
         objective = Objective(args, model_cls, X_train_outer, y_train_outer, i)
 
-        try:
-            study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
-            best_params_for_fold = study.best_trial.params
-            best_inner_score = study.best_value
-            print(f"Best Hyperparameters found for Outer Fold {i+1}: {best_params_for_fold}")
-            print(f"Best Inner CV Score : {best_inner_score:.4f}")
+        #try:
+        study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
+        best_params_for_fold = study.best_trial.params
+        best_inner_score = study.best_value
+        print(f"Best Hyperparameters found for Outer Fold {i+1}: {best_params_for_fold}")
+        print(f"Best Inner CV Score : {best_inner_score:.4f}")
 
-        except Exception as e:
+        """except Exception as e:
             print(f"ERROR during Optuna optimization for outer fold {i+1}: {e}")
             print("Skipping outer fold due to HPO error.")
             best_params_per_fold.append(None) # Record failure
             all_outer_fold_results.append(None)
             continue # Skip to the next outer fold
-        
+        """
         inner_cv_time = time.time() - inner_loop_start_time
         print(f"Hyperparameter Optimization for Outer Fold {i+1} finished in {inner_cv_time:.2f} seconds.")
 
@@ -1019,16 +1019,16 @@ class Objective(object):
         
         # Evaluate these hyperparameters using inner CV on the outer training data
         fold_prefix = f"outer_{self.outer_fold_num+1}_inner"
-        try:
-            # Pass the *unfitted* model prototype
-            inner_sc, avg_score, time = evaluate_hyperparameters_cv(
-                self.model_cls, trial_params, self.X_outer_train, self.y_outer_train, args_trial, fold_prefix=fold_prefix
-            )
-        except Exception as e:
+        #try:
+        # Pass the *unfitted* model prototype
+        inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+            self.model_cls, trial_params, self.X_outer_train, self.y_outer_train, args_trial, fold_prefix=fold_prefix
+        )
+        """except Exception as e:
             print(f"ERROR during inner cross-validation (evaluate_hyperparameters_cv) for trial {trial.number}: {e}")
             # Report failure to Optuna
             raise optuna.TrialPruned(f"Inner CV failed: {e}")
-        
+        """
         # Optuna needs to know if the trial failed completely (e.g., all inner folds failed)
         if (args_trial.direction == 'minimize' and avg_score == float('inf')) or \
            (args_trial.direction == 'maximize' and avg_score == float('-inf')):
