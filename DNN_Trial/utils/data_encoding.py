@@ -352,7 +352,18 @@ def encoding(args, X_train, y_train, X_val, y_val):
     print("FINISHED ENCODING")
     
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
-    
+
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("Test numpy array issues")
+    print("X dtype:", X_train.dtype)
+    print("X Val dtype:", X_val.dtype)
+
+    X_train = np.asarray(X_train).astype(np.float32)
+    X_val = np.asarray(X_val).astype(np.float32)
+
+    print("X dtype:", X_train.dtype)
+    print("X Val dtype:", X_val.dtype)
+
 
     if args.frequency_reg:
         return X_train, y_train, X_val, y_val, freqency_map
