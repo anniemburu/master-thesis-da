@@ -1,0 +1,122 @@
+2025-05-01 10:06:41.339591
+MLP - Sensory - train_model
+
+Log Loss - mean: 1.68243
+Log Loss - mean_std: 0.09147
+AUC - mean: 0.52974
+AUC - mean_std: 0.04466
+Accuracy - mean: 0.14918
+Accuracy - mean_std: 0.06770
+F1 score - mean: 0.05151
+F1 score - mean_std: 0.02641
+
+Train time: 0.003273
+Test time: 0.000933
+
+Best Parameters: {'n_blocks': 5, 'd_block': 128, 'dropout': 0.02294342814105958, 'd_in': 36, 'd_out': 5}
+
+
+2025-05-01 21:29:02.747972
+MLP - Sensory - train_model
+
+Log Loss - mean: 1.68650
+Log Loss - mean_std: 0.08801
+AUC - mean: 0.51700
+AUC - mean_std: 0.06484
+Accuracy - mean: 0.20127
+Accuracy - mean_std: 0.04392
+F1 score - mean: 0.08934
+F1 score - mean_std: 0.03862
+
+Train time: 0.002905
+Test time: 0.000888
+
+Best Parameters: {'n_blocks': 4, 'd_block': 64, 'dropout': 0.12172262661421009, 'd_in': 36, 'd_out': 5}
+
+
+2025-05-01 21:42:36.429065
+MLP - Sensory - train_model
+
+Log Loss - mean: 1.68418
+Log Loss - mean_std: 0.08482
+AUC - mean: 0.52985
+AUC - mean_std: 0.07170
+Accuracy - mean: 0.17381
+Accuracy - mean_std: 0.06331
+F1 score - mean: 0.09594
+F1 score - mean_std: 0.06021
+
+Train time: 0.003445
+Test time: 0.000917
+
+Best Parameters: {'n_blocks': 3, 'd_block': 128, 'dropout': 0.28544496866258606, 'd_in': 36, 'd_out': 5}
+
+
+2025-05-01 21:43:18.738920
+MLP - Sensory - train_model
+
+Log Loss - mean: 1.67256
+Log Loss - mean_std: 0.08575
+AUC - mean: 0.48005
+AUC - mean_std: 0.07480
+Accuracy - mean: 0.20484
+Accuracy - mean_std: 0.02530
+F1 score - mean: 0.10444
+F1 score - mean_std: 0.04672
+
+Train time: 0.004551
+Test time: 0.000982
+
+Best Parameters: {'n_blocks': 4, 'd_block': 64, 'dropout': 0.26039132246538244, 'd_in': 36, 'd_out': 5}
+
+
+2025-05-01 22:06:01.453528
+MLP - Sensory - train_model
+
+Log Loss - mean: 1.69189
+Log Loss - mean_std: 0.10040
+AUC - mean: 0.47151
+AUC - mean_std: 0.09892
+Accuracy - mean: 0.13920
+Accuracy - mean_std: 0.05232
+F1 score - mean: 0.04341
+F1 score - mean_std: 0.03188
+
+Train time: 0.003992
+Test time: 0.000267
+
+Best Parameters: {'n_blocks': 2, 'd_block': 64, 'dropout': 0.15519725546534616, 'd_in': 36, 'd_out': 5}
+
+
+2025-05-02 20:59:22.578679
+MLP - Sensory - train_model
+
+Log Loss - mean: 1.67845
+Log Loss - mean_std: 0.08330
+AUC - mean: 0.44852
+AUC - mean_std: 0.04970
+Accuracy - mean: 0.24283
+Accuracy - mean_std: 0.04269
+F1 score - mean: 0.10729
+F1 score - mean_std: 0.02372
+
+Train time: 0.003513
+Test time: 0.000249
+
+Best Parameters: {'n_blocks': 4, 'd_block': 64, 'dropout': 0.16087766378088178, 'd_in': 36, 'd_out': 5}
+
+
+2025-05-03 00:33:16.754132
+MLP - Sensory - train_model
+
+MSE - mean: 226.62531
+MSE - mean_std: 4.28587
+R2 - mean: -332.65337
+R2 - mean_std: 29.12627
+
+Train time: 0.004287
+Test time: 0.000190
+
+Best Parameters: {'n_blocks': 5, 'd_block': 64, 'dropout': 0.2988315664912782, 'd_in': 36, 'd_out': 1}
+
+
