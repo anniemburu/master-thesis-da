@@ -338,12 +338,12 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
             else:
         
                 print("**** Data b4 Fitting ****")
-                print(f"X_train_inner_proc: {X_train_inner_proc[:10,:]}")
-                print(f"y_train_inner_proc: {y_train_inner_proc[:10]}")
-                print(f"X_val_inner_proc WHAT: {X_val_inner_proc[:10,:]}")
-                print(f"y_val_inner_proc: {y_val_inner_proc[:10]}")
-                print(f"Looking for Issue in XGB: {args.objective}")
-                print(f"Still running??")
+                #print(f"X_train_inner_proc: {X_train_inner_proc[:10,:]}")
+                #print(f"y_train_inner_proc: {y_train_inner_proc[:10]}")
+                #print(f"X_val_inner_proc WHAT: {X_val_inner_proc[:10,:]}")
+                #print(f"y_val_inner_proc: {y_val_inner_proc[:10]}")
+                #print(f"Looking for Issue in XGB: {args.objective}")
+                #print(f"Still running??")
 
                 if args.weighted_loss:
                     # Use class weights for loss function
