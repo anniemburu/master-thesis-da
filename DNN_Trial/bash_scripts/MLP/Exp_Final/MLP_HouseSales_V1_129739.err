@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "train.py", line 1192, in <module>
+    main(arguments)
+  File "train.py", line 1060, in main
+    model_cls = str2model(args.model_name) # Get model class
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/__init__.py", line 114, in str2model
+    raise NotImplementedError("Model \"" + model + "\" not yet implemented")
+NotImplementedError: Model "TabMLPransformer" not yet implemented
+srun: error: stud-000: task 0: Exited with exit code 1

@@ -1,0 +1,18 @@
+2025-05-03 22:52:53.986150
+ResMLP - House_Sales - train_model
+
+Log Loss - mean: 4.35749
+Log Loss - mean_std: 0.17812
+AUC - mean: 0.76831
+AUC - mean_std: 0.05320
+Accuracy - mean: 0.03007
+Accuracy - mean_std: 0.00627
+F1 score - mean: 0.00768
+F1 score - mean_std: 0.00184
+
+Train time: 0.563286
+Test time: 0.019271
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 2.2348878457541455, 'dropout1': 0.141959826643883, 'dropout2': 0.0504819732791219, 'd_in': 90, 'd_out': 131}
+
+
