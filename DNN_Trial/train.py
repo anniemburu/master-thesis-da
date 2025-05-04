@@ -131,7 +131,7 @@ def binning(args, y, y_val):
         else:
             strategy = 'quantile'
         
-        binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=strategy)
+        binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=strategy, subsample=200000)
         y = binning.fit_transform(y.reshape(-1, 1)).flatten()
         y_val = binning.transform(y_val.reshape(-1, 1)).flatten()
 
