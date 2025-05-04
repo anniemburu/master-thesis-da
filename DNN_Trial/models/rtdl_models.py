@@ -59,6 +59,7 @@ class ResMLP(BaseModelTorch):
    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
        #self.model = ResNet().to(self.device)
        #optimizer = torch.optim.AdamW(self.model.parameters(), lr=3e-4, weight_decay=1e-5)
+      print(f"In fit Nump iss")
 
       X = torch.tensor(X, dtype=torch.float32)
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
