@@ -1,1 +1,5 @@
 [I 2025-05-03 22:23:33,689] A new study created in memory with name: ResMLP_Allstate_Claims_outer1
+[I 2025-05-03 22:29:32,891] Trial 0 finished with value: 0.0 and parameters: {'n_blocks': 2, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 1.5127740190701964, 'dropout1': 0.433891438316434, 'dropout2': 0.10016261799789589}. Best is trial 0 with value: 0.0.
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=129727.0. Some of your processes may have been killed by the cgroup out-of-memory handler.
+srun: error: stud-000: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=129727.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

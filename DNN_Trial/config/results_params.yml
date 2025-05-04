@@ -1,4 +1,20 @@
 parameters:
+  Boston:
+    MLP:
+      d_block: 128
+      d_in: 14
+      d_out: 6
+      dropout: 0.287804036106409
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 5
+      d_hidden_multiplier: 4.696739338882331
+      d_in: 14
+      d_out: 6
+      dropout1: 0.033619790667129355
+      dropout2: 0.19699525336779936
+      n_blocks: 3
   Brazillian_Houses:
     TabNet:
       cat_emb_dim: 2
@@ -26,6 +42,15 @@ parameters:
       dropout: 0.7
       heads: 2
   House_Sales:
+    ResMLP:
+      d_block: 256
+      d_hidden: 10
+      d_hidden_multiplier: 2.2348878457541455
+      d_in: 90
+      d_out: 131
+      dropout1: 0.141959826643883
+      dropout2: 0.0504819732791219
+      n_blocks: 6
     SAINT:
       depth: 6
       dim: 256

@@ -131,7 +131,7 @@ def binning(args, y, y_val):
         else:
             strategy = 'quantile'
         
-        binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=strategy)
+        binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=strategy, subsample=200000)
         y = binning.fit_transform(y.reshape(-1, 1)).flatten()
         y_val = binning.transform(y_val.reshape(-1, 1)).flatten()
 
@@ -338,18 +338,20 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
         else:
     
             print("**** Data b4 Fitting ****")
-            print(f"X_train_inner_proc: {X_train_inner_proc[:10,:]}")
-            print(f"y_train_inner_proc: {y_train_inner_proc[:10]}")
-            print(f"X_val_inner_proc WHAT: {X_val_inner_proc[:10,:]}")
-            print(f"y_val_inner_proc: {y_val_inner_proc[:10]}")
-            print(f"Looking for Issue in XGB: {args.objective}")
-            print(f"Still running??")
+            #print(f"X_train_inner_proc: {X_train_inner_proc[:10,:]}")
+            #print(f"y_train_inner_proc: {y_train_inner_proc[:10]}")
+            #print(f"X_val_inner_proc WHAT: {X_val_inner_proc[:10,:]}")
+            #print(f"y_val_inner_proc: {y_val_inner_proc[:10]}")
+            #print(f"Looking for Issue in XGB: {args.objective}")
+            #print(f"Still running??")
 
             if args.weighted_loss:
                 # Use class weights for loss function
                 _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, class_weights = class_weights)
             else:
+
                 _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+    
 
         """except Exception as e:
              print(f"ERROR!!! during model fitting in inner fold {i+1}: {e}")
