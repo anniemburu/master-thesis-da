@@ -337,18 +337,6 @@ class FTTransformerWrapper(BaseModelTorch):
       #self.params['d_out'] = args.num_classes
 
       #model
-      """self.model = FTTransformer(
-            n_num_features= len(args.num_idx) if args.num_idx is not None else 0,
-            cat_cardinalities= args.cat_dims if args.cat_dims is not None else [],
-            #d_out=self.params["d_out"],
-            n_blocks=self.params["n_blocks"],
-            d_block=self.params["d_block"],
-            n_tokens=self.params["n_tokens"],
-            attention_n_heads=self.params["attention_n_heads"],
-            attention_dropout=self.params["attention_dropout"],
-            ffn_dropout=self.params["ffn_dropout"],
-            residual_dropout=self.params["residual_dropout"]
-        ).to(self.device)"""
       self.model = FTTransformer(
          n_cont_features= len(self.args.num_idx) if self.args.num_idx is not None else 0,
          cat_cardinalities= self.args.cat_dims if self.args.cat_dims is not None else [],
@@ -364,13 +352,23 @@ class FTTransformerWrapper(BaseModelTorch):
 
         
    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
-       #self.model = ResNet().to(self.device)
-       #optimizer = torch.optim.AdamW(self.model.parameters(), lr=3e-4, weight_decay=1e-5)
+      print(f"Train Data b4 training...")
+      print(f"X: {type(X)} , y : {type(y), }, X_val: {type(X_val)} , y : {type(y_val)}\n")
+      
+      #Convert to NP array
+      X = np.asarray(X, dtype=np.float32)
+      y = np.asarray(y, dtype=np.float32 if self.args.objective == 'regression' else np.int64)
+      X_val = np.asarray(X_val, dtype=np.float32) if X_val is not None else None
+      y_val = np.asarray(y_val, dtype=np.float32 if self.args.objective == 'regression' else np.int64) if y_val is not None else None
+
 
       X = torch.tensor(X, dtype=torch.float32)
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
       X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
       y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
+
+      print(f"Train Data after...")
+      print(f"X: {type(X)} , y : {type(y), }, X_val: {type(X_val)} , y : {type(y_val)}\n")
 
       train_dataset = TensorDataset(X, y)
       loader = DataLoader(
@@ -396,6 +394,7 @@ class FTTransformerWrapper(BaseModelTorch):
                 
             self.optimizer.zero_grad()
             x_cont, x_cat = self._split_inputs(batch_X)
+
             outputs = self.model(x_cont, x_cat)
             #outputs = self.model(batch_X).squeeze()
             loss = self._compute_loss(outputs, batch_y, class_weights)
@@ -435,6 +434,7 @@ class FTTransformerWrapper(BaseModelTorch):
       
       with torch.no_grad():
          x_cont, x_cat = self._split_inputs(X)
+
          outputs = self.model(x_cont, x_cat)
          #outputs = self.model(X).squeeze()
 
@@ -454,7 +454,7 @@ class FTTransformerWrapper(BaseModelTorch):
          raise NotImplementedError("Method only available for classification tasks")
       else:
          self.model.eval()
-         X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         #X = torch.tensor(X, dtype=torch.float32).to(self.device)
          x_cont, x_cat = self._split_inputs(X)
 
          outputs = torch.softmax(self.model(x_cont, x_cat), dim=1)
@@ -470,30 +470,32 @@ class FTTransformerWrapper(BaseModelTorch):
 
          with torch.no_grad():
             x_cont, x_cat = self._split_inputs(X)
+
             outputs = self.model(x_cont, x_cat)
             loss = self._compute_loss(outputs, y, class_weights).item()
          return loss
    
    def _split_inputs(self, X):
-      x_cont = X[:, self.args.num_idx] if self.args.num_idx else torch.empty((X.shape[0], 0)).to(self.device)
-      #x_cat = X[:, self.args.cat_idx] if self.args.cat_idx else torch.empty((X.shape[0], 0)).to(self.device)
-      x_cat = None
-      return x_cont, x_cat
+      print(f"I am in _split input")
+      #print(f"Num : {self.args.num_idx}, Cats : {self.args.cat_idx}")
 
-   
+      x_cont = X[:, self.args.num_idx] if self.args.num_idx else None
+      x_cat = X[:, self.args.cat_idx] if self.args.cat_idx else np.empty((X.shape[0], 0))
+
+      #x_cat = torch.tensor(x_cat, dtype=torch.int64).to(self.device)
+      #x_cont = torch.tensor(x_cont, dtype=torch.float32).to(self.device)
+      if x_cat is not None:
+         x_cat = x_cat.long().to(self.device)
+      if x_cont is not None:
+         x_cont = x_cont.float().to(self.device)
+ 
+      print(f"x_cont: {type(x_cont)} , x_cat: {type(x_cat)} \n")
+      return x_cont, x_cat
 
     
    @classmethod
    def define_trial_parameters(cls, trial, args):
       params = {
-         #"d_out": args.num_classes,
-         #"n_blocks": trial.suggest_int("n_blocks", 2, 6, log=True),
-         #"d_block": trial.suggest_categorical('d_block', [64, 128, 256]),
-         #"n_tokens": trial.suggest_int("n_tokens", 2, 10, log=True),
-         #"attention_n_heads" : trial.suggest_int("attention_n_heads", 1,10),
-         #"attention_dropout" : trial.suggest_float("attention_dropout", 0.1, 0.9),
-         #"ffn_dropout" : trial.suggest_float("ffn_dropout", 0.1, 0.9),
-         #"residual_dropout" : trial.suggest_float("residual_dropout", 0.1, 0.9),
          "learning_rate": trial.suggest_float("learning_rate", 1e-5, 1e-2, log=True),
          "weight_decay": trial.suggest_float("weight_decay", 1e-6, 1e-2, log=True),
       }
