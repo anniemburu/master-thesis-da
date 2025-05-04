@@ -80,9 +80,9 @@ def encoding(args, X_train, y_train, X_val, y_val):
             args.cat_idx = args.nominal_idx
 
         for idx in args.cat_idx:
-            le = LabelEncoder()
-            X_train[:, idx] = le.fit_transform(X_train[:, idx])
-            X_val[:, idx] = le.transform(X_val[:, idx])
+            le = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
+            X_train[:, idx] = le.fit_transform(X_train[:, idx].reshape(-1, 1)).ravel()
+            X_val[:, idx] = le.transform(X_val[:, idx].reshape(-1,1)).ravel()
 
         X_train[:, args.cat_idx] = X_train[:, args.cat_idx].astype(float)
         X_val[:, args.cat_idx] = X_val[:, args.cat_idx].astype(float)
@@ -127,10 +127,10 @@ def encoding(args, X_train, y_train, X_val, y_val):
 
             #Only Nominal
             if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
-                le = LabelEncoder()
-                X_train[:, i] = le.fit_transform(X_train[:, i])
-                X_val[:, i] = le.transform(X_val[:, i])
-                args.cat_dims.append(len(le.classes_))
+                le = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
+                X_train[:, i] = le.fit_transform(X_train[:, i].reshape(-1, 1)).ravel()
+                X_val[:, i] = le.transform(X_val[:, i].reshape(-1, 1)).ravel()
+                args.cat_dims.append(len(le.categories_[0]))
             """else:
                 if args.ordinal_idx and i in args.ordinal_idx:
                     le = LabelEncoder()
