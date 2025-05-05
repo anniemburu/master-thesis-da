@@ -69,7 +69,8 @@ def get_parser():
 def get_given_parameters_parser():
     parser = get_parser()
 
-    parser.add('-best_params_file', '--best_params_file', is_config_file_arg=True,help="Parameter file path")
+    parser.add('-best_params_file', '--best_params_file', is_config_file_arg=True, default="config/best_params.yml",
+               help="Parameter file path")
     parser.add('-parameters', '--parameters', type=yaml.safe_load, help="Parameter values")
 
     return parser

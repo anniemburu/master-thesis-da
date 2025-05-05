@@ -1,0 +1,18 @@
+2025-05-05 01:28:37.795458
+ResMLP - Abalone - train_model
+
+Log Loss - mean: 1.59531
+Log Loss - mean_std: 0.08250
+AUC - mean: 0.78719
+AUC - mean_std: 0.01517
+Accuracy - mean: 0.35055
+Accuracy - mean_std: 0.03340
+F1 score - mean: 0.28648
+F1 score - mean_std: 0.05214
+
+Train time: 0.122424
+Test time: 0.002787
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'd_in': 10, 'd_out': 7}
+
+

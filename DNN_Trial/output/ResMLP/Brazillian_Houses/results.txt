@@ -1,0 +1,18 @@
+2025-05-05 01:28:10.484343
+ResMLP - Brazillian_Houses - train_model
+
+Log Loss - mean: 6.91617
+Log Loss - mean_std: 0.02145
+AUC - mean: 0.63876
+AUC - mean_std: 0.01196
+Accuracy - mean: 0.00898
+Accuracy - mean_std: 0.00321
+F1 score - mean: 0.00195
+F1 score - mean_std: 0.00117
+
+Train time: 0.292921
+Test time: 0.004837
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'd_in': 17, 'd_out': 1095}
+
+

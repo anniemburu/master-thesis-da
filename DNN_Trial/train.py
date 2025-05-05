@@ -13,7 +13,7 @@ import optuna
 from models import str2model
 from utils.load_data import load_data
 from utils.data_encoding import encoding
-from utils.scorer import get_scorer
+from utils.scorer import get_scorer , RegScorer
 from utils.timer import Timer
 from utils.io_utils import update_yaml, save_results_to_file, save_hyperparameters_to_file, save_hyperparameters_to_file_inner,save_loss_to_file, get_output_path, save_regularization_to_file
 from utils.parser import get_parser, get_given_parameters_parser
@@ -152,13 +152,16 @@ def binning(args, y, y_val):
         #Rectify bin
         y, y_val = bin_shifter(args, y, y_val)
 
+        #bin_edges = binning.bin_edges_[0]
+
 
         print("VERIFY SHIFT")
+        #print(f"Bin Edges: {bin_edges}") 
         print(f"Y shape : {y.shape} , Y_val shape : {y_val.shape}")
         print(f"Train after shift : {np.unique(y)}, Length : {len(np.unique(y))}")
         print(f"Number of Classes After Bin Verifier: {args.num_classes} \n\n")
 
-    return y , y_val
+    return y , y_val #, bin_edges
 
 def set_all_seeds(seed):
     np.random.seed(seed)
@@ -795,6 +798,12 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
 
     return aggregated_results, avg_total_train_time, avg_total_inference_time
 
+#calc using train data
+def mean_per_bin(y_true, y_class):
+    df = pd.DataFrame({'y_true': y_true, 'class': y_class})
+    return df.groupby('class')['y_true'].mean()
+
+
 def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual=False, save_model=False):
     # Record some statistics and metrics
     sc = get_scorer(args)
@@ -805,6 +814,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
     test_scores = []
 
     args_test_temp = copy.deepcopy(args)
+
+    orig_objective = args.objective
 
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("TESTING MODEL")
@@ -819,14 +830,14 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         args = copy.deepcopy(args_test_temp) # Reset args for each test run
 
-        if args.class_comp is False:
-            if args.frequency_reg:
-                #Need to Clean here
-                X_train, y_train, X_test ,y_test,frequency_map = encoding(args, X_train, y_train, X_test, y_test)
-            else:
-                #print("Doing encoding : WE ARE IN TRAIN.PY")
-                X_train, y_train, X_test, y_test = encoding(args, X_train, y_train, X_test, y_test)
-        else: print("Dont need encoding.")
+        
+        if args.frequency_reg:
+            #Need to Clean here
+            X_train, y_train, X_test ,y_test,frequency_map = encoding(args, X_train, y_train, X_test, y_test)
+        else:
+            #print("Doing encoding : WE ARE IN TRAIN.PY")
+            X_train, y_train, X_test, y_test = encoding(args, X_train, y_train, X_test, y_test)
+        
 
         print("After encoding : : WE ARE IN TRAIN.PY")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -844,11 +855,13 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         #Acquire Bins
         if args.objective == "probabilistic_regression":
-            y_train, y_test = binning(args, y_train, y_test)
+            y_train_class, y_test_class = binning(args, y_train, y_test)
         else:
 
-            train_classes, test_classes = binning(args, y_train, y_test)
+            train_class, test_class = binning(args, y_train, y_test)
             print("Binning Done")
+
+        bin_mean = mean_per_bin(y_train, y_train_class)
         
         print("BINNING END")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n")
@@ -861,35 +874,22 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         # Train model
         train_timer.start()
         if args.frequency_reg: ## For frequency regularization
-            loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train, X_test, y_test, frequency_map)
+            loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map)
         else:
-            loss_history, test_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_test, y_test)
+            loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
         
         train_timer.end()
 
         # Test model
         test_timer.start()
-        print(f"Class Compilation?? : {args.class_comp}")
-        if args.class_comp:
-            train_predictions = curr_model.predict(X_train)
-            print(train_predictions[:10])
-
-            pred_mapping = pred_map(train_predictions,train_classes)
-
-            print(f"This is the mapping : {pred_mapping}, Data type : {type(pred_mapping)}")
-
-            prediction = reg_pred(test_classes, pred_mapping)
-        else:
-            prediction = curr_model.predict(X_test)
+        prediction = curr_model.predict(X_test)
         test_timer.end()
 
 
         # Save model weights and the truth/prediction pairs for traceability
-        #curr_model.save_model_and_predictions(y_test,seed)
+        #curr_model.save_model_and_predictions(y_test_class,seed)
 
         #print(f"Probabilities: {curr_model.prediction_probabilities}")
-
-        
 
         #save the losses
         print(f"State of save is {save_model} b4 loss saving")
@@ -906,22 +906,39 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print(f"Number of classes : {args.num_classes}")
         #print(f"Class label len :{len(args.bin_alt)}")
         print(f"Class labels : {args.bin_alt}")
-        print(f"Unique y_true : {len(np.unique(y_test))}")
-        print(f"Unique train : {len(np.unique(y_train))}\n")
+        print(f"Unique y_true : {len(np.unique(y_test_class))}")
+        print(f"Unique train : {len(np.unique(y_train_class))}\n")
         print(f"Prediction shape : {curr_model.predictions.shape}")
         #print(f"Probabilities shape : {curr_model.prediction_probabilities.shape} \n")
         print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
         
+        if args.class_comp:
+            #set obj to be regression
+            args.objective = "regression" #rem to rreturn it back to norm
+            sc = get_scorer(args)
 
-        # Compute scores on the output
-        if args.objective == "probabilistic_regression":
-            # Use the binning labels for evaluation
-            sc.eval(y_test, prediction, curr_model.prediction_probabilities, labels=np.unique(y_train))
+            y_train_pred = [bin_mean.get(cls, np.nan) for cls in y_train_class]
+            y_test_pred = [bin_mean.get(cls, np.nan) for cls in y_test_class]
+
+            #can apply weighed ones if i want!!!
+            
+            y_train_pred , y_test_pred = np.array([float(x) for x in y_train_pred]), np.array([float(x) for x in y_test_pred])  
+            
+            #evaluate
+            sc.eval(y_test, y_test_pred)
+            
         else:
-            sc.eval(y_test, prediction, curr_model.prediction_probabilities)
-        print("After Evaluation")
+            # Compute scores on the output
+            if args.objective == "probabilistic_regression":
+                # Use the binning labels for evaluation
+                sc.eval(y_test_class, prediction, curr_model.prediction_probabilities, labels=np.unique(y_train_class))
+            else:
+                sc.eval(y_test_class, prediction, curr_model.prediction_probabilities)
+            print("After Evaluation")
 
-        print(f'{sc.get_results()} \n \n')
+            print(f'{sc.get_results()} \n \n')
+
+        args.objective = orig_objective # Reset objective to original
 
     # Best run is saved to file
     if save_model:
@@ -945,7 +962,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         loss_vizualization(args, losses, type='test')  
 
     #print(get_output_path(args, filename="logging", file_type = None))
-    return sc, (train_timer.get_average_time(), test_timer.get_average_time()), (X_train, y_train, X_test, y_test), args
+    return sc, (train_timer.get_average_time(), test_timer.get_average_time()) #, (X_train, y_train_class, X_test, y_test_class), args
 
 def loss_hist(args, type):
     path = get_output_path(args, filename="", directory='logging',file_type = None)
@@ -1080,9 +1097,7 @@ def main_once(args):
     # Let's assume we use the main dataset X, y for nested CV.
 
     print(f"Dataset: {args.dataset}, Model: {args.model_name}, Objective: {args.objective}")
-    
-
-    if args.objective == "probabilistic_regression": 
+    """if args.objective == "probabilistic_regression": 
         args.best_params_file = "config/best_params_class.yml"
 
         with open(args.best_params_file, 'r') as file:
@@ -1100,7 +1115,7 @@ def main_once(args):
             print(len(args.parameters))
             print(args.parameters.keys())
 
-    print(f"Best Params File: {args.best_params_file}")
+    print(f"Best Params File: {args.best_params_file}")"""
 
     X, X_test, y, y_test = load_data(args, is_test=True) # Use the main dataset
 
@@ -1109,7 +1124,7 @@ def main_once(args):
 
     parameters = args.parameters[args.dataset][args.model_name]
 
-    print(f"Parameters for {args.model_name}: {parameters}")
+    #print(f"Parameters for {args.model_name}: {parameters}")
     
 
     args.save_results = True # Ensure results are saved
@@ -1126,14 +1141,14 @@ def main_once(args):
         #model_cls, X, y, args, optimize_params=False # Use predefined params
     #)
     print("Started Classification Module ...... ")
-    sc, timer, data , args = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+    sc, timer = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
 
     print("\n--- Testin on Final Model Finished ---")
     print("Aggregated Results:", sc.get_results())
     print(f"Avg Outer Fold Train Time: {timer[0]:.4f} sec")
     print(f"Avg Outer Fold Inference Time: {timer[1]:.4f} sec")
 
-    print("After Before: THE ARGS .....")
+    """print("After Before: THE ARGS .....")
     print(args, "\n\n")
     # Convert Classification to Regression
     if args.objective == "probabilistic_regression":
@@ -1168,7 +1183,7 @@ def main_once(args):
         print("\n--- Testin on Regression Model Finished ---")
         print("Aggregated Results:", sc.get_results())
         print(f"Avg Outer Fold Train Time: {timer[0]:.4f} sec")
-        print(f"Avg Outer Fold Inference Time: {timer[1]:.4f} sec")
+        print(f"Avg Outer Fold Inference Time: {timer[1]:.4f} sec")"""
 
 if __name__ == "__main__":
     # --- Argument Parsing ---

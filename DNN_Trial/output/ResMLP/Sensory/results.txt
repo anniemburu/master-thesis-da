@@ -1,0 +1,18 @@
+2025-05-04 22:45:07.571983
+ResMLP - Sensory - train_model
+
+Log Loss - mean: 1.67238
+Log Loss - mean_std: 0.08894
+AUC - mean: 0.52582
+AUC - mean_std: 0.02313
+Accuracy - mean: 0.22565
+Accuracy - mean_std: 0.02630
+F1 score - mean: 0.17799
+F1 score - mean_std: 0.02601
+
+Train time: 0.016921
+Test time: 0.002089
+
+Best Parameters: {'n_blocks': 5, 'd_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'd_in': 36, 'd_out': 5}
+
+
