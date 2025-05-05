@@ -59,7 +59,7 @@ def encoding(args, X_train, y_train, X_val, y_val):
     print(f"cat_idx : {args.cat_idx}")
     print(f"nominal_idx : {args.nominal_idx}")
     print(f"ordinal_idx : {args.ordinal_idx}")
-    print(f"args.num_idx : {args.num_idx}")
+    print(f"num_idx : {args.num_idx}")
     print(f"cat_dims : {args.cat_dims}")
     print(f"bin_alt : {args.bin_alt} \n\n")
     print(f"X_train shape : {X_train.shape}")
@@ -80,9 +80,9 @@ def encoding(args, X_train, y_train, X_val, y_val):
             args.cat_idx = args.nominal_idx
 
         for idx in args.cat_idx:
-            le = LabelEncoder()
-            X_train[:, idx] = le.fit_transform(X_train[:, idx])
-            X_val[:, idx] = le.transform(X_val[:, idx])
+            le = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
+            X_train[:, idx] = le.fit_transform(X_train[:, idx].reshape(-1, 1)).ravel()
+            X_val[:, idx] = le.transform(X_val[:, idx].reshape(-1,1)).ravel()
 
         X_train[:, args.cat_idx] = X_train[:, args.cat_idx].astype(float)
         X_val[:, args.cat_idx] = X_val[:, args.cat_idx].astype(float)
@@ -127,10 +127,10 @@ def encoding(args, X_train, y_train, X_val, y_val):
 
             #Only Nominal
             if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
-                le = LabelEncoder()
-                X_train[:, i] = le.fit_transform(X_train[:, i])
-                X_val[:, i] = le.transform(X_val[:, i])
-                args.cat_dims.append(len(le.classes_))
+                le = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
+                X_train[:, i] = le.fit_transform(X_train[:, i].reshape(-1, 1)).ravel()
+                X_val[:, i] = le.transform(X_val[:, i].reshape(-1, 1)).ravel()
+                args.cat_dims.append(len(le.categories_[0]))
             """else:
                 if args.ordinal_idx and i in args.ordinal_idx:
                     le = LabelEncoder()
@@ -164,7 +164,8 @@ def encoding(args, X_train, y_train, X_val, y_val):
        
 
     #Encode Nominal Features
-    if args.one_hot_encode and args.model_name != "mlp": #dont 
+    #if args.one_hot_encode and args.model_name != "mlp": #dont
+    if args.one_hot_encode:
         print("One Hot Encoding...")
         #print(f"Nominal Index : {args.nominal_idx}")
         #print(f"Ordinal Index : {args.ordinal_idx}")
@@ -190,13 +191,21 @@ def encoding(args, X_train, y_train, X_val, y_val):
             args.ordinal_idx = [x for x in range(ord_len)] #update ordinal idx
             args.nominal_idx = [x+len(args.ordinal_idx) for x in range(new_x1.shape[1])]  #Update Nominal idx
             args.num_idx = [x for x in range(X_train.shape[1])][-len(args.num_idx):]
+            print(f"Ord : {len(args.ordinal_idx)}, Nom : {len(args.nominal_idx)}, Num : {len(args.num_idx)}")
 
         else:
+            print(f"Ord : {args.ordinal_idx}, Nom : {args.nominal_idx}, Num : {args.num_idx}")
             X_train = np.concatenate([new_x1, new_x2], axis=1)
             X_val = np.concatenate([new_x1_val, new_x2_val], axis=1)
 
-            args.num_idx = [x for x in range(X_train.shape[1])][-len(args.num_idx):]
             args.nominal_idx = [x for x in range(new_x1.shape[1])]
+            
+            args.num_idx = [x for x in range(X_train.shape[1])[-len(args.num_idx):]] if len(args.num_idx) > 0 else [] #update num idx
+            print(f"Num idx: {args.num_idx}")
+            #[x for x in arr[-n:]] if len(arr) >= n else []
+
+            print(f"Ord : {args.ordinal_idx}, Nom : {args.nominal_idx}, Num : {args.num_idx}")
+            print(f"Nominal : {len(args.nominal_idx), new_x1.shape[1]}")
 
         #change the num of features after one hot encoding;
         args.num_features = X_train.shape[1] #here is the issue
@@ -343,7 +352,18 @@ def encoding(args, X_train, y_train, X_val, y_val):
     print("FINISHED ENCODING")
     
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
-    
+
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("Test numpy array issues")
+    print("X dtype:", X_train.dtype)
+    print("X Val dtype:", X_val.dtype)
+
+    X_train = np.asarray(X_train).astype(np.float32)
+    X_val = np.asarray(X_val).astype(np.float32)
+
+    print("X dtype:", X_train.dtype)
+    print("X Val dtype:", X_val.dtype)
+
 
     if args.frequency_reg:
         return X_train, y_train, X_val, y_val, freqency_map

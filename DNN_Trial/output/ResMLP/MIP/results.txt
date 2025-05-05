@@ -1,0 +1,18 @@
+2025-05-04 20:31:13.075445
+ResMLP - MIP - train_model
+
+Log Loss - mean: 4.34097
+Log Loss - mean_std: 0.20266
+AUC - mean: 0.52262
+AUC - mean_std: 0.06046
+Accuracy - mean: 0.13945
+Accuracy - mean_std: 0.06851
+F1 score - mean: 0.08634
+F1 score - mean_std: 0.04085
+
+Train time: 0.104696
+Test time: 0.001698
+
+Best Parameters: {'n_blocks': 4, 'd_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'd_in': 151, 'd_out': 78}
+
+

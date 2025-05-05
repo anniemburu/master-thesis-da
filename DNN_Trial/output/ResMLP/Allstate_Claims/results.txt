@@ -1,0 +1,18 @@
+2025-05-05 00:36:29.757802
+ResMLP - Allstate_Claims - train_model
+
+Log Loss - mean: 6.21652
+Log Loss - mean_std: 0.23512
+AUC - mean: 0.50266
+AUC - mean_std: 0.00243
+Accuracy - mean: 0.00192
+Accuracy - mean_std: 0.00083
+F1 score - mean: 0.00012
+F1 score - mean_std: 0.00006
+
+Train time: 2.221094
+Test time: 0.139970
+
+Best Parameters: {'n_blocks': 3, 'd_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'd_in': 1093, 'd_out': 311}
+
+

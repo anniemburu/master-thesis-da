@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=MLP_V1
+#SBATCH --job-name=MLP_OlympusV1
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -15,7 +15,7 @@ CONFIGS=(
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
-    printf 'Training TabTransformer Vesion 1 with Dataset: %s \n\n'  "$config" 
+    printf 'Training MLP Vesion 1 with Dataset: %s \n\n'  "$config" 
     printf "\n\n----------------------------------------------------------------------------\n"
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial

@@ -15,7 +15,7 @@ CONFIGS=(
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
-    printf 'Training TabTransformer Vesion 1 with Dataset: %s \n\n'  "$config" 
+    printf 'Training ResMLP Vesion 1 with Dataset: %s \n\n'  "$config" 
     printf "\n\n----------------------------------------------------------------------------\n"
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial

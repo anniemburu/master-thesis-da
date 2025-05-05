@@ -1,0 +1,18 @@
+2025-05-04 22:44:20.823076
+ResMLP - House_Prices_Nominal - train_model
+
+Log Loss - mean: 1.79614
+Log Loss - mean_std: 0.09004
+AUC - mean: 0.72645
+AUC - mean_std: 0.03462
+Accuracy - mean: 0.25342
+Accuracy - mean_std: 0.04155
+F1 score - mean: 0.19154
+F1 score - mean_std: 0.04872
+
+Train time: 0.109843
+Test time: 0.002307
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'd_in': 109, 'd_out': 7}
+
+
