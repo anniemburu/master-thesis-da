@@ -333,7 +333,7 @@ def encoding(args, X_train, y_train, X_val, y_val):
 
         # Gets number of unique classes per ordinal feature
         #Covers future cases with None
-        if np.any(X_train[:, i] == "None"):
+        if np.any(X_train[:, i] == None):
             args.cat_dims.append(len(le.classes_))
         else:
             args.cat_dims.append(len(le.classes_)+1)
