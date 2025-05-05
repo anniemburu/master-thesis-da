@@ -1,5 +1,5 @@
-#from rtdl_revisiting_models import MLP as RTDL_MLP, ResNet, FTTransformer
 from rtdl_revisiting_models import MLP as RTDL_MLP, ResNet, FTTransformer
+
 
 import math
 import warnings
@@ -57,13 +57,15 @@ class ResMLP(BaseModelTorch):
 
         
    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
-       #self.model = ResNet().to(self.device)
-       #optimizer = torch.optim.AdamW(self.model.parameters(), lr=3e-4, weight_decay=1e-5)
+      print("Types in B4 Model")
+      print(f"X : {type(X)}, y : {type(y)}, X : {type(X_val)}, X : {type(X_val)} \n")
 
       X = torch.tensor(X, dtype=torch.float32)
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
       X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
       y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
+
+      print(f"X : {type(X)}, y : {type(y)}, X : {type(X_val)}, X : {type(X_val)} \n")
 
       train_dataset = TensorDataset(X, y)
       loader = DataLoader(
@@ -337,18 +339,7 @@ class FTTransformerWrapper(BaseModelTorch):
       #self.params['d_out'] = args.num_classes
 
       #model
-      """self.model = FTTransformer(
-            n_num_features= len(args.num_idx) if args.num_idx is not None else 0,
-            cat_cardinalities= args.cat_dims if args.cat_dims is not None else [],
-            #d_out=self.params["d_out"],
-            n_blocks=self.params["n_blocks"],
-            d_block=self.params["d_block"],
-            n_tokens=self.params["n_tokens"],
-            attention_n_heads=self.params["attention_n_heads"],
-            attention_dropout=self.params["attention_dropout"],
-            ffn_dropout=self.params["ffn_dropout"],
-            residual_dropout=self.params["residual_dropout"]
-        ).to(self.device)"""
+    
       self.model = FTTransformer(
          n_cont_features= len(self.args.num_idx) if self.args.num_idx is not None else 0,
          cat_cardinalities= self.args.cat_dims if self.args.cat_dims is not None else [],
