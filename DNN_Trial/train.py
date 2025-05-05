@@ -280,24 +280,24 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
 
         # --- Preprocessing: Fit on Inner Train, Transform Inner Train & Val ---
         # Important: Encoding and Binning fit *only* on X_train_inner, y_train_inner
-        try:
-            if args.frequency_reg:
-                X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, frequency_map = encoding(
-                    args, X_train_inner, y_train_inner, X_val_inner, y_val_inner) # Pass original state for reference if needed by encoding
-            else:
-                X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc = encoding(
-                    args, X_train_inner, y_train_inner, X_val_inner, y_val_inner) # Pass original state
-                
-            # Binning
-            if args.objective == "probabilistic_regression":
-                y_train_inner_proc, y_val_inner_proc = binning(args, y_train_inner_proc, y_val_inner_proc) # Modifies args inplace
+        #try:
+        if args.frequency_reg:
+            X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, frequency_map = encoding(
+                args, X_train_inner, y_train_inner, X_val_inner, y_val_inner) # Pass original state for reference if needed by encoding
+        else:
+            X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc = encoding(
+                args, X_train_inner, y_train_inner, X_val_inner, y_val_inner) # Pass original state
+            
+        # Binning
+        if args.objective == "probabilistic_regression":
+            y_train_inner_proc, y_val_inner_proc = binning(args, y_train_inner_proc, y_val_inner_proc) # Modifies args inplace
 
-        except Exception as e:
+        """except Exception as e:
             print(f"ERROR during preprocessing in inner fold {i+1}: {e}")
             print(f"Skipping inner fold {i+1} due to preprocessing error.")
             # Decide how to handle: skip fold? return NaN? For now, skip.
             continue # Skip to next inner fold
-
+       """
         try:
             class_weights = custom_class_weights(y_train_inner_proc)
         except Exception as e:
