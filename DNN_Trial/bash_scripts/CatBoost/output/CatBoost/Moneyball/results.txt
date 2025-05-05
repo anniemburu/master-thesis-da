@@ -1,0 +1,14 @@
+2025-05-05 08:32:29.258818
+CatBoost - Moneyball - train_model
+
+MSE - mean: 596.90490
+MSE - mean_std: 67.52081
+R2 - mean: 0.91570
+R2 - mean_std: 0.00859
+
+Train time: 0.114892
+Test time: 0.000688
+
+Best Parameters: {'learning_rate': 0.11003337445707806, 'max_depth': 4, 'l2_leaf_reg': 9.990777548258325, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+

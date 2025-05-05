@@ -17,12 +17,14 @@ CONFIGS=(
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
-    printf 'Training LightGBM Vesion Remote with Dataset: %s \n\n'  "$config" 
+    printf 'Training XGBoost Vesion Remote with Dataset: %s \n\n'  "$config"
+    printf 'Current Directory: %s \n\n' "$(pwd)"
     printf "\n\n----------------------------------------------------------------------------\n"
 
     #cd ~/Desktop/Master\ Thesis/master-thesis-da/DNN_Trial
     #printf 'Current Directory: %s \n\n' "$(pwd)"
     #source ~/miniconda3/etc/profile.d/conda.sh
     #conda activate TabSurvey
-    python3 /Users/johnmburu/Desktop/Master\ Thesis/master-thesis-da/DNN_Trial/train.py --config "$config" --model_name LightGBM --optimize_hyperparameters --objective regression --n_trials 5  --epochs 100 > output.log 2>&1
+    #python3 /Users/johnmburu/Desktop/Master\ Thesis/master-thesis-da/DNN_Trial/train.py --config "$config" --model_name XGBoost --optimize_hyperparameters --objective regression --n_trials 5  --epochs 100 
+    python3 /Users/johnmburu/Desktop/Master\ Thesis/master-thesis-da/DNN_Trial/train.py --config "$config" --model_name XGBoost --optimize_hyperparameters --objective regression --n_trials 5  --epochs 100 > output.log 2>&1
 done

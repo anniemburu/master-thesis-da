@@ -1,0 +1,14 @@
+2025-05-05 08:33:06.502854
+CatBoost - Sensory - train_model
+
+MSE - mean: 0.59592
+MSE - mean_std: 0.06694
+R2 - mean: 0.13124
+R2 - mean_std: 0.03002
+
+Train time: 0.079098
+Test time: 0.000445
+
+Best Parameters: {'learning_rate': 0.056622415406541456, 'max_depth': 7, 'l2_leaf_reg': 3.2353320389379894, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+

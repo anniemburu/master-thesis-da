@@ -1,0 +1,14 @@
+2025-05-05 08:30:02.286556
+CatBoost - House_Prices_Nominal - train_model
+
+MSE - mean: 1070205004.40868
+MSE - mean_std: 298674440.18345
+R2 - mean: 0.84429
+R2 - mean_std: 0.03311
+
+Train time: 0.712214
+Test time: 0.000874
+
+Best Parameters: {'learning_rate': 0.2826960207711881, 'max_depth': 4, 'l2_leaf_reg': 11.762971927706857, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Prices_Nominal/catboost_info', 'cat_features': [1, 6, 11]}
+
+

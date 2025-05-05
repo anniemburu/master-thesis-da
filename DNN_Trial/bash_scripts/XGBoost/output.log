@@ -1,6 +1,6 @@
-[I 2025-05-05 08:33:08,522] A new study created in memory with name: CatBoost_Socmob_outer1
+[I 2025-05-05 14:13:49,118] A new study created in memory with name: XGBoost_Socmob_outer1
 Running Mode: Nested CV with Hyperparameter Optimization
-Arguements: Namespace(config='../../config/socmob.yml', model_name='CatBoost', dataset='Socmob', objective='regression', use_gpu=False, gpu_ids=[0, 1], data_parallel=False, optimize_hyperparameters=True, n_trials=5, direction='minimize', y_distribution='skewed', num_splits=5, num_bins=10, shuffle=True, seed=221, weighted_loss=False, scale=True, target_encode=False, one_hot_encode=True, ordinal_encode=False, frequency_reg=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=100, logging_period=100, num_features=5, num_classes=1, cat_idx=[0], nominal_idx=[0, 1, 2, 3], ordinal_idx=None, num_idx=None, cat_dims=[2], bin_alt=None, dropna_idx=None, miss_cat_idx=None, miss_num_idx=None, outer_splits=2, save_results=False)
+Arguements: Namespace(config='../../config/socmob.yml', model_name='XGBoost', dataset='Socmob', objective='regression', use_gpu=False, gpu_ids=[0, 1], data_parallel=False, optimize_hyperparameters=True, n_trials=5, direction='minimize', y_distribution='skewed', num_splits=5, num_bins=10, shuffle=True, seed=221, weighted_loss=False, scale=True, target_encode=False, one_hot_encode=True, ordinal_encode=False, frequency_reg=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=100, logging_period=100, num_features=5, num_classes=1, cat_idx=[0], nominal_idx=[0, 1, 2, 3], ordinal_idx=None, num_idx=None, cat_dims=[2], bin_alt=None, dropna_idx=None, miss_cat_idx=None, miss_num_idx=None, outer_splits=2, save_results=False)
 --- Running Nested Cross-Validation with Hyperparameter Optimization ---
 Loading dataset Socmob...
 Dataset loaded! 
@@ -146,17 +146,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0a00>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.3455954	test: 18.4650797	best: 18.4650797 (0)	total: 57.6ms	remaining: 5.7s
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 14.10825708
-bestIteration = 7
-
-Shrink model to first 8 iterations.
-Inner Fold 1 Results: {'MSE - mean': 199.0429211574621, 'MSE - std': 0.0, 'R2 - mean': 0.5562199351353524, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.74901	eval-rmse:22.22830
+[99]	train-rmse:13.18902	eval-rmse:14.27469
+Inner Fold 1 Results: {'MSE - mean': 203.76676987125748, 'MSE - std': 0.0, 'R2 - mean': 0.545687785202924, 'R2 - std': 0.0}
   outer_1_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -292,16 +286,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0a90>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 31.9311484	test: 51.5355835	best: 51.5355835 (0)	total: 257us	remaining: 25.5ms
-99:	learn: 13.6197738	test: 24.8519793	best: 24.8519793 (99)	total: 13.3ms	remaining: 0us
-
-bestTest = 24.85197926
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 408.3319061229972, 'MSE - std': 209.2889849655351, 'R2 - mean': 0.6773797094271272, 'R2 - std': 0.12115977429177477}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.68724	eval-rmse:55.46401
+[99]	train-rmse:10.75838	eval-rmse:44.98736
+Inner Fold 2 Results: {'MSE - mean': 1113.8147281655154, 'MSE - std': 910.0479582942578, 'R2 - mean': 0.44276404298883737, 'R2 - std': 0.10292374221408668}
   outer_1_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -437,17 +426,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0880>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.3008477	test: 15.8077651	best: 15.8077651 (0)	total: 161us	remaining: 16ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 14.04206877
-bestIteration = 2
-
-Shrink model to first 3 iterations.
-Inner Fold 3 Results: {'MSE - mean': 337.9478347180268, 'MSE - std': 197.76017757294466, 'R2 - mean': 0.5809161857996621, 'R2 - std': 0.16851374835764063}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:44.03076	eval-rmse:19.46956
+[99]	train-rmse:13.27319	eval-rmse:10.60802
+Inner Fold 3 Results: {'MSE - mean': 780.0531575251807, 'MSE - std': 880.2945130293824, 'R2 - mean': 0.5120849447263659, 'R2 - std': 0.12912386550508786}
   outer_1_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -568,7 +551,6 @@ FINISHED ENCODING
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-[I 2025-05-05 08:33:08,649] Trial 0 finished with value: 428.76958936223093 and parameters: {'learning_rate': 0.2710002761056303, 'max_depth': 2, 'l2_leaf_reg': 7.2048624644010655}. Best is trial 0 with value: 428.76958936223093.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Test numpy array issues
 X dtype: object
@@ -584,17 +566,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0940>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.3218431	test: 46.1418095	best: 46.1418095 (0)	total: 208us	remaining: 20.6ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 34.39389638
-bestIteration = 22
-
-Shrink model to first 23 iterations.
-Inner Fold 4 Results: {'MSE - mean': 549.1958995384564, 'MSE - std': 403.9913990995244, 'R2 - mean': 0.5680905092549406, 'R2 - std': 0.14761827961213383}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.59026	eval-rmse:50.13680
+[99]	train-rmse:11.33262	eval-rmse:33.33626
+Inner Fold 4 Results: {'MSE - mean': 862.8664145376654, 'MSE - std': 775.733800258359, 'R2 - mean': 0.5235882389161534, 'R2 - std': 0.11358568049662954}
   outer_1_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -730,19 +706,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0ac0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 36.5562259	test: 40.2205277	best: 40.2205277 (0)	total: 134us	remaining: 13.3ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 32.40159501
-bestIteration = 6
-
-Shrink model to first 7 iterations.
-Inner Fold 5 Results: {'MSE - mean': 649.3293852742122, 'MSE - std': 413.12722047752345, 'R2 - mean': 0.5406063748357963, 'R2 - std': 0.1430190048895435}
-Trial Results B4 Saving: {'MSE - mean': 649.3293852742122, 'MSE - std': 413.12722047752345, 'R2 - mean': 0.5406063748357963, 'R2 - std': 0.1430190048895435}
-Score: 649.3293852742122
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.73780	eval-rmse:42.89682
+[99]	train-rmse:11.98481	eval-rmse:32.48123
+[I 2025-05-05 14:13:50,510] Trial 0 finished with value: 772.3600431121773 and parameters: {'max_depth': 11, 'alpha': 0.0007729133109784539, 'lambda': 2.7165468293609382e-08, 'eta': 0.012040089712570687}. Best is trial 0 with value: 772.3600431121773.
+Inner Fold 5 Results: {'MSE - mean': 901.2991454612675, 'MSE - std': 698.0821171721882, 'R2 - mean': 0.5044441843940002, 'R2 - std': 0.10856953875417637}
+Trial Results B4 Saving: {'MSE - mean': 901.2991454612675, 'MSE - std': 698.0821171721882, 'R2 - mean': 0.5044441843940002, 'R2 - std': 0.10856953875417637}
+Score: 901.2991454612675
   outer_1_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -878,17 +849,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1060>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.6844031	test: 21.9249947	best: 21.9249947 (0)	total: 821us	remaining: 81.3ms
-99:	learn: 23.1854322	test: 13.0544337	best: 13.0080087 (81)	total: 20.9ms	remaining: 0us
-
-bestTest = 13.00800873
-bestIteration = 81
-
-Shrink model to first 82 iterations.
-Inner Fold 1 Results: {'MSE - mean': 169.20829511730673, 'MSE - std': 0.0, 'R2 - mean': 0.6227383131933117, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.85526	eval-rmse:22.25327
+[99]	train-rmse:17.48714	eval-rmse:14.01624
+Inner Fold 1 Results: {'MSE - mean': 196.45499291930503, 'MSE - std': 0.0, 'R2 - mean': 0.5619899015060019, 'R2 - std': 0.0}
   outer_1_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -1024,16 +989,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1240>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.6346052	test: 55.2207496	best: 55.2207496 (0)	total: 266us	remaining: 26.4ms
-99:	learn: 20.0018553	test: 39.0079671	best: 39.0079671 (99)	total: 18ms	remaining: 0us
-
-bestTest = 39.00796709
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 845.4149047729694, 'MSE - std': 676.2066096556626, 'R2 - mean': 0.5632018258729962, 'R2 - std': 0.05953648732031558}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.77673	eval-rmse:55.53065
+[99]	train-rmse:14.31035	eval-rmse:46.63348
+Inner Fold 2 Results: {'MSE - mean': 1185.568306083505, 'MSE - std': 989.1133131642, 'R2 - mean': 0.4263174389637697, 'R2 - std': 0.1356724625422322}
   outer_1_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -1169,17 +1129,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1180>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.9619256	test: 19.1668468	best: 19.1668468 (0)	total: 263us	remaining: 26.1ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.3599269
-bestIteration = 39
-
-Shrink model to first 40 iterations.
-Inner Fold 3 Results: {'MSE - mean': 614.5325336220488, 'MSE - std': 641.4438852395534, 'R2 - mean': 0.5507464894962727, 'R2 - std': 0.0517042843822063}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:44.14355	eval-rmse:19.47280
+[99]	train-rmse:17.68206	eval-rmse:10.20805
+Inner Fold 3 Results: {'MSE - mean': 825.1136198416665, 'MSE - std': 955.0315487911964, 'R2 - mean': 0.509734446343864, 'R2 - std': 0.16182749756664863}
   outer_1_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -1315,16 +1269,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0fd0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 37.5651976	test: 49.8580299	best: 49.8580299 (0)	total: 269us	remaining: 26.7ms
-99:	learn: 20.3082836	test: 33.4243481	best: 33.4243481 (99)	total: 18.1ms	remaining: 0us
-
-bestTest = 33.4243481
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 740.1961588558322, 'MSE - std': 596.6252873907545, 'R2 - mean': 0.5519997795354172, 'R2 - std': 0.044829811235088904}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.68659	eval-rmse:50.17694
+[99]	train-rmse:15.28864	eval-rmse:32.92835
+Inner Fold 4 Results: {'MSE - mean': 889.9042907437859, 'MSE - std': 834.6600730223796, 'R2 - mean': 0.5245124184009344, 'R2 - std': 0.1424649767517316}
   outer_1_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -1426,7 +1375,6 @@ Cat Dims V2 : [17, 17, 2, 2, 18, 18, 3, 3]
 Cat Idx V2 : [0, 1, 2, 3] 
  
 
-[I 2025-05-05 08:33:08,775] Trial 1 finished with value: 632.781832529129 and parameters: {'learning_rate': 0.02488278011606167, 'max_depth': 4, 'l2_leaf_reg': 1.545160852920602}. Best is trial 0 with value: 428.76958936223093.
 Train: [[8.0 10.0 1.0 1.0 -0.21737799478755937]
  [1.0 15.0 0.0 1.0 0.8863195560668015]
  [5.0 4.0 0.0 0.0 2.32616864525244]
@@ -1461,19 +1409,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1210>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.7342817	test: 42.6985836	best: 42.6985836 (0)	total: 246us	remaining: 24.4ms
-99:	learn: 19.1644079	test: 32.1266173	best: 31.8119748 (79)	total: 18.9ms	remaining: 0us
-
-bestTest = 31.81197484
-bestIteration = 79
-
-Shrink model to first 80 iterations.
-Inner Fold 5 Results: {'MSE - mean': 794.5572702774879, 'MSE - std': 544.6006872776336, 'R2 - mean': 0.5318401842049101, 'R2 - std': 0.05686305229108078}
-Trial Results B4 Saving: {'MSE - mean': 794.5572702774879, 'MSE - std': 544.6006872776336, 'R2 - mean': 0.5318401842049101, 'R2 - std': 0.05686305229108078}
-Score: 794.5572702774879
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.84322	eval-rmse:42.91858
+[99]	train-rmse:16.15303	eval-rmse:30.46594
+[I 2025-05-05 14:13:50,997] Trial 1 finished with value: 798.9198654480995 and parameters: {'max_depth': 4, 'alpha': 6.80024342106316e-08, 'lambda': 2.918117802646669e-05, 'eta': 0.010080141002972932}. Best is trial 0 with value: 772.3600431121773.
+Inner Fold 5 Results: {'MSE - mean': 897.5581176522358, 'MSE - std': 746.6995876947818, 'R2 - mean': 0.5189421405117778, 'R2 - std': 0.12791062373292864}
+Trial Results B4 Saving: {'MSE - mean': 897.5581176522358, 'MSE - std': 746.6995876947818, 'R2 - mean': 0.5189421405117778, 'R2 - std': 0.12791062373292864}
+Score: 897.5581176522358
   outer_1_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -1609,17 +1552,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1690>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.5198705	test: 20.9499563	best: 20.9499563 (0)	total: 188us	remaining: 18.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.40047974
-bestIteration = 25
-
-Shrink model to first 26 iterations.
-Inner Fold 1 Results: {'MSE - mean': 153.77190092994942, 'MSE - std': 0.0, 'R2 - mean': 0.657154829861706, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.15783	eval-rmse:21.99353
+[99]	train-rmse:5.16953	eval-rmse:11.95192
+Inner Fold 1 Results: {'MSE - mean': 142.8483393970052, 'MSE - std': 0.0, 'R2 - mean': 0.6815096716086677, 'R2 - std': 0.0}
   outer_1_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -1755,17 +1692,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc18a0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.6059708	test: 54.2169720	best: 54.2169720 (0)	total: 254us	remaining: 25.2ms
-99:	learn: 14.0955271	test: 35.2910891	best: 35.2565684 (98)	total: 18.3ms	remaining: 0us
-
-bestTest = 35.25656841
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 2 Results: {'MSE - mean': 698.3987692506444, 'MSE - std': 544.6268683206949, 'R2 - mean': 0.6258473985818216, 'R2 - std': 0.031307431279884446}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.21248	eval-rmse:55.26184
+[99]	train-rmse:4.10902	eval-rmse:43.48237
+Inner Fold 2 Results: {'MSE - mean': 1016.7826623529359, 'MSE - std': 873.9343229559306, 'R2 - mean': 0.5323902504270195, 'R2 - std': 0.14911942118164828}
   outer_1_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -1901,17 +1832,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc17b0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.6800026	test: 18.1402860	best: 18.1402860 (0)	total: 390us	remaining: 38.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.26364774
-bestIteration = 9
-
-Shrink model to first 10 iterations.
-Inner Fold 3 Results: {'MSE - mean': 515.7315310866309, 'MSE - std': 514.2764401838197, 'R2 - mean': 0.5949629868520728, 'R2 - std': 0.05060761416376408}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.45130	eval-rmse:19.17196
+[99]	train-rmse:5.17446	eval-rmse:8.29422
+Inner Fold 3 Results: {'MSE - mean': 700.7864496135435, 'MSE - std': 841.950917111506, 'R2 - mean': 0.617085342326043, 'R2 - std': 0.17079496001327035}
   outer_1_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -1994,8 +1919,7 @@ Train: [[8.0 10.0 1.0 1.0 -0.2066935874125325]
 Val : (370, 5) 
  
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[I 2025-05-05 08:33:08,868] Trial 2 finished with value: 543.7012408732155 and parameters: {'learning_rate': 0.08116773309068459, 'max_depth': 4, 'l2_leaf_reg': 3.024681916049169}. Best is trial 0 with value: 428.76958936223093.
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Cat Idx V3 : [0, 1, 2, 3] 
  
 
@@ -2048,17 +1972,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1600>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 36.6036664	test: 48.6899701	best: 48.6899701 (0)	total: 296us	remaining: 29.3ms
-99:	learn: 14.4707889	test: 32.0832860	best: 31.8151257 (80)	total: 18.4ms	remaining: 0us
-
-bestTest = 31.81512572
-bestIteration = 80
-
-Shrink model to first 81 iterations.
-Inner Fold 4 Results: {'MSE - mean': 639.8492014935722, 'MSE - std': 494.5460352867514, 'R2 - mean': 0.5955987429784751, 'R2 - std': 0.04384131061074801}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.09571	eval-rmse:49.72180
+[99]	train-rmse:4.64807	eval-rmse:25.69764
+Inner Fold 4 Results: {'MSE - mean': 690.6820114006161, 'MSE - std': 729.3608908719168, 'R2 - mean': 0.6471664445787111, 'R2 - std': 0.15682093901216573}
   outer_1_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -2194,19 +2112,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1840>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.6227507	test: 41.7876556	best: 41.7876556 (0)	total: 200us	remaining: 19.9ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 31.53374748
-bestIteration = 22
-
-Shrink model to first 23 iterations.
-Inner Fold 5 Results: {'MSE - mean': 710.7548016052804, 'MSE - std': 464.5116159183554, 'R2 - mean': 0.5686308737458152, 'R2 - std': 0.06668367338902273}
-Trial Results B4 Saving: {'MSE - mean': 710.7548016052804, 'MSE - std': 464.5116159183554, 'R2 - mean': 0.5686308737458152, 'R2 - std': 0.06668367338902273}
-Score: 710.7548016052804
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.22463	eval-rmse:42.61131
+[99]	train-rmse:4.86421	eval-rmse:24.56374
+[I 2025-05-05 14:13:51,482] Trial 2 finished with value: 644.8641027082762 and parameters: {'max_depth': 4, 'alpha': 4.5678901937216935e-05, 'lambda': 1.27532776001753e-07, 'eta': 0.02655809659916989}. Best is trial 2 with value: 644.8641027082762.
+Inner Fold 5 Results: {'MSE - mean': 673.2210507772804, 'MSE - std': 653.2942582713702, 'R2 - mean': 0.6522920958575863, 'R2 - std': 0.1406390228004179}
+Trial Results B4 Saving: {'MSE - mean': 673.2210507772804, 'MSE - std': 653.2942582713702, 'R2 - mean': 0.6522920958575863, 'R2 - std': 0.1406390228004179}
+Score: 673.2210507772804
   outer_1_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -2342,17 +2255,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1cf0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 37.7541114	test: 17.6309099	best: 17.6309099 (0)	total: 214us	remaining: 21.2ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 13.24739711
-bestIteration = 3
-
-Shrink model to first 4 iterations.
-Inner Fold 1 Results: {'MSE - mean': 175.49353441370928, 'MSE - std': 0.0, 'R2 - mean': 0.6087249341370389, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.39977	eval-rmse:22.08110
+[99]	train-rmse:6.49852	eval-rmse:12.20467
+Inner Fold 1 Results: {'MSE - mean': 148.9540969637751, 'MSE - std': 0.0, 'R2 - mean': 0.6678964595774526, 'R2 - std': 0.0}
   outer_1_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -2488,17 +2395,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1ed0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 30.8666143	test: 50.5099346	best: 50.5099346 (0)	total: 212us	remaining: 21ms
-99:	learn: 8.5748903	test: 29.6587100	best: 29.3637388 (88)	total: 14.3ms	remaining: 0us
-
-bestTest = 29.36373879
-bestIteration = 88
-
-Shrink model to first 89 iterations.
-Inner Fold 2 Results: {'MSE - mean': 518.861353771562, 'MSE - std': 343.36781935785274, 'R2 - mean': 0.6637380671513406, 'R2 - std': 0.055013133014301774}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.40420	eval-rmse:55.34267
+[99]	train-rmse:5.33122	eval-rmse:43.80240
+Inner Fold 2 Results: {'MSE - mean': 1033.8023873246057, 'MSE - std': 884.8482903608304, 'R2 - mean': 0.5210278269439176, 'R2 - std': 0.146868632633535}
   outer_1_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -2634,17 +2535,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1d50>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.2163860	test: 15.3701811	best: 15.3701811 (0)	total: 193us	remaining: 19.2ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.77416965
-bestIteration = 2
-
-Shrink model to first 3 iterations.
-Inner Fold 3 Results: {'MSE - mean': 400.3007055979574, 'MSE - std': 326.6714366215721, 'R2 - mean': 0.6069987106401885, 'R2 - std': 0.09195835483503072}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.68428	eval-rmse:19.32385
+[97]	train-rmse:6.77214	eval-rmse:8.99807
+Inner Fold 3 Results: {'MSE - mean': 716.2031373553305, 'MSE - std': 850.7112113589126, 'R2 - mean': 0.5968771992503792, 'R2 - std': 0.16089287759147272}
   outer_1_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -2780,17 +2675,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1db0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 32.7512805	test: 43.9123464	best: 43.9123464 (0)	total: 112us	remaining: 11.1ms
-99:	learn: 6.8298577	test: 28.5843187	best: 28.5035189 (97)	total: 14ms	remaining: 0us
-
-bestTest = 28.50351885
-bestIteration = 97
-
-Shrink model to first 98 iterations.
-Inner Fold 4 Results: {'MSE - mean': 503.33817357566465, 'MSE - std': 334.4933931336649, 'R2 - mean': 0.624482939651976, 'R2 - std': 0.08520181371534266}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.30026	eval-rmse:49.90728
+[99]	train-rmse:5.85660	eval-rmse:26.47662
+Inner Fold 4 Results: {'MSE - mean': 712.4052482454564, 'MSE - std': 736.7668869689272, 'R2 - mean': 0.6279700090777572, 'R2 - std': 0.1493826529876644}
   outer_1_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -2855,7 +2744,6 @@ Ordinal Idx V2: None
 
 
 Cat Dims V2 : [17, 17, 2, 2]
-[I 2025-05-05 08:33:08,942] Trial 3 finished with value: 441.3770657391171 and parameters: {'learning_rate': 0.2875779753976403, 'max_depth': 3, 'l2_leaf_reg': 1.3171588911501224}. Best is trial 0 with value: 428.76958936223093.
 Cat Idx V2 : [0, 1, 2, 3] 
  
 
@@ -2927,19 +2815,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1ea0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.0463016	test: 39.2185814	best: 39.2185814 (0)	total: 214us	remaining: 21.2ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 32.11082592
-bestIteration = 4
-
-Shrink model to first 5 iterations.
-Inner Fold 5 Results: {'MSE - mean': 608.891561336692, 'MSE - std': 366.1621699621319, 'R2 - mean': 0.587754796935384, 'R2 - std': 0.10584566650528754}
-Trial Results B4 Saving: {'MSE - mean': 608.891561336692, 'MSE - std': 366.1621699621319, 'R2 - mean': 0.587754796935384, 'R2 - std': 0.10584566650528754}
-Score: 608.891561336692
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.43826	eval-rmse:42.68033
+[99]	train-rmse:6.31283	eval-rmse:25.24681
+[I 2025-05-05 14:13:52,070] Trial 3 finished with value: 661.7538781359418 and parameters: {'max_depth': 5, 'alpha': 0.002123967770491675, 'lambda': 0.012059409955750706, 'eta': 0.020422184227608747}. Best is trial 2 with value: 644.8641027082762.
+Inner Fold 5 Results: {'MSE - mean': 697.4045207905415, 'MSE - std': 659.6669188945385, 'R2 - mean': 0.6332447302253648, 'R2 - std': 0.1340277297563696}
+Trial Results B4 Saving: {'MSE - mean': 697.4045207905415, 'MSE - std': 659.6669188945385, 'R2 - mean': 0.6332447302253648, 'R2 - std': 0.1340277297563696}
+Score: 697.4045207905415
   outer_1_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -3075,17 +2958,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2380>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.5429455	test: 21.8839386	best: 21.8839386 (0)	total: 3.17ms	remaining: 314ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.72737299
-bestIteration = 67
-
-Shrink model to first 68 iterations.
-Inner Fold 1 Results: {'MSE - mean': 161.9860264722983, 'MSE - std': 0.0, 'R2 - mean': 0.6388408644878449, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.80032	eval-rmse:22.21820
+[99]	train-rmse:20.08543	eval-rmse:14.25170
+Inner Fold 1 Results: {'MSE - mean': 203.11107934932704, 'MSE - std': 0.0, 'R2 - mean': 0.5471496929194172, 'R2 - std': 0.0}
   outer_1_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -3221,16 +3098,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2560>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.5317499	test: 55.0779865	best: 55.0779865 (0)	total: 1.43ms	remaining: 142ms
-99:	learn: 14.0419257	test: 39.6095444	best: 39.6095444 (99)	total: 129ms	remaining: 0us
-
-bestTest = 39.60954436
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 865.4510250350133, 'MSE - std': 703.464998562715, 'R2 - mean': 0.5635396511076038, 'R2 - std': 0.07530121338024115}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.71063	eval-rmse:55.42553
+[99]	train-rmse:16.84454	eval-rmse:42.41627
+Inner Fold 2 Results: {'MSE - mean': 1001.1254813554642, 'MSE - std': 798.0144020061372, 'R2 - mean': 0.4801459364327752, 'R2 - std': 0.06700375648664197}
   outer_1_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -3366,17 +3238,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc24a0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.7903280	test: 19.1064723	best: 19.1064723 (0)	total: 513us	remaining: 50.9ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 11.82513449
-bestIteration = 46
-
-Shrink model to first 47 iterations.
-Inner Fold 3 Results: {'MSE - mean': 623.5786187017642, 'MSE - std': 668.515662762985, 'R2 - mean': 0.5643533066246078, 'R2 - std': 0.061493950067941165}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:44.06227	eval-rmse:19.36186
+[68]	train-rmse:23.79404	eval-rmse:13.03274
+Inner Fold 3 Results: {'MSE - mean': 724.0344568597117, 'MSE - std': 760.3355809016305, 'R2 - mean': 0.4777000213145737, 'R2 - std': 0.05481758164200946}
   outer_1_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -3429,7 +3295,6 @@ Cat Dims V1 : [17, 17, 2, 2]
 
 
 Scaling the data...
-[I 2025-05-05 08:33:09,478] Trial 4 finished with value: 637.3336036558593 and parameters: {'learning_rate': 0.026916700512216105, 'max_depth': 11, 'l2_leaf_reg': 0.8012807418005371}. Best is trial 0 with value: 428.76958936223093.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After OHE
 Numerical Index V2 : [4] 
@@ -3513,16 +3378,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc22f0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 37.5030349	test: 49.7765482	best: 49.7765482 (0)	total: 182us	remaining: 18ms
-99:	learn: 15.5207491	test: 33.3334929	best: 33.3334929 (99)	total: 105ms	remaining: 0us
-
-bestTest = 33.33349291
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 745.4643984214393, 'MSE - std': 616.2412866833854, 'R2 - mean': 0.5628078464015754, 'R2 - std': 0.05332255398161042}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.63198	eval-rmse:50.12139
+[99]	train-rmse:17.85666	eval-rmse:33.94831
+Inner Fold 4 Results: {'MSE - mean': 831.1477167389701, 'MSE - std': 684.1070077222199, 'R2 - mean': 0.4937056929172895, 'R2 - std': 0.05497517633596759}
   outer_1_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -3658,22 +3518,17 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2530>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.6472717	test: 42.6349969	best: 42.6349969 (0)	total: 297us	remaining: 29.4ms
-99:	learn: 14.3431848	test: 31.3368106	best: 31.1300848 (85)	total: 88.4ms	remaining: 0us
-
-bestTest = 31.13008481
-bestIteration = 85
-
-Shrink model to first 86 iterations.
-Inner Fold 5 Results: {'MSE - mean': 790.1879496487812, 'MSE - std': 558.3936271736044, 'R2 - mean': 0.5451416056784412, 'R2 - std': 0.059355033953728896}
-Trial Results B4 Saving: {'MSE - mean': 790.1879496487812, 'MSE - std': 558.3936271736044, 'R2 - mean': 0.5451416056784412, 'R2 - std': 0.059355033953728896}
-Score: 790.1879496487812
-Best Hyperparameters found for Outer Fold 1: {'learning_rate': 0.2710002761056303, 'max_depth': 2, 'l2_leaf_reg': 7.2048624644010655}
-Best Inner CV Score : 428.7696
-Hyperparameter Optimization for Outer Fold 1 finished in 0.96 seconds.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.78046	eval-rmse:42.86923
+[99]	train-rmse:18.03617	eval-rmse:29.71770
+[I 2025-05-05 14:13:52,360] Trial 4 finished with value: 720.193044021394 and parameters: {'max_depth': 2, 'alpha': 3.714497682237298e-06, 'lambda': 4.555654308199264e-06, 'eta': 0.014867667256367316}. Best is trial 2 with value: 644.8641027082762.
+Inner Fold 5 Results: {'MSE - mean': 841.5464858034975, 'MSE - std': 612.2372546684408, 'R2 - mean': 0.49918082404699604, 'R2 - std': 0.0503758300585361}
+Trial Results B4 Saving: {'MSE - mean': 841.5464858034975, 'MSE - std': 612.2372546684408, 'R2 - mean': 0.49918082404699604, 'R2 - std': 0.0503758300585361}
+Score: 841.5464858034975
+Best Hyperparameters found for Outer Fold 1: {'max_depth': 4, 'alpha': 4.5678901937216935e-05, 'lambda': 1.27532776001753e-07, 'eta': 0.02655809659916989}
+Best Inner CV Score : 644.8641
+Hyperparameter Optimization for Outer Fold 1 finished in 3.24 seconds.
 Before Debugging -- Outer Fold 1
 DEBUG Outer Fold 1: num_features: 5
 DEBUG Outer Fold 1: num_classes: 1
@@ -3706,7 +3561,6 @@ Cat dims : [2]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 BEFORE getting cat idx
 Nominal Index : [0, 1, 2, 3]
-[I 2025-05-05 08:33:09,502] A new study created in memory with name: CatBoost_Socmob_outer2
 Ordinal Index : None
 Cat Idx : [0, 1, 2, 3]
 Cat dims : []
@@ -3810,17 +3664,12 @@ DEBUG Outer Fold 1: num_idx: [4]
 DEBUG Outer Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Outer Fold 1: bin_alt: None
 Training final model for Outer Fold 1...
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1ae0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
-0:	learn: 36.5109677	test: 34.6967563	best: 34.6967563 (0)	total: 216us	remaining: 21.4ms
-99:	learn: 14.6651033	test: 21.5746993	best: 21.0861674 (84)	total: 14.3ms	remaining: 0us
-
-bestTest = 21.08616742
-bestIteration = 84
-
-Shrink model to first 85 iterations.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.77940	eval-rmse:37.91301
+[99]	train-rmse:5.03382	eval-rmse:14.83473
+[I 2025-05-05 14:13:52,459] A new study created in memory with name: XGBoost_Socmob_outer2
 Evaluating final model on Outer Test Set for Fold 1...
-Outer Fold 1 Results: {'MSE - mean': 444.62647876050767, 'MSE - std': 0.0, 'R2 - mean': 0.7028155048955589, 'R2 - std': 0.0}
+Outer Fold 1 Results: {'MSE - mean': 220.0692147043437, 'MSE - std': 0.0, 'R2 - mean': 0.852907639144072, 'R2 - std': 0.0}
 
 --- Outer Fold 2/2 ---
 Starting Hyperparameter Optimization for Outer Fold 2...
@@ -3959,16 +3808,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0430>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.7711417	test: 34.9868843	best: 34.9868843 (0)	total: 1.97ms	remaining: 195ms
-99:	learn: 18.6314294	test: 26.7536331	best: 26.7536331 (99)	total: 42.6ms	remaining: 0us
-
-bestTest = 26.75363313
-bestIteration = 99
-
-Inner Fold 1 Results: {'MSE - mean': 715.756891351027, 'MSE - std': 0.0, 'R2 - mean': 0.42390713443487604, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:34.50125	eval-rmse:34.72784
+[99]	train-rmse:2.14430	eval-rmse:17.80726
+Inner Fold 1 Results: {'MSE - mean': 317.09845655560383, 'MSE - std': 0.0, 'R2 - mean': 0.7447762491555177, 'R2 - std': 0.0}
   outer_2_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -4104,16 +3948,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc08b0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.7389258	test: 38.8569850	best: 38.8569850 (0)	total: 978us	remaining: 96.8ms
-99:	learn: 18.9926311	test: 25.0386615	best: 25.0386615 (99)	total: 41.3ms	remaining: 0us
-
-bestTest = 25.03866154
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 671.345739234446, 'MSE - std': 44.41115211658098, 'R2 - mean': 0.5070911383202523, 'R2 - std': 0.08318400388537633}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:33.54627	eval-rmse:38.42494
+[99]	train-rmse:2.12516	eval-rmse:14.93772
+Inner Fold 2 Results: {'MSE - mean': 270.11693464796735, 'MSE - std': 46.98152190763646, 'R2 - mean': 0.7994745167369359, 'R2 - std': 0.054698267581418325}
   outer_2_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -4249,16 +4088,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0dc0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.6335712	test: 38.9564909	best: 38.9564909 (0)	total: 347us	remaining: 34.4ms
-99:	learn: 18.8477785	test: 24.0715721	best: 24.0715721 (99)	total: 37.1ms	remaining: 0us
-
-bestTest = 24.07157213
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 640.7106822710267, 'MSE - std': 56.49702397930903, 'R2 - mean': 0.5470395938075934, 'R2 - std': 0.08834483870936098}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:33.47795	eval-rmse:37.98814
+[99]	train-rmse:2.46333	eval-rmse:12.93501
+Inner Fold 3 Results: {'MSE - mean': 235.84943429539183, 'MSE - std': 61.80640820065515, 'R2 - mean': 0.8304087750150297, 'R2 - std': 0.06251765341115464}
   outer_2_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -4289,7 +4123,6 @@ Nominal Index : [0, 1, 2, 3]
 Ordinal Index : None
 Cat Idx : [0]
 Cat dims : [2]
-[I 2025-05-05 08:33:09,749] Trial 0 finished with value: 623.411051399152 and parameters: {'learning_rate': 0.04156890925084196, 'max_depth': 9, 'l2_leaf_reg': 23.23929644015479}. Best is trial 0 with value: 623.411051399152.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 BEFORE getting cat idx
 Nominal Index : [0, 1, 2, 3]
@@ -4395,16 +4228,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0eb0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.8473750	test: 34.2071429	best: 34.2071429 (0)	total: 336us	remaining: 33.4ms
-99:	learn: 20.4739276	test: 20.5888934	best: 20.5888934 (99)	total: 38.7ms	remaining: 0us
-
-bestTest = 20.58889344
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 586.5086532183753, 'MSE - std': 105.86555223094231, 'R2 - mean': 0.5720699600674444, 'R2 - std': 0.08793841936403066}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:34.66533	eval-rmse:33.48194
+[99]	train-rmse:2.03948	eval-rmse:13.20419
+Inner Fold 4 Results: {'MSE - mean': 220.47472467336516, 'MSE - std': 59.78435546934021, 'R2 - mean': 0.8365260273442732, 'R2 - std': 0.05516887772292313}
   outer_2_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -4540,18 +4368,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc1120>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 36.7066005	test: 30.1927246	best: 30.1927246 (0)	total: 291us	remaining: 28.9ms
-99:	learn: 21.8429577	test: 12.9472719	best: 12.9472719 (99)	total: 40.9ms	remaining: 0us
-
-bestTest = 12.94727194
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 502.7332909208849, 'MSE - std': 192.45585839779744, 'R2 - mean': 0.6221550345570263, 'R2 - std': 0.12736008490380016}
-Trial Results B4 Saving: {'MSE - mean': 502.7332909208849, 'MSE - std': 192.45585839779744, 'R2 - mean': 0.6221550345570263, 'R2 - std': 0.12736008490380016}
-Score: 502.7332909208849
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.48867	eval-rmse:29.79848
+[99]	train-rmse:2.31659	eval-rmse:11.21575
+[I 2025-05-05 14:13:52,944] Trial 0 finished with value: 249.01559190352106 and parameters: {'max_depth': 4, 'alpha': 0.11044333261972272, 'lambda': 0.001321715822498669, 'eta': 0.04892623951810431}. Best is trial 0 with value: 249.01559190352106.
+Inner Fold 5 Results: {'MSE - mean': 201.53840934527688, 'MSE - std': 65.52611296213676, 'R2 - mean': 0.8425804525006401, 'R2 - std': 0.05080854565190452}
+Trial Results B4 Saving: {'MSE - mean': 201.53840934527688, 'MSE - std': 65.52611296213676, 'R2 - mean': 0.8425804525006401, 'R2 - std': 0.05080854565190452}
+Score: 201.53840934527688
   outer_2_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -4687,17 +4511,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2ce0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.3727596	test: 34.9012941	best: 34.9012941 (0)	total: 218us	remaining: 21.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 28.03194437
-bestIteration = 55
-
-Shrink model to first 56 iterations.
-Inner Fold 1 Results: {'MSE - mean': 785.7899124536918, 'MSE - std': 0.0, 'R2 - mean': 0.36753949858150303, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:30.31020	eval-rmse:33.45599
+[90]	train-rmse:1.55304	eval-rmse:14.28954
+Inner Fold 1 Results: {'MSE - mean': 204.1910353658194, 'MSE - std': 0.0, 'R2 - mean': 0.8356523002320435, 'R2 - std': 0.0}
   outer_2_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -4833,17 +4651,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2ec0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.4841088	test: 38.6039654	best: 38.6039654 (0)	total: 236us	remaining: 23.4ms
-99:	learn: 17.8276042	test: 21.9554671	best: 21.9554162 (98)	total: 10.9ms	remaining: 0us
-
-bestTest = 21.95541621
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 2 Results: {'MSE - mean': 633.9151127466005, 'MSE - std': 151.87479970709137, 'R2 - mean': 0.5262541944230346, 'R2 - std': 0.15871469584153153}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:29.56775	eval-rmse:36.26693
+[99]	train-rmse:1.20551	eval-rmse:17.55052
+Inner Fold 2 Results: {'MSE - mean': 256.10591168258037, 'MSE - std': 51.91487631676097, 'R2 - mean': 0.8171746817220682, 'R2 - std': 0.01847761850997537}
   outer_2_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -4979,17 +4791,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2e00>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.3836421	test: 38.7218097	best: 38.7218097 (0)	total: 182us	remaining: 18ms
-99:	learn: 16.7134422	test: 21.7169243	best: 21.6106742 (93)	total: 10.7ms	remaining: 0us
-
-bestTest = 21.61067423
-bestIteration = 93
-
-Shrink model to first 94 iterations.
-Inner Fold 3 Results: {'MSE - mean': 578.2838167933161, 'MSE - std': 146.85702356236348, 'R2 - mean': 0.5839414269109938, 'R2 - std': 0.1531313271942952}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:29.54480	eval-rmse:33.67579
+[99]	train-rmse:1.39565	eval-rmse:11.21491
+Inner Fold 3 Results: {'MSE - mean': 212.66197609496305, 'MSE - std': 74.64261964413146, 'R2 - mean': 0.8511239092848292, 'R2 - std': 0.050326086953816074}
   outer_2_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -5125,16 +4931,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2c50>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.6211454	test: 33.8960648	best: 33.8960648 (0)	total: 147us	remaining: 14.6ms
-99:	learn: 19.1112525	test: 17.3688369	best: 17.3688369 (99)	total: 10.5ms	remaining: 0us
-
-bestTest = 17.3688369
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 509.13199229349084, 'MSE - std': 174.7030724462547, 'R2 - mean': 0.625180309911702, 'R2 - std': 0.15062814789956433}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:30.53085	eval-rmse:29.90772
+[63]	train-rmse:1.77827	eval-rmse:10.83696
+Inner Fold 4 Results: {'MSE - mean': 188.85642937911874, 'MSE - std': 76.67302435553587, 'R2 - mean': 0.8639049276913158, 'R2 - std': 0.048883530616999564}
   outer_2_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -5158,7 +4959,6 @@ bin_alt : None
 
 
 X_train shape : (370, 5)
-[I 2025-05-05 08:33:09,836] Trial 1 finished with value: 588.7975620966388 and parameters: {'learning_rate': 0.03783321557361207, 'max_depth': 2, 'l2_leaf_reg': 2.2382948652990806}. Best is trial 1 with value: 588.7975620966388.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 AFTER getting cat idx
@@ -5271,19 +5071,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2e90>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 36.4594198	test: 29.8698400	best: 29.8698400 (0)	total: 143us	remaining: 14.2ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.15758664
-bestIteration = 74
-
-Shrink model to first 75 iterations.
-Inner Fold 5 Results: {'MSE - mean': 436.8669761960952, 'MSE - std': 212.85173483896355, 'R2 - mean': 0.6688418217778178, 'R2 - std': 0.16055024641981186}
-Trial Results B4 Saving: {'MSE - mean': 436.8669761960952, 'MSE - std': 212.85173483896355, 'R2 - mean': 0.6688418217778178, 'R2 - std': 0.16055024641981186}
-Score: 436.8669761960952
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:31.17068	eval-rmse:26.77484
+[72]	train-rmse:1.78017	eval-rmse:7.48945
+[I 2025-05-05 14:13:53,284] Trial 1 finished with value: 204.8321542163407 and parameters: {'max_depth': 3, 'alpha': 2.1636550250593745e-07, 'lambda': 4.4933703594858494e-05, 'eta': 0.18074022125953124}. Best is trial 1 with value: 204.8321542163407.
+Inner Fold 5 Results: {'MSE - mean': 162.34541855922203, 'MSE - std': 86.68527504617147, 'R2 - mean': 0.8792004832269358, 'R2 - std': 0.05336193145904154}
+Trial Results B4 Saving: {'MSE - mean': 162.34541855922203, 'MSE - std': 86.68527504617147, 'R2 - mean': 0.8792004832269358, 'R2 - std': 0.05336193145904154}
+Score: 162.34541855922203
   outer_2_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -5419,17 +5214,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3310>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 32.2568877	test: 33.3241940	best: 33.3241940 (0)	total: 622us	remaining: 61.6ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 26.43425985
-bestIteration = 16
-
-Shrink model to first 17 iterations.
-Inner Fold 1 Results: {'MSE - mean': 698.770100451056, 'MSE - std': 0.0, 'R2 - mean': 0.4375793311885089, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.09949	eval-rmse:34.95328
+[99]	train-rmse:1.88046	eval-rmse:28.98039
+Inner Fold 1 Results: {'MSE - mean': 839.8632670827925, 'MSE - std': 0.0, 'R2 - mean': 0.32401735552508315, 'R2 - std': 0.0}
   outer_2_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -5565,17 +5354,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc34f0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 31.7544757	test: 36.3371575	best: 36.3371575 (0)	total: 735us	remaining: 72.8ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 18.28013894
-bestIteration = 64
-
-Shrink model to first 65 iterations.
-Inner Fold 2 Results: {'MSE - mean': 516.466795287851, 'MSE - std': 182.303305163205, 'R2 - mean': 0.6095955875479183, 'R2 - std': 0.17201625635940943}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:34.09876	eval-rmse:38.74604
+[99]	train-rmse:1.77782	eval-rmse:26.86038
+Inner Fold 2 Results: {'MSE - mean': 780.6715666704524, 'MSE - std': 59.19170041234008, 'R2 - mean': 0.42625183671547706, 'R2 - std': 0.10223448119039391}
   outer_2_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -5711,17 +5494,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3430>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 31.7563952	test: 36.1376319	best: 36.1376319 (0)	total: 327us	remaining: 32.4ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 18.76787412
-bestIteration = 29
-
-Shrink model to first 30 iterations.
-Inner Fold 3 Results: {'MSE - mean': 461.7222244938996, 'MSE - std': 167.78041039340783, 'R2 - mean': 0.6641371889791167, 'R2 - std': 0.16023722270838567}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:34.05048	eval-rmse:38.48509
+[99]	train-rmse:1.79191	eval-rmse:16.08305
+Inner Fold 3 Results: {'MSE - mean': 606.6692181748143, 'MSE - std': 250.77760299210223, 'R2 - mean': 0.561988893196658, 'R2 - std': 0.20932516117402128}
   outer_2_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -5736,7 +5513,6 @@ DEBUG Inner Fold 4: bin_alt: None
 BEFORE ANY ENCODING
 num_features :5
 num_classes : 1
-[I 2025-05-05 08:33:10,042] Trial 2 finished with value: 484.3457893477374 and parameters: {'learning_rate': 0.17944888152616667, 'max_depth': 8, 'l2_leaf_reg': 3.4033785324320593}. Best is trial 2 with value: 484.3457893477374.
 cat_idx : [0]
 nominal_idx : [0, 1, 2, 3]
 ordinal_idx : None
@@ -5858,17 +5634,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3250>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 32.8947974	test: 30.9131318	best: 30.9131318 (0)	total: 349us	remaining: 34.6ms
-99:	learn: 6.6033293	test: 14.9587794	best: 14.9416057 (97)	total: 46.8ms	remaining: 0us
-
-bestTest = 14.94160568
-bestIteration = 97
-
-Shrink model to first 98 iterations.
-Inner Fold 4 Results: {'MSE - mean': 402.1045688771671, 'MSE - std': 178.2568208163189, 'R2 - mean': 0.7016465447004063, 'R2 - std': 0.15322477265720227}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.23161	eval-rmse:33.87930
+[99]	train-rmse:1.79818	eval-rmse:16.68421
+Inner Fold 4 Results: {'MSE - mean': 524.5926079134049, 'MSE - std': 259.57034591389333, 'R2 - mean': 0.6135672578967246, 'R2 - std': 0.20209836822893135}
   outer_2_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -6004,19 +5774,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3460>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 33.6469454	test: 26.6440311	best: 26.6440311 (0)	total: 323us	remaining: 32.1ms
-99:	learn: 6.3886796	test: 10.3170274	best: 10.2424611 (85)	total: 46ms	remaining: 0us
-
-bestTest = 10.24246112
-bestIteration = 85
-
-Shrink model to first 86 iterations.
-Inner Fold 5 Results: {'MSE - mean': 342.66525762871333, 'MSE - std': 198.87815923523436, 'R2 - mean': 0.7390999031736873, 'R2 - std': 0.15618348506930374}
-Trial Results B4 Saving: {'MSE - mean': 342.66525762871333, 'MSE - std': 198.87815923523436, 'R2 - mean': 0.7390999031736873, 'R2 - std': 0.15618348506930374}
-Score: 342.66525762871333
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:36.07729	eval-rmse:30.16853
+[99]	train-rmse:1.91361	eval-rmse:16.29778
+[I 2025-05-05 14:13:54,088] Trial 2 finished with value: 644.9188544774818 and parameters: {'max_depth': 7, 'alpha': 0.05588945814815945, 'lambda': 0.018981910313225686, 'eta': 0.030793515718270686}. Best is trial 1 with value: 204.8321542163407.
+Inner Fold 5 Results: {'MSE - mean': 472.7976125459447, 'MSE - std': 254.22882952715548, 'R2 - mean': 0.6346015229857866, 'R2 - std': 0.18559299982484553}
+Trial Results B4 Saving: {'MSE - mean': 472.7976125459447, 'MSE - std': 254.22882952715548, 'R2 - mean': 0.6346015229857866, 'R2 - std': 0.18559299982484553}
+Score: 472.7976125459447
   outer_2_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -6152,17 +5917,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3940>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 31.4118395	test: 31.2283292	best: 31.2283292 (0)	total: 765us	remaining: 75.8ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 26.77120087
-bestIteration = 10
-
-Shrink model to first 11 iterations.
-Inner Fold 1 Results: {'MSE - mean': 716.6972024912058, 'MSE - std': 0.0, 'R2 - mean': 0.4231503040839367, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:27.43022	eval-rmse:32.78944
+[47]	train-rmse:0.06510	eval-rmse:22.91406
+Inner Fold 1 Results: {'MSE - mean': 525.0540668961414, 'MSE - std': 0.0, 'R2 - mean': 0.5773985474259641, 'R2 - std': 0.0}
   outer_2_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -6298,16 +6057,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3b20>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 30.5025090	test: 34.8067680	best: 34.8067680 (0)	total: 179us	remaining: 17.8ms
-99:	learn: 10.7499176	test: 17.4738511	best: 17.4738511 (99)	total: 16.4ms	remaining: 0us
-
-bestTest = 17.47385114
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 511.01633919879515, 'MSE - std': 205.6808632924106, 'R2 - mean': 0.6118011588567747, 'R2 - std': 0.188650854772838}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:26.67907	eval-rmse:35.67980
+[78]	train-rmse:0.00988	eval-rmse:20.36057
+Inner Fold 2 Results: {'MSE - mean': 469.8023491076975, 'MSE - std': 55.251717788443926, 'R2 - mean': 0.6532372159832531, 'R2 - std': 0.07583866855728905}
   outer_2_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -6443,17 +6197,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3a60>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 30.6178053	test: 35.0830166	best: 35.0830166 (0)	total: 175us	remaining: 17.4ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.90574165
-bestIteration = 17
-
-Shrink model to first 18 iterations.
-Inner Fold 3 Results: {'MSE - mean': 472.7570714543812, 'MSE - std': 176.43871878497941, 'R2 - mean': 0.6561635020019279, 'R2 - std': 0.16631936642998488}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:26.65864	eval-rmse:31.48310
+[65]	train-rmse:0.02821	eval-rmse:19.39174
+Inner Fold 3 Results: {'MSE - mean': 438.54812591229893, 'MSE - std': 63.157114781140486, 'R2 - mean': 0.6881224430921767, 'R2 - std': 0.07917255778726148}
   outer_2_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -6589,24 +6337,17 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3880>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 31.9416234	test: 29.7645216	best: 29.7645216 (0)	total: 197us	remaining: 19.6ms
-99:	learn: 13.2731002	test: 14.4563630	best: 14.3055582 (94)	total: 14.6ms	remaining: 0us
-
-bestTest = 14.30555821
-bestIteration = 94
-
-Shrink model to first 95 iterations.
-Inner Fold 4 Results: {'MSE - mean': 405.73005700342577, 'MSE - std': 191.90056829902704, 'R2 - mean': 0.6995372855140446, 'R2 - std': 0.16245138973157966}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:27.49312	eval-rmse:30.28779
+[97]	train-rmse:0.00452	eval-rmse:13.78951
+Inner Fold 4 Results: {'MSE - mean': 376.44873118892485, 'MSE - std': 120.66739549537344, 'R2 - mean': 0.7265234721336132, 'R2 - std': 0.09552558570486071}
   outer_2_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
 DEBUG Inner Fold 5: num_classes: 1
 DEBUG Inner Fold 5: cat_idx: [0]
 DEBUG Inner Fold 5: nominal_idx: [0, 1, 2, 3]
-[I 2025-05-05 08:33:10,129] Trial 3 finished with value: 491.9665016238811 and parameters: {'learning_rate': 0.29027390165677047, 'max_depth': 3, 'l2_leaf_reg': 8.213638888632172}. Best is trial 2 with value: 484.3457893477374.
 DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: None
 DEBUG Inner Fold 5: cat_dims: [2]
@@ -6736,19 +6477,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3af0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 32.5911736	test: 25.4587056	best: 25.4587056 (0)	total: 187us	remaining: 18.6ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.05151299
-bestIteration = 50
-
-Shrink model to first 51 iterations.
-Inner Fold 5 Results: {'MSE - mean': 353.6318379715974, 'MSE - std': 200.7923310187545, 'R2 - mean': 0.7288712405895175, 'R2 - std': 0.15669807561695423}
-Trial Results B4 Saving: {'MSE - mean': 353.6318379715974, 'MSE - std': 200.7923310187545, 'R2 - mean': 0.7288712405895175, 'R2 - std': 0.15669807561695423}
-Score: 353.6318379715974
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:28.19805	eval-rmse:25.48027
+[50]	train-rmse:0.06053	eval-rmse:14.09705
+[I 2025-05-05 14:13:54,580] Trial 3 finished with value: 430.15249477589987 and parameters: {'max_depth': 6, 'alpha': 0.0068144089474376284, 'lambda': 0.13610596189032115, 'eta': 0.2576074830819128}. Best is trial 1 with value: 204.8321542163407.
+Inner Fold 5 Results: {'MSE - mean': 340.9092007744367, 'MSE - std': 129.23130099491684, 'R2 - mean': 0.7391274377245796, 'R2 - std': 0.0890817030252476}
+Trial Results B4 Saving: {'MSE - mean': 340.9092007744367, 'MSE - std': 129.23130099491684, 'R2 - mean': 0.7391274377245796, 'R2 - std': 0.0890817030252476}
+Score: 340.9092007744367
   outer_2_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -6884,17 +6620,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3fa0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.9081748	test: 34.5917770	best: 34.5917770 (0)	total: 1.3ms	remaining: 128ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 25.49455424
-bestIteration = 58
-
-Shrink model to first 59 iterations.
-Inner Fold 1 Results: {'MSE - mean': 649.9723022487874, 'MSE - std': 0.0, 'R2 - mean': 0.476855325229657, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:25.87559	eval-rmse:32.34067
+[51]	train-rmse:0.02524	eval-rmse:25.10904
+Inner Fold 1 Results: {'MSE - mean': 630.4638583183496, 'MSE - std': 0.0, 'R2 - mean': 0.49255713055267514, 'R2 - std': 0.0}
   outer_2_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -7030,16 +6760,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c0d0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.0225404	test: 38.2693143	best: 38.2693143 (0)	total: 1.36ms	remaining: 134ms
-99:	learn: 13.2769343	test: 22.7229811	best: 22.7229811 (99)	total: 52.4ms	remaining: 0us
-
-bestTest = 22.72298106
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 583.1530915909757, 'MSE - std': 66.81921065781177, 'R2 - mean': 0.5697060525084908, 'R2 - std': 0.09285072727883381}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:25.11054	eval-rmse:35.22969
+[70]	train-rmse:0.00457	eval-rmse:23.31981
+Inner Fold 2 Results: {'MSE - mean': 587.1388006859934, 'MSE - std': 43.32505763235616, 'R2 - mean': 0.5685774038492788, 'R2 - std': 0.07602027329660371}
   outer_2_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -7175,17 +6900,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c160>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 33.9674835	test: 38.3080029	best: 38.3080029 (0)	total: 281us	remaining: 27.8ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 20.07279005
-bestIteration = 78
-
-Shrink model to first 79 iterations.
-Inner Fold 3 Results: {'MSE - mean': 523.0743559492677, 'MSE - std': 100.97250563677137, 'R2 - mean': 0.6266668486184434, 'R2 - std': 0.11061902921483002}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:25.09369	eval-rmse:30.78255
+[59]	train-rmse:0.01446	eval-rmse:16.82411
+Inner Fold 3 Results: {'MSE - mean': 485.7761929991798, 'MSE - std': 147.6486715823741, 'R2 - mean': 0.6516389952994136, 'R2 - std': 0.1328577331202506}
   outer_2_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -7321,17 +7040,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c190>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.1608278	test: 33.4310169	best: 33.4310169 (0)	total: 204us	remaining: 20.3ms
-99:	learn: 12.8154169	test: 19.2197359	best: 19.1966332 (87)	total: 63.8ms	remaining: 0us
-
-bestTest = 19.19663322
-bestIteration = 87
-
-Shrink model to first 88 iterations.
-Inner Fold 4 Results: {'MSE - mean': 484.4334558061699, 'MSE - std': 110.11785805459724, 'R2 - mean': 0.6433168635014455, 'R2 - std': 0.10004547068776347}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:25.97402	eval-rmse:26.84608
+[99]	train-rmse:0.00175	eval-rmse:15.27345
+Inner Fold 4 Results: {'MSE - mean': 422.6516866636619, 'MSE - std': 168.23854363771204, 'R2 - mean': 0.690186474939111, 'R2 - std': 0.13302671723044004}
   outer_2_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -7467,24 +7180,17 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c0a0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.9935594	test: 29.3540554	best: 29.3540554 (0)	total: 330us	remaining: 32.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 11.1230001
-bestIteration = 51
-
-Shrink model to first 52 iterations.
-Inner Fold 5 Results: {'MSE - mean': 412.2909910755876, 'MSE - std': 174.69657981666148, 'R2 - mean': 0.688451931244304, 'R2 - std': 0.12710615376416143}
-[I 2025-05-05 08:33:10,448] Trial 4 finished with value: 530.5848393341577 and parameters: {'learning_rate': 0.06272492286646697, 'max_depth': 10, 'l2_leaf_reg': 4.675003828147902}. Best is trial 2 with value: 484.3457893477374.
-[I 2025-05-05 08:33:10,493] A new study created in memory with name: CatBoost_Socmob_outer3
-Trial Results B4 Saving: {'MSE - mean': 412.2909910755876, 'MSE - std': 174.69657981666148, 'R2 - mean': 0.688451931244304, 'R2 - std': 0.12710615376416143}
-Score: 412.2909910755876
-Best Hyperparameters found for Outer Fold 2: {'learning_rate': 0.17944888152616667, 'max_depth': 8, 'l2_leaf_reg': 3.4033785324320593}
-Best Inner CV Score : 484.3458
-Hyperparameter Optimization for Outer Fold 2 finished in 0.95 seconds.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:26.55657	eval-rmse:25.39337
+[54]	train-rmse:0.02069	eval-rmse:14.78670
+[I 2025-05-05 14:13:55,062] Trial 4 finished with value: 501.57592776527264 and parameters: {'max_depth': 6, 'alpha': 1.4617025848430017e-06, 'lambda': 2.7480819658144913e-06, 'eta': 0.2898342282503593}. Best is trial 1 with value: 204.8321542163407.
+Inner Fold 5 Results: {'MSE - mean': 381.8491001591785, 'MSE - std': 171.18051966883985, 'R2 - mean': 0.7058460445178734, 'R2 - std': 0.12303566342835057}
+Trial Results B4 Saving: {'MSE - mean': 381.8491001591785, 'MSE - std': 171.18051966883985, 'R2 - mean': 0.7058460445178734, 'R2 - std': 0.12303566342835057}
+Score: 381.8491001591785
+Best Hyperparameters found for Outer Fold 2: {'max_depth': 3, 'alpha': 2.1636550250593745e-07, 'lambda': 4.4933703594858494e-05, 'eta': 0.18074022125953124}
+Best Inner CV Score : 204.8322
+Hyperparameter Optimization for Outer Fold 2 finished in 2.60 seconds.
 Before Debugging -- Outer Fold 2
 DEBUG Outer Fold 2: num_features: 5
 DEBUG Outer Fold 2: num_classes: 1
@@ -7620,17 +7326,12 @@ DEBUG Outer Fold 2: num_idx: [4]
 DEBUG Outer Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Outer Fold 2: bin_alt: None
 Training final model for Outer Fold 2...
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3c70>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
-0:	learn: 32.5653547	test: 50.7712907	best: 50.7712907 (0)	total: 667us	remaining: 66.1ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 35.25642999
-bestIteration = 57
-
-Shrink model to first 58 iterations.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:30.23406	eval-rmse:51.17840
+[84]	train-rmse:1.86790	eval-rmse:33.10918
+[I 2025-05-05 14:13:55,130] A new study created in memory with name: XGBoost_Socmob_outer3
 Evaluating final model on Outer Test Set for Fold 2...
-Outer Fold 2 Results: {'MSE - mean': 1243.0158576272647, 'MSE - std': 0.0, 'R2 - mean': 0.5734013929273873, 'R2 - std': 0.0}
+Outer Fold 2 Results: {'MSE - mean': 1096.2176612837823, 'MSE - std': 0.0, 'R2 - mean': 0.6237820101147187, 'R2 - std': 0.0}
 
 --- Outer Fold 3/2 ---
 Starting Hyperparameter Optimization for Outer Fold 3...
@@ -7769,17 +7470,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc00d0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.5240202	test: 22.4942242	best: 22.4942242 (0)	total: 1.5ms	remaining: 149ms
-99:	learn: 30.5510987	test: 15.4577084	best: 15.4541585 (98)	total: 111ms	remaining: 0us
-
-bestTest = 15.45415845
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 1 Results: {'MSE - mean': 238.8310072019957, 'MSE - std': 0.0, 'R2 - mean': 0.5068246235485181, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.09157	eval-rmse:21.70191
+[99]	train-rmse:0.40274	eval-rmse:12.35363
+Inner Fold 1 Results: {'MSE - mean': 152.6122207132422, 'MSE - std': 0.0, 'R2 - mean': 0.6848625717275753, 'R2 - std': 0.0}
   outer_3_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -7915,16 +7610,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2f50>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 33.6394950	test: 59.5210861	best: 59.5210861 (0)	total: 1.33ms	remaining: 132ms
-99:	learn: 22.1979083	test: 50.1350480	best: 50.1350480 (99)	total: 72.8ms	remaining: 0us
-
-bestTest = 50.13504801
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 1376.177017449973, 'MSE - std': 1137.3460102479771, 'R2 - mean': 0.3992986506479431, 'R2 - std': 0.10752597290057497}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:31.77658	eval-rmse:57.98227
+[99]	train-rmse:0.37791	eval-rmse:41.69254
+Inner Fold 2 Results: {'MSE - mean': 945.4400660471117, 'MSE - std': 792.8278453338695, 'R2 - mean': 0.5975381986175292, 'R2 - std': 0.08732437311004604}
   outer_3_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -8060,16 +7750,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc3070>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.5228061	test: 38.6807104	best: 38.6807104 (0)	total: 231us	remaining: 22.9ms
-99:	learn: 29.7475254	test: 27.0809939	best: 27.0809939 (99)	total: 134ms	remaining: 0us
-
-bestTest = 27.08099391
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 1161.911430233917, 'MSE - std': 976.8265532229407, 'R2 - mean': 0.4381689281114493, 'R2 - std': 0.10358420168630944}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.25952	eval-rmse:37.03409
+[99]	train-rmse:0.39030	eval-rmse:15.13280
+Inner Fold 3 Results: {'MSE - mean': 706.6272675685464, 'MSE - std': 730.14640106773, 'R2 - mean': 0.6813055668093096, 'R2 - std': 0.1382665591298065}
   outer_3_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -8205,16 +7890,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308dc0460>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.0777597	test: 40.6284981	best: 40.6284981 (0)	total: 261us	remaining: 25.9ms
-99:	learn: 29.8061625	test: 26.0331924	best: 26.0331924 (99)	total: 98.1ms	remaining: 0us
-
-bestTest = 26.03319236
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 1040.8653535277217, 'MSE - std': 871.549794543573, 'R2 - mean': 0.4760014710238263, 'R2 - std': 0.11109081437676593}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.82248	eval-rmse:39.43380
+[99]	train-rmse:0.44626	eval-rmse:22.86540
+Inner Fold 4 Results: {'MSE - mean': 660.6770477582246, 'MSE - std': 637.3143599088047, 'R2 - mean': 0.6818098842287186, 'R2 - std': 0.11974553869925914}
   outer_3_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -8350,19 +8030,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-[I 2025-05-05 08:33:11,058] Trial 0 finished with value: 947.2950734088014 and parameters: {'learning_rate': 0.01142604542801609, 'max_depth': 12, 'l2_leaf_reg': 6.965125381323661}. Best is trial 0 with value: 947.2950734088014.
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2da0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.3333529	test: 29.8390989	best: 29.8390989 (0)	total: 257us	remaining: 25.4ms
-99:	learn: 30.4408854	test: 20.7362337	best: 20.7362337 (99)	total: 89.1ms	remaining: 0us
-
-bestTest = 20.73623371
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 918.690558630399, 'MSE - std': 816.9369360776673, 'R2 - mean': 0.4848906930219904, 'R2 - std': 0.10094061770191934}
-Trial Results B4 Saving: {'MSE - mean': 918.690558630399, 'MSE - std': 816.9369360776673, 'R2 - mean': 0.4848906930219904, 'R2 - std': 0.10094061770191934}
-Score: 918.690558630399
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.97625	eval-rmse:28.23506
+[51]	train-rmse:1.93986	eval-rmse:9.19705
+[I 2025-05-05 14:13:55,774] Trial 0 finished with value: 602.1795424403128 and parameters: {'max_depth': 6, 'alpha': 0.00043920537167155293, 'lambda': 0.00012092264984705, 'eta': 0.061114967363973254}. Best is trial 0 with value: 602.1795424403128.
+Inner Fold 5 Results: {'MSE - mean': 545.5411101144389, 'MSE - std': 614.7851748580396, 'R2 - mean': 0.7264890671079282, 'R2 - std': 0.1394851704007133}
+Trial Results B4 Saving: {'MSE - mean': 545.5411101144389, 'MSE - std': 614.7851748580396, 'R2 - mean': 0.7264890671079282, 'R2 - std': 0.1394851704007133}
+Score: 545.5411101144389
   outer_3_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -8498,17 +8173,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c6a0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.1805902	test: 22.2542113	best: 22.2542113 (0)	total: 913us	remaining: 90.4ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 16.67917967
-bestIteration = 31
-
-Shrink model to first 32 iterations.
-Inner Fold 1 Results: {'MSE - mean': 278.19502722131483, 'MSE - std': 0.0, 'R2 - mean': 0.4255396781006593, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:42.10002	eval-rmse:22.05921
+[83]	train-rmse:1.97857	eval-rmse:13.36764
+Inner Fold 1 Results: {'MSE - mean': 178.6939088781907, 'MSE - std': 0.0, 'R2 - mean': 0.6310050490803603, 'R2 - std': 0.0}
   outer_3_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -8644,16 +8313,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c880>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 33.3271824	test: 59.2176141	best: 59.2176141 (0)	total: 268us	remaining: 26.6ms
-99:	learn: 16.5133609	test: 44.8278569	best: 44.8278569 (99)	total: 17.6ms	remaining: 0us
-
-bestTest = 44.82785693
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 1143.8658863205508, 'MSE - std': 865.6708590992359, 'R2 - mean': 0.42965947712132185, 'R2 - std': 0.004119799020662562}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:32.55536	eval-rmse:58.61819
+[99]	train-rmse:0.97363	eval-rmse:39.45360
+Inner Fold 2 Results: {'MSE - mean': 867.6403648149652, 'MSE - std': 688.9464559367746, 'R2 - mean': 0.5962052864073732, 'R2 - std': 0.034799762672986956}
   outer_3_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -8789,16 +8453,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c7c0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.1957748	test: 38.2876435	best: 38.2876435 (0)	total: 210us	remaining: 20.8ms
-99:	learn: 21.0184448	test: 22.4487461	best: 22.4487461 (99)	total: 18.5ms	remaining: 0us
-
-bestTest = 22.44874611
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 930.559333159063, 'MSE - std': 768.4985765150611, 'R2 - mean': 0.5088911752360635, 'R2 - std': 0.11210102200666236}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.20142	eval-rmse:37.75508
+[99]	train-rmse:1.10217	eval-rmse:16.31054
+Inner Fold 3 Results: {'MSE - mean': 667.1047668560567, 'MSE - std': 629.9686750381868, 'R2 - mean': 0.6722689383066625, 'R2 - std': 0.11125963899175943}
   outer_3_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -8930,21 +8589,15 @@ DEBUG Inner Fold 4: num_features: 5
 DEBUG Inner Fold 4: num_classes: 1
 DEBUG Inner Fold 4: cat_idx: [0, 1, 2, 3]
 DEBUG Inner Fold 4: nominal_idx: [0, 1, 2, 3]
-[I 2025-05-05 08:33:11,181] Trial 1 finished with value: 768.050475080781 and parameters: {'learning_rate': 0.023193573248376727, 'max_depth': 4, 'l2_leaf_reg': 0.7775909859705749}. Best is trial 1 with value: 768.050475080781.
 DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c610>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.7309800	test: 40.0196617	best: 40.0196617 (0)	total: 208us	remaining: 20.6ms
-99:	learn: 20.7289527	test: 19.3529646	best: 19.3529646 (99)	total: 17.9ms	remaining: 0us
-
-bestTest = 19.35296459
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 791.5538136636112, 'MSE - std': 707.7500617660572, 'R2 - mean': 0.574953859050426, 'R2 - std': 0.15005936801637187}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.74754	eval-rmse:40.00605
+[99]	train-rmse:1.12770	eval-rmse:23.35525
+Inner Fold 4 Results: {'MSE - mean': 636.6955269515761, 'MSE - std': 548.1054317024519, 'R2 - mean': 0.6716039227837649, 'R2 - std': 0.09636055826098955}
   outer_3_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -9080,18 +8733,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c6d0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.0299290	test: 29.5149135	best: 29.5149135 (0)	total: 285us	remaining: 28.3ms
-99:	learn: 22.4304843	test: 17.7250199	best: 17.7250199 (99)	total: 17.4ms	remaining: 0us
-
-bestTest = 17.72501987
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 696.0783150393647, 'MSE - std': 661.2037532365347, 'R2 - mean': 0.5898853964550046, 'R2 - std': 0.13749928865501695}
-Trial Results B4 Saving: {'MSE - mean': 696.0783150393647, 'MSE - std': 661.2037532365347, 'R2 - mean': 0.5898853964550046, 'R2 - std': 0.13749928865501695}
-Score: 696.0783150393647
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.95726	eval-rmse:28.93827
+[75]	train-rmse:2.51522	eval-rmse:9.29033
+[I 2025-05-05 14:13:56,512] Trial 1 finished with value: 575.3481261366044 and parameters: {'max_depth': 7, 'alpha': 0.7153725583131261, 'lambda': 4.076185641916277e-08, 'eta': 0.037872452757715995}. Best is trial 1 with value: 575.3481261366044.
+Inner Fold 5 Results: {'MSE - mean': 526.6060631822331, 'MSE - std': 537.4145620854266, 'R2 - mean': 0.7180452935418121, 'R2 - std': 0.12671025776250816}
+Trial Results B4 Saving: {'MSE - mean': 526.6060631822331, 'MSE - std': 537.4145620854266, 'R2 - mean': 0.7180452935418121, 'R2 - std': 0.12671025776250816}
+Score: 526.6060631822331
   outer_3_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -9227,17 +8876,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0cd00>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.2983210	test: 22.2814524	best: 22.2814524 (0)	total: 227us	remaining: 22.5ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 15.49412853
-bestIteration = 55
-
-Shrink model to first 56 iterations.
-Inner Fold 1 Results: {'MSE - mean': 240.06801282951886, 'MSE - std': 0.0, 'R2 - mean': 0.5042702621062018, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.38065	eval-rmse:21.51115
+[99]	train-rmse:7.46073	eval-rmse:12.90554
+Inner Fold 1 Results: {'MSE - mean': 166.5528521987207, 'MSE - std': 0.0, 'R2 - mean': 0.6560757895531508, 'R2 - std': 0.0}
   outer_3_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -9373,16 +9016,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0cd30>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 33.4292156	test: 59.3656277	best: 59.3656277 (0)	total: 243us	remaining: 24.1ms
-99:	learn: 19.1587353	test: 46.3132092	best: 46.3132092 (99)	total: 16.8ms	remaining: 0us
-
-bestTest = 46.31320919
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 1192.490673308721, 'MSE - std': 952.422660479202, 'R2 - mean': 0.44995245555880375, 'R2 - std': 0.054317806547398095}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:32.16282	eval-rmse:58.50287
+[99]	train-rmse:5.15121	eval-rmse:36.16732
+Inner Fold 2 Results: {'MSE - mean': 737.3138555566644, 'MSE - std': 570.7610033579437, 'R2 - mean': 0.6437518658788108, 'R2 - std': 0.012323923674339932}
   outer_3_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -9518,17 +9156,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0cdf0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.3593642	test: 38.5091444	best: 38.5091444 (0)	total: 209us	remaining: 20.8ms
-99:	learn: 26.3980218	test: 24.9794509	best: 24.9763483 (98)	total: 17.2ms	remaining: 0us
-
-bestTest = 24.97634825
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 3 Results: {'MSE - mean': 1002.933114571239, 'MSE - std': 822.5590671466794, 'R2 - mean': 0.4960447936689613, 'R2 - std': 0.0788413385879253}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.56969	eval-rmse:36.67576
+[99]	train-rmse:6.42548	eval-rmse:17.60464
+Inner Fold 3 Results: {'MSE - mean': 594.850350678073, 'MSE - std': 507.71098971826075, 'R2 - mean': 0.6943097206550982, 'R2 - std': 0.07220419717011589}
   outer_3_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -9664,16 +9296,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0cc70>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.9498704	test: 40.4819442	best: 40.4819442 (0)	total: 342us	remaining: 33.9ms
-99:	learn: 28.0222930	test: 22.3489244	best: 22.3489244 (99)	total: 18.5ms	remaining: 0us
-
-bestTest = 22.34892442
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 877.0684465447505, 'MSE - std': 744.9686625497519, 'R2 - mean': 0.5464003863995293, 'R2 - std': 0.11076562941857179}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.99675	eval-rmse:38.87864
+[99]	train-rmse:7.04204	eval-rmse:17.85054
+Inner Fold 4 Results: {'MSE - mean': 525.7981747199512, 'MSE - std': 455.66703394493675, 'R2 - mean': 0.7224817932167737, 'R2 - std': 0.07931633869510536}
   outer_3_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -9799,8 +9426,7 @@ Test numpy array issues
 X dtype: object
 X Val dtype: object
 X dtype: float32
-X Val dtype: [I 2025-05-05 08:33:11,305] Trial 2 finished with value: 816.9147062544938 and parameters: {'learning_rate': 0.029012129924643977, 'max_depth': 4, 'l2_leaf_reg': 21.756292731400336}. Best is trial 1 with value: 768.050475080781.
-float32
+X Val dtype: float32
 After Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
 DEBUG Inner Fold 5: num_classes: 1
@@ -9810,18 +9436,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0ceb0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.1225755	test: 29.6046626	best: 29.6046626 (0)	total: 237us	remaining: 23.5ms
-99:	learn: 27.8730114	test: 18.7561361	best: 18.7561361 (99)	total: 17.7ms	remaining: 0us
-
-bestTest = 18.75613615
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 772.0132840182397, 'MSE - std': 698.6622898359545, 'R2 - mean': 0.5586522203174551, 'R2 - std': 0.10205708924814415}
-Trial Results B4 Saving: {'MSE - mean': 772.0132840182397, 'MSE - std': 698.6622898359545, 'R2 - mean': 0.5586522203174551, 'R2 - std': 0.10205708924814415}
-Score: 772.0132840182397
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.18377	eval-rmse:27.28520
+[99]	train-rmse:7.35527	eval-rmse:12.10243
+[I 2025-05-05 14:13:56,817] Trial 2 finished with value: 494.8895085885939 and parameters: {'max_depth': 2, 'alpha': 0.08189021996563556, 'lambda': 0.021923295572463145, 'eta': 0.07304540178422439}. Best is trial 2 with value: 494.8895085885939.
+Inner Fold 5 Results: {'MSE - mean': 449.9323097895602, 'MSE - std': 434.88903700356286, 'R2 - mean': 0.7453152487139972, 'R2 - std': 0.08437020817191379}
+Trial Results B4 Saving: {'MSE - mean': 449.9323097895602, 'MSE - std': 434.88903700356286, 'R2 - mean': 0.7453152487139972, 'R2 - std': 0.08437020817191379}
+Score: 449.9323097895602
   outer_3_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -9957,17 +9579,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d360>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.2534279	test: 22.2906263	best: 22.2906263 (0)	total: 316us	remaining: 31.3ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 15.00108201
-bestIteration = 49
-
-Shrink model to first 50 iterations.
-Inner Fold 1 Results: {'MSE - mean': 225.03245539298365, 'MSE - std': 0.0, 'R2 - mean': 0.5353180175287195, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.49633	eval-rmse:21.23843
+[98]	train-rmse:1.55348	eval-rmse:10.23511
+Inner Fold 1 Results: {'MSE - mean': 104.75754324005919, 'MSE - std': 0.0, 'R2 - mean': 0.7836803460789622, 'R2 - std': 0.0}
   outer_3_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -10103,16 +9719,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d540>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 33.4390949	test: 59.3683926	best: 59.3683926 (0)	total: 411us	remaining: 40.8ms
-99:	learn: 18.6386504	test: 46.7211323	best: 46.7211323 (99)	total: 26.9ms	remaining: 0us
-
-bestTest = 46.72113226
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 1203.9483222824383, 'MSE - std': 978.9158668894547, 'R2 - mean': 0.46012968786645897, 'R2 - std': 0.07518832966226058}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:31.39583	eval-rmse:57.75142
+[99]	train-rmse:1.25583	eval-rmse:41.23619
+Inner Fold 2 Results: {'MSE - mean': 902.5902935438073, 'MSE - std': 797.8327503037481, 'R2 - mean': 0.6522787992684622, 'R2 - std': 0.13140154681050004}
   outer_3_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -10248,16 +9859,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d450>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.2824144	test: 38.4274794	best: 38.4274794 (0)	total: 346us	remaining: 34.3ms
-99:	learn: 26.0523435	test: 24.6751951	best: 24.6751951 (99)	total: 26.5ms	remaining: 0us
-
-bestTest = 24.6751951
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 1005.5873074364632, 'MSE - std': 847.0802996489797, 'R2 - mean': 0.5061196181691229, 'R2 - std': 0.08943715106200713}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.72384	eval-rmse:36.51596
+[99]	train-rmse:1.13417	eval-rmse:22.36457
+Inner Fold 3 Results: {'MSE - mean': 768.4515178204921, 'MSE - std': 678.4869101733615, 'R2 - mean': 0.658134056067677, 'R2 - std': 0.10760798793381553}
   outer_3_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -10378,7 +9984,6 @@ FINISHED ENCODING
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-[I 2025-05-05 08:33:11,470] Trial 3 finished with value: 812.7364049058743 and parameters: {'learning_rate': 0.03752158105702987, 'max_depth': 6, 'l2_leaf_reg': 25.648116938417427}. Best is trial 1 with value: 768.050475080781.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Test numpy array issues
 X dtype: object
@@ -10394,16 +9999,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d2d0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.8858738	test: 40.4028889	best: 40.4028889 (0)	total: 288us	remaining: 28.6ms
-99:	learn: 26.6840719	test: 21.3450086	best: 21.3450086 (99)	total: 24.8ms	remaining: 0us
-
-bestTest = 21.34500859
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 868.0928334299024, 'MSE - std': 771.2800831650435, 'R2 - mean': 0.5605987926937689, 'R2 - std': 0.12207864007772505}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.28116	eval-rmse:38.65986
+[99]	train-rmse:1.27617	eval-rmse:19.13619
+Inner Fold 4 Results: {'MSE - mean': 667.8870456318183, 'MSE - std': 612.8605099508417, 'R2 - mean': 0.6881494581258771, 'R2 - std': 0.10671167875410528}
   outer_3_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -10539,18 +10139,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d510>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.0271266	test: 29.4982996	best: 29.4982996 (0)	total: 243us	remaining: 24.1ms
-99:	learn: 26.9915765	test: 18.2410034	best: 18.2410034 (99)	total: 25.9ms	remaining: 0us
-
-bestTest = 18.2410034
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 761.0211059875841, 'MSE - std': 722.3266522976911, 'R2 - mean': 0.5742619700680706, 'R2 - std': 0.11255791911024254}
-Trial Results B4 Saving: {'MSE - mean': 761.0211059875841, 'MSE - std': 722.3266522976911, 'R2 - mean': 0.5742619700680706, 'R2 - std': 0.11255791911024254}
-Score: 761.0211059875841
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.37711	eval-rmse:27.60218
+[73]	train-rmse:1.95783	eval-rmse:6.92197
+[I 2025-05-05 14:13:57,278] Trial 3 finished with value: 597.5158305094018 and parameters: {'max_depth': 4, 'alpha': 0.0009687605535052534, 'lambda': 1.1983507536868414e-08, 'eta': 0.07741397098840909}. Best is trial 2 with value: 494.8895085885939.
+Inner Fold 5 Results: {'MSE - mean': 543.8927523108324, 'MSE - std': 601.6450305873451, 'R2 - mean': 0.7398318955614982, 'R2 - std': 0.1406918734794695}
+Trial Results B4 Saving: {'MSE - mean': 543.8927523108324, 'MSE - std': 601.6450305873451, 'R2 - mean': 0.7398318955614982, 'R2 - std': 0.1406918734794695}
+Score: 543.8927523108324
   outer_3_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -10686,17 +10282,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0da20>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.0572007	test: 21.1626298	best: 21.1626298 (0)	total: 199us	remaining: 19.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 15.18222049
-bestIteration = 14
-
-Shrink model to first 15 iterations.
-Inner Fold 1 Results: {'MSE - mean': 230.49981333760795, 'MSE - std': 0.0, 'R2 - mean': 0.5240281672528943, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.36152	eval-rmse:20.91937
+[39]	train-rmse:1.50242	eval-rmse:11.49787
+Inner Fold 1 Results: {'MSE - mean': 132.2009245280473, 'MSE - std': 0.0, 'R2 - mean': 0.7270109878730651, 'R2 - std': 0.0}
   outer_3_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -10832,17 +10422,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0dc00>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 32.3532345	test: 58.4655806	best: 58.4655806 (0)	total: 277us	remaining: 27.5ms
-99:	learn: 15.0998918	test: 41.5693461	best: 41.5306947 (94)	total: 18ms	remaining: 0us
-
-bestTest = 41.53069465
-bestIteration = 94
-
-Shrink model to first 95 iterations.
-Inner Fold 2 Results: {'MSE - mean': 977.6491979201912, 'MSE - std': 747.1493845825833, 'R2 - mean': 0.5190186011800717, 'R2 - std': 0.005009566072822491}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:30.47641	eval-rmse:57.21101
+[99]	train-rmse:0.26497	eval-rmse:42.42045
+Inner Fold 2 Results: {'MSE - mean': 965.8479008482767, 'MSE - std': 833.6469763202294, 'R2 - mean': 0.6099865437975306, 'R2 - std': 0.11702444407553447}
   outer_3_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -10978,17 +10562,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0db40>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.3298321	test: 37.3639160	best: 37.3639160 (0)	total: 220us	remaining: 21.8ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 24.44579455
-bestIteration = 42
-
-Shrink model to first 43 iterations.
-Inner Fold 3 Results: {'MSE - mean': 850.965097493914, 'MSE - std': 635.8085596490913, 'R2 - mean': 0.547858242539733, 'R2 - std': 0.040990002793361284}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:36.63576	eval-rmse:35.73297
+[99]	train-rmse:0.40479	eval-rmse:17.40378
+Inner Fold 3 Results: {'MSE - mean': 744.86250529793, 'MSE - std': 748.9863889584334, 'R2 - mean': 0.6733466541286525, 'R2 - std': 0.13099168231788277}
   outer_3_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -11124,17 +10702,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d990>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.0965459	test: 39.2893506	best: 39.2893506 (0)	total: 295us	remaining: 29.2ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.4024102
-bestIteration = 72
-
-Shrink model to first 73 iterations.
-Inner Fold 4 Results: {'MSE - mean': 732.3372089326014, 'MSE - std': 587.713468644232, 'R2 - mean': 0.6038889844889701, 'R2 - std': 0.10333667004938654}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:36.23674	eval-rmse:38.39911
+[99]	train-rmse:0.42205	eval-rmse:21.37696
+Inner Fold 4 Results: {'MSE - mean': 672.8904749330568, 'MSE - std': 660.5114515269754, 'R2 - mean': 0.6858123779171251, 'R2 - std': 0.11547856266884919}
   outer_3_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -11236,8 +10808,6 @@ Cat Dims V2 : [17, 17, 2, 2, 18, 18, 3, 3]
 Cat Idx V2 : [0, 1, 2, 3] 
  
 
-[I 2025-05-05 08:33:11,571] Trial 4 finished with value: 689.4479455107028 and parameters: {'learning_rate': 0.10698681040427276, 'max_depth': 4, 'l2_leaf_reg': 20.229037208918626}. Best is trial 4 with value: 689.4479455107028.
-[I 2025-05-05 08:33:11,593] A new study created in memory with name: CatBoost_Socmob_outer4
 Train: [[8.0 10.0 1.0 1.0 -0.23662420716159263]
  [1.0 15.0 0.0 1.0 0.8004162558157989]
  [5.0 4.0 0.0 0.0 2.1533066059944264]
@@ -11272,22 +10842,17 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0dbd0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.9310451	test: 28.3037407	best: 28.3037407 (0)	total: 215us	remaining: 21.3ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 18.6974122
-bestIteration = 67
-
-Shrink model to first 68 iterations.
-Inner Fold 5 Results: {'MSE - mean': 655.7884098691995, 'MSE - std': 547.5075995206496, 'R2 - mean': 0.6051336841239763, 'R2 - std': 0.09246064573775246}
-Trial Results B4 Saving: {'MSE - mean': 655.7884098691995, 'MSE - std': 547.5075995206496, 'R2 - mean': 0.6051336841239763, 'R2 - std': 0.09246064573775246}
-Score: 655.7884098691995
-Best Hyperparameters found for Outer Fold 3: {'learning_rate': 0.10698681040427276, 'max_depth': 4, 'l2_leaf_reg': 20.229037208918626}
-Best Inner CV Score : 689.4479
-Hyperparameter Optimization for Outer Fold 3 finished in 1.08 seconds.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.29532	eval-rmse:26.96773
+[49]	train-rmse:1.31958	eval-rmse:8.78365
+[I 2025-05-05 14:13:57,742] Trial 4 finished with value: 613.9090601135791 and parameters: {'max_depth': 5, 'alpha': 3.615491403982305e-07, 'lambda': 0.009021161571651101, 'eta': 0.10266804316801745}. Best is trial 2 with value: 494.8895085885939.
+Inner Fold 5 Results: {'MSE - mean': 553.7434949605852, 'MSE - std': 637.0277179407972, 'R2 - mean': 0.7314401886199643, 'R2 - std': 0.13782535030605642}
+Trial Results B4 Saving: {'MSE - mean': 553.7434949605852, 'MSE - std': 637.0277179407972, 'R2 - mean': 0.7314401886199643, 'R2 - std': 0.13782535030605642}
+Score: 553.7434949605852
+Best Hyperparameters found for Outer Fold 3: {'max_depth': 2, 'alpha': 0.08189021996563556, 'lambda': 0.021923295572463145, 'eta': 0.07304540178422439}
+Best Inner CV Score : 494.8895
+Hyperparameter Optimization for Outer Fold 3 finished in 2.61 seconds.
 Before Debugging -- Outer Fold 3
 DEBUG Outer Fold 3: num_features: 5
 DEBUG Outer Fold 3: num_classes: 1
@@ -11423,17 +10988,12 @@ DEBUG Outer Fold 3: num_idx: [4]
 DEBUG Outer Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Outer Fold 3: bin_alt: None
 Training final model for Outer Fold 3...
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d870>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
-0:	learn: 38.7772609	test: 39.1495426	best: 39.1495426 (0)	total: 214us	remaining: 21.2ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 25.56669967
-bestIteration = 73
-
-Shrink model to first 74 iterations.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.19020	eval-rmse:39.05401
+[99]	train-rmse:7.56295	eval-rmse:21.92707
+[I 2025-05-05 14:13:57,803] A new study created in memory with name: XGBoost_Socmob_outer4
 Evaluating final model on Outer Test Set for Fold 3...
-Outer Fold 3 Results: {'MSE - mean': 653.6561272165186, 'MSE - std': 0.0, 'R2 - mean': 0.6002138165132985, 'R2 - std': 0.0}
+Outer Fold 3 Results: {'MSE - mean': 480.79623325242807, 'MSE - std': 0.0, 'R2 - mean': 0.7059375975785811, 'R2 - std': 0.0}
 
 --- Outer Fold 4/2 ---
 Starting Hyperparameter Optimization for Outer Fold 4...
@@ -11572,16 +11132,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c190>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 45.2127387	test: 33.5923453	best: 33.5923453 (0)	total: 354us	remaining: 35.1ms
-99:	learn: 30.1869209	test: 20.1146356	best: 20.1146356 (99)	total: 33.3ms	remaining: 0us
-
-bestTest = 20.1146356
-bestIteration = 99
-
-Inner Fold 1 Results: {'MSE - mean': 404.5985818924324, 'MSE - std': 0.0, 'R2 - mean': 0.6424852376411996, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.75198	eval-rmse:32.97007
+[99]	train-rmse:4.90869	eval-rmse:12.98433
+Inner Fold 1 Results: {'MSE - mean': 168.59281133411238, 'MSE - std': 0.0, 'R2 - mean': 0.8510266185373285, 'R2 - std': 0.0}
   outer_4_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -11717,16 +11272,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d420>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 44.6042502	test: 36.8132756	best: 36.8132756 (0)	total: 294us	remaining: 29.1ms
-99:	learn: 30.4790695	test: 23.3741729	best: 23.3741729 (99)	total: 30.5ms	remaining: 0us
-
-bestTest = 23.37417289
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 475.4752699052309, 'MSE - std': 70.8766880127985, 'R2 - mean': 0.622243325330577, 'R2 - std': 0.0202419123106225}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.13299	eval-rmse:36.00531
+[99]	train-rmse:4.96054	eval-rmse:15.19212
+Inner Fold 2 Results: {'MSE - mean': 199.69667471215186, 'MSE - std': 31.103863378039478, 'R2 - mean': 0.8414481872325206, 'R2 - std': 0.0095784313048079}
   outer_4_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -11862,16 +11412,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0d690>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.2126617	test: 42.8818476	best: 42.8818476 (0)	total: 341us	remaining: 33.9ms
-99:	learn: 28.5404575	test: 32.9147828	best: 32.9147828 (99)	total: 31.5ms	remaining: 0us
-
-bestTest = 32.91478282
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 678.1111467344087, 'MSE - std': 292.35526406372185, 'R2 - mean': 0.5527442231782199, 'R2 - std': 0.09966647919918455}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.77991	eval-rmse:42.04721
+[99]	train-rmse:4.53486	eval-rmse:18.97476
+Inner Fold 3 Results: {'MSE - mean': 253.14495985615318, 'MSE - std': 79.73960902647717, 'R2 - mean': 0.8293553689485219, 'R2 - std': 0.01880523169068239}
   outer_4_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -12007,17 +11552,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c3d0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.9626696	test: 39.6950470	best: 39.6950470 (0)	total: 429us	remaining: 42.5ms
-99:	learn: 29.7507959	test: 28.0449644	best: 28.0448589 (98)	total: 33.3ms	remaining: 0us
-
-bestTest = 28.04485888
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 4 Results: {'MSE - mean': 705.2119001929292, 'MSE - std': 257.5015588950578, 'R2 - mean': 0.540387721219092, 'R2 - std': 0.08892752514811661}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:42.58179	eval-rmse:38.59305
+[99]	train-rmse:4.79064	eval-rmse:11.16453
+Inner Fold 4 Results: {'MSE - mean': 221.02042904816562, 'MSE - std': 88.68348422717504, 'R2 - mean': 0.8523379829640763, 'R2 - std': 0.043009640723552324}
   outer_4_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -12081,7 +11620,6 @@ OHE Idx : [0, 1, 2, 3]
 Ordinal Idx V2: None
 
 
-[I 2025-05-05 08:33:11,799] Trial 0 finished with value: 639.18294671829 and parameters: {'learning_rate': 0.010684796501933252, 'max_depth': 7, 'l2_leaf_reg': 3.9267787304428556}. Best is trial 0 with value: 639.18294671829.
 Cat Dims V2 : [17, 17, 2, 2]
 Cat Idx V2 : [0, 1, 2, 3] 
  
@@ -12154,18 +11692,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0caf0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.3129308	test: 58.9728847	best: 58.9728847 (0)	total: 386us	remaining: 38.2ms
-99:	learn: 25.9184357	test: 42.9155168	best: 42.9155168 (99)	total: 31.8ms	remaining: 0us
-
-bestTest = 42.91551684
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 932.5178348664489, 'MSE - std': 509.6249542731573, 'R2 - mean': 0.5241353699810212, 'R2 - std': 0.0859246150194321}
-Trial Results B4 Saving: {'MSE - mean': 932.5178348664489, 'MSE - std': 509.6249542731573, 'R2 - mean': 0.5241353699810212, 'R2 - std': 0.0859246150194321}
-Score: 932.5178348664489
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.02622	eval-rmse:57.87608
+[99]	train-rmse:4.14918	eval-rmse:34.78019
+[I 2025-05-05 14:13:58,191] Trial 0 finished with value: 252.24070326394047 and parameters: {'max_depth': 3, 'alpha': 0.02882186492574099, 'lambda': 0.028802355848689322, 'eta': 0.04381630293632213}. Best is trial 0 with value: 252.24070326394047.
+Inner Fold 5 Results: {'MSE - mean': 418.74864136911935, 'MSE - std': 403.333103142177, 'R2 - mean': 0.8108208427445801, 'R2 - std': 0.0915125952214037}
+Trial Results B4 Saving: {'MSE - mean': 418.74864136911935, 'MSE - std': 403.333103142177, 'R2 - mean': 0.8108208427445801, 'R2 - std': 0.0915125952214037}
+Score: 418.74864136911935
   outer_4_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -12301,17 +11835,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e0e0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 44.9916405	test: 33.3683863	best: 33.3683863 (0)	total: 339us	remaining: 33.6ms
-99:	learn: 25.5145199	test: 18.7080931	best: 18.7072195 (98)	total: 28.7ms	remaining: 0us
-
-bestTest = 18.70721953
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 1 Results: {'MSE - mean': 349.9600793651285, 'MSE - std': 0.0, 'R2 - mean': 0.6907653654541122, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:42.05162	eval-rmse:32.60088
+[99]	train-rmse:1.26329	eval-rmse:14.91238
+Inner Fold 1 Results: {'MSE - mean': 222.37902590133737, 'MSE - std': 0.0, 'R2 - mean': 0.8034995964967686, 'R2 - std': 0.0}
   outer_4_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -12447,16 +11975,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e2c0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 44.4093591	test: 36.6044164	best: 36.6044164 (0)	total: 226us	remaining: 22.4ms
-99:	learn: 25.6017163	test: 21.2687506	best: 21.2687506 (99)	total: 31.8ms	remaining: 0us
-
-bestTest = 21.26875055
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 401.15991697509253, 'MSE - std': 51.19983760996408, 'R2 - mean': 0.6806184309272078, 'R2 - std': 0.010146934526904405}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.43645	eval-rmse:35.55026
+[88]	train-rmse:1.50265	eval-rmse:20.48849
+Inner Fold 2 Results: {'MSE - mean': 321.08414597660993, 'MSE - std': 98.70512007527257, 'R2 - mean': 0.7488487860924926, 'R2 - std': 0.05465081040427594}
   outer_4_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -12592,16 +12115,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e140>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.9951129	test: 42.7470800	best: 42.7470800 (0)	total: 272us	remaining: 27ms
-99:	learn: 24.5496151	test: 30.8075276	best: 30.8075276 (99)	total: 29.3ms	remaining: 0us
-
-bestTest = 30.80752762
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 583.8078552084282, 'MSE - std': 261.66420133949276, 'R2 - mean': 0.6158819127223063, 'R2 - std': 0.091925370629926}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.22438	eval-rmse:41.36490
+[99]	train-rmse:1.10975	eval-rmse:23.04974
+Inner Fold 3 Results: {'MSE - mean': 391.1529650803959, 'MSE - std': 127.72788513312517, 'R2 - mean': 0.7367329402119293, 'R2 - std': 0.04779883012549438}
   outer_4_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -12653,7 +12171,6 @@ Cat Dims V1 : [17, 17, 2, 2]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
 
-[I 2025-05-05 08:33:11,999] Trial 1 finished with value: 542.6420381950472 and parameters: {'learning_rate': 0.01898730134537021, 'max_depth': 7, 'l2_leaf_reg': 3.2121269069187006}. Best is trial 1 with value: 542.6420381950472.
 Scaling the data...
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After OHE
@@ -12738,16 +12255,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e050>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.7488652	test: 39.5251950	best: 39.5251950 (0)	total: 420us	remaining: 41.7ms
-99:	learn: 24.7282811	test: 25.8895097	best: 25.8895097 (99)	total: 33.5ms	remaining: 0us
-
-bestTest = 25.8895097
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 605.4225812156906, 'MSE - std': 229.67956991879583, 'R2 - mean': 0.6060934763709023, 'R2 - std': 0.08139499851160026}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.90783	eval-rmse:37.37846
+[99]	train-rmse:1.35097	eval-rmse:15.64715
+Inner Fold 4 Results: {'MSE - mean': 354.57304199430416, 'MSE - std': 127.47580868301556, 'R2 - mean': 0.7638968006904611, 'R2 - std': 0.06266715303343383}
   outer_4_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -12883,18 +12395,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e290>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.1304891	test: 58.7446231	best: 58.7446231 (0)	total: 291us	remaining: 28.8ms
-99:	learn: 21.8681930	test: 37.9816861	best: 37.9816861 (99)	total: 32.6ms	remaining: 0us
-
-bestTest = 37.98168606
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 772.8597582108962, 'MSE - std': 392.86511276895243, 'R2 - mean': 0.6001430822314603, 'R2 - std': 0.07376818682753121}
-Trial Results B4 Saving: {'MSE - mean': 772.8597582108962, 'MSE - std': 392.86511276895243, 'R2 - mean': 0.6001430822314603, 'R2 - std': 0.07376818682753121}
-Score: 772.8597582108962
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.57027	eval-rmse:57.05252
+[99]	train-rmse:0.78504	eval-rmse:37.33344
+[I 2025-05-05 14:13:58,748] Trial 1 finished with value: 370.3209396523489 and parameters: {'max_depth': 5, 'alpha': 7.454928076995529e-08, 'lambda': 0.46671997889496986, 'eta': 0.08728508703783164}. Best is trial 0 with value: 252.24070326394047.
+Inner Fold 5 Results: {'MSE - mean': 562.4155193090971, 'MSE - std': 431.0383358181868, 'R2 - mean': 0.7292533658682673, 'R2 - std': 0.08912018828846253}
+Trial Results B4 Saving: {'MSE - mean': 562.4155193090971, 'MSE - std': 431.0383358181868, 'R2 - mean': 0.7292533658682673, 'R2 - std': 0.08912018828846253}
+Score: 562.4155193090971
   outer_4_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -13030,17 +12538,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e740>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.4281215	test: 30.8042499	best: 30.8042499 (0)	total: 160us	remaining: 15.9ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.7819947
-bestIteration = 18
-
-Shrink model to first 19 iterations.
-Inner Fold 1 Results: {'MSE - mean': 391.32733175448067, 'MSE - std': 0.0, 'R2 - mean': 0.6542120900119661, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:45.03473	eval-rmse:33.63311
+[99]	train-rmse:18.55497	eval-rmse:19.03405
+Inner Fold 1 Results: {'MSE - mean': 362.29512070918383, 'MSE - std': 0.0, 'R2 - mean': 0.6798657736805098, 'R2 - std': 0.0}
   outer_4_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -13176,17 +12678,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e920>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.2092585	test: 34.2382228	best: 34.2382228 (0)	total: 168us	remaining: 16.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.96426583
-bestIteration = 46
-
-Shrink model to first 47 iterations.
-Inner Fold 2 Results: {'MSE - mean': 394.9496254678661, 'MSE - std': 3.622293713385403, 'R2 - mean': 0.6819330861238051, 'R2 - std': 0.027720996111839036}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:44.40036	eval-rmse:36.79300
+[99]	train-rmse:18.09840	eval-rmse:19.06028
+Inner Fold 2 Results: {'MSE - mean': 362.79475622317204, 'MSE - std': 0.49963551398823824, 'R2 - mean': 0.7076091599150754, 'R2 - std': 0.027743386234565626}
   outer_4_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -13322,16 +12818,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e860>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.4166520	test: 41.2877770	best: 41.2877770 (0)	total: 247us	remaining: 24.5ms
-99:	learn: 18.0640140	test: 27.2784463	best: 27.2784463 (99)	total: 10.4ms	remaining: 0us
-
-bestTest = 27.27844631
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 511.3376200455003, 'MSE - std': 164.62405020157547, 'R2 - mean': 0.6537339732349209, 'R2 - std': 0.04585501447382981}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.03752	eval-rmse:42.79101
+[99]	train-rmse:17.03593	eval-rmse:27.11678
+Inner Fold 3 Results: {'MSE - mean': 486.9697636733067, 'MSE - std': 175.6104534879589, 'R2 - mean': 0.6724375657142051, 'R2 - std': 0.054655396779289586}
   outer_4_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -13467,17 +12958,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e800>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 41.5695684	test: 37.1671929	best: 37.1671929 (0)	total: 156us	remaining: 15.5ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 24.14816496
-bestIteration = 72
-
-Shrink model to first 73 iterations.
-Inner Fold 4 Results: {'MSE - mean': 529.2866937033749, 'MSE - std': 145.91886843073294, 'R2 - mean': 0.6482385667537685, 'R2 - std': 0.04083638379528277}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.79253	eval-rmse:39.56435
+[99]	train-rmse:18.31291	eval-rmse:19.77241
+Inner Fold 4 Results: {'MSE - mean': 462.964385194329, 'MSE - std': 157.66435271944587, 'R2 - mean': 0.6926074564227394, 'R2 - std': 0.05882926798294232}
   outer_4_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -13518,7 +13003,6 @@ No one Hot for this Baby!!!
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
-[I 2025-05-05 08:33:12,081] Trial 2 finished with value: 476.385416667997 and parameters: {'learning_rate': 0.12856671496682887, 'max_depth': 2, 'l2_leaf_reg': 3.332318479573193}. Best is trial 2 with value: 476.385416667997.
 
 AFTER SEPARATING CATEGORICALS AND NUMERICALS
 Ordinal Index : None
@@ -13614,18 +13098,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e890>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 36.4061657	test: 56.6351391	best: 56.6351391 (0)	total: 161us	remaining: 15.9ms
-99:	learn: 17.9438643	test: 25.6511656	best: 25.6511656 (99)	total: 13.2ms	remaining: 0us
-
-bestTest = 25.65116559
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 555.0258123687631, 'MSE - std': 140.29918691841442, 'R2 - mean': 0.6799442224494989, 'R2 - std': 0.07317842992006143}
-Trial Results B4 Saving: {'MSE - mean': 555.0258123687631, 'MSE - std': 140.29918691841442, 'R2 - mean': 0.6799442224494989, 'R2 - std': 0.07317842992006143}
-Score: 555.0258123687631
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.14372	eval-rmse:58.95464
+[99]	train-rmse:15.60813	eval-rmse:40.86543
+[I 2025-05-05 14:13:59,134] Trial 2 finished with value: 475.8784369815711 and parameters: {'max_depth': 3, 'alpha': 2.0967721590975128e-05, 'lambda': 1.028014006321956e-06, 'eta': 0.011194862429916219}. Best is trial 0 with value: 252.24070326394047.
+Inner Fold 5 Results: {'MSE - mean': 704.3681591078642, 'MSE - std': 502.98068226676713, 'R2 - mean': 0.6559993937859071, 'R2 - std': 0.09016267086336803}
+Trial Results B4 Saving: {'MSE - mean': 704.3681591078642, 'MSE - std': 502.98068226676713, 'R2 - mean': 0.6559993937859071, 'R2 - std': 0.09016267086336803}
+Score: 704.3681591078642
   outer_4_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -13761,17 +13241,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0ed70>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.5407274	test: 28.9798489	best: 28.9798489 (0)	total: 338us	remaining: 33.5ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.84705319
-bestIteration = 7
-
-Shrink model to first 8 iterations.
-Inner Fold 1 Results: {'MSE - mean': 393.9055390299137, 'MSE - std': 0.0, 'R2 - mean': 0.6519339130666173, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.03268	eval-rmse:32.65847
+[41]	train-rmse:13.91727	eval-rmse:17.42449
+Inner Fold 1 Results: {'MSE - mean': 303.6126878908968, 'MSE - std': 0.0, 'R2 - mean': 0.7317192327943233, 'R2 - std': 0.0}
   outer_4_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -13907,17 +13381,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0ef80>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 40.5053332	test: 32.4216777	best: 32.4216777 (0)	total: 450us	remaining: 44.6ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.35314991
-bestIteration = 11
-
-Shrink model to first 12 iterations.
-Inner Fold 2 Results: {'MSE - mean': 384.2249793200098, 'MSE - std': 9.68055970990389, 'R2 - mean': 0.6895456006603162, 'R2 - std': 0.03761168759369893}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:42.44795	eval-rmse:35.42468
+[99]	train-rmse:8.49836	eval-rmse:15.40758
+Inner Fold 2 Results: {'MSE - mean': 270.50308533866365, 'MSE - std': 33.10960255223311, 'R2 - mean': 0.7793931277738642, 'R2 - std': 0.04767389497954094}
   outer_4_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -14053,17 +13521,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0ece0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.7070023	test: 40.0717974	best: 40.0717974 (0)	total: 595us	remaining: 58.9ms
-99:	learn: 3.6110508	test: 25.4052344	best: 25.3937743 (96)	total: 49.6ms	remaining: 0us
-
-bestTest = 25.39377429
-bestIteration = 96
-
-Shrink model to first 97 iterations.
-Inner Fold 3 Results: {'MSE - mean': 471.09790600924845, 'MSE - std': 123.11086984491806, 'R2 - mean': 0.6767150389281126, 'R2 - std': 0.03566986577619512}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.16390	eval-rmse:41.56690
+[99]	train-rmse:8.25069	eval-rmse:19.49534
+Inner Fold 3 Results: {'MSE - mean': 307.0248653494611, 'MSE - std': 58.29675249181603, 'R2 - mean': 0.7843729262670224, 'R2 - std': 0.03955751459683044}
   outer_4_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -14096,7 +13558,6 @@ Cat Idx : [0]
 Cat dims : [2]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 BEFORE getting cat idx
-[I 2025-05-05 08:33:12,239] Trial 3 finished with value: 471.1822176406175 and parameters: {'learning_rate': 0.18140614504275993, 'max_depth': 8, 'l2_leaf_reg': 1.34739165815836}. Best is trial 3 with value: 471.1822176406175.
 Nominal Index : [0, 1, 2, 3]
 Ordinal Index : None
 Cat Idx : [0, 1, 2, 3]
@@ -14200,17 +13661,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0ee00>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 39.3681765	test: 36.1336199	best: 36.1336199 (0)	total: 271us	remaining: 26.9ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 24.77882133
-bestIteration = 22
-
-Shrink model to first 23 iterations.
-Inner Fold 4 Results: {'MSE - mean': 506.8209371238059, 'MSE - std': 123.27051375537532, 'R2 - mean': 0.6606029754541138, 'R2 - std': 0.04162992026823165}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.98471	eval-rmse:37.93978
+[99]	train-rmse:9.37053	eval-rmse:10.30463
+Inner Fold 4 Results: {'MSE - mean': 256.81498386639487, 'MSE - std': 100.55834181682647, 'R2 - mean': 0.8215157486296204, 'R2 - std': 0.07288597588005104}
   outer_4_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -14346,19 +13801,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0ee30>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.3612892	test: 53.9572498	best: 53.9572498 (0)	total: 370us	remaining: 36.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 31.1773136
-bestIteration = 37
-
-Shrink model to first 38 iterations.
-Inner Fold 5 Results: {'MSE - mean': 599.86172672011, 'MSE - std': 216.29343439879617, 'R2 - mean': 0.6713904376882927, 'R2 - std': 0.04303391191893659}
-Trial Results B4 Saving: {'MSE - mean': 599.86172672011, 'MSE - std': 216.29343439879617, 'R2 - mean': 0.6713904376882927, 'R2 - std': 0.04303391191893659}
-Score: 599.86172672011
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:36.61095	eval-rmse:57.73133
+[99]	train-rmse:7.50787	eval-rmse:31.94191
+[I 2025-05-05 14:13:59,406] Trial 3 finished with value: 309.4929498192579 and parameters: {'max_depth': 2, 'alpha': 0.021709943278415664, 'lambda': 0.9089881767005705, 'eta': 0.07754632249428363}. Best is trial 0 with value: 252.24070326394047.
+Inner Fold 5 Results: {'MSE - mean': 409.5091266508731, 'MSE - std': 318.35764330373195, 'R2 - mean': 0.7972860543646989, 'R2 - std': 0.08122933411444519}
+Trial Results B4 Saving: {'MSE - mean': 409.5091266508731, 'MSE - std': 318.35764330373195, 'R2 - mean': 0.7972860543646989, 'R2 - std': 0.08122933411444519}
+Score: 409.5091266508731
   outer_4_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -14494,17 +13944,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0f400>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.4488946	test: 26.9709144	best: 26.9709144 (0)	total: 251us	remaining: 24.9ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.30676453
-bestIteration = 3
-
-Shrink model to first 4 iterations.
-Inner Fold 1 Results: {'MSE - mean': 372.7511732806269, 'MSE - std': 0.0, 'R2 - mean': 0.6706265095861921, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:44.57410	eval-rmse:33.39474
+[99]	train-rmse:9.25238	eval-rmse:14.22045
+Inner Fold 1 Results: {'MSE - mean': 202.2213485220098, 'MSE - std': 0.0, 'R2 - mean': 0.8213114909534123, 'R2 - std': 0.0}
   outer_4_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -14640,17 +14084,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0f5e0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.6946917	test: 30.4080254	best: 30.4080254 (0)	total: 282us	remaining: 28ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 19.63843153
-bestIteration = 14
-
-Shrink model to first 15 iterations.
-Inner Fold 2 Results: {'MSE - mean': 379.20958956161314, 'MSE - std': 6.458416280986256, 'R2 - mean': 0.6948403241627314, 'R2 - std': 0.024213814576539372}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.94549	eval-rmse:36.50983
+[99]	train-rmse:9.25601	eval-rmse:16.27186
+Inner Fold 2 Results: {'MSE - mean': 233.49741343757594, 'MSE - std': 31.27606491556614, 'R2 - mean': 0.8142165649016888, 'R2 - std': 0.00709492605172346}
   outer_4_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -14786,17 +14224,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0f520>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 36.5398479	test: 38.7155774	best: 38.7155774 (0)	total: 317us	remaining: 31.4ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 23.99512763
-bestIteration = 58
-
-Shrink model to first 59 iterations.
-Inner Fold 3 Results: {'MSE - mean': 444.7284376819057, 'MSE - std': 92.80757698194112, 'R2 - mean': 0.6927049100151085, 'R2 - std': 0.019999813284005696}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:42.58207	eval-rmse:42.52430
+[99]	train-rmse:8.24062	eval-rmse:22.63224
+Inner Fold 3 Results: {'MSE - mean': 326.40429996196457, 'MSE - std': 133.84882250153115, 'R2 - mean': 0.7837517164134172, 'R2 - std': 0.04347151524020799}
   outer_4_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -14932,17 +14364,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0f4c0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 37.4737733	test: 34.5691912	best: 34.5691912 (0)	total: 851us	remaining: 84.3ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 24.0951845
-bestIteration = 16
-
-Shrink model to first 17 iterations.
-Inner Fold 4 Results: {'MSE - mean': 478.6908179908368, 'MSE - std': 99.60052503721862, 'R2 - mean': 0.6778702893045105, 'R2 - std': 0.03098697005885237}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.35389	eval-rmse:39.21584
+[99]	train-rmse:9.39700	eval-rmse:12.86728
+Inner Fold 4 Results: {'MSE - mean': 286.19498513444813, 'MSE - std': 135.2294252760093, 'R2 - mean': 0.8116749911655223, 'R2 - std': 0.06128994449829733}
   outer_4_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -14969,8 +14395,6 @@ X_train shape : (371, 5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 AFTER getting cat idx
-[I 2025-05-05 08:33:12,315] Trial 4 finished with value: 439.7190693228748 and parameters: {'learning_rate': 0.2836440443828579, 'max_depth': 4, 'l2_leaf_reg': 2.9147536384938415}. Best is trial 4 with value: 439.7190693228748.
-[I 2025-05-05 08:33:12,325] A new study created in memory with name: CatBoost_Socmob_outer5
 Nominal Index : [0, 1, 2, 3]
 Ordinal Index : None
 Cat Idx : [0]
@@ -15080,22 +14504,17 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0f5b0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 32.8044934	test: 51.9993562	best: 51.9993562 (0)	total: 350us	remaining: 34.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 26.48232195
-bestIteration = 38
-
-Shrink model to first 39 iterations.
-Inner Fold 5 Results: {'MSE - mean': 523.2153280993916, 'MSE - std': 125.96007173616131, 'R2 - mean': 0.701104546696574, 'R2 - std': 0.0541061615436282}
-Trial Results B4 Saving: {'MSE - mean': 523.2153280993916, 'MSE - std': 125.96007173616131, 'R2 - mean': 0.701104546696574, 'R2 - std': 0.0541061615436282}
-Score: 523.2153280993916
-Best Hyperparameters found for Outer Fold 4: {'learning_rate': 0.2836440443828579, 'max_depth': 4, 'l2_leaf_reg': 2.9147536384938415}
-Best Inner CV Score : 439.7191
-Hyperparameter Optimization for Outer Fold 4 finished in 0.72 seconds.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.74549	eval-rmse:58.66270
+[99]	train-rmse:8.04609	eval-rmse:36.85074
+[I 2025-05-05 14:13:59,791] Trial 4 finished with value: 309.77389863484075 and parameters: {'max_depth': 3, 'alpha': 5.262457533998856e-06, 'lambda': 0.0031884893618024583, 'eta': 0.02283611825479951}. Best is trial 0 with value: 252.24070326394047.
+Inner Fold 5 Results: {'MSE - mean': 500.55144611820526, 'MSE - std': 445.448501434574, 'R2 - mean': 0.7695791115129386, 'R2 - std': 0.10046600505734637}
+Trial Results B4 Saving: {'MSE - mean': 500.55144611820526, 'MSE - std': 445.448501434574, 'R2 - mean': 0.7695791115129386, 'R2 - std': 0.10046600505734637}
+Score: 500.55144611820526
+Best Hyperparameters found for Outer Fold 4: {'max_depth': 3, 'alpha': 0.02882186492574099, 'lambda': 0.028802355848689322, 'eta': 0.04381630293632213}
+Best Inner CV Score : 252.2407
+Hyperparameter Optimization for Outer Fold 4 finished in 1.99 seconds.
 Before Debugging -- Outer Fold 4
 DEBUG Outer Fold 4: num_features: 5
 DEBUG Outer Fold 4: num_classes: 1
@@ -15231,17 +14650,12 @@ DEBUG Outer Fold 4: num_idx: [4]
 DEBUG Outer Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Outer Fold 4: bin_alt: None
 Training final model for Outer Fold 4...
-Model : <catboost.core.CatBoostRegressor object at 0x308e0f250>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
-0:	learn: 37.2598933	test: 20.5771673	best: 20.5771673 (0)	total: 243us	remaining: 24.1ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 15.70251098
-bestIteration = 3
-
-Shrink model to first 4 iterations.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.74321	eval-rmse:23.97507
+[74]	train-rmse:6.41879	eval-rmse:11.18030
+[I 2025-05-05 14:13:59,852] A new study created in memory with name: XGBoost_Socmob_outer5
 Evaluating final model on Outer Test Set for Fold 4...
-Outer Fold 4 Results: {'MSE - mean': 246.56884511037714, 'MSE - std': 0.0, 'R2 - mean': 0.5759793637924515, 'R2 - std': 0.0}
+Outer Fold 4 Results: {'MSE - mean': 124.99915562687316, 'MSE - std': 0.0, 'R2 - mean': 0.7850408819062824, 'R2 - std': 0.0}
 
 --- Outer Fold 5/2 ---
 Starting Hyperparameter Optimization for Outer Fold 5...
@@ -15380,17 +14794,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e050>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.3981201	test: 25.6923474	best: 25.6923474 (0)	total: 294us	remaining: 29.2ms
-99:	learn: 16.1015730	test: 12.8939718	best: 12.8642307 (95)	total: 32.1ms	remaining: 0us
-
-bestTest = 12.86423067
-bestIteration = 95
-
-Shrink model to first 96 iterations.
-Inner Fold 1 Results: {'MSE - mean': 165.48844344756614, 'MSE - std': 0.0, 'R2 - mean': 0.7613597666511234, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.04853	eval-rmse:24.67112
+[99]	train-rmse:4.74274	eval-rmse:13.99596
+Inner Fold 1 Results: {'MSE - mean': 195.88696034049093, 'MSE - std': 0.0, 'R2 - mean': 0.7175240219087069, 'R2 - std': 0.0}
   outer_5_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -15526,17 +14934,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0e4a0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 34.4271557	test: 56.1705987	best: 56.1705987 (0)	total: 341us	remaining: 33.8ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 39.83070232
-bestIteration = 35
-
-Shrink model to first 36 iterations.
-Inner Fold 2 Results: {'MSE - mean': 875.9866309784926, 'MSE - std': 710.4981875309264, 'R2 - mean': 0.636476905957724, 'R2 - std': 0.12488286069339943}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:31.41318	eval-rmse:53.36143
+[62]	train-rmse:5.84301	eval-rmse:34.06239
+Inner Fold 2 Results: {'MSE - mean': 678.0667888454379, 'MSE - std': 482.17982850494695, 'R2 - mean': 0.6801686357563895, 'R2 - std': 0.03735538615231737}
   outer_5_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -15672,16 +15074,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0c640>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 41.4464540	test: 31.4497172	best: 31.4497172 (0)	total: 244us	remaining: 24.2ms
-99:	learn: 16.8762760	test: 25.0471385	best: 25.0471385 (99)	total: 36ms	remaining: 0us
-
-bestTest = 25.04713855
-bestIteration = 99
-
-Inner Fold 3 Results: {'MSE - mean': 793.1108130822618, 'MSE - std': 591.8405630238824, 'R2 - mean': 0.5471548946824386, 'R2 - std': 0.16233913882107762}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.75223	eval-rmse:30.37674
+[99]	train-rmse:4.57101	eval-rmse:15.35979
+Inner Fold 3 Results: {'MSE - mean': 530.6855562034832, 'MSE - std': 445.46684891414463, 'R2 - mean': 0.7076203606400462, 'R2 - std': 0.049370817776311644}
   outer_5_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -15817,23 +15214,16 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0edd0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 37.7330600	test: 46.7116606	best: 46.7116606 (0)	total: 328us	remaining: 32.6ms
-99:	learn: 17.2816552	test: 27.4282346	best: 27.4044136 (98)	total: 34.8ms	remaining: 0us
-
-bestTest = 27.40441362
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 4 Results: {'MSE - mean': 782.5835869134335, 'MSE - std': 512.8731875451753, 'R2 - mean': 0.5785184068632107, 'R2 - std': 0.15071996113261557}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:33.62012	eval-rmse:43.78352
+[89]	train-rmse:4.11998	eval-rmse:22.89173
+Inner Fold 4 Results: {'MSE - mean': 529.0220356500536, 'MSE - std': 385.79636728851926, 'R2 - mean': 0.7236038250769883, 'R2 - std': 0.05093644708995031}
   outer_5_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
 DEBUG Inner Fold 5: num_classes: 1
 DEBUG Inner Fold 5: cat_idx: [0]
-[I 2025-05-05 08:33:12,521] Trial 0 finished with value: 661.6903035987943 and parameters: {'learning_rate': 0.06503028945030127, 'max_depth': 8, 'l2_leaf_reg': 3.275628679212546}. Best is trial 0 with value: 661.6903035987943.
 DEBUG Inner Fold 5: nominal_idx: [0, 1, 2, 3]
 DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: None
@@ -15964,19 +15354,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0df30>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 41.4707670	test: 30.7482589	best: 30.7482589 (0)	total: 320us	remaining: 31.7ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 18.05757151
-bestIteration = 65
-
-Shrink model to first 66 iterations.
-Inner Fold 5 Results: {'MSE - mean': 691.2820435722176, 'MSE - std': 493.73577191464517, 'R2 - mean': 0.599616441937482, 'R2 - std': 0.14125761460195502}
-Trial Results B4 Saving: {'MSE - mean': 691.2820435722176, 'MSE - std': 493.73577191464517, 'R2 - mean': 0.599616441937482, 'R2 - std': 0.14125761460195502}
-Score: 691.2820435722176
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.42005	eval-rmse:28.60981
+[99]	train-rmse:4.07867	eval-rmse:12.07208
+[I 2025-05-05 14:14:00,132] Trial 0 finished with value: 477.20519427497936 and parameters: {'max_depth': 2, 'alpha': 0.13879765034055344, 'lambda': 3.039406774690321e-06, 'eta': 0.177147233249616}. Best is trial 0 with value: 477.20519427497936.
+Inner Fold 5 Results: {'MSE - mean': 452.36463033543106, 'MSE - std': 377.59303591127815, 'R2 - mean': 0.7506374789905371, 'R2 - std': 0.07070283650171322}
+Trial Results B4 Saving: {'MSE - mean': 452.36463033543106, 'MSE - std': 377.59303591127815, 'R2 - mean': 0.7506374789905371, 'R2 - std': 0.07070283650171322}
+Score: 452.36463033543106
   outer_5_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -16112,16 +15497,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0fac0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.2609711	test: 26.4668029	best: 26.4668029 (0)	total: 360us	remaining: 35.7ms
-99:	learn: 24.0449671	test: 15.4300657	best: 15.4300657 (99)	total: 26.1ms	remaining: 0us
-
-bestTest = 15.4300657
-bestIteration = 99
-
-Inner Fold 1 Results: {'MSE - mean': 238.0869442200486, 'MSE - std': 0.0, 'R2 - mean': 0.6566701411751723, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.86900	eval-rmse:25.33096
+[99]	train-rmse:6.12466	eval-rmse:14.87200
+Inner Fold 1 Results: {'MSE - mean': 221.17651998354557, 'MSE - std': 0.0, 'R2 - mean': 0.681055575600424, 'R2 - std': 0.0}
   outer_5_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -16257,17 +15637,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0fca0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.1940999	test: 56.9578635	best: 56.9578635 (0)	total: 308us	remaining: 30.5ms
-99:	learn: 16.6057001	test: 40.2196779	best: 40.1825590 (98)	total: 24.9ms	remaining: 0us
-
-bestTest = 40.182559
-bestIteration = 98
-
-Shrink model to first 99 iterations.
-Inner Fold 2 Results: {'MSE - mean': 926.3624816191041, 'MSE - std': 688.2755373990555, 'R2 - mean': 0.5797985532410125, 'R2 - std': 0.07687158793415982}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:32.75388	eval-rmse:54.64175
+[87]	train-rmse:5.89910	eval-rmse:32.67388
+Inner Fold 2 Results: {'MSE - mean': 644.2443669916964, 'MSE - std': 423.06784700815086, 'R2 - mean': 0.6762395340464153, 'R2 - std': 0.00481604155400861}
   outer_5_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -16403,17 +15777,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0fbe0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.3177902	test: 32.1685854	best: 32.1685854 (0)	total: 315us	remaining: 31.2ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 26.18817934
-bestIteration = 74
-
-Shrink model to first 75 iterations.
-Inner Fold 3 Results: {'MSE - mean': 846.1819099133878, 'MSE - std': 573.3003794516595, 'R2 - mean': 0.4897538441853011, 'R2 - std': 0.14197039578330503}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.35587	eval-rmse:31.06400
+[99]	train-rmse:6.54270	eval-rmse:14.50394
+Inner Fold 3 Results: {'MSE - mean': 499.61767758325965, 'MSE - std': 401.4449244415689, 'R2 - mean': 0.7135766420066961, 'R2 - std': 0.0529488630583821}
   outer_5_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -16549,16 +15917,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0fa30>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.4705733	test: 47.7062422	best: 47.7062422 (0)	total: 385us	remaining: 38.2ms
-99:	learn: 22.2951929	test: 29.5594243	best: 29.5594243 (99)	total: 29.7ms	remaining: 0us
-
-bestTest = 29.55942426
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 853.0763292837925, 'MSE - std': 496.63627824085467, 'R2 - mean': 0.5220889025786253, 'R2 - std': 0.1351050071723852}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.30683	eval-rmse:45.18709
+[99]	train-rmse:4.82411	eval-rmse:23.57536
+Inner Fold 4 Results: {'MSE - mean': 513.662633116082, 'MSE - std': 348.51155339196373, 'R2 - mean': 0.724609023352932, 'R2 - std': 0.04967722706520353}
   outer_5_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -16694,19 +16057,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e0fc70>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.3328809	test: 31.6048644	best: 31.6048644 (0)	total: 417us	remaining: 41.3ms
-99:	learn: 23.3213468	test: 18.0023948	best: 18.0023948 (99)	total: 26.8ms	remaining: 0us
-
-bestTest = 18.00239476
-bestIteration = 99
-
-[I 2025-05-05 08:33:12,696] Trial 1 finished with value: 722.1971934606946 and parameters: {'learning_rate': 0.023104200982271127, 'max_depth': 6, 'l2_leaf_reg': 2.039539461608081}. Best is trial 0 with value: 661.6903035987943.
-Inner Fold 5 Results: {'MSE - mean': 747.27830226714, 'MSE - std': 492.02740205643767, 'R2 - mean': 0.5548584668863572, 'R2 - std': 0.13747024314416012}
-Trial Results B4 Saving: {'MSE - mean': 747.27830226714, 'MSE - std': 492.02740205643767, 'R2 - mean': 0.5548584668863572, 'R2 - std': 0.13747024314416012}
-Score: 747.27830226714
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:39.14155	eval-rmse:29.71041
+[99]	train-rmse:5.19735	eval-rmse:11.91217
+[I 2025-05-05 14:14:00,429] Trial 1 finished with value: 463.60225566488106 and parameters: {'max_depth': 2, 'alpha': 0.24425299624487626, 'lambda': 1.5139047630232192e-05, 'eta': 0.11998858387082997}. Best is trial 1 with value: 463.60225566488106.
+Inner Fold 5 Results: {'MSE - mean': 439.31008064982205, 'MSE - std': 345.37146742476483, 'R2 - mean': 0.7521849436311426, 'R2 - std': 0.07082363325805269}
+Trial Results B4 Saving: {'MSE - mean': 439.31008064982205, 'MSE - std': 345.37146742476483, 'R2 - mean': 0.7521849436311426, 'R2 - std': 0.07082363325805269}
+Score: 439.31008064982205
   outer_5_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -16842,17 +16200,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c130>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.4908314	test: 26.6641311	best: 26.6641311 (0)	total: 322us	remaining: 31.9ms
-99:	learn: 30.9508859	test: 18.2783868	best: 18.2776690 (96)	total: 18.3ms	remaining: 0us
-
-bestTest = 18.27766898
-bestIteration = 96
-
-Shrink model to first 97 iterations.
-Inner Fold 1 Results: {'MSE - mean': 334.07320506173306, 'MSE - std': 0.0, 'R2 - mean': 0.5182545321552992, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:43.27794	eval-rmse:26.69455
+[99]	train-rmse:13.27998	eval-rmse:15.41336
+Inner Fold 1 Results: {'MSE - mean': 237.57180607234568, 'MSE - std': 0.0, 'R2 - mean': 0.6574129887433392, 'R2 - std': 0.0}
   outer_5_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -16988,16 +16340,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c310>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.4332888	test: 57.2122064	best: 57.2122064 (0)	total: 304us	remaining: 30.1ms
-99:	learn: 23.3409060	test: 44.2268632	best: 44.2268632 (99)	total: 17.2ms	remaining: 0us
-
-bestTest = 44.2268632
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 1145.0442967656584, 'MSE - std': 810.9710917039254, 'R2 - mean': 0.45804352668809156, 'R2 - std': 0.06021100546720759}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:35.24433	eval-rmse:57.31440
+[99]	train-rmse:10.82684	eval-rmse:51.38680
+Inner Fold 2 Results: {'MSE - mean': 1439.0872741305484, 'MSE - std': 1201.5154680582027, 'R2 - mean': 0.4222462218466341, 'R2 - std': 0.23516676689670513}
   outer_5_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -17133,17 +16480,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c250>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.5674132	test: 32.3783400	best: 32.3783400 (0)	total: 313us	remaining: 31ms
-99:	learn: 30.2521727	test: 25.2914496	best: 25.2905569 (97)	total: 17.1ms	remaining: 0us
-
-bestTest = 25.29055686
-bestIteration = 97
-
-Shrink model to first 98 iterations.
-Inner Fold 3 Results: {'MSE - mean': 976.5669630876793, 'MSE - std': 703.717721566055, 'R2 - mean': 0.4240880479687628, 'R2 - std': 0.0687230615565035}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:42.33307	eval-rmse:32.37351
+[99]	train-rmse:12.99556	eval-rmse:21.93866
+Inner Fold 3 Results: {'MSE - mean': 1119.8265279366317, 'MSE - std': 1079.9449653150575, 'R2 - mean': 0.453339647494722, 'R2 - std': 0.19698360610001495}
   outer_5_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -17279,17 +16620,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c0a0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
-[I 2025-05-05 08:33:12,823] Trial 2 finished with value: 888.8819011397103 and parameters: {'learning_rate': 0.01702497756527267, 'max_depth': 4, 'l2_leaf_reg': 12.478862727626861}. Best is trial 0 with value: 661.6903035987943.
 **** Data b4 Fitting ****
-0:	learn: 38.6847271	test: 48.0347049	best: 48.0347049 (0)	total: 194us	remaining: 19.3ms
-99:	learn: 29.2872512	test: 35.9513475	best: 35.9513475 (99)	total: 17.4ms	remaining: 0us
-
-bestTest = 35.95134751
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 1055.5500763429864, 'MSE - std': 624.6030501631351, 'R2 - mean': 0.42720329490004105, 'R2 - std': 0.05976000905792051}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:38.47340	eval-rmse:48.11743
+[99]	train-rmse:11.81299	eval-rmse:37.58894
+Inner Fold 4 Results: {'MSE - mean': 1193.1020755422403, 'MSE - std': 943.8319573487173, 'R2 - mean': 0.4360170357170924, 'R2 - std': 0.17321121337984963}
   outer_5_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -17425,18 +16760,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c2e0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.6093076	test: 31.8560487	best: 31.8560487 (0)	total: 261us	remaining: 25.9ms
-99:	learn: 31.0352751	test: 21.0635834	best: 21.0635834 (99)	total: 16.9ms	remaining: 0us
-
-bestTest = 21.06358341
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 933.1749644404943, 'MSE - std': 609.9228215693058, 'R2 - mean': 0.45577201078698104, 'R2 - std': 0.0782412490684868}
-Trial Results B4 Saving: {'MSE - mean': 933.1749644404943, 'MSE - std': 609.9228215693058, 'R2 - mean': 0.45577201078698104, 'R2 - std': 0.0782412490684868}
-Score: 933.1749644404943
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:42.35721	eval-rmse:31.95984
+[99]	train-rmse:12.99961	eval-rmse:23.76671
+[I 2025-05-05 14:14:01,665] Trial 2 finished with value: 1011.408122653345 and parameters: {'max_depth': 10, 'alpha': 1.235458366649878e-08, 'lambda': 5.875085416172023e-08, 'eta': 0.011863966774635597}. Best is trial 1 with value: 463.60225566488106.
+Inner Fold 5 Results: {'MSE - mean': 1067.4529295849584, 'MSE - std': 880.7984119475614, 'R2 - mean': 0.43933618860506574, 'R2 - std': 0.15506697474314382}
+Trial Results B4 Saving: {'MSE - mean': 1067.4529295849584, 'MSE - std': 880.7984119475614, 'R2 - mean': 0.43933618860506574, 'R2 - std': 0.15506697474314382}
+Score: 1067.4529295849584
   outer_5_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -17572,17 +16903,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c760>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.7127600	test: 22.5317273	best: 22.5317273 (0)	total: 258us	remaining: 25.6ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 12.86823257
-bestIteration = 76
-
-Shrink model to first 77 iterations.
-Inner Fold 1 Results: {'MSE - mean': 165.59141796338776, 'MSE - std': 0.0, 'R2 - mean': 0.7612112737293658, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:41.20447	eval-rmse:25.66824
+[99]	train-rmse:0.23022	eval-rmse:13.01177
+Inner Fold 1 Results: {'MSE - mean': 169.30613072932582, 'MSE - std': 0.0, 'R2 - mean': 0.7558545255310036, 'R2 - std': 0.0}
   outer_5_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -17718,17 +17043,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c940>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 31.5052814	test: 53.2157619	best: 53.2157619 (0)	total: 263us	remaining: 26.1ms
-99:	learn: 9.5497641	test: 36.6180558	best: 36.5935947 (95)	total: 18.4ms	remaining: 0us
-
-bestTest = 36.59359468
-bestIteration = 95
-
-Shrink model to first 96 iterations.
-Inner Fold 2 Results: {'MSE - mean': 752.3412864184513, 'MSE - std': 586.7498684550635, 'R2 - mean': 0.6744832440300066, 'R2 - std': 0.08672802969935922}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:33.55956	eval-rmse:56.79128
+[99]	train-rmse:0.24540	eval-rmse:49.90459
+Inner Fold 2 Results: {'MSE - mean': 1329.8872831041242, 'MSE - std': 1160.5811523747982, 'R2 - mean': 0.4945767258495617, 'R2 - std': 0.26127779968144194}
   outer_5_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -17864,17 +17183,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c880>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 37.9679717	test: 28.6443261	best: 28.6443261 (0)	total: 227us	remaining: 22.6ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 24.12787251
-bestIteration = 5
-
-Shrink model to first 6 iterations.
-Inner Fold 3 Results: {'MSE - mean': 695.6122778863922, 'MSE - std': 485.7502440274739, 'R2 - mean': 0.5876599546250861, 'R2 - std': 0.14174296428113495}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.31052	eval-rmse:31.45040
+[99]	train-rmse:0.22736	eval-rmse:10.55301
+Inner Fold 3 Results: {'MSE - mean': 923.7135307228212, 'MSE - std': 1108.1155061990419, 'R2 - mean': 0.625684765060511, 'R2 - std': 0.2826470619501703}
   outer_5_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -18010,17 +17323,11 @@ DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c6a0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.0651030	test: 43.2685319	best: 43.2685319 (0)	total: 253us	remaining: 25.1ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 31.0442171
-bestIteration = 17
-
-Shrink model to first 18 iterations.
-Inner Fold 4 Results: {'MSE - mean': 762.6450692369219, 'MSE - std': 436.40022917992803, 'R2 - mean': 0.585711616302129, 'R2 - std': 0.1227993852145215}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:36.63339	eval-rmse:47.20559
+[99]	train-rmse:0.20661	eval-rmse:31.83373
+Inner Fold 4 Results: {'MSE - mean': 946.1316559056293, 'MSE - std': 960.4414080615254, 'R2 - mean': 0.6088199384790656, 'R2 - std': 0.2465163044276468}
   outer_5_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -18156,20 +17463,14 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-[I 2025-05-05 08:33:12,912] Trial 3 finished with value: 609.7677727522286 and parameters: {'learning_rate': 0.2792896653228683, 'max_depth': 4, 'l2_leaf_reg': 8.459492616056979}. Best is trial 3 with value: 609.7677727522286.
-Model : <catboost.core.CatBoostRegressor object at 0x308e2c910>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.2577471	test: 27.4185853	best: 27.4185853 (0)	total: 170us	remaining: 16.9ms
-Stopped by overfitting detector  (20 iterations wait)
-
-bestTest = 17.68230203
-bestIteration = 33
-
-Shrink model to first 34 iterations.
-Inner Fold 5 Results: {'MSE - mean': 672.6488122559899, 'MSE - std': 429.82953959092526, 'R2 - mean': 0.6079704683373607, 'R2 - std': 0.11851403791516393}
-Trial Results B4 Saving: {'MSE - mean': 672.6488122559899, 'MSE - std': 429.82953959092526, 'R2 - mean': 0.6079704683373607, 'R2 - std': 0.11851403791516393}
-Score: 672.6488122559899
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.32459	eval-rmse:31.30855
+[99]	train-rmse:0.28205	eval-rmse:21.22246
+[I 2025-05-05 14:14:02,502] Trial 3 finished with value: 843.2045017017836 and parameters: {'max_depth': 7, 'alpha': 9.385094667956225e-07, 'lambda': 1.0944871873555685e-07, 'eta': 0.059405617049679456}. Best is trial 1 with value: 463.60225566488106.
+Inner Fold 5 Results: {'MSE - mean': 846.983908047017, 'MSE - std': 881.6344266628341, 'R2 - mean': 0.5997632012882279, 'R2 - std': 0.22123365167421297}
+Trial Results B4 Saving: {'MSE - mean': 846.983908047017, 'MSE - std': 881.6344266628341, 'R2 - mean': 0.5997632012882279, 'R2 - std': 0.22123365167421297}
+Score: 846.983908047017
   outer_5_inner Fold 1/5
 Before Debugging -- Inner Fold 1
 DEBUG Inner Fold 1: num_features: 5
@@ -18305,16 +17606,11 @@ DEBUG Inner Fold 1: ordinal_idx: None
 DEBUG Inner Fold 1: num_idx: [4]
 DEBUG Inner Fold 1: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 1: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2cdc0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 43.2143958	test: 26.4149702	best: 26.4149702 (0)	total: 1.64ms	remaining: 163ms
-99:	learn: 28.0723539	test: 15.7378878	best: 15.7378878 (99)	total: 37.2ms	remaining: 0us
-
-bestTest = 15.73788779
-bestIteration = 99
-
-Inner Fold 1 Results: {'MSE - mean': 247.68113009559744, 'MSE - std': 0.0, 'R2 - mean': 0.6428349832122606, 'R2 - std': 0.0}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.92522	eval-rmse:25.74058
+[99]	train-rmse:7.06053	eval-rmse:14.55059
+Inner Fold 1 Results: {'MSE - mean': 211.71961649543536, 'MSE - std': 0.0, 'R2 - mean': 0.6946927674679968, 'R2 - std': 0.0}
   outer_5_inner Fold 2/5
 Before Debugging -- Inner Fold 2
 DEBUG Inner Fold 2: num_features: 5
@@ -18450,16 +17746,11 @@ DEBUG Inner Fold 2: ordinal_idx: None
 DEBUG Inner Fold 2: num_idx: [4]
 DEBUG Inner Fold 2: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 2: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2cfa0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 35.2190425	test: 56.9962517	best: 56.9962517 (0)	total: 321us	remaining: 31.8ms
-99:	learn: 18.7789484	test: 40.6465285	best: 40.6465285 (99)	total: 37.2ms	remaining: 0us
-
-bestTest = 40.64652853
-bestIteration = 99
-
-Inner Fold 2 Results: {'MSE - mean': 949.9106894102567, 'MSE - std': 702.2295593146594, 'R2 - mean': 0.567108365504985, 'R2 - std': 0.07572661770727562}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:33.53452	eval-rmse:55.39022
+[99]	train-rmse:6.60057	eval-rmse:32.23324
+Inner Fold 2 Results: {'MSE - mean': 625.3506103755631, 'MSE - std': 413.63099388012773, 'R2 - mean': 0.6874189780447104, 'R2 - std': 0.007273789423286381}
   outer_5_inner Fold 3/5
 Before Debugging -- Inner Fold 3
 DEBUG Inner Fold 3: num_features: 5
@@ -18595,17 +17886,11 @@ DEBUG Inner Fold 3: ordinal_idx: None
 DEBUG Inner Fold 3: num_idx: [4]
 DEBUG Inner Fold 3: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 3: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2cee0>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.3181949	test: 32.1740466	best: 32.1740466 (0)	total: 262us	remaining: 26ms
-99:	learn: 26.0112647	test: 24.7246290	best: 24.7129253 (93)	total: 33.9ms	remaining: 0us
-
-bestTest = 24.71292533
-bestIteration = 93
-
-Shrink model to first 94 iterations.
-Inner Fold 3 Results: {'MSE - mean': 836.8500286630215, 'MSE - std': 595.244763662291, 'R2 - mean': 0.5064891842812713, 'R2 - std': 0.10569949866195896}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.28951	eval-rmse:31.47059
+[99]	train-rmse:7.44124	eval-rmse:16.12429
+Inner Fold 3 Results: {'MSE - mean': 503.56460197681827, 'MSE - std': 379.1095660653261, 'R2 - mean': 0.7043779403418147, 'R2 - std': 0.024707990868787416}
   outer_5_inner Fold 4/5
 Before Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
@@ -18736,22 +18021,16 @@ After Debugging -- Inner Fold 4
 DEBUG Inner Fold 4: num_features: 5
 DEBUG Inner Fold 4: num_classes: 1
 DEBUG Inner Fold 4: cat_idx: [0, 1, 2, 3]
-[I 2025-05-05 08:33:13,158] Trial 4 finished with value: 749.173489232133 and parameters: {'learning_rate': 0.03211108876901384, 'max_depth': 9, 'l2_leaf_reg': 11.846399107291731}. Best is trial 3 with value: 609.7677727522286.
 DEBUG Inner Fold 4: nominal_idx: [0, 1, 2, 3]
 DEBUG Inner Fold 4: ordinal_idx: None
 DEBUG Inner Fold 4: num_idx: [4]
 DEBUG Inner Fold 4: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 4: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2cd30>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 38.4601505	test: 47.7537810	best: 47.7537810 (0)	total: 473us	remaining: 46.8ms
-99:	learn: 26.0242190	test: 33.3459517	best: 33.3459517 (99)	total: 44.8ms	remaining: 0us
-
-bestTest = 33.34595172
-bestIteration = 99
-
-Inner Fold 4 Results: {'MSE - mean': 905.6256525825219, 'MSE - std': 529.0817572333051, 'R2 - mean': 0.5086810071393859, 'R2 - std': 0.09161713963754904}
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:36.28363	eval-rmse:46.01957
+[99]	train-rmse:5.92640	eval-rmse:24.65709
+Inner Fold 4 Results: {'MSE - mean': 529.6664652254933, 'MSE - std': 331.41660958201453, 'R2 - mean': 0.7120237656241273, 'R2 - std': 0.02516425127680166}
   outer_5_inner Fold 5/5
 Before Debugging -- Inner Fold 5
 DEBUG Inner Fold 5: num_features: 5
@@ -18887,21 +18166,17 @@ DEBUG Inner Fold 5: ordinal_idx: None
 DEBUG Inner Fold 5: num_idx: [4]
 DEBUG Inner Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Inner Fold 5: bin_alt: None
-Model : <catboost.core.CatBoostRegressor object at 0x308e2cf70>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
 **** Data b4 Fitting ****
-0:	learn: 42.3729572	test: 31.6098548	best: 31.6098548 (0)	total: 401us	remaining: 39.8ms
-99:	learn: 27.8966656	test: 20.1617743	best: 20.1617743 (99)	total: 45ms	remaining: 0us
-
-bestTest = 20.16177434
-bestIteration = 99
-
-Inner Fold 5 Results: {'MSE - mean': 805.7999454092674, 'MSE - std': 513.6172620933093, 'R2 - mean': 0.5281597056996337, 'R2 - std': 0.09073389119120212}
-Trial Results B4 Saving: {'MSE - mean': 805.7999454092674, 'MSE - std': 513.6172620933093, 'R2 - mean': 0.5281597056996337, 'R2 - std': 0.09073389119120212}
-Score: 805.7999454092674
-Best Hyperparameters found for Outer Fold 5: {'learning_rate': 0.2792896653228683, 'max_depth': 4, 'l2_leaf_reg': 8.459492616056979}
-Best Inner CV Score : 609.7678
-Hyperparameter Optimization for Outer Fold 5 finished in 0.83 seconds.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:40.14166	eval-rmse:30.35449
+[99]	train-rmse:6.28558	eval-rmse:12.40143
+[I 2025-05-05 14:14:02,810] Trial 4 finished with value: 464.95870740421714 and parameters: {'max_depth': 2, 'alpha': 0.00547618977726879, 'lambda': 5.721017795668601e-08, 'eta': 0.08730808304517236}. Best is trial 1 with value: 463.60225566488106.
+Inner Fold 5 Results: {'MSE - mean': 454.4922429477759, 'MSE - std': 332.3766388687819, 'R2 - mean': 0.7398112184581442, 'R2 - std': 0.05995966789324699}
+Trial Results B4 Saving: {'MSE - mean': 454.4922429477759, 'MSE - std': 332.3766388687819, 'R2 - mean': 0.7398112184581442, 'R2 - std': 0.05995966789324699}
+Score: 454.4922429477759
+Best Hyperparameters found for Outer Fold 5: {'max_depth': 2, 'alpha': 0.24425299624487626, 'lambda': 1.5139047630232192e-05, 'eta': 0.11998858387082997}
+Best Inner CV Score : 463.6023
+Hyperparameter Optimization for Outer Fold 5 finished in 2.96 seconds.
 Before Debugging -- Outer Fold 5
 DEBUG Outer Fold 5: num_features: 5
 DEBUG Outer Fold 5: num_classes: 1
@@ -19037,34 +18312,28 @@ DEBUG Outer Fold 5: num_idx: [4]
 DEBUG Outer Fold 5: cat_dims: [17, 17, 2, 2, 18, 18, 3, 3]
 DEBUG Outer Fold 5: bin_alt: None
 Training final model for Outer Fold 5...
-Model : <catboost.core.CatBoostRegressor object at 0x308dc2c80>
-Current Working Directory: /Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost
-0:	learn: 36.5267106	test: 33.3558718	best: 33.3558718 (0)	total: 265us	remaining: 26.3ms
-99:	learn: 14.7726847	test: 19.1436742	best: 19.1413468 (98)	total: 17.9ms	remaining: 0us
-
-bestTest = 19.14134684
-bestIteration = 98
-
-Shrink model to first 99 iterations.
+Feature Types: ['c', 'c', 'c', 'c', 'q']
+[0]	train-rmse:37.56516	eval-rmse:35.26545
+[87]	train-rmse:6.76677	eval-rmse:14.97516
 Evaluating final model on Outer Test Set for Fold 5...
-Outer Fold 5 Results: {'MSE - mean': 366.39115902928944, 'MSE - std': 0.0, 'R2 - mean': 0.7467465385919034, 'R2 - std': 0.0}
+Outer Fold 5 Results: {'MSE - mean': 224.2553696884303, 'MSE - std': 0.0, 'R2 - mean': 0.8449923061369304, 'R2 - std': 0.0}
 
 --- Nested Cross-Validation Summary ---
-Outer Fold Results :[{'MSE - mean': 444.62647876050767, 'MSE - std': 0.0, 'R2 - mean': 0.7028155048955589, 'R2 - std': 0.0}, {'MSE - mean': 1243.0158576272647, 'MSE - std': 0.0, 'R2 - mean': 0.5734013929273873, 'R2 - std': 0.0}, {'MSE - mean': 653.6561272165186, 'MSE - std': 0.0, 'R2 - mean': 0.6002138165132985, 'R2 - std': 0.0}, {'MSE - mean': 246.56884511037714, 'MSE - std': 0.0, 'R2 - mean': 0.5759793637924515, 'R2 - std': 0.0}, {'MSE - mean': 366.39115902928944, 'MSE - std': 0.0, 'R2 - mean': 0.7467465385919034, 'R2 - std': 0.0}]
-Successful Outer Folds: [{'MSE - mean': 444.62647876050767, 'MSE - std': 0.0, 'R2 - mean': 0.7028155048955589, 'R2 - std': 0.0}, {'MSE - mean': 1243.0158576272647, 'MSE - std': 0.0, 'R2 - mean': 0.5734013929273873, 'R2 - std': 0.0}, {'MSE - mean': 653.6561272165186, 'MSE - std': 0.0, 'R2 - mean': 0.6002138165132985, 'R2 - std': 0.0}, {'MSE - mean': 246.56884511037714, 'MSE - std': 0.0, 'R2 - mean': 0.5759793637924515, 'R2 - std': 0.0}, {'MSE - mean': 366.39115902928944, 'MSE - std': 0.0, 'R2 - mean': 0.7467465385919034, 'R2 - std': 0.0}]
+Outer Fold Results :[{'MSE - mean': 220.0692147043437, 'MSE - std': 0.0, 'R2 - mean': 0.852907639144072, 'R2 - std': 0.0}, {'MSE - mean': 1096.2176612837823, 'MSE - std': 0.0, 'R2 - mean': 0.6237820101147187, 'R2 - std': 0.0}, {'MSE - mean': 480.79623325242807, 'MSE - std': 0.0, 'R2 - mean': 0.7059375975785811, 'R2 - std': 0.0}, {'MSE - mean': 124.99915562687316, 'MSE - std': 0.0, 'R2 - mean': 0.7850408819062824, 'R2 - std': 0.0}, {'MSE - mean': 224.2553696884303, 'MSE - std': 0.0, 'R2 - mean': 0.8449923061369304, 'R2 - std': 0.0}]
+Successful Outer Folds: [{'MSE - mean': 220.0692147043437, 'MSE - std': 0.0, 'R2 - mean': 0.852907639144072, 'R2 - std': 0.0}, {'MSE - mean': 1096.2176612837823, 'MSE - std': 0.0, 'R2 - mean': 0.6237820101147187, 'R2 - std': 0.0}, {'MSE - mean': 480.79623325242807, 'MSE - std': 0.0, 'R2 - mean': 0.7059375975785811, 'R2 - std': 0.0}, {'MSE - mean': 124.99915562687316, 'MSE - std': 0.0, 'R2 - mean': 0.7850408819062824, 'R2 - std': 0.0}, {'MSE - mean': 224.2553696884303, 'MSE - std': 0.0, 'R2 - mean': 0.8449923061369304, 'R2 - std': 0.0}]
 Number of Successful Outer Folds: 5/2
 
 Aggregated Results over 5/2 Outer Folds:
-  MSE - mean: 590.8517
-  MSE - mean_std: 352.0107
-  R2 - mean: 0.6398
-  R2 - mean_std: 0.0714
-Average Outer Fold Train Time: 0.0721 sec
-Average Outer Fold Inference Time: 0.0004 sec
+  MSE - mean: 429.2675
+  MSE - mean_std: 353.7940
+  R2 - mean: 0.7625
+  R2 - mean_std: 0.0871
+Average Outer Fold Train Time: 0.0959 sec
+Average Outer Fold Inference Time: 0.0005 sec
 Saving model.....
-Results After CV Manual: {'MSE - mean': 590.8516935487916, 'MSE - mean_std': 352.0106585096611, 'R2 - mean': 0.63983132334412, 'R2 - mean_std': 0.07135464332254}
-Train time: 0.07210740000000015
-Inference time: 0.00043460000000052903
+Results After CV Manual: {'MSE - mean': 429.26752691117144, 'MSE - mean_std': 353.79396533014915, 'R2 - mean': 0.762532086976117, 'R2 - mean_std': 0.08709603215087598}
+Train time: 0.09591499999999975
+Inference time: 0.0005257999999997764
 Traceback (most recent call last):
   File "/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/train.py", line 1194, in <module>
     main(arguments)
@@ -19074,4 +18343,4 @@ Traceback (most recent call last):
     update_yaml(args.dataset, args.model_name,best_params)
   File "/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py", line 175, in update_yaml
     with open(file_path, 'w') as file:
-FileNotFoundError: [Errno 2] No such file or directory: '/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/CatBoost/config/results_params.yml'
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/bash_scripts/XGBoost/config/results_params.yml'
