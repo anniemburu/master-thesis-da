@@ -1,0 +1,18 @@
+2025-05-04 22:44:00.046329
+ResMLP - SAT11 - train_model
+
+Log Loss - mean: 0.73237
+Log Loss - mean_std: 0.09131
+AUC - mean: 0.67886
+AUC - mean_std: 0.06381
+Accuracy - mean: 0.72728
+Accuracy - mean_std: 0.04799
+F1 score - mean: 0.70845
+F1 score - mean_std: 0.04754
+
+Train time: 0.103756
+Test time: 0.002088
+
+Best Parameters: {'n_blocks': 5, 'd_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'd_in': 130, 'd_out': 3}
+
+

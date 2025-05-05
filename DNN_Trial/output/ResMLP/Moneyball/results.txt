@@ -1,0 +1,18 @@
+2025-05-04 22:45:28.144577
+ResMLP - Moneyball - train_model
+
+Log Loss - mean: 1.73450
+Log Loss - mean_std: 0.08323
+AUC - mean: 0.79910
+AUC - mean_std: 0.01830
+Accuracy - mean: 0.34895
+Accuracy - mean_std: 0.03939
+F1 score - mean: 0.24277
+F1 score - mean_std: 0.03385
+
+Train time: 0.029741
+Test time: 0.002045
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'd_in': 48, 'd_out': 7}
+
+

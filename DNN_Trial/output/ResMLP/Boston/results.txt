@@ -1,0 +1,18 @@
+2025-05-04 22:43:27.198748
+ResMLP - Boston - train_model
+
+Log Loss - mean: 1.65046
+Log Loss - mean_std: 0.08819
+AUC - mean: 0.70064
+AUC - mean_std: 0.07073
+Accuracy - mean: 0.31663
+Accuracy - mean_std: 0.06841
+F1 score - mean: 0.26236
+F1 score - mean_std: 0.07409
+
+Train time: 0.018411
+Test time: 0.002144
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'd_in': 14, 'd_out': 6}
+
+
