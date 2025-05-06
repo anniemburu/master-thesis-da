@@ -1,14 +1,14 @@
-2025-05-05 09:06:51.221369
+2025-05-06 09:31:24.093579
 LightGBM - Black_Friday - train_model
 
-MSE - mean: 12081896.03503
-MSE - mean_std: 171097.65544
-R2 - mean: 0.53077
-R2 - mean_std: 0.00638
+MSE - mean: 12157185.05252
+MSE - mean_std: 203383.79112
+R2 - mean: 0.52785
+R2 - mean_std: 0.00784
 
-Train time: 6.274683
-Test time: 0.162560
+Train time: 5.079008
+Test time: 0.194914
 
-Best Parameters: {'num_leaves': 137, 'lambda_l1': 6.301946108745436e-05, 'lambda_l2': 3.53635506129354e-07, 'learning_rate': 0.07496360619777417, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 82, 'lambda_l1': 0.15733308546736582, 'lambda_l2': 1.465534875984741e-07, 'learning_rate': 0.10434694857266238, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 

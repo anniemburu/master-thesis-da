@@ -1,300 +1,300 @@
-2025-05-05 08:32:20.987106
-Parameters: {'learning_rate': 0.17182945834315835, 'max_depth': 4, 'l2_leaf_reg': 19.00161416443046, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:33.863491
+Parameters: {'learning_rate': 0.018827816199490734, 'max_depth': 2, 'l2_leaf_reg': 5.081874010095405, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 562.97287
-MSE - std: 50.82276
-R2 - mean: 0.91182
-R2 - std: 0.02972
+MSE - mean: 1538.11846
+MSE - std: 450.78484
+R2 - mean: 0.78031
+R2 - std: 0.02071
 
-Train time: 0.089177
-Test time: 0.000467
-
----------------------------------------
-2025-05-05 08:32:22.025329
-Parameters: {'learning_rate': 0.1810785716104672, 'max_depth': 10, 'l2_leaf_reg': 6.179489696145439, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 677.60253
-MSE - std: 57.65723
-R2 - mean: 0.89682
-R2 - std: 0.02342
-
-Train time: 0.595147
-Test time: 0.000672
+Train time: 0.056999
+Test time: 0.000451
 
 ---------------------------------------
-2025-05-05 08:32:22.142484
-Parameters: {'learning_rate': 0.019802399409159035, 'max_depth': 3, 'l2_leaf_reg': 4.9617207100473815, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:33.959575
+Parameters: {'learning_rate': 0.01584224889331851, 'max_depth': 2, 'l2_leaf_reg': 19.512189602390627, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 1311.74166
-MSE - std: 375.57443
-R2 - mean: 0.81193
-R2 - std: 0.01918
+MSE - mean: 2091.74254
+MSE - std: 655.86806
+R2 - mean: 0.70353
+R2 - std: 0.03087
 
-Train time: 0.067139
-Test time: 0.000430
-
----------------------------------------
-2025-05-05 08:32:22.446756
-Parameters: {'learning_rate': 0.02080265941641759, 'max_depth': 7, 'l2_leaf_reg': 5.73747481413278, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 1295.60165
-MSE - std: 358.89868
-R2 - mean: 0.81350
-R2 - std: 0.01990
-
-Train time: 0.184838
-Test time: 0.000553
+Train time: 0.049317
+Test time: 0.000398
 
 ---------------------------------------
-2025-05-05 08:32:22.567252
-Parameters: {'learning_rate': 0.053506992021762984, 'max_depth': 3, 'l2_leaf_reg': 5.25207262192367, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:34.100593
+Parameters: {'learning_rate': 0.14153792313950309, 'max_depth': 4, 'l2_leaf_reg': 26.923730026128045, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 670.55071
-MSE - std: 59.24374
-R2 - mean: 0.89793
-R2 - std: 0.02377
+MSE - mean: 619.26446
+MSE - std: 45.12253
+R2 - mean: 0.90394
+R2 - std: 0.02928
 
-Train time: 0.070627
-Test time: 0.000447
-
----------------------------------------
-2025-05-05 08:32:23.471012
-Parameters: {'learning_rate': 0.291766347121592, 'max_depth': 10, 'l2_leaf_reg': 4.063391444550668, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 799.33941
-MSE - std: 63.26796
-R2 - mean: 0.88786
-R2 - std: 0.01786
-
-Train time: 0.508197
-Test time: 0.000615
+Train time: 0.084394
+Test time: 0.000441
 
 ---------------------------------------
-2025-05-05 08:32:23.802502
-Parameters: {'learning_rate': 0.23212074578374783, 'max_depth': 8, 'l2_leaf_reg': 1.399997929837794, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:34.242986
+Parameters: {'learning_rate': 0.026366335901485207, 'max_depth': 4, 'l2_leaf_reg': 7.613293480913884, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 669.30580
-MSE - std: 72.40933
-R2 - mean: 0.90662
-R2 - std: 0.01382
+MSE - mean: 1013.20756
+MSE - std: 233.68006
+R2 - mean: 0.85197
+R2 - std: 0.01783
 
-Train time: 0.195078
-Test time: 0.000516
-
----------------------------------------
-2025-05-05 08:32:23.901504
-Parameters: {'learning_rate': 0.010380428610552002, 'max_depth': 2, 'l2_leaf_reg': 1.9243091890850166, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 2606.19631
-MSE - std: 466.35905
-R2 - mean: 0.64383
-R2 - std: 0.01060
-
-Train time: 0.051566
-Test time: 0.000546
+Train time: 0.085743
+Test time: 0.000424
 
 ---------------------------------------
-2025-05-05 08:32:25.749350
-Parameters: {'learning_rate': 0.04718188795156923, 'max_depth': 11, 'l2_leaf_reg': 3.1989781813125586, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:34.407567
+Parameters: {'learning_rate': 0.09055726172645967, 'max_depth': 5, 'l2_leaf_reg': 0.5114660325751778, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 860.13833
-MSE - std: 96.48706
-R2 - mean: 0.88018
-R2 - std: 0.01744
+MSE - mean: 549.11040
+MSE - std: 27.74374
+R2 - mean: 0.91476
+R2 - std: 0.02546
 
-Train time: 1.096608
-Test time: 0.000513
-
----------------------------------------
-2025-05-05 08:32:25.873244
-Parameters: {'learning_rate': 0.020101822334308097, 'max_depth': 3, 'l2_leaf_reg': 2.8103734786260346, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 1265.33053
-MSE - std: 183.14287
-R2 - mean: 0.82587
-R2 - std: 0.01283
-
-Train time: 0.071963
-Test time: 0.000548
+Train time: 0.100944
+Test time: 0.000478
 
 ---------------------------------------
-2025-05-05 08:32:26.079084
-Parameters: {'learning_rate': 0.12017641693871296, 'max_depth': 4, 'l2_leaf_reg': 1.0993950427019445, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:34.654206
+Parameters: {'learning_rate': 0.29875843445424805, 'max_depth': 6, 'l2_leaf_reg': 14.821662580370248, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 547.21610
-MSE - std: 38.58468
-R2 - mean: 0.92264
-R2 - std: 0.00685
+MSE - mean: 665.29988
+MSE - std: 83.88919
+R2 - mean: 0.90720
+R2 - std: 0.01544
 
-Train time: 0.085914
-Test time: 0.000427
-
----------------------------------------
-2025-05-05 08:32:27.135885
-Parameters: {'learning_rate': 0.07232411026480955, 'max_depth': 10, 'l2_leaf_reg': 5.898636366019057, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 766.06978
-MSE - std: 113.35344
-R2 - mean: 0.89212
-R2 - std: 0.01430
-
-Train time: 0.614608
-Test time: 0.000514
+Train time: 0.126931
+Test time: 0.000465
 
 ---------------------------------------
-2025-05-05 08:32:27.363992
-Parameters: {'learning_rate': 0.08970272101972566, 'max_depth': 6, 'l2_leaf_reg': 6.778462785882385, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:34.771321
+Parameters: {'learning_rate': 0.017724024743746843, 'max_depth': 3, 'l2_leaf_reg': 1.7286455939056409, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 636.90081
-MSE - std: 39.96079
-R2 - mean: 0.90999
-R2 - std: 0.00725
+MSE - mean: 1398.37951
+MSE - std: 206.43218
+R2 - mean: 0.80775
+R2 - std: 0.01231
 
-Train time: 0.140179
-Test time: 0.000530
+Train time: 0.068617
+Test time: 0.000441
 
 ---------------------------------------
-2025-05-05 08:32:27.508470
-Parameters: {'learning_rate': 0.1606135548906599, 'max_depth': 4, 'l2_leaf_reg': 6.288461076163156, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:34.863022
+Parameters: {'learning_rate': 0.012004194787949595, 'max_depth': 2, 'l2_leaf_reg': 0.7171578225394661, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 564.79070
-MSE - std: 34.24875
-R2 - mean: 0.92034
-R2 - std: 0.00372
+MSE - mean: 2252.80301
+MSE - std: 376.42741
+R2 - mean: 0.69160
+R2 - std: 0.00669
 
-Train time: 0.087844
+Train time: 0.049533
+Test time: 0.000434
+
+---------------------------------------
+2025-05-06 08:59:35.006149
+Parameters: {'learning_rate': 0.027422013846379018, 'max_depth': 4, 'l2_leaf_reg': 6.5273171988509135, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 983.09887
+MSE - std: 137.88021
+R2 - mean: 0.86393
+R2 - std: 0.01778
+
+Train time: 0.087468
+Test time: 0.000431
+
+---------------------------------------
+2025-05-06 08:59:38.291998
+Parameters: {'learning_rate': 0.039811895181317225, 'max_depth': 12, 'l2_leaf_reg': 2.1355226638392004, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 948.58876
+MSE - std: 112.78401
+R2 - mean: 0.86859
+R2 - std: 0.01465
+
+Train time: 2.078985
 Test time: 0.000574
 
 ---------------------------------------
-2025-05-05 08:32:27.604728
-Parameters: {'learning_rate': 0.29172275138391635, 'max_depth': 2, 'l2_leaf_reg': 10.884543419420858, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:38.432372
+Parameters: {'learning_rate': 0.012326807087539837, 'max_depth': 2, 'l2_leaf_reg': 3.7370127218424845, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 588.14894
-MSE - std: 45.62822
-R2 - mean: 0.91678
-R2 - std: 0.00871
+MSE - mean: 2269.29738
+MSE - std: 248.34142
+R2 - mean: 0.68115
+R2 - std: 0.01780
 
-Train time: 0.052792
+Train time: 0.049191
+Test time: 0.000630
+
+---------------------------------------
+2025-05-06 08:59:38.577597
+Parameters: {'learning_rate': 0.022544701130813218, 'max_depth': 4, 'l2_leaf_reg': 0.8210154674949284, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 963.35077
+MSE - std: 90.57970
+R2 - mean: 0.86413
+R2 - std: 0.01121
+
+Train time: 0.087984
+Test time: 0.000520
+
+---------------------------------------
+2025-05-06 08:59:40.391114
+Parameters: {'learning_rate': 0.07323485419194037, 'max_depth': 11, 'l2_leaf_reg': 12.400057240331002, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 862.35306
+MSE - std: 126.15149
+R2 - mean: 0.87888
+R2 - std: 0.01368
+
+Train time: 1.077576
+Test time: 0.000553
+
+---------------------------------------
+2025-05-06 08:59:40.531961
+Parameters: {'learning_rate': 0.037325893694911974, 'max_depth': 4, 'l2_leaf_reg': 1.414403786078014, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 709.02255
+MSE - std: 58.94624
+R2 - mean: 0.89993
+R2 - std: 0.00793
+
+Train time: 0.084959
+Test time: 0.000499
+
+---------------------------------------
+2025-05-06 08:59:40.756951
+Parameters: {'learning_rate': 0.07921212009412858, 'max_depth': 6, 'l2_leaf_reg': 6.2161824165549495, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 639.28276
+MSE - std: 48.99790
+R2 - mean: 0.90985
+R2 - std: 0.00601
+
+Train time: 0.135767
+Test time: 0.000476
+
+---------------------------------------
+2025-05-06 08:59:41.100657
+Parameters: {'learning_rate': 0.010868171414747722, 'max_depth': 7, 'l2_leaf_reg': 1.0268418309160743, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 1977.77508
+MSE - std: 425.34138
+R2 - mean: 0.71830
+R2 - std: 0.03318
+
+Train time: 0.183753
+Test time: 0.000456
+
+---------------------------------------
+2025-05-06 08:59:41.403474
+Parameters: {'learning_rate': 0.0476856386837662, 'max_depth': 7, 'l2_leaf_reg': 18.42217503387896, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 978.87009
+MSE - std: 220.74048
+R2 - mean: 0.85996
+R2 - std: 0.02082
+
+Train time: 0.181629
+Test time: 0.000464
+
+---------------------------------------
+2025-05-06 08:59:41.543757
+Parameters: {'learning_rate': 0.04218370229051331, 'max_depth': 4, 'l2_leaf_reg': 13.461162739460624, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 859.01322
+MSE - std: 185.67696
+R2 - mean: 0.87686
+R2 - std: 0.01588
+
+Train time: 0.089282
+Test time: 0.000443
+
+---------------------------------------
+2025-05-06 08:59:41.844718
+Parameters: {'learning_rate': 0.11533924694172074, 'max_depth': 7, 'l2_leaf_reg': 27.961023216951048, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 788.42142
+MSE - std: 140.32118
+R2 - mean: 0.88574
+R2 - std: 0.01611
+
+Train time: 0.177701
+Test time: 0.000498
+
+---------------------------------------
+2025-05-06 08:59:41.938316
+Parameters: {'learning_rate': 0.021892695858310003, 'max_depth': 2, 'l2_leaf_reg': 0.9361803443356729, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 1264.68371
+MSE - std: 291.48309
+R2 - mean: 0.81994
+R2 - std: 0.02431
+
+Train time: 0.049665
+Test time: 0.000606
+
+---------------------------------------
+2025-05-06 08:59:42.306573
+Parameters: {'learning_rate': 0.016822768892156705, 'max_depth': 7, 'l2_leaf_reg': 6.566847323549388, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 1657.08318
+MSE - std: 225.53278
+R2 - mean: 0.75704
+R2 - std: 0.03158
+
+Train time: 0.182614
+Test time: 0.000631
+
+---------------------------------------
+2025-05-06 08:59:42.485436
+Parameters: {'learning_rate': 0.16615607920970182, 'max_depth': 5, 'l2_leaf_reg': 11.65564046863108, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+
+MSE - mean: 588.61040
+MSE - std: 44.57035
+R2 - mean: 0.91368
+R2 - std: 0.00562
+
+Train time: 0.113766
 Test time: 0.000415
 
 ---------------------------------------
-2025-05-05 08:32:27.726939
-Parameters: {'learning_rate': 0.24382018435362457, 'max_depth': 3, 'l2_leaf_reg': 5.998161621914701, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:42.578524
+Parameters: {'learning_rate': 0.06859645648781941, 'max_depth': 2, 'l2_leaf_reg': 17.258917749999103, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 611.50456
-MSE - std: 98.92186
-R2 - mean: 0.91010
-R2 - std: 0.01956
+MSE - mean: 750.64133
+MSE - std: 78.31634
+R2 - mean: 0.88957
+R2 - std: 0.01354
 
-Train time: 0.053158
-Test time: 0.000416
-
----------------------------------------
-2025-05-05 08:32:28.006627
-Parameters: {'learning_rate': 0.09518420289999115, 'max_depth': 7, 'l2_leaf_reg': 2.9883972256415507, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 657.42916
-MSE - std: 112.36765
-R2 - mean: 0.90393
-R2 - std: 0.01806
-
-Train time: 0.166921
-Test time: 0.000637
+Train time: 0.048756
+Test time: 0.000511
 
 ---------------------------------------
-2025-05-05 08:32:28.159977
-Parameters: {'learning_rate': 0.1605509838695899, 'max_depth': 5, 'l2_leaf_reg': 10.321926855010165, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:42.723939
+Parameters: {'learning_rate': 0.053698485042517896, 'max_depth': 4, 'l2_leaf_reg': 15.255620274398884, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 640.22841
-MSE - std: 82.09090
-R2 - mean: 0.90663
-R2 - std: 0.01331
+MSE - mean: 776.65024
+MSE - std: 100.19341
+R2 - mean: 0.88559
+R2 - std: 0.01737
 
-Train time: 0.094448
-Test time: 0.000440
+Train time: 0.087144
+Test time: 0.000527
 
 ---------------------------------------
-2025-05-05 08:32:28.305958
-Parameters: {'learning_rate': 0.11003337445707806, 'max_depth': 4, 'l2_leaf_reg': 9.990777548258325, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
+2025-05-06 08:59:42.897910
+Parameters: {'learning_rate': 0.027249960014079165, 'max_depth': 5, 'l2_leaf_reg': 1.0439911323881035, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
 
-MSE - mean: 636.78229
-MSE - std: 97.56538
-R2 - mean: 0.90740
-R2 - std: 0.01322
+MSE - mean: 836.72091
+MSE - std: 100.69808
+R2 - mean: 0.87707
+R2 - std: 0.01589
 
-Train time: 0.090051
+Train time: 0.110687
 Test time: 0.000425
-
----------------------------------------
-2025-05-05 08:32:28.399755
-Parameters: {'learning_rate': 0.03009661343229157, 'max_depth': 2, 'l2_leaf_reg': 1.5764546702982951, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 999.24005
-MSE - std: 226.28975
-R2 - mean: 0.85719
-R2 - std: 0.01943
-
-Train time: 0.049597
-Test time: 0.000555
-
----------------------------------------
-2025-05-05 08:32:28.525397
-Parameters: {'learning_rate': 0.019904773742519533, 'max_depth': 2, 'l2_leaf_reg': 16.246969333599473, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 1606.15507
-MSE - std: 245.71540
-R2 - mean: 0.76474
-R2 - std: 0.03276
-
-Train time: 0.051067
-Test time: 0.000414
-
----------------------------------------
-2025-05-05 08:32:28.622542
-Parameters: {'learning_rate': 0.08134670985529019, 'max_depth': 2, 'l2_leaf_reg': 10.093058277360894, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 660.95694
-MSE - std: 40.82615
-R2 - mean: 0.90255
-R2 - std: 0.01109
-
-Train time: 0.050578
-Test time: 0.000556
-
----------------------------------------
-2025-05-05 08:32:28.741546
-Parameters: {'learning_rate': 0.02771346599505807, 'max_depth': 3, 'l2_leaf_reg': 28.03423826577628, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 1296.33297
-MSE - std: 189.54723
-R2 - mean: 0.80985
-R2 - std: 0.02689
-
-Train time: 0.068113
-Test time: 0.000540
-
----------------------------------------
-2025-05-05 08:32:28.918229
-Parameters: {'learning_rate': 0.20015618443958197, 'max_depth': 5, 'l2_leaf_reg': 5.626474495512288, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 593.08725
-MSE - std: 45.80213
-R2 - mean: 0.91286
-R2 - std: 0.00794
-
-Train time: 0.109697
-Test time: 0.000477
-
----------------------------------------
-2025-05-05 08:32:29.221770
-Parameters: {'learning_rate': 0.06881420278814428, 'max_depth': 7, 'l2_leaf_reg': 4.528917427511397, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Moneyball/catboost_info', 'cat_features': [0, 1, 8]}
-
-MSE - mean: 665.50032
-MSE - std: 60.64571
-R2 - mean: 0.90201
-R2 - std: 0.01161
-
-Train time: 0.180527
-Test time: 0.000529
 
 ---------------------------------------

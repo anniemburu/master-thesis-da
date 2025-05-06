@@ -1,14 +1,14 @@
-2025-05-05 08:29:26.335863
+2025-05-06 08:55:25.406422
 CatBoost - Boston - train_model
 
-MSE - mean: 16.58620
-MSE - mean_std: 9.24393
-R2 - mean: 0.74859
-R2 - mean_std: 0.12037
+MSE - mean: 15.23065
+MSE - mean_std: 8.10129
+R2 - mean: 0.76731
+R2 - mean_std: 0.10732
 
-Train time: 0.121939
-Test time: 0.000383
+Train time: 0.135044
+Test time: 0.000483
 
-Best Parameters: {'learning_rate': 0.14930463176763925, 'max_depth': 6, 'l2_leaf_reg': 1.0103114925872003, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Boston/catboost_info', 'cat_features': [3]}
+Best Parameters: {'learning_rate': 0.2665320756964617, 'max_depth': 4, 'l2_leaf_reg': 0.804730457673769, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Boston/catboost_info', 'cat_features': [3]}
 
 

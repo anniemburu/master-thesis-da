@@ -1,0 +1,14 @@
+2025-05-06 08:59:31.374605
+CatBoost - MIP - train_model
+
+MSE - mean: 1068884.20304
+MSE - mean_std: 525500.58843
+R2 - mean: 0.99859
+R2 - mean_std: 0.00069
+
+Train time: 0.286181
+Test time: 0.000965
+
+Best Parameters: {'learning_rate': 0.07829044547427533, 'max_depth': 2, 'l2_leaf_reg': 0.8972340047247755, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/MIP/catboost_info', 'cat_features': [144, 145]}
+
+

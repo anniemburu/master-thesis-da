@@ -1,300 +1,300 @@
-2025-05-05 08:33:01.464538
-Parameters: {'learning_rate': 0.042182701767566694, 'max_depth': 2, 'l2_leaf_reg': 16.84235353139167, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:27.057001
+Parameters: {'learning_rate': 0.024838243044715748, 'max_depth': 4, 'l2_leaf_reg': 4.070633210736766, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.65896
-MSE - std: 0.09975
-R2 - mean: 0.06742
-R2 - std: 0.04926
+MSE - mean: 0.64471
+MSE - std: 0.10356
+R2 - mean: 0.08833
+R2 - std: 0.05429
 
-Train time: 0.058485
-Test time: 0.000477
-
----------------------------------------
-2025-05-05 08:33:01.778578
-Parameters: {'learning_rate': 0.09291209914805636, 'max_depth': 10, 'l2_leaf_reg': 2.1090449561476237, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.60026
-MSE - std: 0.14270
-R2 - mean: 0.15944
-R2 - std: 0.09736
-
-Train time: 0.251543
-Test time: 0.000547
+Train time: 0.092848
+Test time: 0.000507
 
 ---------------------------------------
-2025-05-05 08:33:01.911842
-Parameters: {'learning_rate': 0.011921805179337606, 'max_depth': 3, 'l2_leaf_reg': 23.455580050258853, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:27.188104
+Parameters: {'learning_rate': 0.01355377609397302, 'max_depth': 3, 'l2_leaf_reg': 8.078066989573006, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.68788
-MSE - std: 0.10126
-R2 - mean: 0.02579
-R2 - std: 0.04695
+MSE - mean: 0.67624
+MSE - std: 0.09756
+R2 - mean: 0.04177
+R2 - std: 0.04930
 
-Train time: 0.068535
-Test time: 0.000440
-
----------------------------------------
-2025-05-05 08:33:02.004828
-Parameters: {'learning_rate': 0.06656597559985909, 'max_depth': 2, 'l2_leaf_reg': 2.4751459873212247, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.64248
-MSE - std: 0.10825
-R2 - mean: 0.09336
-R2 - std: 0.05287
-
-Train time: 0.047615
-Test time: 0.000437
+Train time: 0.072112
+Test time: 0.000447
 
 ---------------------------------------
-2025-05-05 08:33:02.277488
-Parameters: {'learning_rate': 0.056622415406541456, 'max_depth': 7, 'l2_leaf_reg': 3.2353320389379894, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:27.514892
+Parameters: {'learning_rate': 0.022617354585378963, 'max_depth': 8, 'l2_leaf_reg': 0.8625345952417746, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.60291
-MSE - std: 0.09985
-R2 - mean: 0.14786
-R2 - std: 0.05217
+MSE - mean: 0.63429
+MSE - std: 0.11470
+R2 - mean: 0.10627
+R2 - std: 0.04389
 
-Train time: 0.171381
-Test time: 0.000625
-
----------------------------------------
-2025-05-05 08:33:02.764862
-Parameters: {'learning_rate': 0.041502147946659684, 'max_depth': 9, 'l2_leaf_reg': 4.891256030958688, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.62555
-MSE - std: 0.08544
-R2 - mean: 0.05952
-R2 - std: 0.05623
-
-Train time: 0.249326
-Test time: 0.000503
+Train time: 0.215172
+Test time: 0.000502
 
 ---------------------------------------
-2025-05-05 08:33:03.146074
-Parameters: {'learning_rate': 0.12821285032147495, 'max_depth': 11, 'l2_leaf_reg': 7.791980426176419, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:27.602651
+Parameters: {'learning_rate': 0.22802467975527588, 'max_depth': 2, 'l2_leaf_reg': 7.622245724828566, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.63718
-MSE - std: 0.10602
-R2 - mean: 0.04682
-R2 - std: 0.04958
+MSE - mean: 0.61601
+MSE - std: 0.10192
+R2 - mean: 0.12913
+R2 - std: 0.06999
 
-Train time: 0.345143
-Test time: 0.000582
-
----------------------------------------
-2025-05-05 08:33:03.635296
-Parameters: {'learning_rate': 0.08628982812360077, 'max_depth': 11, 'l2_leaf_reg': 17.229422142683404, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.62954
-MSE - std: 0.10338
-R2 - mean: 0.05808
-R2 - std: 0.03182
-
-Train time: 0.442319
-Test time: 0.000578
+Train time: 0.039348
+Test time: 0.000426
 
 ---------------------------------------
-2025-05-05 08:33:03.858598
-Parameters: {'learning_rate': 0.06282876424770589, 'max_depth': 7, 'l2_leaf_reg': 8.385802438283187, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:27.689728
+Parameters: {'learning_rate': 0.08391669386290143, 'max_depth': 2, 'l2_leaf_reg': 20.706793703458917, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.60694
-MSE - std: 0.08800
-R2 - mean: 0.08788
-R2 - std: 0.06838
+MSE - mean: 0.64182
+MSE - std: 0.10136
+R2 - mean: 0.09231
+R2 - std: 0.05646
 
-Train time: 0.141920
-Test time: 0.000519
-
----------------------------------------
-2025-05-05 08:33:04.099392
-Parameters: {'learning_rate': 0.07898650353259601, 'max_depth': 6, 'l2_leaf_reg': 4.434698500781897, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.60667
-MSE - std: 0.09292
-R2 - mean: 0.08977
-R2 - std: 0.05634
-
-Train time: 0.125121
-Test time: 0.000530
+Train time: 0.043349
+Test time: 0.000452
 
 ---------------------------------------
-2025-05-05 08:33:04.269473
-Parameters: {'learning_rate': 0.02013128017794816, 'max_depth': 3, 'l2_leaf_reg': 22.177385113773415, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:27.791864
+Parameters: {'learning_rate': 0.10123034792958889, 'max_depth': 2, 'l2_leaf_reg': 3.388820725810506, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.62793
-MSE - std: 0.07562
-R2 - mean: 0.06468
-R2 - std: 0.04246
+MSE - mean: 0.63044
+MSE - std: 0.10397
+R2 - mean: 0.05685
+R2 - std: 0.04138
 
-Train time: 0.069829
-Test time: 0.000419
-
----------------------------------------
-2025-05-05 08:33:04.678130
-Parameters: {'learning_rate': 0.0287264334498715, 'max_depth': 9, 'l2_leaf_reg': 1.118364248646009, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.60494
-MSE - std: 0.07358
-R2 - mean: 0.09639
-R2 - std: 0.07667
-
-Train time: 0.233251
-Test time: 0.000544
+Train time: 0.046453
+Test time: 0.000504
 
 ---------------------------------------
-2025-05-05 08:33:04.746367
-Parameters: {'learning_rate': 0.18681681274205142, 'max_depth': 2, 'l2_leaf_reg': 10.14087906505294, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:28.048295
+Parameters: {'learning_rate': 0.014292481245634172, 'max_depth': 7, 'l2_leaf_reg': 7.408850117289646, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.61000
-MSE - std: 0.09051
-R2 - mean: 0.09424
-R2 - std: 0.05650
+MSE - mean: 0.65124
+MSE - std: 0.10286
+R2 - mean: 0.02461
+R2 - std: 0.03742
 
-Train time: 0.031496
-Test time: 0.000482
-
----------------------------------------
-2025-05-05 08:33:04.909645
-Parameters: {'learning_rate': 0.014513533167673329, 'max_depth': 4, 'l2_leaf_reg': 0.7895911151583037, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.62753
-MSE - std: 0.07409
-R2 - mean: 0.06472
-R2 - std: 0.04819
-
-Train time: 0.090147
-Test time: 0.000440
+Train time: 0.160440
+Test time: 0.000465
 
 ---------------------------------------
-2025-05-05 08:33:05.103147
-Parameters: {'learning_rate': 0.012500363952105506, 'max_depth': 5, 'l2_leaf_reg': 0.7217741248950825, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:28.237306
+Parameters: {'learning_rate': 0.01911738206515984, 'max_depth': 5, 'l2_leaf_reg': 0.5597606731578181, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.62358
-MSE - std: 0.07323
-R2 - mean: 0.07014
-R2 - std: 0.05404
+MSE - mean: 0.63479
+MSE - std: 0.10593
+R2 - mean: 0.05077
+R2 - std: 0.02941
 
-Train time: 0.114257
-Test time: 0.000485
+Train time: 0.114913
+Test time: 0.000469
 
 ---------------------------------------
-2025-05-05 08:33:05.217754
-Parameters: {'learning_rate': 0.022549351133383775, 'max_depth': 2, 'l2_leaf_reg': 1.548512156854526, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:28.367657
+Parameters: {'learning_rate': 0.02087659414734507, 'max_depth': 3, 'l2_leaf_reg': 2.2013029166649787, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
 MSE - mean: 0.63826
-MSE - std: 0.13649
-R2 - mean: 0.05894
-R2 - std: 0.04415
+MSE - std: 0.10223
+R2 - mean: 0.04428
+R2 - std: 0.03969
 
-Train time: 0.048638
-Test time: 0.000421
-
----------------------------------------
-2025-05-05 08:33:05.340398
-Parameters: {'learning_rate': 0.10374371923339526, 'max_depth': 4, 'l2_leaf_reg': 5.425622683006609, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.60545
-MSE - std: 0.13513
-R2 - mean: 0.10764
-R2 - std: 0.06719
-
-Train time: 0.063785
-Test time: 0.000456
+Train time: 0.069278
+Test time: 0.000430
 
 ---------------------------------------
-2025-05-05 08:33:05.427667
-Parameters: {'learning_rate': 0.04634570683174704, 'max_depth': 2, 'l2_leaf_reg': 11.20973614812911, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:28.603396
+Parameters: {'learning_rate': 0.03421169602896124, 'max_depth': 8, 'l2_leaf_reg': 1.2025671599754753, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.62975
-MSE - std: 0.12981
-R2 - mean: 0.06980
-R2 - std: 0.04733
+MSE - mean: 0.62663
+MSE - std: 0.09415
+R2 - mean: 0.05804
+R2 - std: 0.07619
 
-Train time: 0.043753
-Test time: 0.000456
-
----------------------------------------
-2025-05-05 08:33:05.528517
-Parameters: {'learning_rate': 0.01317558620831554, 'max_depth': 2, 'l2_leaf_reg': 3.7030645090034944, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.64711
-MSE - std: 0.13444
-R2 - mean: 0.04520
-R2 - std: 0.02959
-
-Train time: 0.052991
-Test time: 0.000576
+Train time: 0.155454
+Test time: 0.000507
 
 ---------------------------------------
-2025-05-05 08:33:05.591356
-Parameters: {'learning_rate': 0.25617655604370104, 'max_depth': 2, 'l2_leaf_reg': 17.527115060968455, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:29.058231
+Parameters: {'learning_rate': 0.018659655194544107, 'max_depth': 9, 'l2_leaf_reg': 25.660715191035944, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.60539
-MSE - std: 0.14355
-R2 - mean: 0.10970
-R2 - std: 0.07549
+MSE - mean: 0.63518
+MSE - std: 0.07085
+R2 - mean: 0.05279
+R2 - std: 0.04387
 
-Train time: 0.028609
-Test time: 0.000453
-
----------------------------------------
-2025-05-05 08:33:05.867277
-Parameters: {'learning_rate': 0.012719217583047789, 'max_depth': 7, 'l2_leaf_reg': 16.012545411465965, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-
-MSE - mean: 0.66500
-MSE - std: 0.07955
-R2 - mean: 0.03374
-R2 - std: 0.00979
-
-Train time: 0.164313
-Test time: 0.000506
+Train time: 0.210915
+Test time: 0.000620
 
 ---------------------------------------
-2025-05-05 08:33:06.015192
-Parameters: {'learning_rate': 0.12395047618610806, 'max_depth': 5, 'l2_leaf_reg': 3.463701587735294, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:29.169718
+Parameters: {'learning_rate': 0.05780554820636727, 'max_depth': 2, 'l2_leaf_reg': 14.293635650984553, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.60592
-MSE - std: 0.05895
-R2 - mean: 0.11678
-R2 - std: 0.03638
+MSE - mean: 0.61740
+MSE - std: 0.07317
+R2 - mean: 0.07935
+R2 - std: 0.05474
 
-Train time: 0.085117
-Test time: 0.000603
+Train time: 0.050857
+Test time: 0.000443
 
 ---------------------------------------
-2025-05-05 08:33:06.174635
-Parameters: {'learning_rate': 0.011763282648161351, 'max_depth': 4, 'l2_leaf_reg': 3.386300575387277, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:29.267143
+Parameters: {'learning_rate': 0.03149123662817941, 'max_depth': 2, 'l2_leaf_reg': 7.309541143264336, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.65815
-MSE - std: 0.07659
-R2 - mean: 0.04327
-R2 - std: 0.01610
+MSE - mean: 0.62208
+MSE - std: 0.07378
+R2 - mean: 0.07276
+R2 - std: 0.04944
 
-Train time: 0.093412
+Train time: 0.050402
+Test time: 0.000451
+
+---------------------------------------
+2025-05-06 09:01:29.492388
+Parameters: {'learning_rate': 0.03482336372289536, 'max_depth': 7, 'l2_leaf_reg': 15.56291322262813, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.61678
+MSE - std: 0.07364
+R2 - mean: 0.08012
+R2 - std: 0.05887
+
+Train time: 0.137841
+Test time: 0.000495
+
+---------------------------------------
+2025-05-06 09:01:29.594813
+Parameters: {'learning_rate': 0.026749670986231388, 'max_depth': 2, 'l2_leaf_reg': 8.022748022531147, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.62446
+MSE - std: 0.07235
+R2 - mean: 0.06898
+R2 - std: 0.04827
+
+Train time: 0.053944
+Test time: 0.000473
+
+---------------------------------------
+2025-05-06 09:01:29.736555
+Parameters: {'learning_rate': 0.09715316507351802, 'max_depth': 3, 'l2_leaf_reg': 14.091526706771607, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.61840
+MSE - std: 0.13554
+R2 - mean: 0.08804
+R2 - std: 0.05627
+
+Train time: 0.048683
+Test time: 0.000566
+
+---------------------------------------
+2025-05-06 09:01:30.100210
+Parameters: {'learning_rate': 0.0403875385797136, 'max_depth': 9, 'l2_leaf_reg': 25.4531790748133, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.62595
+MSE - std: 0.13575
+R2 - mean: 0.07740
+R2 - std: 0.05002
+
+Train time: 0.202115
+Test time: 0.000551
+
+---------------------------------------
+2025-05-06 09:01:30.232595
+Parameters: {'learning_rate': 0.04967994310437182, 'max_depth': 4, 'l2_leaf_reg': 8.031533056486943, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.61966
+MSE - std: 0.13202
+R2 - mean: 0.08583
+R2 - std: 0.05563
+
+Train time: 0.070522
 Test time: 0.000449
 
 ---------------------------------------
-2025-05-05 08:33:06.255834
-Parameters: {'learning_rate': 0.07841112954365993, 'max_depth': 2, 'l2_leaf_reg': 5.1275439882048675, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:30.418942
+Parameters: {'learning_rate': 0.011608262139295698, 'max_depth': 5, 'l2_leaf_reg': 4.350355386717825, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.64223
-MSE - std: 0.08010
-R2 - mean: 0.06665
-R2 - std: 0.03158
+MSE - mean: 0.63505
+MSE - std: 0.13990
+R2 - mean: 0.06515
+R2 - std: 0.03645
 
-Train time: 0.039884
-Test time: 0.000404
+Train time: 0.109990
+Test time: 0.000483
 
 ---------------------------------------
-2025-05-05 08:33:06.484797
-Parameters: {'learning_rate': 0.013141827992254442, 'max_depth': 6, 'l2_leaf_reg': 2.3088543329983735, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+2025-05-06 09:01:30.570387
+Parameters: {'learning_rate': 0.012537173934076471, 'max_depth': 4, 'l2_leaf_reg': 0.5128380342162503, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
 
-MSE - mean: 0.65466
-MSE - std: 0.07714
-R2 - mean: 0.04838
-R2 - std: 0.01995
+MSE - mean: 0.62858
+MSE - std: 0.13731
+R2 - mean: 0.07410
+R2 - std: 0.04912
 
-Train time: 0.140566
-Test time: 0.000479
+Train time: 0.089149
+Test time: 0.000444
+
+---------------------------------------
+2025-05-06 09:01:30.709283
+Parameters: {'learning_rate': 0.04903889365107221, 'max_depth': 3, 'l2_leaf_reg': 12.444035222647146, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.63686
+MSE - std: 0.07045
+R2 - mean: 0.07335
+R2 - std: 0.02772
+
+Train time: 0.062941
+Test time: 0.000420
+
+---------------------------------------
+2025-05-06 09:01:30.875054
+Parameters: {'learning_rate': 0.1875602860359415, 'max_depth': 6, 'l2_leaf_reg': 24.31347907548492, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.60439
+MSE - std: 0.04555
+R2 - mean: 0.11655
+R2 - std: 0.05388
+
+Train time: 0.100195
+Test time: 0.000464
+
+---------------------------------------
+2025-05-06 09:01:31.236093
+Parameters: {'learning_rate': 0.029633516256963296, 'max_depth': 10, 'l2_leaf_reg': 12.554463791921151, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.64944
+MSE - std: 0.07768
+R2 - mean: 0.05623
+R2 - std: 0.01540
+
+Train time: 0.284914
+Test time: 0.000525
+
+---------------------------------------
+2025-05-06 09:01:31.334080
+Parameters: {'learning_rate': 0.05532577597183173, 'max_depth': 2, 'l2_leaf_reg': 10.14944222920622, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.64461
+MSE - std: 0.07749
+R2 - mean: 0.06294
+R2 - std: 0.02690
+
+Train time: 0.051939
+Test time: 0.000439
+
+---------------------------------------
+2025-05-06 09:01:31.455048
+Parameters: {'learning_rate': 0.09660494884686668, 'max_depth': 4, 'l2_leaf_reg': 4.937301081577075, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Sensory/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+
+MSE - mean: 0.61976
+MSE - std: 0.07943
+R2 - mean: 0.09906
+R2 - std: 0.04187
+
+Train time: 0.069097
+Test time: 0.000466
 
 ---------------------------------------

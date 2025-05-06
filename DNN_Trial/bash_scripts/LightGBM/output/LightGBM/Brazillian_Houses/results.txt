@@ -1,14 +1,14 @@
-2025-05-05 09:08:20.682208
+2025-05-06 09:32:36.553298
 LightGBM - Brazillian_Houses - train_model
 
-MSE - mean: 269813456.06316
-MSE - mean_std: 290620383.75853
-R2 - mean: 0.40108
-R2 - mean_std: 0.18056
+MSE - mean: 319095932.19474
+MSE - mean_std: 347299051.98459
+R2 - mean: 0.34736
+R2 - mean_std: 0.17413
 
-Train time: 1.124407
-Test time: 0.010960
+Train time: 1.134050
+Test time: 0.010781
 
-Best Parameters: {'num_leaves': 191, 'lambda_l1': 8.014908583268422e-08, 'lambda_l2': 3.80526284970493e-08, 'learning_rate': 0.16714686109775767, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 39, 'lambda_l1': 9.081048923197494e-06, 'lambda_l2': 2.8888932831719614, 'learning_rate': 0.060673244626302573, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 

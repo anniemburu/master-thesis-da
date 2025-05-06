@@ -1,300 +1,300 @@
-2025-05-05 08:30:05.259087
-Parameters: {'learning_rate': 0.02552368269655069, 'max_depth': 4, 'l2_leaf_reg': 2.763151837743761, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:43.162611
+Parameters: {'learning_rate': 0.2845262205419959, 'max_depth': 3, 'l2_leaf_reg': 0.603409729554954, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 32882614952.46614
-MSE - std: 12651057737.59682
-R2 - mean: 0.77060
-R2 - std: 0.04360
+MSE - mean: 18859146104.80321
+MSE - std: 4088653395.97133
+R2 - mean: 0.86346
+R2 - std: 0.01937
 
-Train time: 0.350370
-Test time: 0.002179
-
----------------------------------------
-2025-05-05 08:30:05.789124
-Parameters: {'learning_rate': 0.06071608097733346, 'max_depth': 3, 'l2_leaf_reg': 2.380670015809082, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 24444587702.83795
-MSE - std: 7701138071.79317
-R2 - mean: 0.82646
-R2 - std: 0.02716
-
-Train time: 0.315083
-Test time: 0.002238
+Train time: 0.278430
+Test time: 0.002266
 
 ---------------------------------------
-2025-05-05 08:30:06.482620
-Parameters: {'learning_rate': 0.029105315352360123, 'max_depth': 5, 'l2_leaf_reg': 3.572341395429546, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:48.160310
+Parameters: {'learning_rate': 0.23212076222816422, 'max_depth': 11, 'l2_leaf_reg': 0.8426456768338575, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 28665614947.94795
-MSE - std: 11484503714.41232
-R2 - mean: 0.80071
-R2 - std: 0.04075
+MSE - mean: 24541473950.39226
+MSE - std: 10937671555.99667
+R2 - mean: 0.83103
+R2 - std: 0.04306
 
-Train time: 0.447775
+Train time: 5.310232
+Test time: 0.002504
+
+---------------------------------------
+2025-05-06 08:56:48.948926
+Parameters: {'learning_rate': 0.02014976652271873, 'max_depth': 6, 'l2_leaf_reg': 2.4902378097007123, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 35102666535.52248
+MSE - std: 13679972445.26458
+R2 - mean: 0.75588
+R2 - std: 0.04745
+
+Train time: 0.518187
 Test time: 0.002243
 
 ---------------------------------------
-2025-05-05 08:30:06.932035
-Parameters: {'learning_rate': 0.06750529724649387, 'max_depth': 2, 'l2_leaf_reg': 14.679820985434572, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:49.448438
+Parameters: {'learning_rate': 0.010722286878588089, 'max_depth': 3, 'l2_leaf_reg': 1.5617290879971504, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 32540468570.41106
-MSE - std: 10467556517.53183
-R2 - mean: 0.77015
-R2 - std: 0.03264
+MSE - mean: 64934904145.26515
+MSE - std: 19705988582.32755
+R2 - mean: 0.54218
+R2 - std: 0.05103
 
-Train time: 0.256444
-Test time: 0.002202
-
----------------------------------------
-2025-05-05 08:30:07.397293
-Parameters: {'learning_rate': 0.022511224708313637, 'max_depth': 2, 'l2_leaf_reg': 3.8708415884333456, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 51693701477.43263
-MSE - std: 17209039576.94254
-R2 - mean: 0.63700
-R2 - std: 0.05098
-
-Train time: 0.246180
-Test time: 0.002180
+Train time: 0.284400
+Test time: 0.002030
 
 ---------------------------------------
-2025-05-05 08:30:08.105938
-Parameters: {'learning_rate': 0.13700692602798825, 'max_depth': 2, 'l2_leaf_reg': 2.974061831299265, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:50.026206
+Parameters: {'learning_rate': 0.03518932590281939, 'max_depth': 4, 'l2_leaf_reg': 1.0765450774374499, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 25530491927.18081
-MSE - std: 5429061638.03842
-R2 - mean: 0.82677
-R2 - std: 0.01645
+MSE - mean: 25799809843.36376
+MSE - std: 9543624503.25987
+R2 - mean: 0.81915
+R2 - std: 0.03253
 
-Train time: 0.288987
-Test time: 0.003015
-
----------------------------------------
-2025-05-05 08:30:09.537786
-Parameters: {'learning_rate': 0.18318059287616015, 'max_depth': 8, 'l2_leaf_reg': 20.52160848642217, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 20441414210.47364
-MSE - std: 7685771543.13881
-R2 - mean: 0.86404
-R2 - std: 0.03346
-
-Train time: 1.071607
-Test time: 0.002370
+Train time: 0.341148
+Test time: 0.002154
 
 ---------------------------------------
-2025-05-05 08:30:09.998600
-Parameters: {'learning_rate': 0.017568540603190314, 'max_depth': 2, 'l2_leaf_reg': 0.9276681248256327, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:50.584406
+Parameters: {'learning_rate': 0.04745032498076497, 'max_depth': 2, 'l2_leaf_reg': 12.799516040804047, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 60838988845.09016
-MSE - std: 14960857596.48179
-R2 - mean: 0.58891
-R2 - std: 0.04972
+MSE - mean: 37706487202.16478
+MSE - std: 10078850999.55037
+R2 - mean: 0.74614
+R2 - std: 0.03418
 
-Train time: 0.267896
-Test time: 0.002302
-
----------------------------------------
-2025-05-05 08:30:15.292568
-Parameters: {'learning_rate': 0.052423455784623665, 'max_depth': 11, 'l2_leaf_reg': 7.565260340976341, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 27849474783.44727
-MSE - std: 9314601099.59052
-R2 - mean: 0.81486
-R2 - std: 0.03771
-
-Train time: 4.655914
-Test time: 0.002475
+Train time: 0.233186
+Test time: 0.002121
 
 ---------------------------------------
-2025-05-05 08:30:15.730373
-Parameters: {'learning_rate': 0.25061122794559215, 'max_depth': 2, 'l2_leaf_reg': 24.789332750970065, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:51.300853
+Parameters: {'learning_rate': 0.016821210161345655, 'max_depth': 5, 'l2_leaf_reg': 3.754409753959249, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 26375391790.53440
-MSE - std: 5818709578.77678
-R2 - mean: 0.82133
-R2 - std: 0.01692
+MSE - mean: 42852917140.10106
+MSE - std: 12416788611.34607
+R2 - mean: 0.71201
+R2 - std: 0.04722
 
-Train time: 0.233487
-Test time: 0.002096
-
----------------------------------------
-2025-05-05 08:30:16.596499
-Parameters: {'learning_rate': 0.221040784813117, 'max_depth': 4, 'l2_leaf_reg': 0.5576286493347987, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 18183143492.31425
-MSE - std: 6494601865.39437
-R2 - mean: 0.87673
-R2 - std: 0.02576
-
-Train time: 0.339661
-Test time: 0.002206
+Train time: 0.415665
+Test time: 0.002173
 
 ---------------------------------------
-2025-05-05 08:30:17.166573
-Parameters: {'learning_rate': 0.08954553533978082, 'max_depth': 4, 'l2_leaf_reg': 26.50874661215739, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:54.083029
+Parameters: {'learning_rate': 0.017655621188953335, 'max_depth': 10, 'l2_leaf_reg': 18.355218780897932, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 28068926572.24497
-MSE - std: 10301912432.86935
-R2 - mean: 0.81025
-R2 - std: 0.04027
+MSE - mean: 47896334557.21837
+MSE - std: 13732476564.21042
+R2 - mean: 0.67905
+R2 - std: 0.05054
 
-Train time: 0.336813
-Test time: 0.002145
-
----------------------------------------
-2025-05-05 08:30:17.605507
-Parameters: {'learning_rate': 0.030382426412044954, 'max_depth': 2, 'l2_leaf_reg': 9.230488874244895, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 43467484827.74727
-MSE - std: 14093622115.33539
-R2 - mean: 0.70460
-R2 - std: 0.05076
-
-Train time: 0.233475
-Test time: 0.002106
+Train time: 2.746949
+Test time: 0.002357
 
 ---------------------------------------
-2025-05-05 08:30:18.184488
-Parameters: {'learning_rate': 0.1493909608670046, 'max_depth': 4, 'l2_leaf_reg': 5.075558354531556, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:54.875171
+Parameters: {'learning_rate': 0.013119458091861208, 'max_depth': 6, 'l2_leaf_reg': 3.3381598991383274, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 19079616366.56272
-MSE - std: 5972851218.77617
-R2 - mean: 0.86999
-R2 - std: 0.02102
+MSE - mean: 48711813291.87666
+MSE - std: 13164069951.69991
+R2 - mean: 0.67236
+R2 - std: 0.04616
 
-Train time: 0.339618
-Test time: 0.002208
-
----------------------------------------
-2025-05-05 08:30:26.939826
-Parameters: {'learning_rate': 0.24616151404218017, 'max_depth': 12, 'l2_leaf_reg': 11.859116630289792, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 23779570390.60088
-MSE - std: 12535254183.19117
-R2 - mean: 0.84194
-R2 - std: 0.05706
-
-Train time: 9.199106
-Test time: 0.002627
+Train time: 0.509498
+Test time: 0.002205
 
 ---------------------------------------
-2025-05-05 08:30:27.536061
-Parameters: {'learning_rate': 0.013038970611971935, 'max_depth': 3, 'l2_leaf_reg': 8.862924157737874, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:57.051128
+Parameters: {'learning_rate': 0.020157786439410193, 'max_depth': 9, 'l2_leaf_reg': 0.5638830258662135, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 58460397742.89817
-MSE - std: 6659679994.24509
-R2 - mean: 0.57871
-R2 - std: 0.01953
+MSE - mean: 30745897806.47208
+MSE - std: 9925352247.16941
+R2 - mean: 0.79468
+R2 - std: 0.03929
 
-Train time: 0.286591
-Test time: 0.002052
-
----------------------------------------
-2025-05-05 08:30:28.098631
-Parameters: {'learning_rate': 0.013123115883027166, 'max_depth': 4, 'l2_leaf_reg': 8.682447386272255, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 52830842707.00851
-MSE - std: 6603907453.48291
-R2 - mean: 0.61948
-R2 - std: 0.02238
-
-Train time: 0.348181
-Test time: 0.002178
+Train time: 1.767230
+Test time: 0.002321
 
 ---------------------------------------
-2025-05-05 08:30:29.097788
-Parameters: {'learning_rate': 0.014592480193989064, 'max_depth': 6, 'l2_leaf_reg': 2.6842793279390413, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:58.292879
+Parameters: {'learning_rate': 0.2493128987457134, 'max_depth': 6, 'l2_leaf_reg': 1.701138175278075, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 41819973405.40063
-MSE - std: 5239452037.31876
-R2 - mean: 0.69873
-R2 - std: 0.01838
+MSE - mean: 17472343478.05153
+MSE - std: 7116748015.49634
+R2 - mean: 0.88201
+R2 - std: 0.02944
 
-Train time: 0.555910
-Test time: 0.002514
-
----------------------------------------
-2025-05-05 08:30:29.799676
-Parameters: {'learning_rate': 0.03177833155684206, 'max_depth': 5, 'l2_leaf_reg': 15.183050567483617, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 32953458081.34653
-MSE - std: 4037991446.17675
-R2 - mean: 0.76245
-R2 - std: 0.01607
-
-Train time: 0.430631
-Test time: 0.002261
+Train time: 0.511113
+Test time: 0.002237
 
 ---------------------------------------
-2025-05-05 08:30:30.498065
-Parameters: {'learning_rate': 0.025018411955646608, 'max_depth': 5, 'l2_leaf_reg': 5.432434575536124, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:58.871400
+Parameters: {'learning_rate': 0.024430213108117726, 'max_depth': 4, 'l2_leaf_reg': 4.1800446038740136, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 31032388565.19538
-MSE - std: 4089859743.16477
-R2 - mean: 0.77661
-R2 - std: 0.01433
+MSE - mean: 34756377370.43395
+MSE - std: 12398309133.60654
+R2 - mean: 0.76475
+R2 - std: 0.04757
 
-Train time: 0.433019
-Test time: 0.002167
-
----------------------------------------
-2025-05-05 08:30:31.234564
-Parameters: {'learning_rate': 0.014817899360255597, 'max_depth': 4, 'l2_leaf_reg': 0.7736773994684805, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 46624408545.02235
-MSE - std: 8565066728.06337
-R2 - mean: 0.66973
-R2 - std: 0.01955
-
-Train time: 0.342548
-Test time: 0.002103
+Train time: 0.340469
+Test time: 0.002100
 
 ---------------------------------------
-2025-05-05 08:30:32.175063
-Parameters: {'learning_rate': 0.10035604657713686, 'max_depth': 7, 'l2_leaf_reg': 15.217631468768316, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:56:59.319928
+Parameters: {'learning_rate': 0.2235138565548827, 'max_depth': 2, 'l2_leaf_reg': 1.422054780334356, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 21814255059.24627
-MSE - std: 5699738755.28513
-R2 - mean: 0.84636
-R2 - std: 0.02259
+MSE - mean: 22432024197.90896
+MSE - std: 5757764092.46593
+R2 - mean: 0.84634
+R2 - std: 0.01684
 
-Train time: 0.621256
-Test time: 0.002282
-
----------------------------------------
-2025-05-05 08:30:32.937503
-Parameters: {'learning_rate': 0.02915153624746291, 'max_depth': 6, 'l2_leaf_reg': 0.5729921581012862, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
-
-MSE - mean: 23151032293.38508
-MSE - std: 5378027239.61943
-R2 - mean: 0.83629
-R2 - std: 0.02072
-
-Train time: 0.505790
-Test time: 0.002274
+Train time: 0.236355
+Test time: 0.002085
 
 ---------------------------------------
-2025-05-05 08:30:33.505955
-Parameters: {'learning_rate': 0.2628465153182814, 'max_depth': 4, 'l2_leaf_reg': 4.699415351675675, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:57:00.668225
+Parameters: {'learning_rate': 0.15839500853975613, 'max_depth': 8, 'l2_leaf_reg': 12.261309511637643, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 16097551651.06797
-MSE - std: 2837433940.41198
-R2 - mean: 0.88534
-R2 - std: 0.01065
+MSE - mean: 22268846634.35185
+MSE - std: 10575027007.08301
+R2 - mean: 0.85112
+R2 - std: 0.04640
 
-Train time: 0.339814
-Test time: 0.002232
+Train time: 0.949645
+Test time: 0.002331
 
 ---------------------------------------
-2025-05-05 08:30:34.906456
-Parameters: {'learning_rate': 0.049915616966603654, 'max_depth': 8, 'l2_leaf_reg': 0.5639188190603237, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+2025-05-06 08:57:01.647881
+Parameters: {'learning_rate': 0.05229605079492721, 'max_depth': 7, 'l2_leaf_reg': 2.4806253800502103, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
-MSE - mean: 18906766890.08506
-MSE - std: 5518859564.26412
-R2 - mean: 0.86743
-R2 - std: 0.02319
+MSE - mean: 21917530553.23104
+MSE - std: 9720035443.80659
+R2 - mean: 0.85287
+R2 - std: 0.04149
 
-Train time: 1.008807
-Test time: 0.002330
+Train time: 0.677438
+Test time: 0.002241
+
+---------------------------------------
+2025-05-06 08:57:02.327353
+Parameters: {'learning_rate': 0.0512446545298357, 'max_depth': 3, 'l2_leaf_reg': 6.290699561964278, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 26244876107.85700
+MSE - std: 3118109273.29132
+R2 - mean: 0.81042
+R2 - std: 0.01790
+
+Train time: 0.281969
+Test time: 0.002142
+
+---------------------------------------
+2025-05-06 08:57:02.766811
+Parameters: {'learning_rate': 0.019298284989442922, 'max_depth': 2, 'l2_leaf_reg': 26.82889142530437, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 57596126422.82256
+MSE - std: 6400666077.12943
+R2 - mean: 0.58489
+R2 - std: 0.01786
+
+Train time: 0.232977
+Test time: 0.002062
+
+---------------------------------------
+2025-05-06 08:57:03.366978
+Parameters: {'learning_rate': 0.039470916581871816, 'max_depth': 4, 'l2_leaf_reg': 2.126130864241385, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 23174242366.12247
+MSE - std: 2780449239.69394
+R2 - mean: 0.83286
+R2 - std: 0.01201
+
+Train time: 0.358740
+Test time: 0.002279
+
+---------------------------------------
+2025-05-06 08:57:04.140775
+Parameters: {'learning_rate': 0.16154009161577873, 'max_depth': 6, 'l2_leaf_reg': 6.520522498248349, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 17622048649.77916
+MSE - std: 1219868238.45262
+R2 - mean: 0.87232
+R2 - std: 0.00919
+
+Train time: 0.491554
+Test time: 0.002357
+
+---------------------------------------
+2025-05-06 08:57:04.941959
+Parameters: {'learning_rate': 0.03816551676336888, 'max_depth': 6, 'l2_leaf_reg': 1.852222418011519, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 20891788517.97584
+MSE - std: 2429230221.39341
+R2 - mean: 0.84927
+R2 - std: 0.01061
+
+Train time: 0.515958
+Test time: 0.002254
+
+---------------------------------------
+2025-05-06 08:57:05.627501
+Parameters: {'learning_rate': 0.0474079435437493, 'max_depth': 3, 'l2_leaf_reg': 0.5840737437277653, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 24566806067.76026
+MSE - std: 4143970005.38587
+R2 - mean: 0.82517
+R2 - std: 0.01254
+
+Train time: 0.284888
+Test time: 0.002099
+
+---------------------------------------
+2025-05-06 08:57:06.342793
+Parameters: {'learning_rate': 0.19014387244900488, 'max_depth': 5, 'l2_leaf_reg': 0.944966955135611, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 16545928792.57004
+MSE - std: 2624038738.64364
+R2 - mean: 0.88217
+R2 - std: 0.00706
+
+Train time: 0.416282
+Test time: 0.002260
+
+---------------------------------------
+2025-05-06 08:57:07.016482
+Parameters: {'learning_rate': 0.011353693536104567, 'max_depth': 5, 'l2_leaf_reg': 0.6923358366595646, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 50983795311.98941
+MSE - std: 9452905538.93431
+R2 - mean: 0.63903
+R2 - std: 0.02078
+
+Train time: 0.419489
+Test time: 0.002079
+
+---------------------------------------
+2025-05-06 08:57:07.462266
+Parameters: {'learning_rate': 0.019902495605813288, 'max_depth': 2, 'l2_leaf_reg': 1.0744447611652612, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 53909766870.57517
+MSE - std: 11181269190.74358
+R2 - mean: 0.61954
+R2 - std: 0.02883
+
+Train time: 0.236951
+Test time: 0.002058
+
+---------------------------------------
+2025-05-06 08:57:08.458865
+Parameters: {'learning_rate': 0.03894658203680138, 'max_depth': 7, 'l2_leaf_reg': 3.3013129452946237, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
+
+MSE - mean: 22997792657.17260
+MSE - std: 6114192682.32610
+R2 - mean: 0.83839
+R2 - std: 0.02390
+
+Train time: 0.687501
+Test time: 0.002253
 
 ---------------------------------------

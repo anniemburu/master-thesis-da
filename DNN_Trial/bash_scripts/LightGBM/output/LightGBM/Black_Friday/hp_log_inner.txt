@@ -1,300 +1,300 @@
-2025-05-05 09:01:53.801191
-Parameters: {'num_leaves': 2, 'lambda_l1': 0.02800853403722709, 'lambda_l2': 2.2938973504531265e-07, 'learning_rate': 0.12276829854708364, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:24:54.754508
+Parameters: {'num_leaves': 2, 'lambda_l1': 0.05351168221533796, 'lambda_l2': 0.014324133899367309, 'learning_rate': 0.07458537699825031, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 13079689.82759
-MSE - std: 159751.68711
-R2 - mean: 0.49199
-R2 - std: 0.00307
+MSE - mean: 13285253.44188
+MSE - std: 159754.10361
+R2 - mean: 0.48401
+R2 - std: 0.00274
 
-Train time: 0.221032
-Test time: 0.020945
-
----------------------------------------
-2025-05-05 09:02:54.849803
-Parameters: {'num_leaves': 1134, 'lambda_l1': 0.019923542269882844, 'lambda_l2': 2.2715384003373855, 'learning_rate': 0.03990982219203067, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12229080.47442
-MSE - std: 151700.60080
-R2 - mean: 0.52503
-R2 - std: 0.00298
-
-Train time: 18.788801
-Test time: 0.253112
+Train time: 0.222896
+Test time: 0.020030
 
 ---------------------------------------
-2025-05-05 09:02:56.412844
-Parameters: {'num_leaves': 6, 'lambda_l1': 0.0017894123436802377, 'lambda_l2': 8.903681272720721e-05, 'learning_rate': 0.2701842651077583, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:24:56.519471
+Parameters: {'num_leaves': 8, 'lambda_l1': 1.1028217409824095e-05, 'lambda_l2': 2.3643212891903916e-08, 'learning_rate': 0.10346008362595033, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12254147.76688
-MSE - std: 172999.16721
-R2 - mean: 0.52406
-R2 - std: 0.00418
+MSE - mean: 12323503.94677
+MSE - std: 175613.73188
+R2 - mean: 0.52137
+R2 - std: 0.00354
 
-Train time: 0.377286
-Test time: 0.033307
-
----------------------------------------
-2025-05-05 09:03:32.508168
-Parameters: {'num_leaves': 2981, 'lambda_l1': 0.05131496569583277, 'lambda_l2': 7.134524495301616e-06, 'learning_rate': 0.21754848543870517, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12333427.37440
-MSE - std: 145989.07156
-R2 - mean: 0.52097
-R2 - std: 0.00361
-
-Train time: 11.754435
-Test time: 0.039702
+Train time: 0.472906
+Test time: 0.044734
 
 ---------------------------------------
-2025-05-05 09:03:33.795878
-Parameters: {'num_leaves': 3, 'lambda_l1': 1.3054500179799894e-07, 'lambda_l2': 5.736088316100388e-08, 'learning_rate': 0.2569924886665087, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:25:35.321307
+Parameters: {'num_leaves': 646, 'lambda_l1': 4.1292797593162954e-05, 'lambda_l2': 0.0006041745680304588, 'learning_rate': 0.0131150837251822, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12552935.66441
-MSE - std: 171801.41516
-R2 - mean: 0.51245
-R2 - std: 0.00381
+MSE - mean: 13220227.05922
+MSE - std: 202759.20681
+R2 - mean: 0.48655
+R2 - std: 0.00377
 
-Train time: 0.272207
-Test time: 0.024188
-
----------------------------------------
-2025-05-05 09:03:55.268324
-Parameters: {'num_leaves': 80, 'lambda_l1': 2.5203321132424632e-08, 'lambda_l2': 7.06415832115853, 'learning_rate': 0.017411107588666524, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12770907.04194
-MSE - std: 149855.34338
-R2 - mean: 0.50460
-R2 - std: 0.00714
-
-Train time: 2.267909
-Test time: 0.114782
+Train time: 11.829370
+Test time: 0.186960
 
 ---------------------------------------
-2025-05-05 09:04:08.455806
-Parameters: {'num_leaves': 176, 'lambda_l1': 1.3719609405893296e-08, 'lambda_l2': 6.892215206826765e-06, 'learning_rate': 0.04021873588716364, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:25:36.617674
+Parameters: {'num_leaves': 3, 'lambda_l1': 0.0002178143414445454, 'lambda_l2': 0.009529906033713677, 'learning_rate': 0.09518155724293596, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12175292.20380
-MSE - std: 158473.06915
-R2 - mean: 0.52770
-R2 - std: 0.00764
+MSE - mean: 12869693.41238
+MSE - std: 164997.61254
+R2 - mean: 0.50015
+R2 - std: 0.00323
 
-Train time: 4.114673
-Test time: 0.155619
-
----------------------------------------
-2025-05-05 09:04:10.560110
-Parameters: {'num_leaves': 11, 'lambda_l1': 1.178782267372403e-07, 'lambda_l2': 0.031154482380080555, 'learning_rate': 0.06607875077207631, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12373231.14331
-MSE - std: 162891.21105
-R2 - mean: 0.52002
-R2 - std: 0.00767
-
-Train time: 0.602906
-Test time: 0.053451
+Train time: 0.285351
+Test time: 0.027187
 
 ---------------------------------------
-2025-05-05 09:04:14.839625
-Parameters: {'num_leaves': 41, 'lambda_l1': 1.6246353387252257, 'lambda_l2': 0.02095985206374018, 'learning_rate': 0.06414541439884143, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:25:38.437733
+Parameters: {'num_leaves': 8, 'lambda_l1': 1.6522953759812016e-07, 'lambda_l2': 0.000326967330490013, 'learning_rate': 0.012683692330829114, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12167240.84853
-MSE - std: 163215.08527
-R2 - mean: 0.52801
-R2 - std: 0.00770
+MSE - mean: 13982173.06386
+MSE - std: 214453.32692
+R2 - mean: 0.45696
+R2 - std: 0.00367
 
-Train time: 1.301460
-Test time: 0.094389
-
----------------------------------------
-2025-05-05 09:04:50.278438
-Parameters: {'num_leaves': 2328, 'lambda_l1': 1.4346975735921769e-05, 'lambda_l2': 0.6518946582074285, 'learning_rate': 0.21912481408833834, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12296126.18926
-MSE - std: 171756.41730
-R2 - mean: 0.52301
-R2 - std: 0.00810
-
-Train time: 12.073295
-Test time: 0.038754
+Train time: 0.512327
+Test time: 0.034753
 
 ---------------------------------------
-2025-05-05 09:04:59.622638
-Parameters: {'num_leaves': 108, 'lambda_l1': 8.331260709140018, 'lambda_l2': 3.193676887578798, 'learning_rate': 0.18190204457382508, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:26:02.250092
+Parameters: {'num_leaves': 350, 'lambda_l1': 1.2267815664999658e-08, 'lambda_l2': 9.48931169010531e-05, 'learning_rate': 0.016382628642003457, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12115418.80005
-MSE - std: 192988.31700
-R2 - mean: 0.52974
-R2 - std: 0.00923
+MSE - mean: 12795817.07336
+MSE - std: 154197.98946
+R2 - mean: 0.50363
+R2 - std: 0.00711
 
-Train time: 2.945453
-Test time: 0.059058
-
----------------------------------------
-2025-05-05 09:05:06.456714
-Parameters: {'num_leaves': 61, 'lambda_l1': 3.7329017852954014e-05, 'lambda_l2': 1.0190108163316518e-07, 'learning_rate': 0.014323224639510955, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 13159964.37917
-MSE - std: 133428.67894
-R2 - mean: 0.48921
-R2 - std: 0.00650
-
-Train time: 2.491476
-Test time: 0.094107
+Train time: 7.237858
+Test time: 0.172520
 
 ---------------------------------------
-2025-05-05 09:05:08.413625
-Parameters: {'num_leaves': 8, 'lambda_l1': 0.3628318314453156, 'lambda_l2': 0.00924667566786961, 'learning_rate': 0.021583243466467388, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:26:35.707657
+Parameters: {'num_leaves': 523, 'lambda_l1': 4.485835857083272, 'lambda_l2': 1.5833464598680443e-07, 'learning_rate': 0.0560058904782755, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 13021249.38761
-MSE - std: 144045.32158
-R2 - mean: 0.49459
-R2 - std: 0.00692
+MSE - mean: 12202257.45728
+MSE - std: 175096.72395
+R2 - mean: 0.52665
+R2 - std: 0.00807
 
-Train time: 0.551375
-Test time: 0.031715
-
----------------------------------------
-2025-05-05 09:06:09.334773
-Parameters: {'num_leaves': 2641, 'lambda_l1': 4.4833682493389544e-05, 'lambda_l2': 8.354541378323765e-07, 'learning_rate': 0.09482179222999698, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12331483.30428
-MSE - std: 164961.50162
-R2 - mean: 0.52135
-R2 - std: 0.00826
-
-Train time: 20.040661
-Test time: 0.107469
+Train time: 10.291498
+Test time: 0.207767
 
 ---------------------------------------
-2025-05-05 09:06:10.744246
-Parameters: {'num_leaves': 4, 'lambda_l1': 0.00024834050292895044, 'lambda_l2': 9.351253777884268e-05, 'learning_rate': 0.0870440923540193, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:26:59.425248
+Parameters: {'num_leaves': 877, 'lambda_l1': 2.1097929182490613e-08, 'lambda_l2': 8.206623066360664e-06, 'learning_rate': 0.15937455603134287, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12782460.90695
-MSE - std: 173995.88464
-R2 - mean: 0.50386
-R2 - std: 0.00823
+MSE - mean: 12255402.87299
+MSE - std: 177512.91723
+R2 - mean: 0.52459
+R2 - std: 0.00827
 
-Train time: 0.333407
-Test time: 0.029040
-
----------------------------------------
-2025-05-05 09:06:17.380557
-Parameters: {'num_leaves': 59, 'lambda_l1': 0.01715445906577519, 'lambda_l2': 4.408559629404267, 'learning_rate': 0.11746279136106134, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12069477.27369
-MSE - std: 100091.55606
-R2 - mean: 0.53031
-R2 - std: 0.00482
-
-Train time: 1.629686
-Test time: 0.098191
+Train time: 7.043432
+Test time: 0.066670
 
 ---------------------------------------
-2025-05-05 09:06:18.723685
-Parameters: {'num_leaves': 3, 'lambda_l1': 6.980153900507467e-05, 'lambda_l2': 0.8601566383094476, 'learning_rate': 0.04928470442462326, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:27:39.042165
+Parameters: {'num_leaves': 1323, 'lambda_l1': 3.838506220633528e-07, 'lambda_l2': 0.0063343619669809425, 'learning_rate': 0.12110737696855936, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 13090553.91600
-MSE - std: 144009.86843
-R2 - mean: 0.49058
-R2 - std: 0.00541
+MSE - mean: 12243207.21258
+MSE - std: 173198.50448
+R2 - mean: 0.52506
+R2 - std: 0.00799
 
-Train time: 0.296812
-Test time: 0.029337
+Train time: 12.150445
+Test time: 0.086969
 
 ---------------------------------------
-2025-05-05 09:06:20.377084
-Parameters: {'num_leaves': 6, 'lambda_l1': 2.88308585978313, 'lambda_l2': 0.709683201178939, 'learning_rate': 0.051766793400035455, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:27:40.550924
+Parameters: {'num_leaves': 5, 'lambda_l1': 6.930070683527721e-07, 'lambda_l2': 0.062325729926397004, 'learning_rate': 0.08980127945028453, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12622080.97558
-MSE - std: 129256.78890
-R2 - mean: 0.50881
+MSE - mean: 12615275.13904
+MSE - std: 155199.92350
+R2 - mean: 0.51063
+R2 - std: 0.00734
+
+Train time: 0.375908
+Test time: 0.034379
+
+---------------------------------------
+2025-05-06 09:27:51.147177
+Parameters: {'num_leaves': 31, 'lambda_l1': 0.024358594066177137, 'lambda_l2': 9.154453363869028e-08, 'learning_rate': 0.011998385044953635, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 13733418.56257
+MSE - std: 115872.42293
+R2 - mean: 0.46696
+R2 - std: 0.00584
+
+Train time: 1.145652
+Test time: 0.080252
+
+---------------------------------------
+2025-05-06 09:28:09.428854
+Parameters: {'num_leaves': 264, 'lambda_l1': 0.0024349601580684176, 'lambda_l2': 1.944092746297476, 'learning_rate': 0.048215075910494655, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12184180.42232
+MSE - std: 162625.59481
+R2 - mean: 0.52707
+R2 - std: 0.00803
+
+Train time: 5.692050
+Test time: 0.194213
+
+---------------------------------------
+2025-05-06 09:28:11.164581
+Parameters: {'num_leaves': 7, 'lambda_l1': 1.4864578476285607e-06, 'lambda_l2': 6.019163372235822, 'learning_rate': 0.011093628485197788, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 14549684.67100
+MSE - std: 93573.67486
+R2 - mean: 0.43528
+R2 - std: 0.00498
+
+Train time: 0.476573
+Test time: 0.033137
+
+---------------------------------------
+2025-05-06 09:28:38.683906
+Parameters: {'num_leaves': 4082, 'lambda_l1': 1.3044384315482747, 'lambda_l2': 1.29239972901983e-08, 'learning_rate': 0.27981549506740616, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12332996.54193
+MSE - std: 157704.47852
+R2 - mean: 0.52130
+R2 - std: 0.00773
+
+Train time: 8.568360
+Test time: 0.031765
+
+---------------------------------------
+2025-05-06 09:28:54.273297
+Parameters: {'num_leaves': 543, 'lambda_l1': 3.894275723839812e-07, 'lambda_l2': 0.2805267507585902, 'learning_rate': 0.18591920427403197, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12240324.13309
+MSE - std: 175222.19982
+R2 - mean: 0.52489
+R2 - std: 0.00853
+
+Train time: 4.655296
+Test time: 0.056727
+
+---------------------------------------
+2025-05-06 09:29:16.652918
+Parameters: {'num_leaves': 268, 'lambda_l1': 9.180285265605561e-06, 'lambda_l2': 0.00029505224187427746, 'learning_rate': 0.06702163679279208, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12159119.73180
+MSE - std: 102695.15571
+R2 - mean: 0.52682
+R2 - std: 0.00526
+
+Train time: 5.714366
+Test time: 0.192529
+
+---------------------------------------
+2025-05-06 09:29:42.545133
+Parameters: {'num_leaves': 390, 'lambda_l1': 1.45255264775953e-06, 'lambda_l2': 0.0018011637329439119, 'learning_rate': 0.015345503831353899, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12903954.38081
+MSE - std: 113293.36801
+R2 - mean: 0.49784
+R2 - std: 0.00444
+
+Train time: 7.986624
+Test time: 0.171619
+
+---------------------------------------
+2025-05-06 09:29:44.799062
+Parameters: {'num_leaves': 14, 'lambda_l1': 1.0434615812287003e-07, 'lambda_l2': 5.589633565428629e-07, 'learning_rate': 0.09480507789770398, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12217473.56117
+MSE - std: 103956.42456
+R2 - mean: 0.52455
+R2 - std: 0.00472
+
+Train time: 0.640647
+Test time: 0.060316
+
+---------------------------------------
+2025-05-06 09:30:07.679485
+Parameters: {'num_leaves': 337, 'lambda_l1': 6.587281687464971, 'lambda_l2': 2.524405790173316e-06, 'learning_rate': 0.029861697435245887, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12271238.46278
+MSE - std: 102978.16221
+R2 - mean: 0.52245
+R2 - std: 0.00519
+
+Train time: 7.096557
+Test time: 0.189399
+
+---------------------------------------
+2025-05-06 09:30:38.208685
+Parameters: {'num_leaves': 655, 'lambda_l1': 0.002623739436885742, 'lambda_l2': 1.8002817678389758, 'learning_rate': 0.026730450166637082, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12316582.26549
+MSE - std: 107608.81835
+R2 - mean: 0.52069
+R2 - std: 0.00510
+
+Train time: 9.352430
+Test time: 0.200919
+
+---------------------------------------
+2025-05-06 09:30:44.236376
+Parameters: {'num_leaves': 16, 'lambda_l1': 3.366625740951239e-06, 'lambda_l2': 0.0002557413934101249, 'learning_rate': 0.2612380274923144, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12187322.25205
+MSE - std: 179880.87150
+R2 - mean: 0.52687
+R2 - std: 0.00604
+
+Train time: 0.613506
+Test time: 0.047496
+
+---------------------------------------
+2025-05-06 09:31:04.444242
+Parameters: {'num_leaves': 293, 'lambda_l1': 6.5071739523538765, 'lambda_l2': 0.13680988009684414, 'learning_rate': 0.024502543456105703, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12381639.71052
+MSE - std: 183289.98942
+R2 - mean: 0.51933
+R2 - std: 0.00592
+
+Train time: 6.333132
+Test time: 0.181857
+
+---------------------------------------
+2025-05-06 09:31:11.249236
+Parameters: {'num_leaves': 82, 'lambda_l1': 0.15733308546736582, 'lambda_l2': 1.465534875984741e-07, 'learning_rate': 0.10434694857266238, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12093800.95402
+MSE - std: 193101.45793
+R2 - mean: 0.53051
+R2 - std: 0.00638
+
+Train time: 2.069156
+Test time: 0.117749
+
+---------------------------------------
+2025-05-06 09:31:13.702565
+Parameters: {'num_leaves': 15, 'lambda_l1': 2.7675025835083476e-06, 'lambda_l2': 2.3001009948676745e-06, 'learning_rate': 0.033033818047951975, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+MSE - mean: 12505704.92794
+MSE - std: 164214.36341
+R2 - mean: 0.51451
 R2 - std: 0.00540
 
-Train time: 0.435298
-Test time: 0.035614
+Train time: 0.739971
+Test time: 0.065203
 
 ---------------------------------------
-2025-05-05 09:06:23.964889
-Parameters: {'num_leaves': 29, 'lambda_l1': 0.9157609405941877, 'lambda_l2': 8.816125522379847e-06, 'learning_rate': 0.030255355816141603, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+2025-05-06 09:31:22.677251
+Parameters: {'num_leaves': 167, 'lambda_l1': 0.01213565833807089, 'lambda_l2': 0.02033541303603609, 'learning_rate': 0.14818160983693174, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
-MSE - mean: 12344174.99119
-MSE - std: 107311.21706
-R2 - mean: 0.51962
-R2 - std: 0.00455
+MSE - mean: 12153635.29147
+MSE - std: 180090.65496
+R2 - mean: 0.52818
+R2 - std: 0.00637
 
-Train time: 1.103008
-Test time: 0.090594
-
----------------------------------------
-2025-05-05 09:06:27.431229
-Parameters: {'num_leaves': 33, 'lambda_l1': 1.282508193524323, 'lambda_l2': 6.818637066236609e-07, 'learning_rate': 0.19010497860673373, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12069995.91602
-MSE - std: 92411.89780
-R2 - mean: 0.53029
-R2 - std: 0.00473
-
-Train time: 0.988829
-Test time: 0.064548
-
----------------------------------------
-2025-05-05 09:06:29.887668
-Parameters: {'num_leaves': 3, 'lambda_l1': 0.00023929205372510685, 'lambda_l2': 4.3995589837042144e-08, 'learning_rate': 0.03729412894723579, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 13348942.51280
-MSE - std: 143509.32666
-R2 - mean: 0.48177
-R2 - std: 0.00479
-
-Train time: 0.293070
-Test time: 0.025328
-
----------------------------------------
-2025-05-05 09:06:32.956464
-Parameters: {'num_leaves': 23, 'lambda_l1': 2.6692987495273544, 'lambda_l2': 0.0009031256884891314, 'learning_rate': 0.048700765231794625, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12322895.98234
-MSE - std: 177164.71240
-R2 - mean: 0.52161
-R2 - std: 0.00581
-
-Train time: 0.926847
-Test time: 0.080865
-
----------------------------------------
-2025-05-05 09:06:36.711574
-Parameters: {'num_leaves': 32, 'lambda_l1': 0.018920172882487624, 'lambda_l2': 0.33165814273516175, 'learning_rate': 0.04808365866260162, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12276865.12379
-MSE - std: 178211.65402
-R2 - mean: 0.52340
-R2 - std: 0.00568
-
-Train time: 1.154303
-Test time: 0.093463
-
----------------------------------------
-2025-05-05 09:06:47.042168
-Parameters: {'num_leaves': 137, 'lambda_l1': 6.301946108745436e-05, 'lambda_l2': 3.53635506129354e-07, 'learning_rate': 0.07496360619777417, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12129241.39319
-MSE - std: 190274.71718
-R2 - mean: 0.52913
-R2 - std: 0.00632
-
-Train time: 3.191641
-Test time: 0.137341
-
----------------------------------------
-2025-05-05 09:06:49.053910
-Parameters: {'num_leaves': 11, 'lambda_l1': 0.00022337320434861276, 'lambda_l2': 0.00047273071160246335, 'learning_rate': 0.11775679621727776, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
-
-MSE - mean: 12321517.77878
-MSE - std: 176477.92600
-R2 - mean: 0.52166
-R2 - std: 0.00587
-
-Train time: 0.538567
-Test time: 0.047350
+Train time: 2.684605
+Test time: 0.081291
 
 ---------------------------------------

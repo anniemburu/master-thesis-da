@@ -1,300 +1,300 @@
-2025-05-05 08:29:30.021169
-Parameters: {'learning_rate': 0.015181655988892161, 'max_depth': 11, 'l2_leaf_reg': 14.100609365091131, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:28.261787
+Parameters: {'learning_rate': 0.0767342512975752, 'max_depth': 8, 'l2_leaf_reg': 4.7191946093835035, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 329627959.01285
-MSE - std: 567113117.93899
-R2 - mean: 0.05432
-R2 - std: 0.05045
+MSE - mean: 322557246.17962
+MSE - std: 565809763.81956
+R2 - mean: 0.22563
+R2 - std: 0.25445
 
-Train time: 1.377295
+Train time: 0.388420
+Test time: 0.001121
+
+---------------------------------------
+2025-05-06 08:55:28.506035
+Parameters: {'learning_rate': 0.08569289638796276, 'max_depth': 2, 'l2_leaf_reg': 1.8853737274295619, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 318304837.38094
+MSE - std: 566140992.16974
+R2 - mean: 0.35586
+R2 - std: 0.33934
+
+Train time: 0.123503
+Test time: 0.000999
+
+---------------------------------------
+2025-05-06 08:55:28.758907
+Parameters: {'learning_rate': 0.015866679670724134, 'max_depth': 2, 'l2_leaf_reg': 3.5469018558230556, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 329550544.50756
+MSE - std: 567719477.07609
+R2 - mean: 0.07155
+R2 - std: 0.07086
+
+Train time: 0.130601
+Test time: 0.001114
+
+---------------------------------------
+2025-05-06 08:55:28.976114
+Parameters: {'learning_rate': 0.16463965015126517, 'max_depth': 2, 'l2_leaf_reg': 1.5901776790754103, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 316166910.89334
+MSE - std: 566072573.69986
+R2 - mean: 0.38008
+R2 - std: 0.33446
+
+Train time: 0.105866
 Test time: 0.001091
 
 ---------------------------------------
-2025-05-05 08:29:30.414860
-Parameters: {'learning_rate': 0.08960632739597317, 'max_depth': 5, 'l2_leaf_reg': 26.55834150969286, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:29.281797
+Parameters: {'learning_rate': 0.29817831510509657, 'max_depth': 3, 'l2_leaf_reg': 8.923507503405327, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 327608850.75413
-MSE - std: 564364926.79050
-R2 - mean: 0.03791
-R2 - std: 0.02043
+MSE - mean: 315600082.68033
+MSE - std: 564666014.44606
+R2 - mean: 0.42385
+R2 - std: 0.44842
 
-Train time: 0.202646
-Test time: 0.000945
-
----------------------------------------
-2025-05-05 08:29:31.737144
-Parameters: {'learning_rate': 0.03401873765635576, 'max_depth': 9, 'l2_leaf_reg': 1.7138522781318326, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 316958768.64799
-MSE - std: 570137313.41635
-R2 - mean: 0.50567
-R2 - std: 0.36386
-
-Train time: 0.822426
-Test time: 0.001128
+Train time: 0.157530
+Test time: 0.001109
 
 ---------------------------------------
-2025-05-05 08:29:33.586205
-Parameters: {'learning_rate': 0.020131741367127764, 'max_depth': 10, 'l2_leaf_reg': 0.9415972317553729, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:29.730856
+Parameters: {'learning_rate': 0.013941114106006595, 'max_depth': 4, 'l2_leaf_reg': 3.751746679702712, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 315610629.38534
-MSE - std: 570831211.25130
-R2 - mean: 0.55616
-R2 - std: 0.39864
+MSE - mean: 366339864.11872
+MSE - std: 390108200.14324
+R2 - mean: 0.33904
+R2 - std: 0.17741
 
-Train time: 1.390657
-Test time: 0.001154
-
----------------------------------------
-2025-05-05 08:29:33.833892
-Parameters: {'learning_rate': 0.01165055269302689, 'max_depth': 2, 'l2_leaf_reg': 2.9784295967858654, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 329684606.72320
-MSE - std: 568499711.94750
-R2 - mean: 0.07866
-R2 - std: 0.07767
-
-Train time: 0.126653
-Test time: 0.000896
+Train time: 0.207321
+Test time: 0.001194
 
 ---------------------------------------
-2025-05-05 08:29:34.546962
-Parameters: {'learning_rate': 0.1824950543699857, 'max_depth': 5, 'l2_leaf_reg': 6.38204191612927, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:30.064933
+Parameters: {'learning_rate': 0.19488548731331082, 'max_depth': 4, 'l2_leaf_reg': 26.263903957093753, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 152032424.46501
-MSE - std: 231310590.41770
-R2 - mean: 0.59229
-R2 - std: 0.31631
+MSE - mean: 250077064.06771
+MSE - std: 268498533.15968
+R2 - mean: 0.33452
+R2 - std: 0.26348
 
-Train time: 0.180685
-Test time: 0.001079
-
----------------------------------------
-2025-05-05 08:29:34.835929
-Parameters: {'learning_rate': 0.04512955415362793, 'max_depth': 3, 'l2_leaf_reg': 27.482571338970057, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 469439490.64891
-MSE - std: 507920572.60000
-R2 - mean: 0.15803
-R2 - std: 0.09205
-
-Train time: 0.156608
-Test time: 0.000961
+Train time: 0.182503
+Test time: 0.001175
 
 ---------------------------------------
-2025-05-05 08:29:35.046592
-Parameters: {'learning_rate': 0.1323930373809228, 'max_depth': 3, 'l2_leaf_reg': 5.520041818002472, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:30.318644
+Parameters: {'learning_rate': 0.015116126169626813, 'max_depth': 2, 'l2_leaf_reg': 2.2047058347904414, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 173614922.14935
-MSE - std: 253027879.92685
-R2 - mean: 0.46358
-R2 - std: 0.32638
+MSE - mean: 271618190.80829
+MSE - std: 273607730.07658
+R2 - mean: 0.38302
+R2 - std: 0.25059
 
-Train time: 0.109051
-Test time: 0.000940
-
----------------------------------------
-2025-05-05 08:29:35.303949
-Parameters: {'learning_rate': 0.019514302010126265, 'max_depth': 2, 'l2_leaf_reg': 15.05402029374802, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 499722725.78070
-MSE - std: 544945101.65196
-R2 - mean: 0.13817
-R2 - std: 0.06958
-
-Train time: 0.130488
-Test time: 0.001006
+Train time: 0.128358
+Test time: 0.001054
 
 ---------------------------------------
-2025-05-05 08:29:35.594743
-Parameters: {'learning_rate': 0.21388956108078888, 'max_depth': 4, 'l2_leaf_reg': 1.5834041021102792, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:31.531331
+Parameters: {'learning_rate': 0.10072717575520725, 'max_depth': 11, 'l2_leaf_reg': 29.59026168395813, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 31732548.92054
-MSE - std: 36172389.44453
-R2 - mean: 0.67120
-R2 - std: 0.33647
+MSE - mean: 361636242.89991
+MSE - std: 379048639.79518
+R2 - mean: 0.25914
+R2 - std: 0.16508
 
-Train time: 0.160413
-Test time: 0.001105
-
----------------------------------------
-2025-05-05 08:29:35.931361
-Parameters: {'learning_rate': 0.1367127086390926, 'max_depth': 3, 'l2_leaf_reg': 6.806897681332191, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 321986823.28835
-MSE - std: 571918364.96975
-R2 - mean: 0.33745
-R2 - std: 0.35998
-
-Train time: 0.128743
-Test time: 0.000955
+Train time: 0.893444
+Test time: 0.001153
 
 ---------------------------------------
-2025-05-05 08:29:36.398500
-Parameters: {'learning_rate': 0.17662706345891835, 'max_depth': 7, 'l2_leaf_reg': 2.8841125455673686, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:32.172481
+Parameters: {'learning_rate': 0.016216033040678132, 'max_depth': 7, 'l2_leaf_reg': 0.6067570402684513, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 318099392.54196
-MSE - std: 571919222.58426
-R2 - mean: 0.41648
-R2 - std: 0.41362
+MSE - mean: 104507942.09555
+MSE - std: 83811534.51744
+R2 - mean: 0.62923
+R2 - std: 0.30161
 
-Train time: 0.275166
-Test time: 0.001006
-
----------------------------------------
-2025-05-05 08:29:36.621305
-Parameters: {'learning_rate': 0.021485498140450063, 'max_depth': 2, 'l2_leaf_reg': 1.1644731633352001, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 326753218.42702
-MSE - std: 571980440.94150
-R2 - mean: 0.21101
-R2 - std: 0.20474
-
-Train time: 0.110699
-Test time: 0.000951
+Train time: 0.386874
+Test time: 0.001144
 
 ---------------------------------------
-2025-05-05 08:29:36.839434
-Parameters: {'learning_rate': 0.20443704813553265, 'max_depth': 3, 'l2_leaf_reg': 17.915184145784067, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:32.623918
+Parameters: {'learning_rate': 0.06524305094147552, 'max_depth': 4, 'l2_leaf_reg': 15.404918776245266, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 326052704.76532
-MSE - std: 569971508.98213
-R2 - mean: 0.13621
-R2 - std: 0.13889
+MSE - mean: 330069666.97477
+MSE - std: 568370000.87761
+R2 - mean: 0.06770
+R2 - std: 0.06810
 
-Train time: 0.108576
-Test time: 0.000901
-
----------------------------------------
-2025-05-05 08:29:37.587247
-Parameters: {'learning_rate': 0.014195424546413682, 'max_depth': 8, 'l2_leaf_reg': 3.057726370578138, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 327608988.13687
-MSE - std: 568347707.04049
-R2 - mean: 0.15683
-R2 - std: 0.13547
-
-Train time: 0.465216
-Test time: 0.001019
+Train time: 0.165561
+Test time: 0.001150
 
 ---------------------------------------
-2025-05-05 08:29:38.107129
-Parameters: {'learning_rate': 0.026341099120600387, 'max_depth': 4, 'l2_leaf_reg': 20.98958637191447, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:32.765395
+Parameters: {'learning_rate': 0.23519995726317217, 'max_depth': 2, 'l2_leaf_reg': 0.6501973849750305, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 499917433.00213
-MSE - std: 543951094.45207
-R2 - mean: 0.10724
-R2 - std: 0.08667
+MSE - mean: 323713258.41781
+MSE - std: 574155236.60963
+R2 - mean: 0.25393
+R2 - std: 0.18826
 
-Train time: 0.208360
-Test time: 0.000982
-
----------------------------------------
-2025-05-05 08:29:38.460971
-Parameters: {'learning_rate': 0.03283052438711538, 'max_depth': 4, 'l2_leaf_reg': 1.0716937961184236, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 57726104.38359
-MSE - std: 46463637.21070
-R2 - mean: 0.72123
-R2 - std: 0.30919
-
-Train time: 0.199333
-Test time: 0.000963
+Train time: 0.056606
+Test time: 0.000988
 
 ---------------------------------------
-2025-05-05 08:29:38.956106
-Parameters: {'learning_rate': 0.035507666440735955, 'max_depth': 6, 'l2_leaf_reg': 9.664357725495915, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:33.304136
+Parameters: {'learning_rate': 0.010757229621031338, 'max_depth': 6, 'l2_leaf_reg': 0.8112436447778619, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 338363008.30207
-MSE - std: 351333943.22692
-R2 - mean: 0.28966
-R2 - std: 0.17378
+MSE - mean: 320283708.25712
+MSE - std: 569796040.85271
+R2 - mean: 0.39710
+R2 - std: 0.28513
 
-Train time: 0.287243
+Train time: 0.319582
+Test time: 0.001146
+
+---------------------------------------
+2025-05-06 08:55:33.541772
+Parameters: {'learning_rate': 0.1443979651759767, 'max_depth': 3, 'l2_leaf_reg': 2.992576878500214, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 320019118.69385
+MSE - std: 573386468.65393
+R2 - mean: 0.38189
+R2 - std: 0.38740
+
+Train time: 0.120207
+Test time: 0.001094
+
+---------------------------------------
+2025-05-06 08:55:34.273908
+Parameters: {'learning_rate': 0.049265983094787046, 'max_depth': 8, 'l2_leaf_reg': 1.4206616645132664, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 317518049.76743
+MSE - std: 570376515.82706
+R2 - mean: 0.47198
+R2 - std: 0.34418
+
+Train time: 0.453010
+Test time: 0.001159
+
+---------------------------------------
+2025-05-06 08:55:35.865227
+Parameters: {'learning_rate': 0.039745994118378335, 'max_depth': 9, 'l2_leaf_reg': 0.5977068477280039, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 28998568.78005
+MSE - std: 41121513.13370
+R2 - mean: 0.77674
+R2 - std: 0.31597
+
+Train time: 0.852617
+Test time: 0.001288
+
+---------------------------------------
+2025-05-06 08:55:36.184558
+Parameters: {'learning_rate': 0.028119337521615367, 'max_depth': 3, 'l2_leaf_reg': 0.5213479862611115, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 70139500.59688
+MSE - std: 69338213.68683
+R2 - mean: 0.69381
+R2 - std: 0.30701
+
+Train time: 0.171590
 Test time: 0.001093
 
 ---------------------------------------
-2025-05-05 08:29:39.609885
-Parameters: {'learning_rate': 0.0103204734288511, 'max_depth': 7, 'l2_leaf_reg': 0.929545281177981, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:36.468046
+Parameters: {'learning_rate': 0.017055942515467815, 'max_depth': 2, 'l2_leaf_reg': 0.5343058561061691, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 228896651.95503
-MSE - std: 230643738.87827
-R2 - mean: 0.56690
-R2 - std: 0.23392
+MSE - mean: 125307322.26919
+MSE - std: 112510911.10282
+R2 - mean: 0.58080
+R2 - std: 0.28450
 
-Train time: 0.398510
-Test time: 0.001066
-
----------------------------------------
-2025-05-05 08:29:40.198487
-Parameters: {'learning_rate': 0.13951925285998687, 'max_depth': 7, 'l2_leaf_reg': 2.8093056080390704, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 26174900.99874
-MSE - std: 40893323.95664
-R2 - mean: 0.79255
-R2 - std: 0.30776
-
-Train time: 0.354114
-Test time: 0.001036
+Train time: 0.146694
+Test time: 0.001196
 
 ---------------------------------------
-2025-05-05 08:29:40.495255
-Parameters: {'learning_rate': 0.2669257055280245, 'max_depth': 2, 'l2_leaf_reg': 1.4752364555888118, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:36.796448
+Parameters: {'learning_rate': 0.08722533552521261, 'max_depth': 4, 'l2_leaf_reg': 1.3095119147433247, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 6698769.69488
-MSE - std: 7033990.66968
-R2 - mean: 0.70296
-R2 - std: 0.37006
+MSE - mean: 40131760.25175
+MSE - std: 45824035.50881
+R2 - mean: 0.75831
+R2 - std: 0.30008
 
-Train time: 0.108980
-Test time: 0.001040
-
----------------------------------------
-2025-05-05 08:29:40.997499
-Parameters: {'learning_rate': 0.11411805730714347, 'max_depth': 6, 'l2_leaf_reg': 1.3112581124861182, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 638248.78275
-MSE - std: 550154.09745
-R2 - mean: 0.98753
-R2 - std: 0.01395
-
-Train time: 0.293944
-Test time: 0.001034
+Train time: 0.183009
+Test time: 0.001029
 
 ---------------------------------------
-2025-05-05 08:29:41.210756
-Parameters: {'learning_rate': 0.14084919070138693, 'max_depth': 2, 'l2_leaf_reg': 0.5697406859157724, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:37.056442
+Parameters: {'learning_rate': 0.15675781937980618, 'max_depth': 2, 'l2_leaf_reg': 2.2418814237849194, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 8597229.25689
-MSE - std: 6548532.42365
-R2 - mean: 0.73115
-R2 - std: 0.35179
+MSE - mean: 29903012.70047
+MSE - std: 39448934.25061
+R2 - mean: 0.73524
+R2 - std: 0.31684
 
-Train time: 0.104802
-Test time: 0.001007
-
----------------------------------------
-2025-05-05 08:29:41.947439
-Parameters: {'learning_rate': 0.01446171371337295, 'max_depth': 8, 'l2_leaf_reg': 5.9108235707417975, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
-
-MSE - mean: 396806731.03384
-MSE - std: 469395166.51908
-R2 - mean: 0.33310
-R2 - std: 0.09053
-
-Train time: 0.460833
-Test time: 0.001052
+Train time: 0.135945
+Test time: 0.001149
 
 ---------------------------------------
-2025-05-05 08:29:42.223607
-Parameters: {'learning_rate': 0.012658085643625958, 'max_depth': 3, 'l2_leaf_reg': 5.552062982402901, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6]}
+2025-05-06 08:55:37.314092
+Parameters: {'learning_rate': 0.014582212953584712, 'max_depth': 2, 'l2_leaf_reg': 3.9797461887588557, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
 
-MSE - mean: 411669154.47308
-MSE - std: 483125026.81256
-R2 - mean: 0.21756
-R2 - std: 0.11929
+MSE - mean: 339833037.74500
+MSE - std: 395828817.22556
+R2 - mean: 0.28186
+R2 - std: 0.19401
 
-Train time: 0.151088
-Test time: 0.001034
+Train time: 0.111327
+Test time: 0.001061
+
+---------------------------------------
+2025-05-06 08:55:37.711373
+Parameters: {'learning_rate': 0.010808825460641934, 'max_depth': 5, 'l2_leaf_reg': 12.908576180727318, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 515570562.70962
+MSE - std: 608316382.76459
+R2 - mean: 0.10013
+R2 - std: 0.04941
+
+Train time: 0.216348
+Test time: 0.001087
+
+---------------------------------------
+2025-05-06 08:55:37.930613
+Parameters: {'learning_rate': 0.11240329749655098, 'max_depth': 2, 'l2_leaf_reg': 3.1541994421611292, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 17965172.60505
+MSE - std: 12304161.70725
+R2 - mean: 0.64063
+R2 - std: 0.40683
+
+Train time: 0.104781
+Test time: 0.001023
+
+---------------------------------------
+2025-05-06 08:55:38.258147
+Parameters: {'learning_rate': 0.013354642748719005, 'max_depth': 3, 'l2_leaf_reg': 1.1595418823448067, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 177023648.90266
+MSE - std: 206189290.73921
+R2 - mean: 0.62929
+R2 - std: 0.10636
+
+Train time: 0.185432
+Test time: 0.001055
+
+---------------------------------------
+2025-05-06 08:55:38.923339
+Parameters: {'learning_rate': 0.019018576828429543, 'max_depth': 7, 'l2_leaf_reg': 0.6076952735534923, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Brazillian_Houses/catboost_info', 'cat_features': [0, 6, 7]}
+
+MSE - mean: 56288470.92290
+MSE - std: 66006558.17663
+R2 - mean: 0.89248
+R2 - std: 0.01409
+
+Train time: 0.399670
+Test time: 0.001175
 
 ---------------------------------------

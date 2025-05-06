@@ -1,14 +1,14 @@
-2025-05-05 14:13:38.027683
+2025-05-06 10:10:41.561235
 XGBoost - SAT11 - train_model
 
-MSE - mean: 1714347.81739
-MSE - mean_std: 347018.20230
-R2 - mean: 0.70054
-R2 - mean_std: 0.06481
+MSE - mean: 1689050.63228
+MSE - mean_std: 379526.20928
+R2 - mean: 0.70509
+R2 - mean_std: 0.06908
 
-Train time: 0.349940
-Test time: 0.001059
+Train time: 0.321348
+Test time: 0.001032
 
-Best Parameters: {'max_depth': 3, 'alpha': 1.6855130119145107e-05, 'lambda': 0.00018849375861029817, 'eta': 0.15578562124567522, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 6, 'alpha': 1.2990735895136888e-06, 'lambda': 1.8060446939267034e-08, 'eta': 0.1331690599779273, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
