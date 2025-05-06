@@ -913,6 +913,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
         
         if args.class_comp:
+            print("In the gulag")
             #set obj to be regression
             args.objective = "regression" #rem to rreturn it back to norm
             sc = get_scorer(args)
@@ -925,7 +926,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             y_train_pred , y_test_pred = np.array([float(x) for x in y_train_pred]), np.array([float(x) for x in y_test_pred])  
             
             #evaluate
-            sc.eval(y_test, y_test_pred)
+            sc.eval(y_test, y_test_pred,curr_model.prediction_probabilities)
             
         else:
             # Compute scores on the output
@@ -1192,7 +1193,6 @@ if __name__ == "__main__":
     base_parser.add_argument('--outer_splits', type=int, default=5, help='Number of outer folds for nested cross-validation')
     base_parser.add_argument('--save_results', action='store_true', default=True, help='Save aggregated results file') # Control saving final results
     base_parser.add_argument('--no_save_results', action='store_false', dest='save_results')
-    base_parser.add_argument('--class_comp', action='store_false', default=False, help='Convert Classification to Regression')
 
     # Initial parse to check mode
     temp_args, unknown = base_parser.parse_known_args()
@@ -1213,7 +1213,7 @@ if __name__ == "__main__":
         parser.add_argument('--outer_splits', type=int, default=3, help='Number of outer folds for nested cross-validation')
         parser.add_argument('--save_results', action='store_false', default=False, help='Save aggregated results file')
         parser.add_argument('--no_save_results', action='store_false', dest='save_results')
-        parser.add_argument('--class_comp', action='store_false', default=False, help='Convert Classification to Regression')
+        
         arguments = parser.parse_args()
         print("Running Mode: Nested CV with Predefined Hyperparameters")
         print(f"Arguements: {arguments}")
