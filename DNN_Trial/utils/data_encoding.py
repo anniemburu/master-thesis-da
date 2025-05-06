@@ -26,6 +26,17 @@ def get_catidx(args):
         cat_idx = args.nominal_idx
     return cat_idx
 
+def get_catidx_v2(args):
+    if args.ordinal_idx != None and args.nominal_idx != None:
+        cat_idx = sorted(args.nominal_idx + args.ordinal_idx)
+    elif args.ordinal_idx != None:
+        cat_idx = args.ordinal_idx
+    elif args.nominal_idx != None:
+        cat_idx = args.nominal_idx
+
+    return cat_idx
+    
+
 def frequency_mapper(X_onehot, onehot_encoder):
     # Initialize a dictionary to store frequencies
     frequency_map = defaultdict(float)
@@ -322,9 +333,12 @@ def encoding(args, X_train, y_train, X_val, y_val):
             X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
 
             #print("OHE Done!!! \n")
+    if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":
+        args.cat = get_catidx_v2(args)
+    else:
+        args.cat_idx = get_catidx(args) # Index of categorical features
 
-    args.cat_idx = get_catidx(args) # Index of categorical features
-    print(F"Cat Idx V3 : {args.cat_idx} \n \n")
+    print(f"Cat Idx V3 : {args.cat_idx} \n \n")
     
 
     for i in args.cat_idx:
