@@ -148,7 +148,8 @@ class ResMLP(BaseModelTorch):
          raise NotImplementedError("Method only available for classification tasks")
       else:
          self.model.eval()
-         X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         #X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         X = X.clone().detach().to(torch.float32).to(self.device)
          output = torch.softmax(self.model(X), dim=1)
          probabilities = output.detach().cpu().numpy()
 
@@ -158,7 +159,8 @@ class ResMLP(BaseModelTorch):
 
    def _evaluate(self, X, y, class_weights):
          self.model.eval()
-         X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         #X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         X = X.clone().detach().to(torch.float32).to(self.device)
 
          with torch.no_grad():
             outputs = self.model(X).squeeze()
@@ -279,6 +281,7 @@ class MLP(BaseModelTorch):
             
    def predict(self, X):
       self.model.eval()
+      print(f"X in predict: {type(X)}")
       X = torch.tensor(X, dtype=torch.float32).to(self.device)
       
       with torch.no_grad():
@@ -300,7 +303,10 @@ class MLP(BaseModelTorch):
          raise NotImplementedError("Method only available for classification tasks")
       else:
          self.model.eval()
-         X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         print(f"X in predict proba: {type(X)}")
+
+         #X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         X = X.clone().detach().to(torch.float32).to(self.device)
          output = torch.softmax(self.model(X), dim=1)
          probabilities = output.detach().cpu().numpy()
 
@@ -310,7 +316,10 @@ class MLP(BaseModelTorch):
 
    def _evaluate(self, X, y, class_weights):
          self.model.eval()
-         X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         print(f"X in evaluate: {type(X)}")
+
+         #X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         X = X.clone().detach().to(torch.float32).to(self.device)
 
          with torch.no_grad():
             outputs = self.model(X).squeeze()
@@ -456,7 +465,6 @@ class FTTransformerWrapper(BaseModelTorch):
          raise NotImplementedError("Method only available for classification tasks")
       else:
          self.model.eval()
-         #X = torch.tensor(X, dtype=torch.float32).to(self.device)
          x_cont, x_cat = self._split_inputs(X)
 
          outputs = torch.softmax(self.model(x_cont, x_cat), dim=1)
