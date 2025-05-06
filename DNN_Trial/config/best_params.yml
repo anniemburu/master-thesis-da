@@ -1,5 +1,13 @@
 parameters:
   Abalone:
+    CatBoost: 
+      iterations: 100
+      l2_leaf_reg: 1.2142895041234418
+      learning_rate: 0.1780973833308435
+      max_depth: 4
+      od_type: Iter
+      od_wait: 20
+      verbose: 100
     FTTransformer:
       learning_rate: 0.0026312292554662967
       weight_decay: 0.000741227822541328
@@ -24,11 +32,14 @@ parameters:
       dropout: 0.8
       heads: 4
     NODE:
-      'num_layers': 2
-      'total_tree_count': 1024
-      'tree_depth': 6
+      'num_layers': 8
+      'total_tree_count': 2048
+      'tree_depth': 8
       'tree_output_dim': 3
   Allstate_Claims:
+    FTTransformer:
+      learning_rate: 0.00014266378836134144 
+      weight_decay: 7.973049353626902e-05
     MLP:
       d_block: 256
       d_in: 1093
@@ -49,6 +60,11 @@ parameters:
       dim: 64
       dropout: 0.7
       heads: 4
+    NODE:
+      'num_layers': 8
+      'total_tree_count': 2048
+      'tree_depth': 8
+      'tree_output_dim': 3
   Black_Friday:
     MLP:
       d_block: 256
@@ -163,6 +179,9 @@ parameters:
       'tree_depth': 6 
       'tree_output_dim': 2
   House_Prices_Nominal:
+    FTTransformer:
+      learning_rate: 0.0001991206295866777
+      weight_decay: 0.0025487180826797907
     MLP:
       d_block: 256
       d_in: 109
@@ -247,6 +266,9 @@ parameters:
       'tree_depth': 8
       'tree_output_dim': 3
   Mercedes_Benz:
+    FTTransformer:
+      learning_rate: 0.0004452048953174126
+      weight_decay: 1.7644038793799652e-06
     MLP:
       d_block: 256
       d_in: 547
