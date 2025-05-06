@@ -316,9 +316,6 @@ class MLP(BaseModelTorch):
             outputs = self.model(X).squeeze()
             loss = self._compute_loss(outputs, y, class_weights).item()
          return loss
-
-   
-
     
    @classmethod
    def define_trial_parameters(cls, trial, args):
