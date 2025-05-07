@@ -16,7 +16,199 @@ Test time: 0.000691
 Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.10461609715865526, 'd_in': 39, 'd_out': 40}
 
 
-2025-05-07 15:14:09.554024
+2025-05-05 15:34:36.752098
+MLP - Socmob - train_model
+
+Log Loss - mean: 3.82255
+Log Loss - mean_std: 0.10611
+AUC - mean: 0.54049
+AUC - mean_std: 0.02861
+Accuracy - mean: 0.06225
+Accuracy - mean_std: 0.05707
+F1 score - mean: 0.03244
+F1 score - mean_std: 0.03237
+
+Train time: 0.008055
+Test time: 0.000351
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.22268005920915276, 'd_in': 39, 'd_out': 40}
+
+
+2025-05-05 15:37:05.611832
+MLP - Socmob - test_model
+
+Log Loss - mean: 3.93002
+Log Loss - std: 0.00625
+AUC - mean: 0.50799
+AUC - std: 0.02150
+Accuracy - mean: 0.19435
+Accuracy - std: 0.01928
+F1 score - mean: 0.07662
+F1 score - std: 0.01158
+
+Train time: 0.018499
+Test time: 0.001356
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-05 15:40:18.298380
+MLP - Socmob - test_model
+
+Log Loss - mean: 3.93002
+Log Loss - std: 0.00625
+AUC - mean: 0.50799
+AUC - std: 0.02150
+Accuracy - mean: 0.19435
+Accuracy - std: 0.01928
+F1 score - mean: 0.07662
+F1 score - std: 0.01158
+
+Train time: 0.019033
+Test time: 0.001364
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-05 15:42:58.047333
+MLP - Socmob - test_model
+
+Log Loss - mean: 3.93002
+Log Loss - std: 0.00625
+AUC - mean: 0.50799
+AUC - std: 0.02150
+Accuracy - mean: 0.19435
+Accuracy - std: 0.01928
+F1 score - mean: 0.07662
+F1 score - std: 0.01158
+
+Train time: 0.018707
+Test time: 0.001292
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-05 15:48:00.793446
+MLP - Socmob - test_model
+
+MSE - mean: 67.73078
+MSE - std: 0.00000
+R2 - mean: 0.96079
+R2 - std: 0.00000
+
+Train time: 0.018311
+Test time: 0.001507
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-05 15:52:03.248198
+MLP - Socmob - test_model
+
+MSE - mean: 67.73078
+MSE - std: 0.00000
+R2 - mean: 0.96079
+R2 - std: 0.00000
+
+Train time: 0.019692
+Test time: 0.001388
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-05 15:59:03.885886
+MLP - Socmob - test_model
+
+MSE - mean: 67.73078
+MSE - std: 0.00000
+R2 - mean: 0.96079
+R2 - std: 0.00000
+
+Train time: 0.018744
+Test time: 0.001458
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-05 16:02:36.235773
+MLP - Socmob - test_model
+
+MSE - mean: 67.73078
+MSE - std: 0.00000
+R2 - mean: 0.96079
+R2 - std: 0.00000
+
+Train time: 0.018742
+Test time: 0.001450
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-06 10:45:11.840410
+MLP - Socmob - test_model
+
+Log Loss - mean: 3.93002
+Log Loss - std: 0.00625
+AUC - mean: 0.50799
+AUC - std: 0.02150
+Accuracy - mean: 0.19435
+Accuracy - std: 0.01928
+F1 score - mean: 0.07662
+F1 score - std: 0.01158
+
+Train time: 0.020732
+Test time: 0.001413
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-06 11:00:14.447631
+MLP - Socmob - test_model
+
+MSE - mean: 67.73078
+MSE - std: 0.00000
+R2 - mean: 0.96079
+R2 - std: 0.00000
+
+Train time: 0.019636
+Test time: 0.001238
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.22268005920915276, 'n_blocks': 2}
+
+
+2025-05-06 12:51:06.037733
+MLP - Socmob - test_model
+
+Log Loss - mean: 3.92839
+Log Loss - std: 0.00640
+AUC - mean: 0.51095
+AUC - std: 0.02089
+Accuracy - mean: 0.20127
+Accuracy - std: 0.01562
+F1 score - mean: 0.07537
+F1 score - std: 0.01048
+
+Train time: 0.019433
+Test time: 0.001291
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.10461609715865526, 'n_blocks': 2}
+
+
+2025-05-06 12:51:29.992403
+MLP - Socmob - test_model
+
+MSE - mean: 67.73078
+MSE - std: 0.00000
+R2 - mean: 0.96079
+R2 - std: 0.00000
+
+Train time: 0.018919
+Test time: 0.001407
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 53, 'dropout': 0.10461609715865526, 'n_blocks': 2}
+
+
+2025-05-07 09:26:53.876090
 MLP - Socmob - test_model
 
 MSE - mean: 693.74006
@@ -24,8 +216,8 @@ MSE - std: 0.00000
 R2 - mean: 0.59836
 R2 - std: 0.00000
 
-Train time: 0.089775
-Test time: 0.000787
+Train time: 0.017489
+Test time: 0.001186
 
 Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 6, 'dropout': 0.10461609715865526, 'n_blocks': 2}
 

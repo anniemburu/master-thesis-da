@@ -11,5 +11,5 @@
 cd ~/Master_Thesis/master-thesis-da/DNN_Trial
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate TabSurvey
-srun python3 train.py --config config/allstate.yml --model_name FTTransformer ----class_comp --epochs 100 --batch_size 8 --val_batch_size 32
+srun python3 train.py --config config/allstate.yml --model_name FTTransformer --class_comp --epochs 100 --batch_size 8 --val_batch_size 32
 
