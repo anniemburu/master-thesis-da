@@ -19,6 +19,7 @@ from utils.io_utils import update_yaml, save_results_to_file, save_hyperparamete
 from utils.parser import get_parser, get_given_parameters_parser
 from utils.visualization import loss_vizualization
 from sklearn.preprocessing import KBinsDiscretizer
+from sklearn.utils import resample
 
 from sklearn.model_selection import KFold, StratifiedKFold, train_test_split
 from sklearn.utils.class_weight import compute_class_weight
@@ -60,7 +61,7 @@ def bin_finder(args, y):
     """
     #start with Sturges' Rule
     bins = sturges(y, args)
-    
+
     return bins
 
 def bin_shifter(args, y_train, y_val):
@@ -814,7 +815,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
     test_timer = Timer()
 
     n_repeats = args.outer_splits
-    test_scores = []
+    mse_scores = []
+    r2_scores = []
 
     args_test_temp = copy.deepcopy(args)
 
@@ -830,6 +832,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
     for seed in range(n_repeats):
         print(f"--- Test Run {seed+1}/{n_repeats} ---")
         set_all_seeds(seed)
+
+        X_train, y_train = resample(X_train, y_train, random_state=seed)
 
         args = copy.deepcopy(args_test_temp) # Reset args for each test run
 
@@ -929,30 +933,48 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             y_train_pred , y_test_pred = np.array([float(x) for x in y_train_pred]), np.array([float(x) for x in y_test_pred])  
             
             #evaluate
-            sc.eval(y_test, y_test_pred,curr_model.prediction_probabilities)
+            error_results = sc.eval(y_test, y_test_pred,curr_model.prediction_probabilities)
             
         else:
             # Compute scores on the output
             if args.objective == "probabilistic_regression":
                 # Use the binning labels for evaluation
-                sc.eval(y_test_class, prediction, curr_model.prediction_probabilities, labels=np.unique(y_train_class))
+                error_results = sc.eval(y_test_class, prediction, curr_model.prediction_probabilities, labels=np.unique(y_train_class))
             else:
-                sc.eval(y_test_class, prediction, curr_model.prediction_probabilities)
+                error_results = sc.eval(y_test_class, prediction, curr_model.prediction_probabilities)
+
             print("After Evaluation")
 
             print(f'{sc.get_results()} \n \n')
 
+        #Append Scores
+        mse_scores.append(error_results['MSE'])
+        r2_scores.append(error_results['R2'])
         args.objective = orig_objective # Reset objective to original
+
+    print(f"MSE SCORES: {mse_scores}, R2 SCORES: {r2_scores}")
+
+    mse_mean = np.mean(mse_scores)
+    mse_std = np.std(mse_scores)
+
+    r2_mean = np.mean(r2_scores)
+    r2_std = np.std(r2_scores)
+
+    get_results = {"MSE - mean": mse_mean,
+                    "MSE - std": mse_std,
+                    "R2 - mean": r2_mean,
+                    "R2 - std": r2_std}
+    
 
     # Best run is saved to file
     if save_model:
         print("Saving model.....")
-        print("Results After CV:", sc.get_results())
+        print("Results After CV:", get_results)
         print("Train time:", train_timer.get_average_time())
         print("Inference time:", test_timer.get_average_time())
 
         # Save the all statistics to a file
-        save_results_to_file(args, sc.get_results(),
+        save_results_to_file(args, get_results,
                              train_timer.get_average_time(), test_timer.get_average_time(),
                              curr_model.params, "test_model")
 
@@ -966,7 +988,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         loss_vizualization(args, losses, type='test')  
 
     #print(get_output_path(args, filename="logging", file_type = None))
-    return sc, (train_timer.get_average_time(), test_timer.get_average_time()) #, (X_train, y_train_class, X_test, y_test_class), args
+    return sc, (train_timer.get_average_time(), test_timer.get_average_time()), get_results #, (X_train, y_train_class, X_test, y_test_class), args
 
 def loss_hist(args, type):
     path = get_output_path(args, filename="", directory='logging',file_type = None)
@@ -1101,25 +1123,6 @@ def main_once(args):
     # Let's assume we use the main dataset X, y for nested CV.
 
     print(f"Dataset: {args.dataset}, Model: {args.model_name}, Objective: {args.objective}")
-    """if args.objective == "probabilistic_regression": 
-        args.best_params_file = "config/best_params_class.yml"
-
-        with open(args.best_params_file, 'r') as file:
-            args.parameters = yaml.safe_load(file)
-            args.parameters =args.parameters['parameters']
-            
-    elif args.objective == "regression":
-        args.best_params_file = "config/best_params_reg.yml"
-
-        with open(args.best_params_file, 'r') as file:
-            args.parameters = yaml.safe_load(file)
-            args.parameters =args.parameters['parameters']
-            
-            print(f"Parameters: {args.parameters}")
-            print(len(args.parameters))
-            print(args.parameters.keys())
-
-    print(f"Best Params File: {args.best_params_file}")"""
 
     X, X_test, y, y_test = load_data(args, is_test=True) # Use the main dataset
 
@@ -1128,66 +1131,25 @@ def main_once(args):
 
     parameters = args.parameters[args.dataset][args.model_name]
 
-    #print(f"Parameters for {args.model_name}: {parameters}")
-    
-
     args.save_results = True # Ensure results are saved
 
-# Check if parameters are defined
+    # Check if parameters are defined
     if not hasattr(args, 'parameters') or \
        args.dataset not in args.parameters or \
        args.model_name not in args.parameters[args.dataset]:
         print(f"ERROR: Predefined parameters not found for dataset '{args.dataset}' and model '{args.model_name}' in config.")
         return
 
-    # Run nested CV with optimization disabled
-    #agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
-        #model_cls, X, y, args, optimize_params=False # Use predefined params
-    #)
+    
     print("Started Classification Module ...... ")
-    sc, timer = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
 
     print("\n--- Testin on Final Model Finished ---")
-    print("Aggregated Results:", sc.get_results())
+    print("Aggregated Results:", results)
     print(f"Avg Outer Fold Train Time: {timer[0]:.4f} sec")
     print(f"Avg Outer Fold Inference Time: {timer[1]:.4f} sec")
 
-    """print("After Before: THE ARGS .....")
-    print(args, "\n\n")
-    # Convert Classification to Regression
-    if args.objective == "probabilistic_regression":
-        X, y, X_test, y_test = data[0], data[1], data[2], data[3]
-
-        print("Started Regression Module...... ")
-        args.num_classes = 1
-        args.num_features = X.shape[1]
-        args.objective = "regression"
-        args.class_comp = True
-        args.best_params_file = "config/best_params_reg.yml"
-
-        with open(args.best_params_file, 'r') as file:
-            args.parameters = yaml.safe_load(file)
-            args.parameters =args.parameters['parameters']
-
-        print("After Classification: THE ARGS .....")
-        print(args, "\n\n")
-
-        parameters = args.parameters[args.dataset][args.model_name]
-
-        print(f"Parameters for {args.model_name}: {parameters}")
-
-        
-        print("After Classifications --- ")
-        print(f"X_train shape: {X.shape}")
-        print(f"y_train shape: {y.shape}")
-        print(f"X_test shape: {X_test.shape}")
-        print(f"y_test shape: {y_test.shape}")
-
-        sc, timer, data, args = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
-        print("\n--- Testin on Regression Model Finished ---")
-        print("Aggregated Results:", sc.get_results())
-        print(f"Avg Outer Fold Train Time: {timer[0]:.4f} sec")
-        print(f"Avg Outer Fold Inference Time: {timer[1]:.4f} sec")"""
+    
 
 if __name__ == "__main__":
     # --- Argument Parsing ---
