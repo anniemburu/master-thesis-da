@@ -321,16 +321,30 @@ def encoding(args, X_train, y_train, X_val, y_val):
             encoder = OrdinalEncoder(categories=categories, dtype=int)
 
             # Fit and transform the data
-            X_train[:, args.ordinal_idx] = encoder.fit_transform(X_train[:, args.ordinal_idx])
-            X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
-        
+            #X_train[:, args.ordinal_idx] = encoder.fit_transform(X_train[:, args.ordinal_idx])
+            #X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
+            train_cat = X_train[:, args.ordinal_idx].astype(object)
+            print(f"Train Cat : {train_cat[:10,:]}")
+            print(f"Uniques : {np.unique(train_cat)}")
+            X_train[:, args.ordinal_idx] = encoder.fit_transform(train_cat)
+
+            val_cat = X_val[:, args.ordinal_idx].astype(object)
+            X_val[:, args.ordinal_idx] = encoder.transform(val_cat)
         elif args.dataset == "Brazillian_Houses":
 
-            encoder = OrdinalEncoder(categories=[[None,'not furnished','furnished']])
+            encoder = OrdinalEncoder(categories=[['None','not furnished','furnished']])
 
             # Fit and transform the data
-            X_train[:, args.ordinal_idx] = encoder.fit_transform(X_train[:, args.ordinal_idx])
-            X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
+            #X_train[:, args.ordinal_idx] = encoder.fit_transform(X_train[:, args.ordinal_idx])
+            #X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
+
+            train_cat = X_train[:, args.ordinal_idx].astype(str).reshape(-1, 1)
+            print(f"Train Cat : {train_cat[:10,:]}")
+            print(f"Uniques : {np.unique(train_cat)}")
+            X_train[:, args.ordinal_idx] = encoder.fit_transform(train_cat)
+
+            test_cat = X_val[:, args.ordinal_idx].astype(str).reshape(-1, 1)
+            X_val[:, args.ordinal_idx] = encoder.transform(test_cat)
 
             #print("OHE Done!!! \n")
     if args.model_name == "XGBoost" or args.model_name == "CatBoost" or args.model_name == "LightGBM":

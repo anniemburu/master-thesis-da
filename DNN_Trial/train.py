@@ -829,9 +829,19 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
     print(f"X_test shape: {X_test.shape}")
     print(f"y_test shape: {y_test.shape}")
 
+    #make copies of the original data
+    X_train_original = X_train.copy()
+    y_train_original = y_train.copy()
+    X_test_original = X_test.copy()
+    y_test_original = y_test.copy()
+
     for seed in range(n_repeats):
         print(f"--- Test Run {seed+1}/{n_repeats} ---")
         set_all_seeds(seed)
+
+        #make sure to use the original data
+        X_train, y_train = X_train_original.copy(), y_train_original.copy()
+        X_test, y_test = X_test_original.copy(), y_test_original.copy()
 
         X_train, y_train = resample(X_train, y_train, random_state=seed)
 
