@@ -499,7 +499,7 @@ class FTTransformerWrapper(BaseModelTorch):
       if x_cont is not None:
          x_cont = x_cont.float().to(self.device)
  
-      print(f"x_cont: {type(x_cont)} , x_cat: {type(x_cat)} \n")
+      #print(f"x_cont: {type(x_cont)} , x_cat: {type(x_cat)} \n")
       return x_cont, x_cat
 
     
