@@ -51,13 +51,16 @@ def sturges(y,args):
     return num_bins
 
 def bin_finder(args, y):
-    if args.y_distribution == "normal" :
+    """if args.y_distribution == "normal" :
         bins = sturges(y, args)
     elif args.y_distribution == "skewed" or args.y_distribution == "bimodial":
         bins = freedman_diaconis(y,args)
     else:
         raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
-
+    """
+    #start with Sturges' Rule
+    bins = sturges(y, args)
+    
     return bins
 
 def bin_shifter(args, y_train, y_val):
