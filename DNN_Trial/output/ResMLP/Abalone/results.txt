@@ -16,3 +16,17 @@ Test time: 0.002787
 Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'd_in': 10, 'd_out': 7}
 
 
+2025-05-07 15:14:17.295451
+ResMLP - Abalone - test_model
+
+MSE - mean: 1.09737
+MSE - std: 0.00000
+R2 - mean: 0.89568
+R2 - std: 0.00000
+
+Train time: 0.366638
+Test time: 0.004112
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 9, 'd_out': 7, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}
+
+

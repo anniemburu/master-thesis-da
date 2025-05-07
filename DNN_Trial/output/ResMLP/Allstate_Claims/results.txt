@@ -16,3 +16,17 @@ Test time: 0.139970
 Best Parameters: {'n_blocks': 3, 'd_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'd_in': 1093, 'd_out': 311}
 
 
+2025-05-07 15:17:00.846555
+ResMLP - Allstate_Claims - test_model
+
+MSE - mean: 1292586.95996
+MSE - std: 0.00000
+R2 - mean: 0.84828
+R2 - std: 0.00000
+
+Train time: 8.177236
+Test time: 0.358419
+
+Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 246, 'd_out': 15, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
+
+

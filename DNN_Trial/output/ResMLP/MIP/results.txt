@@ -16,3 +16,17 @@ Test time: 0.001698
 Best Parameters: {'n_blocks': 4, 'd_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'd_in': 151, 'd_out': 78}
 
 
+2025-05-07 15:18:24.393647
+ResMLP - MIP - test_model
+
+MSE - mean: 58327.55955
+MSE - std: 0.00000
+R2 - mean: 0.99993
+R2 - std: 0.00000
+
+Train time: 0.185128
+Test time: 0.009512
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 148, 'd_out': 7, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+

@@ -16,3 +16,17 @@ Test time: 0.150854
 Best Parameters: {'n_blocks': 6, 'd_block': 256, 'dropout': 0.12920563775872115, 'd_in': 1093, 'd_out': 311}
 
 
+2025-05-07 15:12:35.601746
+MLP - Allstate_Claims - test_model
+
+MSE - mean: 1292586.95996
+MSE - std: 0.00000
+R2 - mean: 0.84828
+R2 - std: 0.00000
+
+Train time: 6.504818
+Test time: 0.357929
+
+Best Parameters: {'d_block': 256, 'd_in': 246, 'd_out': 15, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+

@@ -16,3 +16,17 @@ Test time: 0.008719
 Best Parameters: {'n_blocks': 5, 'd_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'd_in': 547, 'd_out': 18}
 
 
+2025-05-07 15:18:17.084346
+ResMLP - Mercedes_Benz - test_model
+
+MSE - mean: 10.07389
+MSE - std: 0.00000
+R2 - mean: 0.93820
+R2 - std: 0.00000
+
+Train time: 0.902243
+Test time: 0.029888
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 384, 'd_out': 9, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}
+
+
