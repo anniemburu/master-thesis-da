@@ -1,0 +1,462 @@
+
+
+----------------------------------------------------------------------------
+Training SAINT Vesion 1 with Dataset: config/abalone.yml 
+
+
+
+----------------------------------------------------------------------------
+Running Mode: Nested CV with Predefined Hyperparameters
+Arguements: Namespace(batch_size=64, best_params_file='config/best_params.yml', bin_alt=None, cat_dims=[2], cat_idx=[0], class_comp=True, config='config/abalone.yml', data_parallel=False, dataset='Abalone', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=100, nominal_idx=[0], num_bins=10, num_classes=1, num_features=8, num_idx=None, num_splits=5, objective='probabilistic_regression', one_hot_encode=True, optimize_hyperparameters=False, ordinal_encode=False, ordinal_idx=None, outer_splits=3, parameters={'Abalone': {'CatBoost': {'iterations': 100, 'l2_leaf_reg': 1.2142895041234418, 'learning_rate': 0.1780973833308435, 'max_depth': 4, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100}, 'FTTransformer': {'learning_rate': 0.0026312292554662967, 'weight_decay': 0.000741227822541328}, 'MLP': {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}, 'ResMLP': {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 10, 'd_out': 7, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}, 'SAINT': {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Allstate_Claims': {'FTTransformer': {'learning_rate': 0.00014266378836134144, 'weight_decay': 7.973049353626902e-05}, 'MLP': {'d_block': 256, 'd_in': 1093, 'd_out': 311, 'dropout': 0.12920563775872115, 'n_blocks': 6}, 'ResMLP': {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1093, 'd_out': 311, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}, 'SAINT': {'depth': 3, 'dim': 64, 'dropout': 0.7, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Black_Friday': {'MLP': {'d_block': 256, 'd_in': 75, 'd_out': 36, 'dropout': 0.28716314068720666, 'n_blocks': 3}, 'ResMLP': {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 36, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}, 'SAINT': {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}, 'NODE': {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}}, 'Boston': {'FTTransformer': {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}, 'MLP': {'d_block': 256, 'd_in': 14, 'd_out': 6, 'dropout': 0.02868322485344796, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 6, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}, 'SAINT': {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}, 'NODE': {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Brazillian_Houses': {'FTTransformer': {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}, 'MLP': {'d_block': 256, 'd_in': 17, 'd_out': 1095, 'dropout': 0.26456213654515587, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 1095, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}, 'SAINT': {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}, 'NODE': {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 3}}, 'Diamonds': {'FTTransformer': {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}, 'MLP': {'d_block': 256, 'd_in': 9, 'd_out': 13, 'dropout': 0.07787642217098255, 'n_blocks': 3}, 'ResMLP': {'d_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.6469990033121622, 'd_in': 9, 'd_out': 13, 'dropout1': 0.1279373990844757, 'dropout2': 0.09909622892506705, 'n_blocks': 6}, 'SAINT': {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}, 'NODE': {'num_layers': 4, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 2}}, 'House_Prices_Nominal': {'FTTransformer': {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}, 'MLP': {'d_block': 256, 'd_in': 109, 'd_out': 7, 'dropout': 0.10539334128428231, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 7, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}, 'SAINT': {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}, 'NODE': {'num_layers': 4, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 3}}, 'House_Sales': {'FTTransformer': {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369}, 'MLP': {'d_block': 256, 'd_in': 90, 'd_out': 128, 'dropout': 0.10700449012979917, 'n_blocks': 4}, 'ResMLP': {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 4.550168594755401, 'd_in': 90, 'd_out': 133, 'dropout1': 0.20737998960685675, 'dropout2': 0.03151442135910869, 'n_blocks': 5}, 'SAINT': {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}, 'NODE': {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}}, 'MIP': {'FTTransformer': {'learning_rate': 0.005340493024514428, 'weight_decay': 5.660990217872578e-06}, 'MLP': {'d_block': 64, 'd_in': 151, 'd_out': 67, 'dropout': 0.10823216670029355, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 78, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}, 'SAINT': {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}, 'NODE': {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Mercedes_Benz': {'FTTransformer': {'learning_rate': 0.0004452048953174126, 'weight_decay': 1.7644038793799652e-06}, 'MLP': {'d_block': 256, 'd_in': 547, 'd_out': 18, 'dropout': 0.17946730470146646, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 547, 'd_out': 18, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}, 'SAINT': {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}}, 'Moneyball': {'FTTransformer': {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06}, 'MLP': {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 48, 'd_out': 7, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}, 'SAINT': {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 2084, 'tree_depth': 6, 'tree_output_dim': 3}}, 'SAT11': {'FTTransformer': {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}, 'MLP': {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}, 'SAINT': {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}, 'NODE': {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Sensory': {'FTTransformer': {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}, 'MLP': {'d_block': 128, 'd_in': 36, 'd_out': 5, 'dropout': 0.29860532918127847, 'n_blocks': 2}, 'ResMLP': {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 5, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}, 'SAINT': {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}, 'NODE': {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 3}}, 'Socmob': {'FTTransformer': {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05}, 'MLP': {'d_block': 256, 'd_in': 39, 'd_out': 40, 'dropout': 0.10461609715865526, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 40, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}, 'SAINT': {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}, 'NODE': {'num_layers': 2, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 2}}}, save_results=False, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=128, weighted_loss=False, y_distribution='normal')
+--- Running Nested Cross-Validation with Predefined Hyperparameters ---
+Dataset: Abalone, Model: SAINT, Objective: probabilistic_regression
+Loading dataset Abalone...
+In Abalone
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4177 entries, 0 to 4176
+Data columns (total 9 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   Sex                    4177 non-null   object 
+ 1   Length                 4177 non-null   float64
+ 2   Diameter               4177 non-null   float64
+ 3   Height                 4177 non-null   float64
+ 4   Whole_weight           4177 non-null   float64
+ 5   Shucked_weight         4177 non-null   float64
+ 6   Viscera_weight         4177 non-null   float64
+ 7   Shell_weight           4177 non-null   float64
+ 8   Class_number_of_rings  4177 non-null   int64  
+dtypes: float64(7), int64(1), object(1)
+memory usage: 293.8+ KB
+None
+Dataset loaded! 
+
+(4177, 8)
+Started Classification Module ...... 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TESTING MODEL
+X_train shape: (2088, 8)
+y_train shape: (2088,)
+X_test shape: (2089, 8)
+y_test shape: (2089,)
+--- Test Run 1/3 ---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (2088, 8)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0]
+Ordinal Index : None
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0]
+Ordinal Index : None
+Cat Idx : [0]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : None
+Numerical Index V1 : [1, 2, 3, 4, 5, 6, 7]
+Cat Idx V1 : [0] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : None, Nom : [0], Num : [1, 2, 3, 4, 5, 6, 7]
+Num idx: [3, 4, 5, 6, 7, 8, 9]
+Ord : None, Nom : [0, 1, 2], Num : [3, 4, 5, 6, 7, 8, 9]
+Nominal : (3, 3)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [3, 4, 5, 6, 7, 8, 9] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0] 
+ 
+
+Train: [[0.0 0.0 1.0 0.10655779994781488 0.03778067897421168]
+ [0.0 1.0 0.0 -1.6743550974154016 -1.6771336188117634]
+ [0.0 0.0 1.0 -0.2172445450273156 -0.30520218058298315]
+ [0.0 0.0 1.0 0.1470330930697062 0.08677823033952531]
+ [0.0 0.0 1.0 0.26845897243538014 0.2827684358007798]
+ [0.0 0.0 1.0 -0.33867042439298956 -0.2562046292176695]
+ [1.0 0.0 0.0 0.5922613174105097 0.576753743992661]
+ [0.0 1.0 0.0 -0.09581866566164168 -0.10921197512172864]
+ [0.0 1.0 0.0 -1.2291268730745974 -1.334150759254568]
+ [1.0 0.0 0.0 0.6732119036542924 0.8217415008192291]] 
+ 
+ 
+Val : (2088, 10) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cat Idx V3 : [0, 1, 2] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [3, 4, 5, 6, 7, 8, 9] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : [3, 3, 3]
+Cat Idx V2 : [0, 1, 2] 
+ 
+
+Train: [[0.0 0.0 1.0 0.10655779994781488 0.03778067897421168 0.12507566112652116
+  -0.21895110845535398 -0.45904744300577865 -0.15998128574806456
+  0.004088861473057079]
+ [0.0 1.0 0.0 -1.6743550974154016 -1.6771336188117634 -1.2667546609441973
+  -1.35026175269946 -1.2895880381548486 -1.3867660669995163
+  -1.3918355697243046]
+ [0.0 0.0 1.0 -0.2172445450273156 -0.30520218058298315
+  0.37813571968483384 -0.37432424414553156 -0.4504630440895092
+  -0.43308178475457143 -0.2027147579635891]
+ [0.0 0.0 1.0 0.1470330930697062 0.08677823033952531
+  -0.0014543681526344976 -0.19855838439601825 -0.5277226343359344
+  -0.48943585597813644 0.07302340128527253]
+ [0.0 0.0 1.0 0.26845897243538014 0.2827684358007798 0.5046657489639902
+  0.022848333962485097 -0.1714700793107519 0.1824780701489836
+  0.10749067119138025]
+ [0.0 0.0 1.0 -0.33867042439298956 -0.2562046292176695
+  -0.38104445599010356 -0.7287692099387494 -0.7316021085973339
+  -0.935933497210997 -0.5129201871185582]
+ [1.0 0.0 0.0 0.5922613174105097 0.576753743992661 -0.12798439743179085
+  0.22774665665390673 0.40797684753743635 0.07843978481317158
+  0.13506448711626645]
+ [0.0 1.0 0.0 -0.09581866566164168 -0.10921197512172864
+  -0.38104445599010356 -0.5054203273841189 -0.4526091438185766
+  -0.5978090698696075 -0.5267070950810013]
+ [0.0 1.0 0.0 -1.2291268730745974 -1.334150759254568 -1.1402246316650408
+  -1.2104259305783 -1.1822830517014804 -1.1440100678826213
+  -1.2298394011655984]
+ [1.0 0.0 0.0 0.6732119036542924 0.8217415008192291 1.2638459246389275
+  0.6996925563128216 0.4015385483502343 1.036458995613775
+  0.8313033392196417]] 
+ 
+ 
+Val : (2088, 10) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After encoding : : WE ARE IN TRAIN.PY
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+num_features :10
+num_classes : 1
+cat_idx : [0, 1, 2]
+nominal_idx : [0, 1, 2]
+ordinal_idx : None
+num_idx : [3, 4, 5, 6, 7, 8, 9]
+cat_dims : [3, 3, 3]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BINNING INIT
+Number of bins: 9
+Number of Classes B4 Bin Verifier: 9
+Unique values in y: (array([0., 1., 2., 3., 4., 5., 6.]), 7)
+Unique values in y_val: (array([0., 1., 2., 3., 4., 5., 6.]), 7)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 7
+Final Test Labels Length: 7
+Final Num Classes: 7
+Final Bin Labels: [0, 1, 2, 3, 4, 5, 6]
+VERIFY SHIFT
+Y shape : (2088,) , Y_val shape : (2089,)
+Train after shift : [0 1 2 3 4 5 6], Length : 7
+Number of Classes After Bin Verifier: 7 
+
+
+BINNING END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+In get_device
+Using dim 128 and batch size 64
+{'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+Epoch 0 loss 1.5761371850967407
+Epoch 1 loss 1.5339401960372925
+Epoch 2 loss 1.510278582572937
+Epoch 3 loss 1.4757435321807861
+Epoch 4 loss 1.4732606410980225
+Epoch 5 loss 1.453289270401001
+Epoch 6 loss 1.4613416194915771
+Epoch 7 loss 1.4823476076126099
+Epoch 8 loss 1.4561549425125122
+Epoch 9 loss 1.4682278633117676
+Epoch 10 loss 1.4367709159851074
+Epoch 11 loss 1.467151165008545
+Epoch 12 loss 1.4624608755111694
+Epoch 13 loss 1.4371317625045776
+Epoch 14 loss 1.4622842073440552
+Epoch 15 loss 1.4373756647109985
+Epoch 16 loss 1.4551085233688354
+Epoch 17 loss 1.45225191116333
+Epoch 18 loss 1.444511890411377
+Epoch 19 loss 1.5074479579925537
+Epoch 20 loss 1.4855873584747314
+Epoch 21 loss 1.479148030281067
+Epoch 22 loss 1.4843642711639404
+Epoch 23 loss 1.4756813049316406
+Epoch 24 loss 1.5031720399856567
+Epoch 25 loss 1.4250859022140503
+Epoch 26 loss 1.4942123889923096
+Epoch 27 loss 1.4798576831817627
+Epoch 28 loss 1.529079556465149
+Epoch 29 loss 1.4749971628189087
+Epoch 30 loss 1.4783731698989868
+Epoch 31 loss 1.5005645751953125
+Epoch 32 loss 1.5079201459884644
+Epoch 33 loss 1.5094298124313354
+Epoch 34 loss 1.56358003616333
+Epoch 35 loss 1.5176787376403809
+Epoch 36 loss 1.4944716691970825
+Epoch 37 loss 1.500503659248352
+Epoch 38 loss 1.5457844734191895
+Epoch 39 loss 1.537367820739746
+Epoch 40 loss 1.5505021810531616
+Epoch 41 loss 1.555116057395935
+Epoch 42 loss 1.545265793800354
+Epoch 43 loss 1.5123170614242554
+Epoch 44 loss 1.5472137928009033
+Epoch 45 loss 1.561901330947876
+Epoch 46 loss 1.5448411703109741
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+State of save is True b4 loss saving
+Saving loss to file: output/SAINT/Abalone/logging/loss_0.txt
+Log file exists at: output/SAINT/Abalone/logging/loss_0.txt
+File name : output/SAINT/Abalone/logging/loss_0.txt . The file was saved
+Saving loss to file: output/SAINT/Abalone/logging/test_loss_0.txt
+Log file exists at: output/SAINT/Abalone/logging/test_loss_0.txt
+File name : output/SAINT/Abalone/logging/test_loss_0.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 7
+Class labels : [0, 1, 2, 3, 4, 5, 6]
+Unique y_true : 7
+Unique train : 7
+
+Prediction shape : (2089,)
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+In the gulag
+--- Test Run 2/3 ---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (2088, 8)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0]
+Ordinal Index : None
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0]
+Ordinal Index : None
+Cat Idx : [0]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : None
+Numerical Index V1 : [1, 2, 3, 4, 5, 6, 7]
+Cat Idx V1 : [0] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : None, Nom : [0], Num : [1, 2, 3, 4, 5, 6, 7]
+Num idx: [3, 4, 5, 6, 7, 8, 9]
+Ord : None, Nom : [0, 1, 2], Num : [3, 4, 5, 6, 7, 8, 9]
+Nominal : (3, 3)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [3, 4, 5, 6, 7, 8, 9] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0] 
+ 
+
+Train: [[0.0 1.0 0.0 -0.6560576644611033 -0.6228235669507447]
+ [0.0 0.0 1.0 -2.3442801166429623 -2.314764433478403]
+ [0.0 1.0 0.0 -0.8619384513125496 -1.0209273002513701]
+ [0.0 1.0 0.0 0.24981779768526044 0.3226727996382412]
+ [0.0 0.0 1.0 0.908636315609888 0.8203024662640229]
+ [1.0 0.0 0.0 0.16746548294468186 0.12362093298792824]
+ [0.0 1.0 0.0 -0.5737053497205247 -0.7223495002759006]
+ [0.0 1.0 0.0 0.908636315609888 0.7705394996014447]
+ [0.0 0.0 1.0 0.6615793713881523 0.4719616996259759]
+ [1.0 0.0 0.0 -0.7384099792016818 -0.7223495002759006]] 
+ 
+ 
+Val : (2088, 10) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cat Idx V3 : [0, 1, 2] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [3, 4, 5, 6, 7, 8, 9] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : [3, 3, 3]
+Cat Idx V2 : [0, 1, 2] 
+ 
+
+Train: [[0.0 1.0 0.0 -0.6560576644611033 -0.6228235669507447 -0.038590964266261
+  -0.7651705153278808 -0.7168792680324306 -0.7002365208976232
+  -0.8400785829340846]
+ [0.0 0.0 1.0 -2.3442801166429623 -2.314764433478403 -1.7385473648560044
+  -1.569016168645527 -1.5197271704043962 -1.5407150768191047
+  -1.5938357505906346]
+ [0.0 1.0 0.0 -0.8619384513125496 -1.0209273002513701 -1.058564804620107
+  -1.0912126621668288 -1.024168761662671 -1.003864899738368
+  -1.0819820460424658]
+ [0.0 1.0 0.0 0.24981779768526044 0.3226727996382412 0.18806988914570433
+  -0.0827339497220348 -0.03088793366069716 -0.013772360040287344
+  -0.07930972069468317]
+ [0.0 0.0 1.0 0.908636315609888 0.8203024662640229 0.6413915959696362
+  0.5370398609357852 0.7092036636741067 0.8223057845936471
+  0.2642633138650465]
+ [1.0 0.0 0.0 0.16746548294468186 0.12362093298792824 0.07473946243972135
+  -0.13266833257124297 -0.34034143780946025 -0.3394027953187672
+  0.12402942220801419]
+ [0.0 1.0 0.0 -0.5737053497205247 -0.7223495002759006 -0.9452343779141241
+  -0.9374930914349523 -0.844555888625277 -0.8894542062621453
+  -1.057441115002485]
+ [0.0 1.0 0.0 0.908636315609888 0.7705394996014447 -0.15192139097224397
+  0.46066962834287856 0.48631058026625645 0.5450798734781848
+  0.3168510232364337]
+ [0.0 0.0 1.0 0.6615793713881523 0.4719616996259759 0.4147307425576703
+  0.26484851913029706 0.5122787064885304 0.07423586571065323
+  0.19414636803653051]
+ [1.0 0.0 0.0 -0.7384099792016818 -0.7223495002759006 -0.9452343779141241
+  -0.8102093704467744 -0.8120957308474347 -0.8938546175496923
+  -0.8225493464769555]] 
+ 
+ 
+Val : (2088, 10) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After encoding : : WE ARE IN TRAIN.PY
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+num_features :10
+num_classes : 1
+cat_idx : [0, 1, 2]
+nominal_idx : [0, 1, 2]
+ordinal_idx : None
+num_idx : [3, 4, 5, 6, 7, 8, 9]
+cat_dims : [3, 3, 3]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BINNING INIT
+Number of bins: 9
+Number of Classes B4 Bin Verifier: 9
+Unique values in y: (array([0., 1., 2., 3., 4., 5., 6.]), 7)
+Unique values in y_val: (array([0., 1., 2., 3., 4., 5., 6.]), 7)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 7
+Final Test Labels Length: 7
+Final Num Classes: 7
+Final Bin Labels: [0, 1, 2, 3, 4, 5, 6]
+VERIFY SHIFT
+Y shape : (2088,) , Y_val shape : (2089,)
+Train after shift : [0 1 2 3 4 5 6], Length : 7
+Number of Classes After Bin Verifier: 7 
+
+
+BINNING END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+In get_device
+Using dim 128 and batch size 64
+{'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}

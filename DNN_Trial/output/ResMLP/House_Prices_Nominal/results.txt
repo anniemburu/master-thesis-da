@@ -16,3 +16,17 @@ Test time: 0.002307
 Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'd_in': 109, 'd_out': 7}
 
 
+2025-05-08 14:56:40.308494
+ResMLP - House_Prices_Nominal - test_model
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 0.340870
+Test time: 0.072273
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 8, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
