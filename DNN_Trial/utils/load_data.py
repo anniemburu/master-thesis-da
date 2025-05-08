@@ -235,10 +235,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Brazillian_Houses":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42688-Brazilian_houses/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/42688-Brazilian_houses.csv')
-        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
+        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42688-Brazilian_houses.csv')
         label_col = 'total_(BRL)'
 
         #drop nulls
