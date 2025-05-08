@@ -854,7 +854,23 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         else:
             #print("Doing encoding : WE ARE IN TRAIN.PY")
             X_train, y_train, X_test, y_test = encoding(args, X_train, y_train, X_test, y_test)
-        
+
+
+        if args.dataset == "House_Prices_Nominal" and args.model_name == "FTTransformer":
+            x_cat_train = X_train[:, args.ordinal_idx]
+            x_cat_test = X_test[:, args.ordinal_idx]
+
+            all_cats = np.concatenate([x_cat_train, x_cat_test], axis=0)    
+            args.cat_dims = [int(np.max(all_cats[:, i])) + 1 for i in range(all_cats.shape[1])]
+            print(f"BEBUDDING DIMS")
+            for i, cat_dim in enumerate(args.cat_dims):
+                max_val = int(all_cats[:, i].max())
+                if max_val >= cat_dim:
+                    print(f"⚠️ Column {i}: max_val {max_val} >= cat_dim {cat_dim} → Mismatch!")
+                else:
+                    #print(f"✅ Column {i}: max_val {max_val} < cat_dim {cat_dim} → Match!")
+                    pass
+       
 
         print("After encoding : : WE ARE IN TRAIN.PY")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
