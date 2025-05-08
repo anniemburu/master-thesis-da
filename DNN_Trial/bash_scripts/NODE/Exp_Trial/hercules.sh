@@ -26,12 +26,12 @@ CONFIGS=(
 
 for config in "${CONFIGS[@]}"; do
     printf "\n\n----------------------------------------------------------------------------\n"
-    printf 'Training VIME Vesion 1 with Dataset: %s \n\n'  "$config" 
+    printf 'Training NODE Vesion 1 with Dataset: %s \n\n'  "$config" 
     printf "\n\n----------------------------------------------------------------------------\n"
 
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name NODE --objective probabilistic_regression --batch_size 16 --val_batch_size 64
+    srun python3 train.py --config "$config" --model_name NODE --objective probabilistic_regression --class_comp --batch_size 64 --val_batch_size 128
 
 done
