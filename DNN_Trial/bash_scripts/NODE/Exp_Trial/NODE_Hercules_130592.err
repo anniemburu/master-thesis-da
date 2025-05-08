@@ -1,0 +1,256 @@
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 896, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 96, in average_checkpoints
+    averaged_ckpt['model'][key] = sum(values) / len(values)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 98.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 62.44 MiB is free. Including non-PyTorch memory, this process has 7.72 GiB memory in use. Of the allocated memory 7.28 GiB is allocated by PyTorch, and 321.02 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 896, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 150, in fit
+    metrics = self.trainer.train_on_batch(*batch, device=self.device)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 123, in train_on_batch
+    loss = self.loss_function(self.model(x_batch), y_batch).mean()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/arch.py", line 31, in forward
+    h = layer(layer_inp)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 221, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/odst.py", line 84, in forward
+    feature_selectors = self.choice_function(feature_logits, dim=0)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 186, in <lambda>
+    entmax15 = lambda input, dim=-1: Entmax15Function.apply(input, dim)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/autograd/function.py", line 539, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 118, in forward
+    tau_star, _ = Entmax15Function._threshold_and_support(input, dim)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/nn_utils.py", line 135, in _threshold_and_support
+    Xsrt, _ = torch.sort(input, descending=True, dim=dim)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 698.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 362.44 MiB is free. Including non-PyTorch memory, this process has 7.43 GiB memory in use. Of the allocated memory 6.17 GiB is allocated by PyTorch, and 1.13 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+usage: train.py [-h] [-config CONFIG] --model_name MODEL_NAME --dataset
+                DATASET --objective
+                {regression,probabilistic_regression,classification,binary}
+                [--use_gpu] [--gpu_ids GPU_IDS] [--data_parallel]
+                [--optimize_hyperparameters] [--n_trials N_TRIALS]
+                [--direction {minimize,maximize}] --y_distribution
+                {normal,skewed,bimodial,multimodal} [--num_splits NUM_SPLITS]
+                [--num_bins NUM_BINS] [--shuffle] [--seed SEED]
+                [--weighted_loss] [--scale] [--target_encode]
+                [--one_hot_encode] [--ordinal_encode] [--frequency_reg]
+                [--class_comp] [--batch_size BATCH_SIZE]
+                [--val_batch_size VAL_BATCH_SIZE]
+                [--early_stopping_rounds EARLY_STOPPING_ROUNDS]
+                [--epochs EPOCHS] [--logging_period LOGGING_PERIOD]
+                --num_features NUM_FEATURES [--num_classes NUM_CLASSES]
+                [--cat_idx CAT_IDX] [--nominal_idx NOMINAL_IDX]
+                [--ordinal_idx ORDINAL_IDX] [--num_idx NUM_IDX]
+                [--cat_dims CAT_DIMS] [--bin_alt BIN_ALT]
+                [--dropna_idx DROPNA_IDX] [--miss_cat_idx MISS_CAT_IDX]
+                [--miss_num_idx MISS_NUM_IDX] [--outer_splits OUTER_SPLITS]
+                [--save_results] [--no_save_results]
+train.py: error: argument --y_distribution: invalid choice: 'multimodial' (choose from 'normal', 'skewed', 'bimodial', 'multimodal')
+srun: error: stud-000: task 0: Exited with exit code 2
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 896, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 93, in average_checkpoints
+    averaged_ckpt = deepcopy(checkpoints[0])
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 296, in _reconstruct
+    value = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/_tensor.py", line 122, in __deepcopy__
+    new_storage = self._typed_storage()._deepcopy(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 799, in _deepcopy
+    return self._new_wrapped_storage(copy.deepcopy(self._untyped_storage, memo))
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 111, in __deepcopy__
+    new_storage = self.clone()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 125, in clone
+    return type(self)(self.nbytes(), device=self.device).copy_(self)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 254.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 12.44 MiB is free. Including non-PyTorch memory, this process has 7.77 GiB memory in use. Of the allocated memory 7.52 GiB is allocated by PyTorch, and 125.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 856, in test_model
+    X_train, y_train, X_test, y_test = encoding(args, X_train, y_train, X_test, y_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/data_encoding.py", line 329, in encoding
+    X_train[:, args.ordinal_idx] = encoder.fit_transform(train_cat)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py", line 916, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py", line 1152, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_encoders.py", line 1499, in fit
+    fit_results = self._fit(
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_encoders.py", line 85, in _fit
+    raise ValueError(
+ValueError: Shape mismatch: if categories is an array, it has to be of shape (n_features,).
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 896, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 96, in average_checkpoints
+    averaged_ckpt['model'][key] = sum(values) / len(values)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 54.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 26.44 MiB is free. Including non-PyTorch memory, this process has 7.76 GiB memory in use. Of the allocated memory 7.50 GiB is allocated by PyTorch, and 134.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 896, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 93, in average_checkpoints
+    averaged_ckpt = deepcopy(checkpoints[0])
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 296, in _reconstruct
+    value = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/_tensor.py", line 122, in __deepcopy__
+    new_storage = self._typed_storage()._deepcopy(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 799, in _deepcopy
+    return self._new_wrapped_storage(copy.deepcopy(self._untyped_storage, memo))
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 111, in __deepcopy__
+    new_storage = self.clone()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 125, in clone
+    return type(self)(self.nbytes(), device=self.device).copy_(self)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 88.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 2.44 MiB is free. Including non-PyTorch memory, this process has 7.78 GiB memory in use. Of the allocated memory 7.45 GiB is allocated by PyTorch, and 203.80 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1

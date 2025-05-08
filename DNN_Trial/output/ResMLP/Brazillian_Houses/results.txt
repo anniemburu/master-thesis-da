@@ -16,3 +16,17 @@ Test time: 0.004837
 Best Parameters: {'n_blocks': 2, 'd_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'd_in': 17, 'd_out': 1095}
 
 
+2025-05-08 02:13:07.601059
+ResMLP - Brazillian_Houses - test_model
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 0.749196
+Test time: 0.024297
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 11, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
