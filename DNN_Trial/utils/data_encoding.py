@@ -276,35 +276,35 @@ def encoding(args, X_train, y_train, X_val, y_val):
 
         elif args.dataset == "House_Prices_Nominal":
             categories = [
-                    [None,'Grvl', 'Pave'],
+                    ['None','Grvl', 'Pave'],
                     ['None', 'Grvl', 'Pave'],
-                    [None, 'Low','Bnk','HLS','Lvl'],
-                    [None,'NoSeWa','AllPub'],
-                    [None,'Inside', 'FR2', 'FR3', 'Corner', 'CulDSac'],
-                    [None,'Sev', 'Mod', 'Gtl'],
-                    [None,'RRNe','RRNn','RRAe','RRAn','Artery','Feedr','Norm','PosN','PosA'],
-                    [None,'RRNn','RRAe','RRAn','Artery','Feedr','Norm','PosN','PosA'],
-                    [None, '1Fam','TwnhsE', 'Twnhs', 'Duplex', '2fmCon'],
-                    [None,"1Story", "1.5Unf","SFoyer","SLvl","1.5Fin", "2Story","2.5Unf","2.5Fin"],
-                    [None,"Flat", "Shed", "Gambrel", "Mansard", "Gable","Hip"],
-                    [None,'Roll','Tar&Grv','Membran','CompShg','WdShngl','WdShake','Metal','ClyTile'],
-                    [None,'CBlock','AsphShn','ImStucc','AsbShng','Plywood','Wd Sdng','WdShing','MetalSd','VinylSd','HdBoard','Stucco','BrkComm','CemntBd','BrkFace','Stone'],
-                    [None, 'Other','CBlock','AsphShn','ImStucc','AsbShng','Plywood','Wd Sdng','Wd Shng','MetalSd','VinylSd','HdBoard','Stucco','Brk Cmn','CmentBd','BrkFace','Stone'],
+                    ["None", 'Low','Bnk','HLS','Lvl'],
+                    ["None",'NoSeWa','AllPub'],
+                    ["None",'Inside', 'FR2', 'FR3', 'Corner', 'CulDSac'],
+                    ["None",'Sev', 'Mod', 'Gtl'],
+                    ["None",'RRNe','RRNn','RRAe','RRAn','Artery','Feedr','Norm','PosN','PosA'],
+                    ['None','RRNn','RRAe','RRAn','Artery','Feedr','Norm','PosN','PosA'],
+                    ['None', '1Fam','TwnhsE', 'Twnhs', 'Duplex', '2fmCon'],
+                    ['None',"1Story", "1.5Unf","SFoyer","SLvl","1.5Fin", "2Story","2.5Unf","2.5Fin"],
+                    ['None',"Flat", "Shed", "Gambrel", "Mansard", "Gable","Hip"],
+                    ['None','Roll','Tar&Grv','Membran','CompShg','WdShngl','WdShake','Metal','ClyTile'],
+                    ['None','CBlock','AsphShn','ImStucc','AsbShng','Plywood','Wd Sdng','WdShing','MetalSd','VinylSd','HdBoard','Stucco','BrkComm','CemntBd','BrkFace','Stone'],
+                    ['None', 'Other','CBlock','AsphShn','ImStucc','AsbShng','Plywood','Wd Sdng','Wd Shng','MetalSd','VinylSd','HdBoard','Stucco','Brk Cmn','CmentBd','BrkFace','Stone'],
                     ['None', 'BrkCmn','BrkFace','Stone'],
-                    [None,'Fa','TA','Gd','Ex'],
-                    [None,'Po','Fa','TA','Gd','Ex'],
-                    [None,'Wood', 'Slab', 'BrkTil','CBlock', 'Stone','PConc'],
+                    ['None','Fa','TA','Gd','Ex'],
+                    ['None','Po','Fa','TA','Gd','Ex'],
+                    ['None','Wood', 'Slab', 'BrkTil','CBlock', 'Stone','PConc'],
                     ['None','Fa','TA','Gd','Ex'],
                     ['None','Po','Fa','TA','Gd'],
                     ['None', 'No','Mn', 'Av', 'Gd'],
                     ['None','Unf','LwQ','Rec','BLQ','ALQ','GLQ'],
                     ['None','Unf','LwQ','Rec','BLQ','ALQ','GLQ'],
-                    [None,'OthW','Grav','Wall','Floor', 'GasW','GasA'],
+                    ['None','OthW','Grav','Wall','Floor', 'GasW','GasA'],
                     ['None','Po','Fa','TA','Gd','Ex'],
                     ['None', 'N', 'Y'],
                     ['None', 'Mix','FuseP','FuseF', 'FuseA','SBrkr'],
-                    [None,'Fa','TA','Gd','Ex'],
-                    [None, 'Sev','Maj1','Maj2','Min1','Min2','Mod','Typ'],
+                    ['None','Fa','TA','Gd','Ex'],
+                    ['None', 'Sev','Maj1','Maj2','Min1','Min2','Mod','Typ'],
                     ['None','Po','Fa','TA','Gd','Ex'],
                     ['None','CarPort', 'Detchd','Basment','2Types','BuiltIn','Attchd'],
                     ['None','Unf','RFn','Fin'],
@@ -314,22 +314,16 @@ def encoding(args, X_train, y_train, X_val, y_val):
                     ['None','Fa','Gd','Ex'],
                     ['None','MnWw','MnPrv','GdWo','GdPrv'],
                     ['None','Othr','Shed','Gar2','TenC'],
-                    [None, 'Oth','COD', 'ConLD','ConLw','ConLI','Con','WD','CWD','New'],
-                    [None,'Abnorml','AdjLand','Family','Alloca','Partial','Normal']
+                    ['None', 'Oth','COD', 'ConLD','ConLw','ConLI','Con','WD','CWD','New'],
+                    ['None','Abnorml','AdjLand','Family','Alloca','Partial','Normal']
                 ]
             # Create the OrdinalEncoder
-            encoder = OrdinalEncoder(categories=categories, dtype=int)
+            encoder = OrdinalEncoder(categories=categories, dtype=int, handle_unknown="use_encoded_value", unknown_value=-1)
 
             # Fit and transform the data
-            #X_train[:, args.ordinal_idx] = encoder.fit_transform(X_train[:, args.ordinal_idx])
-            #X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
-            train_cat = X_train[:, args.ordinal_idx].astype(object)
-            print(f"Train Cat : {train_cat[:10,:]}")
-            print(f"Uniques : {np.unique(train_cat)}")
-            X_train[:, args.ordinal_idx] = encoder.fit_transform(train_cat)
-
-            val_cat = X_val[:, args.ordinal_idx].astype(object)
-            X_val[:, args.ordinal_idx] = encoder.transform(val_cat)
+            X_train[:, args.ordinal_idx] = encoder.fit_transform(X_train[:, args.ordinal_idx])
+            X_val[:, args.ordinal_idx] = encoder.transform(X_val[:, args.ordinal_idx])
+            print(f"Finished Ordinal Encoding in HPN \n")
         elif args.dataset == "Brazillian_Houses":
 
             encoder = OrdinalEncoder(categories=[['None','not furnished','furnished']])
@@ -353,7 +347,6 @@ def encoding(args, X_train, y_train, X_val, y_val):
         args.cat_idx = get_catidx(args) # Index of categorical features
 
     print(f"Cat Idx V3 : {args.cat_idx} \n \n")
-    
 
     for i in args.cat_idx:
         le = LabelEncoder()

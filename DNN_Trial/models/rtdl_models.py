@@ -346,8 +346,6 @@ class FTTransformerWrapper(BaseModelTorch):
 
       #self.params['d_in'] = args.num_features
       #self.params['d_out'] = args.num_classes
-
-  
       self.model = FTTransformer(
          n_cont_features= len(self.args.num_idx) if self.args.num_idx is not None else 0,
          cat_cardinalities= self.args.cat_dims if self.args.cat_dims is not None else [],
@@ -378,6 +376,8 @@ class FTTransformerWrapper(BaseModelTorch):
       X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
       y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
 
+
+
       print(f"Train Data after...")
       print(f"X: {type(X)} , y : {type(y), }, X_val: {type(X_val)} , y : {type(y_val)}\n")
 
@@ -405,7 +405,7 @@ class FTTransformerWrapper(BaseModelTorch):
                 
             self.optimizer.zero_grad()
             x_cont, x_cat = self._split_inputs(batch_X)
-
+            
             outputs = self.model(x_cont, x_cat)
             #outputs = self.model(batch_X).squeeze()
             loss = self._compute_loss(outputs, batch_y, class_weights)
@@ -486,11 +486,12 @@ class FTTransformerWrapper(BaseModelTorch):
          return loss
    
    def _split_inputs(self, X):
-      print(f"I am in _split input")
-      #print(f"Num : {self.args.num_idx}, Cats : {self.args.cat_idx}")
-
       x_cont = X[:, self.args.num_idx] if self.args.num_idx else None
-      x_cat = X[:, self.args.cat_idx] if self.args.cat_idx else np.empty((X.shape[0], 0))
+
+      if self.args.dataset == "House_Prices_Nominal" and self.args.model_name == "FTTransformer":
+         x_cat = X[:, self.args.ordinal_idx] if self.args.ordinal_idx else None
+      else:
+         x_cat = X[:, self.args.cat_idx] if self.args.cat_idx else np.empty((X.shape[0], 0))
 
       #x_cat = torch.tensor(x_cat, dtype=torch.int64).to(self.device)
       #x_cont = torch.tensor(x_cont, dtype=torch.float32).to(self.device)
