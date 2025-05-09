@@ -14,10 +14,10 @@ CONFIGS=(
     #config/boston.yml
     config/brazillian_houses.yml
     #config/diamonds.yml
-    config/house_prices_nominal.yml
-    config/house_sales.yml
+    #config/house_prices_nominal.yml
+    #config/house_sales.yml
     #config/mercedes_benz.yml
-    config/mip_2016.yml
+    #config/mip_2016.yml
     #config/moneyball.yml
     #config/sat11.yml
     #config/sensory.yml
