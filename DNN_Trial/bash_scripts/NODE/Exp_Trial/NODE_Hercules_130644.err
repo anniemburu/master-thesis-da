@@ -52,3 +52,139 @@ Traceback (most recent call last):
     Xsrt, _ = torch.sort(input, descending=True, dim=dim)
 torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 466.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 162.44 MiB is free. Including non-PyTorch memory, this process has 7.62 GiB memory in use. Of the allocated memory 6.48 GiB is allocated by PyTorch, and 1.01 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
 srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1211, in <module>
+    main_once(arguments)
+  File "train.py", line 1171, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 912, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 96, in average_checkpoints
+    averaged_ckpt['model'][key] = sum(values) / len(values)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 254.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 246.44 MiB is free. Including non-PyTorch memory, this process has 7.54 GiB memory in use. Of the allocated memory 6.76 GiB is allocated by PyTorch, and 668.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1211, in <module>
+    main_once(arguments)
+  File "train.py", line 1171, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 912, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 93, in average_checkpoints
+    averaged_ckpt = deepcopy(checkpoints[0])
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 296, in _reconstruct
+    value = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/_tensor.py", line 122, in __deepcopy__
+    new_storage = self._typed_storage()._deepcopy(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 799, in _deepcopy
+    return self._new_wrapped_storage(copy.deepcopy(self._untyped_storage, memo))
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 111, in __deepcopy__
+    new_storage = self.clone()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 125, in clone
+    return type(self)(self.nbytes(), device=self.device).copy_(self)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 164.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 12.44 MiB is free. Including non-PyTorch memory, this process has 7.77 GiB memory in use. Of the allocated memory 7.05 GiB is allocated by PyTorch, and 602.17 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1211, in <module>
+    main_once(arguments)
+  File "train.py", line 1171, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 912, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 93, in average_checkpoints
+    averaged_ckpt = deepcopy(checkpoints[0])
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 296, in _reconstruct
+    value = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/_tensor.py", line 122, in __deepcopy__
+    new_storage = self._typed_storage()._deepcopy(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 799, in _deepcopy
+    return self._new_wrapped_storage(copy.deepcopy(self._untyped_storage, memo))
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 111, in __deepcopy__
+    new_storage = self.clone()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 125, in clone
+    return type(self)(self.nbytes(), device=self.device).copy_(self)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 184.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 140.44 MiB is free. Including non-PyTorch memory, this process has 7.65 GiB memory in use. Of the allocated memory 7.26 GiB is allocated by PyTorch, and 260.38 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1211, in <module>
+    main_once(arguments)
+  File "train.py", line 1171, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 912, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node.py", line 155, in fit
+    self.trainer.average_checkpoints(out_tag='avg')
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/node_lib/trainer.py", line 93, in average_checkpoints
+    averaged_ckpt = deepcopy(checkpoints[0])
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 296, in _reconstruct
+    value = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/_tensor.py", line 122, in __deepcopy__
+    new_storage = self._typed_storage()._deepcopy(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 799, in _deepcopy
+    return self._new_wrapped_storage(copy.deepcopy(self._untyped_storage, memo))
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 111, in __deepcopy__
+    new_storage = self.clone()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/storage.py", line 125, in clone
+    return type(self)(self.nbytes(), device=self.device).copy_(self)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 76.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 74.44 MiB is free. Including non-PyTorch memory, this process has 7.71 GiB memory in use. Of the allocated memory 7.38 GiB is allocated by PyTorch, and 209.21 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
