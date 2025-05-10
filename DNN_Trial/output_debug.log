@@ -1,0 +1,672 @@
+Running Mode: Nested CV with Predefined Hyperparameters
+Arguements: Namespace(config='config/sensory.yml', model_name='MLP', dataset='Sensory', objective='probabilistic_regression', use_gpu=True, gpu_ids=[0, 1], data_parallel=False, optimize_hyperparameters=False, n_trials=100, direction='minimize', y_distribution='normal', num_splits=5, num_bins=10, shuffle=True, seed=221, weighted_loss=False, scale=False, target_encode=False, one_hot_encode=True, ordinal_encode=False, frequency_reg=False, class_comp=True, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=10, logging_period=100, num_features=11, num_classes=1, cat_idx=[0], nominal_idx=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], ordinal_idx=None, num_idx=None, cat_dims=[2], bin_alt=None, dropna_idx=None, miss_cat_idx=None, miss_num_idx=None, best_params_file='config/best_params.yml', parameters={'Abalone': {'CatBoost': {'iterations': 100, 'l2_leaf_reg': 1.2142895041234418, 'learning_rate': 0.1780973833308435, 'max_depth': 4, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100}, 'FTTransformer': {'learning_rate': 0.0026312292554662967, 'weight_decay': 0.000741227822541328}, 'MLP': {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}, 'ResMLP': {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 10, 'd_out': 7, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}, 'SAINT': {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Allstate_Claims': {'FTTransformer': {'learning_rate': 0.00014266378836134144, 'weight_decay': 7.973049353626902e-05}, 'MLP': {'d_block': 256, 'd_in': 1093, 'd_out': 311, 'dropout': 0.12920563775872115, 'n_blocks': 6}, 'ResMLP': {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1093, 'd_out': 311, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}, 'SAINT': {'depth': 3, 'dim': 64, 'dropout': 0.7, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Black_Friday': {'MLP': {'d_block': 256, 'd_in': 75, 'd_out': 36, 'dropout': 0.28716314068720666, 'n_blocks': 3}, 'ResMLP': {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 36, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}, 'SAINT': {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}, 'NODE': {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}}, 'Boston': {'FTTransformer': {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}, 'MLP': {'d_block': 256, 'd_in': 14, 'd_out': 6, 'dropout': 0.02868322485344796, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 6, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}, 'SAINT': {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}, 'NODE': {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Brazillian_Houses': {'FTTransformer': {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}, 'MLP': {'d_block': 256, 'd_in': 17, 'd_out': 1095, 'dropout': 0.26456213654515587, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 1095, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}, 'SAINT': {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}, 'NODE': {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 3}}, 'Diamonds': {'FTTransformer': {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}, 'MLP': {'d_block': 256, 'd_in': 9, 'd_out': 13, 'dropout': 0.07787642217098255, 'n_blocks': 3}, 'ResMLP': {'d_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.6469990033121622, 'd_in': 9, 'd_out': 13, 'dropout1': 0.1279373990844757, 'dropout2': 0.09909622892506705, 'n_blocks': 6}, 'SAINT': {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}, 'NODE': {'num_layers': 4, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 2}}, 'House_Prices_Nominal': {'FTTransformer': {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}, 'MLP': {'d_block': 256, 'd_in': 109, 'd_out': 7, 'dropout': 0.10539334128428231, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 7, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}, 'SAINT': {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}, 'NODE': {'num_layers': 4, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 3}}, 'House_Sales': {'FTTransformer': {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369}, 'MLP': {'d_block': 256, 'd_in': 90, 'd_out': 128, 'dropout': 0.10700449012979917, 'n_blocks': 4}, 'ResMLP': {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 4.550168594755401, 'd_in': 90, 'd_out': 133, 'dropout1': 0.20737998960685675, 'dropout2': 0.03151442135910869, 'n_blocks': 5}, 'SAINT': {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}, 'NODE': {'num_layers': 8, 'total_tree_count': 2048, 'tree_depth': 8, 'tree_output_dim': 3}}, 'MIP': {'FTTransformer': {'learning_rate': 0.005340493024514428, 'weight_decay': 5.660990217872578e-06}, 'MLP': {'d_block': 64, 'd_in': 151, 'd_out': 67, 'dropout': 0.10823216670029355, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 78, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}, 'SAINT': {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}, 'NODE': {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Mercedes_Benz': {'FTTransformer': {'learning_rate': 0.0004452048953174126, 'weight_decay': 1.7644038793799652e-06}, 'MLP': {'d_block': 256, 'd_in': 547, 'd_out': 18, 'dropout': 0.17946730470146646, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 547, 'd_out': 18, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}, 'SAINT': {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 2}}, 'Moneyball': {'FTTransformer': {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06}, 'MLP': {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 48, 'd_out': 7, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}, 'SAINT': {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}, 'NODE': {'num_layers': 8, 'total_tree_count': 2084, 'tree_depth': 6, 'tree_output_dim': 3}}, 'SAT11': {'FTTransformer': {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}, 'MLP': {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}, 'SAINT': {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}, 'NODE': {'num_layers': 2, 'total_tree_count': 1024, 'tree_depth': 8, 'tree_output_dim': 3}}, 'Sensory': {'FTTransformer': {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}, 'MLP': {'d_block': 128, 'd_in': 36, 'd_out': 5, 'dropout': 0.29860532918127847, 'n_blocks': 2}, 'ResMLP': {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 5, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}, 'SAINT': {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}, 'NODE': {'num_layers': 4, 'total_tree_count': 1024, 'tree_depth': 6, 'tree_output_dim': 3}}, 'Socmob': {'FTTransformer': {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05}, 'MLP': {'d_block': 256, 'd_in': 39, 'd_out': 40, 'dropout': 0.10461609715865526, 'n_blocks': 2}, 'ResMLP': {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 40, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}, 'SAINT': {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}, 'NODE': {'num_layers': 2, 'total_tree_count': 2048, 'tree_depth': 6, 'tree_output_dim': 2}}}, outer_splits=3, save_results=False)
+--- Running Nested Cross-Validation with Predefined Hyperparameters ---
+Dataset: Sensory, Model: MLP, Objective: probabilistic_regression
+Loading dataset Sensory...
+Dataset loaded! 
+
+(576, 11)
+Started Classification Module ...... 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TESTING MODEL
+X_train shape: (288, 11)
+y_train shape: (288,)
+X_test shape: (288, 11)
+y_test shape: (288,)
+--- Test Run 1/3 ---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :11
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (288, 11)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Ordinal Index : None
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Ordinal Index : None
+Cat Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : None
+Numerical Index V1 : []
+Cat Idx V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+One Hot Encoding...
+Ord : None, Nom : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], Num : []
+Num idx: []
+Ord : None, Nom : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], Num : []
+Nominal : (36, 36)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+ 
+
+Train: [[0. 1. 0. 0. 0.]
+ [0. 1. 0. 0. 1.]
+ [0. 1. 0. 0. 1.]
+ [0. 1. 0. 1. 0.]
+ [0. 1. 0. 0. 1.]
+ [1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1.]
+ [1. 0. 0. 1. 0.]
+ [1. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 1.]] 
+ 
+ 
+Val : (288, 36) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35] 
+ 
+
+Train: [[0. 1. 0. 0. 0. 0. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 1. 0.
+  0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 1. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1.
+  0. 0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 0. 1. 0. 1. 1. 0. 0.
+  0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 1. 0.]
+ [0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 1. 0.
+  0. 0. 1. 0. 1. 0. 0. 0. 0. 1. 1. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 0. 1. 0.
+  0. 1. 0. 0. 0. 1. 1. 0. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 1. 1. 0. 0. 1. 0.
+  0. 1. 0. 0. 0. 1. 0. 1. 0. 0. 0. 1.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 1. 0. 0.
+  0. 0. 0. 1. 0. 1. 1. 0. 0. 0. 0. 1.]
+ [1. 0. 0. 1. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0. 0. 1.
+  0. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 1.]
+ [1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 1. 0. 1. 0. 0.
+  0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 0. 1. 0. 1. 0.
+  0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 1.]] 
+ 
+ 
+Val : (288, 36) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: float64
+X Val dtype: float64
+X dtype: float32
+X Val dtype: float32
+After encoding : : WE ARE IN TRAIN.PY
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+num_features :36
+num_classes : 1
+cat_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+nominal_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+ordinal_idx : None
+num_idx : []
+cat_dims : [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BINNING INIT
+Number of bins: 6
+Number of Classes B4 Bin Verifier: 6
+Unique values in y: (array([0., 1., 2., 3., 4., 5.]), 6)
+Unique values in y_val: (array([0., 1., 2., 3., 4., 5.]), 6)
+No need to shift labels.
+VERIFY SHIFT
+Y shape : (288,) , Y_val shape : (288,)
+Train after shift : [0 1 2 3 4 5], Length : 6
+Number of Classes After Bin Verifier: 6 
+
+
+BINNING END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+In get_device
+On Device: cpu
+{'d_block': 128, 'd_in': 36, 'd_out': 6, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+X in evaluate: <class 'torch.Tensor'>
+X in evaluate: <class 'torch.Tensor'>
+X in evaluate: <class 'torch.Tensor'>
+X in predict: <class 'numpy.ndarray'>
+X in predict proba: <class 'torch.Tensor'>
+Prediction shape : (288,)
+Probabilities shape : (288, 6) 
+
+Prediction : [0 3 0 0 3 3 3 3 0 3]
+Probabilities : [[0.18412457 0.16300084 0.1663873  0.16461056 0.17062283 0.15125388]
+ [0.17652269 0.15253039 0.16883916 0.18068977 0.17195359 0.1494644 ]
+ [0.17990513 0.15703763 0.16500066 0.17920813 0.16381992 0.1550285 ]
+ [0.17810348 0.15456058 0.1709123  0.1762379  0.16705884 0.15312701]
+ [0.17490299 0.16068313 0.16094905 0.18208492 0.17148347 0.14989641]
+ [0.17397512 0.15797147 0.16027431 0.18497531 0.16959818 0.15320565]
+ [0.17113209 0.15403524 0.16842756 0.18273538 0.17325069 0.15041906]
+ [0.17296626 0.15641664 0.15973672 0.18302736 0.17205311 0.15579993]
+ [0.18298835 0.15326938 0.16244118 0.17269023 0.16296639 0.16564451]
+ [0.17710853 0.14856191 0.16499537 0.1826132  0.16891925 0.15780178]] 
+
+Mean bin : class
+0    13.388889
+1    14.000000
+2    14.500000
+3    15.000000
+4    15.500000
+5    16.239583
+Name: y_true, dtype: float64, Type : <class 'pandas.core.series.Series'>, shape : (6,)
+State of save is True b4 loss saving
+Saving loss to file: output/MLP/Sensory/logging/loss_0.txt
+Log file exists at: output/MLP/Sensory/logging/loss_0.txt
+File name : output/MLP/Sensory/logging/loss_0.txt . The file was saved
+Saving loss to file: output/MLP/Sensory/logging/test_loss_0.txt
+Log file exists at: output/MLP/Sensory/logging/test_loss_0.txt
+File name : output/MLP/Sensory/logging/test_loss_0.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 6
+Class labels : [0, 1, 2, 3, 4, 5]
+Unique y_true : 6
+Unique train : 6
+
+Prediction shape : (288,)
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+In the gulag
+/opt/miniconda3/envs/TabSurvey/lib/python3.10/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+y_test_pred : [15.0, 14.0, 15.0, 14.0, 16.239583333333332, 15.5, 14.5, 15.0, 14.5, 16.239583333333332], y_test_class : [3 1 3 1 5 4 2 3 2 5]
+--- Test Run 2/3 ---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :11
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (288, 11)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Ordinal Index : None
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Ordinal Index : None
+Cat Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : None
+Numerical Index V1 : []
+Cat Idx V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+One Hot Encoding...
+Ord : None, Nom : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], Num : []
+Num idx: []
+Ord : None, Nom : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], Num : []
+Nominal : (36, 36)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+ 
+
+Train: [[0. 1. 0. 1. 0.]
+ [1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]] 
+ 
+ 
+Val : (288, 36) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35] 
+ 
+
+Train: [[0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1. 0.
+  0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+ [1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 0. 1. 0.
+  0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 1. 0.]
+ [0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1.
+  0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 1. 0.]
+ [1. 0. 0. 0. 0. 0. 1. 0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 1. 0. 1. 0. 1. 0. 0.
+  1. 0. 0. 0. 0. 1. 0. 1. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1.
+  0. 0. 0. 1. 1. 0. 0. 0. 0. 1. 1. 0.]
+ [1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 1. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1. 0.
+  1. 0. 0. 0. 1. 0. 0. 0. 0. 1. 1. 0.]
+ [0. 1. 0. 0. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 1. 1. 0. 0.
+  0. 0. 1. 0. 1. 0. 0. 1. 0. 0. 1. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 0. 0. 1.
+  0. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 1.]
+ [0. 1. 0. 0. 0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1. 0.
+  0. 0. 1. 0. 1. 0. 0. 0. 0. 1. 1. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 1. 1. 0. 0.
+  0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0. 1.]] 
+ 
+ 
+Val : (288, 36) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: float64
+X Val dtype: float64
+X dtype: float32
+X Val dtype: float32
+After encoding : : WE ARE IN TRAIN.PY
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+num_features :36
+num_classes : 1
+cat_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+nominal_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+ordinal_idx : None
+num_idx : []
+cat_dims : [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BINNING INIT
+Number of bins: 6
+Number of Classes B4 Bin Verifier: 6
+Unique values in y: (array([0., 1., 2., 3., 4.]), 5)
+Unique values in y_val: (array([0., 1., 2., 3., 4.]), 5)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 5
+Final Test Labels Length: 5
+Final Num Classes: 5
+Final Bin Labels: [0, 1, 2, 3, 4]
+VERIFY SHIFT
+Y shape : (288,) , Y_val shape : (288,)
+Train after shift : [0 1 2 3 4], Length : 5
+Number of Classes After Bin Verifier: 5 
+
+
+BINNING END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+In get_device
+On Device: cpu
+{'d_block': 128, 'd_in': 36, 'd_out': 5, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+X in evaluate: <class 'torch.Tensor'>
+X in evaluate: <class 'torch.Tensor'>
+X in evaluate: <class 'torch.Tensor'>
+X in predict: <class 'numpy.ndarray'>
+X in predict proba: <class 'torch.Tensor'>
+Prediction shape : (288,)
+Probabilities shape : (288, 5) 
+
+Prediction : [3 3 3 3 3 3 1 3 3 3]
+Probabilities : [[0.20703408 0.1867857  0.20431931 0.21803734 0.18382357]
+ [0.201696   0.19794686 0.2031962  0.2117481  0.1854129 ]
+ [0.20364796 0.18817183 0.20622368 0.2133577  0.18859884]
+ [0.20390075 0.19728343 0.20558923 0.20807649 0.18515012]
+ [0.18718691 0.21055844 0.19375649 0.21606472 0.1924335 ]
+ [0.19774984 0.20130694 0.19881004 0.21532819 0.18680501]
+ [0.1970666  0.21275657 0.19646247 0.2118932  0.18182115]
+ [0.20041916 0.1948259  0.2029886  0.21753874 0.1842276 ]
+ [0.203559   0.19232939 0.20493981 0.21337618 0.18579565]
+ [0.20884702 0.19487321 0.2051941  0.21323161 0.17785406]] 
+
+Mean bin : class
+0    13.712766
+1    14.500000
+2    15.000000
+3    15.500000
+4    16.186441
+Name: y_true, dtype: float64, Type : <class 'pandas.core.series.Series'>, shape : (5,)
+State of save is True b4 loss saving
+Saving loss to file: output/MLP/Sensory/logging/loss_1.txt
+Log file exists at: output/MLP/Sensory/logging/loss_1.txt
+File name : output/MLP/Sensory/logging/loss_1.txt . The file was saved
+Saving loss to file: output/MLP/Sensory/logging/test_loss_1.txt
+Log file exists at: output/MLP/Sensory/logging/test_loss_1.txt
+File name : output/MLP/Sensory/logging/test_loss_1.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 5
+Class labels : [0, 1, 2, 3, 4]
+Unique y_true : 5
+Unique train : 5
+
+Prediction shape : (288,)
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+In the gulag
+y_test_pred : [15.0, 13.712765957446809, 15.0, 13.712765957446809, 16.1864406779661, 15.5, 14.5, 15.0, 14.5, 16.1864406779661], y_test_class : [2 0 2 0 4 3 1 2 1 4]
+--- Test Run 3/3 ---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :11
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ordinal_idx : None
+/opt/miniconda3/envs/TabSurvey/lib/python3.10/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (288, 11)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Ordinal Index : None
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Ordinal Index : None
+Cat Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : None
+Numerical Index V1 : []
+Cat Idx V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+One Hot Encoding...
+Ord : None, Nom : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], Num : []
+Num idx: []
+Ord : None, Nom : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], Num : []
+Nominal : (36, 36)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+ 
+
+Train: [[1. 0. 0. 0. 1.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 1. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 0. 0. 1.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 1. 0. 0.]
+ [1. 0. 0. 0. 1.]] 
+ 
+ 
+Val : (288, 36) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35] 
+ 
+
+Train: [[1. 0. 0. 0. 1. 0. 0. 0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 1. 0. 1. 0. 0. 0. 1.
+  0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 1. 0.
+  0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1.
+  0. 0. 1. 0. 1. 0. 0. 0. 1. 0. 1. 0.]
+ [0. 1. 0. 0. 0. 1. 0. 0. 0. 0. 1. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 1. 0. 0.
+  0. 0. 0. 1. 0. 1. 1. 0. 0. 0. 0. 1.]
+ [0. 1. 1. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1.
+  0. 0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1.]
+ [0. 1. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1.
+  0. 0. 1. 0. 0. 1. 0. 0. 1. 0. 0. 1.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 0. 0. 1.
+  0. 0. 0. 1. 1. 0. 0. 1. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 1. 0. 0. 1.
+  0. 0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1.]
+ [0. 1. 1. 0. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1.
+  0. 0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0. 1. 0.
+  0. 0. 0. 1. 0. 1. 1. 0. 0. 0. 0. 1.]] 
+ 
+ 
+Val : (288, 36) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: float64
+X Val dtype: float64
+X dtype: float32
+X Val dtype: float32
+After encoding : : WE ARE IN TRAIN.PY
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+num_features :36
+num_classes : 1
+cat_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+nominal_idx : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+ordinal_idx : None
+num_idx : []
+cat_dims : [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BINNING INIT
+Number of bins: 6
+Number of Classes B4 Bin Verifier: 6
+Unique values in y: (array([0., 1., 2., 3., 4.]), 5)
+Unique values in y_val: (array([0., 1., 2., 3., 4.]), 5)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 5
+Final Test Labels Length: 5
+Final Num Classes: 5
+Final Bin Labels: [0, 1, 2, 3, 4]
+VERIFY SHIFT
+Y shape : (288,) , Y_val shape : (288,)
+Train after shift : [0 1 2 3 4], Length : 5
+Number of Classes After Bin Verifier: 5 
+
+
+BINNING END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+In get_device
+On Device: cpu
+{'d_block': 128, 'd_in': 36, 'd_out': 5, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+X in evaluate: <class 'torch.Tensor'>
+X in evaluate: <class 'torch.Tensor'>
+X in evaluate: <class 'torch.Tensor'>
+X in predict: <class 'numpy.ndarray'>
+X in predict proba: <class 'torch.Tensor'>
+Prediction shape : (288,)
+Probabilities shape : (288, 5) 
+
+Prediction : [0 0 0 0 0 0 0 0 0 0]
+Probabilities : [[0.22858672 0.18238933 0.20152952 0.20428145 0.183213  ]
+ [0.2197843  0.17032684 0.20237993 0.19470488 0.21280403]
+ [0.23319428 0.17506903 0.20244598 0.20466636 0.18462436]
+ [0.22364691 0.17584093 0.20718063 0.1978696  0.19546202]
+ [0.22226767 0.18454963 0.21285924 0.19227047 0.18805297]
+ [0.22084023 0.17120452 0.20614903 0.18986973 0.2119366 ]
+ [0.2110606  0.17927691 0.20822048 0.21058571 0.19085626]
+ [0.22157703 0.16983679 0.2082957  0.19432542 0.20596507]
+ [0.21421447 0.17631184 0.20916077 0.19675942 0.20355351]
+ [0.21717288 0.17156018 0.20472558 0.19328505 0.21325624]] 
+
+Mean bin : class
+0    13.815217
+1    14.500000
+2    15.000000
+3    15.500000
+4    16.276923
+Name: y_true, dtype: float64, Type : <class 'pandas.core.series.Series'>, shape : (5,)
+State of save is True b4 loss saving
+Saving loss to file: output/MLP/Sensory/logging/loss_2.txt
+Log file exists at: output/MLP/Sensory/logging/loss_2.txt
+File name : output/MLP/Sensory/logging/loss_2.txt . The file was saved
+Saving loss to file: output/MLP/Sensory/logging/test_loss_2.txt
+Log file exists at: output/MLP/Sensory/logging/test_loss_2.txt
+File name : output/MLP/Sensory/logging/test_loss_2.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 5
+Class labels : [0, 1, 2, 3, 4]
+Unique y_true : 5
+Unique train : 5
+
+Prediction shape : (288,)
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+In the gulag
+y_test_pred : [15.0, 13.815217391304348, 15.0, 13.815217391304348, 16.276923076923076, 15.5, 14.5, 15.0, 14.5, 16.276923076923076], y_test_class : [2 0 2 0 4 3 1 2 1 4]
+MSE SCORES: [0.030847661943265586, 0.04700083196469727, 0.04907485790458468], R2 SCORES: [0.9527125661228982, 0.9279508204613024, 0.9247714753079421]
+Saving model.....
+Results After CV: {'MSE - mean': 0.04230778393751585, 'MSE - std': 0.008147645590073055, 'R2 - mean': 0.9351449539640475, 'R2 - std': 0.012489804018315544}
+Train time: 0.009879000000000046
+Inference time: 0.0008376666666668106
+Finished cross validation
+Visualizing Happening
+Type of task : test
+Train Loss Length: 3, Test Loss Length: 3, epochs: 3, min_idx: 3
+Train Loss Length: 3, Test Loss Length: 3, epochs: 3, min_idx: 3
+Train Loss Length: 3, Test Loss Length: 3, epochs: 3, min_idx: 3
+Plots saved successfully!
+
+--- Testin on Final Model Finished ---
+Aggregated Results: {'MSE - mean': 0.04230778393751585, 'MSE - std': 0.008147645590073055, 'R2 - mean': 0.9351449539640475, 'R2 - std': 0.012489804018315544}
+Avg Outer Fold Train Time: 0.0099 sec
+Avg Outer Fold Inference Time: 0.0008 sec
