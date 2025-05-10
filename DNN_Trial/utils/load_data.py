@@ -59,10 +59,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Socmob":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/541-socmob.csv') #UBUNTU
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         label_col = 'counts_for_sons_current_occupation'
 
         #drop nulls
@@ -72,10 +72,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Sensory":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/546-sensory/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/546-sensory.csv')
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         
         label_col = 'Score'
 
@@ -105,10 +105,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Black_Friday" :
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41540-black_friday/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/41540-black_friday/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/41540-black_friday.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/41540-black_friday.csv')
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/41540-black_friday.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/41540-black_friday.csv')
         label_col = 'Purchase'
 
         #Age
@@ -164,10 +164,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "House_Prices_Nominal":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42563-house_prices_nominal/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42563-house_prices_nominal/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42563-house_prices_nominal.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/42563-house_prices_nominal.csv')
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42563-house_prices_nominal.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42563-house_prices_nominal.csv')
         label_col = 'SalePrice'
 
         #nulls
@@ -197,10 +197,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Mercedes_Benz":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/42570-Mercedes_Benz_Greener_Manufacturing.csv')
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42570-Mercedes_Benz_Greener_Manufacturing.csv')
         label_col = 'y'
 
         norm_cols = get_colnames(df, args.nominal_idx) #nominal cols
@@ -216,10 +216,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Allstate_Claims":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/42571-Allstate_Claims_Severity.csv')
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42571-Allstate_Claims_Severity.csv')
         label_col = 'loss'
 
         norm_cols = get_colnames(df, args.nominal_idx) #nominal cols
@@ -268,7 +268,7 @@ def load_data(args, is_test=False):
         df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42729-nyc-taxi-green-dec-2016.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/42729-nyc-taxi-green-dec-2016.csv')
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/546-sensory.csv')
         label_col = 'tip_amount'
 
         #drop nulls
@@ -278,10 +278,10 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "House_Sales":
-        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42731-house_sales/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/42731-house_sales/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/42731-house_sales.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/42731-house_sales.csv')
-        df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42731-house_sales.csv')
+        #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/42731-house_sales.csv')
         label_col = 'price'
 
         norm_cols = get_colnames(df, args.nominal_idx) #nominal cols
