@@ -59,8 +59,11 @@ def bin_finder(args, y):
     else:
         raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
     """
-    #start with Sturges' Rule
-    bins = sturges(y, args)
+    if args.model_name == "NODE:
+        #start with Sturges' Rule
+        bins = sturges(y, args)
+    else:
+        bins = freedman_diaconis(y,args)
 
     return bins
 
