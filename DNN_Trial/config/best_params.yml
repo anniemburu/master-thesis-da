@@ -81,6 +81,9 @@ parameters:
       dropout1: 0.31999331016593385
       dropout2: 0.17961742655097668
       n_blocks: 4
+    FTTransformer:
+      learning_rate : 0.0006629565316207639
+      weight_decay: 0.0008780633971520654
     SAINT:
       depth: 3
       dim: 64
