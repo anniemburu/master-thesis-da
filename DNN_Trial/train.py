@@ -59,7 +59,7 @@ def bin_finder(args, y):
     else:
         raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
     """
-    if args.model_name == "NODE:
+    if args.model_name == "NODE":
         #start with Sturges' Rule
         bins = sturges(y, args)
     else:
