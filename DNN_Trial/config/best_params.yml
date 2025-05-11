@@ -1,415 +1,240 @@
 parameters:
   Abalone:
-    CatBoost: 
-      iterations: 100
-      l2_leaf_reg: 1.2142895041234418
-      learning_rate: 0.1780973833308435
-      max_depth: 4
-      od_type: Iter
-      od_wait: 20
-      verbose: 100
     FTTransformer:
-      learning_rate: 0.0026312292554662967
-      weight_decay: 0.000741227822541328
+      learning_rate: 0.003346353491248373
+      weight_decay: 1.6039854113455462e-05
     MLP:
       d_block: 256
       d_in: 10
-      d_out: 7
-      dropout: 0.045537479089527655
-      n_blocks: 4
+      d_out: 1
+      dropout: 0.03190847875416855
+      n_blocks: 2
     ResMLP:
       d_block: 256
-      d_hidden: 5
-      d_hidden_multiplier: 2.070874813204879
+      d_hidden: 4
+      d_hidden_multiplier: 2.8762609772024286
       d_in: 10
-      d_out: 7
-      dropout1: 0.2767197595784706
-      dropout2: 0.1295421415138883
+      d_out: 13
+      dropout1: 0.36451371991488923
+      dropout2: 0.16141544478285838
       n_blocks: 6
-    SAINT:
-      depth: 3
-      dim: 128
-      dropout: 0.8
-      heads: 4
-    NODE:
-      'num_layers': 8
-      'total_tree_count': 2048
-      'tree_depth': 8
-      'tree_output_dim': 3
   Allstate_Claims:
-    FTTransformer:
-      learning_rate: 0.00014266378836134144 
-      weight_decay: 7.973049353626902e-05
     MLP:
       d_block: 256
-      d_in: 1093
-      d_out: 311
-      dropout: 0.12920563775872115
+      d_in: 1073
+      d_out: 1
+      dropout: 0.07682853251149886
       n_blocks: 6
-    ResMLP:
-      d_block: 128
-      d_hidden: 8
-      d_hidden_multiplier: 1.3701994442389223
-      d_in: 1093
-      d_out: 311
-      dropout1: 0.38528007263059155
-      dropout2: 0.15678728297998543
-      n_blocks: 3
-    SAINT:
-      depth: 3
-      dim: 64
-      dropout: 0.7
-      heads: 4
-    NODE:
-      'num_layers': 8
-      'total_tree_count': 2048
-      'tree_depth': 8
-      'tree_output_dim': 3
   Black_Friday:
     MLP:
       d_block: 256
       d_in: 75
-      d_out: 36
-      dropout: 0.28716314068720666
-      n_blocks: 3
+      d_out: 1
+      dropout: 0.10721970311199958
+      n_blocks: 6
     ResMLP:
       d_block: 256
-      d_hidden: 5
-      d_hidden_multiplier: 3.1295693022802924
+      d_hidden: 2
+      d_hidden_multiplier: 3.238707896287477
       d_in: 75
       d_out: 36
-      dropout1: 0.31999331016593385
-      dropout2: 0.17961742655097668
-      n_blocks: 4
-    FTTransformer:
-      learning_rate : 0.0006629565316207639
-      weight_decay: 0.0008780633971520654
-    SAINT:
-      depth: 3
-      dim: 64
-      dropout: 0.1
-      heads: 2
-    NODE:
-      'num_layers': 4 
-      'total_tree_count': 1024 
-      'tree_depth': 8 
-      'tree_output_dim': 2
+      dropout1: 0.1447794249707017
+      dropout2: 0.10652983108653614
+      n_blocks: 2
   Boston:
     FTTransformer:
-      learning_rate: 0.0003038703893093738
-      weight_decay: 8.778101233251167e-05
+      learning_rate: 0.005961637956043898
+      weight_decay: 8.92702675678448e-05
     MLP:
       d_block: 256
       d_in: 14
-      d_out: 6
-      dropout: 0.02868322485344796
+      d_out: 1
+      dropout: 0.19313939240578717
       n_blocks: 2
     ResMLP:
       d_block: 256
       d_hidden: 3
-      d_hidden_multiplier: 2.629805792810099
+      d_hidden_multiplier: 2.4381847417017717
       d_in: 14
-      d_out: 6
-      dropout1: 0.42545138307167646
-      dropout2: 0.08020072326197547
-      n_blocks: 6
-    SAINT:
-      depth: 1
-      dim: 64
-      dropout: 0.2
-      heads: 4
-    NODE:
-      'num_layers': 4
-      'total_tree_count': 1024
-      'tree_depth': 8
-      'tree_output_dim': 3
+      d_out: 10
+      dropout1: 0.4292852059127049
+      dropout2: 0.26527704540625047
+      n_blocks: 4
   Brazillian_Houses:
     FTTransformer:
-      learning_rate: 0.00012882433392871884
-      weight_decay: 0.0006194542036721904
+      learning_rate: 0.007246604745497065
+      weight_decay: 0.0029245663761010127
     MLP:
       d_block: 256
       d_in: 17
-      d_out: 1095
-      dropout: 0.26456213654515587
-      n_blocks: 2
+      d_out: 1
+      dropout: 0.07678813857296692
+      n_blocks: 5
     ResMLP:
       d_block: 256
-      d_hidden: 9
-      d_hidden_multiplier: 2.8578552359643927
+      d_hidden: 4
+      d_hidden_multiplier: 4.057211730145489
       d_in: 17
       d_out: 1095
-      dropout1: 0.05920170022592163
-      dropout2: 0.19030616663715155
-      n_blocks: 2
-    SAINT:
-      depth: 1
-      dim: 64
-      dropout: 0.3
-      heads: 8
-    NODE:
-      'num_layers': 2
-      'total_tree_count': 1024
-      'tree_depth': 6
-      'tree_output_dim': 3
+      dropout1: 0.4371413695633215
+      dropout2: 0.29149024331234025
+      n_blocks: 3
   Diamonds:
     FTTransformer:
-      learning_rate: 0.00013457653890213615
-      weight_decay: 8.376325678211951e-05
+      learning_rate: 0.007101255154561158
+      weight_decay: 0.0009434149491471733
     MLP:
       d_block: 256
       d_in: 9
-      d_out: 13
-      dropout: 0.07787642217098255
-      n_blocks: 3
-    ResMLP:
-      d_block: 128
-      d_hidden: 5
-      d_hidden_multiplier: 1.6469990033121622
-      d_in: 9
-      d_out: 13
-      dropout1: 0.1279373990844757
-      dropout2: 0.09909622892506705
+      d_out: 1
+      dropout: 0.23677836111066783
       n_blocks: 6
-    SAINT:
-      depth: 6
-      dim: 128
-      dropout: 0.6
-      heads: 2
-    NODE:
-      'num_layers': 4
-      'total_tree_count': 2048
-      'tree_depth': 6 
-      'tree_output_dim': 2
-  House_Prices_Nominal:
-    FTTransformer:
-      learning_rate: 0.0001991206295866777
-      weight_decay: 0.0025487180826797907
-    MLP:
-      d_block: 256
-      d_in: 109
-      d_out: 7
-      dropout: 0.10539334128428231
-      n_blocks: 2
-    ResMLP:
-      d_block: 256
-      d_hidden: 6
-      d_hidden_multiplier: 4.285524104220049
-      d_in: 109
-      d_out: 7
-      dropout1: 0.07419545585050902
-      dropout2: 0.058496662836731425
-      n_blocks: 6
-    SAINT:
-      depth: 1
-      dim: 128
-      dropout: 0.7
-      heads: 2
-    NODE:
-      'num_layers': 4
-      'total_tree_count': 2048
-      'tree_depth': 6
-      'tree_output_dim': 3
-  House_Sales:
-    FTTransformer:
-      learning_rate: 0.00250136728702011
-      weight_decay: 0.00011052492730016369
-    MLP:
-      d_block: 256
-      d_in: 90
-      d_out: 128
-      dropout: 0.10700449012979917
-      n_blocks: 4
     ResMLP:
       d_block: 256
       d_hidden: 2
-      d_hidden_multiplier: 4.550168594755401
-      d_in: 90
-      d_out: 133
-      dropout1: 0.20737998960685675
-      dropout2: 0.03151442135910869
+      d_hidden_multiplier: 2.723561499824081
+      d_in: 9
+      d_out: 34
+      dropout1: 0.21310736716949388
+      dropout2: 0.09647228888528614
       n_blocks: 5
-    SAINT:
-      depth: 6
-      dim: 256
-      dropout: 0.6
-      heads: 8
-    NODE:
-      'num_layers': 8
-      'total_tree_count': 2048
-      'tree_depth': 8
-      'tree_output_dim': 3
-  MIP:
+  House_Prices_Nominal:
+    MLP:
+      d_block: 256
+      d_in: 109
+      d_out: 1
+      dropout: 0.20383999785660487
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 1.3709674297417445
+      d_in: 109
+      d_out: 17
+      dropout1: 0.4328849233188455
+      dropout2: 0.03863249998871383
+      n_blocks: 4
+  House_Sales:
     FTTransformer:
-      learning_rate: 0.005340493024514428
-      weight_decay: 5.660990217872578e-06
+      learning_rate: 0.0008304138365966551
+      weight_decay: 1.4243260329863695e-05
+    MLP:
+      d_block: 256
+      d_in: 90
+      d_out: 1
+      dropout: 0.013522222134953151
+      n_blocks: 3
+    ResMLP:
+      d_block: 256
+      d_hidden: 3
+      d_hidden_multiplier: 4.237481136393337
+      d_in: 90
+      d_out: 131
+      dropout1: 0.04569104969076137
+      dropout2: 0.010941575331359225
+      n_blocks: 4
+  MIP:
     MLP:
       d_block: 64
       d_in: 151
-      d_out: 67
-      dropout: 0.10823216670029355
-      n_blocks: 2
-    ResMLP:
-      d_block: 256
-      d_hidden: 10
-      d_hidden_multiplier: 3.5463105818248644
-      d_in: 151
-      d_out: 78
-      dropout1: 0.3740596836340417
-      dropout2: 0.14785999544988046
-      n_blocks: 4
-    SAINT:
-      depth: 3
-      dim: 32
-      dropout: 0.6
-      heads: 2
-    NODE:
-      'num_layers': 8
-      'total_tree_count': 1024
-      'tree_depth': 8
-      'tree_output_dim': 3
-  Mercedes_Benz:
-    FTTransformer:
-      learning_rate: 0.0004452048953174126
-      weight_decay: 1.7644038793799652e-06
-    MLP:
-      d_block: 256
-      d_in: 547
-      d_out: 18
-      dropout: 0.17946730470146646
-      n_blocks: 2
+      d_out: 1
+      dropout: 0.2651113818434264
+      n_blocks: 6
     ResMLP:
       d_block: 256
       d_hidden: 4
-      d_hidden_multiplier: 2.8190447590303593
-      d_in: 547
-      d_out: 18
-      dropout1: 0.39853029839247645
-      dropout2: 0.23047013110182565
+      d_hidden_multiplier: 2.8943918828322444
+      d_in: 151
+      d_out: 80
+      dropout1: 0.46585676851386065
+      dropout2: 0.1740730761384721
       n_blocks: 5
-    SAINT:
-      depth: 1
-      dim: 32
-      dropout: 0
-      heads: 4
-    NODE:
-      'num_layers': 8
-      'total_tree_count': 1024
-      'tree_depth': 8
-      'tree_output_dim': 2
-  Moneyball:
-    FTTransformer:
-      learning_rate: 0.0001397623116786567
-      weight_decay: 3.198059991694104e-06
+  Mercedes_Benz:
     MLP:
       d_block: 256
-      d_in: 48
-      d_out: 7
-      dropout: 0.2819627248207455
+      d_in: 549
+      d_out: 1
+      dropout: 0.29646621574612675
       n_blocks: 2
     ResMLP:
       d_block: 256
       d_hidden: 2
-      d_hidden_multiplier: 3.500563709434268
-      d_in: 48
-      d_out: 7
-      dropout1: 0.3191866936907723
-      dropout2: 0.17129324989277947
-      n_blocks: 6
-    SAINT:
-      depth: 3
-      dim: 32
-      dropout: 0.3
-      heads: 4
-    NODE:
-      'num_layers': 8
-      'total_tree_count': 2084
-      'tree_depth': 6
-      'tree_output_dim': 3
-  SAT11:
+      d_hidden_multiplier: 2.2490677131211343
+      d_in: 547
+      d_out: 18
+      dropout1: 0.00954377334572581
+      dropout2: 0.17621231533002782
+      n_blocks: 4
+  Moneyball:
     FTTransformer:
-      learning_rate: 8.719401475807713e-05
-      weight_decay: 0.0007004339745422863
+      learning_rate: 0.008974241215295128
+      weight_decay: 7.459646430671164e-05
     MLP:
-      d_block: 128
-      d_in: 130
-      d_out: 3
-      dropout: 0.15064221648941228
-      n_blocks: 2
+      d_block: 256
+      d_in: 48
+      d_out: 1
+      dropout: 0.04372445488402272
+      n_blocks: 6
     ResMLP:
       d_block: 256
-      d_hidden: 6
-      d_hidden_multiplier: 3.226913030082402
+      d_hidden: 7
+      d_hidden_multiplier: 2.290032735440481
+      d_in: 48
+      d_out: 10
+      dropout1: 0.4078828219530447
+      dropout2: 0.16833482708406416
+      n_blocks: 2
+  SAT11:
+    MLP:
+      d_block: 256
+      d_in: 130
+      d_out: 1
+      dropout: 0.1541837529458395
+      n_blocks: 2
+    ResMLP:
+      d_block: 128
+      d_hidden: 2
+      d_hidden_multiplier: 1.2674975187110258
       d_in: 130
       d_out: 3
-      dropout1: 0.4143262004883449
-      dropout2: 0.10671304592041092
-      n_blocks: 5
-    SAINT:
-      depth: 2
-      dim: 32
-      dropout: 0.6
-      heads: 2
-    NODE:
-      'num_layers': 2
-      'total_tree_count': 1024
-      'tree_depth': 8
-      'tree_output_dim': 3
+      dropout1: 0.3407681665344991
+      dropout2: 0.21986827250639
+      n_blocks: 4
   Sensory:
     FTTransformer:
-      learning_rate: 4.126150574320677e-05
-      weight_decay: 5.170169005303637e-05
+      learning_rate: 0.007837909586982108
+      weight_decay: 7.3601111536878155e-06
     MLP:
-      d_block: 128
+      d_block: 256
       d_in: 36
-      d_out: 5
-      dropout: 0.29860532918127847
+      d_out: 1
+      dropout: 0.16215696303563998
       n_blocks: 2
     ResMLP:
-      d_block: 128
-      d_hidden: 4
-      d_hidden_multiplier: 1.80130923504725
+      d_block: 256
+      d_hidden: 3
+      d_hidden_multiplier: 2.544110387653899
       d_in: 36
-      d_out: 5
-      dropout1: 0.228729597309105
-      dropout2: 0.22695309081109494
+      d_out: 6
+      dropout1: 0.12905452512026205
+      dropout2: 0.02854369523746009
       n_blocks: 5
-    SAINT:
-      depth: 1
-      dim: 128
-      dropout: 0
-      heads: 8
-    NODE:
-      'num_layers': 4
-      'total_tree_count': 1024
-      'tree_depth': 6
-      'tree_output_dim': 3
   Socmob:
     FTTransformer:
-      learning_rate: 0.00029650381259646087
-      weight_decay: 6.736378376679642e-05
+      learning_rate: 0.005567330402018387
+      weight_decay: 0.00020066904579140864
     MLP:
       d_block: 256
       d_in: 39
-      d_out: 40
-      dropout: 0.10461609715865526
-      n_blocks: 2
+      d_out: 1
+      dropout: 0.2713416938393725
+      n_blocks: 3
     ResMLP:
       d_block: 256
-      d_hidden: 4
-      d_hidden_multiplier: 4.543534401999215
+      d_hidden: 2
+      d_hidden_multiplier: 2.2103839284834628
       d_in: 39
       d_out: 40
-      dropout1: 0.115735614381013
-      dropout2: 0.018124882849134806
+      dropout1: 0.3964088449977436
+      dropout2: 0.03875240542559993
       n_blocks: 3
-    SAINT:
-      depth: 1
-      dim: 64
-      dropout: 0.2
-      heads: 2
-    NODE:
-      'num_layers': 2
-      'total_tree_count': 2048
-      'tree_depth': 6
-      'tree_output_dim': 2
