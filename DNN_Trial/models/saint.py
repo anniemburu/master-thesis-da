@@ -40,6 +40,12 @@ class SAINT(BaseModelTorch):
         dim = self.params["dim"] if args.num_features < 50 else 8
         self.batch_size = self.args.batch_size if args.num_features < 50 else 64
 
+        #try and learn the mean bins
+        if self.args.objective == "probabilistic_regression":
+            self.class_weights = nn.Parameter(
+                torch.tensor(args.class_weights, dtype=torch.float32).to(self.device)
+            )
+
         print("Using dim %d and batch size %d" % (dim, self.batch_size))
 
         self.model = SAINTModel(
@@ -119,7 +125,20 @@ class SAINT(BaseModelTorch):
                 # and apply mlp on it in the next step to get the predictions.
                 y_reps = reps[:, 0, :]
 
-                y_outs = self.model.mlpfory(y_reps)
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                #changed this for my EXP 4BIN MEAN
+
+                #y_outs = self.model.mlpfory(y_reps)
+
+                logits = self.model.mlpfory(y_reps)
+
+                if self.args.objective == "probabilistic_regression":
+                    probs = F.softmax(logits, dim=1)  # (batch_size, n_bins)
+                    y_outs = torch.matmul(probs, self.class_weights)  # (batch_size,)
+                else:
+                    y_outs = logits
+
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
                 if self.args.objective == "regression":
                     y_gts = y_gts.to(self.device)
@@ -203,14 +222,31 @@ class SAINT(BaseModelTorch):
                 _, x_categ_enc, x_cont_enc = embed_data_mask(x_categ, x_cont, cat_mask, con_mask, self.model)
                 reps = self.model.transformer(x_categ_enc, x_cont_enc)
                 y_reps = reps[:, 0, :]
-                y_outs = self.model.mlpfory(y_reps)
 
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                #EXPEREIMENTS 4 MY BIN STUFF MEAN BIN
+
+                """
+                y_outs = self.model.mlpfory(y_reps)
                 if self.args.objective == "binary":
                     y_outs = torch.sigmoid(y_outs)
                 elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                     y_outs = F.softmax(y_outs, dim=1)
 
+                predictions.append(y_outs.detach().cpu().numpy())"""
+
+                logits = self.model.mlpfory(y_reps)
+
+                if self.args.objective == "probabilistic_regression":
+                    probs = F.softmax(logits, dim=1)
+                    y_outs = torch.matmul(probs, self.class_weights.unsqueeze(0).expand(probs.size(0), -1))  # broadcast
+                else:
+                    y_outs = logits if self.args.objective == "regression" else F.softmax(logits, dim=1)
+
                 predictions.append(y_outs.detach().cpu().numpy())
+
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
         return np.concatenate(predictions)
 
     def attribute(self, X, y, strategy=""):
