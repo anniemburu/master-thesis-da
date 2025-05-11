@@ -898,6 +898,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             print("Binning Done")
 
         bin_mean = mean_per_bin(y_train, y_train_class)
+
+        #args.class_weights = bin_mean.to_list() #save this
         
         print("BINNING END")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n")
@@ -928,6 +930,9 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
         test_timer.end()
 
+        print(f"Prediction shape : {prediction.shape}")
+        print(f"Prediction Results : {prediction[:10]}")
+
 
         # Save model weights and the truth/prediction pairs for traceability
         #curr_model.save_model_and_predictions(y_test_class,seed)
@@ -955,6 +960,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         #print(f"Probabilities shape : {curr_model.prediction_probabilities.shape} \n")
         print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
         
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if args.class_comp:
             print("In the gulag")
             #set obj to be regression
@@ -988,9 +994,17 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             print("After Evaluation")
 
             print(f'{sc.get_results()} \n \n')
+        
+        """print("In the gulag")
+        #set obj to be regression
+        args.objective = "regression" #rem to rreturn it back to norm
+        sc = get_scorer(args)
 
+        #evaluate
+        error_results = sc.eval(y_test, prediction,curr_model.prediction_probabilities)
+        """
         #Append Scores
-        mse_scores.append(error_results['MSE'])
+        mse_scores.append(error_results['MSE'])         
         r2_scores.append(error_results['R2'])
         args.objective = orig_objective # Reset objective to original
 
