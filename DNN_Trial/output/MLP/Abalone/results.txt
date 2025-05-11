@@ -72,3 +72,17 @@ Test time: 0.003302
 Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 13, 'dropout': 0.045537479089527655, 'n_blocks': 4}
 
 
+2025-05-11 04:50:00.406682
+MLP - Abalone - train_model
+
+MSE - mean: 92.98850
+MSE - mean_std: 7.05850
+R2 - mean: -8.18408
+R2 - mean_std: 1.40810
+
+Train time: 0.046421
+Test time: 0.000414
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.03190847875416855, 'd_in': 10, 'd_out': 1}
+
+

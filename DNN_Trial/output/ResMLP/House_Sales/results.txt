@@ -72,3 +72,21 @@ Test time: 0.114209
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 4.550168594755401, 'd_in': 90, 'd_out': 108, 'dropout1': 0.20737998960685675, 'dropout2': 0.03151442135910869, 'n_blocks': 5}
 
 
+2025-05-11 05:26:47.515782
+ResMLP - House_Sales - train_model
+
+Log Loss - mean: 4.33437
+Log Loss - mean_std: 0.08876
+AUC - mean: 0.78067
+AUC - mean_std: 0.01670
+Accuracy - mean: 0.03008
+Accuracy - mean_std: 0.00425
+F1 score - mean: 0.00985
+F1 score - mean_std: 0.00299
+
+Train time: 0.508730
+Test time: 0.016174
+
+Best Parameters: {'n_blocks': 4, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 4.237481136393337, 'dropout1': 0.04569104969076137, 'dropout2': 0.010941575331359225, 'd_in': 90, 'd_out': 131}
+
+

@@ -72,3 +72,21 @@ Test time: 0.004427
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 10, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
 
 
+2025-05-11 05:27:03.649028
+ResMLP - Boston - train_model
+
+Log Loss - mean: 2.29856
+Log Loss - mean_std: 0.09213
+AUC - mean: 0.62701
+AUC - mean_std: 0.08736
+Accuracy - mean: 0.16173
+Accuracy - mean_std: 0.04627
+F1 score - mean: 0.08828
+F1 score - mean_std: 0.03558
+
+Train time: 0.016347
+Test time: 0.001876
+
+Best Parameters: {'n_blocks': 4, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'd_in': 14, 'd_out': 10}
+
+

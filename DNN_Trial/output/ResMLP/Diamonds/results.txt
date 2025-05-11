@@ -58,3 +58,21 @@ Test time: 0.102149
 Best Parameters: {'d_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.6469990033121622, 'd_in': 9, 'd_out': 37, 'dropout1': 0.1279373990844757, 'dropout2': 0.09909622892506705, 'n_blocks': 6}
 
 
+2025-05-11 05:11:03.231303
+ResMLP - Diamonds - train_model
+
+Log Loss - mean: 1.88607
+Log Loss - mean_std: 0.09222
+AUC - mean: 0.94572
+AUC - mean_std: 0.00547
+Accuracy - mean: 0.26240
+Accuracy - mean_std: 0.01826
+F1 score - mean: 0.19186
+F1 score - mean_std: 0.01219
+
+Train time: 2.136063
+Test time: 0.092691
+
+Best Parameters: {'n_blocks': 5, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.723561499824081, 'dropout1': 0.21310736716949388, 'dropout2': 0.09647228888528614, 'd_in': 9, 'd_out': 34}
+
+

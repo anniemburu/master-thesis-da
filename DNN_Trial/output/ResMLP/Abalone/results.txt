@@ -72,3 +72,21 @@ Test time: 0.006181
 Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 10, 'd_out': 13, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}
 
 
+2025-05-11 10:20:20.122634
+ResMLP - Abalone - train_model
+
+Log Loss - mean: 2.05747
+Log Loss - mean_std: 0.05018
+AUC - mean: 0.76777
+AUC - mean_std: 0.01457
+Accuracy - mean: 0.24952
+Accuracy - mean_std: 0.02007
+F1 score - mean: 0.19052
+F1 score - mean_std: 0.02927
+
+Train time: 0.103211
+Test time: 0.002311
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8762609772024286, 'dropout1': 0.36451371991488923, 'dropout2': 0.16141544478285838, 'd_in': 10, 'd_out': 13}
+
+

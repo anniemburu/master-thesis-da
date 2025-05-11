@@ -1,0 +1,240 @@
+parameters:
+  Abalone:
+    FTTransformer:
+      learning_rate: 0.003346353491248373
+      weight_decay: 1.6039854113455462e-05
+    MLP:
+      d_block: 256
+      d_in: 10
+      d_out: 1
+      dropout: 0.03190847875416855
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 4
+      d_hidden_multiplier: 2.8762609772024286
+      d_in: 10
+      d_out: 13
+      dropout1: 0.36451371991488923
+      dropout2: 0.16141544478285838
+      n_blocks: 6
+  Allstate_Claims:
+    MLP:
+      d_block: 256
+      d_in: 1073
+      d_out: 1
+      dropout: 0.07682853251149886
+      n_blocks: 6
+  Black_Friday:
+    MLP:
+      d_block: 256
+      d_in: 75
+      d_out: 1
+      dropout: 0.10721970311199958
+      n_blocks: 6
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 3.238707896287477
+      d_in: 75
+      d_out: 36
+      dropout1: 0.1447794249707017
+      dropout2: 0.10652983108653614
+      n_blocks: 2
+  Boston:
+    FTTransformer:
+      learning_rate: 0.005961637956043898
+      weight_decay: 8.92702675678448e-05
+    MLP:
+      d_block: 256
+      d_in: 14
+      d_out: 1
+      dropout: 0.19313939240578717
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 3
+      d_hidden_multiplier: 2.4381847417017717
+      d_in: 14
+      d_out: 10
+      dropout1: 0.4292852059127049
+      dropout2: 0.26527704540625047
+      n_blocks: 4
+  Brazillian_Houses:
+    FTTransformer:
+      learning_rate: 0.007246604745497065
+      weight_decay: 0.0029245663761010127
+    MLP:
+      d_block: 256
+      d_in: 17
+      d_out: 1
+      dropout: 0.07678813857296692
+      n_blocks: 5
+    ResMLP:
+      d_block: 256
+      d_hidden: 4
+      d_hidden_multiplier: 4.057211730145489
+      d_in: 17
+      d_out: 1095
+      dropout1: 0.4371413695633215
+      dropout2: 0.29149024331234025
+      n_blocks: 3
+  Diamonds:
+    FTTransformer:
+      learning_rate: 0.007101255154561158
+      weight_decay: 0.0009434149491471733
+    MLP:
+      d_block: 256
+      d_in: 9
+      d_out: 1
+      dropout: 0.23677836111066783
+      n_blocks: 6
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 2.723561499824081
+      d_in: 9
+      d_out: 34
+      dropout1: 0.21310736716949388
+      dropout2: 0.09647228888528614
+      n_blocks: 5
+  House_Prices_Nominal:
+    MLP:
+      d_block: 256
+      d_in: 109
+      d_out: 1
+      dropout: 0.20383999785660487
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 1.3709674297417445
+      d_in: 109
+      d_out: 17
+      dropout1: 0.4328849233188455
+      dropout2: 0.03863249998871383
+      n_blocks: 4
+  House_Sales:
+    FTTransformer:
+      learning_rate: 0.0008304138365966551
+      weight_decay: 1.4243260329863695e-05
+    MLP:
+      d_block: 256
+      d_in: 90
+      d_out: 1
+      dropout: 0.013522222134953151
+      n_blocks: 3
+    ResMLP:
+      d_block: 256
+      d_hidden: 3
+      d_hidden_multiplier: 4.237481136393337
+      d_in: 90
+      d_out: 131
+      dropout1: 0.04569104969076137
+      dropout2: 0.010941575331359225
+      n_blocks: 4
+  MIP:
+    MLP:
+      d_block: 64
+      d_in: 151
+      d_out: 1
+      dropout: 0.2651113818434264
+      n_blocks: 6
+    ResMLP:
+      d_block: 256
+      d_hidden: 4
+      d_hidden_multiplier: 2.8943918828322444
+      d_in: 151
+      d_out: 80
+      dropout1: 0.46585676851386065
+      dropout2: 0.1740730761384721
+      n_blocks: 5
+  Mercedes_Benz:
+    MLP:
+      d_block: 256
+      d_in: 549
+      d_out: 1
+      dropout: 0.29646621574612675
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 2.2490677131211343
+      d_in: 547
+      d_out: 18
+      dropout1: 0.00954377334572581
+      dropout2: 0.17621231533002782
+      n_blocks: 4
+  Moneyball:
+    FTTransformer:
+      learning_rate: 0.008974241215295128
+      weight_decay: 7.459646430671164e-05
+    MLP:
+      d_block: 256
+      d_in: 48
+      d_out: 1
+      dropout: 0.04372445488402272
+      n_blocks: 6
+    ResMLP:
+      d_block: 256
+      d_hidden: 7
+      d_hidden_multiplier: 2.290032735440481
+      d_in: 48
+      d_out: 10
+      dropout1: 0.4078828219530447
+      dropout2: 0.16833482708406416
+      n_blocks: 2
+  SAT11:
+    MLP:
+      d_block: 256
+      d_in: 130
+      d_out: 1
+      dropout: 0.1541837529458395
+      n_blocks: 2
+    ResMLP:
+      d_block: 128
+      d_hidden: 2
+      d_hidden_multiplier: 1.2674975187110258
+      d_in: 130
+      d_out: 3
+      dropout1: 0.3407681665344991
+      dropout2: 0.21986827250639
+      n_blocks: 4
+  Sensory:
+    FTTransformer:
+      learning_rate: 0.007837909586982108
+      weight_decay: 7.3601111536878155e-06
+    MLP:
+      d_block: 256
+      d_in: 36
+      d_out: 1
+      dropout: 0.16215696303563998
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 3
+      d_hidden_multiplier: 2.544110387653899
+      d_in: 36
+      d_out: 6
+      dropout1: 0.12905452512026205
+      dropout2: 0.02854369523746009
+      n_blocks: 5
+  Socmob:
+    FTTransformer:
+      learning_rate: 0.005567330402018387
+      weight_decay: 0.00020066904579140864
+    MLP:
+      d_block: 256
+      d_in: 39
+      d_out: 1
+      dropout: 0.2713416938393725
+      n_blocks: 3
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 2.2103839284834628
+      d_in: 39
+      d_out: 40
+      dropout1: 0.3964088449977436
+      dropout2: 0.03875240542559993
+      n_blocks: 3

@@ -72,3 +72,21 @@ Test time: 0.057855
 Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 83, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
 
 
+2025-05-11 05:23:36.993593
+ResMLP - MIP - train_model
+
+Log Loss - mean: 4.20849
+Log Loss - mean_std: 0.23324
+AUC - mean: 0.53914
+AUC - mean_std: 0.02978
+Accuracy - mean: 0.16330
+Accuracy - mean_std: 0.08516
+F1 score - mean: 0.11498
+F1 score - mean_std: 0.05723
+
+Train time: 0.090351
+Test time: 0.002130
+
+Best Parameters: {'n_blocks': 5, 'd_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8943918828322444, 'dropout1': 0.46585676851386065, 'dropout2': 0.1740730761384721, 'd_in': 151, 'd_out': 80}
+
+

@@ -72,3 +72,21 @@ Test time: 0.003741
 Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
 
 
+2025-05-11 05:28:43.192867
+ResMLP - Sensory - train_model
+
+Log Loss - mean: 1.77641
+Log Loss - mean_std: 0.02255
+AUC - mean: 0.45177
+AUC - mean_std: 0.04626
+Accuracy - mean: 0.21180
+Accuracy - mean_std: 0.04711
+F1 score - mean: 0.13699
+F1 score - mean_std: 0.04034
+
+Train time: 0.015467
+Test time: 0.001953
+
+Best Parameters: {'n_blocks': 5, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.544110387653899, 'dropout1': 0.12905452512026205, 'dropout2': 0.02854369523746009, 'd_in': 36, 'd_out': 6}
+
+

@@ -72,3 +72,17 @@ Test time: 0.002316
 Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 11, 'dropout': 0.2819627248207455, 'n_blocks': 2}
 
 
+2025-05-11 04:50:34.061462
+MLP - Moneyball - train_model
+
+MSE - mean: 514338.81196
+MSE - mean_std: 3687.81938
+R2 - mean: -71.99049
+R2 - mean_std: 6.84889
+
+Train time: 0.014795
+Test time: 0.000440
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'dropout': 0.04372445488402272, 'd_in': 48, 'd_out': 1}
+
+

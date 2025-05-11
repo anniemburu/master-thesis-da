@@ -58,3 +58,21 @@ Test time: 0.236036
 Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 39, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
 
 
+2025-05-11 05:06:19.423139
+ResMLP - Black_Friday - train_model
+
+Log Loss - mean: 2.64289
+Log Loss - mean_std: 0.01512
+AUC - mean: 0.81787
+AUC - mean_std: 0.00169
+Accuracy - mean: 0.15234
+Accuracy - mean_std: 0.00480
+F1 score - mean: 0.10368
+F1 score - mean_std: 0.00242
+
+Train time: 2.713862
+Test time: 0.087678
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'd_in': 75, 'd_out': 36}
+
+

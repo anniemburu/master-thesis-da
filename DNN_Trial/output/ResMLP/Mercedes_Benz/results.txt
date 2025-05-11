@@ -72,3 +72,21 @@ Test time: 0.048554
 Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 543, 'd_out': 20, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}
 
 
+2025-05-11 05:30:46.452562
+ResMLP - Mercedes_Benz - train_model
+
+Log Loss - mean: 2.26580
+Log Loss - mean_std: 0.13332
+AUC - mean: 0.66212
+AUC - mean_std: 0.03077
+Accuracy - mean: 0.28329
+Accuracy - mean_std: 0.03116
+F1 score - mean: 0.20922
+F1 score - mean_std: 0.03894
+
+Train time: 0.550210
+Test time: 0.006188
+
+Best Parameters: {'n_blocks': 4, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2490677131211343, 'dropout1': 0.00954377334572581, 'dropout2': 0.17621231533002782, 'd_in': 547, 'd_out': 18}
+
+

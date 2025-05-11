@@ -58,3 +58,17 @@ Test time: 0.149253
 Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
 
 
+2025-05-11 04:53:50.864215
+MLP - Black_Friday - train_model
+
+MSE - mean: 15185013.60577
+MSE - mean_std: 795633.78488
+R2 - mean: 0.41023
+R2 - mean_std: 0.03140
+
+Train time: 2.725746
+Test time: 0.044446
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'dropout': 0.10721970311199958, 'd_in': 75, 'd_out': 1}
+
+

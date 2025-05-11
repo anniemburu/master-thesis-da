@@ -72,3 +72,21 @@ Test time: 0.004761
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 48, 'd_out': 11, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
 
 
+2025-05-11 05:29:00.456237
+ResMLP - Moneyball - train_model
+
+Log Loss - mean: 2.27623
+Log Loss - mean_std: 0.04691
+AUC - mean: 0.72125
+AUC - mean_std: 0.05105
+Accuracy - mean: 0.22398
+Accuracy - mean_std: 0.02988
+F1 score - mean: 0.14910
+F1 score - mean_std: 0.03677
+
+Train time: 0.028345
+Test time: 0.001891
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'd_hidden': 7, 'd_hidden_multiplier': 2.290032735440481, 'dropout1': 0.4078828219530447, 'dropout2': 0.16833482708406416, 'd_in': 48, 'd_out': 10}
+
+

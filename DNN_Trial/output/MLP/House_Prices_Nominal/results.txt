@@ -58,3 +58,17 @@ Test time: 0.020505
 Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 18, 'dropout': 0.10539334128428231, 'n_blocks': 2}
 
 
+2025-05-11 04:50:55.481469
+MLP - House_Prices_Nominal - train_model
+
+MSE - mean: 40473330254.30449
+MSE - mean_std: 4547581786.38760
+R2 - mean: -5.04955
+R2 - mean_std: 0.70572
+
+Train time: 0.079698
+Test time: 0.000361
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.20383999785660487, 'd_in': 109, 'd_out': 1}
+
+

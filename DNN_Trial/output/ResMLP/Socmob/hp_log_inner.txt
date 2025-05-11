@@ -398,3 +398,403 @@ Train time: 0.016400
 Test time: 0.001361
 
 ---------------------------------------
+2025-05-11 05:27:12.009460
+Parameters: {'d_in': 39, 'd_out': 50, 'n_blocks': 6, 'd_block': 128, 'd_hidden': 10, 'd_hidden_multiplier': 2.7991819630131065, 'dropout1': 0.3709965463505809, 'dropout2': 0.02606707458532693}
+
+Log Loss - mean: 3.79387
+Log Loss - std: 0.14879
+AUC - mean: 0.53430
+AUC - std: 0.02771
+Accuracy - mean: 0.04315
+Accuracy - std: 0.03596
+F1 score - mean: 0.03571
+F1 score - std: 0.02615
+
+Train time: 0.068336
+Test time: 0.002721
+
+---------------------------------------
+2025-05-11 05:27:15.339657
+Parameters: {'d_in': 39, 'd_out': 50, 'n_blocks': 3, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 1.4877600804027624, 'dropout1': 0.1253780895470916, 'dropout2': 0.0826838005804771}
+
+Log Loss - mean: 3.79634
+Log Loss - std: 0.12179
+AUC - mean: 0.54668
+AUC - std: 0.01891
+Accuracy - mean: 0.06066
+Accuracy - std: 0.02632
+F1 score - mean: 0.05151
+F1 score - std: 0.03331
+
+Train time: 0.022061
+Test time: 0.001712
+
+---------------------------------------
+2025-05-11 05:27:18.624466
+Parameters: {'d_in': 39, 'd_out': 50, 'n_blocks': 3, 'd_block': 64, 'd_hidden': 8, 'd_hidden_multiplier': 1.4304959937875874, 'dropout1': 0.0624491333295049, 'dropout2': 0.20223532198100383}
+
+Log Loss - mean: 3.82120
+Log Loss - std: 0.13515
+AUC - mean: 0.45701
+AUC - std: 0.03850
+Accuracy - mean: 0.03034
+Accuracy - std: 0.01068
+F1 score - mean: 0.01709
+F1 score - std: 0.01441
+
+Train time: 0.019250
+Test time: 0.001634
+
+---------------------------------------
+2025-05-11 05:27:21.993691
+Parameters: {'d_in': 39, 'd_out': 50, 'n_blocks': 6, 'd_block': 64, 'd_hidden': 3, 'd_hidden_multiplier': 3.484402779130922, 'dropout1': 0.2293444497162276, 'dropout2': 0.0531475381327179}
+
+Log Loss - mean: 3.80714
+Log Loss - std: 0.13386
+AUC - mean: 0.51661
+AUC - std: 0.01804
+Accuracy - mean: 0.03034
+Accuracy - std: 0.01274
+F1 score - mean: 0.01323
+F1 score - std: 0.00796
+
+Train time: 0.028849
+Test time: 0.002725
+
+---------------------------------------
+2025-05-11 05:27:25.307983
+Parameters: {'d_in': 39, 'd_out': 50, 'n_blocks': 3, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 1.3909723290050044, 'dropout1': 0.14704780785874141, 'dropout2': 0.16408737821090955}
+
+Log Loss - mean: 3.80820
+Log Loss - std: 0.13496
+AUC - mean: 0.53357
+AUC - std: 0.03825
+Accuracy - mean: 0.03675
+Accuracy - std: 0.02770
+F1 score - mean: 0.03417
+F1 score - std: 0.03850
+
+Train time: 0.019364
+Test time: 0.001676
+
+---------------------------------------
+2025-05-11 05:27:28.770856
+Parameters: {'d_in': 39, 'd_out': 36, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2.012984937165645, 'dropout1': 0.36213117284346297, 'dropout2': 0.019978110937287866}
+
+Log Loss - mean: 3.65195
+Log Loss - std: 0.02437
+AUC - mean: 0.47406
+AUC - std: 0.02919
+Accuracy - mean: 0.01732
+Accuracy - std: 0.00869
+F1 score - mean: 0.00375
+F1 score - std: 0.00200
+
+Train time: 0.022606
+Test time: 0.001991
+
+---------------------------------------
+2025-05-11 05:27:31.418506
+Parameters: {'d_in': 39, 'd_out': 36, 'n_blocks': 2, 'd_block': 256, 'd_hidden': 8, 'd_hidden_multiplier': 1.1089607282194642, 'dropout1': 0.42238965291911623, 'dropout2': 0.10232207464601739}
+
+Log Loss - mean: 3.58553
+Log Loss - std: 0.03499
+AUC - mean: 0.54196
+AUC - std: 0.04737
+Accuracy - mean: 0.06716
+Accuracy - std: 0.02334
+F1 score - mean: 0.04856
+F1 score - std: 0.02385
+
+Train time: 0.017377
+Test time: 0.001432
+
+---------------------------------------
+2025-05-11 05:27:34.064314
+Parameters: {'d_in': 39, 'd_out': 36, 'n_blocks': 5, 'd_block': 64, 'd_hidden': 3, 'd_hidden_multiplier': 4.697410437825572, 'dropout1': 0.11058652911863391, 'dropout2': 0.253898522489424}
+
+Log Loss - mean: 3.60062
+Log Loss - std: 0.04787
+AUC - mean: 0.53805
+AUC - std: 0.03503
+Accuracy - mean: 0.04121
+Accuracy - std: 0.03663
+F1 score - mean: 0.02552
+F1 score - std: 0.02616
+
+Train time: 0.024788
+Test time: 0.002295
+
+---------------------------------------
+2025-05-11 05:27:36.692806
+Parameters: {'d_in': 39, 'd_out': 36, 'n_blocks': 3, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993}
+
+Log Loss - mean: 3.56317
+Log Loss - std: 0.05641
+AUC - mean: 0.56834
+AUC - std: 0.02450
+Accuracy - mean: 0.14303
+Accuracy - std: 0.06556
+F1 score - mean: 0.08037
+F1 score - std: 0.02614
+
+Train time: 0.019404
+Test time: 0.001676
+
+---------------------------------------
+2025-05-11 05:27:39.315787
+Parameters: {'d_in': 39, 'd_out': 36, 'n_blocks': 5, 'd_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.1865164967480302, 'dropout1': 0.021282722352553282, 'dropout2': 0.19492366092094537}
+
+Log Loss - mean: 3.60399
+Log Loss - std: 0.04426
+AUC - mean: 0.46954
+AUC - std: 0.01991
+Accuracy - mean: 0.03043
+Accuracy - std: 0.04260
+F1 score - mean: 0.02247
+F1 score - std: 0.02913
+
+Train time: 0.023197
+Test time: 0.002264
+
+---------------------------------------
+2025-05-11 05:27:42.625307
+Parameters: {'d_in': 39, 'd_out': 43, 'n_blocks': 5, 'd_block': 128, 'd_hidden': 6, 'd_hidden_multiplier': 1.9964669455760327, 'dropout1': 0.04889216584034568, 'dropout2': 0.191124317438587}
+
+Log Loss - mean: 3.67664
+Log Loss - std: 0.13931
+AUC - mean: 0.51897
+AUC - std: 0.02611
+Accuracy - mean: 0.04769
+Accuracy - std: 0.03127
+F1 score - mean: 0.03808
+F1 score - std: 0.02434
+
+Train time: 0.024379
+Test time: 0.002342
+
+---------------------------------------
+2025-05-11 05:27:45.279659
+Parameters: {'d_in': 39, 'd_out': 43, 'n_blocks': 5, 'd_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 4.578813252864977, 'dropout1': 0.050166867098952996, 'dropout2': 0.24845644725918015}
+
+Log Loss - mean: 3.65907
+Log Loss - std: 0.13788
+AUC - mean: 0.55302
+AUC - std: 0.04714
+Accuracy - mean: 0.10617
+Accuracy - std: 0.05894
+F1 score - mean: 0.06193
+F1 score - std: 0.03471
+
+Train time: 0.025301
+Test time: 0.002379
+
+---------------------------------------
+2025-05-11 05:27:47.885125
+Parameters: {'d_in': 39, 'd_out': 43, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 5, 'd_hidden_multiplier': 4.857344677241806, 'dropout1': 0.25605039699718213, 'dropout2': 0.11050821071697638}
+
+Log Loss - mean: 3.70493
+Log Loss - std: 0.14386
+AUC - mean: 0.49404
+AUC - std: 0.05920
+Accuracy - mean: 0.03032
+Accuracy - std: 0.02318
+F1 score - mean: 0.00849
+F1 score - std: 0.00744
+
+Train time: 0.021040
+Test time: 0.001993
+
+---------------------------------------
+2025-05-11 05:27:50.498115
+Parameters: {'d_in': 39, 'd_out': 43, 'n_blocks': 2, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.601689144954014, 'dropout1': 0.16503381419647725, 'dropout2': 0.14346826378996197}
+
+Log Loss - mean: 3.66482
+Log Loss - std: 0.15504
+AUC - mean: 0.51901
+AUC - std: 0.04145
+Accuracy - mean: 0.05617
+Accuracy - std: 0.05745
+F1 score - mean: 0.05821
+F1 score - std: 0.05937
+
+Train time: 0.017335
+Test time: 0.001318
+
+---------------------------------------
+2025-05-11 05:27:53.071731
+Parameters: {'d_in': 39, 'd_out': 43, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.6547459837829726, 'dropout1': 0.115364382981092, 'dropout2': 0.12825603830946858}
+
+Log Loss - mean: 3.70321
+Log Loss - std: 0.13883
+AUC - mean: 0.52371
+AUC - std: 0.04436
+Accuracy - mean: 0.01727
+Accuracy - std: 0.01753
+F1 score - mean: 0.00757
+F1 score - std: 0.00771
+
+Train time: 0.016916
+Test time: 0.001192
+
+---------------------------------------
+2025-05-11 05:27:56.427525
+Parameters: {'d_in': 39, 'd_out': 37, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 6, 'd_hidden_multiplier': 2.629196234709369, 'dropout1': 0.41846069422679666, 'dropout2': 0.2671815336470726}
+
+Log Loss - mean: 3.69427
+Log Loss - std: 0.04349
+AUC - mean: 0.51649
+AUC - std: 0.02366
+Accuracy - mean: 0.03254
+Accuracy - std: 0.02838
+F1 score - mean: 0.01229
+F1 score - std: 0.01189
+
+Train time: 0.017204
+Test time: 0.001211
+
+---------------------------------------
+2025-05-11 05:27:59.142702
+Parameters: {'d_in': 39, 'd_out': 37, 'n_blocks': 6, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2.9347899680242007, 'dropout1': 0.48960100287981456, 'dropout2': 0.053676432881352314}
+
+Log Loss - mean: 3.68504
+Log Loss - std: 0.04409
+AUC - mean: 0.47976
+AUC - std: 0.02681
+Accuracy - mean: 0.02373
+Accuracy - std: 0.01251
+F1 score - mean: 0.00669
+F1 score - std: 0.00360
+
+Train time: 0.027637
+Test time: 0.002793
+
+---------------------------------------
+2025-05-11 05:28:01.840489
+Parameters: {'d_in': 39, 'd_out': 37, 'n_blocks': 3, 'd_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 1.7346854445666462, 'dropout1': 0.15052643789966336, 'dropout2': 0.01865688292218334}
+
+Log Loss - mean: 3.65057
+Log Loss - std: 0.01905
+AUC - mean: 0.53254
+AUC - std: 0.04117
+Accuracy - mean: 0.08668
+Accuracy - std: 0.09435
+F1 score - mean: 0.04057
+F1 score - std: 0.04491
+
+Train time: 0.020513
+Test time: 0.001728
+
+---------------------------------------
+2025-05-11 05:28:04.577741
+Parameters: {'d_in': 39, 'd_out': 37, 'n_blocks': 5, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 1.7469749722814216, 'dropout1': 0.3414067520715921, 'dropout2': 0.006791755430638258}
+
+Log Loss - mean: 3.63925
+Log Loss - std: 0.04557
+AUC - mean: 0.51732
+AUC - std: 0.03858
+Accuracy - mean: 0.14049
+Accuracy - std: 0.11171
+F1 score - mean: 0.09055
+F1 score - std: 0.07748
+
+Train time: 0.025189
+Test time: 0.002501
+
+---------------------------------------
+2025-05-11 05:28:07.309858
+Parameters: {'d_in': 39, 'd_out': 37, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 3.9459778814946667, 'dropout1': 0.3362723439166843, 'dropout2': 0.12347676516915462}
+
+Log Loss - mean: 3.67842
+Log Loss - std: 0.05871
+AUC - mean: 0.52643
+AUC - std: 0.03264
+Accuracy - mean: 0.04551
+Accuracy - std: 0.05974
+F1 score - mean: 0.01807
+F1 score - std: 0.02663
+
+Train time: 0.023057
+Test time: 0.002110
+
+---------------------------------------
+2025-05-11 05:28:10.797459
+Parameters: {'d_in': 39, 'd_out': 51, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 2.674569022915377, 'dropout1': 0.2167808208518916, 'dropout2': 0.06443171491950093}
+
+Log Loss - mean: 3.75881
+Log Loss - std: 0.13655
+AUC - mean: 0.52033
+AUC - std: 0.02366
+Accuracy - mean: 0.05813
+Accuracy - std: 0.05461
+F1 score - mean: 0.04657
+F1 score - std: 0.04980
+
+Train time: 0.024283
+Test time: 0.002048
+
+---------------------------------------
+2025-05-11 05:28:13.616666
+Parameters: {'d_in': 39, 'd_out': 51, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 5, 'd_hidden_multiplier': 2.728691854970013, 'dropout1': 0.1554982578061414, 'dropout2': 0.24361467363173564}
+
+Log Loss - mean: 3.78001
+Log Loss - std: 0.12548
+AUC - mean: 0.54390
+AUC - std: 0.01595
+Accuracy - mean: 0.03254
+Accuracy - std: 0.03891
+F1 score - mean: 0.01834
+F1 score - std: 0.02818
+
+Train time: 0.023345
+Test time: 0.002133
+
+---------------------------------------
+2025-05-11 05:28:16.428025
+Parameters: {'d_in': 39, 'd_out': 51, 'n_blocks': 2, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 4.130430199605095, 'dropout1': 0.3789552823416544, 'dropout2': 0.27464568145906426}
+
+Log Loss - mean: 3.74706
+Log Loss - std: 0.14388
+AUC - mean: 0.54075
+AUC - std: 0.01569
+Accuracy - mean: 0.06468
+Accuracy - std: 0.03716
+F1 score - mean: 0.05729
+F1 score - std: 0.03752
+
+Train time: 0.017571
+Test time: 0.001334
+
+---------------------------------------
+2025-05-11 05:28:19.255243
+Parameters: {'d_in': 39, 'd_out': 51, 'n_blocks': 4, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 1.6559817390663818, 'dropout1': 0.21422689443534526, 'dropout2': 0.22696979043265916}
+
+Log Loss - mean: 3.75709
+Log Loss - std: 0.11790
+AUC - mean: 0.53676
+AUC - std: 0.03878
+Accuracy - mean: 0.08216
+Accuracy - std: 0.06249
+F1 score - mean: 0.05981
+F1 score - std: 0.04464
+
+Train time: 0.021248
+Test time: 0.001960
+
+---------------------------------------
+2025-05-11 05:28:22.018523
+Parameters: {'d_in': 39, 'd_out': 51, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 9, 'd_hidden_multiplier': 1.6140416663779746, 'dropout1': 0.10771765690644047, 'dropout2': 0.15900981108804504}
+
+Log Loss - mean: 3.76726
+Log Loss - std: 0.15690
+AUC - mean: 0.53093
+AUC - std: 0.04685
+Accuracy - mean: 0.04518
+Accuracy - std: 0.03357
+F1 score - mean: 0.03290
+F1 score - std: 0.02677
+
+Train time: 0.014876
+Test time: 0.001250
+
+---------------------------------------

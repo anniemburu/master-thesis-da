@@ -58,3 +58,21 @@ Test time: 0.048885
 Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 18, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
 
 
+2025-05-11 05:29:45.752779
+ResMLP - House_Prices_Nominal - train_model
+
+Log Loss - mean: 2.87097
+Log Loss - mean_std: 0.12453
+AUC - mean: 0.64857
+AUC - mean_std: 0.05594
+Accuracy - mean: 0.10274
+Accuracy - mean_std: 0.06697
+F1 score - mean: 0.06296
+F1 score - mean_std: 0.04475
+
+Train time: 0.095052
+Test time: 0.002047
+
+Best Parameters: {'n_blocks': 4, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 1.3709674297417445, 'dropout1': 0.4328849233188455, 'dropout2': 0.03863249998871383, 'd_in': 109, 'd_out': 17}
+
+

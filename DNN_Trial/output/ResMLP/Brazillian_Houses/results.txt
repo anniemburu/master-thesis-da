@@ -58,3 +58,21 @@ Test time: 0.084521
 Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 1195, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
 
 
+2025-05-11 10:19:43.700550
+ResMLP - Brazillian_Houses - train_model
+
+Log Loss - mean: 6.91989
+Log Loss - mean_std: 0.01910
+AUC - mean: 0.64168
+AUC - mean_std: 0.01366
+Accuracy - mean: 0.00542
+Accuracy - mean_std: 0.00260
+F1 score - mean: 0.00078
+F1 score - mean_std: 0.00089
+
+Train time: 0.299341
+Test time: 0.004835
+
+Best Parameters: {'n_blocks': 3, 'd_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.057211730145489, 'dropout1': 0.4371413695633215, 'dropout2': 0.29149024331234025, 'd_in': 17, 'd_out': 1095}
+
+

@@ -73,3 +73,17 @@ Test time: 0.002862
 Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 10, 'dropout': 0.02868322485344796, 'n_blocks': 2}
 
 
+2025-05-11 04:50:08.959838
+MLP - Boston - train_model
+
+MSE - mean: 536.17181
+MSE - mean_std: 67.66789
+R2 - mean: -7.37239
+R2 - mean_std: 0.97785
+
+Train time: 0.007510
+Test time: 0.000388
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.19313939240578717, 'd_in': 14, 'd_out': 1}
+
+
