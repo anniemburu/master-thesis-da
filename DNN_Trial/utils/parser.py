@@ -57,6 +57,7 @@ def get_parser():
     parser.add('--cat_dims', type=int, action="append", help="Cardinality of the categorical features (is set "
                                                              "automatically, when the load_data function is used.")
     parser.add('--bin_alt', type=int, action="append", help="Alternative Bins")
+    parser.add('--class_weights', type=int, action="append", help="Mean per bin")
     
     parser.add('--dropna_idx', type=int, action="append", help="Indices of columns to be dropped")
     parser.add('--miss_cat_idx', type=int, action="append", help="Indices of categorical columns with missing values")
