@@ -44,3 +44,31 @@ Test time: 0.041045
 Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 384, 'd_out': 9, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}
 
 
+2025-05-09 19:25:54.111376
+ResMLP - Mercedes_Benz - test_model
+
+MSE - mean: 10.16970
+MSE - std: 0.33862
+R2 - mean: 0.93761
+R2 - std: 0.00208
+
+Train time: 1.457500
+Test time: 0.025098
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 543, 'd_out': 9, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}
+
+
+2025-05-10 15:25:11.936559
+ResMLP - Mercedes_Benz - test_model
+
+MSE - mean: 5.83814
+MSE - std: 0.07339
+R2 - mean: 0.96418
+R2 - std: 0.00045
+
+Train time: 1.587581
+Test time: 0.048554
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 543, 'd_out': 20, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}
+
+

@@ -44,3 +44,31 @@ Test time: 0.001191
 Best Parameters: {'d_block': 64, 'd_in': 148, 'd_out': 7, 'dropout': 0.10823216670029355, 'n_blocks': 2}
 
 
+2025-05-09 19:17:29.424331
+MLP - MIP - test_model
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 0.274657
+Test time: 0.002451
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 7, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-10 15:15:15.599026
+MLP - MIP - test_model
+
+MSE - mean: 11498.67452
+MSE - std: 8231.14528
+R2 - mean: 0.99999
+R2 - std: 0.00001
+
+Train time: 0.200037
+Test time: 0.055676
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 83, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+

@@ -16,3 +16,45 @@ Test time: 0.645139
 Best Parameters: {'dim': 256, 'depth': 6, 'heads': 8, 'dropout': 0.6}
 
 
+2025-05-08 17:24:03.091910
+SAINT - House_Sales - test_model
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 407.998880
+Test time: 1.477853
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+
+2025-05-09 21:58:01.053660
+SAINT - House_Sales - test_model
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 402.703740
+Test time: 1.438145
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+
+2025-05-10 17:57:52.562041
+SAINT - House_Sales - test_model
+
+MSE - mean: 5317201571.89893
+MSE - std: 304095870.43121
+R2 - mean: 0.95841
+R2 - std: 0.00238
+
+Train time: 431.020286
+Test time: 1.539268
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+

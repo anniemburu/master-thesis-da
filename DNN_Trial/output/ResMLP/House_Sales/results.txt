@@ -44,3 +44,31 @@ Test time: 0.108936
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 4.550168594755401, 'd_in': 22, 'd_out': 12, 'dropout1': 0.20737998960685675, 'dropout2': 0.03151442135910869, 'n_blocks': 5}
 
 
+2025-05-09 19:25:45.355849
+ResMLP - House_Sales - test_model
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 2.690747
+Test time: 0.116052
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 4.550168594755401, 'd_in': 90, 'd_out': 12, 'dropout1': 0.20737998960685675, 'dropout2': 0.03151442135910869, 'n_blocks': 5}
+
+
+2025-05-10 15:24:43.195868
+ResMLP - House_Sales - test_model
+
+MSE - mean: 5317201571.89893
+MSE - std: 304095870.43121
+R2 - mean: 0.95841
+R2 - std: 0.00238
+
+Train time: 3.090207
+Test time: 0.114209
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 4.550168594755401, 'd_in': 90, 'd_out': 108, 'dropout1': 0.20737998960685675, 'dropout2': 0.03151442135910869, 'n_blocks': 5}
+
+

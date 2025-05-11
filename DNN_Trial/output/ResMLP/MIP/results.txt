@@ -44,3 +44,31 @@ Test time: 0.016964
 Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 148, 'd_out': 7, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
 
 
+2025-05-09 19:26:00.431834
+ResMLP - MIP - test_model
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 0.174618
+Test time: 0.018206
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 7, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+
+2025-05-10 15:25:19.815440
+ResMLP - MIP - test_model
+
+MSE - mean: 11498.67452
+MSE - std: 8231.14528
+R2 - mean: 0.99999
+R2 - std: 0.00001
+
+Train time: 0.184971
+Test time: 0.057855
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 83, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+

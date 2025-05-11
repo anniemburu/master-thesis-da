@@ -30,3 +30,31 @@ Test time: 0.088262
 Best Parameters: {'d_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.6469990033121622, 'd_in': 9, 'd_out': 13, 'dropout1': 0.1279373990844757, 'dropout2': 0.09909622892506705, 'n_blocks': 6}
 
 
+2025-05-09 19:25:24.827031
+ResMLP - Diamonds - test_model
+
+MSE - mean: 525825.19563
+MSE - std: 14155.40547
+R2 - mean: 0.96708
+R2 - std: 0.00089
+
+Train time: 2.261546
+Test time: 0.078459
+
+Best Parameters: {'d_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.6469990033121622, 'd_in': 9, 'd_out': 13, 'dropout1': 0.1279373990844757, 'dropout2': 0.09909622892506705, 'n_blocks': 6}
+
+
+2025-05-10 15:24:06.318027
+ResMLP - Diamonds - test_model
+
+MSE - mean: 67546.72749
+MSE - std: 3444.98337
+R2 - mean: 0.99577
+R2 - std: 0.00022
+
+Train time: 3.504701
+Test time: 0.102149
+
+Best Parameters: {'d_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.6469990033121622, 'd_in': 9, 'd_out': 37, 'dropout1': 0.1279373990844757, 'dropout2': 0.09909622892506705, 'n_blocks': 6}
+
+

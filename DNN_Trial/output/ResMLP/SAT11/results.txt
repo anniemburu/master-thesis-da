@@ -44,3 +44,31 @@ Test time: 0.023199
 Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 117, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
 
 
+2025-05-09 19:26:13.418358
+ResMLP - SAT11 - test_model
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.246840
+Test time: 0.013701
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-10 15:25:40.417852
+ResMLP - SAT11 - test_model
+
+MSE - mean: 65319.46699
+MSE - std: 5276.60628
+R2 - mean: 0.98852
+R2 - std: 0.00093
+
+Train time: 0.244873
+Test time: 0.024004
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+

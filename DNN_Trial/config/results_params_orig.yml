@@ -1,345 +1,344 @@
 parameters:
   Abalone:
-    SAINT:
-      depth: 3
-      dim: 128
-      dropout: 0.8
-      heads: 4
-    TabNet:
-      cat_emb_dim: 1
-      gamma: 1.8370117235962122
-      mask_type: 'sparsemax'
-      momentum: 0.0010080119264888568
-      n_d: 47
-      n_independent: 2
-      n_shared: 2
-      n_steps: 7
-    TabTransformer:
-      depth: 1
-      dim: 256
-      dropout: 0.5
-      heads: 8
-      learning_rate: -3
-      weight_decay: -4
-    VIME:
-      K: 2
-      alpha: 1.1041260180067325
-      beta: 0.18806809637682864
-      p_m: 0.7192123464423629
+    FTTransformer:
+      learning_rate: 0.0026312292554662967
+      weight_decay: 0.000741227822541328
+    MLP:
+      d_block: 256
+      d_in: 10
+      d_out: 7
+      dropout: 0.045537479089527655
+      n_blocks: 4
+    ResMLP:
+      d_block: 256
+      d_hidden: 5
+      d_hidden_multiplier: 2.070874813204879
+      d_in: 10
+      d_out: 7
+      dropout1: 0.2767197595784706
+      dropout2: 0.1295421415138883
+      n_blocks: 6
   Allstate_Claims:
-    TabNet:
-      cat_emb_dim: 1
-      gamma: 1.4921895070384743
-      mask_type: 'sparsemax'
-      momentum: 0.0017812705579288248
-      n_d: 12
-      n_independent: 2
-      n_shared: 5
-      n_steps: 6
-    TabTransformer:
-      depth: 6
-      dim: 64
-      dropout: 0.5
-      heads: 8
-      learning_rate: -3
-      weight_decay: -4
-    VIME:
-      K: 2
-      alpha: 2.0916451478003033
-      beta: 6.440938841203512
-      p_m: 0.39298609993780165
+    MLP:
+      d_block: 256
+      d_in: 1093
+      d_out: 311
+      dropout: 0.12920563775872115
+      n_blocks: 6
+    ResMLP:
+      d_block: 128
+      d_hidden: 8
+      d_hidden_multiplier: 1.3701994442389223
+      d_in: 1093
+      d_out: 311
+      dropout1: 0.38528007263059155
+      dropout2: 0.15678728297998543
+      n_blocks: 3
   Black_Friday:
-    SAINT:
-      depth: 6
-      dim: 256
-      dropout: 0.6
-      heads: 8
-    TabTransformer:
-      depth: 2
-      dim: 256
-      dropout: 0
-      heads: 4
-      learning_rate: -5
-      weight_decay: -4
-    VIME:
-      K: 10
-      alpha: 5.728440904520896
-      beta: 3.2670966130278716
-      p_m: 0.27092490370527944
+    MLP:
+      d_block: 256
+      d_in: 75
+      d_out: 36
+      dropout: 0.28716314068720666
+      n_blocks: 3
+    ResMLP:
+      d_block: 256
+      d_hidden: 5
+      d_hidden_multiplier: 3.1295693022802924
+      d_in: 75
+      d_out: 36
+      dropout1: 0.31999331016593385
+      dropout2: 0.17961742655097668
+      n_blocks: 4
   Boston:
-    SAINT:
-      depth: 1
-      dim: 64
-      dropout: 0.2
-      heads: 4
-    TabNet:
-      cat_emb_dim: 3
-      gamma: 1.123911559954574
-      mask_type: 'sparsemax'
-      momentum: 0.0017492683262505184
-      n_d: 47
-      n_independent: 5
-      n_shared: 2
-      n_steps: 7
-    TabTransformer:
-      depth: 12
-      dim: 64
-      dropout: 0.1
-      heads: 2
-      learning_rate: -6
-      weight_decay: -6
-    VIME:
-      K: 15
-      alpha: 2.0437388183588707
-      beta: 0.12216986637163613
-      p_m: 0.1424087402217248
+    FTTransformer:
+      learning_rate: 0.0003038703893093738
+      weight_decay: 8.778101233251167e-05
+    MLP:
+      d_block: 256
+      d_in: 14
+      d_out: 6
+      dropout: 0.02868322485344796
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 3
+      d_hidden_multiplier: 2.629805792810099
+      d_in: 14
+      d_out: 6
+      dropout1: 0.42545138307167646
+      dropout2: 0.08020072326197547
+      n_blocks: 6
   Brazillian_Houses:
-    SAINT:
-      depth: 1
-      dim: 64
-      dropout: 0.3
-      heads: 8
-    TabTransformer:
-      depth: 6
-      dim: 256
-      dropout: 0
-      heads: 2
-      learning_rate: -3
-      weight_decay: -5
-    VIME:
-      K: 5
-      alpha: 2.655182278718539
-      beta: 9.991174696990383
-      p_m: 0.645573767288089
+    FTTransformer:
+      learning_rate: 0.00012882433392871884
+      weight_decay: 0.0006194542036721904
+    MLP:
+      d_block: 256
+      d_in: 17
+      d_out: 1095
+      dropout: 0.26456213654515587
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 9
+      d_hidden_multiplier: 2.8578552359643927
+      d_in: 17
+      d_out: 1095
+      dropout1: 0.05920170022592163
+      dropout2: 0.19030616663715155
+      n_blocks: 2
+    TabNet:
+      cat_emb_dim: 2
+      gamma: 1.8830178798654342
+      mask_type: entmax
+      momentum: 0.021221705429572718
+      n_d: 35
+      n_independent: 3
+      n_shared: 5
+      n_steps: 3
   Diamonds:
-    SAINT:
-      depth: 6
-      dim: 128
-      dropout: 0.6
-      heads: 2
-    TabNet:
-      cat_emb_dim: 1
-      gamma: 1.3943964936907358
-      mask_type: sparsemax
-      momentum: 0.0017623393850073233
-      n_d: 12
-      n_independent: 3
-      n_shared: 1
-      n_steps: 10
-    VIME:
-      K: 10
-      alpha: 3.563299246825732
-      beta: 0.15752439579445252
-      p_m: 0.20832777474756226
-  House_Prices_Nominal:
-    SAINT:
-      depth: 6
-      dim: 256
-      dropout: 0.8
-      heads: 2
-    TabTransformer:
-      depth: 6
-      dim: 64
-      dropout: 0.3
-      heads: 4
-      learning_rate: -3
-      weight_decay: -4
-    VIME:
-      K: 2
-      alpha: 7.392529892948591
-      beta: 0.13686686663303674
-      p_m: 0.4533998401084272
-  House_Sales:
-    SAINT:
-      depth: 2
-      dim: 64
-      dropout: 0.2
-      heads: 2
-    TabNet:
-      cat_emb_dim: 1
-      gamma: 1.7628506672787196
-      mask_type: 'entmax'
-      momentum: 0.0010624672219206063
-      n_d: 14
-      n_independent: 3
-      n_shared: 4
-      n_steps: 9
-    TabTransformer:
-      depth: 12
-      dim: 256
-      dropout: 0.4
-      heads: 2
-      learning_rate: -3
-      weight_decay: -6
-    VIME:
-      K: 2
-      alpha: 5.30369993450495
-      beta: 0.7526404582250219
-      p_m: 0.17566515114241862
-  MIP:
-    SAINT:
-      depth: 6
-      dim: 32
-      dropout: 0.5
-      heads: 2
-    TabNet:
-      cat_emb_dim: 2
-      gamma: 1.5848384082400053
-      mask_type: 'sparsemax'
-      momentum: 0.0010078945202086514
-      n_d: 14
-      n_independent: 5
-      n_shared: 5
-      n_steps: 10
-    TabTransformer:
-      depth: 12
-      dim: 32
-      dropout: 0.2
-      heads: 2
-      learning_rate: -3
-      weight_decay: -6
-    VIME:
-      K: 5
-      alpha: 7.7200083785423885
-      beta: 4.472104505092457
-      p_m: 0.477310157887738
-  Mercedes_Benz:
-    SAINT:
-      depth: 1
-      dim: 32
-      dropout: 0
-      heads: 4
-    TabNet:
-      cat_emb_dim: 2
-      gamma: 1.3877609999918645
-      mask_type: 'entmax'
-      momentum: 0.001069771757489611
-      n_d: 33
-      n_independent: 5
-      n_shared: 3
-      n_steps: 9
-    TabTransformer:
-      depth: 2
-      dim: 256
-      dropout: 0.5
-      heads: 2
-      learning_rate: -3
-      weight_decay: -4
-    VIME:
-      K: 5
-      alpha: 9.185652076825491
-      beta: 5.171301238849644
-      p_m: 0.48409631079830795
-  Moneyball:
-    SAINT:
-      depth: 3
-      dim: 32
-      dropout: 0.3
-      heads: 4
-    TabNet:
-      cat_emb_dim: 2
-      gamma: 1.793948107179346
-      mask_type: 'sparsemax'
-      momentum: 0.0010414004281684049
-      n_d: 61
-      n_independent: 4
-      n_shared: 5
-      n_steps: 9
-    TabTransformer:
-      depth: 12
-      dim: 128
-      dropout: 0.5
-      heads: 4
-      learning_rate: -3
-      weight_decay: -3
-    VIME:
-      K: 10
-      alpha: 4.400917496865748
-      beta: 0.11734115912167242
-      p_m: 0.5347336204472701
-  SAT11:
-    SAINT:
-      depth: 2
-      dim: 32
-      dropout: 0.6
-      heads: 2
+    FTTransformer:
+      learning_rate: 0.00013457653890213615
+      weight_decay: 8.376325678211951e-05
+    MLP:
+      d_block: 256
+      d_in: 9
+      d_out: 13
+      dropout: 0.07787642217098255
+      n_blocks: 3
+    ResMLP:
+      d_block: 128
+      d_hidden: 5
+      d_hidden_multiplier: 1.6469990033121622
+      d_in: 9
+      d_out: 13
+      dropout1: 0.1279373990844757
+      dropout2: 0.09909622892506705
+      n_blocks: 6
     TabNet:
       cat_emb_dim: 3
-      gamma: 1.0136194191205694
-      mask_type: 'entmax'
-      momentum: 0.0010133373717923582
-      n_d: 14
-      n_independent: 5
-      n_shared: 4
-      n_steps: 3
-    TabTransformer:
-      depth: 3
-      dim: 64
-      dropout: 0.1
-      heads: 8
-      learning_rate: -3
-      weight_decay: -4
-    VIME:
-      K: 20
-      alpha: 0.11047685312602139
-      beta: 6.833123020518896
-      p_m: 0.8537536712438457
-  Sensory:
-    NODE:
-      num_layers: 8
-      total_tree_count: 1024
-      tree_depth: 6
-      tree_output_dim: 2
-    SAINT:
-      depth: 1
-      dim: 128
-      dropout: 0
-      heads: 8
-    TabNet:
-      cat_emb_dim: 2
-      gamma: 1.2848422903260368
-      mask_type: 'sparsemax'
-      momentum: 0.0012898569410406914
-      n_d: 64
+      gamma: 1.8437216964235192
+      mask_type: entmax
+      momentum: 0.12645427227434017
+      n_d: 60
       n_independent: 5
       n_shared: 3
-      n_steps: 10
-    TabTransformer:
-      depth: 2
-      dim: 128
-      dropout: 0.4
-      heads: 2
-      learning_rate: -3
-      weight_decay: -4
-    VIME:
-      K: 20
-      alpha: 2.521258635577424
-      beta: 0.5252873769361092
-      p_m: 0.12232315368922127
-  Socmob:
+      n_steps: 3
+  House_Prices_Nominal:
+    MLP:
+      d_block: 256
+      d_in: 109
+      d_out: 7
+      dropout: 0.10539334128428231
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 6
+      d_hidden_multiplier: 4.285524104220049
+      d_in: 109
+      d_out: 7
+      dropout1: 0.07419545585050902
+      dropout2: 0.058496662836731425
+      n_blocks: 6
     SAINT:
       depth: 1
-      dim: 64
-      dropout: 0.2
+      dim: 128
+      dropout: 0.7
       heads: 2
-    TabNet:
-      cat_emb_dim: 2
-      gamma: 1.9936897444554504
-      mask_type: 'sparsemax'
-      momentum: 0.0010174761003975195
-      n_d: 49
-      n_independent: 5
-      n_shared: 5
-      n_steps: 6
-    TabTransformer:
-      depth: 2
-      dim: 32
-      dropout: 0.3
+  House_Sales:
+    FTTransformer:
+      learning_rate: 0.00250136728702011
+      weight_decay: 0.00011052492730016369
+    MLP:
+      d_block: 256
+      d_in: 90
+      d_out: 128
+      dropout: 0.10700449012979917
+      n_blocks: 4
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 4.550168594755401
+      d_in: 90
+      d_out: 133
+      dropout1: 0.20737998960685675
+      dropout2: 0.03151442135910869
+      n_blocks: 5
+    SAINT:
+      depth: 6
+      dim: 256
+      dropout: 0.6
       heads: 8
-      learning_rate: -3
-      weight_decay: -6
+  MIP:
+    FTTransformer:
+      learning_rate: 0.005340493024514428
+      weight_decay: 5.660990217872578e-06
+    MLP:
+      d_block: 64
+      d_in: 151
+      d_out: 67
+      dropout: 0.10823216670029355
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 10
+      d_hidden_multiplier: 3.5463105818248644
+      d_in: 151
+      d_out: 78
+      dropout1: 0.3740596836340417
+      dropout2: 0.14785999544988046
+      n_blocks: 4
+    SAINT:
+      depth: 3
+      dim: 32
+      dropout: 0.6
+      heads: 2
+  Mercedes_Benz:
+    MLP:
+      d_block: 256
+      d_in: 547
+      d_out: 18
+      dropout: 0.17946730470146646
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 4
+      d_hidden_multiplier: 2.8190447590303593
+      d_in: 547
+      d_out: 18
+      dropout1: 0.39853029839247645
+      dropout2: 0.23047013110182565
+      n_blocks: 5
+  Moneyball:
+    FTTransformer:
+      learning_rate: 0.0001397623116786567
+      weight_decay: 3.198059991694104e-06
+    MLP:
+      d_block: 256
+      d_in: 48
+      d_out: 7
+      dropout: 0.2819627248207455
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 2
+      d_hidden_multiplier: 3.500563709434268
+      d_in: 48
+      d_out: 7
+      dropout1: 0.3191866936907723
+      dropout2: 0.17129324989277947
+      n_blocks: 6
+  SAT11:
+    FTTransformer:
+      learning_rate: 8.719401475807713e-05
+      weight_decay: 0.0007004339745422863
+    MLP:
+      d_block: 128
+      d_in: 130
+      d_out: 3
+      dropout: 0.15064221648941228
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 6
+      d_hidden_multiplier: 3.226913030082402
+      d_in: 130
+      d_out: 3
+      dropout1: 0.4143262004883449
+      dropout2: 0.10671304592041092
+      n_blocks: 5
+  Sensory:
+    CatBoost:
+      cat_features:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      iterations: 100
+      l2_leaf_reg: 6.95744871678338
+      learning_rate: 0.05530415735222704
+      max_depth: 7
+      od_type: Iter
+      od_wait: 20
+      train_dir: output/CatBoost/Sensory/catboost_info
+      verbose: 100
+    FTTransformer:
+      learning_rate: 4.126150574320677e-05
+      weight_decay: 5.170169005303637e-05
+    LightGBM:
+      lambda_l1: 4.461474995829296
+      lambda_l2: 8.432996723408692e-07
+      learning_rate: 0.24353813468212518
+      metric: mse
+      num_leaves: 2
+      objective: regression
+      verbosity: -1
+    MLP:
+      d_block: 128
+      d_in: 36
+      d_out: 5
+      dropout: 0.29860532918127847
+      n_blocks: 2
+    ResMLP:
+      d_block: 128
+      d_hidden: 4
+      d_hidden_multiplier: 1.80130923504725
+      d_in: 36
+      d_out: 5
+      dropout1: 0.228729597309105
+      dropout2: 0.22695309081109494
+      n_blocks: 5
     VIME:
-      K: 15
-      alpha: 0.46038625013906986
-      beta: 7.650427995444653
-      p_m: 0.1083150633383621
+      K: 2
+      alpha: 0.1520096061553826
+      beta: 4.9374222964506105
+      p_m: 0.3163873348621128
+    XGBoost:
+      alpha: 0.00016769241948958821
+      eta: 0.010598816788850126
+      eval_metric: rmse
+      lambda: 0.24856123444616526
+      max_depth: 4
+      objective: reg:squarederror
+      verbosity: 1
+  Socmob:
+    CatBoost:
+      cat_features:
+      - 0
+      - 1
+      - 2
+      - 3
+      iterations: 2
+      l2_leaf_reg: 3.7038973551982743
+      learning_rate: 0.04503548544940467
+      max_depth: 4
+      od_type: Iter
+      od_wait: 20
+      train_dir: output/CatBoost/Socmob/catboost_info
+      verbose: 100
+    FTTransformer:
+      learning_rate: 0.00029650381259646087
+      weight_decay: 6.736378376679642e-05
+    MLP:
+      d_block: 256
+      d_in: 39
+      d_out: 40
+      dropout: 0.10461609715865526
+      n_blocks: 2
+    ResMLP:
+      d_block: 256
+      d_hidden: 4
+      d_hidden_multiplier: 4.543534401999215
+      d_in: 39
+      d_out: 40
+      dropout1: 0.115735614381013
+      dropout2: 0.018124882849134806
+      n_blocks: 3

@@ -48,3 +48,31 @@ Test time: 0.041231
 Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 13, 'dropout': 0.07787642217098255, 'n_blocks': 3}
 
 
+2025-05-09 19:16:54.646933
+MLP - Diamonds - test_model
+
+MSE - mean: 525825.19563
+MSE - std: 14155.40547
+R2 - mean: 0.96708
+R2 - std: 0.00089
+
+Train time: 1.505410
+Test time: 0.032265
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 13, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-10 15:14:26.335024
+MLP - Diamonds - test_model
+
+MSE - mean: 67546.72749
+MSE - std: 3444.98337
+R2 - mean: 0.99577
+R2 - std: 0.00022
+
+Train time: 1.786853
+Test time: 0.086776
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 37, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+

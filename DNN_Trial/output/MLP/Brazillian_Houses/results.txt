@@ -44,3 +44,31 @@ Test time: 0.007850
 Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.26456213654515587, 'n_blocks': 2}
 
 
+2025-05-09 19:16:42.771783
+MLP - Brazillian_Houses - test_model
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 0.317312
+Test time: 0.005175
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-05-10 15:14:14.001966
+MLP - Brazillian_Houses - test_model
+
+MSE - mean: 47971324.90564
+MSE - std: 23484255.45184
+R2 - mean: -0.20191
+R2 - std: 0.58839
+
+Train time: 0.395500
+Test time: 0.088251
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 1195, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+

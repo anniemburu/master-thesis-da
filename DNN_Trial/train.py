@@ -59,8 +59,11 @@ def bin_finder(args, y):
     else:
         raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
     """
-    #start with Sturges' Rule
-    bins = sturges(y, args)
+    if args.model_name == "NODE":
+        #start with Sturges' Rule
+        bins = sturges(y, args)
+    else:
+        bins = freedman_diaconis(y,args)
 
     return bins
 
@@ -918,6 +921,13 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         # Test model
         test_timer.start()
         prediction = curr_model.predict(X_test)
+        probabilities = curr_model.prediction_probabilities
+
+        print(f"Prediction shape : {prediction.shape}")
+        print(f"Probabilities shape : {probabilities.shape} \n")
+        print(f"Prediction : {prediction[:10]}")
+        print(f"Probabilities : {probabilities[:10]} \n")
+        print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
         test_timer.end()
 
         print(f"Prediction shape : {prediction.shape}")
@@ -957,16 +967,22 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             args.objective = "regression" #rem to rreturn it back to norm
             sc = get_scorer(args)
 
+            #get the bin means
+
             y_train_pred = [bin_mean.get(cls, np.nan) for cls in y_train_class]
             y_test_pred = [bin_mean.get(cls, np.nan) for cls in y_test_class]
 
+            print(f"y_test_pred : {y_test_pred[:10]}, y_test_class : {y_test_class[:10]}")
+
             #can apply weighed ones if i want!!!
-            
-            y_train_pred , y_test_pred = np.array([float(x) for x in y_train_pred]), np.array([float(x) for x in y_test_pred])  
+            y_train_pred , y_test_pred = np.array([float(x) for x in y_train_pred]), np.array([float(x) for x in y_test_pred])
+            #y_test_exp = probabilities @ bin_mean
+            #print(f"y_test_pred shape : {y_test_pred.shape}, y_test_exp shape : {y_test_exp.shape}")
             
             #evaluate
             error_results = sc.eval(y_test, y_test_pred,curr_model.prediction_probabilities)
-            
+            #error_results = sc.eval(y_test, y_test_exp, curr_model.prediction_probabilities)
+
         else:
             # Compute scores on the output
             if args.objective == "probabilistic_regression":
