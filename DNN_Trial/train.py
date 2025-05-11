@@ -899,7 +899,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         bin_mean = mean_per_bin(y_train, y_train_class)
 
-        args.class_weights = bin_mean.to_list() #save this
+        #args.class_weights = bin_mean.to_list() #save this
         
         print("BINNING END")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n")
@@ -961,7 +961,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
         
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        """if args.class_comp:
+        if args.class_comp:
             print("In the gulag")
             #set obj to be regression
             args.objective = "regression" #rem to rreturn it back to norm
@@ -993,18 +993,18 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
             print("After Evaluation")
 
-            print(f'{sc.get_results()} \n \n')"""
+            print(f'{sc.get_results()} \n \n')
         
-        print("In the gulag")
+        """print("In the gulag")
         #set obj to be regression
         args.objective = "regression" #rem to rreturn it back to norm
         sc = get_scorer(args)
 
         #evaluate
         error_results = sc.eval(y_test, prediction,curr_model.prediction_probabilities)
-
+        """
         #Append Scores
-        mse_scores.append(error_results['MSE'])
+        mse_scores.append(error_results['MSE'])         
         r2_scores.append(error_results['R2'])
         args.objective = orig_objective # Reset objective to original
 

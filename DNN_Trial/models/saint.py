@@ -41,10 +41,10 @@ class SAINT(BaseModelTorch):
         self.batch_size = self.args.batch_size if args.num_features < 50 else 64
 
         #try and learn the mean bins
-        if self.args.objective == "probabilistic_regression":
+        """if self.args.objective == "probabilistic_regression":
             self.class_weights = nn.Parameter(
                 torch.tensor(args.class_weights, dtype=torch.float32).to(self.device)
-            )
+            )"""
 
         print("Using dim %d and batch size %d" % (dim, self.batch_size))
 
@@ -128,15 +128,15 @@ class SAINT(BaseModelTorch):
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 #changed this for my EXP 4BIN MEAN
 
-                #y_outs = self.model.mlpfory(y_reps)
+                y_outs = self.model.mlpfory(y_reps)
 
-                logits = self.model.mlpfory(y_reps)
+                """logits = self.model.mlpfory(y_reps)
 
                 if self.args.objective == "probabilistic_regression":
                     probs = F.softmax(logits, dim=1)  # (batch_size, n_bins)
                     y_outs = torch.matmul(probs, self.class_weights)  # (batch_size,)
                 else:
-                    y_outs = logits
+                    y_outs = logits"""
 
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -226,16 +226,15 @@ class SAINT(BaseModelTorch):
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 #EXPEREIMENTS 4 MY BIN STUFF MEAN BIN
 
-                """
                 y_outs = self.model.mlpfory(y_reps)
                 if self.args.objective == "binary":
                     y_outs = torch.sigmoid(y_outs)
                 elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                     y_outs = F.softmax(y_outs, dim=1)
 
-                predictions.append(y_outs.detach().cpu().numpy())"""
+                predictions.append(y_outs.detach().cpu().numpy())
 
-                logits = self.model.mlpfory(y_reps)
+                """logits = self.model.mlpfory(y_reps)
 
                 if self.args.objective == "probabilistic_regression":
                     probs = F.softmax(logits, dim=1)
@@ -243,7 +242,7 @@ class SAINT(BaseModelTorch):
                 else:
                     y_outs = logits if self.args.objective == "regression" else F.softmax(logits, dim=1)
 
-                predictions.append(y_outs.detach().cpu().numpy())
+                predictions.append(y_outs.detach().cpu().numpy())"""
 
                 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
