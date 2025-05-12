@@ -1,0 +1,12 @@
+Running Mode: Nested CV with Hyperparameter Optimization
+Arguements: Namespace(batch_size=16, bin_alt=None, cat_dims=[2], cat_idx=[0], class_comp=False, class_weights=None, config='config/mercedes_benz.yml', data_parallel=False, dataset='Mercedes_Benz', direction='minimize', dropna_idx=[0], early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=5, nominal_idx=[1, 2, 3, 4, 5, 6, 7, 8], num_bins=10, num_classes=1, num_features=377, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=False, ordinal_idx=None, outer_splits=2, save_results=False, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=32, weighted_loss=False, y_distribution='bimodial')
+--- Running Nested Cross-Validation with Hyperparameter Optimization ---
+Loading dataset Mercedes_Benz...
+Dataset loaded! 
+
+(4209, 376)
+X : [['o' 'l' 'ae' ... 0 0 0]
+ ['z' 'aa' 'ai' ... 0 0 0]
+ ['f' 'v' 'ae' ... 0 0 0]
+ ['i' 'o' 'ae' ... 0 0 0]
+ ['d' 'aa' 'y' ... 0 0 0]]

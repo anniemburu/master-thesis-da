@@ -25,6 +25,15 @@ parameters:
       d_out: 1
       dropout: 0.07682853251149886
       n_blocks: 6
+    ResMLP:
+      d_block: 256
+      d_hidden: 6
+      d_hidden_multiplier: 1.6908700578519567
+      d_in: 1093
+      d_out: 311
+      dropout1: 0.40497738257298865
+      dropout2: 0.15707213143131246
+      n_blocks: 2
   Black_Friday:
     MLP:
       d_block: 256
@@ -134,6 +143,9 @@ parameters:
       dropout2: 0.010941575331359225
       n_blocks: 4
   MIP:
+    FTTransformer:
+      learning_rate: 0.005478197312390903
+      weight_decay: 1.7129302740564993e-05
     MLP:
       d_block: 64
       d_in: 151
@@ -185,6 +197,9 @@ parameters:
       dropout2: 0.16833482708406416
       n_blocks: 2
   SAT11:
+    FTTransformer:
+      learning_rate: 0.004544327453839196
+      weight_decay: 0.000312514807931228
     MLP:
       d_block: 256
       d_in: 130
@@ -200,6 +215,11 @@ parameters:
       dropout1: 0.3407681665344991
       dropout2: 0.21986827250639
       n_blocks: 4
+    SAINT:
+      depth: 6
+      dim: 256
+      dropout: 0.1
+      heads: 4
   Sensory:
     FTTransformer:
       learning_rate: 0.007837909586982108

@@ -331,7 +331,7 @@ def load_data(args, is_test=False):
     X_, X_test, y_, y_test = train_test_split(X, y, test_size=0.5, shuffle=True, random_state=40)
 
     print(f"X : {X_[:5,:]}")
-    print(f"X : {y_[:5,:]}")
+    print(f"X : {y_[:5]}")
 
     if is_test:
         return X_, X_test, y_, y_test

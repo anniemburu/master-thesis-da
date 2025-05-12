@@ -72,3 +72,21 @@ Test time: 0.756610
 Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 602, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
 
 
+2025-05-11 11:19:55.921475
+ResMLP - Allstate_Claims - train_model
+
+Log Loss - mean: 6.21730
+Log Loss - mean_std: 0.23470
+AUC - mean: 0.50508
+AUC - mean_std: 0.00319
+Accuracy - mean: 0.00230
+Accuracy - mean_std: 0.00068
+F1 score - mean: 0.00015
+F1 score - mean_std: 0.00009
+
+Train time: 2.599680
+Test time: 0.155834
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 1.6908700578519567, 'dropout1': 0.40497738257298865, 'dropout2': 0.15707213143131246, 'd_in': 1093, 'd_out': 311}
+
+

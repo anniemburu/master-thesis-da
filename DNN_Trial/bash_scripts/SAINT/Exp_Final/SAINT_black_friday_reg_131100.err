@@ -2,3 +2,9 @@
 [I 2025-05-11 06:51:49,156] Trial 0 finished with value: 12282073.90160176 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'dropout': 0.7}. Best is trial 0 with value: 12282073.90160176.
 [I 2025-05-11 08:30:55,934] Trial 1 finished with value: 12346431.29199301 and parameters: {'dim': 32, 'depth': 1, 'heads': 4, 'dropout': 0.5}. Best is trial 0 with value: 12282073.90160176.
 [I 2025-05-11 10:05:06,339] Trial 2 finished with value: 12334925.837350477 and parameters: {'dim': 128, 'depth': 3, 'heads': 8, 'dropout': 0.6}. Best is trial 0 with value: 12282073.90160176.
+[I 2025-05-11 11:24:02,729] Trial 3 finished with value: 12321521.083934521 and parameters: {'dim': 256, 'depth': 2, 'heads': 8, 'dropout': 0.6}. Best is trial 0 with value: 12282073.90160176.
+[I 2025-05-11 12:18:37,799] Trial 4 finished with value: 12334294.461286567 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'dropout': 0.2}. Best is trial 0 with value: 12282073.90160176.
+[I 2025-05-11 12:38:18,343] A new study created in memory with name: SAINT_Black_Friday_outer2
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 131100.0 ON stud-000 CANCELLED AT 2025-05-11T12:42:14 ***
+slurmstepd: error: *** JOB 131100 ON stud-000 CANCELLED AT 2025-05-11T12:42:14 ***
