@@ -107,6 +107,11 @@ parameters:
       dropout1: 0.21310736716949388
       dropout2: 0.09647228888528614
       n_blocks: 5
+    SAINT:
+      depth: 1
+      dim: 256
+      dropout: 0.5
+      heads: 2
   House_Prices_Nominal:
     MLP:
       d_block: 256
@@ -142,6 +147,11 @@ parameters:
       dropout1: 0.04569104969076137
       dropout2: 0.010941575331359225
       n_blocks: 4
+    SAINT:
+      depth: 6
+      dim: 64
+      dropout: 0
+      heads: 8
   MIP:
     FTTransformer:
       learning_rate: 0.005478197312390903
@@ -161,6 +171,11 @@ parameters:
       dropout1: 0.46585676851386065
       dropout2: 0.1740730761384721
       n_blocks: 5
+    SAINT:
+      depth: 12
+      dim: 256
+      dropout: 0.3
+      heads: 2
   Mercedes_Benz:
     MLP:
       d_block: 256
