@@ -50,6 +50,11 @@ parameters:
       dropout1: 0.1447794249707017
       dropout2: 0.10652983108653614
       n_blocks: 2
+    SAINT:
+      depth: 3
+      dim: 32
+      dropout: 0.5
+      heads: 2
   Boston:
     FTTransformer:
       learning_rate: 0.005961637956043898
@@ -128,6 +133,11 @@ parameters:
       dropout1: 0.4328849233188455
       dropout2: 0.03863249998871383
       n_blocks: 4
+    SAINT:
+      depth: 1
+      dim: 256
+      dropout: 0.1
+      heads: 8
   House_Sales:
     FTTransformer:
       learning_rate: 0.0008304138365966551

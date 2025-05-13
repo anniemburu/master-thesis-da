@@ -58,3 +58,17 @@ Test time: 0.182378
 Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
 
 
+2025-05-13 16:00:20.306491
+SAINT - House_Prices_Nominal - train_model
+
+MSE - mean: 1354418432.32142
+MSE - mean_std: 448216916.36516
+R2 - mean: 0.80617
+R2 - mean_std: 0.02414
+
+Train time: 93.718951
+Test time: 0.168932
+
+Best Parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'dropout': 0.1}
+
+
