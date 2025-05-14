@@ -894,7 +894,6 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             y_train_class, y_test_class = binning(args, y_train, y_test)
             bin_mean = mean_per_bin(y_train, y_train_class)
         else:
-
             train_class, test_class = binning(args, y_train, y_test)
             print("Binning Done")
 
@@ -914,8 +913,11 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         if args.frequency_reg: ## For frequency regularization
             loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map)
         else:
-            loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
-        
+            if args.objective == "probabilistic_regression":
+                loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+            else:
+                loss_history, test_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_test, y_test_class)
+
         train_timer.end()
 
         # Test model
@@ -924,9 +926,9 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         probabilities = curr_model.prediction_probabilities
 
         print(f"Prediction shape : {prediction.shape}")
-        print(f"Probabilities shape : {probabilities.shape} \n")
+        #print(f"Probabilities shape : {probabilities.shape} \n")
         print(f"Prediction : {prediction[:10]}")
-        print(f"Probabilities : {probabilities[:10]} \n")
+        #print(f"Probabilities : {probabilities[:10]} \n")
         #print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
         test_timer.end()
 
@@ -954,8 +956,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print(f"Number of classes : {args.num_classes}")
         #print(f"Class label len :{len(args.bin_alt)}")
         print(f"Class labels : {args.bin_alt}")
-        print(f"Unique y_true : {len(np.unique(y_test_class))}")
-        print(f"Unique train : {len(np.unique(y_train_class))}\n")
+        #print(f"Unique y_true : {len(np.unique(y_test_class))}")
+        #print(f"Unique train : {len(np.unique(y_train_class))}\n")
         print(f"Prediction shape : {curr_model.predictions.shape}")
         #print(f"Probabilities shape : {curr_model.prediction_probabilities.shape} \n")
         print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± \n")
@@ -989,7 +991,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
                 # Use the binning labels for evaluation
                 error_results = sc.eval(y_test_class, prediction, curr_model.prediction_probabilities, labels=np.unique(y_train_class))
             else:
-                error_results = sc.eval(y_test_class, prediction, curr_model.prediction_probabilities)
+                error_results = sc.eval(y_test, prediction, curr_model.prediction_probabilities)
 
             print("After Evaluation")
 
