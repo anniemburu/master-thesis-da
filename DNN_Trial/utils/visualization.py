@@ -98,7 +98,9 @@ def loss_vizualization(args, loss_hist, type=None):
             plt.legend()
             
             # Save the plot
-            plt.savefig(f'loss_curve_{i}.png', dpi=300, bbox_inches='tight')
+            path = get_output_path(args, 'visualization', file_type = None)
+            os.makedirs(path, exist_ok=True)
+            plt.savefig(f'{path}/loss_curve_{i}.png', dpi=300, bbox_inches='tight')
             plt.close()  # Close the figure to free memory
 
             plt.show();

@@ -1200,7 +1200,7 @@ def main_once(args):
 
     
     print("Started Classification Module ...... ")
-    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
 
     print("\n--- Testin on Final Model Finished ---")
     print("Aggregated Results:", results)
@@ -1213,7 +1213,7 @@ if __name__ == "__main__":
     # --- Argument Parsing ---
     # Make sure to add outer_splits argument
     base_parser = get_parser() # Get your base parser
-    base_parser.add_argument('--outer_splits', type=int, default=5, help='Number of outer folds for nested cross-validation')
+    base_parser.add_argument('--outer_splits', type=int, default=3, help='Number of outer folds for nested cross-validation')
     base_parser.add_argument('--save_results', action='store_true', default=True, help='Save aggregated results file') # Control saving final results
     base_parser.add_argument('--no_save_results', action='store_false', dest='save_results')
 
@@ -1223,7 +1223,7 @@ if __name__ == "__main__":
     if temp_args.optimize_hyperparameters:
         # Re-parse with the full parser if optimizing
         parser = get_parser()
-        parser.add_argument('--outer_splits', type=int, default=2, help='Number of outer folds for nested cross-validation')
+        parser.add_argument('--outer_splits', type=int, default=3, help='Number of outer folds for nested cross-validation')
         parser.add_argument('--save_results', action='store_false', default=False, help='Save aggregated results file')
         parser.add_argument('--no_save_results', action='store_false', dest='save_results')
         arguments = parser.parse_args()
