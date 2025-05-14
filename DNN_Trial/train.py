@@ -892,13 +892,13 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         #Acquire Bins
         if args.objective == "probabilistic_regression":
             y_train_class, y_test_class = binning(args, y_train, y_test)
+            bin_mean = mean_per_bin(y_train, y_train_class)
         else:
 
             train_class, test_class = binning(args, y_train, y_test)
             print("Binning Done")
 
-        bin_mean = mean_per_bin(y_train, y_train_class)
-
+    
         #args.class_weights = bin_mean.to_list() #save this
         
         print("BINNING END")
@@ -927,7 +927,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print(f"Probabilities shape : {probabilities.shape} \n")
         print(f"Prediction : {prediction[:10]}")
         print(f"Probabilities : {probabilities[:10]} \n")
-        print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
+        #print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
         test_timer.end()
 
         print(f"Prediction shape : {prediction.shape}")
