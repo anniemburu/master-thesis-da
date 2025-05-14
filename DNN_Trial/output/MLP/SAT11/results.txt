@@ -86,3 +86,17 @@ Test time: 0.000395
 Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.1541837529458395, 'd_in': 130, 'd_out': 1}
 
 
+2025-05-14 11:46:19.388906
+MLP - SAT11 - test_model
+
+MSE - mean: 12302886.94224
+MSE - std: 229.20706
+R2 - mean: -1.16149
+R2 - std: 0.00004
+
+Train time: 0.152251
+Test time: 0.000989
+
+Best Parameters: {'d_block': 256, 'd_in': 130, 'd_out': 1, 'dropout': 0.1541837529458395, 'n_blocks': 2}
+
+

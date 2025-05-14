@@ -86,3 +86,17 @@ Test time: 0.000355
 Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.16215696303563998, 'd_in': 36, 'd_out': 1}
 
 
+2025-05-14 11:46:24.870293
+MLP - Sensory - test_model
+
+MSE - mean: 220.59375
+MSE - std: 1.55573
+R2 - mean: -337.15568
+R2 - std: 2.38483
+
+Train time: 0.070486
+Test time: 0.000630
+
+Best Parameters: {'d_block': 256, 'd_in': 36, 'd_out': 1, 'dropout': 0.16215696303563998, 'n_blocks': 2}
+
+

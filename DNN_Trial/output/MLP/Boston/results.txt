@@ -87,3 +87,17 @@ Test time: 0.000388
 Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.19313939240578717, 'd_in': 14, 'd_out': 1}
 
 
+2025-05-14 11:44:21.243498
+MLP - Boston - test_model
+
+MSE - mean: 627.69027
+MSE - std: 2.81257
+R2 - mean: -5.24248
+R2 - std: 0.02797
+
+Train time: 0.076349
+Test time: 0.000625
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 1, 'dropout': 0.19313939240578717, 'n_blocks': 2}
+
+

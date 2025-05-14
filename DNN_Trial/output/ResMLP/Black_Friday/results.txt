@@ -76,3 +76,17 @@ Test time: 0.087678
 Best Parameters: {'n_blocks': 2, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'd_in': 75, 'd_out': 36}
 
 
+2025-05-14 11:45:16.869234
+ResMLP - Black_Friday - test_model
+
+MSE - mean: 13541136.78249
+MSE - std: 201529.33363
+R2 - mean: 0.47732
+R2 - std: 0.00778
+
+Train time: 21.627815
+Test time: 0.146218
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'd_in': 75, 'd_out': 1, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'n_blocks': 2}
+
+

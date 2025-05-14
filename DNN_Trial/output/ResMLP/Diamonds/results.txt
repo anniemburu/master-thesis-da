@@ -76,3 +76,17 @@ Test time: 0.092691
 Best Parameters: {'n_blocks': 5, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.723561499824081, 'dropout1': 0.21310736716949388, 'dropout2': 0.09647228888528614, 'd_in': 9, 'd_out': 34}
 
 
+2025-05-14 11:46:12.630138
+ResMLP - Diamonds - test_model
+
+MSE - mean: 1953759.36685
+MSE - std: 912119.12100
+R2 - mean: 0.87769
+R2 - std: 0.05710
+
+Train time: 4.364855
+Test time: 0.104907
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.723561499824081, 'd_in': 9, 'd_out': 1, 'dropout1': 0.21310736716949388, 'dropout2': 0.09647228888528614, 'n_blocks': 5}
+
+

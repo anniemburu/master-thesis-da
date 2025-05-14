@@ -90,3 +90,17 @@ Test time: 0.001977
 Best Parameters: {'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'd_in': 130, 'd_out': 3}
 
 
+2025-05-14 11:47:01.999954
+ResMLP - SAT11 - test_model
+
+MSE - mean: 12301369.42927
+MSE - std: 1101.47401
+R2 - mean: -1.16123
+R2 - std: 0.00019
+
+Train time: 0.278041
+Test time: 0.031708
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 1, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+

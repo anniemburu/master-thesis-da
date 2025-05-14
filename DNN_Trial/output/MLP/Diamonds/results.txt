@@ -90,3 +90,17 @@ Test time: 0.024506
 Best Parameters: {'n_blocks': 6, 'd_block': 256, 'dropout': 0.23677836111066783, 'd_in': 9, 'd_out': 1}
 
 
+2025-05-14 11:45:19.359840
+MLP - Diamonds - test_model
+
+MSE - mean: 1043164.59761
+MSE - std: 95519.96940
+R2 - mean: 0.93469
+R2 - std: 0.00598
+
+Train time: 2.773454
+Test time: 0.026691
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 1, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+

@@ -86,3 +86,17 @@ Test time: 0.005845
 Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.29646621574612675, 'd_in': 549, 'd_out': 1}
 
 
+2025-05-14 11:46:01.960833
+MLP - Mercedes_Benz - test_model
+
+MSE - mean: 9498.31551
+MSE - std: 23.48311
+R2 - mean: -57.27080
+R2 - std: 0.14407
+
+Train time: 0.714083
+Test time: 0.020721
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 1, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+

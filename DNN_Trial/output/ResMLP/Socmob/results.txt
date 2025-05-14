@@ -90,3 +90,17 @@ Test time: 0.001984
 Best Parameters: {'n_blocks': 3, 'd_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'd_in': 39, 'd_out': 40}
 
 
+2025-05-14 11:47:14.042207
+ResMLP - Socmob - test_model
+
+MSE - mean: 1990.41000
+MSE - std: 16.94796
+R2 - mean: -0.15235
+R2 - std: 0.00981
+
+Train time: 0.133029
+Test time: 0.001286
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 1, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
+
+

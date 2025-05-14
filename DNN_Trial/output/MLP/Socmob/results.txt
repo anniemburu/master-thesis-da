@@ -278,3 +278,17 @@ Test time: 0.000398
 Best Parameters: {'n_blocks': 3, 'd_block': 256, 'dropout': 0.2713416938393725, 'd_in': 39, 'd_out': 1}
 
 
+2025-05-14 11:46:37.285189
+MLP - Socmob - test_model
+
+MSE - mean: 2067.74807
+MSE - std: 2.76466
+R2 - mean: -0.19713
+R2 - std: 0.00160
+
+Train time: 0.090943
+Test time: 0.000744
+
+Best Parameters: {'d_block': 256, 'd_in': 39, 'd_out': 1, 'dropout': 0.2713416938393725, 'n_blocks': 3}
+
+

@@ -90,3 +90,17 @@ Test time: 0.016174
 Best Parameters: {'n_blocks': 4, 'd_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 4.237481136393337, 'dropout1': 0.04569104969076137, 'dropout2': 0.010941575331359225, 'd_in': 90, 'd_out': 131}
 
 
+2025-05-14 11:46:32.330220
+ResMLP - House_Sales - test_model
+
+MSE - mean: 32690057005.47835
+MSE - std: 2396758150.85235
+R2 - mean: 0.74433
+R2 - std: 0.01875
+
+Train time: 2.477885
+Test time: 0.081958
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 4.237481136393337, 'd_in': 90, 'd_out': 1, 'dropout1': 0.04569104969076137, 'dropout2': 0.010941575331359225, 'n_blocks': 4}
+
+
