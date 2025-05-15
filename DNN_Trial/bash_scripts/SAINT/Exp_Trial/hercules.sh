@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=SAINT_Hercules_q_binorms
+#SBATCH --job-name=SAINT_Hercules_ku
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -8,20 +8,20 @@
 #SBATCH --account=long
 
 CONFIGS=(
-    #config/abalone.yml
-    #config/allstate.yml
-    #config/black_friday.yml
-    #config/boston.yml
-    #config/brazillian_houses.yml
-    #config/diamonds.yml
-    #config/house_prices_nominal.yml
-    #config/house_sales.yml
+    config/abalone.yml
+    config/allstate.yml
+    config/black_friday.yml
+    config/boston.yml
+    config/brazillian_houses.yml
+    config/diamonds.yml
+    config/house_prices_nominal.yml
+    config/house_sales.yml
     config/mercedes_benz.yml
     config/mip_2016.yml
-    #config/moneyball.yml
+    config/moneyball.yml
     config/sat11.yml
-    #config/sensory.yml
-    #config/socmob.yml
+    config/sensory.yml
+    config/socmob.yml
 )
 
 for config in "${CONFIGS[@]}"; do

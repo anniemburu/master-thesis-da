@@ -128,3 +128,31 @@ Test time: 0.002197
 Best Parameters: {'d_block': 256, 'd_in': 130, 'd_out': 8, 'dropout': 0.1541837529458395, 'n_blocks': 2}
 
 
+2025-05-15 16:18:44.305046
+MLP - SAT11 - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.151599
+Test time: 0.001229
+
+Best Parameters: {'d_block': 256, 'd_in': 130, 'd_out': 8, 'dropout': 0.1541837529458395, 'n_blocks': 2}
+
+
+2025-05-15 16:18:49.711842
+MLP - SAT11 - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.154371
+Test time: 0.003933
+
+Best Parameters: {'d_block': 256, 'd_in': 130, 'd_out': 8, 'dropout': 0.1541837529458395, 'n_blocks': 2}
+
+

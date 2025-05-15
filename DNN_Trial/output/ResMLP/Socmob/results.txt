@@ -104,3 +104,31 @@ Test time: 0.001286
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 1, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
 
 
+2025-05-15 16:23:21.321400
+ResMLP - Socmob - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 78.75535
+MSE - std: 4.20400
+R2 - mean: 0.95440
+R2 - std: 0.00243
+
+Train time: 0.116395
+Test time: 0.001994
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 7, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
+
+
+2025-05-15 16:23:26.886778
+ResMLP - Socmob - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 131.39175
+MSE - std: 37.70396
+R2 - mean: 0.92393
+R2 - std: 0.02183
+
+Train time: 0.114432
+Test time: 0.001969
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 7, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
+
+

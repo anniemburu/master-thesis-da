@@ -104,3 +104,31 @@ Test time: 0.001401
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 1, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
 
 
+2025-05-15 16:20:13.569752
+ResMLP - Boston - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 4.06013
+MSE - std: 0.11619
+R2 - mean: 0.95962
+R2 - std: 0.00116
+
+Train time: 0.177493
+Test time: 0.005119
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 6, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
+
+
+2025-05-15 16:20:18.147529
+ResMLP - Boston - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 4.47400
+MSE - std: 0.19253
+R2 - mean: 0.95551
+R2 - std: 0.00191
+
+Train time: 0.089779
+Test time: 0.002359
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 6, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
+
+

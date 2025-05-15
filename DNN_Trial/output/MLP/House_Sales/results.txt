@@ -100,3 +100,31 @@ Test time: 0.031324
 Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 1, 'dropout': 0.013522222134953151, 'n_blocks': 3}
 
 
+2025-05-15 16:17:57.119996
+MLP - House_Sales - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 5327033396.36024
+MSE - std: 595863287.52524
+R2 - mean: 0.95834
+R2 - std: 0.00466
+
+Train time: 0.713672
+Test time: 0.037919
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.013522222134953151, 'n_blocks': 3}
+
+
+2025-05-15 16:18:04.181846
+MLP - House_Sales - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 15786971750.65173
+MSE - std: 2949007533.73833
+R2 - mean: 0.87653
+R2 - std: 0.02306
+
+Train time: 0.670837
+Test time: 0.028241
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.013522222134953151, 'n_blocks': 3}
+
+

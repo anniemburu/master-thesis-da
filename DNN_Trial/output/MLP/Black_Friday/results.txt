@@ -86,3 +86,31 @@ Test time: 0.140352
 Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 1, 'dropout': 0.10721970311199958, 'n_blocks': 6}
 
 
+2025-05-15 16:15:46.961710
+MLP - Black_Friday - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 5.487203
+Test time: 0.143451
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-15 16:16:36.089013
+MLP - Black_Friday - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 4.919108
+Test time: 0.146362
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+

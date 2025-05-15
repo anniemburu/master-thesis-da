@@ -86,3 +86,31 @@ Test time: 0.002550
 Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 1, 'dropout': 0.20383999785660487, 'n_blocks': 2}
 
 
+2025-05-15 16:17:43.869541
+MLP - House_Prices_Nominal - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 325086833.40145
+MSE - std: 70311813.00939
+R2 - mean: 0.94271
+R2 - std: 0.01239
+
+Train time: 0.138106
+Test time: 0.001120
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 8, 'dropout': 0.20383999785660487, 'n_blocks': 2}
+
+
+2025-05-15 16:17:48.972369
+MLP - House_Prices_Nominal - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 545040590.83002
+MSE - std: 55989635.97473
+R2 - mean: 0.90395
+R2 - std: 0.00987
+
+Train time: 0.153268
+Test time: 0.001300
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 7, 'dropout': 0.20383999785660487, 'n_blocks': 2}
+
+
