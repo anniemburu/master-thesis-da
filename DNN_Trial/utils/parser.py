@@ -34,6 +34,8 @@ def get_parser():
     parser.add('--shuffle', action="store_true", help="Shuffle data during cross-validation")
     parser.add('--seed', type=int, default=123, help="Seed for KFold initialization.")
     parser.add('--weighted_loss', action="store_true", help="Add weights to the loss function.")
+    parser.add('--strategy', type=str, choices=["uniform", "quantile", "kmeans"], help="Strategy for binning the data")
+    parser.add('--binning', type=str, help="Find bin fo the data", choices=["sturges", "freedman"])
 
     parser.add('--scale', action="store_true", help="Normalize input data.")
     parser.add('--target_encode', action="store_true", help="Encode the targets that they start at 0. (0, 1, 2,...)")
