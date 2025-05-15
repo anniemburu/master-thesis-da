@@ -63,6 +63,7 @@ def bin_finder(args, y):
         #start with Sturges' Rule
         bins = sturges(y, args)
     else:"""
+    
     args.binning = "sturges"
 
     if args.binning == "freedman":
