@@ -54,3 +54,17 @@ Test time: 0.224757
 Best Parameters: {'dim': 256, 'depth': 6, 'heads': 4, 'dropout': 0.1}
 
 
+2025-05-15 01:33:51.569455
+SAINT - SAT11 - test_model
+
+MSE - mean: 1850704.50609
+MSE - std: 23360.09746
+R2 - mean: 0.67485
+R2 - std: 0.00410
+
+Train time: 348.594436
+Test time: 0.335502
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.1, 'heads': 4}
+
+

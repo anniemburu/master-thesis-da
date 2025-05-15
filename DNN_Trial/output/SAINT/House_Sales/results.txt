@@ -72,3 +72,17 @@ Test time: 0.484168
 Best Parameters: {'dim': 64, 'depth': 6, 'heads': 8, 'dropout': 0}
 
 
+2025-05-15 00:45:15.244945
+SAINT - House_Sales - test_model
+
+MSE - mean: 14942841643.80147
+MSE - std: 665148205.61553
+R2 - mean: 0.88313
+R2 - std: 0.00520
+
+Train time: 737.106100
+Test time: 1.465056
+
+Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
+
+

@@ -72,3 +72,17 @@ Test time: 0.217249
 Best Parameters: {'dim': 256, 'depth': 12, 'heads': 2, 'dropout': 0.3}
 
 
+2025-05-15 01:11:05.279690
+SAINT - MIP - test_model
+
+MSE - mean: 28897863.16470
+MSE - std: 39260264.86944
+R2 - mean: 0.96587
+R2 - std: 0.04637
+
+Train time: 292.241411
+Test time: 0.357561
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
+
+

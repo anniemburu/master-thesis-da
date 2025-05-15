@@ -40,3 +40,17 @@ Test time: 0.134880
 Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
 
 
+2025-05-15 01:38:55.286238
+SAINT - Sensory - test_model
+
+MSE - mean: 0.60255
+MSE - std: 0.01960
+R2 - mean: 0.07633
+R2 - std: 0.03004
+
+Train time: 25.864488
+Test time: 0.116996
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 2, 'dropout': 0.1}
+
+
