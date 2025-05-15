@@ -59,11 +59,16 @@ def bin_finder(args, y):
     else:
         raise NotImplementedError("Distribution" + args.y_distribution + "is not yet implemented.")
     """
-    if args.model_name == "NODE":
+    """if args.model_name == "NODE":
         #start with Sturges' Rule
         bins = sturges(y, args)
-    else:
-        bins = freedman_diaconis(y,args)
+    else:"""
+    args.binning = "sturges"
+
+    if args.binning == "freedman":
+        bins = freedman_diaconis(y, args)
+    elif args.binning == "sturges":
+        bins = sturges(y,args)
 
     return bins
 
@@ -133,12 +138,13 @@ def binning(args, y, y_val):
     if args.objective == "probabilistic_regression":
         args.num_bins = bin_finder(args, y)
 
-        if args.y_distribution == "bimodial":
+        """if args.y_distribution == "bimodial":
             strategy = 'kmeans'
         else:
-            strategy = 'quantile'
+            strategy = 'quantile'"""
+         # Use quantile binning for all cases
         
-        binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=strategy, subsample=200000)
+        binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=args.strategy, subsample=200000)
         y = binning.fit_transform(y.reshape(-1, 1)).flatten()
         y_val = binning.transform(y_val.reshape(-1, 1)).flatten()
 
