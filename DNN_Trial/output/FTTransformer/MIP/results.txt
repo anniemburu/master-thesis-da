@@ -100,3 +100,31 @@ Test time: 0.135053
 Best Parameters: {'learning_rate': 0.005478197312390903, 'weight_decay': 1.7129302740564993e-05}
 
 
+2025-05-15 09:53:58.418482
+FTTransformer - MIP - test_modelprobabilistic_regressionquantilesturges
+
+MSE - mean: 150077365.34103
+MSE - std: 15543629.38129
+R2 - mean: 0.82273
+R2 - std: 0.01836
+
+Train time: 2.220210
+Test time: 0.189895
+
+Best Parameters: {'learning_rate': 0.005478197312390903, 'weight_decay': 1.7129302740564993e-05}
+
+
+2025-05-15 09:54:09.178971
+FTTransformer - MIP - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 1113598.33140
+MSE - std: 787.98083
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 1.970965
+Test time: 0.177784
+
+Best Parameters: {'learning_rate': 0.005478197312390903, 'weight_decay': 1.7129302740564993e-05}
+
+

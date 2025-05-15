@@ -68,3 +68,31 @@ Test time: 0.335502
 Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.1, 'heads': 4}
 
 
+2025-05-15 12:26:50.512505
+SAINT - SAT11 - test_modelprobabilistic_regressionquantilesturges
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 112.766145
+Test time: 0.328202
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.1, 'heads': 4}
+
+
+2025-05-15 12:33:36.653423
+SAINT - SAT11 - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 97.080353
+Test time: 0.328378
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.1, 'heads': 4}
+
+
