@@ -114,3 +114,31 @@ Test time: 1.383008
 Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
 
 
+2025-05-16 14:31:01.280628
+SAINT - House_Sales - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 283352258.44510
+MSE - std: 230739965.78091
+R2 - mean: 0.99778
+R2 - std: 0.00180
+
+Train time: 303.406973
+Test time: 1.415584
+
+Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
+
+
+2025-05-16 14:47:13.566722
+SAINT - House_Sales - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 710764493.97542
+MSE - std: 139865914.31061
+R2 - mean: 0.99444
+R2 - std: 0.00109
+
+Train time: 286.916437
+Test time: 1.380172
+
+Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
+
+

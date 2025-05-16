@@ -142,3 +142,31 @@ Test time: 0.358829
 Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
 
 
+2025-05-16 15:04:53.072637
+SAINT - MIP - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 11498.67452
+MSE - std: 8231.14528
+R2 - mean: 0.99999
+R2 - std: 0.00001
+
+Train time: 129.437449
+Test time: 0.362419
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
+
+
+2025-05-16 15:23:02.687744
+SAINT - MIP - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 36708896.18274
+MSE - std: 26742512.68551
+R2 - mean: 0.95664
+R2 - std: 0.03159
+
+Train time: 128.975064
+Test time: 0.354115
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
+
+

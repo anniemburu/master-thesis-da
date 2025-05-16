@@ -82,3 +82,31 @@ Test time: 0.204036
 Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
 
 
+2025-05-16 10:30:37.888719
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 0.01181
+MSE - std: 0.00185
+R2 - mean: 0.99888
+R2 - std: 0.00018
+
+Train time: 57.739991
+Test time: 0.204697
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+
+2025-05-16 10:35:43.964910
+SAINT - Abalone - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 0.02074
+MSE - std: 0.00572
+R2 - mean: 0.99803
+R2 - std: 0.00054
+
+Train time: 58.349362
+Test time: 0.204155
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+

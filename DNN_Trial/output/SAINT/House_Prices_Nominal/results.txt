@@ -114,3 +114,31 @@ Test time: 0.163544
 Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
 
 
+2025-05-16 14:09:36.300822
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 62794610.86065
+MSE - std: 15634181.49430
+R2 - mean: 0.98893
+R2 - std: 0.00276
+
+Train time: 30.709977
+Test time: 0.165363
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-16 14:13:41.196506
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 109655245.27433
+MSE - std: 15207419.33008
+R2 - mean: 0.98068
+R2 - std: 0.00268
+
+Train time: 30.982305
+Test time: 0.163307
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+

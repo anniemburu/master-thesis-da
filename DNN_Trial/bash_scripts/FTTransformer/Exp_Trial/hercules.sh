@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=FTTransformer_Hercules_ku
+#SBATCH --job-name=FTTransformer_Hercules_ku_freedmans
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de

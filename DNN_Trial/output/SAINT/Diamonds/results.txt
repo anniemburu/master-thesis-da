@@ -96,3 +96,31 @@ Test time: 1.794834
 Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
 
 
+2025-05-16 13:39:06.663368
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 19437.94169
+MSE - std: 60.66620
+R2 - mean: 0.99878
+R2 - std: 0.00000
+
+Train time: 1266.992132
+Test time: 1.865417
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+
+2025-05-16 14:05:47.495662
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 19809.34368
+MSE - std: 26.45462
+R2 - mean: 0.99876
+R2 - std: 0.00000
+
+Train time: 1282.433700
+Test time: 1.834758
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+
