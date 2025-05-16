@@ -118,3 +118,31 @@ Test time: 0.055453
 Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.057211730145489, 'd_in': 17, 'd_out': 3, 'dropout1': 0.4371413695633215, 'dropout2': 0.29149024331234025, 'n_blocks': 3}
 
 
+2025-05-16 09:37:11.329190
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 6062801.64845
+MSE - std: 3883371.34981
+R2 - mean: 0.84810
+R2 - std: 0.09730
+
+Train time: 0.835973
+Test time: 0.108112
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.057211730145489, 'd_in': 17, 'd_out': 1254, 'dropout1': 0.4371413695633215, 'dropout2': 0.29149024331234025, 'n_blocks': 3}
+
+
+2025-05-16 09:37:18.359005
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 173187211.21617
+MSE - std: 227099322.07476
+R2 - mean: -3.33915
+R2 - std: 5.68991
+
+Train time: 0.751282
+Test time: 0.046586
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.057211730145489, 'd_in': 17, 'd_out': 34, 'dropout1': 0.4371413695633215, 'dropout2': 0.29149024331234025, 'n_blocks': 3}
+
+

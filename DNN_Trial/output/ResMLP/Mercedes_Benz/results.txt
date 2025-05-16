@@ -160,3 +160,31 @@ Test time: 0.025999
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2490677131211343, 'd_in': 543, 'd_out': 9, 'dropout1': 0.00954377334572581, 'dropout2': 0.17621231533002782, 'n_blocks': 4}
 
 
+2025-05-16 09:38:42.356787
+ResMLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 5.83814
+MSE - std: 0.07339
+R2 - mean: 0.96418
+R2 - std: 0.00045
+
+Train time: 1.360075
+Test time: 0.022718
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2490677131211343, 'd_in': 543, 'd_out': 20, 'dropout1': 0.00954377334572581, 'dropout2': 0.17621231533002782, 'n_blocks': 4}
+
+
+2025-05-16 09:38:49.323909
+ResMLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 6.24468
+MSE - std: 0.02307
+R2 - mean: 0.96169
+R2 - std: 0.00014
+
+Train time: 1.456951
+Test time: 0.017624
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2490677131211343, 'd_in': 543, 'd_out': 19, 'dropout1': 0.00954377334572581, 'dropout2': 0.17621231533002782, 'n_blocks': 4}
+
+

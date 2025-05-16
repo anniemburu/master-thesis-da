@@ -132,3 +132,31 @@ Test time: 0.002716
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.544110387653899, 'd_in': 36, 'd_out': 6, 'dropout1': 0.12905452512026205, 'dropout2': 0.02854369523746009, 'n_blocks': 5}
 
 
+2025-05-16 09:39:30.589241
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.186263
+Test time: 0.002626
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.544110387653899, 'd_in': 36, 'd_out': 9, 'dropout1': 0.12905452512026205, 'dropout2': 0.02854369523746009, 'n_blocks': 5}
+
+
+2025-05-16 09:39:35.649002
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.102413
+Test time: 0.002767
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.544110387653899, 'd_in': 36, 'd_out': 9, 'dropout1': 0.12905452512026205, 'dropout2': 0.02854369523746009, 'n_blocks': 5}
+
+

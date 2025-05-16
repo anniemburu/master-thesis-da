@@ -132,3 +132,31 @@ Test time: 0.116602
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 4.237481136393337, 'd_in': 90, 'd_out': 12, 'dropout1': 0.04569104969076137, 'dropout2': 0.010941575331359225, 'n_blocks': 4}
 
 
+2025-05-16 09:38:22.746670
+ResMLP - House_Sales - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 283352258.44510
+MSE - std: 230739965.78091
+R2 - mean: 0.99778
+R2 - std: 0.00180
+
+Train time: 2.220259
+Test time: 0.096807
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 4.237481136393337, 'd_in': 90, 'd_out': 108, 'dropout1': 0.04569104969076137, 'dropout2': 0.010941575331359225, 'n_blocks': 4}
+
+
+2025-05-16 09:38:34.817155
+ResMLP - House_Sales - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 710764493.97542
+MSE - std: 139865914.31061
+R2 - mean: 0.99444
+R2 - std: 0.00109
+
+Train time: 2.361096
+Test time: 0.109078
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 4.237481136393337, 'd_in': 90, 'd_out': 70, 'dropout1': 0.04569104969076137, 'dropout2': 0.010941575331359225, 'n_blocks': 4}
+
+

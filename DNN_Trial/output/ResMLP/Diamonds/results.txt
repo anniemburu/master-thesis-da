@@ -118,3 +118,31 @@ Test time: 0.119933
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.723561499824081, 'd_in': 9, 'd_out': 13, 'dropout1': 0.21310736716949388, 'dropout2': 0.09647228888528614, 'n_blocks': 5}
 
 
+2025-05-16 09:37:41.202782
+ResMLP - Diamonds - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 19437.94169
+MSE - std: 60.66620
+R2 - mean: 0.99878
+R2 - std: 0.00000
+
+Train time: 5.674416
+Test time: 0.128561
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.723561499824081, 'd_in': 9, 'd_out': 37, 'dropout1': 0.21310736716949388, 'dropout2': 0.09647228888528614, 'n_blocks': 5}
+
+
+2025-05-16 09:37:58.574146
+ResMLP - Diamonds - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 19809.34368
+MSE - std: 26.45462
+R2 - mean: 0.99876
+R2 - std: 0.00000
+
+Train time: 4.085747
+Test time: 0.128763
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.723561499824081, 'd_in': 9, 'd_out': 37, 'dropout1': 0.21310736716949388, 'dropout2': 0.09647228888528614, 'n_blocks': 5}
+
+

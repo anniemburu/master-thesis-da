@@ -132,3 +132,31 @@ Test time: 0.575634
 Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 1.6908700578519567, 'd_in': 1073, 'd_out': 8, 'dropout1': 0.40497738257298865, 'dropout2': 0.15707213143131246, 'n_blocks': 2}
 
 
+2025-05-16 09:29:00.330609
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 23852.82223
+MSE - std: 6556.56292
+R2 - mean: 0.99720
+R2 - std: 0.00077
+
+Train time: 47.118152
+Test time: 0.757404
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 1.6908700578519567, 'd_in': 1073, 'd_out': 602, 'dropout1': 0.40497738257298865, 'dropout2': 0.15707213143131246, 'n_blocks': 2}
+
+
+2025-05-16 09:35:11.301117
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 115545.86685
+MSE - std: 39392.45083
+R2 - mean: 0.98644
+R2 - std: 0.00462
+
+Train time: 27.472044
+Test time: 0.635446
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 1.6908700578519567, 'd_in': 1073, 'd_out': 151, 'dropout1': 0.40497738257298865, 'dropout2': 0.15707213143131246, 'n_blocks': 2}
+
+

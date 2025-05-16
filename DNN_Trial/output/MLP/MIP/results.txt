@@ -156,3 +156,31 @@ Test time: 0.038247
 Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 2, 'dropout': 0.2651113818434264, 'n_blocks': 6}
 
 
+2025-05-16 09:21:21.580962
+MLP - MIP - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 11498.67452
+MSE - std: 8231.14528
+R2 - mean: 0.99999
+R2 - std: 0.00001
+
+Train time: 0.145153
+Test time: 0.002261
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 83, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-05-16 09:21:26.359971
+MLP - MIP - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 36708896.18274
+MSE - std: 26742512.68551
+R2 - mean: 0.95664
+R2 - std: 0.03159
+
+Train time: 0.154741
+Test time: 0.006084
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
