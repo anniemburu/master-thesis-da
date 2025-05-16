@@ -191,11 +191,7 @@ def custom_class_weights(y):
     unique_classes = np.unique(y)
     unique_classes.sort()
 
-    class_weights = compute_class_weight(
-        'balanced',
-        classes = unique_classes,
-        y = y
-    )
+    class_weights = compute_class_weight('balanced',classes = unique_classes,y = y)
     class_weights = torch.tensor(class_weights, dtype=torch.float32)
     
     return class_weights
@@ -921,7 +917,11 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map)
         else:
             if args.objective == "probabilistic_regression":
-                loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+                if args.weighted_loss:
+                    class_weights = custom_class_weights(y_train_class)
+                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+                else:
+                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
             else:
                 loss_history, test_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_test, y_test_class)
 
