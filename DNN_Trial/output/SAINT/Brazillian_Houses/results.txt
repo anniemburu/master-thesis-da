@@ -40,3 +40,31 @@ Test time: 0.439910
 Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
 
 
+2025-05-16 00:00:05.631624
+SAINT - Brazillian_Houses - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 284.566280
+Test time: 0.811430
+
+Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
+
+
+2025-05-16 00:10:17.968042
+SAINT - Brazillian_Houses - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 173.464018
+Test time: 0.818728
+
+Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
+
+

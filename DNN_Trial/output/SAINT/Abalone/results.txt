@@ -54,3 +54,31 @@ Test time: 0.223689
 Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
 
 
+2025-05-15 21:30:31.537623
+SAINT - Abalone - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 58.253492
+Test time: 0.199300
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+
+2025-05-15 21:36:21.349814
+SAINT - Abalone - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 56.992821
+Test time: 0.204036
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+

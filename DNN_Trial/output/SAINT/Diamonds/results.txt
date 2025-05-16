@@ -68,3 +68,31 @@ Test time: 1.807335
 Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
 
 
+2025-05-16 00:36:35.384136
+SAINT - Diamonds - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 110846.30496
+MSE - std: 6422.71740
+R2 - mean: 0.99306
+R2 - std: 0.00040
+
+Train time: 1269.931454
+Test time: 1.797955
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+
+2025-05-16 01:00:21.535714
+SAINT - Diamonds - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 148818.24298
+MSE - std: 394.09274
+R2 - mean: 0.99068
+R2 - std: 0.00002
+
+Train time: 1163.590849
+Test time: 1.794834
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+

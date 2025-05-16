@@ -54,3 +54,31 @@ Test time: 0.105292
 Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
 
 
+2025-05-15 23:36:47.479492
+SAINT - Boston - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 4.06013
+MSE - std: 0.11619
+R2 - mean: 0.95962
+R2 - std: 0.00116
+
+Train time: 37.457020
+Test time: 0.112128
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
+
+
+2025-05-15 23:40:50.246485
+SAINT - Boston - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 4.47400
+MSE - std: 0.19253
+R2 - mean: 0.95551
+R2 - std: 0.00191
+
+Train time: 34.672855
+Test time: 0.107390
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
+
+

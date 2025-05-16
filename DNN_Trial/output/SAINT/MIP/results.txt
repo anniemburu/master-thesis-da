@@ -114,3 +114,31 @@ Test time: 0.336520
 Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
 
 
+2025-05-16 01:52:34.822150
+SAINT - MIP - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 117.574013
+Test time: 0.361054
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
+
+
+2025-05-16 03:05:02.469669
+SAINT - MIP - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 1113598.33140
+MSE - std: 787.98083
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 485.949213
+Test time: 0.358829
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
+
+
