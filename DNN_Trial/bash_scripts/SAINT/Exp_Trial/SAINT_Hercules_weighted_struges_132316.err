@@ -1,0 +1,177 @@
+Traceback (most recent call last):
+  File "train.py", line 1250, in <module>
+    main_once(arguments)
+  File "train.py", line 1210, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 922, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 125, in fit
+    reps = self.model.transformer(x_categ_enc, x_cont_enc)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 124, in forward
+    x = attn1(x)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 41, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 31, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 88, in forward
+    sim = einsum('b h i d, b h j d -> b h i j', q, k) * self.scale
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/functional.py", line 377, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.06 GiB. GPU 0 has a total capacty of 7.79 GiB of which 8.44 MiB is free. Including non-PyTorch memory, this process has 7.78 GiB memory in use. Of the allocated memory 7.63 GiB is allocated by PyTorch, and 23.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1250, in <module>
+    main_once(arguments)
+  File "train.py", line 1210, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 922, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 125, in fit
+    reps = self.model.transformer(x_categ_enc, x_cont_enc)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 124, in forward
+    x = attn1(x)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 41, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 31, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 88, in forward
+    sim = einsum('b h i d, b h j d -> b h i j', q, k) * self.scale
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/functional.py", line 377, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.06 GiB. GPU 0 has a total capacty of 7.79 GiB of which 8.44 MiB is free. Including non-PyTorch memory, this process has 7.78 GiB memory in use. Of the allocated memory 7.63 GiB is allocated by PyTorch, and 23.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1250, in <module>
+    main_once(arguments)
+  File "train.py", line 1210, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 922, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 125, in fit
+    reps = self.model.transformer(x_categ_enc, x_cont_enc)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 124, in forward
+    x = attn1(x)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 41, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 31, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint_lib/models/model.py", line 88, in forward
+    sim = einsum('b h i d, b h j d -> b h i j', q, k) * self.scale
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/functional.py", line 377, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.06 GiB. GPU 0 has a total capacty of 7.79 GiB of which 8.44 MiB is free. Including non-PyTorch memory, this process has 7.78 GiB memory in use. Of the allocated memory 7.63 GiB is allocated by PyTorch, and 23.22 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1250, in <module>
+    main_once(arguments)
+  File "train.py", line 1210, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 922, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 155, in fit
+    optimizer.step()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 373, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 184, in step
+    adamw(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 335, in adamw
+    func(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 599, in _multi_tensor_adamw
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 584.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 76.44 MiB is free. Including non-PyTorch memory, this process has 7.71 GiB memory in use. Of the allocated memory 7.31 GiB is allocated by PyTorch, and 270.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1250, in <module>
+    main_once(arguments)
+  File "train.py", line 1210, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 922, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 155, in fit
+    optimizer.step()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 373, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 184, in step
+    adamw(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 335, in adamw
+    func(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 599, in _multi_tensor_adamw
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 584.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 76.44 MiB is free. Including non-PyTorch memory, this process has 7.71 GiB memory in use. Of the allocated memory 7.31 GiB is allocated by PyTorch, and 270.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1250, in <module>
+    main_once(arguments)
+  File "train.py", line 1210, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 922, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 155, in fit
+    optimizer.step()
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 373, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 184, in step
+    adamw(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 335, in adamw
+    func(
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/optim/adamw.py", line 599, in _multi_tensor_adamw
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 584.00 MiB. GPU 0 has a total capacty of 7.79 GiB of which 76.44 MiB is free. Including non-PyTorch memory, this process has 7.71 GiB memory in use. Of the allocated memory 7.31 GiB is allocated by PyTorch, and 270.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 132316 ON stud-000 CANCELLED AT 2025-05-17T23:19:30 ***
+slurmstepd: error: *** STEP 132316.29 ON stud-000 CANCELLED AT 2025-05-17T23:19:30 ***

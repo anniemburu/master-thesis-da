@@ -110,3 +110,45 @@ Test time: 0.110150
 Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
 
 
+2025-05-17 17:35:03.149137
+SAINT - Boston - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 21.39108
+MSE - std: 5.77202
+R2 - mean: 0.78726
+R2 - std: 0.05740
+
+Train time: 31.612824
+Test time: 0.104169
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
+
+
+2025-05-17 17:38:14.923956
+SAINT - Boston - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 4.06013
+MSE - std: 0.11619
+R2 - mean: 0.95962
+R2 - std: 0.00116
+
+Train time: 35.196852
+Test time: 0.105247
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
+
+
+2025-05-17 17:41:11.326559
+SAINT - Boston - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 4.47400
+MSE - std: 0.19253
+R2 - mean: 0.95551
+R2 - std: 0.00191
+
+Train time: 32.733516
+Test time: 0.105392
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
+
+

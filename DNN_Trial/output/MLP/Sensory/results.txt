@@ -156,3 +156,45 @@ Test time: 0.000808
 Best Parameters: {'d_block': 256, 'd_in': 36, 'd_out': 9, 'dropout': 0.16215696303563998, 'n_blocks': 2}
 
 
+2025-05-17 11:39:13.654435
+MLP - Sensory - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 0.04231
+MSE - std: 0.00815
+R2 - mean: 0.93514
+R2 - std: 0.01249
+
+Train time: 0.066440
+Test time: 0.000812
+
+Best Parameters: {'d_block': 256, 'd_in': 36, 'd_out': 5, 'dropout': 0.16215696303563998, 'n_blocks': 2}
+
+
+2025-05-17 11:39:18.794595
+MLP - Sensory - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.04927
+MSE - std: 0.00556
+R2 - mean: 0.92447
+R2 - std: 0.00852
+
+Train time: 0.158535
+Test time: 0.001312
+
+Best Parameters: {'d_block': 256, 'd_in': 36, 'd_out': 6, 'dropout': 0.16215696303563998, 'n_blocks': 2}
+
+
+2025-05-17 11:39:23.391442
+MLP - Sensory - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.04477
+MSE - std: 0.00032
+R2 - mean: 0.93138
+R2 - std: 0.00049
+
+Train time: 0.067294
+Test time: 0.000818
+
+Best Parameters: {'d_block': 256, 'd_in': 36, 'd_out': 6, 'dropout': 0.16215696303563998, 'n_blocks': 2}
+
+

@@ -160,3 +160,45 @@ Test time: 0.002065
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 26, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
 
 
+2025-05-17 11:45:03.280352
+ResMLP - Socmob - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 718.79338
+MSE - std: 33.44977
+R2 - mean: 0.58385
+R2 - std: 0.01937
+
+Train time: 0.122041
+Test time: 0.001849
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 6, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
+
+
+2025-05-17 11:45:08.775884
+ResMLP - Socmob - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 78.75535
+MSE - std: 4.20400
+R2 - mean: 0.95440
+R2 - std: 0.00243
+
+Train time: 0.113394
+Test time: 0.002104
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 7, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
+
+
+2025-05-17 11:45:13.624068
+ResMLP - Socmob - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 131.39175
+MSE - std: 37.70396
+R2 - mean: 0.92393
+R2 - std: 0.02183
+
+Train time: 0.113702
+Test time: 0.002099
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 7, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
+
+

@@ -110,3 +110,45 @@ Test time: 0.204155
 Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
 
 
+2025-05-17 14:34:52.534088
+SAINT - Abalone - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 62.366816
+Test time: 0.207294
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+
+2025-05-17 14:38:14.949091
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 41.479771
+Test time: 0.206818
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+
+2025-05-17 14:41:17.165184
+SAINT - Abalone - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 37.570513
+Test time: 0.206041
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+

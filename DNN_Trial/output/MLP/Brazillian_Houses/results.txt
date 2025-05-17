@@ -156,3 +156,45 @@ Test time: 0.013852
 Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 34, 'dropout': 0.07678813857296692, 'n_blocks': 5}
 
 
+2025-05-17 11:36:48.277804
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 0.403633
+Test time: 0.013445
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-05-17 11:36:54.070494
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 0.284221
+Test time: 0.004971
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-05-17 11:36:59.141356
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 0.188505
+Test time: 0.010976
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 3, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+

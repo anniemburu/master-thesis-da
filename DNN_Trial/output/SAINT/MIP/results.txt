@@ -170,3 +170,31 @@ Test time: 0.354115
 Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
 
 
+2025-05-17 21:32:58.475578
+SAINT - MIP - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 150077365.34103
+MSE - std: 15543629.38129
+R2 - mean: 0.82273
+R2 - std: 0.01836
+
+Train time: 151.538902
+Test time: 0.373719
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
+
+
+2025-05-17 22:05:09.515239
+SAINT - MIP - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 132.784258
+Test time: 0.373640
+
+Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
+
+

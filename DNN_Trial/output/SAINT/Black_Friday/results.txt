@@ -124,3 +124,45 @@ Test time: 4.109701
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.5, 'heads': 2}
 
 
+2025-05-17 15:42:03.943065
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 1032.115624
+Test time: 3.872514
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.5, 'heads': 2}
+
+
+2025-05-17 16:36:10.298449
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 1036.388473
+Test time: 4.156917
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.5, 'heads': 2}
+
+
+2025-05-17 17:32:02.207974
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 1069.870702
+Test time: 4.008505
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.5, 'heads': 2}
+
+

@@ -146,3 +146,45 @@ Test time: 0.188244
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'd_in': 75, 'd_out': 38, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'n_blocks': 2}
 
 
+2025-05-17 11:39:58.787703
+ResMLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 6.068996
+Test time: 0.169126
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'd_in': 75, 'd_out': 15, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'n_blocks': 2}
+
+
+2025-05-17 11:40:34.263957
+ResMLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 5.535073
+Test time: 0.160464
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'd_in': 75, 'd_out': 15, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'n_blocks': 2}
+
+
+2025-05-17 11:41:10.643736
+ResMLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 5.959171
+Test time: 0.171175
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'd_in': 75, 'd_out': 15, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'n_blocks': 2}
+
+

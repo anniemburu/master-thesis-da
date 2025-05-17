@@ -96,3 +96,45 @@ Test time: 0.814538
 Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
 
 
+2025-05-17 18:00:35.491318
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 323.311882
+Test time: 0.791260
+
+Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
+
+
+2025-05-17 18:16:30.234827
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 274.760113
+Test time: 0.795135
+
+Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
+
+
+2025-05-17 18:26:34.286454
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 174.811959
+Test time: 0.800910
+
+Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
+
+

@@ -160,3 +160,45 @@ Test time: 0.078352
 Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 37, 'dropout': 0.23677836111066783, 'n_blocks': 6}
 
 
+2025-05-17 11:37:07.998691
+MLP - Diamonds - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 525825.19563
+MSE - std: 14155.40547
+R2 - mean: 0.96708
+R2 - std: 0.00089
+
+Train time: 1.109935
+Test time: 0.062119
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 13, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-05-17 11:37:18.108261
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 110846.30496
+MSE - std: 6422.71740
+R2 - mean: 0.99306
+R2 - std: 0.00040
+
+Train time: 1.431285
+Test time: 0.053560
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 13, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-05-17 11:37:26.701265
+MLP - Diamonds - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 148818.24298
+MSE - std: 394.09274
+R2 - mean: 0.99068
+R2 - std: 0.00002
+
+Train time: 1.166167
+Test time: 0.057490
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 13, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+

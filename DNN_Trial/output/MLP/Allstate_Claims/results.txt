@@ -156,3 +156,45 @@ Test time: 0.624111
 Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 151, 'dropout': 0.07682853251149886, 'n_blocks': 6}
 
 
+2025-05-17 11:23:15.049580
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1291833.02720
+MSE - std: 6159.86573
+R2 - mean: 0.84837
+R2 - std: 0.00072
+
+Train time: 19.229592
+Test time: 0.560184
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 15, 'dropout': 0.07682853251149886, 'n_blocks': 6}
+
+
+2025-05-17 11:29:13.542535
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 173107.07856
+MSE - std: 1974.30716
+R2 - mean: 0.97968
+R2 - std: 0.00023
+
+Train time: 2.579245
+Test time: 0.557915
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 15, 'dropout': 0.07682853251149886, 'n_blocks': 6}
+
+
+2025-05-17 11:34:48.832952
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 3221418.76289
+MSE - std: 20398.91998
+R2 - mean: 0.62187
+R2 - std: 0.00239
+
+Train time: 2.780822
+Test time: 0.555521
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 8, 'dropout': 0.07682853251149886, 'n_blocks': 6}
+
+

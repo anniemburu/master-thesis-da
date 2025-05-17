@@ -124,3 +124,45 @@ Test time: 1.834758
 Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
 
 
+2025-05-17 18:54:55.328744
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 525825.19563
+MSE - std: 14155.40547
+R2 - mean: 0.96708
+R2 - std: 0.00089
+
+Train time: 1413.677316
+Test time: 1.830359
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+
+2025-05-17 19:19:41.045857
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 110846.30496
+MSE - std: 6422.71740
+R2 - mean: 0.99306
+R2 - std: 0.00040
+
+Train time: 1244.997636
+Test time: 1.831951
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+
+2025-05-17 19:43:18.503158
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 148818.24298
+MSE - std: 394.09274
+R2 - mean: 0.99068
+R2 - std: 0.00002
+
+Train time: 1180.122900
+Test time: 1.854202
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+

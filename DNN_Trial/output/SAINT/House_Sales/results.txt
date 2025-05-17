@@ -142,3 +142,45 @@ Test time: 1.380172
 Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
 
 
+2025-05-17 20:09:37.281225
+SAINT - House_Sales - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 318.053161
+Test time: 1.396708
+
+Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
+
+
+2025-05-17 20:27:59.253681
+SAINT - House_Sales - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 5327033396.36024
+MSE - std: 595863287.52524
+R2 - mean: 0.95834
+R2 - std: 0.00466
+
+Train time: 323.550297
+Test time: 1.425134
+
+Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
+
+
+2025-05-17 20:47:51.058234
+SAINT - House_Sales - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 15786971750.65173
+MSE - std: 2949007533.73833
+R2 - mean: 0.87653
+R2 - std: 0.02306
+
+Train time: 301.160919
+Test time: 1.445898
+
+Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
+
+

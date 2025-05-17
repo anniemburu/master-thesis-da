@@ -160,3 +160,45 @@ Test time: 0.002144
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 10, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
 
 
+2025-05-17 11:41:15.997389
+ResMLP - Boston - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 21.39108
+MSE - std: 5.77202
+R2 - mean: 0.78726
+R2 - std: 0.05740
+
+Train time: 0.084459
+Test time: 0.002348
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 6, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
+
+
+2025-05-17 11:41:21.178460
+ResMLP - Boston - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 4.06013
+MSE - std: 0.11619
+R2 - mean: 0.95962
+R2 - std: 0.00116
+
+Train time: 0.214483
+Test time: 0.003435
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 6, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
+
+
+2025-05-17 11:41:25.692712
+ResMLP - Boston - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 4.47400
+MSE - std: 0.19253
+R2 - mean: 0.95551
+R2 - std: 0.00191
+
+Train time: 0.086861
+Test time: 0.002259
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 6, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
+
+
