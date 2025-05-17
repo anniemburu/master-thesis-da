@@ -65,7 +65,11 @@ def save_results_to_file(args, results, train_time=None, test_time=None, best_pa
 
     with open(filename, "a") as text_file:
         text_file.write(str(datetime.datetime.now()) + "\n")
-        text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + " - " + args.strategy + " - " + args.binning + " - "  + "Class Weights"+"\n\n")
+        if args.objective == "probabilistic_regression":
+            text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + " - " + args.strategy + " - " + args.binning + " - "  + "Class Weights" + "\n\n")
+        else:
+            text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + "\n\n")
+
 
         for key, value in results.items():
             text_file.write("%s: %.5f\n" % (key, value))
