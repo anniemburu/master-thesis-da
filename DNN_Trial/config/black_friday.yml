@@ -7,6 +7,7 @@ objective: probabilistic_regression # Don't change (regression , probabilistic_r
 
 y_distribution : multimodal
 
+
 # GPU parameters
 use_gpu: True
 gpu_ids: [0, 1]
