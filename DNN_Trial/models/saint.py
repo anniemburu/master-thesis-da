@@ -70,6 +70,8 @@ class SAINT(BaseModelTorch):
 
     def fit(self, X, y, X_val=None, y_val=None,class_weights=None):
 
+        class_weights = class_weights.to(self.device) if class_weights is not None else None
+
         if self.args.objective == 'binary':
             criterion = nn.BCEWithLogitsLoss()
         elif self.args.objective == 'classification' or self.args.objective == 'probabilistic_regression':
@@ -86,6 +88,7 @@ class SAINT(BaseModelTorch):
         y = {'data': y.reshape(-1, 1)}
         X_val = {'data': X_val, 'mask': np.ones_like(X_val)}
         y_val = {'data': y_val.reshape(-1, 1)}
+
 
         train_ds = DataSetCatCon(X, y, self.args.cat_idx, self.args.objective)
         trainloader = DataLoader(train_ds, batch_size=self.batch_size, shuffle=True, num_workers=4)
