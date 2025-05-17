@@ -67,6 +67,7 @@ class ResMLP(BaseModelTorch):
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
       X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
       y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
+      class_weights = class_weights.to(self.device) if class_weights is not None else None
 
       print(f"X : {type(X)}, y : {type(y)}, X : {type(X_val)}, X : {type(X_val)} \n")
 
@@ -223,6 +224,7 @@ class MLP(BaseModelTorch):
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
       X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
       y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
+      class_weights = class_weights.to(self.device) if class_weights is not None else None
 
       train_dataset = TensorDataset(X, y)
       loader = DataLoader(
@@ -369,7 +371,7 @@ class FTTransformerWrapper(BaseModelTorch):
       y = np.asarray(y, dtype=np.float32 if self.args.objective == 'regression' else np.int64)
       X_val = np.asarray(X_val, dtype=np.float32) if X_val is not None else None
       y_val = np.asarray(y_val, dtype=np.float32 if self.args.objective == 'regression' else np.int64) if y_val is not None else None
-
+      class_weights = class_weights.to(self.device) if class_weights is not None else None
 
       X = torch.tensor(X, dtype=torch.float32)
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
