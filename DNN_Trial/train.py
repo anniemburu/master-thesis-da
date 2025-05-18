@@ -64,7 +64,7 @@ def bin_finder(args, y):
         bins = sturges(y, args)
     else:"""
     
-    args.binning = "sturges"
+    args.binning = "freedman"
 
     if args.binning == "freedman":
         bins = freedman_diaconis(y, args)
