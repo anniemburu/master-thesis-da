@@ -359,10 +359,11 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
             #print(f"Still running??")
 
             if args.weighted_loss:
+                print(f"Class Weights Applied: {class_weights}")
                 # Use class weights for loss function
                 _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, class_weights = class_weights)
             else:
-
+                print(f"Class Weights Ddnt Apply")
                 _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
     
 
@@ -909,6 +910,9 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         # Create a new unfitted version of the model
         curr_model = model(parameters, args) # Use args copy
+        #curr_model = model.clone() # Use deepcopy to ensure a fresh instance
+        print(f"Model Parameters: {curr_model.params}")
+        print(f"Parameters Passed: {parameters}")
         print(curr_model.params)
 
         # Train model
@@ -919,8 +923,10 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             if args.objective == "probabilistic_regression":
                 if args.weighted_loss:
                     class_weights = custom_class_weights(y_train_class)
+                    print(f"Class Weights Applied: {class_weights}")
                     loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
                 else:
+                    print(f"Class Weights DDNT APPLY")
                     loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
             else:
                 loss_history, test_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_test, y_test_class)
@@ -935,7 +941,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print(f"Prediction shape : {prediction.shape}")
         #print(f"Probabilities shape : {probabilities.shape} \n")
         print(f"Prediction : {prediction[:10]}")
-        #print(f"Probabilities : {probabilities[:10]} \n")
+        print(f"Probabilities : {probabilities[:10]} \n")
         #print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
         test_timer.end()
 
@@ -992,6 +998,24 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             error_results = sc.eval(y_test, y_test_pred,curr_model.prediction_probabilities)
             #error_results = sc.eval(y_test, y_test_exp, curr_model.prediction_probabilities)
 
+            #Append Scores
+            mse_scores.append(error_results['MSE'])         
+            r2_scores.append(error_results['R2'])
+            args.objective = orig_objective # Reset objective to original
+
+            print(f"MSE SCORES: {mse_scores}, R2 SCORES: {r2_scores}")
+
+            mse_mean = np.mean(mse_scores)
+            mse_std = np.std(mse_scores)
+
+            r2_mean = np.mean(r2_scores)
+            r2_std = np.std(r2_scores)
+
+            get_results = {"MSE - mean": mse_mean,
+                    "MSE - std": mse_std,
+                    "R2 - mean": r2_mean,
+                    "R2 - std": r2_std}
+
         else:
             # Compute scores on the output
             if args.objective == "probabilistic_regression":
@@ -1003,34 +1027,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             print("After Evaluation")
 
             print(f'{sc.get_results()} \n \n')
-        
-        """print("In the gulag")
-        #set obj to be regression
-        args.objective = "regression" #rem to rreturn it back to norm
-        sc = get_scorer(args)
 
-        #evaluate
-        error_results = sc.eval(y_test, prediction,curr_model.prediction_probabilities)
-        """
-        #Append Scores
-        mse_scores.append(error_results['MSE'])         
-        r2_scores.append(error_results['R2'])
-        args.objective = orig_objective # Reset objective to original
-
-    print(f"MSE SCORES: {mse_scores}, R2 SCORES: {r2_scores}")
-
-    mse_mean = np.mean(mse_scores)
-    mse_std = np.std(mse_scores)
-
-    r2_mean = np.mean(r2_scores)
-    r2_std = np.std(r2_scores)
-
-    get_results = {"MSE - mean": mse_mean,
-                    "MSE - std": mse_std,
-                    "R2 - mean": r2_mean,
-                    "R2 - std": r2_std}
-    
-
+            get_results = sc.get_results()
     # Best run is saved to file
     if save_model:
         print("Saving model.....")
@@ -1195,18 +1193,22 @@ def main_once(args):
     #print(f"Params for {args.model_name}: {args.parameters}")
 
     parameters = args.parameters[args.dataset][args.model_name]
+    
+    #model_cls = model_name (parameters, args)
+    #print(f"Model Params After fitting: {model_cls.params}")
 
     args.save_results = True # Ensure results are saved
 
     # Check if parameters are defined
-    if not hasattr(args, 'parameters') or \
+    """if not hasattr(args, 'parameters') or \
        args.dataset not in args.parameters or \
        args.model_name not in args.parameters[args.dataset]:
         print(f"ERROR: Predefined parameters not found for dataset '{args.dataset}' and model '{args.model_name}' in config.")
         return
-
+  """
     
     print("Started Classification Module ...... ")
+    print(f"Parameters Used HERE: {parameters}")
     sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
 
     print("\n--- Testin on Final Model Finished ---")
