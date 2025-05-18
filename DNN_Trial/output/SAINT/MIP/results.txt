@@ -198,3 +198,87 @@ Test time: 0.373640
 Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
 
 
+2025-05-18 15:09:40.805886
+SAINT - MIP - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 150077365.34103
+MSE - std: 15543629.38129
+R2 - mean: 0.82273
+R2 - std: 0.01836
+
+Train time: 100.983182
+Test time: 0.244042
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 15:14:32.893181
+SAINT - MIP - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 101.125446
+Test time: 0.246690
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 15:34:43.187175
+SAINT - MIP - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 1113598.33140
+MSE - std: 787.98083
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 279.874998
+Test time: 0.249947
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 15:40:24.155708
+SAINT - MIP - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 150077365.34103
+MSE - std: 15543629.38129
+R2 - mean: 0.82273
+R2 - std: 0.01836
+
+Train time: 109.408385
+Test time: 0.252835
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 15:44:57.508721
+SAINT - MIP - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 88.954781
+Test time: 0.257710
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 16:05:27.551246
+SAINT - MIP - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 1113598.33140
+MSE - std: 787.98083
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 310.954961
+Test time: 0.256106
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+

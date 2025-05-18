@@ -152,3 +152,87 @@ Test time: 0.313299
 Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.1, 'heads': 4}
 
 
+2025-05-18 16:35:49.612551
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 129.505684
+Test time: 0.262387
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 16:40:20.388095
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 105.894718
+Test time: 0.274212
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 16:45:01.684808
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 104.307328
+Test time: 0.266328
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 16:51:09.779846
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 135.830643
+Test time: 0.268951
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 16:53:54.728017
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 68.324854
+Test time: 0.276905
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 16:56:42.225113
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 71.483414
+Test time: 0.272460
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
