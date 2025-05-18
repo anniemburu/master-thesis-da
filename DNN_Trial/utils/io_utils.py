@@ -66,7 +66,7 @@ def save_results_to_file(args, results, train_time=None, test_time=None, best_pa
     with open(filename, "a") as text_file:
         text_file.write(str(datetime.datetime.now()) + "\n")
         if args.objective == "probabilistic_regression":
-            text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + " - " + args.strategy + " - " + args.binning + " - "  + "Class Weights" + "\n\n")
+            text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + " - " + args.strategy + " - " + args.binning + " - "  + str(args.weighted_loss)+ "\n\n")
         else:
             text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + "\n\n")
 
