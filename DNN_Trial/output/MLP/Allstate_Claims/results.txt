@@ -198,3 +198,87 @@ Test time: 0.555521
 Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 8, 'dropout': 0.07682853251149886, 'n_blocks': 6}
 
 
+2025-05-18 10:48:36.704807
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1291833.02720
+MSE - std: 6159.86573
+R2 - mean: 0.84837
+R2 - std: 0.00072
+
+Train time: 19.684697
+Test time: 0.556189
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 15, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-18 10:54:41.894856
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 173107.07856
+MSE - std: 1974.30716
+R2 - mean: 0.97968
+R2 - std: 0.00023
+
+Train time: 27.505378
+Test time: 0.568993
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 15, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-18 11:00:50.992032
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 3221418.76289
+MSE - std: 20398.91998
+R2 - mean: 0.62187
+R2 - std: 0.00239
+
+Train time: 33.451376
+Test time: 0.581993
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 8, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-18 11:06:39.835969
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1291833.02720
+MSE - std: 6159.86573
+R2 - mean: 0.84837
+R2 - std: 0.00072
+
+Train time: 19.334322
+Test time: 0.582059
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 15, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-18 11:12:08.626173
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 173107.07856
+MSE - std: 1974.30716
+R2 - mean: 0.97968
+R2 - std: 0.00023
+
+Train time: 2.580795
+Test time: 0.560537
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 15, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-18 11:17:50.517450
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 3221418.76289
+MSE - std: 20398.91998
+R2 - mean: 0.62187
+R2 - std: 0.00239
+
+Train time: 2.805618
+Test time: 0.558368
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 8, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+

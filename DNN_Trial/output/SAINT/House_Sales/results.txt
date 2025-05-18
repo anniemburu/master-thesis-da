@@ -184,3 +184,59 @@ Test time: 1.445898
 Best Parameters: {'depth': 6, 'dim': 64, 'dropout': 0, 'heads': 8}
 
 
+2025-05-18 11:36:55.729983
+SAINT - House_Sales - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 375.985673
+Test time: 1.339644
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+
+2025-05-18 11:57:02.320377
+SAINT - House_Sales - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 5327033396.36024
+MSE - std: 595863287.52524
+R2 - mean: 0.95834
+R2 - std: 0.00466
+
+Train time: 367.078086
+Test time: 1.377034
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+
+2025-05-18 12:15:07.361213
+SAINT - House_Sales - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 15786971750.65173
+MSE - std: 2949007533.73833
+R2 - mean: 0.87653
+R2 - std: 0.02306
+
+Train time: 331.340777
+Test time: 1.355218
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+
+2025-05-18 12:36:44.643671
+SAINT - House_Sales - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 396.042180
+Test time: 1.424727
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.6, 'heads': 8}
+
+

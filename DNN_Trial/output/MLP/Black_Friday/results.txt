@@ -184,3 +184,87 @@ Test time: 0.145101
 Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
 
 
+2025-05-18 11:18:21.552174
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 3.460905
+Test time: 0.123321
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:18:51.043958
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 3.472035
+Test time: 0.129113
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:19:20.829537
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 4.071342
+Test time: 0.131490
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:19:48.557601
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 3.236651
+Test time: 0.139820
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:20:15.321591
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 2.713165
+Test time: 0.126125
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:20:41.686575
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 2.912605
+Test time: 0.121173
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+

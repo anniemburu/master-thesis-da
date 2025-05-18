@@ -138,3 +138,87 @@ Test time: 0.800910
 Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
 
 
+2025-05-18 06:03:22.396600
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 450.466355
+Test time: 0.317066
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-18 06:10:15.538073
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 332.929956
+Test time: 0.315722
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-18 06:13:26.203582
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 165.672134
+Test time: 0.315838
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-18 06:21:58.432453
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 407.162869
+Test time: 0.317299
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-18 06:26:38.151795
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 234.835897
+Test time: 0.315119
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-18 06:29:27.244338
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 145.793907
+Test time: 0.325732
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+

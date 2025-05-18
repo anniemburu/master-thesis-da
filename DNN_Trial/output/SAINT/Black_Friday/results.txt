@@ -166,3 +166,87 @@ Test time: 4.008505
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.5, 'heads': 2}
 
 
+2025-05-18 01:38:05.139612
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 917.384177
+Test time: 3.907813
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-18 02:25:10.274498
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 899.798136
+Test time: 3.835800
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-18 03:12:56.747862
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 914.311230
+Test time: 3.655344
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-18 03:59:54.777555
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 900.789444
+Test time: 3.994854
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-18 04:47:21.892572
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 909.581151
+Test time: 3.775341
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-18 05:36:32.863881
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 943.642534
+Test time: 3.837036
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+

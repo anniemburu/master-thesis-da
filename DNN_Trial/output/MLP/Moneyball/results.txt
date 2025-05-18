@@ -198,3 +198,87 @@ Test time: 0.001380
 Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.04372445488402272, 'n_blocks': 6}
 
 
+2025-05-18 11:25:13.589827
+MLP - Moneyball - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 802.32518
+MSE - std: 63.47450
+R2 - mean: 0.91659
+R2 - std: 0.00660
+
+Train time: 0.077064
+Test time: 0.000818
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+
+2025-05-18 11:25:18.542169
+MLP - Moneyball - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 423.65081
+MSE - std: 21.00100
+R2 - mean: 0.95596
+R2 - std: 0.00218
+
+Train time: 0.089021
+Test time: 0.000799
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+
+2025-05-18 11:25:22.960536
+MLP - Moneyball - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 462.69582
+MSE - std: 2.78589
+R2 - mean: 0.95190
+R2 - std: 0.00029
+
+Train time: 0.079792
+Test time: 0.000846
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+
+2025-05-18 11:25:27.693619
+MLP - Moneyball - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 802.32518
+MSE - std: 63.47450
+R2 - mean: 0.91659
+R2 - std: 0.00660
+
+Train time: 0.078542
+Test time: 0.000847
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+
+2025-05-18 11:25:32.620151
+MLP - Moneyball - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 423.65081
+MSE - std: 21.00100
+R2 - mean: 0.95596
+R2 - std: 0.00218
+
+Train time: 0.080974
+Test time: 0.000806
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+
+2025-05-18 11:25:37.171812
+MLP - Moneyball - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 462.69582
+MSE - std: 2.78589
+R2 - mean: 0.95190
+R2 - std: 0.00029
+
+Train time: 0.081598
+Test time: 0.000870
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 7, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+

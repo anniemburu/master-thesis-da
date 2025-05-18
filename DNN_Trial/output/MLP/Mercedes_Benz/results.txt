@@ -226,3 +226,87 @@ Test time: 0.028119
 Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.29646621574612675, 'n_blocks': 2}
 
 
+2025-05-18 11:24:02.835323
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 22.15368
+MSE - std: 0.06915
+R2 - mean: 0.86409
+R2 - std: 0.00042
+
+Train time: 0.697061
+Test time: 0.019517
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-18 11:24:10.188509
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 10.16970
+MSE - std: 0.33862
+R2 - mean: 0.93761
+R2 - std: 0.00208
+
+Train time: 0.717077
+Test time: 0.015616
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-18 11:24:16.672824
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11.66503
+MSE - std: 0.05415
+R2 - mean: 0.92844
+R2 - std: 0.00033
+
+Train time: 0.678698
+Test time: 0.020891
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-18 11:24:23.521998
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 22.15368
+MSE - std: 0.06915
+R2 - mean: 0.86409
+R2 - std: 0.00042
+
+Train time: 0.716013
+Test time: 0.011576
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-18 11:24:30.672015
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 10.16970
+MSE - std: 0.33862
+R2 - mean: 0.93761
+R2 - std: 0.00208
+
+Train time: 0.706397
+Test time: 0.004441
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-18 11:24:37.041152
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11.66503
+MSE - std: 0.05415
+R2 - mean: 0.92844
+R2 - std: 0.00033
+
+Train time: 0.709463
+Test time: 0.021772
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+

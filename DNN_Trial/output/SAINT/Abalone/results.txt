@@ -152,3 +152,87 @@ Test time: 0.206041
 Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
 
 
+2025-05-17 23:50:12.965011
+SAINT - Abalone - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 154.916280
+Test time: 0.239022
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-18 00:02:26.562753
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 148.073418
+Test time: 0.232900
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-18 00:13:40.684013
+SAINT - Abalone - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 156.179697
+Test time: 0.243875
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-18 00:23:13.373734
+SAINT - Abalone - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 148.392661
+Test time: 0.243004
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-18 00:29:42.728177
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 114.209561
+Test time: 0.237087
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-18 00:34:46.720619
+SAINT - Abalone - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 93.541706
+Test time: 0.251564
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+

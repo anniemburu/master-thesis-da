@@ -166,3 +166,87 @@ Test time: 0.139157
 Best Parameters: {'learning_rate': 0.0003973965546674877, 'weight_decay': 0.0012259613827403538}
 
 
+2025-05-18 11:14:25.182636
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 2.486450
+Test time: 0.147561
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-18 11:14:39.808417
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 325086833.40145
+MSE - std: 70311813.00939
+R2 - mean: 0.94271
+R2 - std: 0.01239
+
+Train time: 2.492557
+Test time: 0.146653
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-18 11:14:52.379814
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 545040590.83002
+MSE - std: 55989635.97473
+R2 - mean: 0.90395
+R2 - std: 0.00987
+
+Train time: 2.435241
+Test time: 0.151498
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-18 11:15:04.053385
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 2.372391
+Test time: 0.133157
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-18 11:15:17.125233
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 325086833.40145
+MSE - std: 70311813.00939
+R2 - mean: 0.94271
+R2 - std: 0.01239
+
+Train time: 2.475612
+Test time: 0.156097
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-18 11:15:30.701250
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 545040590.83002
+MSE - std: 55989635.97473
+R2 - mean: 0.90395
+R2 - std: 0.00987
+
+Train time: 2.101612
+Test time: 0.156467
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+

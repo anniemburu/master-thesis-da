@@ -230,3 +230,87 @@ Test time: 0.029757
 Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8943918828322444, 'd_in': 151, 'd_out': 2, 'dropout1': 0.46585676851386065, 'dropout2': 0.1740730761384721, 'n_blocks': 5}
 
 
+2025-05-18 11:30:10.469992
+ResMLP - MIP - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 150077365.34103
+MSE - std: 15543629.38129
+R2 - mean: 0.82273
+R2 - std: 0.01836
+
+Train time: 0.187554
+Test time: 0.005069
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 7, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+
+2025-05-18 11:30:15.861892
+ResMLP - MIP - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 0.170513
+Test time: 0.018497
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 7, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+
+2025-05-18 11:30:22.326503
+ResMLP - MIP - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 1113598.33140
+MSE - std: 787.98083
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 0.173407
+Test time: 0.005054
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 2, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+
+2025-05-18 11:30:27.068097
+ResMLP - MIP - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 150077365.34103
+MSE - std: 15543629.38129
+R2 - mean: 0.82273
+R2 - std: 0.01836
+
+Train time: 0.173142
+Test time: 0.004163
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 7, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+
+2025-05-18 11:30:34.018969
+ResMLP - MIP - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 58714.86627
+MSE - std: 4556.90376
+R2 - mean: 0.99993
+R2 - std: 0.00001
+
+Train time: 0.186626
+Test time: 0.008274
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 7, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+
+2025-05-18 11:30:38.789988
+ResMLP - MIP - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 1113598.33140
+MSE - std: 787.98083
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 0.177684
+Test time: 0.005197
+
+Best Parameters: {'d_block': 256, 'd_hidden': 10, 'd_hidden_multiplier': 3.5463105818248644, 'd_in': 151, 'd_out': 2, 'dropout1': 0.3740596836340417, 'dropout2': 0.14785999544988046, 'n_blocks': 4}
+
+

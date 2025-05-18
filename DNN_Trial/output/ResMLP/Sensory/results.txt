@@ -202,3 +202,87 @@ Test time: 0.002929
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.544110387653899, 'd_in': 36, 'd_out': 6, 'dropout1': 0.12905452512026205, 'dropout2': 0.02854369523746009, 'n_blocks': 5}
 
 
+2025-05-18 11:31:49.402311
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 0.04231
+MSE - std: 0.00815
+R2 - mean: 0.93514
+R2 - std: 0.01249
+
+Train time: 0.092632
+Test time: 0.002411
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 5, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-18 11:31:54.082330
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.04927
+MSE - std: 0.00556
+R2 - mean: 0.92447
+R2 - std: 0.00852
+
+Train time: 0.121200
+Test time: 0.002977
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-18 11:31:58.838606
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.04477
+MSE - std: 0.00032
+R2 - mean: 0.93138
+R2 - std: 0.00049
+
+Train time: 0.094218
+Test time: 0.002433
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-18 11:32:03.431338
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 0.04231
+MSE - std: 0.00815
+R2 - mean: 0.93514
+R2 - std: 0.01249
+
+Train time: 0.091836
+Test time: 0.002365
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 5, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-18 11:32:09.026507
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.04927
+MSE - std: 0.00556
+R2 - mean: 0.92447
+R2 - std: 0.00852
+
+Train time: 0.218569
+Test time: 0.003114
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-18 11:32:13.367490
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.04477
+MSE - std: 0.00032
+R2 - mean: 0.93138
+R2 - std: 0.00049
+
+Train time: 0.087768
+Test time: 0.002505
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+

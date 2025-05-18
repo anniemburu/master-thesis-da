@@ -198,3 +198,87 @@ Test time: 0.000990
 Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.03190847875416855, 'n_blocks': 2}
 
 
+2025-05-18 10:42:32.896059
+MLP - Abalone - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 0.164056
+Test time: 0.001260
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:38.163116
+MLP - Abalone - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 0.148517
+Test time: 0.001110
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:43.092466
+MLP - Abalone - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 0.169629
+Test time: 0.001207
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:52.508154
+MLP - Abalone - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 0.159851
+Test time: 0.001148
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:57.531938
+MLP - Abalone - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 0.168979
+Test time: 0.001115
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:43:02.093195
+MLP - Abalone - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 0.142866
+Test time: 0.001565
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+

@@ -226,3 +226,87 @@ Test time: 0.001445
 Best Parameters: {'d_block': 256, 'd_in': 130, 'd_out': 8, 'dropout': 0.1541837529458395, 'n_blocks': 2}
 
 
+2025-05-18 11:25:42.310247
+MLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 0.188119
+Test time: 0.002056
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 8, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-18 11:25:47.500007
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.139557
+Test time: 0.001104
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 8, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-18 11:25:54.120285
+MLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.147114
+Test time: 0.003394
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 8, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-18 11:25:59.021141
+MLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 0.155526
+Test time: 0.003091
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 8, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-18 11:26:04.239414
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.150302
+Test time: 0.004699
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 8, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-18 11:26:08.991771
+MLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.149810
+Test time: 0.001543
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 8, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+

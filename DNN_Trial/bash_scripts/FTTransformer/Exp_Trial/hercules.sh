@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=FTTransformer_Hercules_weighted_struges
+#SBATCH --job-name=FTTransformer_Hercules_all_struges
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
-#SBATCH --partition=STUDL
+#SBATCH --partition=STUD
 #SBATCH --gres=gpu:1
-#SBATCH --account=long
+
 
 CONFIGS=(
     config/abalone.yml

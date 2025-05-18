@@ -166,3 +166,87 @@ Test time: 1.854202
 Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
 
 
+2025-05-18 07:13:39.484004
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 525825.19563
+MSE - std: 14155.40547
+R2 - mean: 0.96708
+R2 - std: 0.00089
+
+Train time: 1572.831290
+Test time: 2.451986
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 07:59:25.132320
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 110846.30496
+MSE - std: 6422.71740
+R2 - mean: 0.99306
+R2 - std: 0.00040
+
+Train time: 1629.045383
+Test time: 2.427013
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 08:45:11.650242
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 148818.24298
+MSE - std: 394.09274
+R2 - mean: 0.99068
+R2 - std: 0.00002
+
+Train time: 1636.309614
+Test time: 2.513970
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 09:29:06.491598
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 525825.19563
+MSE - std: 14155.40547
+R2 - mean: 0.96708
+R2 - std: 0.00089
+
+Train time: 1571.889416
+Test time: 2.468889
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 10:11:32.977541
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 110846.30496
+MSE - std: 6422.71740
+R2 - mean: 0.99306
+R2 - std: 0.00040
+
+Train time: 1521.384541
+Test time: 2.515176
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-18 10:54:21.983126
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 148818.24298
+MSE - std: 394.09274
+R2 - mean: 0.99068
+R2 - std: 0.00002
+
+Train time: 1529.143376
+Test time: 2.476644
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+

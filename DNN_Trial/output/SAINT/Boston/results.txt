@@ -152,3 +152,87 @@ Test time: 0.105392
 Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
 
 
+2025-05-18 05:39:20.704180
+SAINT - Boston - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 21.39108
+MSE - std: 5.77202
+R2 - mean: 0.78726
+R2 - std: 0.05740
+
+Train time: 29.866887
+Test time: 0.105239
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-18 05:42:34.319966
+SAINT - Boston - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 4.06013
+MSE - std: 0.11619
+R2 - mean: 0.95962
+R2 - std: 0.00116
+
+Train time: 34.096783
+Test time: 0.109256
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-18 05:45:43.720371
+SAINT - Boston - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 4.47400
+MSE - std: 0.19253
+R2 - mean: 0.95551
+R2 - std: 0.00191
+
+Train time: 33.747439
+Test time: 0.107570
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-18 05:48:30.516284
+SAINT - Boston - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 21.39108
+MSE - std: 5.77202
+R2 - mean: 0.78726
+R2 - std: 0.05740
+
+Train time: 29.972297
+Test time: 0.108996
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-18 05:51:20.834261
+SAINT - Boston - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 4.06013
+MSE - std: 0.11619
+R2 - mean: 0.95962
+R2 - std: 0.00116
+
+Train time: 30.683475
+Test time: 0.110068
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-18 05:54:09.920539
+SAINT - Boston - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 4.47400
+MSE - std: 0.19253
+R2 - mean: 0.95551
+R2 - std: 0.00191
+
+Train time: 31.738783
+Test time: 0.106195
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+

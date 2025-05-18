@@ -198,3 +198,87 @@ Test time: 0.010976
 Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 3, 'dropout': 0.07678813857296692, 'n_blocks': 5}
 
 
+2025-05-18 11:21:15.085924
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 0.328822
+Test time: 0.004428
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-05-18 11:21:21.001641
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 0.319481
+Test time: 0.006112
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-05-18 11:21:26.411988
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 0.344228
+Test time: 0.004139
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 3, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-05-18 11:21:32.021794
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 0.373991
+Test time: 0.009262
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-05-18 11:21:37.945418
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 0.271123
+Test time: 0.005298
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 11, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-05-18 11:21:42.670737
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 0.166656
+Test time: 0.001297
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 3, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+

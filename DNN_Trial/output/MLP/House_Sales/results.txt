@@ -198,3 +198,87 @@ Test time: 0.012773
 Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.013522222134953151, 'n_blocks': 3}
 
 
+2025-05-18 11:23:19.094668
+MLP - House_Sales - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 0.780871
+Test time: 0.019176
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.10700449012979917, 'n_blocks': 4}
+
+
+2025-05-18 11:23:26.451340
+MLP - House_Sales - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 5327033396.36024
+MSE - std: 595863287.52524
+R2 - mean: 0.95834
+R2 - std: 0.00466
+
+Train time: 0.768391
+Test time: 0.025917
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.10700449012979917, 'n_blocks': 4}
+
+
+2025-05-18 11:23:35.243674
+MLP - House_Sales - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 15786971750.65173
+MSE - std: 2949007533.73833
+R2 - mean: 0.87653
+R2 - std: 0.02306
+
+Train time: 0.741645
+Test time: 0.016650
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.10700449012979917, 'n_blocks': 4}
+
+
+2025-05-18 11:23:42.562773
+MLP - House_Sales - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 30284826616.18472
+MSE - std: 64785106.20950
+R2 - mean: 0.76314
+R2 - std: 0.00051
+
+Train time: 0.713076
+Test time: 0.019055
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.10700449012979917, 'n_blocks': 4}
+
+
+2025-05-18 11:23:48.678922
+MLP - House_Sales - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 5327033396.36024
+MSE - std: 595863287.52524
+R2 - mean: 0.95834
+R2 - std: 0.00466
+
+Train time: 0.208101
+Test time: 0.031924
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.10700449012979917, 'n_blocks': 4}
+
+
+2025-05-18 11:23:54.220638
+MLP - House_Sales - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 15786971750.65173
+MSE - std: 2949007533.73833
+R2 - mean: 0.87653
+R2 - std: 0.02306
+
+Train time: 0.225483
+Test time: 0.025287
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 12, 'dropout': 0.10700449012979917, 'n_blocks': 4}
+
+

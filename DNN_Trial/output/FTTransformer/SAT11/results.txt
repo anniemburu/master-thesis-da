@@ -226,3 +226,87 @@ Test time: 0.225509
 Best Parameters: {'learning_rate': 0.004544327453839196, 'weight_decay': 0.000312514807931228}
 
 
+2025-05-18 11:19:19.331945
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 4.565630
+Test time: 0.219519
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
+2025-05-18 11:19:38.416558
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 4.640201
+Test time: 0.215459
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
+2025-05-18 11:19:57.806807
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 4.605317
+Test time: 0.214772
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
+2025-05-18 11:20:16.788886
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 4.733770
+Test time: 0.210710
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
+2025-05-18 11:20:27.768487
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 1.953986
+Test time: 0.227546
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
+2025-05-18 11:20:38.562477
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 1.966137
+Test time: 0.227544
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
