@@ -310,3 +310,87 @@ Test time: 0.001543
 Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 8, 'dropout': 0.15064221648941228, 'n_blocks': 2}
 
 
+2025-05-19 00:22:03.627050
+MLP - SAT11 - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1676490.71670
+MSE - std: 46031.13443
+R2 - mean: 0.70546
+R2 - std: 0.00809
+
+Train time: 0.150116
+Test time: 0.002036
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-19 00:22:08.914892
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 65319.46699
+MSE - std: 5276.60628
+R2 - mean: 0.98852
+R2 - std: 0.00093
+
+Train time: 0.146738
+Test time: 0.001541
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-19 00:22:13.856773
+MLP - SAT11 - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 75626.44092
+MSE - std: 1466.49353
+R2 - mean: 0.98671
+R2 - std: 0.00026
+
+Train time: 0.143254
+Test time: 0.004483
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-19 00:22:18.617210
+MLP - SAT11 - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1676490.71670
+MSE - std: 46031.13443
+R2 - mean: 0.70546
+R2 - std: 0.00809
+
+Train time: 0.159415
+Test time: 0.004908
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-19 00:22:23.916111
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 65319.46699
+MSE - std: 5276.60628
+R2 - mean: 0.98852
+R2 - std: 0.00093
+
+Train time: 0.147274
+Test time: 0.003106
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-19 00:22:29.343134
+MLP - SAT11 - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 75626.44092
+MSE - std: 1466.49353
+R2 - mean: 0.98671
+R2 - std: 0.00026
+
+Train time: 0.157445
+Test time: 0.001480
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+

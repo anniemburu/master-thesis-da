@@ -282,3 +282,87 @@ Test time: 0.006848
 Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
 
 
+2025-05-19 00:53:48.938034
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 9.72249
+MSE - std: 3.48194
+R2 - mean: 0.90331
+R2 - std: 0.03463
+
+Train time: 0.465743
+Test time: 0.008099
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-19 00:53:54.984291
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 1.25181
+MSE - std: 0.36476
+R2 - mean: 0.98755
+R2 - std: 0.00363
+
+Train time: 0.584459
+Test time: 0.008136
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-19 00:54:00.917581
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 1.40587
+MSE - std: 0.38972
+R2 - mean: 0.98602
+R2 - std: 0.00388
+
+Train time: 0.453525
+Test time: 0.007575
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-19 00:54:06.769437
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 9.72249
+MSE - std: 3.48194
+R2 - mean: 0.90331
+R2 - std: 0.03463
+
+Train time: 0.446081
+Test time: 0.007444
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-19 00:54:12.985193
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1.25181
+MSE - std: 0.36476
+R2 - mean: 0.98755
+R2 - std: 0.00363
+
+Train time: 0.525288
+Test time: 0.007435
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-19 00:54:18.724444
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1.40587
+MSE - std: 0.38972
+R2 - mean: 0.98602
+R2 - std: 0.00388
+
+Train time: 0.443193
+Test time: 0.007956
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+

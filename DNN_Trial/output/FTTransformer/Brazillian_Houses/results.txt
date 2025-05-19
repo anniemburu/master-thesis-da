@@ -268,3 +268,87 @@ Test time: 0.190710
 Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
 
 
+2025-05-19 00:54:50.407972
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 47971324.90564
+MSE - std: 23484255.45184
+R2 - mean: -0.20191
+R2 - std: 0.58839
+
+Train time: 8.680275
+Test time: 0.194483
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:56:02.483950
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 6062801.48435
+MSE - std: 3883371.46588
+R2 - mean: 0.84810
+R2 - std: 0.09730
+
+Train time: 21.676552
+Test time: 0.208903
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:04.281209
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 173187211.21617
+MSE - std: 227099322.07476
+R2 - mean: -3.33915
+R2 - std: 5.68991
+
+Train time: 18.759509
+Test time: 0.191181
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:17.925897
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 47971324.90564
+MSE - std: 23484255.45184
+R2 - mean: -0.20191
+R2 - std: 0.58839
+
+Train time: 2.508381
+Test time: 0.217504
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:29.026761
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 6062801.52207
+MSE - std: 3883371.51923
+R2 - mean: 0.84810
+R2 - std: 0.09730
+
+Train time: 1.650729
+Test time: 0.207632
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:38.577459
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 173187211.21617
+MSE - std: 227099322.07476
+R2 - mean: -3.33915
+R2 - std: 5.68991
+
+Train time: 1.565334
+Test time: 0.199973
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+

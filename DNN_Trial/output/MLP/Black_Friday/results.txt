@@ -268,3 +268,87 @@ Test time: 0.121173
 Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
 
 
+2025-05-19 00:14:19.573347
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 123118.67621
+MSE - std: 3057.01784
+R2 - mean: 0.99525
+R2 - std: 0.00012
+
+Train time: 3.792019
+Test time: 0.150612
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:14:53.846920
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 13403.80200
+MSE - std: 73.62789
+R2 - mean: 0.99948
+R2 - std: 0.00000
+
+Train time: 5.089839
+Test time: 0.149537
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:15:29.169186
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 20099.56388
+MSE - std: 8.45311
+R2 - mean: 0.99922
+R2 - std: 0.00000
+
+Train time: 5.228032
+Test time: 0.154875
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 38, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:16:01.393009
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 123118.67621
+MSE - std: 3057.01784
+R2 - mean: 0.99525
+R2 - std: 0.00012
+
+Train time: 4.425844
+Test time: 0.146694
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:16:29.197176
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 13403.80200
+MSE - std: 73.62789
+R2 - mean: 0.99948
+R2 - std: 0.00000
+
+Train time: 2.685784
+Test time: 0.140953
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:16:55.524617
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 20099.56388
+MSE - std: 8.45311
+R2 - mean: 0.99922
+R2 - std: 0.00000
+
+Train time: 2.692351
+Test time: 0.133703
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 38, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+

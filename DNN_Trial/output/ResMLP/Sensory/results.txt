@@ -286,3 +286,87 @@ Test time: 0.002505
 Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
 
 
+2025-05-19 00:27:59.310182
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.092949
+Test time: 0.002937
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-19 00:28:04.398029
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.216336
+Test time: 0.002931
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-19 00:28:08.896842
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.091367
+Test time: 0.003252
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-19 00:28:13.481448
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.095260
+Test time: 0.002928
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-19 00:28:18.811272
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.241231
+Test time: 0.011443
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-05-19 00:28:23.660305
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.091299
+Test time: 0.002903
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+

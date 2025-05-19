@@ -310,3 +310,87 @@ Test time: 0.021772
 Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 9, 'dropout': 0.17946730470146646, 'n_blocks': 2}
 
 
+2025-05-19 00:20:26.287126
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 13.77662
+MSE - std: 0.15579
+R2 - mean: 0.91548
+R2 - std: 0.00096
+
+Train time: 0.712037
+Test time: 0.025482
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 20, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-19 00:20:33.399557
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 5.83814
+MSE - std: 0.07339
+R2 - mean: 0.96418
+R2 - std: 0.00045
+
+Train time: 0.722469
+Test time: 0.014744
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 20, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-19 00:20:39.617810
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 6.24468
+MSE - std: 0.02307
+R2 - mean: 0.96169
+R2 - std: 0.00014
+
+Train time: 0.701799
+Test time: 0.028515
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 19, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-19 00:20:46.100778
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 13.77662
+MSE - std: 0.15579
+R2 - mean: 0.91548
+R2 - std: 0.00096
+
+Train time: 0.716889
+Test time: 0.025864
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 20, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-19 00:20:53.209980
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 5.83814
+MSE - std: 0.07339
+R2 - mean: 0.96418
+R2 - std: 0.00045
+
+Train time: 0.722194
+Test time: 0.026766
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 20, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-05-19 00:20:59.464212
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 6.24468
+MSE - std: 0.02307
+R2 - mean: 0.96169
+R2 - std: 0.00014
+
+Train time: 0.708037
+Test time: 0.023351
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 19, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+

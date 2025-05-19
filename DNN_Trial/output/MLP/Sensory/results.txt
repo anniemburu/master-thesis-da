@@ -282,3 +282,87 @@ Test time: 0.000721
 Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 6, 'dropout': 0.29860532918127847, 'n_blocks': 2}
 
 
+2025-05-19 00:22:34.118531
+MLP - Sensory - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.067362
+Test time: 0.001214
+
+Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 6, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+
+
+2025-05-19 00:22:38.958438
+MLP - Sensory - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.141957
+Test time: 0.008565
+
+Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 9, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+
+
+2025-05-19 00:22:43.466170
+MLP - Sensory - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.063964
+Test time: 0.001295
+
+Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 9, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+
+
+2025-05-19 00:22:48.042573
+MLP - Sensory - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.061362
+Test time: 0.001165
+
+Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 6, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+
+
+2025-05-19 00:22:52.846273
+MLP - Sensory - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.194801
+Test time: 0.005422
+
+Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 9, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+
+
+2025-05-19 00:22:57.341605
+MLP - Sensory - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.065184
+Test time: 0.001302
+
+Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 9, 'dropout': 0.29860532918127847, 'n_blocks': 2}
+
+

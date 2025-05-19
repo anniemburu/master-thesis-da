@@ -286,3 +286,87 @@ Test time: 0.002956
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 6, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
 
 
+2025-05-19 00:21:10.276681
+ResMLP - Boston - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 9.72249
+MSE - std: 3.48194
+R2 - mean: 0.90331
+R2 - std: 0.03463
+
+Train time: 0.098096
+Test time: 0.003562
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 10, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-19 00:21:15.282267
+ResMLP - Boston - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 1.25181
+MSE - std: 0.36476
+R2 - mean: 0.98755
+R2 - std: 0.00363
+
+Train time: 0.164135
+Test time: 0.004790
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 10, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-19 00:21:20.062144
+ResMLP - Boston - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 1.40587
+MSE - std: 0.38972
+R2 - mean: 0.98602
+R2 - std: 0.00388
+
+Train time: 0.092296
+Test time: 0.003588
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 10, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-19 00:21:25.605494
+ResMLP - Boston - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 9.72249
+MSE - std: 3.48194
+R2 - mean: 0.90331
+R2 - std: 0.03463
+
+Train time: 0.098174
+Test time: 0.003710
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 10, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-19 00:21:30.568794
+ResMLP - Boston - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1.25181
+MSE - std: 0.36476
+R2 - mean: 0.98755
+R2 - std: 0.00363
+
+Train time: 0.174046
+Test time: 0.003523
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 10, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-19 00:21:35.291521
+ResMLP - Boston - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1.40587
+MSE - std: 0.38972
+R2 - mean: 0.98602
+R2 - std: 0.00388
+
+Train time: 0.101739
+Test time: 0.003720
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 10, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+

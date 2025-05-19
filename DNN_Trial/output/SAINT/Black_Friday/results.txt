@@ -250,3 +250,45 @@ Test time: 3.837036
 Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
 
 
+2025-05-19 11:11:46.038318
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 123118.67621
+MSE - std: 3057.01784
+R2 - mean: 0.99525
+R2 - std: 0.00012
+
+Train time: 922.081650
+Test time: 3.878442
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-19 12:00:29.695221
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 13403.80200
+MSE - std: 73.62789
+R2 - mean: 0.99948
+R2 - std: 0.00000
+
+Train time: 924.677882
+Test time: 3.988540
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-19 12:51:14.569810
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 20099.56388
+MSE - std: 8.45311
+R2 - mean: 0.99922
+R2 - std: 0.00000
+
+Train time: 966.863782
+Test time: 3.996214
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+

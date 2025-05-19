@@ -222,3 +222,45 @@ Test time: 0.325732
 Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
 
 
+2025-05-19 13:08:43.594982
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 47971324.90564
+MSE - std: 23484255.45184
+R2 - mean: -0.20191
+R2 - std: 0.58839
+
+Train time: 178.365433
+Test time: 0.386194
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-19 13:12:28.221840
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 6062801.58437
+MSE - std: 3883371.47516
+R2 - mean: 0.84810
+R2 - std: 0.09730
+
+Train time: 184.969955
+Test time: 0.391694
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-19 13:21:22.753253
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 173187211.21617
+MSE - std: 227099322.07476
+R2 - mean: -3.33915
+R2 - std: 5.68991
+
+Train time: 357.612135
+Test time: 0.336454
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+

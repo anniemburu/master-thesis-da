@@ -310,3 +310,87 @@ Test time: 0.001033
 Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 2, 'dropout': 0.10823216670029355, 'n_blocks': 2}
 
 
+2025-05-19 00:21:04.178463
+MLP - MIP - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 24479869.72359
+MSE - std: 17300522.99568
+R2 - mean: 0.97108
+R2 - std: 0.02044
+
+Train time: 0.146267
+Test time: 0.041031
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 83, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-19 00:21:09.224728
+MLP - MIP - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 11498.67452
+MSE - std: 8231.14528
+R2 - mean: 0.99999
+R2 - std: 0.00001
+
+Train time: 0.164100
+Test time: 0.036322
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 83, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-19 00:21:13.992833
+MLP - MIP - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 36708896.18274
+MSE - std: 26742512.68551
+R2 - mean: 0.95664
+R2 - std: 0.03159
+
+Train time: 0.144806
+Test time: 0.003564
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-19 00:21:18.726188
+MLP - MIP - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 24479869.72359
+MSE - std: 17300522.99568
+R2 - mean: 0.97108
+R2 - std: 0.02044
+
+Train time: 0.142115
+Test time: 0.044318
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 83, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-19 00:21:23.966997
+MLP - MIP - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 11498.67452
+MSE - std: 8231.14528
+R2 - mean: 0.99999
+R2 - std: 0.00001
+
+Train time: 0.143031
+Test time: 0.037629
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 83, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-19 00:21:28.504711
+MLP - MIP - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 36708896.18274
+MSE - std: 26742512.68551
+R2 - mean: 0.95664
+R2 - std: 0.03159
+
+Train time: 0.145945
+Test time: 0.001844
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+

@@ -250,3 +250,87 @@ Test time: 0.156467
 Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
 
 
+2025-05-19 01:16:24.289225
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 303253231.03921
+MSE - std: 52273290.76833
+R2 - mean: 0.94656
+R2 - std: 0.00921
+
+Train time: 2.414410
+Test time: 0.141287
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-19 01:16:36.176219
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 62794610.86065
+MSE - std: 15634181.49430
+R2 - mean: 0.98893
+R2 - std: 0.00276
+
+Train time: 2.334321
+Test time: 0.145349
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-19 01:16:48.045749
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 109655245.27433
+MSE - std: 15207419.33008
+R2 - mean: 0.98068
+R2 - std: 0.00268
+
+Train time: 2.407795
+Test time: 0.149359
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-19 01:16:59.466997
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 303253231.03921
+MSE - std: 52273290.76833
+R2 - mean: 0.94656
+R2 - std: 0.00921
+
+Train time: 2.318626
+Test time: 0.152505
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-19 01:17:09.493146
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 62794610.86065
+MSE - std: 15634181.49430
+R2 - mean: 0.98893
+R2 - std: 0.00276
+
+Train time: 1.725618
+Test time: 0.143016
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+
+2025-05-19 01:17:19.382065
+FTTransformer - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 109655245.27433
+MSE - std: 15207419.33008
+R2 - mean: 0.98068
+R2 - std: 0.00268
+
+Train time: 1.661001
+Test time: 0.146595
+
+Best Parameters: {'learning_rate': 0.0001991206295866777, 'weight_decay': 0.0025487180826797907}
+
+

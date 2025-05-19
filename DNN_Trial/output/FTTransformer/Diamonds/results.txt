@@ -268,3 +268,87 @@ Test time: 0.380001
 Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
 
 
+2025-05-19 01:00:54.315690
+FTTransformer - Diamonds - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 67546.72749
+MSE - std: 3444.98337
+R2 - mean: 0.99577
+R2 - std: 0.00022
+
+Train time: 63.221897
+Test time: 0.381989
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
+2025-05-19 01:03:46.985337
+FTTransformer - Diamonds - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 19437.94169
+MSE - std: 60.66620
+R2 - mean: 0.99878
+R2 - std: 0.00000
+
+Train time: 55.074289
+Test time: 0.382368
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
+2025-05-19 01:06:03.082308
+FTTransformer - Diamonds - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 19809.34368
+MSE - std: 26.45462
+R2 - mean: 0.99876
+R2 - std: 0.00000
+
+Train time: 43.186098
+Test time: 0.384860
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
+2025-05-19 01:09:22.559330
+FTTransformer - Diamonds - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 67546.72749
+MSE - std: 3444.98337
+R2 - mean: 0.99577
+R2 - std: 0.00022
+
+Train time: 64.019014
+Test time: 0.380155
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
+2025-05-19 01:12:54.563517
+FTTransformer - Diamonds - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 19437.94169
+MSE - std: 60.66620
+R2 - mean: 0.99878
+R2 - std: 0.00000
+
+Train time: 68.296787
+Test time: 0.379702
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
+2025-05-19 01:16:11.216973
+FTTransformer - Diamonds - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 19809.34368
+MSE - std: 26.45462
+R2 - mean: 0.99876
+R2 - std: 0.00000
+
+Train time: 63.335433
+Test time: 0.376152
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
