@@ -15,7 +15,7 @@ from utils.load_data import load_data
 from utils.data_encoding import encoding
 from utils.scorer import get_scorer , RegScorer
 from utils.timer import Timer
-from utils.io_utils import update_yaml, save_results_to_file, save_hyperparameters_to_file, save_hyperparameters_to_file_inner,save_loss_to_file, get_output_path, save_regularization_to_file
+from utils.io_utils import update_yaml, save_results_to_file, save_matrix_to_file, save_arrays_to_file, save_hyperparameters_to_file, save_hyperparameters_to_file_inner,save_loss_to_file, get_output_path, save_regularization_to_file
 from utils.parser import get_parser, get_given_parameters_parser
 from utils.visualization import loss_vizualization
 from sklearn.preprocessing import KBinsDiscretizer
@@ -26,6 +26,13 @@ from sklearn.utils.class_weight import compute_class_weight
 import warnings
 warnings.filterwarnings("ignore")
 
+def set_seed(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)  # if using GPU
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
 
 #Calculates Freedman-Diaconis Rule
 def freedman_diaconis(y, args):
@@ -178,12 +185,6 @@ def binning(args, y, y_val):
         print(f"Number of Classes After Bin Verifier: {args.num_classes} \n\n")
 
     return y , y_val #, bin_edges
-
-def set_all_seeds(seed):
-    np.random.seed(seed)
-    random.seed(seed)
-    torch.manual_seed(seed)  # For PyTorch
-    # tf.random.set_seed(seed)  # For TensorFlow
 
 def custom_class_weights(y):
     """
@@ -844,10 +845,12 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
     X_test_original = X_test.copy()
     y_test_original = y_test.copy()
 
-    for seed in range(n_repeats):
+    for seed in range(5):
+        print("In Test Model, Seed is ", seed)
         print(f"--- Test Run {seed+1}/{n_repeats} ---")
-        set_all_seeds(seed)
-
+        set_seed(seed)
+        
+    
         #make sure to use the original data
         X_train, y_train = X_train_original.copy(), y_train_original.copy()
         X_test, y_test = X_test_original.copy(), y_test_original.copy()
@@ -856,7 +859,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         args = copy.deepcopy(args_test_temp) # Reset args for each test run
 
-        
+        args.test_seed = seed #for future use
+
         if args.frequency_reg:
             #Need to Clean here
             X_train, y_train, X_test ,y_test,frequency_map = encoding(args, X_train, y_train, X_test, y_test)
@@ -899,23 +903,27 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         if args.objective == "probabilistic_regression":
             y_train_class, y_test_class = binning(args, y_train, y_test)
             bin_mean = mean_per_bin(y_train, y_train_class)
+            print(f"Bin Mean: {bin_mean}")
         else:
             train_class, test_class = binning(args, y_train, y_test)
             print("Binning Done")
-
-    
-        #args.class_weights = bin_mean.to_list() #save this
         
         print("BINNING END")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n")
-        
+
+        model_name2 = str2model(args.model_name) #load new model
 
         # Create a new unfitted version of the model
-        curr_model = model(parameters, args) # Use args copy
+        curr_model = model_name2(parameters, args) # Use args copy
         #curr_model = model.clone() # Use deepcopy to ensure a fresh instance
         print(f"Model Parameters: {curr_model.params}")
         print(f"Parameters Passed: {parameters}")
         print(curr_model.params)
+
+
+        for attr in dir(model):
+            if isinstance(getattr(model, attr), torch.nn.Module):
+                print(f"{attr}: {type(getattr(model, attr))}")
 
         # Train model
         train_timer.start()
@@ -931,7 +939,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
                     print(f"Class Weights DDNT APPLY")
                     loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
             else:
-                loss_history, test_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_test, y_test_class)
+                loss_history, test_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  #regression problems
 
         train_timer.end()
 
@@ -942,6 +950,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         print(f"Prediction shape : {prediction.shape}")
         #print(f"Probabilities shape : {probabilities.shape} \n")
+        print(f"Y true: {y_test_class[:10]}")
         print(f"Prediction : {prediction[:10]}")
         print(f"Probabilities : {probabilities[:10]} \n")
         #print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
@@ -949,6 +958,10 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         print(f"Prediction shape : {prediction.shape}")
         print(f"Prediction Results : {prediction[:10]}")
+
+        matrix_name = f"matrix_{args.model_name}_{args.dataset}_{seed}"
+        save_matrix_to_file(args, probabilities, matrix_name, filetype = 'csv')
+
 
 
         # Save model weights and the truth/prediction pairs for traceability
@@ -986,37 +999,40 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
             #get the bin means
 
-            y_train_pred = [bin_mean.get(cls, np.nan) for cls in y_train_class]
-            y_test_pred = [bin_mean.get(cls, np.nan) for cls in y_test_class]
+            #y_train_pred = [bin_mean.get(cls, np.nan) for cls in y_train_class]
+            y_test_pred = [bin_mean.get(cls, np.nan) for cls in prediction]
+
+            matrix_name = f"matrix_{seed}"
+            array_name = f"array_{seed}"
+            target_stacks = np.column_stack((y_test_class, prediction, y_test_pred))
+
+
+            #save em
+            save_matrix_to_file(args, probabilities, matrix_name, filetype = 'csv')
+            save_arrays_to_file(args, target_stacks, array_name)
+
 
             print(f"y_test_pred : {y_test_pred[:10]}, y_test_class : {y_test_class[:10]}")
 
             #can apply weighed ones if i want!!!
-            y_train_pred , y_test_pred = np.array([float(x) for x in y_train_pred]), np.array([float(x) for x in y_test_pred])
+            y_test_pred = np.array([float(x) for x in y_test_pred])
             #y_test_exp = probabilities @ bin_mean
             #print(f"y_test_pred shape : {y_test_pred.shape}, y_test_exp shape : {y_test_exp.shape}")
             
             #evaluate
             error_results = sc.eval(y_test, y_test_pred,curr_model.prediction_probabilities)
             #error_results = sc.eval(y_test, y_test_exp, curr_model.prediction_probabilities)
+            print(f"ERRORS: {error_results}")
+            print(f'{sc.get_results()} \n \n')
+
+            get_results = sc.get_results()
 
             #Append Scores
-            mse_scores.append(error_results['MSE'])         
-            r2_scores.append(error_results['R2'])
-            args.objective = orig_objective # Reset objective to original
+            #mse_scores.append(error_results['MSE'])         
+            #r2_scores.append(error_results['R2'])
+            #args.objective = orig_objective # Reset objective to original
 
-            print(f"MSE SCORES: {mse_scores}, R2 SCORES: {r2_scores}")
-
-            mse_mean = np.mean(mse_scores)
-            mse_std = np.std(mse_scores)
-
-            r2_mean = np.mean(r2_scores)
-            r2_std = np.std(r2_scores)
-
-            get_results = {"MSE - mean": mse_mean,
-                    "MSE - std": mse_std,
-                    "R2 - mean": r2_mean,
-                    "R2 - std": r2_std}
+            #print(f"MSE SCORES on seed {seed}: {mse_scores}, R2 SCORES: {r2_scores}")
 
         else:
             # Compute scores on the output
@@ -1028,9 +1044,26 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
             print("After Evaluation")
 
+            print(f"ERRORS: {error_results}")
+
             print(f'{sc.get_results()} \n \n')
 
             get_results = sc.get_results()
+    """
+    if args.class_comp:
+        mse_mean = np.mean(mse_scores)
+        mse_std = np.std(mse_scores)
+
+        r2_mean = np.mean(r2_scores)
+        r2_std = np.std(r2_scores)
+
+        get_results = {"MSE - mean": mse_mean,
+                "MSE - std": mse_std,
+                "R2 - mean": r2_mean,
+                "R2 - std": r2_std}
+        
+        print(f"Final MSE SCORES: {mse_scores}, Final R2 SCORES: {r2_scores}")
+    """
     # Best run is saved to file
     if save_model:
         print("Saving model.....")

@@ -59,6 +59,39 @@ def save_results_to_json_file(args, jsondict, resultsname, append=True):
         jsondict = old_res
     json.dump(jsondict, open(filename, "w"))
 
+def save_matrix_to_file(args, matrix, filename, filetype = 'csv'):
+    """
+    Save a 2D NumPy array to a .csv or .txt file.
+
+    Parameters:
+    - matrix (np.ndarray): The array to be saved.
+    - filename (str): The name of the file (without extension).
+    - filetype (str): 'csv' or 'txt'. Defaults to 'csv'.
+    """
+
+    if not isinstance(matrix, np.ndarray):
+        raise TypeError("Input must be a NumPy array.")
+    
+    if matrix.ndim != 2:
+        raise ValueError("Only 2D arrays are supported.")
+
+    if filetype == 'csv':
+        file_name = get_output_path(args, directory="matriX" , filename=filename, file_type="csv")
+        np.savetxt(file_name, matrix, delimiter=',', fmt='%s')
+        print(f"Matrix saved to {file_name}")
+    elif filetype == 'txt':
+        file_name = get_output_path(args, directory="matriX" , filename=filename, file_type="txt")
+        np.savetxt(file_name, matrix, delimiter='\t', fmt='%s')
+        print(f"Matrix saved to {file_name}")
+    else:
+        raise ValueError("filetype must be either 'csv' or 'txt'.")
+    
+def save_arrays_to_file(args, array, filename):
+    file_name = get_output_path(args, directory="arrayS" , filename=filename, file_type="csv")
+
+    np.savetxt(file_name, array, delimiter=",", header="y_true_class, y_pred_class, y_pred_cont", comments='')
+
+
 
 def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None, task_type=None):
     filename = get_output_path(args, filename="results", file_type="txt")

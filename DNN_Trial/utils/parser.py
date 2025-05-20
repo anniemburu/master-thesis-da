@@ -33,6 +33,7 @@ def get_parser():
     parser.add('--num_bins', type=int, default=10, help="Number of bins for probailistic regression")
     parser.add('--shuffle', action="store_true", help="Shuffle data during cross-validation")
     parser.add('--seed', type=int, default=123, help="Seed for KFold initialization.")
+    parser.add('--test_seed', type=int, help="Use in Testing")
     parser.add('--weighted_loss', action="store_true", help="Add weights to the loss function.")
     parser.add('--strategy', type=str, choices=["uniform", "quantile", "kmeans"], help="Strategy for binning the data")
     parser.add('--binning', type=str, help="Find bin fo the data", choices=["sturges", "freedman"])
