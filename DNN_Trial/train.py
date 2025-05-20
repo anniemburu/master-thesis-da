@@ -35,7 +35,8 @@ def freedman_diaconis(y, args):
     iqr = q3 - q1
 
     #calc bin width
-    n = len(y) // args.num_splits
+    #n = len(y) // args.num_splits
+    n = len(y)
     bin_width = 2 * (iqr / (n ** (1/3)))
 
     #calc num of bins
@@ -46,7 +47,8 @@ def freedman_diaconis(y, args):
 
 # Sturges' Rule
 def sturges(y,args): 
-    n = len(y) // args.num_splits
+    #n = len(y) // args.num_splits
+    n = len(y)
     num_bins = 1 + int(np.log2(n))
 
     return num_bins
