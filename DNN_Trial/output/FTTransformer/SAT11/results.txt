@@ -394,3 +394,45 @@ Test time: 0.227144
 Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
 
 
+2025-05-20 11:00:49.551803
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 198800.47922
+MSE - std: 83996.40139
+R2 - mean: 0.96507
+R2 - std: 0.01476
+
+Train time: 4.634169
+Test time: 0.214796
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
+2025-05-20 11:01:14.239328
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 5102.70258
+MSE - std: 565.16491
+R2 - mean: 0.99910
+R2 - std: 0.00010
+
+Train time: 4.573102
+Test time: 0.212033
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+
+2025-05-20 11:01:40.178638
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 7753.92627
+MSE - std: 87.60933
+R2 - mean: 0.99864
+R2 - std: 0.00002
+
+Train time: 4.596242
+Test time: 0.218634
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863}
+
+

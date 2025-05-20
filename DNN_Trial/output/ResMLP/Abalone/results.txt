@@ -370,3 +370,45 @@ Test time: 0.005702
 Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 10, 'd_out': 21, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}
 
 
+2025-05-20 08:50:28.197067
+ResMLP - Abalone - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 0.79298
+MSE - std: 0.10312
+R2 - mean: 0.92462
+R2 - std: 0.00980
+
+Train time: 0.352425
+Test time: 0.005071
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 10, 'd_out': 9, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}
+
+
+2025-05-20 08:50:35.399841
+ResMLP - Abalone - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 0.34536
+MSE - std: 0.08178
+R2 - mean: 0.96717
+R2 - std: 0.00777
+
+Train time: 0.345926
+Test time: 0.005194
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 10, 'd_out': 12, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}
+
+
+2025-05-20 08:50:42.714044
+ResMLP - Abalone - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 0.37179
+MSE - std: 0.11372
+R2 - mean: 0.96466
+R2 - std: 0.01081
+
+Train time: 0.355961
+Test time: 0.005230
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 2.070874813204879, 'd_in': 10, 'd_out': 12, 'dropout1': 0.2767197595784706, 'dropout2': 0.1295421415138883, 'n_blocks': 6}
+
+

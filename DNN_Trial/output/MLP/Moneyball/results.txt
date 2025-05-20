@@ -366,3 +366,45 @@ Test time: 0.001523
 Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 11, 'dropout': 0.2819627248207455, 'n_blocks': 2}
 
 
+2025-05-20 09:12:06.069824
+MLP - Moneyball - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 536.43526
+MSE - std: 41.47601
+R2 - mean: 0.94423
+R2 - std: 0.00431
+
+Train time: 0.075035
+Test time: 0.001399
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 10, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+
+2025-05-20 09:12:11.380078
+MLP - Moneyball - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 209.97921
+MSE - std: 14.43997
+R2 - mean: 0.97817
+R2 - std: 0.00150
+
+Train time: 0.081654
+Test time: 0.001353
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 10, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+
+2025-05-20 09:12:16.092402
+MLP - Moneyball - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 241.87206
+MSE - std: 29.55333
+R2 - mean: 0.97486
+R2 - std: 0.00307
+
+Train time: 0.079910
+Test time: 0.001435
+
+Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 10, 'dropout': 0.2819627248207455, 'n_blocks': 2}
+
+

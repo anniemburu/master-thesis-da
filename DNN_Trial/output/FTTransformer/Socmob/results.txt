@@ -380,3 +380,45 @@ Test time: 0.026335
 Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05}
 
 
+2025-05-20 11:02:08.801417
+FTTransformer - Socmob - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 585.08937
+MSE - std: 45.64770
+R2 - mean: 0.66126
+R2 - std: 0.02643
+
+Train time: 1.247656
+Test time: 0.025251
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05}
+
+
+2025-05-20 11:02:17.319525
+FTTransformer - Socmob - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 42.32310
+MSE - std: 3.45916
+R2 - mean: 0.97550
+R2 - std: 0.00200
+
+Train time: 1.225019
+Test time: 0.025067
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05}
+
+
+2025-05-20 11:02:41.634090
+FTTransformer - Socmob - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 88.18570
+MSE - std: 30.95175
+R2 - mean: 0.94894
+R2 - std: 0.01792
+
+Train time: 1.234219
+Test time: 0.025290
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05}
+
+

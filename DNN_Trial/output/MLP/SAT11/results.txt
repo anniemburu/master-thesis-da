@@ -394,3 +394,45 @@ Test time: 0.001480
 Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 3, 'dropout': 0.15064221648941228, 'n_blocks': 2}
 
 
+2025-05-20 09:12:21.205789
+MLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 198800.47922
+MSE - std: 83996.40139
+R2 - mean: 0.96507
+R2 - std: 0.01476
+
+Train time: 0.162223
+Test time: 0.006341
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 10, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-20 09:12:26.321741
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 5102.70258
+MSE - std: 565.16491
+R2 - mean: 0.99910
+R2 - std: 0.00010
+
+Train time: 0.141265
+Test time: 0.009211
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 10, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-20 09:12:31.107673
+MLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 7753.92627
+MSE - std: 87.60933
+R2 - mean: 0.99864
+R2 - std: 0.00002
+
+Train time: 0.162914
+Test time: 0.008387
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 10, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+

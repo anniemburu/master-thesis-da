@@ -367,3 +367,45 @@ Test time: 0.002575
 Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 10, 'dropout': 0.10721970311199958, 'n_blocks': 6}
 
 
+2025-05-20 09:09:29.986757
+MLP - Boston - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 15.17377
+MSE - std: 5.16830
+R2 - mean: 0.84909
+R2 - std: 0.05140
+
+Train time: 0.069500
+Test time: 0.001877
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-20 09:09:34.958693
+MLP - Boston - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 2.04467
+MSE - std: 0.05052
+R2 - mean: 0.97967
+R2 - std: 0.00050
+
+Train time: 0.135830
+Test time: 0.007326
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-20 09:09:39.483590
+MLP - Boston - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 2.24965
+MSE - std: 0.09677
+R2 - mean: 0.97763
+R2 - std: 0.00096
+
+Train time: 0.066382
+Test time: 0.001784
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
