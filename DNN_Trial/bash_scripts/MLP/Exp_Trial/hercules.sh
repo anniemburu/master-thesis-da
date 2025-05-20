@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=MLP_Hercules_weighted_struges
+#SBATCH --job-name=MLP_Hercules_weighted_struges_ntest
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -36,9 +36,9 @@ for config in "${CONFIGS[@]}"; do
     srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --class_comp --batch_size 64 --val_batch_size 128
     srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --class_comp --batch_size 64 --val_batch_size 128
 
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    #srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    #srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    #srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
 
     #srun python3 train.py --config "$config" --model_name MLP --objective regression --batch_size 64 --val_batch_size 128
 
