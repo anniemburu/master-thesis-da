@@ -124,3 +124,45 @@ Test time: 0.143135
 Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
 
 
+2025-05-19 19:55:45.350824
+SAINT - Socmob - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 107.33571
+MSE - std: 31.37938
+R2 - mean: 0.93786
+R2 - std: 0.01817
+
+Train time: 32.899532
+Test time: 0.139995
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-19 20:04:12.628618
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 16.86405
+MSE - std: 3.32679
+R2 - mean: 0.99024
+R2 - std: 0.00193
+
+Train time: 33.880721
+Test time: 0.141204
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-19 20:11:24.321834
+SAINT - Socmob - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 37.08377
+MSE - std: 10.42696
+R2 - mean: 0.97853
+R2 - std: 0.00604
+
+Train time: 31.709778
+Test time: 0.135692
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+

@@ -194,3 +194,45 @@ Test time: 0.124470
 Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
 
 
+2025-05-19 19:37:24.119616
+SAINT - Sensory - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 21.015822
+Test time: 0.121833
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-19 19:42:40.375594
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 22.030861
+Test time: 0.126058
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-19 19:47:14.240790
+SAINT - Sensory - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 21.164419
+Test time: 0.123155
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+

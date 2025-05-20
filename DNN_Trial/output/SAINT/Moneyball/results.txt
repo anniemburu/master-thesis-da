@@ -124,3 +124,45 @@ Test time: 0.149478
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
 
 
+2025-05-19 19:00:22.035495
+SAINT - Moneyball - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 474.48460
+MSE - std: 49.50110
+R2 - mean: 0.95067
+R2 - std: 0.00515
+
+Train time: 27.793757
+Test time: 0.142732
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-19 19:07:36.025480
+SAINT - Moneyball - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 168.57904
+MSE - std: 12.67010
+R2 - mean: 0.98248
+R2 - std: 0.00132
+
+Train time: 31.039921
+Test time: 0.137068
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-19 19:14:20.697122
+SAINT - Moneyball - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 190.19679
+MSE - std: 2.72700
+R2 - mean: 0.98023
+R2 - std: 0.00028
+
+Train time: 29.962489
+Test time: 0.143697
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+

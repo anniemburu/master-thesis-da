@@ -124,3 +124,45 @@ Test time: 1.445019
 Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
 
 
+2025-05-19 17:44:25.070651
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 13.77662
+MSE - std: 0.15579
+R2 - mean: 0.91548
+R2 - std: 0.00096
+
+Train time: 740.383762
+Test time: 1.495204
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-19 18:07:52.656264
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 5.83814
+MSE - std: 0.07339
+R2 - mean: 0.96418
+R2 - std: 0.00045
+
+Train time: 805.387186
+Test time: 1.518153
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-19 18:29:29.455748
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 6.24468
+MSE - std: 0.02307
+R2 - mean: 0.96169
+R2 - std: 0.00014
+
+Train time: 770.807635
+Test time: 1.490810
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+

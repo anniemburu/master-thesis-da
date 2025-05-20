@@ -282,3 +282,45 @@ Test time: 0.256106
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
 
 
+2025-05-19 18:38:50.842059
+SAINT - MIP - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 24479869.72359
+MSE - std: 17300522.99568
+R2 - mean: 0.97108
+R2 - std: 0.02044
+
+Train time: 103.358188
+Test time: 0.265103
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-19 18:47:32.194487
+SAINT - MIP - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 11498.67452
+MSE - std: 8231.14528
+R2 - mean: 0.99999
+R2 - std: 0.00001
+
+Train time: 123.332082
+Test time: 0.260807
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-19 18:54:12.367481
+SAINT - MIP - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 36708896.18274
+MSE - std: 26742512.68551
+R2 - mean: 0.95664
+R2 - std: 0.03159
+
+Train time: 94.694723
+Test time: 0.255370
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
