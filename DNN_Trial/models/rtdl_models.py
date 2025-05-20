@@ -13,6 +13,8 @@ import sklearn.datasets
 import sklearn.metrics
 import sklearn.model_selection
 import sklearn.preprocessing
+import sklearn.utils
+import random
 
 import torch
 import torch.nn.functional as F
@@ -54,7 +56,16 @@ class ResMLP(BaseModelTorch):
 
       print("On Device:", self.device)
 
+   def seed_worker(self, worker_id):
+      worker_seed = torch.initial_seed() % 2**32
+      np.random.seed(worker_seed)
+      random.seed(worker_seed)
 
+#  Generator for DataLoader
+   def get_generator(self, seed):
+      g = torch.Generator()
+      g.manual_seed(seed)
+      return g
         
    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
 
@@ -71,12 +82,18 @@ class ResMLP(BaseModelTorch):
 
       print(f"X : {type(X)}, y : {type(y)}, X : {type(X_val)}, X : {type(X_val)} \n")
 
+      print(f"Seed in MLP: {self.args.test_seed}")
+      g = self.get_generator(self.args.test_seed) #seed gen
+
       train_dataset = TensorDataset(X, y)
       loader = DataLoader(
             train_dataset, 
             batch_size=self.args.batch_size, 
             shuffle=True, 
-            pin_memory=True
+            pin_memory=True,
+            num_workers=4,
+            worker_init_fn=self.seed_worker,
+            generator=g
         )
 
       # Training loop
@@ -214,6 +231,16 @@ class MLP(BaseModelTorch):
 
       print("On Device:", self.device)
 
+   def seed_worker(self, worker_id):
+      worker_seed = torch.initial_seed() % 2**32
+      np.random.seed(worker_seed)
+      random.seed(worker_seed)
+
+#  Generator for DataLoader
+   def get_generator(self, seed):
+      g = torch.Generator()
+      g.manual_seed(seed)
+      return g
 
         
    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
@@ -226,12 +253,18 @@ class MLP(BaseModelTorch):
       y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
       class_weights = class_weights.to(self.device) if class_weights is not None else None
 
+      print(f"Seed in MLP: {self.args.test_seed}")
+      g = self.get_generator(self.args.test_seed) #seed gen
+
       train_dataset = TensorDataset(X, y)
       loader = DataLoader(
             train_dataset, 
             batch_size=self.args.batch_size, 
             shuffle=True, 
-            pin_memory=True
+            pin_memory=True,
+            num_workers=4,
+            worker_init_fn=self.seed_worker,
+            generator=g
         )
 
       # Training loop
@@ -359,9 +392,22 @@ class FTTransformerWrapper(BaseModelTorch):
       self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
       print("On Device:", self.device)
+      """print(f"Model: {self.model}")
+      for name, param in self.model.named_parameters():
+         print(name, param.shape, param.view(-1)[0].item())"""
 
 
-        
+   def seed_worker(self, worker_id):
+      worker_seed = torch.initial_seed() % 2**32
+      np.random.seed(worker_seed)
+      random.seed(worker_seed)
+
+#  Generator for DataLoader
+   def get_generator(self, seed):
+      g = torch.Generator()
+      g.manual_seed(seed)
+      return g   
+   
    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
       print(f"Train Data b4 training...")
       print(f"X: {type(X)} , y : {type(y), }, X_val: {type(X_val)} , y : {type(y_val)}\n")
@@ -383,12 +429,19 @@ class FTTransformerWrapper(BaseModelTorch):
       print(f"Train Data after...")
       print(f"X: {type(X)} , y : {type(y), }, X_val: {type(X_val)} , y : {type(y_val)}\n")
 
+      print(f"Seed in MLP: {self.args.test_seed}")
+      g = self.get_generator(self.args.test_seed) #seed gen
+
+
       train_dataset = TensorDataset(X, y)
       loader = DataLoader(
             train_dataset, 
             batch_size=self.args.batch_size, 
             shuffle=True, 
-            pin_memory=True
+            pin_memory=True,
+            num_workers=4,
+            worker_init_fn=self.seed_worker,
+            generator=g
         )
 
       # Training loop
