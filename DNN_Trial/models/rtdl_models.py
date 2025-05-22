@@ -40,6 +40,9 @@ class ResMLP(BaseModelTorch):
       self.params['d_in'] = args.num_features
       self.params['d_out'] = args.num_classes
 
+      self.lambda_reg =  torch.nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
+
+
       #model
       self.model = ResNet(
          d_in = self.params['d_in'],
@@ -52,9 +55,21 @@ class ResMLP(BaseModelTorch):
       ).to(self.device)
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=3e-4, weight_decay=1e-5)
+      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
 
-      print("On Device:", self.device)
+      """print("On Device:", self.device)
+      print(f"Model: {self.model}")
+      for name, param in self.model.named_parameters():
+         print(name, param.shape, param.view(-1)[0].item())
+      
+      for name, param in self.model.state_dict().items():
+         print("In here")
+         print(name, param.shape, param.view(-1)[0].item())
+      
+      print(f"Wights for first layer: {self.model.input_projection.weight}")
+      print(f"Weight shape: {self.model.input_projection.weight.shape}")
+     """
+       
 
    def seed_worker(self, worker_id):
       worker_seed = torch.initial_seed() % 2**32
@@ -100,6 +115,7 @@ class ResMLP(BaseModelTorch):
       self.model.train()
       loss_history = []
       val_history = []
+      lambda_history = []
 
       for epoch in range(self.args.epochs):
          epoch_loss = 0
@@ -109,10 +125,29 @@ class ResMLP(BaseModelTorch):
 
             #print(f"Batch X: {type(batch_X)} \n")
             #print(f"Batch y: {type(batch_y)} \n")
+
+            #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            # Frequency regularization term
+            if frequency_map is not None:
+               if self.args.ordinal_encode:
+                  idx_buff = len(self.args.ordinal_idx)
+               else:
+                  idx_buff = 0  # Ordinal feat are stored b4 OHE
+
+               weights = self.model.input_projection.weight # Get weights for one-hot encoded features
+      
+               penalty = 0.0
+               for i, col in enumerate(frequency_map.keys()):
+                  penalty += torch.sum(torch.abs(weights[:, i + idx_buff])) / (frequency_map[col] + 1e-8)  #i add len ordinal
+               penalty *=  torch.exp(self.lambda_reg)   # Use the learnable lambda_reg
+            else:
+               penalty = 0.0
+               
+                #~~~~
                 
             self.optimizer.zero_grad()
             outputs = self.model(batch_X).squeeze()
-            loss = self._compute_loss(outputs, batch_y, class_weights)
+            loss = self._compute_loss(outputs, batch_y, class_weights) + penalty #add penalty
 
             loss.backward()
             self.optimizer.step()
@@ -125,6 +160,8 @@ class ResMLP(BaseModelTorch):
             val_loss = self._evaluate(X_val, y_val, class_weights)
             val_history.append(val_loss)
 
+            lambda_history.append(torch.exp(self.lambda_reg).item())
+
             # Early stopping
             if min(val_history) == val_history[-1]:
                best_model = self.model.state_dict()
@@ -132,6 +169,9 @@ class ResMLP(BaseModelTorch):
             if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
                break
 
+      if self.args.frequency_reg:
+         return loss_history , val_history, lambda_history
+      else:
          return loss_history , val_history
 
    def _compute_loss(self, outputs, targets, class_weights):
@@ -217,6 +257,9 @@ class MLP(BaseModelTorch):
       self.params['d_in'] = args.num_features
       self.params['d_out'] = args.num_classes
 
+      self.lambda_reg =  torch.nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
+
+
       #model
       self.model = RTDL_MLP(
          d_in = self.params['d_in'],
@@ -226,10 +269,24 @@ class MLP(BaseModelTorch):
          dropout = self.params['dropout']
       ).to(self.device)
 
+      # Add lambda_reg as a trainable parameter
+
       # Optimizer
-      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=3e-4, weight_decay=1e-5)
+      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
 
       print("On Device:", self.device)
+      """
+      print(f"Model: {self.model}")
+      for name, param in self.model.named_parameters():
+         print(name, param.shape, param.view(-1)[0].item())
+      
+      for name, param in self.model.state_dict().items():
+         print("In here")
+         print(name, param.shape, param.view(-1)[0].item())
+      
+      print(f"Wights for first layer: {self.model.blocks[0].linear.weight}")
+      print(f"Weight shape: {self.model.blocks[0].linear.weight.shape}")
+      """
 
    def seed_worker(self, worker_id):
       worker_seed = torch.initial_seed() % 2**32
@@ -271,30 +328,47 @@ class MLP(BaseModelTorch):
       self.model.train()
       loss_history = []
       val_history = []
+      lambda_history = []
 
       for epoch in range(self.args.epochs):
          epoch_loss = 0
+         epoch_loss_val = 0
          for batch_X, batch_y in loader:
             batch_X = batch_X.to(self.device)
             batch_y = batch_y.to(self.device)
 
             #(f"Batch X: {type(batch_X)} \n")
             #print(f"Batch y: {type(batch_y)} \n")
-                
+
+            #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            # Frequency regularization term
+            if frequency_map is not None:
+               if self.args.ordinal_encode:
+                  idx_buff = len(self.args.ordinal_idx)
+               else:
+                  idx_buff = 0  # Ordinal feat are stored b4 OHE
+
+               weights = self.model.blocks[0].linear.weight # Get weights for one-hot encoded features
+      
+               penalty = 0.0
+               for i, col in enumerate(frequency_map.keys()):
+                  penalty += torch.sum(torch.abs(weights[:, i + idx_buff])) / (frequency_map[col] + 1e-8)  #i add len ordinal
+               penalty *=  torch.exp(self.lambda_reg)   # Use the learnable lambda_reg
+            else:
+               penalty = 0.0
+               
+                #~~~~  
             self.optimizer.zero_grad()
             outputs = self.model(batch_X).squeeze()
-            loss = self._compute_loss(outputs, batch_y, class_weights)
-
+            loss = self._compute_loss(outputs, batch_y, class_weights) + penalty #add penalty
             loss.backward()
             self.optimizer.step()
-
-            #Calc and Store training loss
-            epoch_loss += loss.item()
-            avg_loss = epoch_loss / len(loader)
-            loss_history.append(avg_loss)
-
+         
             val_loss = self._evaluate(X_val, y_val, class_weights)
-            val_history.append(val_loss)
+
+            #Calc and Store training and val loss
+            epoch_loss += loss.item()
+            epoch_loss_val += val_loss.item()
 
             # Early stopping
             if min(val_history) == val_history[-1]:
@@ -303,6 +377,15 @@ class MLP(BaseModelTorch):
             if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
                break
 
+         avg_loss = epoch_loss / len(loader)
+         avg_loss_val = epoch_loss_val / len(loader)
+         loss_history.append(avg_loss)
+         val_history.append(avg_loss_val)
+         lambda_history.append(torch.exp(self.lambda_reg).item())
+
+      if self.args.frequency_reg:
+         return loss_history , val_history, lambda_history
+      else:
          return loss_history , val_history
 
    def _compute_loss(self, outputs, targets, class_weights):
@@ -379,6 +462,8 @@ class FTTransformerWrapper(BaseModelTorch):
       self.params = params
       self.args = args
 
+      self.lambda_reg =  torch.nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
+
       #self.params['d_in'] = args.num_features
       #self.params['d_out'] = args.num_classes
       self.model = FTTransformer(
@@ -389,12 +474,13 @@ class FTTransformerWrapper(BaseModelTorch):
                      ).to(self.device)
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
+      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
       print("On Device:", self.device)
-      """print(f"Model: {self.model}")
+      print(f"Model: {self.model}")
       for name, param in self.model.named_parameters():
-         print(name, param.shape, param.view(-1)[0].item())"""
+         print(name, param.shape, param.view(-1)[0].item())
+      
 
 
    def seed_worker(self, worker_id):
@@ -448,6 +534,7 @@ class FTTransformerWrapper(BaseModelTorch):
       self.model.train()
       loss_history = []
       val_history = []
+      lambda_history = []
 
       for epoch in range(self.args.epochs):
          epoch_loss = 0
@@ -457,6 +544,28 @@ class FTTransformerWrapper(BaseModelTorch):
 
             #print(f"Batch X: {type(batch_X)} \n")
             #print(f"Batch y: {type(batch_y)} \n")
+            if frequency_map is not None:
+               penalty = 0.0
+               for i, col in enumerate(frequency_map.keys()):
+                  weights = self.model.cat_embeddings.embeddings[i].weight # Get weights for one-hot encoded features
+                  #weights = torch.tensor(weights, dtype=torch.float32)
+
+                  # Get frequencies for this feature — shape: (num_categories_i,)
+                  #freq = frequency_map[col].to(weights.device) + 1e-8  # avoid division by zero
+                  freq = frequency_map[col] + 1e-8  # avoid division by zero
+
+                  # L1 norm across embedding dimensions for each category
+                  l1_norms = torch.sum(torch.abs(weights), dim=1)  # shape: (num_categories_i,)
+
+                  # Apply frequency-based scaling
+                  penalty += torch.sum(l1_norms / freq)
+      
+                  #penalty += torch.sum(torch.abs(weights[:, i + idx_buff])) / (frequency_map[col] + 1e-8)  #i add len ordinal
+               penalty *=  torch.exp(self.lambda_reg)   # Use the learnable lambda_reg
+            else:
+               penalty = 0.0
+               
+                #~~~~
                 
             self.optimizer.zero_grad()
             x_cont, x_cat = self._split_inputs(batch_X)
@@ -476,6 +585,8 @@ class FTTransformerWrapper(BaseModelTorch):
             val_loss = self._evaluate(X_val, y_val, class_weights)
             val_history.append(val_loss)
 
+            lambda_history.append(torch.exp(self.lambda_reg).item())
+
             # Early stopping
             if min(val_history) == val_history[-1]:
                best_model = self.model.state_dict()
@@ -483,6 +594,9 @@ class FTTransformerWrapper(BaseModelTorch):
             if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
                break
 
+      if self.args.frequency_reg:
+         return loss_history , val_history, lambda_history
+      else:
          return loss_history , val_history
 
    def _compute_loss(self, outputs, targets, class_weights):
