@@ -159,12 +159,7 @@ class ResMLP(BaseModelTorch):
             val_loss = self._evaluate(X_val, y_val, class_weights)
             epoch_loss_val += val_loss
 
-            # Early stopping
-            if min(val_history) == val_history[-1]:
-               best_model = self.model.state_dict()
-                
-            if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
-               break
+         
 
          avg_loss = epoch_loss / len(loader)
          avg_loss_val = epoch_loss_val / len(loader)
@@ -172,6 +167,13 @@ class ResMLP(BaseModelTorch):
          loss_history.append(avg_loss)
          val_history.append(avg_loss_val)
          lambda_history.append(torch.exp(self.lambda_reg).item())
+
+         # Early stopping
+         if min(val_history) == val_history[-1]:
+            best_model = self.model.state_dict()
+               
+         if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
+            break
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
@@ -374,18 +376,20 @@ class MLP(BaseModelTorch):
             epoch_loss += loss.item()
             epoch_loss_val += val_loss
 
-            # Early stopping
-            if min(val_history) == val_history[-1]:
-               best_model = self.model.state_dict()
-                
-            if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
-               break
+         
 
          avg_loss = epoch_loss / len(loader)
          avg_loss_val = epoch_loss_val / len(loader)
          loss_history.append(avg_loss)
          val_history.append(avg_loss_val)
          lambda_history.append(torch.exp(self.lambda_reg).item())
+
+         # Early stopping
+         if min(val_history) == val_history[-1]:
+            best_model = self.model.state_dict()
+               
+         if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
+            break
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
@@ -589,20 +593,20 @@ class FTTransformerWrapper(BaseModelTorch):
             val_loss = self._evaluate(X_val, y_val, class_weights)
             epoch_loss_val += val_loss
 
-
-            # Early stopping
-            if min(val_history) == val_history[-1]:
-               best_model = self.model.state_dict()
-                
-            if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
-               break
-         
          avg_loss = epoch_loss / len(loader)
          avg_loss_val = epoch_loss_val / len(loader)
 
          loss_history.append(avg_loss)
          val_history.append(avg_loss_val)
          lambda_history.append(torch.exp(self.lambda_reg).item())
+
+         # Early stopping
+         if min(val_history) == val_history[-1]:
+            best_model = self.model.state_dict()
+               
+         if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
+            break
+         
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
