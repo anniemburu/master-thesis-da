@@ -119,6 +119,7 @@ class ResMLP(BaseModelTorch):
 
       for epoch in range(self.args.epochs):
          epoch_loss = 0
+         epoch_loss_val = 0
          for batch_X, batch_y in loader:
             batch_X = batch_X.to(self.device)
             batch_y = batch_y.to(self.device)
@@ -154,13 +155,9 @@ class ResMLP(BaseModelTorch):
 
             #Calc and Store training loss
             epoch_loss += loss.item()
-            avg_loss = epoch_loss / len(loader)
-            loss_history.append(avg_loss)
 
             val_loss = self._evaluate(X_val, y_val, class_weights)
-            val_history.append(val_loss)
-
-            lambda_history.append(torch.exp(self.lambda_reg).item())
+            epoch_loss_val += val_loss
 
             # Early stopping
             if min(val_history) == val_history[-1]:
@@ -168,6 +165,13 @@ class ResMLP(BaseModelTorch):
                 
             if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
                break
+
+         avg_loss = epoch_loss / len(loader)
+         avg_loss_val = epoch_loss_val / len(loader)
+         
+         loss_history.append(avg_loss)
+         val_history.append(avg_loss_val)
+         lambda_history.append(torch.exp(self.lambda_reg).item())
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
@@ -368,7 +372,7 @@ class MLP(BaseModelTorch):
 
             #Calc and Store training and val loss
             epoch_loss += loss.item()
-            epoch_loss_val += val_loss.item()
+            epoch_loss_val += val_loss
 
             # Early stopping
             if min(val_history) == val_history[-1]:
@@ -538,6 +542,8 @@ class FTTransformerWrapper(BaseModelTorch):
 
       for epoch in range(self.args.epochs):
          epoch_loss = 0
+         epoch_loss_val = 0
+
          for batch_X, batch_y in loader:
             batch_X = batch_X.to(self.device)
             batch_y = batch_y.to(self.device)
@@ -579,13 +585,10 @@ class FTTransformerWrapper(BaseModelTorch):
 
             #Calc and Store training loss
             epoch_loss += loss.item()
-            avg_loss = epoch_loss / len(loader)
-            loss_history.append(avg_loss)
-
+            
             val_loss = self._evaluate(X_val, y_val, class_weights)
-            val_history.append(val_loss)
+            epoch_loss_val += val_loss
 
-            lambda_history.append(torch.exp(self.lambda_reg).item())
 
             # Early stopping
             if min(val_history) == val_history[-1]:
@@ -593,6 +596,13 @@ class FTTransformerWrapper(BaseModelTorch):
                 
             if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
                break
+         
+         avg_loss = epoch_loss / len(loader)
+         avg_loss_val = epoch_loss_val / len(loader)
+
+         loss_history.append(avg_loss)
+         val_history.append(avg_loss_val)
+         lambda_history.append(torch.exp(self.lambda_reg).item())
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
