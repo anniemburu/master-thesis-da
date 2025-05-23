@@ -71,7 +71,7 @@ def bin_finder(args, y):
         bins = sturges(y, args)
     else:"""
     
-    args.binning = "sturges"
+    #args.binning = "sturges"
 
     if args.binning == "freedman":
         bins = freedman_diaconis(y, args)
@@ -862,6 +862,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         if args.frequency_reg:
             #Need to Clean here
             X_train, y_train, X_test ,y_test,frequency_map = encoding(args, X_train, y_train, X_test, y_test)
+            
         else:
             #print("Doing encoding : WE ARE IN TRAIN.PY")
             X_train, y_train, X_test, y_test = encoding(args, X_train, y_train, X_test, y_test)
@@ -919,6 +920,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print(curr_model.params)
 
 
+
         for attr in dir(model):
             if isinstance(getattr(model, attr), torch.nn.Module):
                 print(f"{attr}: {type(getattr(model, attr))}")
@@ -926,7 +928,18 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         # Train model
         train_timer.start()
         if args.frequency_reg: ## For frequency regularization
-            loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map)
+            if args.weighted_loss:
+                class_weights = custom_class_weights(y_train_class)
+                print(f"Class Weights Applied: {class_weights}")
+                loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map=frequency_map,class_weights = class_weights)
+            
+                save_regularization_to_file(args, lambda_reg_history, "lambda_reg", extension=seed)
+            else:
+                print(f"Class Weights DDNT APPLY")
+                loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map=frequency_map)
+    
+                save_regularization_to_file(args, lambda_reg_history, "lambda_reg", extension=seed)
+                #loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map)
         else:
             if args.objective == "probabilistic_regression":
                 if args.weighted_loss:
@@ -948,19 +961,14 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
         print(f"Prediction shape : {prediction.shape}")
         #print(f"Probabilities shape : {probabilities.shape} \n")
-        print(f"Y true: {y_test_class[:10]}")
-        print(f"Prediction : {prediction[:10]}")
-        print(f"Probabilities : {probabilities[:10]} \n")
+        #print(f"Y true: {y_test_class[:10]}")
+        #print(f"Prediction : {prediction[:10]}")
+        #print(f"Probabilities : {probabilities[:10]} \n")
         #print(f"Mean bin : {bin_mean}, Type : {type(bin_mean)}, shape : {bin_mean.shape}")
         test_timer.end()
 
         print(f"Prediction shape : {prediction.shape}")
         print(f"Prediction Results : {prediction[:10]}")
-
-        matrix_name = f"matrix_{args.model_name}_{args.dataset}_{seed}"
-        save_matrix_to_file(args, probabilities, matrix_name, filetype = 'csv')
-
-
 
         # Save model weights and the truth/prediction pairs for traceability
         #curr_model.save_model_and_predictions(y_test_class,seed)
@@ -981,7 +989,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print("B4 Evaluation")
         print(f"Number of classes : {args.num_classes}")
         #print(f"Class label len :{len(args.bin_alt)}")
-        print(f"Class labels : {args.bin_alt}")
+        #print(f"Class labels : {args.bin_alt}")
         #print(f"Unique y_true : {len(np.unique(y_test_class))}")
         #print(f"Unique train : {len(np.unique(y_train_class))}\n")
         print(f"Prediction shape : {curr_model.predictions.shape}")
