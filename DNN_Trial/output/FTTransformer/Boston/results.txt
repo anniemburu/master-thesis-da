@@ -1,0 +1,84 @@
+2025-05-23 04:16:41.309031
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 43.08607
+MSE - std: 0.00000
+R2 - mean: 0.57150
+R2 - std: 0.00000
+
+Train time: 12.784993
+Test time: 0.013056
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-23 04:17:56.465689
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 36.83521
+MSE - std: 0.00000
+R2 - mean: 0.63367
+R2 - std: 0.00000
+
+Train time: 13.064680
+Test time: 0.013513
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-23 04:19:15.977113
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 36.53834
+MSE - std: 0.00000
+R2 - mean: 0.63662
+R2 - std: 0.00000
+
+Train time: 13.605514
+Test time: 0.012631
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-23 04:20:37.467819
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 42.73469
+MSE - std: 0.00000
+R2 - mean: 0.57500
+R2 - std: 0.00000
+
+Train time: 13.851768
+Test time: 0.013467
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-23 04:21:59.670212
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 29.02995
+MSE - std: 0.00000
+R2 - mean: 0.71129
+R2 - std: 0.00000
+
+Train time: 14.300751
+Test time: 0.012772
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
+2025-05-23 04:23:22.100242
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 35.14946
+MSE - std: 0.00000
+R2 - mean: 0.65043
+R2 - std: 0.00000
+
+Train time: 14.313862
+Test time: 0.014010
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05}
+
+
