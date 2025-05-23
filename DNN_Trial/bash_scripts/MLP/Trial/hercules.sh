@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=MLP_Hercules_all_struges
+#SBATCH --job-name=MLP_Hercules_all
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
@@ -32,14 +32,25 @@ for config in "${CONFIGS[@]}"; do
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
-   
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
 
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --binning sturges --class_comp --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantil --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+   
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --binning sturges --class_comp --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --binning sturges --class_comp --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --binning freedman --class_comp --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --binning freedman --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+   
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --binning freedman --class_comp --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --binning freedman --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --binning freedman --class_comp --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy uniform --binning freedman --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+
 
     #srun python3 train.py --config "$config" --model_name MLP --objective regression --batch_size 64 --val_batch_size 128
 
