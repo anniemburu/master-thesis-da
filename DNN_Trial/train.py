@@ -1028,11 +1028,12 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             #Append Scores
             #mse_scores.append(error_results['MSE'])         
             #r2_scores.append(error_results['R2'])
-            #args.objective = orig_objective # Reset objective to original
+            args.objective = orig_objective # Reset objective to original
 
             #print(f"MSE SCORES on seed {seed}: {mse_scores}, R2 SCORES: {r2_scores}")
 
         else:
+            print("We are not in Class comp")
             # Compute scores on the output
             if args.objective == "probabilistic_regression":
                 # Use the binning labels for evaluation
