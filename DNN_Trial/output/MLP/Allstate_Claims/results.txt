@@ -54,3 +54,17 @@ Test time: 0.668222
 Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 11, 'dropout': 0.12920563775872115, 'n_blocks': 6}
 
 
+2025-05-24 01:05:08.879117
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 7203564.79306
+MSE - std: 0.00000
+R2 - mean: 0.15445
+R2 - std: 0.00000
+
+Train time: 965.079753
+Test time: 0.762030
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 244, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+

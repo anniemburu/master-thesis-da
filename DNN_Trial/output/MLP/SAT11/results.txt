@@ -1,0 +1,154 @@
+2025-05-24 09:56:46.892472
+MLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 2975619.51608
+MSE - std: 0.00000
+R2 - mean: 0.47721
+R2 - std: 0.00000
+
+Train time: 9.047405
+Test time: 0.012453
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 10, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 09:57:41.103029
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 3253463.74782
+MSE - std: 0.00000
+R2 - mean: 0.42840
+R2 - std: 0.00000
+
+Train time: 6.925690
+Test time: 0.003918
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 10, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 09:58:11.137916
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 4566635.76197
+MSE - std: 0.00000
+R2 - mean: 0.19769
+R2 - std: 0.00000
+
+Train time: 3.962312
+Test time: 0.010644
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 10, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 09:59:02.026333
+MLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 3314671.34384
+MSE - std: 0.00000
+R2 - mean: 0.41765
+R2 - std: 0.00000
+
+Train time: 7.174146
+Test time: 0.005481
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 9, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 09:59:28.193175
+MLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 5093722.14610
+MSE - std: 0.00000
+R2 - mean: 0.10509
+R2 - std: 0.00000
+
+Train time: 3.454106
+Test time: 0.002350
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 9, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 10:00:25.249345
+MLP - SAT11 - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 3320086.50491
+MSE - std: 0.00000
+R2 - mean: 0.41669
+R2 - std: 0.00000
+
+Train time: 8.120170
+Test time: 0.008272
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 5, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 10:01:20.677879
+MLP - SAT11 - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 3286657.47918
+MSE - std: 0.00000
+R2 - mean: 0.42257
+R2 - std: 0.00000
+
+Train time: 7.942670
+Test time: 0.002356
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 5, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 10:02:10.501196
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 3360848.81379
+MSE - std: 0.00000
+R2 - mean: 0.40953
+R2 - std: 0.00000
+
+Train time: 6.920440
+Test time: 0.003430
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 5, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 10:02:41.638805
+MLP - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 3850809.37501
+MSE - std: 0.00000
+R2 - mean: 0.32345
+R2 - std: 0.00000
+
+Train time: 4.048185
+Test time: 0.007904
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 5, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 10:03:30.628216
+MLP - SAT11 - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 3327436.08428
+MSE - std: 0.00000
+R2 - mean: 0.41540
+R2 - std: 0.00000
+
+Train time: 6.851998
+Test time: 0.012518
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 5, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
+2025-05-24 10:03:58.618080
+MLP - SAT11 - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 4066928.71106
+MSE - std: 0.00000
+R2 - mean: 0.28548
+R2 - std: 0.00000
+
+Train time: 3.646628
+Test time: 0.011296
+
+Best Parameters: {'d_block': 128, 'd_in': 130, 'd_out': 5, 'dropout': 0.15064221648941228, 'n_blocks': 2}
+
+
