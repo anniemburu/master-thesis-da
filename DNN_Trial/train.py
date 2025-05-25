@@ -818,7 +818,14 @@ def mean_per_bin(y_true, y_class):
 
 def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual=False, save_model=False):
     # Record some statistics and metrics
-    sc = get_scorer(args)
+    if args.class_comp:
+        #set obj to be regression
+        args.objective = "regression" #rem to rreturn it back to norm
+        sc = get_scorer(args)
+        args.objective = "probabilistic_regression" #rem to rreturn it back to norm
+    else:
+        sc = get_scorer(args)
+
     train_timer = Timer()
     test_timer = Timer()
 
@@ -846,6 +853,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
     for seed in range(5):
         print("In Test Model, Seed is ", seed)
         print(f"--- Test Run {seed+1}/{n_repeats} ---")
+        #seed_update = np.random.randint(seed, 100000)
         set_seed(seed)
         
     
@@ -1000,8 +1008,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         if args.class_comp:
             print("In the gulag")
             #set obj to be regression
-            args.objective = "regression" #rem to rreturn it back to norm
-            sc = get_scorer(args)
+            #args.objective = "regression" #rem to rreturn it back to norm
+            #sc = get_scorer(args)
 
             #get the bin means
 
