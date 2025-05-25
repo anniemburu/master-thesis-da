@@ -34,7 +34,7 @@ for config in "${CONFIGS[@]}"; do
     conda activate TabSurvey
 
     srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --binning sturges --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantil --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy quantile --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
    
     srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --binning sturges --class_comp --batch_size 64 --val_batch_size 128
     srun python3 train.py --config "$config" --model_name MLP --objective probabilistic_regression --strategy kmeans --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
