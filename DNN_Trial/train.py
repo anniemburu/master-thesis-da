@@ -1014,8 +1014,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
 
 
             #save em
-            save_matrix_to_file(args, probabilities, matrix_name, filetype = 'csv')
-            save_arrays_to_file(args, target_stacks, array_name)
+            #save_matrix_to_file(args, probabilities, matrix_name, filetype = 'csv')
+            #save_arrays_to_file(args, target_stacks, array_name)
 
 
             print(f"y_test_pred : {y_test_pred[:10]}, y_test_class : {y_test_class[:10]}")
