@@ -82,3 +82,171 @@ Test time: 0.008447
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 8, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
 
 
+2025-05-25 04:26:07.329743
+ResMLP - Boston - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 36.96320
+MSE - std: 0.00000
+R2 - mean: 0.63240
+R2 - std: 0.00000
+
+Train time: 3.818314
+Test time: 0.005999
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 8, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:26:36.569861
+ResMLP - Boston - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 33.90756
+MSE - std: 0.00000
+R2 - mean: 0.66278
+R2 - std: 0.00000
+
+Train time: 3.891313
+Test time: 0.007635
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 8, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:27:08.669264
+ResMLP - Boston - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 31.73134
+MSE - std: 0.00000
+R2 - mean: 0.68443
+R2 - std: 0.00000
+
+Train time: 3.934156
+Test time: 0.006096
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 8, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:27:38.614349
+ResMLP - Boston - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 36.32905
+MSE - std: 0.00000
+R2 - mean: 0.63870
+R2 - std: 0.00000
+
+Train time: 3.842876
+Test time: 0.006526
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 8, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:28:08.884248
+ResMLP - Boston - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 33.77409
+MSE - std: 0.00000
+R2 - mean: 0.66411
+R2 - std: 0.00000
+
+Train time: 3.917155
+Test time: 0.006953
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 8, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:28:38.324548
+ResMLP - Boston - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 26.90926
+MSE - std: 0.00000
+R2 - mean: 0.73238
+R2 - std: 0.00000
+
+Train time: 3.795152
+Test time: 0.006492
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 8, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:29:07.684780
+ResMLP - Boston - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 33.27695
+MSE - std: 0.00000
+R2 - mean: 0.66906
+R2 - std: 0.00000
+
+Train time: 3.871179
+Test time: 0.007724
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 22, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:29:35.711436
+ResMLP - Boston - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 34.11261
+MSE - std: 0.00000
+R2 - mean: 0.66074
+R2 - std: 0.00000
+
+Train time: 3.656112
+Test time: 0.005594
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 22, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:30:05.878934
+ResMLP - Boston - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 39.09489
+MSE - std: 0.00000
+R2 - mean: 0.61120
+R2 - std: 0.00000
+
+Train time: 3.815140
+Test time: 0.006079
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 22, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:30:33.752018
+ResMLP - Boston - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 35.77937
+MSE - std: 0.00000
+R2 - mean: 0.64417
+R2 - std: 0.00000
+
+Train time: 3.497981
+Test time: 0.006953
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 22, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:31:03.213630
+ResMLP - Boston - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 31.36466
+MSE - std: 0.00000
+R2 - mean: 0.68807
+R2 - std: 0.00000
+
+Train time: 3.804409
+Test time: 0.006102
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 20, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+
+2025-05-25 04:31:31.743264
+ResMLP - Boston - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 38.79421
+MSE - std: 0.00000
+R2 - mean: 0.61419
+R2 - std: 0.00000
+
+Train time: 3.602440
+Test time: 0.007170
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 20, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
+
+

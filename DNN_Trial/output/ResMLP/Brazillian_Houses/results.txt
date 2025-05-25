@@ -82,3 +82,171 @@ Test time: 0.047125
 Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 2, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
 
 
+2025-05-25 04:35:52.052399
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 20329855.83326
+MSE - std: 0.00000
+R2 - mean: 0.49064
+R2 - std: 0.00000
+
+Train time: 54.544388
+Test time: 0.035408
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 13, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:40:06.495037
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 20343964.50638
+MSE - std: 0.00000
+R2 - mean: 0.49029
+R2 - std: 0.00000
+
+Train time: 52.989079
+Test time: 0.038064
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 13, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:43:45.098081
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 494898085.14789
+MSE - std: 0.00000
+R2 - mean: -11.39952
+R2 - std: 0.00000
+
+Train time: 45.198871
+Test time: 0.029604
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 13, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:45:38.702781
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 495281388.92327
+MSE - std: 0.00000
+R2 - mean: -11.40913
+R2 - std: 0.00000
+
+Train time: 22.616103
+Test time: 0.035484
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 13, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:47:15.329140
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 39918246.80907
+MSE - std: 0.00000
+R2 - mean: -0.00014
+R2 - std: 0.00000
+
+Train time: 19.322292
+Test time: 0.031577
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 2, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:48:48.591643
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 39918246.80907
+MSE - std: 0.00000
+R2 - mean: -0.00014
+R2 - std: 0.00000
+
+Train time: 18.683288
+Test time: 0.029877
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 2, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:50:35.108786
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 20709770.84557
+MSE - std: 0.00000
+R2 - mean: 0.48112
+R2 - std: 0.00000
+
+Train time: 20.782994
+Test time: 0.106622
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 1733, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:52:21.830116
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 20551611.55189
+MSE - std: 0.00000
+R2 - mean: 0.48509
+R2 - std: 0.00000
+
+Train time: 20.759745
+Test time: 0.110477
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 1733, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:54:12.185871
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 20419912.83990
+MSE - std: 0.00000
+R2 - mean: 0.48839
+R2 - std: 0.00000
+
+Train time: 21.060135
+Test time: 0.110481
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 2096, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 04:56:02.737652
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 20927960.56202
+MSE - std: 0.00000
+R2 - mean: 0.47566
+R2 - std: 0.00000
+
+Train time: 21.100954
+Test time: 0.118174
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 2096, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 05:00:11.508742
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 718589661.75871
+MSE - std: 0.00000
+R2 - mean: -17.00405
+R2 - std: 0.00000
+
+Train time: 51.641470
+Test time: 0.048091
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 54, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
+2025-05-25 05:02:08.158326
+ResMLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1208414015.68684
+MSE - std: 0.00000
+R2 - mean: -29.27645
+R2 - std: 0.00000
+
+Train time: 23.409476
+Test time: 0.051212
+
+Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 54, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
+
+
