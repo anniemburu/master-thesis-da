@@ -1,0 +1,28 @@
+2025-05-26 16:11:48.121017
+ResMLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 22650362.63605
+MSE - std: 333141.01136
+R2 - mean: 0.12571
+R2 - std: 0.01286
+
+Train time: 1800.310330
+Test time: 0.206052
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-05-26 18:36:32.063983
+ResMLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 22596532.00236
+MSE - std: 440844.49519
+R2 - mean: 0.12779
+R2 - std: 0.01702
+
+Train time: 1775.075715
+Test time: 0.198533
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+

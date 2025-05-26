@@ -1,0 +1,168 @@
+2025-05-25 23:44:04.865467
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 5701938.73340
+MSE - std: 61432.79532
+R2 - mean: 0.33071
+R2 - std: 0.00721
+
+Train time: 976.994570
+Test time: 0.645928
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 01:11:37.051616
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 5662129.13625
+MSE - std: 103454.94950
+R2 - mean: 0.33538
+R2 - std: 0.01214
+
+Train time: 979.831260
+Test time: 0.621014
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 02:37:17.223711
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 5479933.18742
+MSE - std: 109632.70002
+R2 - mean: 0.35677
+R2 - std: 0.01287
+
+Train time: 962.481029
+Test time: 0.603948
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 04:00:53.788105
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 6819239.27049
+MSE - std: 469357.47451
+R2 - mean: 0.19956
+R2 - std: 0.05509
+
+Train time: 932.304169
+Test time: 0.621167
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 05:23:31.676735
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 6708339.40598
+MSE - std: 477431.75185
+R2 - mean: 0.21258
+R2 - std: 0.05604
+
+Train time: 920.949962
+Test time: 0.609871
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 11, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 06:44:26.614562
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 9147752.83549
+MSE - std: 1830919.15121
+R2 - mean: -0.07376
+R2 - std: 0.21491
+
+Train time: 903.136615
+Test time: 0.606500
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 11, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 08:36:40.276049
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 5741312.63338
+MSE - std: 93088.87800
+R2 - mean: 0.32609
+R2 - std: 0.01093
+
+Train time: 1276.658623
+Test time: 0.894301
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 1040, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 10:29:17.344342
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 5924086.00858
+MSE - std: 149916.67620
+R2 - mean: 0.30463
+R2 - std: 0.01760
+
+Train time: 1278.947983
+Test time: 0.928645
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 1040, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 12:19:01.928414
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 5879016.33964
+MSE - std: 1252263.78727
+R2 - mean: 0.30993
+R2 - std: 0.14699
+
+Train time: 1241.556959
+Test time: 0.918828
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 1040, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 14:02:41.035314
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 11605971.29682
+MSE - std: 1831070.42578
+R2 - mean: -0.36230
+R2 - std: 0.21493
+
+Train time: 1159.515237
+Test time: 0.908196
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 1040, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 15:34:41.650969
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 5557816.36209
+MSE - std: 99965.31422
+R2 - mean: 0.34763
+R2 - std: 0.01173
+
+Train time: 1033.461735
+Test time: 0.692375
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 244, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-05-26 16:58:51.465268
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 10057757.74129
+MSE - std: 3139013.53744
+R2 - mean: -0.18057
+R2 - std: 0.36846
+
+Train time: 934.930330
+Test time: 0.692030
+
+Best Parameters: {'d_block': 256, 'd_in': 1060, 'd_out': 244, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
