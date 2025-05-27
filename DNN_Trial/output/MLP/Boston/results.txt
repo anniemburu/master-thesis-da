@@ -1,0 +1,168 @@
+2025-05-26 22:49:16.602556
+MLP - Boston - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 32.55966
+MSE - std: 3.86902
+R2 - mean: 0.67619
+R2 - std: 0.03848
+
+Train time: 3.873471
+Test time: 0.003282
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:49:51.494691
+MLP - Boston - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 33.25235
+MSE - std: 4.28583
+R2 - mean: 0.66930
+R2 - std: 0.04262
+
+Train time: 3.895394
+Test time: 0.002541
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:50:24.151228
+MLP - Boston - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 32.97776
+MSE - std: 5.64477
+R2 - mean: 0.67203
+R2 - std: 0.05614
+
+Train time: 3.929832
+Test time: 0.002890
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:50:54.039687
+MLP - Boston - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 33.72492
+MSE - std: 7.83582
+R2 - mean: 0.66460
+R2 - std: 0.07793
+
+Train time: 3.644848
+Test time: 0.003364
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:51:35.028804
+MLP - Boston - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 35.78340
+MSE - std: 8.80226
+R2 - mean: 0.64413
+R2 - std: 0.08754
+
+Train time: 3.931100
+Test time: 0.003477
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:52:07.426167
+MLP - Boston - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 32.33509
+MSE - std: 6.35204
+R2 - mean: 0.67842
+R2 - std: 0.06317
+
+Train time: 3.625356
+Test time: 0.003419
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 8, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:52:45.631791
+MLP - Boston - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 30.11985
+MSE - std: 2.04639
+R2 - mean: 0.70045
+R2 - std: 0.02035
+
+Train time: 3.851299
+Test time: 0.002740
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 22, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:53:16.587783
+MLP - Boston - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 30.83394
+MSE - std: 3.29988
+R2 - mean: 0.69335
+R2 - std: 0.03282
+
+Train time: 3.785607
+Test time: 0.002750
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 22, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:53:58.469851
+MLP - Boston - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 34.41741
+MSE - std: 3.63618
+R2 - mean: 0.65771
+R2 - std: 0.03616
+
+Train time: 4.797680
+Test time: 0.002564
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 22, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:54:33.342327
+MLP - Boston - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 39.69798
+MSE - std: 5.27067
+R2 - mean: 0.60520
+R2 - std: 0.05242
+
+Train time: 3.482658
+Test time: 0.002385
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 22, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:55:12.672532
+MLP - Boston - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 31.23136
+MSE - std: 1.58908
+R2 - mean: 0.68940
+R2 - std: 0.01580
+
+Train time: 4.487005
+Test time: 0.002724
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 20, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-26 22:55:58.370469
+MLP - Boston - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 37.43010
+MSE - std: 11.16791
+R2 - mean: 0.62775
+R2 - std: 0.11107
+
+Train time: 3.426855
+Test time: 0.003727
+
+Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 20, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+

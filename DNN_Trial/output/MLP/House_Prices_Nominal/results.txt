@@ -1,0 +1,168 @@
+2025-05-27 01:13:12.379098
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 1534645618.72776
+MSE - std: 66827243.68454
+R2 - mean: 0.72956
+R2 - std: 0.01178
+
+Train time: 5.335281
+Test time: 0.026932
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 10, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:13:52.133568
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 1602440523.70137
+MSE - std: 49545574.49027
+R2 - mean: 0.71761
+R2 - std: 0.00873
+
+Train time: 5.466877
+Test time: 0.022789
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 10, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:14:46.316156
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 1392451636.02389
+MSE - std: 131464024.31859
+R2 - mean: 0.75462
+R2 - std: 0.02317
+
+Train time: 6.379215
+Test time: 0.020128
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 10, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:15:22.193726
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 1426140333.49036
+MSE - std: 108687656.97839
+R2 - mean: 0.74868
+R2 - std: 0.01915
+
+Train time: 4.385862
+Test time: 0.023564
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 10, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:16:09.150141
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 1494901461.46193
+MSE - std: 184565591.17192
+R2 - mean: 0.73656
+R2 - std: 0.03252
+
+Train time: 6.086165
+Test time: 0.015125
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 10, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:16:42.314529
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 1496971442.12485
+MSE - std: 84042020.91406
+R2 - mean: 0.73620
+R2 - std: 0.01481
+
+Train time: 4.464822
+Test time: 0.020591
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 10, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:17:20.708433
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1423575381.23062
+MSE - std: 168510635.83425
+R2 - mean: 0.74913
+R2 - std: 0.02970
+
+Train time: 5.100395
+Test time: 0.037552
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 26, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:18:00.075789
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1319184292.54981
+MSE - std: 143294089.06189
+R2 - mean: 0.76753
+R2 - std: 0.02525
+
+Train time: 4.974113
+Test time: 0.027062
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 26, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:18:45.506868
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 1223096371.82637
+MSE - std: 112729723.91674
+R2 - mean: 0.78446
+R2 - std: 0.01987
+
+Train time: 5.927647
+Test time: 0.030456
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 26, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:19:21.611926
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1538831528.10909
+MSE - std: 142104754.13034
+R2 - mean: 0.72882
+R2 - std: 0.02504
+
+Train time: 4.796598
+Test time: 0.046652
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 26, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:20:08.598505
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 1257423466.43465
+MSE - std: 89074732.20983
+R2 - mean: 0.77841
+R2 - std: 0.01570
+
+Train time: 6.229529
+Test time: 0.011742
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 24, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+
+2025-05-27 01:20:43.504525
+MLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1417604532.41403
+MSE - std: 171455150.41286
+R2 - mean: 0.75018
+R2 - std: 0.03021
+
+Train time: 4.632537
+Test time: 0.024070
+
+Best Parameters: {'d_block': 256, 'd_in': 109, 'd_out': 24, 'dropout': 0.10539334128428231, 'n_blocks': 2}
+
+

@@ -1,0 +1,168 @@
+2025-05-27 01:54:56.755585
+MLP - MIP - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 945742318.57713
+MSE - std: 362137133.00936
+R2 - mean: -0.11711
+R2 - std: 0.42775
+
+Train time: 3.294164
+Test time: 0.048428
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:55:23.158506
+MLP - MIP - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 952289404.90395
+MSE - std: 364122471.98360
+R2 - mean: -0.12484
+R2 - std: 0.43010
+
+Train time: 3.259478
+Test time: 0.032260
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:55:50.598983
+MLP - MIP - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 714952879.93035
+MSE - std: 269386201.19586
+R2 - mean: 0.15550
+R2 - std: 0.31820
+
+Train time: 3.324996
+Test time: 0.028202
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:56:14.719045
+MLP - MIP - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 1376238577.64480
+MSE - std: 551197254.38347
+R2 - mean: -0.62561
+R2 - std: 0.65107
+
+Train time: 2.802652
+Test time: 0.005083
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:56:44.827710
+MLP - MIP - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 587524811.78127
+MSE - std: 295220433.09096
+R2 - mean: 0.30602
+R2 - std: 0.34871
+
+Train time: 3.777980
+Test time: 0.022447
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 2, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:57:12.427839
+MLP - MIP - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 303798912.77898
+MSE - std: 37233297.52759
+R2 - mean: 0.64115
+R2 - std: 0.04398
+
+Train time: 3.462640
+Test time: 0.025226
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 2, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:57:35.516875
+MLP - MIP - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1388218125.14129
+MSE - std: 209120463.85771
+R2 - mean: -0.63976
+R2 - std: 0.24701
+
+Train time: 2.655722
+Test time: 0.011303
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 121, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:57:57.913832
+MLP - MIP - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1360337496.32317
+MSE - std: 255652469.06658
+R2 - mean: -0.60682
+R2 - std: 0.30198
+
+Train time: 2.669379
+Test time: 0.031563
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 121, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:58:25.104862
+MLP - MIP - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 3356118146.07115
+MSE - std: 227064002.52017
+R2 - mean: -2.96423
+R2 - std: 0.26821
+
+Train time: 3.206216
+Test time: 0.005458
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 122, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:58:49.879132
+MLP - MIP - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1219848790.77947
+MSE - std: 95661606.49237
+R2 - mean: -0.44088
+R2 - std: 0.11300
+
+Train time: 2.742170
+Test time: 0.030196
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 122, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:59:21.409906
+MLP - MIP - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 728024325.82238
+MSE - std: 394783259.80258
+R2 - mean: 0.14006
+R2 - std: 0.46632
+
+Train time: 3.961615
+Test time: 0.007893
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 13, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+
+2025-05-27 01:59:54.702282
+MLP - MIP - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1078348167.30494
+MSE - std: 111844598.25580
+R2 - mean: -0.27374
+R2 - std: 0.13211
+
+Train time: 2.962666
+Test time: 0.032231
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 13, 'dropout': 0.10823216670029355, 'n_blocks': 2}
+
+

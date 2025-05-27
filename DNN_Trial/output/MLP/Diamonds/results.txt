@@ -1,0 +1,168 @@
+2025-05-26 23:33:27.399966
+MLP - Diamonds - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 676372.74404
+MSE - std: 45609.98920
+R2 - mean: 0.95766
+R2 - std: 0.00286
+
+Train time: 210.942504
+Test time: 0.055875
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-26 23:48:58.777247
+MLP - Diamonds - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 693535.11328
+MSE - std: 59420.76781
+R2 - mean: 0.95658
+R2 - std: 0.00372
+
+Train time: 212.670759
+Test time: 0.080021
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-26 23:57:26.260914
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 500104.83552
+MSE - std: 18060.59814
+R2 - mean: 0.96869
+R2 - std: 0.00113
+
+Train time: 114.913669
+Test time: 0.062097
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 00:05:05.135939
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 569637.05646
+MSE - std: 80985.11768
+R2 - mean: 0.96434
+R2 - std: 0.00507
+
+Train time: 100.345587
+Test time: 0.052413
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 00:13:25.526868
+MLP - Diamonds - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 513585.14458
+MSE - std: 31969.67713
+R2 - mean: 0.96785
+R2 - std: 0.00200
+
+Train time: 113.738701
+Test time: 0.068135
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 00:20:46.025743
+MLP - Diamonds - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 522620.68637
+MSE - std: 26716.05119
+R2 - mean: 0.96728
+R2 - std: 0.00167
+
+Train time: 98.099608
+Test time: 0.071290
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 00:31:20.517446
+MLP - Diamonds - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 443464.72627
+MSE - std: 19504.52134
+R2 - mean: 0.97224
+R2 - std: 0.00122
+
+Train time: 144.181794
+Test time: 0.108602
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 00:41:17.772353
+MLP - Diamonds - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 437345.56066
+MSE - std: 18817.98979
+R2 - mean: 0.97262
+R2 - std: 0.00118
+
+Train time: 134.969704
+Test time: 0.087865
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 00:50:23.987907
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 446972.97108
+MSE - std: 4499.73578
+R2 - mean: 0.97202
+R2 - std: 0.00028
+
+Train time: 123.459753
+Test time: 0.090584
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 00:56:54.252378
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 449069.56423
+MSE - std: 3778.44315
+R2 - mean: 0.97189
+R2 - std: 0.00024
+
+Train time: 87.831221
+Test time: 0.074340
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 01:05:59.313869
+MLP - Diamonds - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 447108.07937
+MSE - std: 24429.69442
+R2 - mean: 0.97201
+R2 - std: 0.00153
+
+Train time: 123.495629
+Test time: 0.086448
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-05-27 01:12:28.161838
+MLP - Diamonds - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 452751.72055
+MSE - std: 17009.89516
+R2 - mean: 0.97166
+R2 - std: 0.00106
+
+Train time: 87.249895
+Test time: 0.084769
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
