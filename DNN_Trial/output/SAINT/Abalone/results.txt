@@ -1,0 +1,168 @@
+2025-05-27 09:45:40.610852
+SAINT - Abalone - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 7.20117
+MSE - std: 0.86187
+R2 - mean: 0.31544
+R2 - std: 0.08193
+
+Train time: 147.868617
+Test time: 0.255528
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 09:55:28.520350
+SAINT - Abalone - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 8.28908
+MSE - std: 0.89361
+R2 - mean: 0.21202
+R2 - std: 0.08495
+
+Train time: 166.190884
+Test time: 0.260654
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 10:05:31.466499
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 6.41312
+MSE - std: 0.41629
+R2 - mean: 0.39035
+R2 - std: 0.03957
+
+Train time: 159.383000
+Test time: 0.252312
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 10:15:05.757820
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 23.56984
+MSE - std: 5.04585
+R2 - mean: -1.24061
+R2 - std: 0.47967
+
+Train time: 167.055690
+Test time: 0.256503
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 10:24:56.852582
+SAINT - Abalone - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 6.64295
+MSE - std: 0.40721
+R2 - mean: 0.36850
+R2 - std: 0.03871
+
+Train time: 157.101808
+Test time: 0.259875
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 10:33:56.488377
+SAINT - Abalone - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 23.79283
+MSE - std: 9.58160
+R2 - mean: -1.26181
+R2 - std: 0.91085
+
+Train time: 149.659872
+Test time: 0.258490
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 10:44:09.221756
+SAINT - Abalone - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 7.45213
+MSE - std: 0.66182
+R2 - mean: 0.29158
+R2 - std: 0.06291
+
+Train time: 156.842950
+Test time: 0.249692
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 10:55:09.133494
+SAINT - Abalone - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 10.68142
+MSE - std: 1.35275
+R2 - mean: -0.01541
+R2 - std: 0.12860
+
+Train time: 174.157030
+Test time: 0.261774
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 11:05:37.456927
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 6.53327
+MSE - std: 0.15602
+R2 - mean: 0.37893
+R2 - std: 0.01483
+
+Train time: 154.941757
+Test time: 0.258870
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 11:14:08.286267
+SAINT - Abalone - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 28.07468
+MSE - std: 3.97814
+R2 - mean: -1.66886
+R2 - std: 0.37817
+
+Train time: 125.590206
+Test time: 0.260703
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 11:26:11.745781
+SAINT - Abalone - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 6.53327
+MSE - std: 0.15602
+R2 - mean: 0.37893
+R2 - std: 0.01483
+
+Train time: 157.714323
+Test time: 0.260293
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+
+2025-05-27 11:34:51.129542
+SAINT - Abalone - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 33.54907
+MSE - std: 5.48970
+R2 - mean: -2.18927
+R2 - std: 0.52187
+
+Train time: 129.358808
+Test time: 0.268297
+
+Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
+
+

@@ -1,0 +1,98 @@
+2025-05-27 13:31:20.430164
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 19731252.86647
+MSE - std: 1446060.64188
+R2 - mean: 0.23839
+R2 - std: 0.05582
+
+Train time: 967.469031
+Test time: 4.238673
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-27 14:54:31.109262
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 19952466.53573
+MSE - std: 1724135.83688
+R2 - mean: 0.22985
+R2 - std: 0.06655
+
+Train time: 951.469269
+Test time: 4.227662
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-27 16:17:46.752431
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 17571001.21622
+MSE - std: 609141.49926
+R2 - mean: 0.32177
+R2 - std: 0.02351
+
+Train time: 954.385036
+Test time: 4.280744
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-27 17:43:24.715136
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 19451779.58116
+MSE - std: 1440586.32794
+R2 - mean: 0.24917
+R2 - std: 0.05561
+
+Train time: 980.892588
+Test time: 4.164466
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-27 19:05:36.549598
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 17917301.83495
+MSE - std: 715888.30130
+R2 - mean: 0.30840
+R2 - std: 0.02763
+
+Train time: 945.998297
+Test time: 3.917304
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-27 20:32:07.453316
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 21181065.25059
+MSE - std: 1361386.95932
+R2 - mean: 0.18243
+R2 - std: 0.05255
+
+Train time: 995.071816
+Test time: 4.007329
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-05-27 21:55:14.562900
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 22542854.19744
+MSE - std: 1555364.89843
+R2 - mean: 0.12986
+R2 - std: 0.06004
+
+Train time: 956.712087
+Test time: 3.957387
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
