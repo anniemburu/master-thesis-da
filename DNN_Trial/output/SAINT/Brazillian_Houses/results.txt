@@ -1,0 +1,168 @@
+2025-05-28 06:21:03.576235
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 20364564.18312
+MSE - std: 1062318.19417
+R2 - mean: 0.48977
+R2 - std: 0.02662
+
+Train time: 679.904303
+Test time: 0.397129
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 06:41:59.588801
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 20310690.04363
+MSE - std: 1052820.36671
+R2 - mean: 0.49112
+R2 - std: 0.02638
+
+Train time: 688.326112
+Test time: 0.398077
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 06:58:46.853963
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 71407426.01331
+MSE - std: 92749662.73287
+R2 - mean: -0.78909
+R2 - std: 2.32382
+
+Train time: 550.935143
+Test time: 0.383448
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 07:10:55.445386
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 17803429.08613
+MSE - std: 295353.34578
+R2 - mean: 0.55394
+R2 - std: 0.00740
+
+Train time: 414.644952
+Test time: 0.388075
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 07:17:43.809970
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 39923672.70902
+MSE - std: 7845.03707
+R2 - mean: -0.00028
+R2 - std: 0.00020
+
+Train time: 233.174278
+Test time: 0.374933
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 07:24:32.436260
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 39923672.70902
+MSE - std: 7845.03707
+R2 - mean: -0.00028
+R2 - std: 0.00020
+
+Train time: 234.704363
+Test time: 0.379301
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 07:31:40.046749
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 37410591.53760
+MSE - std: 11790986.52866
+R2 - mean: 0.06269
+R2 - std: 0.29542
+
+Train time: 240.119015
+Test time: 0.483819
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 07:38:51.688683
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 37386981.00297
+MSE - std: 6315783.44039
+R2 - mean: 0.06328
+R2 - std: 0.15824
+
+Train time: 240.703269
+Test time: 0.484678
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 07:46:14.118176
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 37080647.06839
+MSE - std: 16522410.19241
+R2 - mean: 0.07096
+R2 - std: 0.41396
+
+Train time: 244.960397
+Test time: 0.534134
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 07:53:22.041411
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 45940841.42800
+MSE - std: 14747394.48656
+R2 - mean: -0.15103
+R2 - std: 0.36949
+
+Train time: 239.894242
+Test time: 0.509334
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 08:10:51.436466
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 17343538.82467
+MSE - std: 188699.07821
+R2 - mean: 0.56546
+R2 - std: 0.00473
+
+Train time: 566.189960
+Test time: 0.396068
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+
+2025-05-28 08:19:58.147922
+SAINT - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 21667542.86261
+MSE - std: 6951788.72446
+R2 - mean: 0.45713
+R2 - std: 0.17418
+
+Train time: 296.952265
+Test time: 0.394164
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
+
+

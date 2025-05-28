@@ -1,0 +1,168 @@
+2025-05-28 05:04:39.944576
+SAINT - Boston - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 38.24016
+MSE - std: 5.60389
+R2 - mean: 0.61970
+R2 - std: 0.05573
+
+Train time: 36.618008
+Test time: 0.116146
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:09:43.630650
+SAINT - Boston - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 37.90631
+MSE - std: 4.50320
+R2 - mean: 0.62302
+R2 - std: 0.04479
+
+Train time: 37.060995
+Test time: 0.114938
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:15:23.856236
+SAINT - Boston - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 42.77234
+MSE - std: 2.80687
+R2 - mean: 0.57462
+R2 - std: 0.02791
+
+Train time: 42.233507
+Test time: 0.122564
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:19:22.961110
+SAINT - Boston - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 77.85383
+MSE - std: 23.04347
+R2 - mean: 0.22573
+R2 - std: 0.22917
+
+Train time: 30.292984
+Test time: 0.124634
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:25:08.289075
+SAINT - Boston - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 43.99650
+MSE - std: 1.79173
+R2 - mean: 0.56245
+R2 - std: 0.01782
+
+Train time: 42.134398
+Test time: 0.118515
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:29:57.179802
+SAINT - Boston - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 59.13775
+MSE - std: 19.02559
+R2 - mean: 0.41187
+R2 - std: 0.18921
+
+Train time: 36.590019
+Test time: 0.122554
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:35:09.100577
+SAINT - Boston - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 45.02718
+MSE - std: 5.39483
+R2 - mean: 0.55220
+R2 - std: 0.05365
+
+Train time: 38.173360
+Test time: 0.121544
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:40:18.194849
+SAINT - Boston - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 47.69178
+MSE - std: 6.33116
+R2 - mean: 0.52570
+R2 - std: 0.06296
+
+Train time: 37.614200
+Test time: 0.122460
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:45:54.568746
+SAINT - Boston - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 47.49116
+MSE - std: 6.34044
+R2 - mean: 0.52769
+R2 - std: 0.06306
+
+Train time: 40.121928
+Test time: 0.121805
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:50:18.514283
+SAINT - Boston - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 90.94191
+MSE - std: 18.41186
+R2 - mean: 0.09557
+R2 - std: 0.18311
+
+Train time: 32.306512
+Test time: 0.122060
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 05:56:04.535355
+SAINT - Boston - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 45.49354
+MSE - std: 3.02758
+R2 - mean: 0.54756
+R2 - std: 0.03011
+
+Train time: 42.521510
+Test time: 0.120692
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
+2025-05-28 06:00:27.439087
+SAINT - Boston - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 100.83046
+MSE - std: 20.56072
+R2 - mean: -0.00278
+R2 - std: 0.20448
+
+Train time: 32.919594
+Test time: 0.126662
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
+
+
