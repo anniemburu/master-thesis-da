@@ -110,3 +110,59 @@ Test time: 0.159244
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
 
 
+2025-05-29 21:11:52.795634
+SAINT - Moneyball - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 1382.33851
+MSE - std: 131.01949
+R2 - mean: 0.85630
+R2 - std: 0.01362
+
+Train time: 34.073996
+Test time: 0.157814
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 21:19:22.849812
+SAINT - Moneyball - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1602.94816
+MSE - std: 93.78535
+R2 - mean: 0.83336
+R2 - std: 0.00975
+
+Train time: 32.784872
+Test time: 0.153612
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 21:27:12.583250
+SAINT - Moneyball - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 1348.44559
+MSE - std: 78.47479
+R2 - mean: 0.85982
+R2 - std: 0.00816
+
+Train time: 34.176642
+Test time: 0.160439
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 21:34:45.539610
+SAINT - Moneyball - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1641.99531
+MSE - std: 249.10309
+R2 - mean: 0.82930
+R2 - std: 0.02590
+
+Train time: 32.260524
+Test time: 0.163463
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+

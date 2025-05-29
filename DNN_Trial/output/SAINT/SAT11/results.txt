@@ -1,0 +1,140 @@
+2025-05-29 21:47:31.289677
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 3221581.24576
+MSE - std: 116187.10141
+R2 - mean: 0.43400
+R2 - std: 0.02041
+
+Train time: 193.491732
+Test time: 0.302206
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:00:24.134665
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 3128765.11675
+MSE - std: 143849.07349
+R2 - mean: 0.45031
+R2 - std: 0.02527
+
+Train time: 195.913176
+Test time: 0.321350
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:10:35.173181
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 3683651.66422
+MSE - std: 233718.53286
+R2 - mean: 0.35282
+R2 - std: 0.04106
+
+Train time: 163.996724
+Test time: 0.315545
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:16:24.157903
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 8806055.16519
+MSE - std: 2148308.40755
+R2 - mean: -0.54713
+R2 - std: 0.37744
+
+Train time: 98.380494
+Test time: 0.302271
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:25:28.524462
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 3786107.13544
+MSE - std: 121106.04079
+R2 - mean: 0.33482
+R2 - std: 0.02128
+
+Train time: 141.099902
+Test time: 0.303886
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:30:45.802064
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 8108139.48810
+MSE - std: 710030.40302
+R2 - mean: -0.42452
+R2 - std: 0.12475
+
+Train time: 88.249758
+Test time: 0.301902
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:40:26.859429
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 3940544.60277
+MSE - std: 264222.88558
+R2 - mean: 0.30769
+R2 - std: 0.04642
+
+Train time: 150.921802
+Test time: 0.307325
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:49:50.311015
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 3871750.83679
+MSE - std: 204114.24970
+R2 - mean: 0.31977
+R2 - std: 0.03586
+
+Train time: 143.639716
+Test time: 0.294670
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:59:22.570573
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 3598960.27864
+MSE - std: 166665.03947
+R2 - mean: 0.36770
+R2 - std: 0.02928
+
+Train time: 143.982390
+Test time: 0.304259
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 23:05:47.857058
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 5684705.03950
+MSE - std: 1365890.97052
+R2 - mean: 0.00126
+R2 - std: 0.23997
+
+Train time: 104.034087
+Test time: 0.307530
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
