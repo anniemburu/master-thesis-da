@@ -1,0 +1,168 @@
+2025-05-29 17:53:00.432381
+SAINT - MIP - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 33549986.29958
+MSE - std: 13153862.69059
+R2 - mean: 0.96037
+R2 - std: 0.01554
+
+Train time: 111.851382
+Test time: 0.276816
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 18:03:01.016428
+SAINT - MIP - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 30370623.05011
+MSE - std: 15781019.17798
+R2 - mean: 0.96413
+R2 - std: 0.01864
+
+Train time: 119.596499
+Test time: 0.281329
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 18:11:50.489585
+SAINT - MIP - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 1275239.49684
+MSE - std: 22095.26865
+R2 - mean: 0.99849
+R2 - std: 0.00003
+
+Train time: 103.118494
+Test time: 0.279806
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 18:18:26.923917
+SAINT - MIP - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 55694266.55852
+MSE - std: 53860668.09144
+R2 - mean: 0.93421
+R2 - std: 0.06362
+
+Train time: 83.389261
+Test time: 0.268252
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 18:51:45.330222
+SAINT - MIP - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 1115496.67007
+MSE - std: 3526.09227
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 312.235772
+Test time: 0.283827
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 19:24:53.294123
+SAINT - MIP - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 1115496.67007
+MSE - std: 3526.09227
+R2 - mean: 0.99868
+R2 - std: 0.00000
+
+Train time: 302.394601
+Test time: 0.271730
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 19:31:30.666459
+SAINT - MIP - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1734054358.98422
+MSE - std: 1635677258.47960
+R2 - mean: -1.04826
+R2 - std: 1.93205
+
+Train time: 85.774313
+Test time: 0.274698
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 19:39:20.561127
+SAINT - MIP - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 808054926.17610
+MSE - std: 329419479.32764
+R2 - mean: 0.04553
+R2 - std: 0.38911
+
+Train time: 94.913513
+Test time: 0.280762
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 19:47:32.017921
+SAINT - MIP - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 200842852.14980
+MSE - std: 256234753.09913
+R2 - mean: 0.76277
+R2 - std: 0.30266
+
+Train time: 99.927981
+Test time: 0.280625
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 19:53:38.156025
+SAINT - MIP - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1033535356.38197
+MSE - std: 170601592.14590
+R2 - mean: -0.22081
+R2 - std: 0.20151
+
+Train time: 77.653439
+Test time: 0.265903
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 20:01:56.373608
+SAINT - MIP - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 4637085.77807
+MSE - std: 6737539.24772
+R2 - mean: 0.99452
+R2 - std: 0.00796
+
+Train time: 98.044610
+Test time: 0.274812
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 20:08:28.893079
+SAINT - MIP - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 324737347.35011
+MSE - std: 387479672.20934
+R2 - mean: 0.61642
+R2 - std: 0.45769
+
+Train time: 86.540474
+Test time: 0.269549
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+

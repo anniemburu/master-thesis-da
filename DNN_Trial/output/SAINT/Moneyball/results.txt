@@ -1,0 +1,112 @@
+2025-05-29 20:14:58.888879
+SAINT - Moneyball - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 1336.80955
+MSE - std: 97.38595
+R2 - mean: 0.86103
+R2 - std: 0.01012
+
+Train time: 28.729953
+Test time: 0.152511
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 20:21:43.141958
+SAINT - Moneyball - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 1324.21365
+MSE - std: 78.26955
+R2 - mean: 0.86234
+R2 - std: 0.00814
+
+Train time: 29.733483
+Test time: 0.154842
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 20:28:46.528674
+SAINT - Moneyball - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 1344.09942
+MSE - std: 99.54079
+R2 - mean: 0.86027
+R2 - std: 0.01035
+
+Train time: 30.965978
+Test time: 0.154321
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 20:35:47.753432
+SAINT - Moneyball - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 1439.03918
+MSE - std: 86.80955
+R2 - mean: 0.85040
+R2 - std: 0.00902
+
+Train time: 31.428781
+Test time: 0.156236
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 20:42:45.869176
+SAINT - Moneyball - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 1413.01983
+MSE - std: 91.32241
+R2 - mean: 0.85311
+R2 - std: 0.00949
+
+Train time: 30.708432
+Test time: 0.156845
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 20:49:30.119921
+SAINT - Moneyball - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 1307.96147
+MSE - std: 99.29571
+R2 - mean: 0.86403
+R2 - std: 0.01032
+
+Train time: 30.148858
+Test time: 0.152450
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 20:56:47.188411
+SAINT - Moneyball - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1516.02672
+MSE - std: 240.16224
+R2 - mean: 0.84240
+R2 - std: 0.02497
+
+Train time: 31.711577
+Test time: 0.164975
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
+2025-05-29 21:04:00.136369
+SAINT - Moneyball - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1519.18534
+MSE - std: 266.65774
+R2 - mean: 0.84207
+R2 - std: 0.02772
+
+Train time: 31.729309
+Test time: 0.159244
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
+
+
