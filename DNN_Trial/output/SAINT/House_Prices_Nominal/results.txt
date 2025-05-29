@@ -1,0 +1,168 @@
+2025-05-29 01:44:55.754421
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 1243373396.07710
+MSE - std: 108350704.75094
+R2 - mean: 0.78089
+R2 - std: 0.01909
+
+Train time: 38.658472
+Test time: 0.190304
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 01:52:36.925750
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 1262296049.64198
+MSE - std: 97326463.77384
+R2 - mean: 0.77755
+R2 - std: 0.01715
+
+Train time: 38.391146
+Test time: 0.186675
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:01:16.414579
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 1160529749.16926
+MSE - std: 95558434.24078
+R2 - mean: 0.79549
+R2 - std: 0.01684
+
+Train time: 41.140865
+Test time: 0.186468
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:09:00.220305
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 1192702220.16407
+MSE - std: 231617182.45488
+R2 - mean: 0.78982
+R2 - std: 0.04082
+
+Train time: 45.009822
+Test time: 0.203445
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:16:25.979597
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 1110334752.18258
+MSE - std: 104497475.68190
+R2 - mean: 0.80433
+R2 - std: 0.01841
+
+Train time: 42.947926
+Test time: 0.188827
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:24:16.170628
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 1227943849.45473
+MSE - std: 86298040.40202
+R2 - mean: 0.78361
+R2 - std: 0.01521
+
+Train time: 42.472468
+Test time: 0.182334
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:31:05.528091
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1310172912.97128
+MSE - std: 163488465.83901
+R2 - mean: 0.76912
+R2 - std: 0.02881
+
+Train time: 37.038578
+Test time: 0.178334
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:37:45.948646
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1276983631.08773
+MSE - std: 282381524.00254
+R2 - mean: 0.77496
+R2 - std: 0.04976
+
+Train time: 37.889599
+Test time: 0.181250
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:45:15.033504
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 1075227155.87261
+MSE - std: 113143991.52334
+R2 - mean: 0.81052
+R2 - std: 0.01994
+
+Train time: 41.791417
+Test time: 0.179434
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:52:30.154823
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1162478761.99627
+MSE - std: 262754000.86767
+R2 - mean: 0.79514
+R2 - std: 0.04630
+
+Train time: 41.757596
+Test time: 0.178811
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 02:59:54.622166
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 987250504.50753
+MSE - std: 90610168.77589
+R2 - mean: 0.82602
+R2 - std: 0.01597
+
+Train time: 42.492675
+Test time: 0.191640
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-29 03:06:28.217442
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1458409552.71852
+MSE - std: 511586216.09274
+R2 - mean: 0.74299
+R2 - std: 0.09015
+
+Train time: 37.743883
+Test time: 0.185850
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+

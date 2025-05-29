@@ -54,3 +54,45 @@ Test time: 0.351703
 Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
 
 
+2025-05-28 19:03:11.772261
+FTTransformer - Diamonds - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 625695.73947
+MSE - std: 24026.41787
+R2 - mean: 0.96083
+R2 - std: 0.00150
+
+Train time: 7533.782962
+Test time: 0.344103
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
+2025-05-29 04:59:23.034805
+FTTransformer - Diamonds - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 595685.48144
+MSE - std: 9951.14210
+R2 - mean: 0.96271
+R2 - std: 0.00062
+
+Train time: 7215.048020
+Test time: 0.350592
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
+2025-05-29 15:24:36.182810
+FTTransformer - Diamonds - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 551037.96050
+MSE - std: 22066.78494
+R2 - mean: 0.96550
+R2 - std: 0.00138
+
+Train time: 7567.840699
+Test time: 0.360859
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05}
+
+
