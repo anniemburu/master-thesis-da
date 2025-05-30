@@ -37,6 +37,9 @@ parameters:
       alpha: 0.31754394496574395
       lambda: 0.00023658169410883335
       eta: 0.052419276591241695
+    RandomForest:
+      max_depth: 12
+      n_estimators: 99
   Allstate_Claims:
     FTTransformer:
       learning_rate: 0.0010788862572108022
@@ -75,6 +78,9 @@ parameters:
       alpha: 3.404949917072644e-07
       lambda: 9.528801580499112e-08
       eta: 0.14336552603624825
+    RandomForest:
+      max_depth: 10
+      n_estimators: 39
   Black_Friday:
     FTTransformer:
       learning_rate: 0.00018442395349507182
@@ -113,6 +119,9 @@ parameters:
       alpha: 6.986726717707178e-07
       lambda: 5.465344165680221e-06
       eta: 0.29400950414189186
+    RandomForest:
+      max_depth: 12
+      n_estimators: 12
   Boston:
     FTTransformer:
       learning_rate: 0.005961637956043898
@@ -151,6 +160,9 @@ parameters:
       alpha: 8.462153008039433e-06
       lambda: 1.9404218709476588e-05
       eta: 0.09910985949066609
+    RandomForest:
+      max_depth: 8
+      n_estimators: 77
   Brazillian_Houses:
     FTTransformer:
       learning_rate: 0.007246604745497065
@@ -189,6 +201,9 @@ parameters:
       alpha: 2.2083853825308624e-08
       lambda: 0.0017040890821263966
       eta: 0.24058442782041825
+    RandomForest:
+      max_depth: 11
+      n_estimators: 15
   Diamonds:
     FTTransformer:
       learning_rate: 0.007101255154561158
@@ -227,6 +242,9 @@ parameters:
       alpha: 0.016557454766339894
       lambda: 2.1467882724430124e-07
       eta: 0.13685411433920083
+    RandomForest:
+      max_depth: 12
+      n_estimators: 23
   House_Prices_Nominal:
     FTTransformer:
       learning_rate: 0.0003973965546674877
@@ -265,6 +283,9 @@ parameters:
       alpha: 0.017077444591583498
       lambda: 0.0013165910056231439
       eta: 0.18394165476867871
+    RandomForest:
+      max_depth: 12
+      n_estimators: 39
   House_Sales:
     FTTransformer:
       learning_rate: 0.0008304138365966551
@@ -303,6 +324,9 @@ parameters:
       alpha: 0.009341918576561432
       lambda: 1.6477053019350504e-06
       eta: 0.25069941667869916
+    RandomForest:
+      max_depth: 12
+      n_estimators: 59
   MIP:
     FTTransformer:
       learning_rate: 0.005478197312390903
@@ -341,6 +365,9 @@ parameters:
       alpha: 0.00035509999996169325
       lambda: 1.935368584660575e-07
       eta: 0.07213372586209671
+    RandomForest:
+      max_depth: 6
+      n_estimators: 15
   Mercedes_Benz:
     FTTransformer:
       learning_rate: 0.0003973965546674877
@@ -379,6 +406,9 @@ parameters:
       alpha: 1.80613318106913e-08
       lambda: 0.4033325485614207
       eta: 0.04373143886440441
+    RandomForest:
+      max_depth: 3
+      n_estimators: 20
   Moneyball:
     FTTransformer:
       learning_rate: 0.008974241215295128
@@ -417,6 +447,9 @@ parameters:
       alpha: 3.914045316230592e-05
       lambda: 0.319811266659572
       eta: 0.09464240000522656
+    RandomForest:
+      max_depth: 9
+      n_estimators: 78
   SAT11:
     FTTransformer:
       learning_rate: 0.004544327453839196
@@ -455,6 +488,9 @@ parameters:
       alpha: 1.2990735895136888e-06
       lambda: 1.8060446939267034e-08
       eta: 0.1331690599779273
+    RandomForest:
+      max_depth: 12
+      n_estimators: 26
   Sensory:
     FTTransformer:
       learning_rate: 0.007837909586982108
@@ -493,6 +529,9 @@ parameters:
       alpha: 3.8628734334151045e-07
       lambda: 0.04825003662277624
       eta: 0.055937333566860314
+    RandomForest:
+      max_depth: 3
+      n_estimators: 84
   Socmob:
     FTTransformer:
       learning_rate: 0.005567330402018387
@@ -531,3 +570,6 @@ parameters:
       alpha: 6.105162617992694e-06
       lambda: 6.755503372760612e-08
       eta: 0.11623060221352166
+    RandomForest:
+      max_depth: 12
+      n_estimators: 30
