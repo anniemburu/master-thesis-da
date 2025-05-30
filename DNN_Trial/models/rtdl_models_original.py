@@ -22,14 +22,11 @@ import torch.nn as nn
 import torch.optim
 from torch import Tensor
 from torch.utils.data import TensorDataset, DataLoader
-from sklearn.metrics import mean_squared_error
 
 from models.basemodel_torch import BaseModelTorch
 
 from utils.io_utils import get_output_path
 from tqdm.std import tqdm
-
-from train import freedman_diaconis, sturges, bin_finder, bin_shifter, impute_missing_test, binning
 
 warnings.resetwarnings()
 
@@ -40,18 +37,11 @@ class ResMLP(BaseModelTorch):
       self.params = params
       self.args = args
 
-      if self.args.objective == "ordinal_regression":
-         self.n_bins = self.args.num_bins
-         self.params['d_out'] = self.n_bins - 1
-      else:
-         self.params['d_out'] = args.num_classes
-
       self.params['d_in'] = args.num_features
+      self.params['d_out'] = args.num_classes
 
       self.lambda_reg =  torch.nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
 
-      self.bin_means = None
-      self.discretizer = None
 
       #model
       self.model = ResNet(
@@ -98,23 +88,11 @@ class ResMLP(BaseModelTorch):
       print(f"X : {type(X)}, y : {type(y)}, X : {type(X_val)}, X : {type(X_val)} \n")
       print(f"In fit Nump iss")
 
-      y_original = y.copy()  # Store original y for ordinal regression
-      y_val_original = y_val.copy() if y_val is not None else None
-
-      if self.args.objective == "ordinal_regression": 
-         #create bins
-         y_train_binned, y_val_binned = binning(self.args, y)
-
-         self.bin_means = np.array([y[y_train_binned == k].mean() for k in range(self.n_bins)])
-
-         y = self._create_ordinal_targets(y_train_binned)
-         #y_val = self._create_ordinal_targets(y_val_binned)
-
 
       X = torch.tensor(X, dtype=torch.float32)
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
-      X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device) if X_val is not None else None
-      y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device) if y_val is not None else None
+      X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
+      y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
       class_weights = class_weights.to(self.device) if class_weights is not None else None
 
       print(f"X : {type(X)}, y : {type(y)}, X : {type(X_val)}, X : {type(X_val)} \n")
@@ -170,10 +148,7 @@ class ResMLP(BaseModelTorch):
                 
             self.optimizer.zero_grad()
             outputs = self.model(batch_X).squeeze()
-            if self.args.objective == "ordinal_regression":
-               loss = self.ordinal_loss(outputs, batch_y) + penalty #add penalty
-            else:
-               loss = self._compute_loss(outputs, batch_y, class_weights) + penalty #add penalty
+            loss = self._compute_loss(outputs, batch_y, class_weights) + penalty #add penalty
 
             loss.backward()
             self.optimizer.step()
@@ -181,85 +156,29 @@ class ResMLP(BaseModelTorch):
             #Calc and Store training loss
             epoch_loss += loss.item()
 
-            if X_val is not None:
-               if self.args.objective == "ordinal_regression":
-                  with torch.no_grad():
-                     val_pred = self.predict(X_val)
-                     val_loss = mean_squared_error(y_val, val_pred)
-               else:
-                  val_loss = self._evaluate(X_val, y_val, class_weights)
-            
-               epoch_loss_val += val_loss
+            val_loss = self._evaluate(X_val, y_val, class_weights)
+            epoch_loss_val += val_loss
+
+         
 
          avg_loss = epoch_loss / len(loader)
          avg_loss_val = epoch_loss_val / len(loader)
+         
+         loss_history.append(avg_loss)
+         val_history.append(avg_loss_val)
          lambda_history.append(torch.exp(self.lambda_reg).item())
-         
-         if X_val is not None:
-            loss_history.append(avg_loss)
-            val_history.append(avg_loss_val)
-         
-            # Early stopping
-            if min(val_history) == val_history[-1]:
-               best_model = self.model.state_dict()
-                  
-            if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
-               break
+
+         # Early stopping
+         if min(val_history) == val_history[-1]:
+            best_model = self.model.state_dict()
+               
+         if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
+            break
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
       else:
          return loss_history , val_history
-
-   def _create_ordinal_targets(self, y_binned):
-      """
-      Create ordinal targets from binned targets.
-      Converts binned targets into a binary matrix where each column represents a bin.
-      #Convert bin indices to cumulative binary targets.
-      """
-      targets = np.zeros((len(y_binned), self.n_bins-1))
-      for i, bin_idx in enumerate(y_binned):
-         if bin_idx > 0:
-               targets[i, :int(bin_idx)] = 1.0
-      return torch.tensor(targets, dtype=torch.float32)
-    
-      
-   def ordinal_loss(self, outputs, targets):
-      """
-      Calculate the ordinal regression loss.
-      Weighted binary cross-entropy loss that respects ordinal relationships
-      Penalizes distant misclassifications more than adjacent ones
-
-      Args:
-          outputs: Model predictions.
-          targets: True labels.
-      Returns:
-          Ordinal regression loss.
-      """
-      true_bins = targets.sum(dim=1)  # Get the true bin indices
-      threshold_idx = torch.arange(1, self.n_bins, device=self.device) # Exclude the last bin
-      weights = torch.abs(true_bins.unsqueeze(1) - threshold_idx)  # Calculate weights based on distance to true bin
-
-      # Calculate the binary cross-entropy loss for each bin (Weighted BCE Loss)
-      bce = nn.BCEWithLogitsLoss(reduction='none')
-      #print(f"Type of outputs: {type(outputs)}, Type of target : {type(targets)}" )  
-      #print(f"Outputs shape: {outputs.shape}, Targets shape: {targets.shape}")
-      #print(f"Outputs: {outputs}, Targets: {targets}")
-      loss = bce(outputs, targets.float())
-
-      return (loss * weights).mean()  # Average loss across all samples
-   
-   def _ordinal_to_continuous(self, outputs):
-      """Convert threshold outputs to continuous predictions"""
-      probs = torch.sigmoid(outputs).cpu().numpy()
-      bin_probs = np.zeros((len(probs), self.n_bins))
-      
-      bin_probs[:, 0] = 1 - probs[:, 0]  # P(bin0)
-      for k in range(1, self.n_bins-1):
-         bin_probs[:, k] = probs[:, k-1] - probs[:, k]  # P(bin_k)
-      bin_probs[:, -1] = probs[:, -1]  # P(last_bin)
-      
-      return bin_probs @ self.bin_means  # Weighted average
 
    def _compute_loss(self, outputs, targets, class_weights):
         if self.args.objective == 'regression':
@@ -277,10 +196,7 @@ class ResMLP(BaseModelTorch):
       with torch.no_grad():
          outputs = self.model(X).squeeze()
 
-         if self.args.objective == 'ordinal_regression':
-            self.predictions = self._ordinal_to_continuous(outputs)
-
-         elif self.args.objective == 'regression':
+         if self.args.objective == 'regression':
             self.predictions = outputs.detach().cpu().numpy()
             
          else:
@@ -298,33 +214,14 @@ class ResMLP(BaseModelTorch):
          self.model.eval()
          #X = torch.tensor(X, dtype=torch.float32).to(self.device)
          X = X.clone().detach().to(torch.float32).to(self.device)
+         output = torch.softmax(self.model(X), dim=1)
+         probabilities = output.detach().cpu().numpy()
 
-         if self.args.objective == 'ordinal_regression':
-            outputs = self.model(X)
-            probs = torch.sigmoid(outputs).detach().cpu().numpy()
-
-            bin_probs = np.zeros((len(probs), self.n_bins))
-            bin_probs[:, 0] = 1 - probs[:, 0]
-            for k in range(1, self.n_bins-1):
-                bin_probs[:, k] = probs[:, k-1] - probs[:, k]
-            bin_probs[:, -1] = probs[:, -1]
-
-            self.prediction_probabilities = bin_probs
-
-         else:
-            output = torch.softmax(self.model(X), dim=1)
-            probabilities = output.detach().cpu().numpy()
-
-            self.prediction_probabilities = probabilities
-            #print(f"Probabilities in curr mod: {self.prediction_probabilities}")
+         self.prediction_probabilities = probabilities
+         #print(f"Probabilities in curr mod: {self.prediction_probabilities}")
          return self.prediction_probabilities
 
    def _evaluate(self, X, y, class_weights):
-      if self.args.objective == "ordinal_regression":
-         y_pred = self.predict(X)
-         loss = mean_squared_error(y.cpu().numpy(), y_pred)
-         
-      else:
          self.model.eval()
          #X = torch.tensor(X, dtype=torch.float32).to(self.device)
          X = X.clone().detach().to(torch.float32).to(self.device)
@@ -332,8 +229,7 @@ class ResMLP(BaseModelTorch):
          with torch.no_grad():
             outputs = self.model(X).squeeze()
             loss = self._compute_loss(outputs, y, class_weights).item()
-
-      return loss
+         return loss
 
    
 
@@ -364,18 +260,10 @@ class MLP(BaseModelTorch):
       self.params = params
       self.args = args
 
-      if self.args.objective == "ordinal_regression":
-         self.n_bins = self.args.num_bins
-         self.params['d_out'] = self.n_bins - 1
-      else:
-         self.params['d_out'] = args.num_classes
-
       self.params['d_in'] = args.num_features
+      self.params['d_out'] = args.num_classes
 
       self.lambda_reg =  torch.nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
-
-      self.bin_means = None
-      self.discretizer = None
 
 
       #model
@@ -421,30 +309,12 @@ class MLP(BaseModelTorch):
    def fit(self, X, y, X_val=None, y_val=None, frequency_map=None, class_weights=None):
        #self.model = ResNet().to(self.device)
        #optimizer = torch.optim.AdamW(self.model.parameters(), lr=3e-4, weight_decay=1e-5)
-      y_original = y.copy()  # Store original y for ordinal regression
-      y_val_original = y_val.copy() if y_val is not None else None
-
-      if self.args.objective == "ordinal_regression": 
-         #create bins
-         y_train_binned, y_val_binned = binning(self.args, y)
-         
-         self.bin_means = np.array([y[y_train_binned == k].mean() for k in range(self.n_bins)])
-
-         print(f"Y origi : {y[:10]}")
-         print(f"Binned : {y_train_binned[:10]}")
-         print(f"Bin Mean : {self.bin_means}")
-         
-         y = self._create_ordinal_targets(y_train_binned)
-         #y_val = self._create_ordinal_targets(y_val_binned)
-
 
       X = torch.tensor(X, dtype=torch.float32)
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
-      X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device) if X_val is not None else None
-      y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device) if y_val is not None else None
+      X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
+      y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
       class_weights = class_weights.to(self.device) if class_weights is not None else None
-
-      
 
       print(f"Seed in MLP: {self.args.test_seed}")
       g = self.get_generator(self.args.test_seed) #seed gen
@@ -496,107 +366,35 @@ class MLP(BaseModelTorch):
                 #~~~~  
             self.optimizer.zero_grad()
             outputs = self.model(batch_X).squeeze()
-
-            if self.args.objective == "ordinal_regression":
-               loss = self.ordinal_loss(outputs, batch_y) + penalty #add penalty
-            else:
-               loss = self._compute_loss(outputs, batch_y, class_weights) + penalty #add penalty
-
+            loss = self._compute_loss(outputs, batch_y, class_weights) + penalty #add penalty
             loss.backward()
             self.optimizer.step()
          
-            if X_val is not None:
-               if self.args.objective == "ordinal_regression":
-                  with torch.no_grad():
-                     val_pred = self.predict(X_val)
-                     val_loss = mean_squared_error(y_val, val_pred)
-               else:
-                  val_loss = self._evaluate(X_val, y_val, class_weights)
-
-               epoch_loss_val += val_loss
+            val_loss = self._evaluate(X_val, y_val, class_weights)
 
             #Calc and Store training and val loss
             epoch_loss += loss.item()
-            
+            epoch_loss_val += val_loss
+
+         
 
          avg_loss = epoch_loss / len(loader)
+         avg_loss_val = epoch_loss_val / len(loader)
          loss_history.append(avg_loss)
-
+         val_history.append(avg_loss_val)
          lambda_history.append(torch.exp(self.lambda_reg).item())
 
-         if X_val is not None:
-            avg_loss_val = epoch_loss_val / len(loader)
-            val_history.append(avg_loss_val)
-            
-            # Early stopping 
-            if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
-               break
-
-            if min(val_history) == val_history[-1]:
-               best_model = self.model.state_dict()
-         
+         # Early stopping
+         if min(val_history) == val_history[-1]:
+            best_model = self.model.state_dict()
+               
+         if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
+            break
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
       else:
          return loss_history , val_history
-   
-   def _create_ordinal_targets(self, y_binned):
-      """
-      Create ordinal targets from binned targets.
-      Converts binned targets into a binary matrix where each column represents a bin.
-      #Convert bin indices to cumulative binary targets.
-      """
-      targets = np.zeros((len(y_binned), self.n_bins-1))
-      for i, bin_idx in enumerate(y_binned):
-         if bin_idx > 0:
-               targets[i, :int(bin_idx)] = 1.0
-      return torch.tensor(targets, dtype=torch.float32)
-    
-      
-   def ordinal_loss(self, outputs, targets):
-      """
-      Calculate the ordinal regression loss.
-      Weighted binary cross-entropy loss that respects ordinal relationships
-      Penalizes distant misclassifications more than adjacent ones
-
-      Args:
-          outputs: Model predictions.
-          targets: True labels.
-      Returns:
-          Ordinal regression loss.
-      """
-      true_bins = targets.sum(dim=1)  # Get the true bin indices
-      threshold_idx = torch.arange(1, self.n_bins, device=self.device) # Exclude the last bin
-      weights = torch.abs(true_bins.unsqueeze(1) - threshold_idx)  # Calculate weights based on distance to true bin
-
-      # Calculate the binary cross-entropy loss for each bin (Weighted BCE Loss)
-      bce = nn.BCEWithLogitsLoss(reduction='none')
-      #print(f"Type of outputs: {type(outputs)}, Type of target : {type(targets)}" )  
-      #print(f"Outputs shape: {outputs.shape}, Targets shape: {targets.shape}")
-      #print(f"Outputs: {outputs}, Targets: {targets}")
-      loss = bce(outputs, targets.float())
-
-      return (loss * weights).mean()  # Average loss across all samples
-   
-   def _ordinal_to_continuous(self, outputs):
-      """Convert threshold outputs to continuous predictions"""
-      probs = torch.sigmoid(outputs).cpu().numpy()
-      bin_probs = np.zeros((len(probs), self.n_bins))
-
-      print(f"We are in pred ordinal to continuous")
-      print(f"Probs in pred ordinal to continuous: {probs.shape}")
-      print(f"Probs in pred ordinal to continuous: {probs}")
-      print(f"bin prob: {bin_probs}")
-      print(f"Bin means in pred ordinal to continuous: {self.bin_means}")
-      
-      bin_probs[:, 0] = 1 - probs[:, 0]  # P(bin0)
-      for k in range(1, self.n_bins-1):
-         bin_probs[:, k] = probs[:, k-1] - probs[:, k]  # P(bin_k)
-      bin_probs[:, -1] = probs[:, -1]  # P(last_bin)
-      
-      return bin_probs @ self.bin_means  # Weighted average
-      
 
    def _compute_loss(self, outputs, targets, class_weights):
         if self.args.objective == 'regression':
@@ -614,15 +412,8 @@ class MLP(BaseModelTorch):
       
       with torch.no_grad():
          outputs = self.model(X).squeeze()
-         #print("WE ARE IN THE PREDICT METHOD")
-         #print(f"Outputs in curr mod: {outputs.shape}")
-         #print(f"Outputs in curr mod: {outputs.cpu().numpy()}")
 
-         if self.args.objective == 'ordinal_regression':
-            self.predictions = self._ordinal_to_continuous(outputs)
-            print(f"Predictions in curr mod: {self.predictions.shape}")
-            print(f"Predictions in curr mod: {self.predictions}")
-         elif self.args.objective == 'regression':
+         if self.args.objective == 'regression':
             self.predictions = outputs.detach().cpu().numpy()
             
          else:
@@ -642,32 +433,14 @@ class MLP(BaseModelTorch):
 
          #X = torch.tensor(X, dtype=torch.float32).to(self.device)
          X = X.clone().detach().to(torch.float32).to(self.device)
+         output = torch.softmax(self.model(X), dim=1)
+         probabilities = output.detach().cpu().numpy()
 
-         if self.args.objective == 'ordinal_regression':
-            outputs = self.model(X)
-            probs = torch.sigmoid(outputs).detach().cpu().numpy()
-
-            bin_probs = np.zeros((len(probs), self.n_bins))
-            bin_probs[:, 0] = 1 - probs[:, 0]
-            for k in range(1, self.n_bins-1):
-                bin_probs[:, k] = probs[:, k-1] - probs[:, k]
-            bin_probs[:, -1] = probs[:, -1]
-
-            self.prediction_probabilities = bin_probs
-
-         else:
-            output = torch.softmax(self.model(X), dim=1)
-            probabilities = output.detach().cpu().numpy()
-
-            self.prediction_probabilities = probabilities
-            #print(f"Probabilities in curr mod: {self.prediction_probabilities}")
+         self.prediction_probabilities = probabilities
+         #print(f"Probabilities in curr mod: {self.prediction_probabilities}")
          return self.prediction_probabilities
 
    def _evaluate(self, X, y, class_weights):
-      if self.args.objective == "ordinal_regression":
-         y_pred = self.predict(X)
-         loss = mean_squared_error(y.cpu().numpy(), y_pred)
-      else:
          self.model.eval()
          print(f"X in evaluate: {type(X)}")
 
@@ -677,8 +450,7 @@ class MLP(BaseModelTorch):
          with torch.no_grad():
             outputs = self.model(X).squeeze()
             loss = self._compute_loss(outputs, y, class_weights).item()
-
-      return loss
+         return loss
     
    @classmethod
    def define_trial_parameters(cls, trial, args):
@@ -702,20 +474,10 @@ class FTTransformerWrapper(BaseModelTorch):
 
       #self.params['d_in'] = args.num_features
       #self.params['d_out'] = args.num_classes
-      if self.args.objective == "ordinal_regression":
-         self.n_bins = self.args.num_bins
-         d_out = self.n_bins - 1
-
-      else:
-         d_out = args.num_classes
-
-      self.bin_means = None
-      self.discretizer = None
-
       self.model = FTTransformer(
          n_cont_features= len(self.args.num_idx) if self.args.num_idx is not None else 0,
          cat_cardinalities= self.args.cat_dims if self.args.cat_dims is not None else [],
-         d_out = d_out,
+         d_out = self.args.num_classes,
          **FTTransformer.get_default_kwargs(),
                      ).to(self.device)
 
@@ -724,9 +486,11 @@ class FTTransformerWrapper(BaseModelTorch):
 
       print("On Device:", self.device)
       print(f"Model: {self.model}")
-      """for name, param in self.model.named_parameters():
-         print(name, param.shape, param.view(-1)[0].item())"""
+      for name, param in self.model.named_parameters():
+         print(name, param.shape, param.view(-1)[0].item())
       
+
+
    def seed_worker(self, worker_id):
       worker_seed = torch.initial_seed() % 2**32
       np.random.seed(worker_seed)
@@ -742,19 +506,6 @@ class FTTransformerWrapper(BaseModelTorch):
       print(f"Train Data b4 training...")
       print(f"X: {type(X)} , y : {type(y), }, X_val: {type(X_val)} , y : {type(y_val)}\n")
       
-      if self.args.objective == "ordinal_regression": 
-         #create bins
-         y_train_binned, y_val_binned = binning(self.args, y)
-         
-         self.bin_means = np.array([y[y_train_binned == k].mean() for k in range(self.n_bins)])
-
-         print(f"Y origi : {y[:10]}")
-         print(f"Binned : {y_train_binned[:10]}")
-         print(f"Bin Mean : {self.bin_means}")
-         
-         y = self._create_ordinal_targets(y_train_binned)
-         #y_val = self._create_ordinal_targets(y_val_binned)
-
       #Convert to NP array
       X = np.asarray(X, dtype=np.float32)
       y = np.asarray(y, dtype=np.float32 if self.args.objective == 'regression' else np.int64)
@@ -764,8 +515,9 @@ class FTTransformerWrapper(BaseModelTorch):
 
       X = torch.tensor(X, dtype=torch.float32)
       y = torch.tensor(y, dtype=torch.float32 if self.args.objective == 'regression' else torch.long)
-      X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device) if X_val is not None else None
-      y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device) if y_val is not None else None
+      X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device)
+      y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device)
+
 
 
       print(f"Train Data after...")
@@ -827,108 +579,39 @@ class FTTransformerWrapper(BaseModelTorch):
                 
             self.optimizer.zero_grad()
             x_cont, x_cat = self._split_inputs(batch_X)
+            
             outputs = self.model(x_cont, x_cat)
-
-            if self.args.objective == "ordinal_regression":
-               loss = self.ordinal_loss(outputs, batch_y) + penalty #add penalty
-            else:
-               #outputs = self.model(batch_X).squeeze()
-               loss = self._compute_loss(outputs, batch_y, class_weights)
+            #outputs = self.model(batch_X).squeeze()
+            loss = self._compute_loss(outputs, batch_y, class_weights)
 
             loss.backward()
             self.optimizer.step()
 
-            if X_val is not None:
-               if self.args.objective == "ordinal_regression":
-                  with torch.no_grad():
-                     val_pred = self.predict(X_val)
-                     val_loss = mean_squared_error(y_val, val_pred)
-               else:
-                  val_loss = self._evaluate(X_val, y_val, class_weights)
-
-               epoch_loss_val += val_loss
-
             #Calc and Store training loss
             epoch_loss += loss.item()
             
-            
+            val_loss = self._evaluate(X_val, y_val, class_weights)
+            epoch_loss_val += val_loss
+
          avg_loss = epoch_loss / len(loader)
          avg_loss_val = epoch_loss_val / len(loader)
+
+         loss_history.append(avg_loss)
+         val_history.append(avg_loss_val)
          lambda_history.append(torch.exp(self.lambda_reg).item())
 
-         if X_val is not None:
-            loss_history.append(avg_loss)
-            val_history.append(avg_loss_val)
-         
-            # Early stopping
-            if min(val_history) == val_history[-1]:
-               best_model = self.model.state_dict()
-                  
-            if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
-               break
+         # Early stopping
+         if min(val_history) == val_history[-1]:
+            best_model = self.model.state_dict()
+               
+         if len(val_history) - val_history.index(min(val_history)) > self.args.early_stopping_rounds:
+            break
          
 
       if self.args.frequency_reg:
          return loss_history , val_history, lambda_history
       else:
          return loss_history , val_history
-
-   def _create_ordinal_targets(self, y_binned):
-      """
-      Create ordinal targets from binned targets.
-      Converts binned targets into a binary matrix where each column represents a bin.
-      #Convert bin indices to cumulative binary targets.
-      """
-      targets = np.zeros((len(y_binned), self.n_bins-1))
-      for i, bin_idx in enumerate(y_binned):
-         if bin_idx > 0:
-               targets[i, :int(bin_idx)] = 1.0
-      return torch.tensor(targets, dtype=torch.float32)
-    
-      
-   def ordinal_loss(self, outputs, targets):
-      """
-      Calculate the ordinal regression loss.
-      Weighted binary cross-entropy loss that respects ordinal relationships
-      Penalizes distant misclassifications more than adjacent ones
-
-      Args:
-          outputs: Model predictions.
-          targets: True labels.
-      Returns:
-          Ordinal regression loss.
-      """
-      true_bins = targets.sum(dim=1)  # Get the true bin indices
-      threshold_idx = torch.arange(1, self.n_bins, device=self.device) # Exclude the last bin
-      weights = torch.abs(true_bins.unsqueeze(1) - threshold_idx)  # Calculate weights based on distance to true bin
-
-      # Calculate the binary cross-entropy loss for each bin (Weighted BCE Loss)
-      bce = nn.BCEWithLogitsLoss(reduction='none')
-      #print(f"Type of outputs: {type(outputs)}, Type of target : {type(targets)}" )  
-      #print(f"Outputs shape: {outputs.shape}, Targets shape: {targets.shape}")
-      #print(f"Outputs: {outputs}, Targets: {targets}")
-      loss = bce(outputs, targets.float())
-
-      return (loss * weights).mean()  # Average loss across all samples
-   
-   def _ordinal_to_continuous(self, outputs):
-      """Convert threshold outputs to continuous predictions"""
-      probs = torch.sigmoid(outputs).cpu().numpy()
-      bin_probs = np.zeros((len(probs), self.n_bins))
-
-      print(f"We are in pred ordinal to continuous")
-      print(f"Probs in pred ordinal to continuous: {probs.shape}")
-      print(f"Probs in pred ordinal to continuous: {probs}")
-      print(f"bin prob: {bin_probs}")
-      print(f"Bin means in pred ordinal to continuous: {self.bin_means}")
-      
-      bin_probs[:, 0] = 1 - probs[:, 0]  # P(bin0)
-      for k in range(1, self.n_bins-1):
-         bin_probs[:, k] = probs[:, k-1] - probs[:, k]  # P(bin_k)
-      bin_probs[:, -1] = probs[:, -1]  # P(last_bin)
-      
-      return bin_probs @ self.bin_means  # Weighted average
-
 
    def _compute_loss(self, outputs, targets, class_weights):
         if self.args.objective == 'regression':
@@ -949,10 +632,7 @@ class FTTransformerWrapper(BaseModelTorch):
          outputs = self.model(x_cont, x_cat)
          #outputs = self.model(X).squeeze()
 
-         if self.args.objective == 'ordinal_regression':
-            self.predictions = self._ordinal_to_continuous(outputs)
-
-         elif self.args.objective == 'regression':
+         if self.args.objective == 'regression':
             self.predictions = outputs.detach().cpu().numpy()
             
          else:
@@ -968,48 +648,24 @@ class FTTransformerWrapper(BaseModelTorch):
          raise NotImplementedError("Method only available for classification tasks")
       else:
          self.model.eval()
+         x_cont, x_cat = self._split_inputs(X)
 
-         if self.args.objective == 'ordinal_regression':
-            X = torch.tensor(X, dtype=torch.float32).to(self.device)
-            x_cont, x_cat = self._split_inputs(X)
-            outputs = self.model(x_cont, x_cat)
-            probs = torch.sigmoid(outputs).cpu().numpy()
-            
-            # Calculate bin probabilities
-            bin_probs = np.zeros((len(probs), self.n_bins))
-            bin_probs[:, 0] = 1 - probs[:, 0]
-            for k in range(1, self.n_bins-1):
-                bin_probs[:, k] = probs[:, k-1] - probs[:, k]
-            bin_probs[:, -1] = probs[:, -1]
-            
-            self.prediction_probabilities = bin_probs 
-            
-         else:
-            x_cont, x_cat = self._split_inputs(X)
-            outputs = torch.softmax(self.model(x_cont, x_cat), dim=1)
-            probabilities = outputs.detach().cpu().numpy()
+         outputs = torch.softmax(self.model(x_cont, x_cat), dim=1)
+         probabilities = outputs.detach().cpu().numpy()
 
-            self.prediction_probabilities = probabilities
+         self.prediction_probabilities = probabilities
          #print(f"Probabilities in curr mod: {self.prediction_probabilities}")
-
          return self.prediction_probabilities
 
    def _evaluate(self, X, y, class_weights):
-         if self.args.objective == "ordinal_regression":
-            y_pred = self.predict(X)
-            
-            loss = mean_squared_error(y.cpu().numpy(), y_pred)
+         self.model.eval()
+         X = torch.tensor(X, dtype=torch.float32).to(self.device)
 
-         else:
-            self.model.eval()
-            X = torch.tensor(X, dtype=torch.float32).to(self.device)
+         with torch.no_grad():
+            x_cont, x_cat = self._split_inputs(X)
 
-            with torch.no_grad():
-               x_cont, x_cat = self._split_inputs(X)
-
-               outputs = self.model(x_cont, x_cat)
-               loss = self._compute_loss(outputs, y, class_weights).item()
-
+            outputs = self.model(x_cont, x_cat)
+            loss = self._compute_loss(outputs, y, class_weights).item()
          return loss
    
    def _split_inputs(self, X):
