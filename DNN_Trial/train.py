@@ -18,8 +18,9 @@ from utils.timer import Timer
 from utils.io_utils import update_yaml, save_results_to_file, save_matrix_to_file, save_arrays_to_file, save_hyperparameters_to_file, save_hyperparameters_to_file_inner,save_loss_to_file, get_output_path, save_regularization_to_file
 from utils.parser import get_parser, get_given_parameters_parser
 from utils.visualization import loss_vizualization
-from sklearn.preprocessing import KBinsDiscretizer
+from sklearn.preprocessing import KBinsDiscretizer, StandardScaler
 from sklearn.utils import resample
+
 
 from sklearn.model_selection import KFold, StratifiedKFold, train_test_split
 from sklearn.utils.class_weight import compute_class_weight
@@ -203,7 +204,7 @@ def custom_class_weights(y):
     unique_classes = np.unique(y)
     unique_classes.sort()
 
-    class_weights = compute_class_weight('balanced',classes = unique_classes,y = y)
+    class_weights = compute_class_weight('balanced', classes = unique_classes,y = y)
     class_weights = torch.tensor(class_weights, dtype=torch.float32)
     
     return class_weights
@@ -313,6 +314,12 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
             X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc = encoding(
                 args, X_train_inner, y_train_inner, X_val_inner, y_val_inner) # Pass original state
             
+        #Normalize the target variable if needed
+        if args.objective == "regression":
+            scaler = StandardScaler()
+            y_train_inner_proc = scaler.fit_transform(y_train_inner_proc.reshape(-1, 1)).flatten()
+            #y_val_inner_proc = scaler.transform(y_val_inner_proc.reshape(-1, 1)).flatten()
+            
         # Binning
         if args.objective == "probabilistic_regression":
             y_train_inner_proc, y_val_inner_proc = binning(args, y_train_inner_proc, y_val_inner_proc) # Modifies args inplace
@@ -398,6 +405,9 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
         inner_eval_timer.start()
         try:
             predictions = curr_model.predict(X_val_inner_proc) # Get predictions directly
+
+            if args.objective == "regression":
+                predictions = scaler.inverse_transform(predictions.reshape(-1, 1)).flatten() # Inverse transform if scaled
             #probabilities = curr_model.prediction_probabilities # Assumes model stores probabilities
             #probababilities = curr_model.predict_proba(X_val_inner_proc) # Get probabilities
             #print(f"Predictions Tesst: {predictions}")
@@ -599,6 +609,12 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
             else:
                 X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc = encoding(
                     args, X_train_outer, y_train_outer, X_test_outer, y_test_outer)
+                
+            # Normalize the target variable if needed
+            if args.objective == "regression":
+                scaler_outer = StandardScaler()
+                y_train_outer_proc = scaler_outer.fit_transform(y_train_outer_proc.reshape(-1, 1)).flatten()
+                #y_test_outer_proc = scaler.transform(y_test_outer_proc.reshape(-1, 1)).flatten()
 
             if args.objective == "probabilistic_regression":
                 # Binning 
@@ -678,6 +694,9 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
         outer_fold_test_timer.start()
         try:
             predictions_outer = final_model.predict(X_test_outer_proc)
+
+            if args.objective == "regression":
+                predictions_outer = scaler_outer.inverse_transform(predictions_outer.reshape(-1, 1)).flatten()
             #probabilities_outer = final_model.prediction_probabilities
         except Exception as e:
              print(f"ERROR during final prediction in outer fold {i+1}: {e}")
@@ -886,6 +905,11 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             #print("Doing encoding : WE ARE IN TRAIN.PY")
             X_train, y_train, X_test, y_test = encoding(args, X_train, y_train, X_test, y_test)
 
+        if args.objective == "regression":
+            scaler_test = StandardScaler()
+            y_train = scaler_test.fit_transform(y_train.reshape(-1, 1)).flatten()
+            #y_test = scaler.transform(y_test.reshape(-1, 1)).flatten()
+
 
         if args.dataset == "House_Prices_Nominal" and args.model_name == "FTTransformer":
             x_cat_train = X_train[:, args.ordinal_idx]
@@ -977,6 +1001,10 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         test_timer.start()
         prediction = curr_model.predict(X_test)
         probabilities = curr_model.prediction_probabilities
+
+        if args.objective == "regression":
+            prediction = scaler_test.inverse_transform(prediction.reshape(-1, 1)).flatten()
+            
 
         print(f"Prediction shape : {prediction.shape}")
         #print(f"Probabilities shape : {probabilities.shape} \n")
