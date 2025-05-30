@@ -45,16 +45,23 @@ class XGBoost(BaseModel):
         print(f"Feature Types: {feature_types}")
 
         train = xgb.DMatrix(X, label=y, enable_categorical=True, feature_types=feature_types)
-        val = xgb.DMatrix(X_val, label=y_val, enable_categorical=True, feature_types=feature_types)
-        eval_list = [(train, "train"),(val, "eval")]
-        evals_result = {}
-        self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs, evals=eval_list, 
-                            evals_result=evals_result,
-                            early_stopping_rounds=self.args.early_stopping_rounds,
-                            verbose_eval=self.args.logging_period)
-        
-        return evals_result['train']['rmse'], evals_result['eval']['rmse']
 
+        if X_val is not None:
+            val = xgb.DMatrix(X_val, label=y_val, enable_categorical=True, feature_types=feature_types)
+            eval_list = [(train, "train"),(val, "eval")]
+            evals_result = {}
+            self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs, evals=eval_list, 
+                                evals_result=evals_result,
+                                early_stopping_rounds=self.args.early_stopping_rounds,
+                                verbose_eval=self.args.logging_period)
+            
+            return evals_result['train']['rmse'], evals_result['eval']['rmse']
+        else:
+            self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs,
+                                verbose_eval=self.args.logging_period)
+            
+            return [], []
+        
     def predict(self, X):
         X = xgb.DMatrix(X)
         return super().predict(X)
@@ -128,16 +135,26 @@ class CatBoost(BaseModel):
         # CatBoost does not accept float arrays if cat features are defined
         if self.args.cat_idx:
             X = X.astype('object')
-            X_val = X_val.astype('object')
+            X_val = X_val.astype('object') if X_val is not None else None
             X[:, self.args.cat_idx] = X[:, self.args.cat_idx].astype('int')
-            X_val[:, self.args.cat_idx] = X_val[:, self.args.cat_idx].astype('int')
+
+            if X_val is not None:
+                X_val[:, self.args.cat_idx] = X_val[:, self.args.cat_idx].astype('int') if X_val is not None else None
 
         #self.model.fit(X, y, eval_set=(X_val, y_val), use_best_model=True)
-        self.model.fit(X, y, eval_set=(X_val, y_val))
+        if X_val is not None:
 
-        evals_result = self.model.get_evals_result()
+            self.model.fit(X, y, eval_set=(X_val, y_val))
 
-        return evals_result['learn']['RMSE'], evals_result['validation']['RMSE']
+            evals_result = self.model.get_evals_result()
+
+            return evals_result['learn']['RMSE'], evals_result['validation']['RMSE']
+        else: 
+            self.model.fit(X, y)
+
+            #evals_result = self.model.get_evals_result()
+
+            return [],[]
 
     def predict(self, X):
         if self.args.cat_idx:
@@ -182,17 +199,22 @@ class LightGBM(BaseModel):
     def fit(self, X, y, X_val=None, y_val=None):
         evals_result = {}
         train = lgb.Dataset(X, label=y, categorical_feature=self.args.cat_idx)
-        val = lgb.Dataset(X_val, label=y_val, categorical_feature=self.args.cat_idx)
-        self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs, valid_sets=[train,val],
-                               valid_names=["train","eval"], callbacks=[lgb.early_stopping(self.args.early_stopping_rounds),
-                               lgb.log_evaluation(self.args.logging_period),
-                               lgb.record_evaluation(evals_result)],
-                               )
-        
-        #print(f"Train Loss : {evals_result['train']['l2']} \n")
-        #print(f"Eval Loss : {evals_result['eval']['l2']} \n")
 
-        return evals_result['train']['l2'], evals_result['eval']['l2']
+        if X_val is not None:
+            val = lgb.Dataset(X_val, label=y_val, categorical_feature=self.args.cat_idx)
+            self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs, valid_sets=[train,val],
+                                valid_names=["train","eval"], callbacks=[lgb.early_stopping(self.args.early_stopping_rounds),
+                                lgb.log_evaluation(self.args.logging_period),
+                                lgb.record_evaluation(evals_result)],
+                                )
+            
+            #print(f"Train Loss : {evals_result['train']['l2']} \n")
+            #print(f"Eval Loss : {evals_result['eval']['l2']} \n")
+
+            return evals_result['train']['l2'], evals_result['eval']['l2']
+        else:
+            self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs)
+            return [], []
 
     def predict_proba(self, X):
         probabilities = self.model.predict(X)
