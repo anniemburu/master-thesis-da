@@ -77,7 +77,7 @@ class BaseModel:
 
         # Should return loss history and validation loss history and lambda reg
 
-        return [], [] , []
+        return [], [] 
 
     def predict(self, X: np.ndarray) -> tp.Tuple[np.ndarray, np.ndarray]:
         """
