@@ -166,3 +166,17 @@ Test time: 0.004039
 Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 10, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
 
 
+2025-05-30 17:23:43.515296
+ResMLP - Sensory - test_model - regression
+
+MSE - mean: 0.58778
+MSE - std: 0.01150
+R2 - mean: 0.09897
+R2 - std: 0.01763
+
+Train time: 38.513175
+Test time: 0.004892
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.544110387653899, 'd_in': 36, 'd_out': 1, 'dropout1': 0.12905452512026205, 'dropout2': 0.02854369523746009, 'n_blocks': 5}
+
+

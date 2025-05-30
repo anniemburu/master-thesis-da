@@ -166,3 +166,17 @@ Test time: 0.078623
 Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 104, 'dropout': 0.10700449012979917, 'n_blocks': 4}
 
 
+2025-05-30 16:43:23.665890
+MLP - House_Sales - test_model - regression
+
+MSE - mean: 17192383014.19168
+MSE - std: 189587932.90065
+R2 - mean: 0.86554
+R2 - std: 0.00148
+
+Train time: 83.722066
+Test time: 0.031282
+
+Best Parameters: {'d_block': 256, 'd_in': 90, 'd_out': 1, 'dropout': 0.013522222134953151, 'n_blocks': 3}
+
+

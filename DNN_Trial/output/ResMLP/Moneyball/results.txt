@@ -166,3 +166,17 @@ Test time: 0.005813
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 17, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
 
 
+2025-05-30 17:17:30.171084
+ResMLP - Moneyball - test_model - regression
+
+MSE - mean: 651.11983
+MSE - std: 47.89171
+R2 - mean: 0.93231
+R2 - std: 0.00498
+
+Train time: 14.270568
+Test time: 0.002971
+
+Best Parameters: {'d_block': 256, 'd_hidden': 7, 'd_hidden_multiplier': 2.290032735440481, 'd_in': 47, 'd_out': 1, 'dropout1': 0.4078828219530447, 'dropout2': 0.16833482708406416, 'n_blocks': 2}
+
+

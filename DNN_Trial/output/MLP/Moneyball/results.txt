@@ -166,3 +166,17 @@ Test time: 0.002045
 Best Parameters: {'d_block': 256, 'd_in': 47, 'd_out': 17, 'dropout': 0.2819627248207455, 'n_blocks': 2}
 
 
+2025-05-30 16:48:45.045946
+MLP - Moneyball - test_model - regression
+
+MSE - mean: 603.52336
+MSE - std: 34.19138
+R2 - mean: 0.93726
+R2 - std: 0.00355
+
+Train time: 13.776429
+Test time: 0.002646
+
+Best Parameters: {'d_block': 256, 'd_in': 47, 'd_out': 1, 'dropout': 0.04372445488402272, 'n_blocks': 6}
+
+

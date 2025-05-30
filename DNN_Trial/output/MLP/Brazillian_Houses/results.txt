@@ -166,3 +166,17 @@ Test time: 0.040656
 Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 54, 'dropout': 0.26456213654515587, 'n_blocks': 2}
 
 
+2025-05-30 16:20:15.932032
+MLP - Brazillian_Houses - test_model - regression
+
+MSE - mean: 670263.24223
+MSE - std: 318778.33971
+R2 - mean: 0.98321
+R2 - std: 0.00799
+
+Train time: 49.601845
+Test time: 0.013708
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 1, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+

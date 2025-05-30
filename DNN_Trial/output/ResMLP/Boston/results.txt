@@ -166,3 +166,17 @@ Test time: 0.006176
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.629805792810099, 'd_in': 14, 'd_out': 20, 'dropout1': 0.42545138307167646, 'dropout2': 0.08020072326197547, 'n_blocks': 6}
 
 
+2025-05-30 16:27:26.956169
+ResMLP - Boston - test_model - regression
+
+MSE - mean: 20.82345
+MSE - std: 2.90518
+R2 - mean: 0.79291
+R2 - std: 0.02889
+
+Train time: 11.668774
+Test time: 0.003781
+
+Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.4381847417017717, 'd_in': 14, 'd_out': 1, 'dropout1': 0.4292852059127049, 'dropout2': 0.26527704540625047, 'n_blocks': 4}
+
+

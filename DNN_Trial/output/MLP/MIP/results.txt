@@ -166,3 +166,17 @@ Test time: 0.032231
 Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 13, 'dropout': 0.10823216670029355, 'n_blocks': 2}
 
 
+2025-05-30 16:47:11.650571
+MLP - MIP - test_model - regression
+
+MSE - mean: 2143649401546910.75000
+MSE - std: 3711835476034653.00000
+R2 - mean: -2532068.40197
+R2 - std: 4384404.01086
+
+Train time: 13.698804
+Test time: 0.010844
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 1, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
