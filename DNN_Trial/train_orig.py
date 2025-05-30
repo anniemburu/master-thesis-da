@@ -80,13 +80,12 @@ def bin_finder(args, y):
 
     return bins
 
-def bin_shifter(args, y_train, y_val = None):
+def bin_shifter(args, y_train, y_val):
     """
     Shifts class labels so that they are contiguous (without gaps).
     """
 
-    if y_val is not None:
-        y_val = impute_missing_test(y_train, y_val) #missing y classes
+    y_val = impute_missing_test(y_train,y_val) #missing y classes
     
     def get_contiguous_labels(arr):
         """ Renumber labels to remove gaps """
@@ -95,33 +94,24 @@ def bin_shifter(args, y_train, y_val = None):
         return np.vectorize(mapping.get)(arr), mapping
 
     # Get contiguous labels
-    if y_val is not None:
-        comb = np.unique(np.concatenate([y_train, y_val]))
-    else:
-        comb = np.unique(y_train)
-
+    comb = np.unique(np.concatenate([y_train, y_val]))
     comb_len = len(comb)
 
     if comb_len != args.num_bins:
         print("WE ARE IN THE GUTTERS!!!!!")
         y_train_shift, train_mapping = get_contiguous_labels(y_train)
+        y_val_shift = np.vectorize(train_mapping.get)(y_val)  # Apply same mapping to test
 
         # Update arguments
         args.num_classes = len(np.unique(y_train_shift))  # Set correct number of classes
         args.bin_alt = sorted(list(np.unique(y_train_shift)))  # Ensure proper bin numbering
 
         print(f"Final Train Labels Length: {len(np.unique(y_train_shift))}")
+        print(f"Final Test Labels Length: {len(np.unique(y_val_shift))}")
         print(f"Final Num Classes: {args.num_classes}")
         print(f"Final Bin Labels: {args.bin_alt}")
 
-        if y_val is not None:
-            y_val_shift = np.vectorize(train_mapping.get)(y_val)  # Apply same mapping to test
-            print(f"Final Test Labels Length: {len(np.unique(y_val_shift))}")
-
-            return y_train_shift, y_val_shift
-        
-        else:
-            return y_train_shift, None
+        return y_train_shift, y_val_shift
 
     else:
         print("No need to shift labels.")
@@ -151,10 +141,9 @@ def impute_missing_test(train,test):
     else:
         return test
     
-def binning(args, y, y_val=None):
+def binning(args, y, y_val):
     #Bin the target variable
-    if args.objective == "probabilistic_regression" or args.objective == "ordinal_regression":
-        print("WE ARE BINNING PEOPLE!!")
+    if args.objective == "probabilistic_regression":
         args.num_bins = bin_finder(args, y)
 
         """if args.y_distribution == "bimodial":
@@ -165,7 +154,7 @@ def binning(args, y, y_val=None):
         
         binning = KBinsDiscretizer(n_bins=args.num_bins, encode='ordinal', strategy=args.strategy, subsample=200000)
         y = binning.fit_transform(y.reshape(-1, 1)).flatten()
-        #y_val = binning.transform(y_val.reshape(-1, 1)).flatten()
+        y_val = binning.transform(y_val.reshape(-1, 1)).flatten()
 
         if args.num_bins < 3:
             print("Make Multiclass")
@@ -176,10 +165,10 @@ def binning(args, y, y_val=None):
         print(f"Number of bins: {args.num_bins}")
         print(f"Number of Classes B4 Bin Verifier: {args.num_classes}")
         print(f"Unique values in y: {np.unique(y), len(np.unique(y))}")
-        #print(f"Unique values in y_val: {np.unique(y_val), len(np.unique(y_val))}")
+        print(f"Unique values in y_val: {np.unique(y_val), len(np.unique(y_val))}")
 
         y = y.astype(int)  # For NumPy arrays
-        #y_val = y_val.astype(int)
+        y_val = y_val.astype(int)
 
         #Rectify bin
         y, y_val = bin_shifter(args, y, y_val)
@@ -189,7 +178,7 @@ def binning(args, y, y_val=None):
 
         print("VERIFY SHIFT")
         #print(f"Bin Edges: {bin_edges}") 
-        #print(f"Y shape : {y.shape} , Y_val shape : {y_val.shape}")
+        print(f"Y shape : {y.shape} , Y_val shape : {y_val.shape}")
         print(f"Train after shift : {np.unique(y)}, Length : {len(np.unique(y))}")
         print(f"Number of Classes After Bin Verifier: {args.num_classes} \n\n")
 
@@ -922,9 +911,9 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             y_train_class, y_test_class = binning(args, y_train, y_test)
             bin_mean = mean_per_bin(y_train, y_train_class)
             print(f"Bin Mean: {bin_mean}")
-        #else:
-            #train_class, test_class = binning(args, y_train, y_test)
-            #print("Binning Done")
+        else:
+            train_class, test_class = binning(args, y_train, y_test)
+            print("Binning Done")
         
         print("BINNING END")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n")
@@ -969,7 +958,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
                     print(f"Class Weights DDNT APPLY")
                     loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
             else:
-                loss_history, test_loss_history = curr_model.fit(X_train, y_train)  #regression and ordinal problems
+                loss_history, test_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  #regression problems
 
         train_timer.end()
 
