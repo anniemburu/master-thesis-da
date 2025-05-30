@@ -14,6 +14,7 @@ def get_parser():
     parser.add('--dataset', required=True, help="Name of the dataset that will be used")
     parser.add('--objective', required=True, type=str, default="regression", choices=["regression", 
                                                                                       "probabilistic_regression",
+                                                                                      "ordinal_regression",
                                                                                       "classification", "binary"],
                help="Set the type of the task") 
 

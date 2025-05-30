@@ -15,6 +15,8 @@ def get_scorer(args):
         return ClassScorer()
     elif args.objective == "binary":
         return BinScorer()
+    elif args.objective == "ordinal_regression":
+        return OrdinalScorer()
     else:
         raise NotImplementedError("No scorer for \"" + args.objective + "\" implemented")
 
@@ -37,6 +39,37 @@ class Scorer:
 
 
 class RegScorer(Scorer):
+
+    def __init__(self):
+        self.mses = []
+        self.r2s = []
+
+    # y_probabilities is None for Regression
+    def eval(self, y_true, y_prediction, y_probabilities):
+        mse = mean_squared_error(y_true, y_prediction)
+        r2 = r2_score(y_true, y_prediction)
+
+        self.mses.append(mse)
+        self.r2s.append(r2)
+
+        return {"MSE": mse, "R2": r2}
+
+    def get_results(self):
+        mse_mean = np.mean(self.mses)
+        mse_std = np.std(self.mses)
+
+        r2_mean = np.mean(self.r2s)
+        r2_std = np.std(self.r2s)
+
+        return {"MSE - mean": mse_mean,
+                "MSE - std": mse_std,
+                "R2 - mean": r2_mean,
+                "R2 - std": r2_std}
+
+    def get_objective_result(self):
+        return np.mean(self.mses)
+    
+class OrdinalScorer(Scorer):
 
     def __init__(self):
         self.mses = []
