@@ -672,7 +672,7 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
                     loss_history, val_loss_history = final_model.fit(
                         X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, class_weights = class_weights)
                 else:
-                 loss_history, val_loss_history = final_model.fit(
+                 loss_history, val_loss_history, _ = final_model.fit(
                     X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc) # Use test set for validation monitoring if desired
         except Exception as e:
             print(f"ERROR during final model fitting in outer fold {i+1}: {e}")
