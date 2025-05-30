@@ -373,10 +373,10 @@ def evaluate_hyperparameters_cv(model_prototype, trial_params, X_train_outer, y_
             if args.weighted_loss:
                 print(f"Class Weights Applied: {class_weights}")
                 # Use class weights for loss function
-                _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, class_weights = class_weights)
+                curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc, class_weights = class_weights)
             else:
                 print(f"Class Weights Ddnt Apply")
-                _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+                curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
     
 
         """except Exception as e:
@@ -950,12 +950,12 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             if args.weighted_loss:
                 class_weights = custom_class_weights(y_train_class)
                 print(f"Class Weights Applied: {class_weights}")
-                loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map=frequency_map,class_weights = class_weights)
+                loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, frequency_map=frequency_map,class_weights = class_weights)
             
                 save_regularization_to_file(args, lambda_reg_history, "lambda_reg", extension=seed)
             else:
                 print(f"Class Weights DDNT APPLY")
-                loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map=frequency_map)
+                loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, frequency_map=frequency_map)
     
                 save_regularization_to_file(args, lambda_reg_history, "lambda_reg", extension=seed)
                 #loss_history, test_loss_history, lambda_reg_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, frequency_map)
@@ -964,10 +964,10 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
                 if args.weighted_loss:
                     class_weights = custom_class_weights(y_train_class)
                     print(f"Class Weights Applied: {class_weights}")
-                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class, class_weights = class_weights) 
+                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, class_weights = class_weights) 
                 else:
                     print(f"Class Weights DDNT APPLY")
-                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
+                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class)
             else:
                 loss_history, test_loss_history = curr_model.fit(X_train, y_train)  #regression and ordinal problems
 
