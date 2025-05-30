@@ -1,0 +1,14 @@
+2025-05-30 13:15:35.611979
+CatBoost - House_Sales - test_model - regression
+
+MSE - mean: 15199276187.13177
+MSE - std: 679387566.68680
+R2 - mean: 0.88112
+R2 - std: 0.00531
+
+Train time: 1.196813
+Test time: 0.072225
+
+Best Parameters: {'learning_rate': 0.2493128987457134, 'max_depth': 6, 'l2_leaf_reg': 1.701138175278075, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [13]}
+
+

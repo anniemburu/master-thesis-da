@@ -1,0 +1,14 @@
+2025-05-30 13:22:13.581182
+XGBoost - Sensory - test_model - regression
+
+MSE - mean: 0.60810
+MSE - std: 0.02561
+R2 - mean: 0.06782
+R2 - std: 0.03925
+
+Train time: 0.374322
+Test time: 0.052401
+
+Best Parameters: {'max_depth': 2, 'alpha': 3.8628734334151045e-07, 'lambda': 0.04825003662277624, 'eta': 0.055937333566860314, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

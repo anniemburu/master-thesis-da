@@ -1,0 +1,14 @@
+2025-05-30 13:21:53.963239
+XGBoost - Mercedes_Benz - test_model - regression
+
+MSE - mean: 87.53455
+MSE - std: 1.99157
+R2 - mean: 0.46299
+R2 - std: 0.01222
+
+Train time: 0.432126
+Test time: 0.125640
+
+Best Parameters: {'max_depth': 3, 'alpha': 1.80613318106913e-08, 'lambda': 0.4033325485614207, 'eta': 0.04373143886440441, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
