@@ -9,6 +9,9 @@ parameters:
       d_out: 1
       dropout: 0.03190847875416855
       n_blocks: 2
+    RandomForest:
+      max_depth: 12
+      n_estimators: 99
     ResMLP:
       d_block: 256
       d_hidden: 4
@@ -19,10 +22,10 @@ parameters:
       dropout2: 0.16141544478285838
       n_blocks: 6
     SAINT:
-      dim: 32
       depth: 3
-      heads: 8
+      dim: 32
       dropout: 0.8
+      heads: 8
   Allstate_Claims:
     FTTransformer:
       learning_rate: 0.0010788862572108022
@@ -33,6 +36,9 @@ parameters:
       d_out: 1
       dropout: 0.07682853251149886
       n_blocks: 6
+    RandomForest:
+      max_depth: 10
+      n_estimators: 39
     ResMLP:
       d_block: 256
       d_hidden: 6
@@ -43,10 +49,10 @@ parameters:
       dropout2: 0.15707213143131246
       n_blocks: 2
     SAINT:
-      dim: 32
       depth: 2
-      heads: 4
+      dim: 32
       dropout: 0.4
+      heads: 4
   Black_Friday:
     FTTransformer:
       learning_rate: 0.00018442395349507182
@@ -57,6 +63,9 @@ parameters:
       d_out: 1
       dropout: 0.10721970311199958
       n_blocks: 6
+    RandomForest:
+      max_depth: 12
+      n_estimators: 12
     ResMLP:
       d_block: 256
       d_hidden: 2
@@ -81,6 +90,9 @@ parameters:
       d_out: 1
       dropout: 0.19313939240578717
       n_blocks: 2
+    RandomForest:
+      max_depth: 8
+      n_estimators: 77
     ResMLP:
       d_block: 256
       d_hidden: 3
@@ -91,10 +103,10 @@ parameters:
       dropout2: 0.26527704540625047
       n_blocks: 4
     SAINT:
-      dim: 64
       depth: 1
-      heads: 8
+      dim: 64
       dropout: 0.3
+      heads: 8
   Brazillian_Houses:
     FTTransformer:
       learning_rate: 0.007246604745497065
@@ -105,6 +117,9 @@ parameters:
       d_out: 1
       dropout: 0.07678813857296692
       n_blocks: 5
+    RandomForest:
+      max_depth: 11
+      n_estimators: 15
     ResMLP:
       d_block: 256
       d_hidden: 4
@@ -115,10 +130,10 @@ parameters:
       dropout2: 0.29149024331234025
       n_blocks: 3
     SAINT:
-      dim: 32,
       depth: 12
-      heads: 2
+      dim: 32,
       dropout: 0.2
+      heads: 2
   Diamonds:
     FTTransformer:
       learning_rate: 0.007101255154561158
@@ -129,6 +144,9 @@ parameters:
       d_out: 1
       dropout: 0.23677836111066783
       n_blocks: 6
+    RandomForest:
+      max_depth: 12
+      n_estimators: 23
     ResMLP:
       d_block: 256
       d_hidden: 2
@@ -153,6 +171,9 @@ parameters:
       d_out: 1
       dropout: 0.20383999785660487
       n_blocks: 2
+    RandomForest:
+      max_depth: 12
+      n_estimators: 39
     ResMLP:
       d_block: 256
       d_hidden: 2
@@ -177,6 +198,9 @@ parameters:
       d_out: 1
       dropout: 0.013522222134953151
       n_blocks: 3
+    RandomForest:
+      max_depth: 12
+      n_estimators: 59
     ResMLP:
       d_block: 256
       d_hidden: 3
@@ -201,6 +225,9 @@ parameters:
       d_out: 1
       dropout: 0.2651113818434264
       n_blocks: 6
+    RandomForest:
+      max_depth: 6
+      n_estimators: 15
     ResMLP:
       d_block: 256
       d_hidden: 4
@@ -225,6 +252,9 @@ parameters:
       d_out: 1
       dropout: 0.29646621574612675
       n_blocks: 2
+    RandomForest:
+      max_depth: 3
+      n_estimators: 20
     ResMLP:
       d_block: 256
       d_hidden: 2
@@ -235,10 +265,10 @@ parameters:
       dropout2: 0.17621231533002782
       n_blocks: 4
     SAINT:
-      dim: 256
       depth: 2
-      heads: 4
+      dim: 256
       dropout: 0.2
+      heads: 4
   Moneyball:
     FTTransformer:
       learning_rate: 0.008974241215295128
@@ -249,6 +279,9 @@ parameters:
       d_out: 1
       dropout: 0.04372445488402272
       n_blocks: 6
+    RandomForest:
+      max_depth: 9
+      n_estimators: 78
     ResMLP:
       d_block: 256
       d_hidden: 7
@@ -259,10 +292,10 @@ parameters:
       dropout2: 0.16833482708406416
       n_blocks: 2
     SAINT:
-      dim: 128
       depth: 6
-      heads: 2
+      dim: 128
       dropout: 0.1
+      heads: 2
   SAT11:
     FTTransformer:
       learning_rate: 0.004544327453839196
@@ -273,6 +306,9 @@ parameters:
       d_out: 1
       dropout: 0.1541837529458395
       n_blocks: 2
+    RandomForest:
+      max_depth: 12
+      n_estimators: 26
     ResMLP:
       d_block: 128
       d_hidden: 2
@@ -297,6 +333,9 @@ parameters:
       d_out: 1
       dropout: 0.16215696303563998
       n_blocks: 2
+    RandomForest:
+      max_depth: 3
+      n_estimators: 84
     ResMLP:
       d_block: 256
       d_hidden: 3
@@ -307,10 +346,10 @@ parameters:
       dropout2: 0.02854369523746009
       n_blocks: 5
     SAINT:
-      dim: 64
       depth: 1
-      heads: 2
+      dim: 64
       dropout: 0.1
+      heads: 2
   Socmob:
     FTTransformer:
       learning_rate: 0.005567330402018387
@@ -321,6 +360,9 @@ parameters:
       d_out: 1
       dropout: 0.2713416938393725
       n_blocks: 3
+    RandomForest:
+      max_depth: 12
+      n_estimators: 30
     ResMLP:
       d_block: 256
       d_hidden: 2
@@ -331,7 +373,7 @@ parameters:
       dropout2: 0.03875240542559993
       n_blocks: 3
     SAINT:
-      dim: 128
       depth: 3
-      heads: 2
+      dim: 128
       dropout: 0.6
+      heads: 2
