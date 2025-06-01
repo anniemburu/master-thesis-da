@@ -40,6 +40,8 @@ class SAINT(BaseModelTorch):
         dim = self.params["dim"] if args.num_features < 50 else 8
         self.batch_size = self.args.batch_size if args.num_features < 50 else 64
 
+        self.lambda_reg = torch.nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
+
         #try and learn the mean bins
         """if self.args.objective == "probabilistic_regression":
             self.class_weights = nn.Parameter(
@@ -68,6 +70,14 @@ class SAINT(BaseModelTorch):
             self.model.transformer = nn.DataParallel(self.model.transformer, device_ids=self.args.gpu_ids)
             self.model.mlpfory = nn.DataParallel(self.model.mlpfory, device_ids=self.args.gpu_ids)
 
+        """for name, param in self.model.named_parameters():
+         print(name, param.shape, param.view(-1)[0].item())
+      
+        for name, param in self.model.state_dict().items():
+            print("In here")
+            print(name, param.shape, param.view(-1)[0].item())
+        """
+
     def fit(self, X, y, X_val=None, y_val=None,class_weights=None):
 
         class_weights = class_weights.to(self.device) if class_weights is not None else None
@@ -79,22 +89,24 @@ class SAINT(BaseModelTorch):
         else:
             criterion = nn.MSELoss()
 
-        optimizer = optim.AdamW(self.model.parameters(), lr=0.00003)
+        optimizer = optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=0.00003)
 
         self.model.to(self.device)
 
         # SAINT wants it like this...
         X = {'data': X, 'mask': np.ones_like(X)}
         y = {'data': y.reshape(-1, 1)}
-        X_val = {'data': X_val, 'mask': np.ones_like(X_val)}
-        y_val = {'data': y_val.reshape(-1, 1)}
+        X_val = {'data': X_val, 'mask': np.ones_like(X_val)} if X_val is not None else X
+        y_val = {'data': y_val.reshape(-1, 1)} if y_val is not None else y
 
 
         train_ds = DataSetCatCon(X, y, self.args.cat_idx, self.args.objective)
         trainloader = DataLoader(train_ds, batch_size=self.batch_size, shuffle=True, num_workers=4)
 
-        val_ds = DataSetCatCon(X_val, y_val, self.args.cat_idx, self.args.objective)
-        valloader = DataLoader(val_ds, batch_size=self.args.val_batch_size, shuffle=True, num_workers=4)
+
+        if X_val is None:
+            val_ds = DataSetCatCon(X_val, y_val, self.args.cat_idx, self.args.objective)
+            valloader = DataLoader(val_ds, batch_size=self.args.val_batch_size, shuffle=True, num_workers=4)
 
         min_val_loss = float("inf")
         min_val_loss_idx = 0
@@ -159,47 +171,48 @@ class SAINT(BaseModelTorch):
                 # print("Loss", loss.item())
 
             # Early Stopping
-            val_loss = 0.0
-            val_dim = 0
-            self.model.eval()
-            with torch.no_grad():
-                for data in valloader:
-                    x_categ, x_cont, y_gts, cat_mask, con_mask = data
+            if X_val is None:
+                val_loss = 0.0
+                val_dim = 0
+                self.model.eval()
+                with torch.no_grad():
+                    for data in valloader:
+                        x_categ, x_cont, y_gts, cat_mask, con_mask = data
 
-                    x_categ, x_cont = x_categ.to(self.device), x_cont.to(self.device)
-                    cat_mask, con_mask = cat_mask.to(self.device), con_mask.to(self.device)
+                        x_categ, x_cont = x_categ.to(self.device), x_cont.to(self.device)
+                        cat_mask, con_mask = cat_mask.to(self.device), con_mask.to(self.device)
 
-                    _, x_categ_enc, x_cont_enc = embed_data_mask(x_categ, x_cont, cat_mask, con_mask, self.model)
-                    reps = self.model.transformer(x_categ_enc, x_cont_enc)
-                    y_reps = reps[:, 0, :]
-                    y_outs = self.model.mlpfory(y_reps)
+                        _, x_categ_enc, x_cont_enc = embed_data_mask(x_categ, x_cont, cat_mask, con_mask, self.model)
+                        reps = self.model.transformer(x_categ_enc, x_cont_enc)
+                        y_reps = reps[:, 0, :]
+                        y_outs = self.model.mlpfory(y_reps)
 
-                    if self.args.objective == "regression":
-                        y_gts = y_gts.to(self.device)
-                    elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
-                        y_gts = y_gts.to(self.device).squeeze()
-                    else:
-                        y_gts = y_gts.to(self.device).float()
+                        if self.args.objective == "regression":
+                            y_gts = y_gts.to(self.device)
+                        elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
+                            y_gts = y_gts.to(self.device).squeeze()
+                        else:
+                            y_gts = y_gts.to(self.device).float()
 
-                    val_loss += criterion(y_outs, y_gts)
-                    val_dim += 1
-            val_loss /= val_dim
+                        val_loss += criterion(y_outs, y_gts)
+                        val_dim += 1
+                val_loss /= val_dim
 
-            val_loss_history.append(val_loss.item())
+                val_loss_history.append(val_loss.item())
 
-            print("Epoch", epoch, "loss", val_loss.item())
+                print("Epoch", epoch, "loss", val_loss.item())
 
-            if val_loss < min_val_loss:
-                min_val_loss = val_loss
-                min_val_loss_idx = epoch
+                if val_loss < min_val_loss:
+                    min_val_loss = val_loss
+                    min_val_loss_idx = epoch
 
-                # Save the currently best model
-                self.save_model(filename_extension="best", directory="tmp")
+                    # Save the currently best model
+                    self.save_model(filename_extension="best", directory="tmp")
 
-            if min_val_loss_idx + self.args.early_stopping_rounds < epoch:
-                print("Validation loss has not improved for %d steps!" % self.args.early_stopping_rounds)
-                print("Early stopping applies.")
-                break
+                if min_val_loss_idx + self.args.early_stopping_rounds < epoch:
+                    print("Validation loss has not improved for %d steps!" % self.args.early_stopping_rounds)
+                    print("Early stopping applies.")
+                    break
 
         self.load_model(filename_extension="best", directory="tmp")
         return loss_history, val_loss_history
