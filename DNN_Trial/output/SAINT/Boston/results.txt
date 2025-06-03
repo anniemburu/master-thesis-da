@@ -166,3 +166,17 @@ Test time: 0.126662
 Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 4}
 
 
+2025-06-02 16:49:18.317597
+SAINT - Boston - test_model - regression
+
+MSE - mean: 27.51302
+MSE - std: 1.88450
+R2 - mean: 0.72638
+R2 - std: 0.01874
+
+Train time: 25.799218
+Test time: 0.123733
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.3}
+
+

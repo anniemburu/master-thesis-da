@@ -166,3 +166,17 @@ Test time: 0.268297
 Best Parameters: {'depth': 3, 'dim': 128, 'dropout': 0.8, 'heads': 4}
 
 
+2025-06-02 11:44:05.501154
+SAINT - Abalone - test_model - regression
+
+MSE - mean: 5.56943
+MSE - std: 0.12472
+R2 - mean: 0.47056
+R2 - std: 0.01186
+
+Train time: 193.005812
+Test time: 0.337465
+
+Best Parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0.8}
+
+

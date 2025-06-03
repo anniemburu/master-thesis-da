@@ -166,3 +166,17 @@ Test time: 0.302535
 Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
 
 
+2025-06-03 00:37:45.666964
+SAINT - SAT11 - test_model - regression
+
+MSE - mean: 1931029.49803
+MSE - std: 72249.09019
+R2 - mean: 0.66074
+R2 - std: 0.01269
+
+Train time: 282.375245
+Test time: 0.462668
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.1, 'heads': 4}
+
+

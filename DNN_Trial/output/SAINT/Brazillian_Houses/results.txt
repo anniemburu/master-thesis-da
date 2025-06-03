@@ -166,3 +166,17 @@ Test time: 0.394164
 Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.3, 'heads': 8}
 
 
+2025-06-02 18:33:53.903010
+SAINT - Brazillian_Houses - test_model - regression
+
+MSE - mean: 81896685.23155
+MSE - std: 59307652.98742
+R2 - mean: -1.05190
+R2 - std: 1.48594
+
+Train time: 1216.700405
+Test time: 1.565097
+
+Best Parameters: {'dim': 32, 'depth': 12, 'heads': 2, 'dropout': 0.2}
+
+

@@ -166,3 +166,17 @@ Test time: 3.068889
 Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
 
 
+2025-06-02 22:44:26.128651
+SAINT - Diamonds - test_model - regression
+
+MSE - mean: 409930.86411
+MSE - std: 15478.73546
+R2 - mean: 0.97434
+R2 - std: 0.00097
+
+Train time: 9482.775432
+Test time: 3.106764
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+
