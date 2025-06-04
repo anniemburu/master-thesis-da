@@ -712,12 +712,32 @@ class FTTransformerWrapper(BaseModelTorch):
       self.bin_means = None
       self.discretizer = None
 
-      self.model = FTTransformer(
+      if self.args.optimize_hyperparameters:
+         self.model = FTTransformer(
          n_cont_features= len(self.args.num_idx) if self.args.num_idx is not None else 0,
          cat_cardinalities= self.args.cat_dims if self.args.cat_dims is not None else [],
          d_out = d_out,
          **FTTransformer.get_default_kwargs(),
                      ).to(self.device)
+      else:
+         kwargs = FTTransformer.get_default_kwargs()
+         kwargs.update({
+            "n_blocks": self.params["n_blocks"],
+            "d_block": self.params["d_block"],
+            "attention_n_heads": self.params["attention_n_heads"],
+            "attention_dropout": self.params["attention_dropout"],
+            "ffn_d_hidden": None,
+            "ffn_d_hidden_multiplier": self.params["ffn_d_hidden_multiplier"],
+            "ffn_dropout": self.params["ffn_dropout"],
+            "residual_dropout": self.params["residual_dropout"],
+         })
+
+         self.model = FTTransformer(
+            n_cont_features= len(self.args.num_idx) if self.args.num_idx is not None else 0,
+            cat_cardinalities= self.args.cat_dims if self.args.cat_dims is not None else [],
+            d_out = d_out,
+            **kwargs,
+                        ).to(self.device)
 
       # Optimizer
       self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
