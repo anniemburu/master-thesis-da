@@ -166,3 +166,17 @@ Test time: 0.155921
 Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
 
 
+2025-06-04 03:35:11.202438
+SAINT - Socmob - test_model - regression
+
+MSE - mean: 294.61740
+MSE - std: 53.33472
+R2 - mean: 0.82943
+R2 - std: 0.03088
+
+Train time: 276.070303
+Test time: 0.251868
+
+Best Parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.6}
+
+

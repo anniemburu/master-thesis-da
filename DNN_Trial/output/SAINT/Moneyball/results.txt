@@ -166,3 +166,17 @@ Test time: 0.163463
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.3, 'heads': 4}
 
 
+2025-06-04 03:09:13.500744
+SAINT - Moneyball - test_model - regression
+
+MSE - mean: 815.25011
+MSE - std: 32.79612
+R2 - mean: 0.91525
+R2 - std: 0.00341
+
+Train time: 411.495694
+Test time: 0.313787
+
+Best Parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.1}
+
+
