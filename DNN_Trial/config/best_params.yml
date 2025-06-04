@@ -3,6 +3,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.003346353491248373
       weight_decay: 1.6039854113455462e-05
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 10
@@ -44,6 +52,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.0010788862572108022
       weight_decay: 0.00025889495174850674
+      n_blocks: 2
+      d_block: 64
+      attention_n_heads: 4
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.0
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 1073
@@ -85,6 +101,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.00018442395349507182
       weight_decay': 0.001611408166564025
+      n_blocks: 2
+      d_block: 96
+      attention_n_heads: 4
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.0
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 75
@@ -126,6 +150,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.005961637956043898
       weight_decay: 8.92702675678448e-05
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 14
@@ -167,6 +199,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.007246604745497065
       weight_decay: 0.0029245663761010127
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 17
@@ -208,6 +248,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.007101255154561158
       weight_decay: 0.0009434149491471733
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 9
@@ -249,6 +297,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.0003973965546674877
       weight_decay: 0.0012259613827403538
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 109
@@ -290,6 +346,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.0008304138365966551
       weight_decay: 1.4243260329863695e-05
+      n_blocks: 2
+      d_block: 96
+      attention_n_heads: 4
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.0
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 90
@@ -331,6 +395,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.005478197312390903
       weight_decay: 1.7129302740564993e-05
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 64
       d_in: 151
@@ -372,6 +444,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.0003973965546674877
       weight_decay: 0.0012259613827403538
+      n_blocks: 2
+      d_block: 96
+      attention_n_heads: 4
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.0
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 549
@@ -413,6 +493,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.008974241215295128
       weight_decay: 7.459646430671164e-05
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 48
@@ -454,6 +542,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.004544327453839196
       weight_decay: 0.000312514807931228
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 130
@@ -495,6 +591,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.007837909586982108
       weight_decay: 7.3601111536878155e-06
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 36
@@ -536,6 +640,14 @@ parameters:
     FTTransformer:
       learning_rate: 0.005567330402018387
       weight_decay: 0.00020066904579140864
+      n_blocks: 3
+      d_block: 192
+      attention_n_heads: 8
+      attention_dropout: 0.2
+      ffn_d_hidden: None
+      ffn_d_hidden_multiplier: 1.3333333333333333
+      ffn_dropout: 0.1
+      residual_dropout: 0.0
     MLP:
       d_block: 256
       d_in: 39
