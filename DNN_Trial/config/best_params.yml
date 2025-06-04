@@ -60,9 +60,9 @@ parameters:
       dropout2: 0.15707213143131246
       n_blocks: 2
     SAINT:
-      dim: 32
+      dim: 24
       depth: 2
-      heads: 4
+      heads: 2
       dropout: 0.4
     CatBoost:
       learning_rate: 0.2502833800217669
@@ -388,9 +388,9 @@ parameters:
       dropout2: 0.17621231533002782
       n_blocks: 4
     SAINT:
-      dim: 256
+      dim: 96
       depth: 2
-      heads: 4
+      heads: 2
       dropout: 0.2
     CatBoost:
       learning_rate: 0.28010137414964426
@@ -429,8 +429,8 @@ parameters:
       dropout2: 0.16833482708406416
       n_blocks: 2
     SAINT:
-      dim: 128
-      depth: 6
+      dim: 64
+      depth: 3
       heads: 2
       dropout: 0.1
     CatBoost:
@@ -552,7 +552,7 @@ parameters:
       dropout2: 0.03875240542559993
       n_blocks: 3
     SAINT:
-      dim: 128
+      dim: 64
       depth: 3
       heads: 2
       dropout: 0.6
