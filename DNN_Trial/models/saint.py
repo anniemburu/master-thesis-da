@@ -214,7 +214,7 @@ class SAINT(BaseModelTorch):
                     print("Early stopping applies.")
                     break
 
-        self.load_model(filename_extension="best", directory="tmp")
+        #self.load_model(filename_extension="best", directory="tmp")
         return loss_history, val_loss_history
 
     def predict_helper(self, X):
