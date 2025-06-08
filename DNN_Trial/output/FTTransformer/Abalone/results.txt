@@ -194,3 +194,171 @@ Test time: 0.017340
 Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05}
 
 
+2025-06-05 05:51:51.913702
+FTTransformer - Abalone - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 7.09501
+MSE - std: 0.61927
+R2 - mean: 0.32553
+R2 - std: 0.05887
+
+Train time: 187.613924
+Test time: 0.030161
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 06:06:49.525614
+FTTransformer - Abalone - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 8.46659
+MSE - std: 1.47911
+R2 - mean: 0.19514
+R2 - std: 0.14061
+
+Train time: 188.191101
+Test time: 0.031571
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 06:21:47.443883
+FTTransformer - Abalone - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 8.18206
+MSE - std: 0.43563
+R2 - mean: 0.22219
+R2 - std: 0.04141
+
+Train time: 187.998204
+Test time: 0.030891
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 06:36:46.681301
+FTTransformer - Abalone - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 12.51813
+MSE - std: 5.10902
+R2 - mean: -0.19001
+R2 - std: 0.48568
+
+Train time: 188.216022
+Test time: 0.031324
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 06:51:36.081621
+FTTransformer - Abalone - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 8.07265
+MSE - std: 0.44964
+R2 - mean: 0.23259
+R2 - std: 0.04274
+
+Train time: 186.357508
+Test time: 0.031485
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 07:06:37.476348
+FTTransformer - Abalone - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 10.99491
+MSE - std: 2.62034
+R2 - mean: -0.04521
+R2 - std: 0.24910
+
+Train time: 188.742384
+Test time: 0.030373
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 07:21:36.571822
+FTTransformer - Abalone - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 7.65204
+MSE - std: 0.31400
+R2 - mean: 0.27258
+R2 - std: 0.02985
+
+Train time: 188.319815
+Test time: 0.030631
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 07:36:39.383110
+FTTransformer - Abalone - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 10.84449
+MSE - std: 1.60703
+R2 - mean: -0.03091
+R2 - std: 0.15277
+
+Train time: 189.155176
+Test time: 0.030312
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 07:51:54.457258
+FTTransformer - Abalone - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 7.43839
+MSE - std: 0.65632
+R2 - mean: 0.29289
+R2 - std: 0.06239
+
+Train time: 190.940269
+Test time: 0.030469
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 08:07:00.015363
+FTTransformer - Abalone - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 11.76697
+MSE - std: 2.61806
+R2 - mean: -0.11860
+R2 - std: 0.24888
+
+Train time: 189.532346
+Test time: 0.030775
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 08:21:55.509531
+FTTransformer - Abalone - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 7.43839
+MSE - std: 0.65632
+R2 - mean: 0.29289
+R2 - std: 0.06239
+
+Train time: 187.519365
+Test time: 0.030750
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-05 08:36:49.721263
+FTTransformer - Abalone - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 11.76697
+MSE - std: 2.61806
+R2 - mean: -0.11860
+R2 - std: 0.24888
+
+Train time: 187.370954
+Test time: 0.030449
+
+Best Parameters: {'learning_rate': 0.003346353491248373, 'weight_decay': 1.6039854113455462e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
