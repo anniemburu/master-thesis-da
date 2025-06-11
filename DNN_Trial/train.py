@@ -1053,7 +1053,12 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
             #get the bin means
 
             #y_train_pred = [bin_mean.get(cls, np.nan) for cls in y_train_class]
-            y_test_pred = [bin_mean.get(cls, np.nan) for cls in prediction]
+            if args.exp_pred:
+                print("Using Exp Predictions")
+                bin_mean_array = np.array(bin_mean)
+                y_test_pred = probabilities @ bin_mean_array
+            else:
+                y_test_pred = [bin_mean.get(cls, np.nan) for cls in prediction]
 
             matrix_name = f"matrix_{seed}"
             array_name = f"array_{seed}"
