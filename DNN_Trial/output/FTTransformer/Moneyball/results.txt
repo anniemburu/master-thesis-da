@@ -26,3 +26,171 @@ Test time: 0.020521
 Best Parameters: {'learning_rate': 0.008974241215295128, 'weight_decay': 7.459646430671164e-05}
 
 
+2025-06-10 06:42:45.899150
+FTTransformer - Moneyball - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 1625.36971
+MSE - std: 150.82240
+R2 - mean: 0.83103
+R2 - std: 0.01568
+
+Train time: 96.675406
+Test time: 0.038912
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 06:50:42.817330
+FTTransformer - Moneyball - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 1583.53366
+MSE - std: 166.69661
+R2 - mean: 0.83538
+R2 - std: 0.01733
+
+Train time: 95.600502
+Test time: 0.038615
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 06:58:43.536168
+FTTransformer - Moneyball - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 1388.82339
+MSE - std: 127.02640
+R2 - mean: 0.85562
+R2 - std: 0.01321
+
+Train time: 96.180648
+Test time: 0.038857
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 07:06:39.968170
+FTTransformer - Moneyball - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 1510.55818
+MSE - std: 132.83474
+R2 - mean: 0.84297
+R2 - std: 0.01381
+
+Train time: 95.298591
+Test time: 0.039251
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 07:14:36.273536
+FTTransformer - Moneyball - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 1593.04122
+MSE - std: 157.97248
+R2 - mean: 0.83439
+R2 - std: 0.01642
+
+Train time: 95.411052
+Test time: 0.039776
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 07:22:34.375382
+FTTransformer - Moneyball - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 1522.35929
+MSE - std: 91.62517
+R2 - mean: 0.84174
+R2 - std: 0.00953
+
+Train time: 94.605875
+Test time: 0.038826
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 07:30:23.743835
+FTTransformer - Moneyball - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1441.08132
+MSE - std: 73.27095
+R2 - mean: 0.85019
+R2 - std: 0.00762
+
+Train time: 94.135208
+Test time: 0.040853
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 07:38:19.342757
+FTTransformer - Moneyball - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1535.34534
+MSE - std: 85.60095
+R2 - mean: 0.84039
+R2 - std: 0.00890
+
+Train time: 95.316251
+Test time: 0.041222
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 07:46:15.755090
+FTTransformer - Moneyball - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 1514.36937
+MSE - std: 216.28031
+R2 - mean: 0.84257
+R2 - std: 0.02248
+
+Train time: 95.332733
+Test time: 0.040264
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 07:54:11.582781
+FTTransformer - Moneyball - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1582.27808
+MSE - std: 75.55992
+R2 - mean: 0.83551
+R2 - std: 0.00785
+
+Train time: 95.231125
+Test time: 0.039044
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 08:02:08.761913
+FTTransformer - Moneyball - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 1430.71843
+MSE - std: 111.73044
+R2 - mean: 0.85127
+R2 - std: 0.01162
+
+Train time: 95.648798
+Test time: 0.038434
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 08:10:03.877386
+FTTransformer - Moneyball - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1433.69555
+MSE - std: 118.52147
+R2 - mean: 0.85096
+R2 - std: 0.01232
+
+Train time: 95.154931
+Test time: 0.038663
+
+Best Parameters: {'learning_rate': 0.0001397623116786567, 'weight_decay': 3.198059991694104e-06, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
