@@ -166,3 +166,17 @@ Test time: 0.399660
 Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
 
 
+2025-06-14 05:40:13.951738
+FTTransformer - House_Sales - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 61141029372.41736
+MSE - std: 28984780074.08275
+R2 - mean: 0.52181
+R2 - std: 0.22669
+
+Train time: 1535.747176
+Test time: 0.388299
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
