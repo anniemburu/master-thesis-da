@@ -180,3 +180,171 @@ Test time: 0.039956
 Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 1, 'dropout': 0.23677836111066783, 'n_blocks': 6}
 
 
+2025-06-13 06:07:45.317348
+MLP - Diamonds - test_model - probabilistic_regression - quantile - sturges - False - True
+
+MSE - mean: 462654.05472
+MSE - std: 13355.03637
+R2 - mean: 0.97104
+R2 - std: 0.00084
+
+Train time: 201.141412
+Test time: 0.073701
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 06:23:21.804991
+MLP - Diamonds - test_model - probabilistic_regression - quantile - sturges - True - True
+
+MSE - mean: 459214.52606
+MSE - std: 14594.57694
+R2 - mean: 0.97125
+R2 - std: 0.00091
+
+Train time: 202.590457
+Test time: 0.071555
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 06:38:48.249094
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - sturges - False - True
+
+MSE - mean: 377117.79799
+MSE - std: 12032.29462
+R2 - mean: 0.97639
+R2 - std: 0.00075
+
+Train time: 202.976021
+Test time: 0.078857
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 06:54:04.537990
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - sturges - True - True
+
+MSE - mean: 367414.10388
+MSE - std: 12290.31063
+R2 - mean: 0.97700
+R2 - std: 0.00077
+
+Train time: 200.709934
+Test time: 0.076134
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 07:09:27.194116
+MLP - Diamonds - test_model - probabilistic_regression - uniform - sturges - False - True
+
+MSE - mean: 384883.28110
+MSE - std: 17280.27596
+R2 - mean: 0.97590
+R2 - std: 0.00108
+
+Train time: 202.665722
+Test time: 0.069858
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 07:24:48.807267
+MLP - Diamonds - test_model - probabilistic_regression - uniform - sturges - True - True
+
+MSE - mean: 390272.42087
+MSE - std: 9680.23090
+R2 - mean: 0.97557
+R2 - std: 0.00061
+
+Train time: 202.471842
+Test time: 0.074935
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 07:40:48.591500
+MLP - Diamonds - test_model - probabilistic_regression - quantile - freedman - False - True
+
+MSE - mean: 352276.36258
+MSE - std: 12065.49465
+R2 - mean: 0.97795
+R2 - std: 0.00076
+
+Train time: 201.761468
+Test time: 0.076862
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 07:56:45.266063
+MLP - Diamonds - test_model - probabilistic_regression - quantile - freedman - True - True
+
+MSE - mean: 352214.68167
+MSE - std: 15587.60411
+R2 - mean: 0.97795
+R2 - std: 0.00098
+
+Train time: 200.874717
+Test time: 0.076364
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 08:12:29.243951
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - freedman - False - True
+
+MSE - mean: 340791.79476
+MSE - std: 12266.71126
+R2 - mean: 0.97867
+R2 - std: 0.00077
+
+Train time: 201.485798
+Test time: 0.073899
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 08:28:16.710478
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - freedman - True - True
+
+MSE - mean: 350135.76620
+MSE - std: 14086.05498
+R2 - mean: 0.97808
+R2 - std: 0.00088
+
+Train time: 201.879765
+Test time: 0.081380
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 08:44:00.332803
+MLP - Diamonds - test_model - probabilistic_regression - uniform - freedman - False - True
+
+MSE - mean: 338531.22830
+MSE - std: 8459.11997
+R2 - mean: 0.97881
+R2 - std: 0.00053
+
+Train time: 201.282613
+Test time: 0.080239
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+
+2025-06-13 08:59:46.074737
+MLP - Diamonds - test_model - probabilistic_regression - uniform - freedman - True - True
+
+MSE - mean: 347528.01624
+MSE - std: 11019.93508
+R2 - mean: 0.97824
+R2 - std: 0.00069
+
+Train time: 201.580810
+Test time: 0.076652
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.23677836111066783, 'n_blocks': 6}
+
+

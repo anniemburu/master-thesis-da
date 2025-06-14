@@ -180,3 +180,171 @@ Test time: 0.021744
 Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 1, 'dropout': 0.29646621574612675, 'n_blocks': 2}
 
 
+2025-06-13 10:27:00.544666
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - False - True
+
+MSE - mean: 110.23927
+MSE - std: 1.85353
+R2 - mean: 0.32370
+R2 - std: 0.01137
+
+Train time: 20.137598
+Test time: 0.016438
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 12, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:28:57.372948
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - True - True
+
+MSE - mean: 110.18456
+MSE - std: 1.17681
+R2 - mean: 0.32403
+R2 - std: 0.00722
+
+Train time: 20.027447
+Test time: 0.025714
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 12, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:30:58.761908
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - False - True
+
+MSE - mean: 104.70693
+MSE - std: 5.85761
+R2 - mean: 0.35764
+R2 - std: 0.03594
+
+Train time: 20.339489
+Test time: 0.020360
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 12, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:32:58.820025
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - True - True
+
+MSE - mean: 120.56270
+MSE - std: 6.65860
+R2 - mean: 0.26037
+R2 - std: 0.04085
+
+Train time: 20.312063
+Test time: 0.031606
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 12, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:34:55.665815
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - False - True
+
+MSE - mean: 104.49007
+MSE - std: 5.88480
+R2 - mean: 0.35897
+R2 - std: 0.03610
+
+Train time: 19.904093
+Test time: 0.026915
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 12, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:36:53.303228
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - True - True
+
+MSE - mean: 122.26382
+MSE - std: 8.07007
+R2 - mean: 0.24993
+R2 - std: 0.04951
+
+Train time: 20.100810
+Test time: 0.025400
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 12, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:38:51.403620
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - False - True
+
+MSE - mean: 105.12587
+MSE - std: 2.98234
+R2 - mean: 0.35507
+R2 - std: 0.01830
+
+Train time: 20.064985
+Test time: 0.019948
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 34, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:40:56.375004
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - True - True
+
+MSE - mean: 105.34922
+MSE - std: 3.35823
+R2 - mean: 0.35370
+R2 - std: 0.02060
+
+Train time: 20.221568
+Test time: 0.022091
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 34, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:42:57.221360
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - False - True
+
+MSE - mean: 102.44310
+MSE - std: 4.85889
+R2 - mean: 0.37153
+R2 - std: 0.02981
+
+Train time: 20.447307
+Test time: 0.025623
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 34, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:44:57.046930
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - True - True
+
+MSE - mean: 123.00217
+MSE - std: 9.75134
+R2 - mean: 0.24540
+R2 - std: 0.05982
+
+Train time: 20.170352
+Test time: 0.025907
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 34, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:46:55.934922
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - False - True
+
+MSE - mean: 102.63708
+MSE - std: 6.58904
+R2 - mean: 0.37034
+R2 - std: 0.04042
+
+Train time: 20.192196
+Test time: 0.021670
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 31, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
+2025-06-13 10:48:56.851187
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - True - True
+
+MSE - mean: 125.36768
+MSE - std: 8.71535
+R2 - mean: 0.23089
+R2 - std: 0.05347
+
+Train time: 20.129685
+Test time: 0.029222
+
+Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 31, 'dropout': 0.29646621574612675, 'n_blocks': 2}
+
+
