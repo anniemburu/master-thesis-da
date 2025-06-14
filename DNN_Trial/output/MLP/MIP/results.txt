@@ -180,3 +180,171 @@ Test time: 0.010844
 Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 1, 'dropout': 0.2651113818434264, 'n_blocks': 6}
 
 
+2025-06-13 10:50:18.032351
+MLP - MIP - test_model - probabilistic_regression - quantile - sturges - False - True
+
+MSE - mean: 212414991.99310
+MSE - std: 22376129.50713
+R2 - mean: 0.74910
+R2 - std: 0.02643
+
+Train time: 11.615749
+Test time: 0.016956
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 10:51:39.066425
+MLP - MIP - test_model - probabilistic_regression - quantile - sturges - True - True
+
+MSE - mean: 214970985.01842
+MSE - std: 18296853.86216
+R2 - mean: 0.74608
+R2 - std: 0.02161
+
+Train time: 11.614969
+Test time: 0.014285
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 10:53:02.063116
+MLP - MIP - test_model - probabilistic_regression - kmeans - sturges - False - True
+
+MSE - mean: 266397197.23527
+MSE - std: 29921371.51982
+R2 - mean: 0.68533
+R2 - std: 0.03534
+
+Train time: 11.830831
+Test time: 0.013827
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 10:54:24.710561
+MLP - MIP - test_model - probabilistic_regression - kmeans - sturges - True - True
+
+MSE - mean: 512161123.08741
+MSE - std: 199168607.51335
+R2 - mean: 0.39504
+R2 - std: 0.23526
+
+Train time: 11.653467
+Test time: 0.019860
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 10, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 10:55:45.941798
+MLP - MIP - test_model - probabilistic_regression - uniform - sturges - False - True
+
+MSE - mean: 258463744.62865
+MSE - std: 19409108.17243
+R2 - mean: 0.69470
+R2 - std: 0.02293
+
+Train time: 11.711845
+Test time: 0.016930
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 2, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 10:57:06.565886
+MLP - MIP - test_model - probabilistic_regression - uniform - sturges - True - True
+
+MSE - mean: 252399793.20898
+MSE - std: 16542813.91848
+R2 - mean: 0.70187
+R2 - std: 0.01954
+
+Train time: 11.622488
+Test time: 0.006618
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 2, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 10:58:28.338932
+MLP - MIP - test_model - probabilistic_regression - quantile - freedman - False - True
+
+MSE - mean: 757957830.99739
+MSE - std: 115498642.36040
+R2 - mean: 0.10470
+R2 - std: 0.13643
+
+Train time: 11.702012
+Test time: 0.017021
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 121, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 10:59:48.966481
+MLP - MIP - test_model - probabilistic_regression - quantile - freedman - True - True
+
+MSE - mean: 825198058.65807
+MSE - std: 34895231.34350
+R2 - mean: 0.02528
+R2 - std: 0.04122
+
+Train time: 11.464465
+Test time: 0.024855
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 121, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 11:01:16.526518
+MLP - MIP - test_model - probabilistic_regression - kmeans - freedman - False - True
+
+MSE - mean: 328535855.71916
+MSE - std: 38875799.23651
+R2 - mean: 0.61193
+R2 - std: 0.04592
+
+Train time: 11.859030
+Test time: 0.017021
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 122, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 11:02:40.498537
+MLP - MIP - test_model - probabilistic_regression - kmeans - freedman - True - True
+
+MSE - mean: 944348287.57309
+MSE - std: 43045468.42884
+R2 - mean: -0.11546
+R2 - std: 0.05085
+
+Train time: 11.860134
+Test time: 0.005227
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 122, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 11:04:08.689394
+MLP - MIP - test_model - probabilistic_regression - uniform - freedman - False - True
+
+MSE - mean: 299174023.22923
+MSE - std: 68419230.17834
+R2 - mean: 0.64662
+R2 - std: 0.08082
+
+Train time: 11.663115
+Test time: 0.008751
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 13, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+
+2025-06-13 11:05:33.142809
+MLP - MIP - test_model - probabilistic_regression - uniform - freedman - True - True
+
+MSE - mean: 714626967.67262
+MSE - std: 123791213.37070
+R2 - mean: 0.15589
+R2 - std: 0.14622
+
+Train time: 11.532571
+Test time: 0.011770
+
+Best Parameters: {'d_block': 64, 'd_in': 151, 'd_out': 13, 'dropout': 0.2651113818434264, 'n_blocks': 6}
+
+

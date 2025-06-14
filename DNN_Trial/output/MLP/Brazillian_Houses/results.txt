@@ -180,3 +180,171 @@ Test time: 0.013708
 Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 1, 'dropout': 0.07678813857296692, 'n_blocks': 5}
 
 
+2025-06-13 05:10:46.404714
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - False - True
+
+MSE - mean: 20326321.40054
+MSE - std: 1299073.79771
+R2 - mean: 0.49073
+R2 - std: 0.03255
+
+Train time: 44.979216
+Test time: 0.017261
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:14:28.124873
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - True - True
+
+MSE - mean: 20340563.75669
+MSE - std: 1279178.98982
+R2 - mean: 0.49037
+R2 - std: 0.03205
+
+Train time: 44.997844
+Test time: 0.021764
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:18:10.275431
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - False - True
+
+MSE - mean: 463913772.97897
+MSE - std: 221899450.77082
+R2 - mean: -10.62322
+R2 - std: 5.55962
+
+Train time: 44.984420
+Test time: 0.019217
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:21:52.264806
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - True - True
+
+MSE - mean: 130966127.64020
+MSE - std: 127469694.31506
+R2 - mean: -2.28132
+R2 - std: 3.19372
+
+Train time: 45.034274
+Test time: 0.017507
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:25:28.243379
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - False - True
+
+MSE - mean: 153563955.12719
+MSE - std: 114005181.86173
+R2 - mean: -2.84750
+R2 - std: 2.85637
+
+Train time: 44.809257
+Test time: 0.019875
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 2, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:29:03.431961
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - True - True
+
+MSE - mean: 231763898.88707
+MSE - std: 78264257.77125
+R2 - mean: -4.80678
+R2 - std: 1.96089
+
+Train time: 44.614322
+Test time: 0.016696
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 2, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:32:57.641549
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False - True
+
+MSE - mean: 49093682.28797
+MSE - std: 57751572.82587
+R2 - mean: -0.23003
+R2 - std: 1.44695
+
+Train time: 45.282592
+Test time: 0.107858
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 1733, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:36:53.240146
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - True - True
+
+MSE - mean: 61382595.34934
+MSE - std: 39895175.82508
+R2 - mean: -0.53792
+R2 - std: 0.99956
+
+Train time: 45.367827
+Test time: 0.099971
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 1733, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:40:51.384899
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False - True
+
+MSE - mean: 269066891.17993
+MSE - std: 395524582.48114
+R2 - mean: -5.74139
+R2 - std: 9.90975
+
+Train time: 45.637283
+Test time: 0.114161
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 2096, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:44:52.349651
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - True - True
+
+MSE - mean: 25824357.67520
+MSE - std: 10371832.02678
+R2 - mean: 0.35298
+R2 - std: 0.25986
+
+Train time: 45.986564
+Test time: 0.112040
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 2096, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:48:34.189011
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False - True
+
+MSE - mean: 386952888.04137
+MSE - std: 99444128.80696
+R2 - mean: -8.69499
+R2 - std: 2.49154
+
+Train time: 45.004792
+Test time: 0.032757
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 54, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
+2025-06-13 05:52:14.161249
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - True - True
+
+MSE - mean: 249913625.94426
+MSE - std: 166988032.51239
+R2 - mean: -5.26151
+R2 - std: 4.18384
+
+Train time: 44.699926
+Test time: 0.037156
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 54, 'dropout': 0.07678813857296692, 'n_blocks': 5}
+
+
