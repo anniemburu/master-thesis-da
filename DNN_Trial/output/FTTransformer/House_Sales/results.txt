@@ -12,3 +12,157 @@ Test time: 0.234105
 Best Parameters: {'learning_rate': 0.0008304138365966551, 'weight_decay': 1.4243260329863695e-05, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
 
 
+2025-06-13 07:15:25.286480
+FTTransformer - House_Sales - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 42189994870.44637
+MSE - std: 3030718644.36623
+R2 - mean: 0.67003
+R2 - std: 0.02370
+
+Train time: 1531.640227
+Test time: 0.389243
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 09:15:29.375110
+FTTransformer - House_Sales - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 41019259730.27905
+MSE - std: 593632205.36557
+R2 - mean: 0.67918
+R2 - std: 0.00464
+
+Train time: 1523.113941
+Test time: 0.395322
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 11:16:06.936128
+FTTransformer - House_Sales - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 34974162439.96871
+MSE - std: 3943074882.23471
+R2 - mean: 0.72646
+R2 - std: 0.03084
+
+Train time: 1530.047397
+Test time: 0.390849
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 13:16:53.461167
+FTTransformer - House_Sales - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 37338485097.22321
+MSE - std: 5487070257.43836
+R2 - mean: 0.70797
+R2 - std: 0.04292
+
+Train time: 1531.659468
+Test time: 0.395313
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 15:17:53.625678
+FTTransformer - House_Sales - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 44762666509.41008
+MSE - std: 8557055578.80813
+R2 - mean: 0.64991
+R2 - std: 0.06693
+
+Train time: 1534.627725
+Test time: 0.386425
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 17:20:53.575455
+FTTransformer - House_Sales - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 60363318972.16774
+MSE - std: 17035895023.80141
+R2 - mean: 0.52789
+R2 - std: 0.13324
+
+Train time: 1556.435235
+Test time: 0.401716
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 19:20:47.676593
+FTTransformer - House_Sales - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 43616514249.23622
+MSE - std: 16975527627.72899
+R2 - mean: 0.65887
+R2 - std: 0.13277
+
+Train time: 1512.747413
+Test time: 0.416526
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 21:24:27.348725
+FTTransformer - House_Sales - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 47967314253.65559
+MSE - std: 15633382529.12667
+R2 - mean: 0.62484
+R2 - std: 0.12227
+
+Train time: 1559.162184
+Test time: 0.405099
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-13 23:31:32.073054
+FTTransformer - House_Sales - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 49455823476.72770
+MSE - std: 8317600138.26013
+R2 - mean: 0.61320
+R2 - std: 0.06505
+
+Train time: 1600.559929
+Test time: 0.393994
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-14 01:35:20.173486
+FTTransformer - House_Sales - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 79315253693.96408
+MSE - std: 27199823688.71944
+R2 - mean: 0.37967
+R2 - std: 0.21273
+
+Train time: 1562.674126
+Test time: 0.394846
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-14 03:38:43.726349
+FTTransformer - House_Sales - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 37882812645.80373
+MSE - std: 3681600709.07125
+R2 - mean: 0.70371
+R2 - std: 0.02879
+
+Train time: 1558.788316
+Test time: 0.399660
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369, 'n_blocks': 2, 'd_block': 96, 'attention_n_heads': 4, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
