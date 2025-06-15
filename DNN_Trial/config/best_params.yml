@@ -46,11 +46,11 @@ parameters:
       'tree_output_dim': 3
   Allstate_Claims:
     FTTransformer:
-      learning_rate: 0.00014266378836134144 
-      weight_decay: 7.973049353626902e-05
+      learning_rate: 0.0010788862572108022
+      weight_decay: 0.00025889495174850674
       n_blocks: 2
       d_block: 16
-      attention_n_heads: 4
+      attention_n_heads: 2
       attention_dropout: 0.2
       ffn_d_hidden: None
       ffn_d_hidden_multiplier: 1.0
@@ -98,11 +98,11 @@ parameters:
       dropout2: 0.17961742655097668
       n_blocks: 4
     FTTransformer:
-      learning_rate : 0.0006629565316207639
-      weight_decay: 0.0008780633971520654
-      n_blocks: 2
-      d_block: 16
-      attention_n_heads: 4
+      learning_rate: 0.00018442395349507182
+      weight_decay: 0.001611408166564025
+      n_blocks: 1
+      d_block: 8
+      attention_n_heads: 2
       attention_dropout: 0.2
       ffn_d_hidden: None
       ffn_d_hidden_multiplier: 1.0
@@ -346,7 +346,7 @@ parameters:
       weight_decay: 1.7644038793799652e-06
       n_blocks: 2
       d_block: 16
-      attention_n_heads: 4
+      attention_n_heads: 2
       attention_dropout: 0.2
       ffn_d_hidden: None
       ffn_d_hidden_multiplier: 1.0
