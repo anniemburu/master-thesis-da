@@ -361,8 +361,13 @@ parameters:
       dropout: 0.2713416938393725
       n_blocks: 3
     RandomForest:
+<<<<<<< Updated upstream
       max_depth: 12
       n_estimators: 30
+=======
+      max_depth: 9
+      n_estimators: 66
+>>>>>>> Stashed changes
     ResMLP:
       d_block: 256
       d_hidden: 2

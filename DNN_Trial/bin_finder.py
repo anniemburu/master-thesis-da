@@ -119,7 +119,7 @@ def binning(args, y, y_val):
         y_val = y_val.astype(int)
 
         #Rectify bin
-        y, y_val = bin_shifter(args, y, y_val)
+        #y, y_val = bin_shifter(args, y, y_val)
 
         #bin_edges = binning.bin_edges_[0]
 
@@ -214,7 +214,17 @@ def binning(args, y, y_val):
 
     return y , y_val #, bin_edges
 
-def count_classes(model_name, parameters, X_train, y_train, X_test, y_test, args, visual=False, save_model=True):
+def get_class_distribution(y_train):
+    #print(f"Class Distribution in Training Data: {np.unique(y_train, return_counts=True)}")
+    bins = np.unique(y_train)
+    counts = np.bincount(y_train)
+    class_distribution = dict(zip(bins, counts))
+
+    bin_count = len(bins)
+
+    return bin_count, class_distribution
+
+def count_classes(model_name, parameters, args, X_train, y_train, X_test = None, y_test = None,visual=False, save_model=True):
     """
     Count the number of unique classes in the target variable.
     """
@@ -255,12 +265,21 @@ def count_classes(model_name, parameters, X_train, y_train, X_test, y_test, args
 
     print(f"Dataset: {args.dataset} , Bins: {args.binning}, Train Classes: {np.unique(y_train_class)}, Test Classes: {np.unique(y_test_class)}")
 
-    with open("bin_finder.txt", "a") as f:
+    bin_count, class_distrb = get_class_distribution(y_train_class)
+
+    """with open("bin_finder.txt", "a") as f:
         f.write(
             f"Dataset: {args.dataset} , Bins: {args.binning}, "
             f"Train Classes: {len(np.unique(y_train_class))}, "
-            f"Test Classes: {len(np.unique(y_test_class))}\n"
-        )
+            #f"Test Classes: {len(np.unique(y_test_class))}\n"
+        )"""
+    
+    with open("bin_finder.txt", "a") as f:
+        f.write(
+            f"Dataset: {args.dataset} , Bins: {args.binning}, "
+            f"Bin Count: {bin_count}, "
+            f"Class Distribution: {class_distrb}\n"
+        ) 
     print("ALL DONE!!!!")
 
 
@@ -298,7 +317,7 @@ def main(args):
     
     print("Started Classification Module ...... ")
     print(f"Parameters Used HERE: {parameters}")
-    count_classes(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+    count_classes(model_name, parameters, args, X, y, X_test, y_test, visual=False, save_model=True)
 
 if __name__ == "__main__":
     # --- Argument Parsing ---

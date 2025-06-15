@@ -120,7 +120,7 @@ class Trainer(nn.Module):
 
         self.model.train()
         self.opt.zero_grad()
-        loss = self.loss_function(self.model(x_batch), y_batch).mean()
+        loss = self.loss_function(self.model(x_batch), y_batch, ).mean()
         loss.backward()
         self.opt.step()
         self.step += 1

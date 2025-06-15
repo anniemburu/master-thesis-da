@@ -8,7 +8,7 @@ objective: probabilistic_regression # Don't change (regression , probabilistic_r
 y_distribution : bimodial
 
 # GPU parameters
-use_gpu: True
+use_gpu: False
 gpu_ids: [0, 1]
 data_parallel: False
 
