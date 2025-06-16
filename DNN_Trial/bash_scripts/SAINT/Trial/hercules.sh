@@ -9,7 +9,7 @@
 
 CONFIGS=(
     config/abalone.yml
-    config/allstate.yml
+    #config/allstate.yml
     config/black_friday.yml
     config/boston.yml
     config/brazillian_houses.yml
@@ -33,23 +33,23 @@ for config in "${CONFIGS[@]}"; do
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
     
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning sturges --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning sturges --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning sturges --weighted_loss --batch_size 64 --val_batch_size 128
 
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning sturges --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning sturges --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning sturges --weighted_loss --batch_size 64 --val_batch_size 128
 
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning sturges --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning sturges --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning sturges --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning sturges --weighted_loss --batch_size 64 --val_batch_size 128
 
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning freedman --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning freedman --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning freedman --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy quantile --binning freedman --weighted_loss --batch_size 64 --val_batch_size 128
 
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning freedman --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning freedman --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning freedman --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy kmeans --binning freedman --weighted_loss --batch_size 64 --val_batch_size 128
 
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning freedman --class_comp --batch_size 64 --val_batch_size 128
-    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning freedman --class_comp --weighted_loss --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning freedman --batch_size 64 --val_batch_size 128
+    srun python3 train.py --config "$config" --model_name SAINT --objective probabilistic_regression --strategy uniform --binning freedman --weighted_loss --batch_size 64 --val_batch_size 128
 
     #srun python3 train.py --config "$config" --model_name SAINT --objective regression --batch_size 64 --val_batch_size 128
 
