@@ -180,3 +180,21 @@ Test time: 7.282324
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.5, 'heads': 2}
 
 
+2025-06-16 19:11:29.627059
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 8.55772
+Log Loss - std: 0.06198
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.06063
+Accuracy - std: 0.00469
+F1 score - mean: 0.11429
+F1 score - std: 0.00835
+
+Train time: 3472.640041
+Test time: 4.086661
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+

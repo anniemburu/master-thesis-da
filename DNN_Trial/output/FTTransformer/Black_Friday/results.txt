@@ -26,3 +26,17 @@ Test time: 18.896437
 Best Parameters: {'learning_rate': 0.00018442395349507182, 'weight_decay': 0.001611408166564025, 'n_blocks': 1, 'd_block': 8, 'attention_n_heads': 2, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
 
 
+2025-06-16 19:22:38.965322
+FTTransformer - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+MSE - mean: 17218736.83233
+MSE - std: 742532.98100
+R2 - mean: 0.33537
+R2 - std: 0.02866
+
+Train time: 69442.139366
+Test time: 20.455103
+
+Best Parameters: {'learning_rate': 0.00018442395349507182, 'weight_decay': 0.001611408166564025, 'n_blocks': 1, 'd_block': 8, 'attention_n_heads': 2, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+

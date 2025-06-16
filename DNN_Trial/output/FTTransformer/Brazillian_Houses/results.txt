@@ -194,3 +194,165 @@ Test time: 0.122193
 Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
 
 
+2025-06-16 16:43:00.741853
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 13.54904
+Log Loss - std: 0.12113
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07152
+Accuracy - std: 0.00592
+F1 score - mean: 0.13343
+F1 score - std: 0.01033
+
+Train time: 503.926840
+Test time: 0.174676
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 17:07:01.639874
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 13.15101
+Log Loss - std: 0.37245
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07102
+Accuracy - std: 0.00721
+F1 score - mean: 0.13253
+F1 score - std: 0.01259
+
+Train time: 508.349339
+Test time: 0.194212
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 17:31:17.148090
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 19.15344
+Log Loss - std: 0.43559
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 513.481395
+Test time: 0.175588
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 17:55:26.775006
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 18.37274
+Log Loss - std: 0.36563
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00025
+Accuracy - std: 0.00009
+F1 score - mean: 0.00050
+F1 score - std: 0.00018
+
+Train time: 511.287784
+Test time: 0.174436
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 18:46:24.672860
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 19.56692
+Log Loss - std: 0.30176
+AUC - mean: 0.50514
+AUC - std: 0.00918
+Accuracy - mean: 0.00031
+Accuracy - std: 0.00023
+F1 score - mean: 0.00062
+F1 score - std: 0.00047
+
+Train time: 512.512436
+Test time: 0.212498
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 19:20:04.734982
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 19.79570
+Log Loss - std: 0.15023
+AUC - mean: 0.50612
+AUC - std: 0.00202
+Accuracy - mean: 0.00025
+Accuracy - std: 0.00018
+F1 score - mean: 0.00050
+F1 score - std: 0.00035
+
+Train time: 504.436765
+Test time: 0.218303
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 19:58:29.366890
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 19.92633
+Log Loss - std: 0.18266
+AUC - mean: 0.51007
+AUC - std: 0.00469
+Accuracy - mean: 0.00025
+Accuracy - std: 0.00018
+F1 score - mean: 0.00050
+F1 score - std: 0.00035
+
+Train time: 502.242577
+Test time: 0.213481
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 20:37:24.926198
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 19.85872
+Log Loss - std: 0.07790
+AUC - mean: 0.49479
+AUC - std: 0.01891
+Accuracy - mean: 0.00019
+Accuracy - std: 0.00015
+F1 score - mean: 0.00037
+F1 score - std: 0.00031
+
+Train time: 510.543311
+Test time: 0.218495
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 21:01:14.592528
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 20.17103
+Log Loss - std: 0.12622
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 494.761768
+Test time: 0.174871
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+

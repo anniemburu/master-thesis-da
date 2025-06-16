@@ -366,3 +366,111 @@ Test time: 7.986397
 Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
 
 
+2025-06-16 15:13:03.466272
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 7.88995
+Log Loss - std: 0.22478
+AUC - mean: 0.46728
+AUC - std: 0.14050
+Accuracy - mean: 0.05348
+Accuracy - std: 0.00256
+F1 score - mean: 0.10152
+F1 score - std: 0.00461
+
+Train time: 771.960003
+Test time: 0.657548
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-06-16 16:20:46.633125
+MLP - Allstate_Claims - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 7.73793
+Log Loss - std: 0.29236
+AUC - mean: 0.61990
+AUC - std: 0.12618
+Accuracy - mean: 0.05646
+Accuracy - std: 0.00256
+F1 score - mean: 0.10688
+F1 score - std: 0.00458
+
+Train time: 772.109670
+Test time: 0.659060
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-06-16 17:23:01.385626
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 20.63021
+Log Loss - std: 0.02003
+AUC - mean: 0.35517
+AUC - std: 0.07958
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 773.151364
+Test time: 0.645247
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-06-16 18:25:12.904349
+MLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 20.43925
+Log Loss - std: 0.11708
+AUC - mean: 0.46730
+AUC - std: 0.10244
+Accuracy - mean: 0.00001
+Accuracy - std: 0.00001
+F1 score - mean: 0.00001
+F1 score - std: 0.00001
+
+Train time: 772.857537
+Test time: 0.645479
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 17, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-06-16 19:15:28.744821
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 20.58423
+Log Loss - std: 0.02221
+AUC - mean: 0.49713
+AUC - std: 0.00555
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 767.248952
+Test time: 0.644336
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 8, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+
+2025-06-16 20:05:11.996549
+MLP - Allstate_Claims - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 20.57811
+Log Loss - std: 0.01344
+AUC - mean: 0.49366
+AUC - std: 0.00375
+Accuracy - mean: 0.00002
+Accuracy - std: 0.00004
+F1 score - mean: 0.00005
+F1 score - std: 0.00007
+
+Train time: 769.096754
+Test time: 0.630406
+
+Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 8, 'dropout': 0.12920563775872115, 'n_blocks': 6}
+
+

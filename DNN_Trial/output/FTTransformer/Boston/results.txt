@@ -194,3 +194,219 @@ Test time: 0.007614
 Best Parameters: {'learning_rate': 0.005961637956043898, 'weight_decay': 8.92702675678448e-05}
 
 
+2025-06-16 15:59:30.569081
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 6.06358
+Log Loss - std: 0.59584
+AUC - mean: 0.38228
+AUC - std: 0.10675
+Accuracy - mean: 0.19763
+Accuracy - std: 0.04195
+F1 score - mean: 0.32781
+F1 score - std: 0.05709
+
+Train time: 31.761230
+Test time: 0.010380
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:01:18.151024
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 6.28303
+Log Loss - std: 0.64454
+AUC - mean: 0.44841
+AUC - std: 0.02452
+Accuracy - mean: 0.19104
+Accuracy - std: 0.04112
+F1 score - mean: 0.31863
+F1 score - std: 0.05662
+
+Train time: 31.727141
+Test time: 0.009782
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:03:05.639809
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 8.24559
+Log Loss - std: 0.30064
+AUC - mean: 0.42328
+AUC - std: 0.09740
+Accuracy - mean: 0.02503
+Accuracy - std: 0.01222
+F1 score - mean: 0.04856
+F1 score - std: 0.02344
+
+Train time: 31.794927
+Test time: 0.011135
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:04:58.380519
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 7.56125
+Log Loss - std: 0.43750
+AUC - mean: 0.45569
+AUC - std: 0.09165
+Accuracy - mean: 0.03953
+Accuracy - std: 0.02437
+F1 score - mean: 0.07498
+F1 score - std: 0.04487
+
+Train time: 31.860298
+Test time: 0.012178
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:06:50.602630
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 8.12509
+Log Loss - std: 0.17316
+AUC - mean: 0.47487
+AUC - std: 0.04384
+Accuracy - mean: 0.02767
+Accuracy - std: 0.01164
+F1 score - mean: 0.05359
+F1 score - std: 0.02215
+
+Train time: 31.706802
+Test time: 0.012383
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:08:40.101589
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 7.19634
+Log Loss - std: 0.23965
+AUC - mean: 0.46495
+AUC - std: 0.10641
+Accuracy - mean: 0.04611
+Accuracy - std: 0.00812
+F1 score - mean: 0.08803
+F1 score - std: 0.01487
+
+Train time: 31.818873
+Test time: 0.009864
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:10:25.693536
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 6.46909
+Log Loss - std: 0.25420
+AUC - mean: 0.47870
+AUC - std: 0.00581
+Accuracy - mean: 0.08696
+Accuracy - std: 0.03491
+F1 score - mean: 0.14837
+F1 score - std: 0.05676
+
+Train time: 31.269868
+Test time: 0.011830
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:12:10.400166
+FTTransformer - Boston - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 6.79433
+Log Loss - std: 0.22961
+AUC - mean: 0.50271
+AUC - std: 0.01361
+Accuracy - mean: 0.07115
+Accuracy - std: 0.01708
+F1 score - mean: 0.12570
+F1 score - std: 0.02392
+
+Train time: 31.217773
+Test time: 0.009126
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:13:56.521194
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 8.32112
+Log Loss - std: 0.12842
+AUC - mean: 0.45003
+AUC - std: 0.00965
+Accuracy - mean: 0.01318
+Accuracy - std: 0.00812
+F1 score - mean: 0.02530
+F1 score - std: 0.01512
+
+Train time: 31.428334
+Test time: 0.008053
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:15:42.977036
+FTTransformer - Boston - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 7.98109
+Log Loss - std: 0.29524
+AUC - mean: 0.45695
+AUC - std: 0.02133
+Accuracy - mean: 0.01449
+Accuracy - std: 0.01491
+F1 score - mean: 0.02711
+F1 score - std: 0.02724
+
+Train time: 31.474385
+Test time: 0.010413
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:17:28.094637
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 8.04267
+Log Loss - std: 0.48508
+AUC - mean: 0.47220
+AUC - std: 0.02862
+Accuracy - mean: 0.01581
+Accuracy - std: 0.00968
+F1 score - mean: 0.03032
+F1 score - std: 0.01808
+
+Train time: 31.180470
+Test time: 0.009973
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 16:19:12.146840
+FTTransformer - Boston - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 7.64235
+Log Loss - std: 0.90799
+AUC - mean: 0.43786
+AUC - std: 0.03292
+Accuracy - mean: 0.03294
+Accuracy - std: 0.01592
+F1 score - mean: 0.06142
+F1 score - std: 0.02727
+
+Train time: 30.917069
+Test time: 0.008567
+
+Best Parameters: {'learning_rate': 0.0003038703893093738, 'weight_decay': 8.778101233251167e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
