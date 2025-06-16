@@ -1,0 +1,28 @@
+2025-06-15 20:20:09.393449
+FTTransformer - Black_Friday - test_model - probabilistic_regression - quantile - sturges - False - False
+
+MSE - mean: 21718855.85604
+MSE - std: 4774834.41278
+R2 - mean: 0.16167
+R2 - std: 0.18431
+
+Train time: 63981.793230
+Test time: 18.832585
+
+Best Parameters: {'learning_rate': 0.00018442395349507182, 'weight_decay': 0.001611408166564025, 'n_blocks': 1, 'd_block': 8, 'attention_n_heads': 2, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-16 06:58:25.314255
+FTTransformer - Black_Friday - test_model - probabilistic_regression - quantile - sturges - True - False
+
+MSE - mean: 20499141.52362
+MSE - std: 1397257.95460
+R2 - mean: 0.20875
+R2 - std: 0.05393
+
+Train time: 59873.447287
+Test time: 18.896437
+
+Best Parameters: {'learning_rate': 0.00018442395349507182, 'weight_decay': 0.001611408166564025, 'n_blocks': 1, 'd_block': 8, 'attention_n_heads': 2, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.0, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
