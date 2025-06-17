@@ -3,7 +3,7 @@
 #SBATCH --job-name=RF_Odyssey_final+regg
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
-#SBATCH --mail-user=mburu@uni-hildesheim.de
+#SBATCH --mail-user=wekesa@uni-hildesheim.de
 #SBATCH --partition=STUD
 #SBATCH --gres=gpu:1
 
