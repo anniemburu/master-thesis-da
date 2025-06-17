@@ -348,3 +348,171 @@ Test time: 0.026845
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 1.3709674297417445, 'd_in': 109, 'd_out': 24, 'dropout1': 0.4328849233188455, 'dropout2': 0.03863249998871383, 'n_blocks': 4}
 
 
+2025-06-17 07:39:43.833648
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - False - True
+
+MSE - mean: 1848983594.75628
+MSE - std: 162161820.36031
+R2 - mean: 0.67416
+R2 - std: 0.02858
+
+Train time: 18.005693
+Test time: 0.031642
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:41:29.218338
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - True - True
+
+MSE - mean: 1696853279.58266
+MSE - std: 215145666.34228
+R2 - mean: 0.70097
+R2 - std: 0.03791
+
+Train time: 17.559521
+Test time: 0.041955
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:43:19.869763
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - False - True
+
+MSE - mean: 1715722302.77106
+MSE - std: 277836740.07693
+R2 - mean: 0.69765
+R2 - std: 0.04896
+
+Train time: 18.218105
+Test time: 0.045927
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:45:10.609447
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - True - True
+
+MSE - mean: 2053900075.85942
+MSE - std: 401898318.46033
+R2 - mean: 0.63805
+R2 - std: 0.07082
+
+Train time: 18.258603
+Test time: 0.030340
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:46:59.598042
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - False - True
+
+MSE - mean: 1727642851.65380
+MSE - std: 201925163.88897
+R2 - mean: 0.69555
+R2 - std: 0.03558
+
+Train time: 18.044629
+Test time: 0.034067
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:48:46.454060
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - True - True
+
+MSE - mean: 2001507413.73162
+MSE - std: 359749412.62655
+R2 - mean: 0.64729
+R2 - std: 0.06340
+
+Train time: 17.702740
+Test time: 0.051001
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:50:34.354208
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - False - True
+
+MSE - mean: 1474111592.85847
+MSE - std: 125361452.68845
+R2 - mean: 0.74023
+R2 - std: 0.02209
+
+Train time: 17.853153
+Test time: 0.032218
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 26, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:52:23.238271
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - True - True
+
+MSE - mean: 1523834125.04489
+MSE - std: 63163163.20865
+R2 - mean: 0.73146
+R2 - std: 0.01113
+
+Train time: 17.974438
+Test time: 0.034121
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 26, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:54:14.079544
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - False - True
+
+MSE - mean: 1460909291.21026
+MSE - std: 126943421.13558
+R2 - mean: 0.74255
+R2 - std: 0.02237
+
+Train time: 18.185350
+Test time: 0.036273
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 26, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:56:03.537470
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - True - True
+
+MSE - mean: 1644600347.48607
+MSE - std: 96182898.06785
+R2 - mean: 0.71018
+R2 - std: 0.01695
+
+Train time: 18.054886
+Test time: 0.037070
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 26, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:57:49.333097
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - False - True
+
+MSE - mean: 1412305601.62628
+MSE - std: 125134867.00381
+R2 - mean: 0.75112
+R2 - std: 0.02205
+
+Train time: 17.464219
+Test time: 0.037159
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 24, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 07:59:38.058944
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - True - True
+
+MSE - mean: 1947205553.82387
+MSE - std: 358755836.46306
+R2 - mean: 0.65686
+R2 - std: 0.06322
+
+Train time: 18.030316
+Test time: 0.026666
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 24, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+

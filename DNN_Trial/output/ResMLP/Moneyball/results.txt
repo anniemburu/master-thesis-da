@@ -348,3 +348,171 @@ Test time: 0.004707
 Best Parameters: {'d_block': 256, 'd_hidden': 7, 'd_hidden_multiplier': 2.290032735440481, 'd_in': 47, 'd_out': 17, 'dropout1': 0.4078828219530447, 'dropout2': 0.16833482708406416, 'n_blocks': 2}
 
 
+2025-06-17 11:04:40.436701
+ResMLP - Moneyball - test_model - probabilistic_regression - quantile - sturges - False - True
+
+MSE - mean: 1389.13405
+MSE - std: 67.29531
+R2 - mean: 0.85559
+R2 - std: 0.00700
+
+Train time: 16.196149
+Test time: 0.007052
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 10, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:06:20.621210
+ResMLP - Moneyball - test_model - probabilistic_regression - quantile - sturges - True - True
+
+MSE - mean: 1377.19217
+MSE - std: 52.50754
+R2 - mean: 0.85683
+R2 - std: 0.00546
+
+Train time: 16.165435
+Test time: 0.006689
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 10, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:08:20.346368
+ResMLP - Moneyball - test_model - probabilistic_regression - kmeans - sturges - False - True
+
+MSE - mean: 1260.21340
+MSE - std: 41.30408
+R2 - mean: 0.86899
+R2 - std: 0.00429
+
+Train time: 16.461410
+Test time: 0.004552
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 10, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:10:03.021964
+ResMLP - Moneyball - test_model - probabilistic_regression - kmeans - sturges - True - True
+
+MSE - mean: 1286.75826
+MSE - std: 41.77159
+R2 - mean: 0.86623
+R2 - std: 0.00434
+
+Train time: 16.504914
+Test time: 0.006720
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 10, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:11:45.927675
+ResMLP - Moneyball - test_model - probabilistic_regression - uniform - sturges - False - True
+
+MSE - mean: 1243.56389
+MSE - std: 94.76038
+R2 - mean: 0.87072
+R2 - std: 0.00985
+
+Train time: 16.655237
+Test time: 0.005873
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 10, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:13:28.080451
+ResMLP - Moneyball - test_model - probabilistic_regression - uniform - sturges - True - True
+
+MSE - mean: 1371.07649
+MSE - std: 131.10085
+R2 - mean: 0.85747
+R2 - std: 0.01363
+
+Train time: 16.519367
+Test time: 0.004661
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 10, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:15:12.276582
+ResMLP - Moneyball - test_model - probabilistic_regression - quantile - freedman - False - True
+
+MSE - mean: 1267.69036
+MSE - std: 93.90038
+R2 - mean: 0.86822
+R2 - std: 0.00976
+
+Train time: 16.477343
+Test time: 0.006918
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 17, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:17:05.474447
+ResMLP - Moneyball - test_model - probabilistic_regression - quantile - freedman - True - True
+
+MSE - mean: 1268.49204
+MSE - std: 65.99701
+R2 - mean: 0.86813
+R2 - std: 0.00686
+
+Train time: 16.408210
+Test time: 0.006063
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 17, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:18:50.191391
+ResMLP - Moneyball - test_model - probabilistic_regression - kmeans - freedman - False - True
+
+MSE - mean: 1211.69463
+MSE - std: 40.04606
+R2 - mean: 0.87404
+R2 - std: 0.00416
+
+Train time: 16.773974
+Test time: 0.006645
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 17, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:20:35.482829
+ResMLP - Moneyball - test_model - probabilistic_regression - kmeans - freedman - True - True
+
+MSE - mean: 1220.03500
+MSE - std: 38.15748
+R2 - mean: 0.87317
+R2 - std: 0.00397
+
+Train time: 16.903778
+Test time: 0.006413
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 17, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:22:18.268656
+ResMLP - Moneyball - test_model - probabilistic_regression - uniform - freedman - False - True
+
+MSE - mean: 1244.47460
+MSE - std: 62.47240
+R2 - mean: 0.87063
+R2 - std: 0.00649
+
+Train time: 16.533758
+Test time: 0.006069
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 17, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+
+2025-06-17 11:24:07.916652
+ResMLP - Moneyball - test_model - probabilistic_regression - uniform - freedman - True - True
+
+MSE - mean: 1271.66285
+MSE - std: 95.68032
+R2 - mean: 0.86780
+R2 - std: 0.00995
+
+Train time: 16.591864
+Test time: 0.005596
+
+Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.500563709434268, 'd_in': 47, 'd_out': 17, 'dropout1': 0.3191866936907723, 'dropout2': 0.17129324989277947, 'n_blocks': 6}
+
+

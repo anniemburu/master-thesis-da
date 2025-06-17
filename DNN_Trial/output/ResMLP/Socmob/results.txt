@@ -348,3 +348,171 @@ Test time: 0.003989
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 2.2103839284834628, 'd_in': 39, 'd_out': 34, 'dropout1': 0.3964088449977436, 'dropout2': 0.03875240542559993, 'n_blocks': 3}
 
 
+2025-06-17 12:33:25.371116
+ResMLP - Socmob - test_model - probabilistic_regression - quantile - sturges - False - True
+
+MSE - mean: 607.40879
+MSE - std: 35.09349
+R2 - mean: 0.64834
+R2 - std: 0.02032
+
+Train time: 13.844077
+Test time: 0.005243
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 9, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:34:57.655058
+ResMLP - Socmob - test_model - probabilistic_regression - quantile - sturges - True - True
+
+MSE - mean: 600.77730
+MSE - std: 37.58942
+R2 - mean: 0.65218
+R2 - std: 0.02176
+
+Train time: 13.982058
+Test time: 0.004850
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 9, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:36:32.796511
+ResMLP - Socmob - test_model - probabilistic_regression - kmeans - sturges - False - True
+
+MSE - mean: 377.14342
+MSE - std: 65.26516
+R2 - mean: 0.78165
+R2 - std: 0.03779
+
+Train time: 14.066173
+Test time: 0.003962
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 10, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:38:07.344182
+ResMLP - Socmob - test_model - probabilistic_regression - kmeans - sturges - True - True
+
+MSE - mean: 689.18983
+MSE - std: 195.30041
+R2 - mean: 0.60099
+R2 - std: 0.11307
+
+Train time: 14.194831
+Test time: 0.004581
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 10, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:39:39.884617
+ResMLP - Socmob - test_model - probabilistic_regression - uniform - sturges - False - True
+
+MSE - mean: 406.24312
+MSE - std: 89.95798
+R2 - mean: 0.76480
+R2 - std: 0.05208
+
+Train time: 14.038601
+Test time: 0.004125
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 9, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:41:11.677716
+ResMLP - Socmob - test_model - probabilistic_regression - uniform - sturges - True - True
+
+MSE - mean: 814.14627
+MSE - std: 455.03527
+R2 - mean: 0.52865
+R2 - std: 0.26344
+
+Train time: 13.880470
+Test time: 0.004684
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 9, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:42:44.540395
+ResMLP - Socmob - test_model - probabilistic_regression - quantile - freedman - False - True
+
+MSE - mean: 330.51475
+MSE - std: 42.25404
+R2 - mean: 0.80865
+R2 - std: 0.02446
+
+Train time: 14.003558
+Test time: 0.004594
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 53, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:44:20.428263
+ResMLP - Socmob - test_model - probabilistic_regression - quantile - freedman - True - True
+
+MSE - mean: 356.94009
+MSE - std: 46.86389
+R2 - mean: 0.79335
+R2 - std: 0.02713
+
+Train time: 13.812664
+Test time: 0.004292
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 53, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:45:54.523699
+ResMLP - Socmob - test_model - probabilistic_regression - kmeans - freedman - False - True
+
+MSE - mean: 383.33445
+MSE - std: 58.01866
+R2 - mean: 0.77807
+R2 - std: 0.03359
+
+Train time: 14.134305
+Test time: 0.004239
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 69, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:47:28.974192
+ResMLP - Socmob - test_model - probabilistic_regression - kmeans - freedman - True - True
+
+MSE - mean: 692.38828
+MSE - std: 107.28247
+R2 - mean: 0.59914
+R2 - std: 0.06211
+
+Train time: 14.151501
+Test time: 0.003278
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 69, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:49:01.740587
+ResMLP - Socmob - test_model - probabilistic_regression - uniform - freedman - False - True
+
+MSE - mean: 405.63487
+MSE - std: 63.40504
+R2 - mean: 0.76516
+R2 - std: 0.03671
+
+Train time: 14.090478
+Test time: 0.005154
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 34, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
+2025-06-17 12:50:34.096854
+ResMLP - Socmob - test_model - probabilistic_regression - uniform - freedman - True - True
+
+MSE - mean: 1073.71307
+MSE - std: 230.63838
+R2 - mean: 0.37837
+R2 - std: 0.13353
+
+Train time: 14.025768
+Test time: 0.005859
+
+Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 34, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
+
+
