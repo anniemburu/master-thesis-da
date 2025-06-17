@@ -1,13 +1,5 @@
 parameters:
   Abalone:
-    CatBoost: 
-      iterations: 100
-      l2_leaf_reg: 1.2142895041234418
-      learning_rate: 0.1780973833308435
-      max_depth: 4
-      od_type: Iter
-      od_wait: 20
-      verbose: 100
     FTTransformer:
       learning_rate: 0.0026312292554662967
       weight_decay: 0.000741227822541328
