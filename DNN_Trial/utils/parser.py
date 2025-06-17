@@ -24,7 +24,7 @@ def get_parser():
 
     parser.add('--optimize_hyperparameters', action="store_true",
                help="Search for the best hyperparameters")
-    parser.add('--n_trials', type=int, default=100, help="Number of trials for the hyperparameter optimization")
+    parser.add('--n_trials', type=int, default=10, help="Number of trials for the hyperparameter optimization")
     parser.add('--direction', type=str, default="minimize", choices=['minimize', 'maximize'],
                help="Direction of optimization.")
     parser.add('--y_distribution', required=True, type=str, default="quantile", choices=["normal","skewed","bimodial", "multimodal"],
@@ -50,7 +50,7 @@ def get_parser():
     parser.add('--batch_size', type=int, default=128, help="Batch size used for training")
     parser.add('--val_batch_size', type=int, default=128, help="Batch size used for training and testing")
     parser.add('--early_stopping_rounds', type=int, default=20, help="Number of rounds before early stopping applies.")
-    parser.add('--epochs', type=int, default=1000, help="Max number of epochs to train.")
+    parser.add('--epochs', type=int, default=100, help="Max number of epochs to train.")
     parser.add('--logging_period', type=int, default=100, help="Number of iteration after which validation is printed.")
 
     parser.add('--num_features', type=int, required=True, help="Set the total number of features.")
@@ -73,10 +73,17 @@ def get_parser():
     return parser
 
 
-def get_given_parameters_parser():
+def get_given_parameters_parser(task):
     parser = get_parser()
 
-    parser.add('-best_params_file', '--best_params_file', is_config_file_arg=True, default="config/best_params.yml",
+    if task == "regression":
+        best_params_file = "config/best_params_regression.yml"
+    elif task == "classification":
+        best_params_file = "config/best_params_classification.yml"
+    else:
+        raise ValueError(f"Task {task} is not supported. Use 'regression' or 'classification'.")
+
+    parser.add('-best_params_file', '--best_params_file', is_config_file_arg=True, default=best_params_file,
                help="Parameter file path")
     parser.add('-parameters', '--parameters', type=yaml.safe_load, help="Parameter values")
 

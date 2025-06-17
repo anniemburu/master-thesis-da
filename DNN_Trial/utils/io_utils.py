@@ -187,8 +187,12 @@ def get_predictions_from_file(args):
 
 
 
-def update_yaml(dataset_name, model_name, parameters):
-    file_path = os.getcwd() + '/config/results_params.yml'
+def update_yaml(dataset_name, model_name, parameters, task):
+    print(f"Updating YAML file for dataset: {dataset_name}, model: {model_name}, task: {task}")
+    if task == "regression":
+        file_path = os.getcwd() + '/config/results_params_regression.yml'
+    elif task == "classification":
+        file_path = os.getcwd() + '/config/results_params_classification.yml'
     
     # Load existing data
     try:
