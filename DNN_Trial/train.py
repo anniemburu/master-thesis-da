@@ -537,15 +537,22 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
         print(f"Starting Hyperparameter Optimization for Outer Fold {i+1}...")
         inner_loop_start_time = time.time()
 
+        grid_space = model_cls.define_grid_parameters()
+
         # Use an in-memory study for each outer fold to keep HPO separate
+        """study = optuna.create_study(direction=args.direction,
+                                    study_name=f"{args.model_name}_{args.dataset}_outer{i+1}",
+                                    storage=None) # In-memory storage"""
         study = optuna.create_study(direction=args.direction,
                                     study_name=f"{args.model_name}_{args.dataset}_outer{i+1}",
+                                    sampler=optuna.samplers.GridSampler(grid_space),
                                     storage=None) # In-memory storage
 
         objective = Objective(args, model_cls, X_train_outer, y_train_outer, i)
 
         #try:
-        study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
+        #study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
+        study.optimize(objective, n_jobs=1)
         best_params_for_fold = study.best_trial.params
         best_inner_score = study.best_value
         print(f"Best Hyperparameters found for Outer Fold {i+1}: {best_params_for_fold}")
@@ -665,15 +672,15 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
         outer_fold_train_timer.start()
         try:
             if args.frequency_reg:
-                loss_history, val_loss_history, lambda_reg_history = final_model.fit(
+                loss_history, val_loss_history, lambda_reg_history_ = final_model.fit(
                     X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, frequency_map_outer) # Use test set for validation monitoring if desired
             else:
                 if args.weighted_loss:
-                    loss_history, val_loss_history = final_model.fit(
-                        X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, class_weights = class_weights)
+                    loss_history, val_loss_history_ = final_model.fit(
+                        X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, class_weights=class_weights)
                 else:
-                 loss_history, val_loss_history, _ = final_model.fit(
-                    X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc) # Use test set for validation monitoring if desired
+                    loss_history, val_loss_history, _ = final_model.fit(
+                        X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc) # Use test set for validation monitoring if desired
         except Exception as e:
             print(f"ERROR during final model fitting in outer fold {i+1}: {e}")
             print(f"Model params: {final_model.params}")
@@ -687,6 +694,11 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
 
         outer_fold_train_timer.end()
         outer_train_times.append(outer_fold_train_timer.get_average_time())
+
+        if args.save_results and args.model_name != "TabPFN":
+            save_loss_to_file(args, loss_history, f"loss_{args.objective}_test", extension=i)
+            save_loss_to_file(args, val_loss_history, f"test_loss_{args.objective}_test", extension=i)
+            print('Saved Losses and Regularization')
 
         # --- Final Model Evaluation on Outer Test Set ---
         print(f"Evaluating final model on Outer Test Set for Fold {i+1}...")
@@ -813,6 +825,11 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
     best_hp_idx = best_loss_dict.index(min(best_loss_dict))
     best_params = loss_per_fold[best_hp_idx][2]
     args.save_results = True # Set to True to save results
+
+    if args.objective == "regression":
+        task = "regression"
+    else:
+        task = "classification"       
    
     if args.save_results:
         print("Saving model.....")
@@ -822,7 +839,7 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
         save_results_to_file(args, aggregated_results,
                              avg_total_train_time, avg_total_inference_time,
                              best_params,"train_model")
-        update_yaml(args.dataset, args.model_name,best_params)
+        update_yaml(args.dataset, args.model_name,best_params,task)
         print("Aggregated results saved.")
 
     print("Loss per Fold", loss_per_fold)
@@ -988,12 +1005,12 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
                 if args.weighted_loss:
                     class_weights = custom_class_weights(y_train_class)
                     print(f"Class Weights Applied: {class_weights}")
-                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, class_weights = class_weights) 
+                    loss_history, test_loss_history, _ = curr_model.fit(X_train, y_train_class, class_weights = class_weights) 
                 else:
                     print(f"Class Weights DDNT APPLY")
-                    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class)
+                    loss_history, test_loss_history, _ = curr_model.fit(X_train, y_train_class)
             else:
-                loss_history, test_loss_history = curr_model.fit(X_train, y_train)  #regression and ordinal problems
+                loss_history, test_loss_history, _ = curr_model.fit(X_train, y_train)  #regression and ordinal problems
 
         train_timer.end()
 
@@ -1026,8 +1043,8 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
         print(f"State of save is {save_model} b4 loss saving")
        
         if save_model and args.model_name != "TabPFN":
-            save_loss_to_file(args, loss_history, "loss", extension=seed)
-            save_loss_to_file(args, test_loss_history, "test_loss", extension=seed)
+            save_loss_to_file(args, loss_history, f"loss_{args.objective}_test", extension=seed)
+            save_loss_to_file(args, test_loss_history, f"test_loss_{args.objective}_test", extension=seed)
             if args.frequency_reg:
                 save_regularization_to_file(args, lambda_reg_history, "lambda_reg", extension=seed)
             print('Saved Losses and Regularization')
@@ -1261,6 +1278,8 @@ def main(args):
     X, y = load_data(args, is_test=False) # Load full dataset
     model_cls = str2model(args.model_name) # Get model class
 
+    args.save_results = True # Ensure results are saved
+
     # Run nested CV with optimization enabled
     agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
         model_cls, X, y, args, optimize_params=True
@@ -1334,8 +1353,12 @@ if __name__ == "__main__":
         print(f"Arguements: {arguments}")
         main(arguments)
     else:
+        if temp_args.objective == "regression":
+            task = 'regression'
+        else:
+            task = 'classification'
         # Re-parse with the parser that includes predefined parameters
-        parser = get_given_parameters_parser() # Assumes this parser loads yaml/dict params
+        parser = get_given_parameters_parser(task) # Assumes this parser loads yaml/dict params
         parser.add_argument('--outer_splits', type=int, default=3, help='Number of outer folds for nested cross-validation')
         parser.add_argument('--save_results', action='store_false', default=False, help='Save aggregated results file')
         parser.add_argument('--no_save_results', action='store_false', dest='save_results')
