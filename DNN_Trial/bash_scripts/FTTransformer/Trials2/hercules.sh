@@ -2,7 +2,7 @@
 #SBATCH --job-name=FTTransformer_Hercules_all_w
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
-#SBATCH --mail-user=wekesa@uni-hildesheim.de
+#SBATCH --mail-user=mburu@uni-hildesheim.de
 #SBATCH --partition=STUDL
 #SBATCH --gres=gpu:1
 #SBATCH --account=long
