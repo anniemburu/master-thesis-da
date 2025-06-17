@@ -348,3 +348,75 @@ Test time: 0.161062
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 3.238707896287477, 'd_in': 75, 'd_out': 61, 'dropout1': 0.1447794249707017, 'dropout2': 0.10652983108653614, 'n_blocks': 2}
 
 
+2025-06-17 07:54:18.966495
+ResMLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 7.76091
+Log Loss - std: 0.07873
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.06187
+Accuracy - std: 0.00370
+F1 score - mean: 0.11650
+F1 score - std: 0.00654
+
+Train time: 928.925163
+Test time: 0.211504
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 08:37:46.760788
+ResMLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 7.90799
+Log Loss - std: 0.24059
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.06040
+Accuracy - std: 0.00298
+F1 score - mean: 0.11390
+F1 score - std: 0.00529
+
+Train time: 930.395776
+Test time: 0.218728
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 09:21:07.963228
+ResMLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 15.53230
+Log Loss - std: 0.64646
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00520
+Accuracy - std: 0.00033
+F1 score - mean: 0.01035
+F1 score - std: 0.00065
+
+Train time: 932.381958
+Test time: 0.205003
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 10:04:09.096162
+ResMLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 17.87720
+Log Loss - std: 0.12383
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00931
+Accuracy - std: 0.00029
+F1 score - mean: 0.01844
+F1 score - std: 0.00058
+
+Train time: 925.832437
+Test time: 0.213201
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+

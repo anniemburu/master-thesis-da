@@ -474,3 +474,111 @@ Test time: 0.610375
 Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 8, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
 
 
+2025-06-16 22:42:34.537054
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 17.91545
+Log Loss - std: 0.14283
+AUC - mean: 0.50998
+AUC - std: 0.00246
+Accuracy - mean: 0.00128
+Accuracy - std: 0.00014
+F1 score - mean: 0.00247
+F1 score - std: 0.00029
+
+Train time: 927.964005
+Test time: 0.935356
+
+Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 1030, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
+
+
+2025-06-17 00:42:44.496574
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 17.87458
+Log Loss - std: 0.11883
+AUC - mean: 0.50985
+AUC - std: 0.00356
+Accuracy - mean: 0.00129
+Accuracy - std: 0.00013
+F1 score - mean: 0.00242
+F1 score - std: 0.00026
+
+Train time: 931.197969
+Test time: 0.922301
+
+Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 1030, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
+
+
+2025-06-17 02:39:55.562900
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 20.52400
+Log Loss - std: 0.00646
+AUC - mean: 0.49562
+AUC - std: 0.00240
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00001
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 933.667973
+Test time: 0.918240
+
+Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 1030, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
+
+
+2025-06-17 04:35:51.412033
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 20.51956
+Log Loss - std: 0.00723
+AUC - mean: 0.49383
+AUC - std: 0.00502
+Accuracy - mean: 0.00002
+Accuracy - std: 0.00002
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 931.850874
+Test time: 0.890817
+
+Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 1030, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
+
+
+2025-06-17 05:53:24.055635
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 20.71766
+Log Loss - std: 0.00129
+AUC - mean: 0.50064
+AUC - std: 0.00446
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 927.072141
+Test time: 0.671817
+
+Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 237, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
+
+
+2025-06-17 07:10:56.343596
+ResMLP - Allstate_Claims - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 20.71611
+Log Loss - std: 0.00272
+AUC - mean: 0.48862
+AUC - std: 0.00359
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00001
+F1 score - mean: 0.00001
+F1 score - std: 0.00001
+
+Train time: 927.052253
+Test time: 0.698196
+
+Best Parameters: {'d_block': 128, 'd_hidden': 8, 'd_hidden_multiplier': 1.3701994442389223, 'd_in': 1073, 'd_out': 237, 'dropout1': 0.38528007263059155, 'dropout2': 0.15678728297998543, 'n_blocks': 3}
+
+

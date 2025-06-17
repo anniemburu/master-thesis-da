@@ -198,3 +198,93 @@ Test time: 4.086661
 Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
 
 
+2025-06-16 22:11:35.750236
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 8.55733
+Log Loss - std: 0.06928
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.06080
+Accuracy - std: 0.00443
+F1 score - mean: 0.11459
+F1 score - std: 0.00789
+
+Train time: 3445.611767
+Test time: 3.989809
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-17 01:10:57.283530
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 11.41978
+Log Loss - std: 0.00297
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00409
+Accuracy - std: 0.00029
+F1 score - mean: 0.00815
+F1 score - std: 0.00058
+
+Train time: 3435.670025
+Test time: 4.063963
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-17 04:11:05.068049
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 11.42899
+Log Loss - std: 0.00331
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00503
+Accuracy - std: 0.00015
+F1 score - mean: 0.01000
+F1 score - std: 0.00030
+
+Train time: 3454.454208
+Test time: 3.965328
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-17 07:10:18.665177
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 11.42418
+Log Loss - std: 0.00341
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00414
+Accuracy - std: 0.00017
+F1 score - mean: 0.00825
+F1 score - std: 0.00034
+
+Train time: 3436.079895
+Test time: 4.010295
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-17 10:10:56.492935
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 11.42385
+Log Loss - std: 0.00601
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00518
+Accuracy - std: 0.00016
+F1 score - mean: 0.01031
+F1 score - std: 0.00031
+
+Train time: 3462.561469
+Test time: 3.971624
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
