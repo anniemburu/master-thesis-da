@@ -89,7 +89,8 @@ class SAINT(BaseModelTorch):
         else:
             criterion = nn.MSELoss()
 
-        optimizer = optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=0.00003)
+        #optimizer = optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=0.00003)
+        optimizer = optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
         self.model.to(self.device)
 
@@ -320,9 +321,23 @@ class SAINT(BaseModelTorch):
     @classmethod
     def define_trial_parameters(cls, trial, args):
         params = {
-            "dim": trial.suggest_categorical("dim", [32, 64, 128, 256]),
-            "depth": trial.suggest_categorical("depth", [1, 2, 3, 6, 12]),
+            "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+            "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+            "dim": trial.suggest_categorical("dim", [64, 128]),
+            "depth": trial.suggest_categorical("depth", [2, 3, 6]),
             "heads": trial.suggest_categorical("heads", [2, 4, 8]),
-            "dropout": trial.suggest_categorical("dropout", [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]),
+            "dropout": trial.suggest_categorical("dropout", [0.1, 0.2, 0.3]),
         }
         return params
+
+    @classmethod
+    def define_grid_parameters(cls):
+        search_space = {
+            "learning_rate": [1e-5, 1e-2],
+            "weight_decay": [1e-6, 1e-3],
+            "dim": [64, 128],
+            "depth": [2, 3, 6],
+            "heads": [2, 4, 8],
+            "dropout": [0.1, 0.2, 0.3],
+            }
+        return search_space
