@@ -1,14 +1,14 @@
-2025-05-30 13:21:53.963239
-XGBoost - Mercedes_Benz - test_model - regression
+2025-06-19 12:49:46.700016
+XGBoost - Mercedes_Benz - train_model - regression
 
-MSE - mean: 87.53455
-MSE - std: 1.99157
-R2 - mean: 0.46299
-R2 - std: 0.01222
+MSE - mean: 65.40629
+MSE - mean_std: 11.10010
+R2 - mean: 0.58869
+R2 - mean_std: 0.04171
 
-Train time: 0.432126
-Test time: 0.125640
+Train time: 1.013209
+Test time: 0.018290
 
-Best Parameters: {'max_depth': 3, 'alpha': 1.80613318106913e-08, 'lambda': 0.4033325485614207, 'eta': 0.04373143886440441, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 2, 'alpha': 1e-08, 'lambda': 100.0, 'eta': 0.2, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 

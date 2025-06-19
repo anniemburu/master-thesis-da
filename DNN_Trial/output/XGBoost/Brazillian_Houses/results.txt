@@ -1,14 +1,14 @@
-2025-05-30 13:21:56.164539
-XGBoost - Brazillian_Houses - test_model - regression
+2025-06-19 12:59:52.411824
+XGBoost - Brazillian_Houses - train_model - regression
 
-MSE - mean: 16780951.76988
-MSE - std: 198108.50885
-R2 - mean: 0.57956
-R2 - std: 0.00496
+MSE - mean: 17662723.82197
+MSE - mean_std: 34890358.01485
+R2 - mean: 0.84288
+R2 - mean_std: 0.30443
 
-Train time: 0.353574
-Test time: 0.086400
+Train time: 0.491736
+Test time: 0.011702
 
-Best Parameters: {'max_depth': 2, 'alpha': 2.2083853825308624e-08, 'lambda': 0.0017040890821263966, 'eta': 0.24058442782041825, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 2, 'alpha': 1e-08, 'lambda': 1e-08, 'eta': 0.3, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 

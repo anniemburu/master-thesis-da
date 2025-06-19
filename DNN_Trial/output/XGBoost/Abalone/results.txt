@@ -1,0 +1,14 @@
+2025-06-19 13:42:54.733831
+XGBoost - Abalone - train_model - regression
+
+MSE - mean: 4.66439
+MSE - mean_std: 0.26343
+R2 - mean: 0.54151
+R2 - mean_std: 0.04429
+
+Train time: 0.528217
+Test time: 0.010479
+
+Best Parameters: {'max_depth': 6, 'alpha': 0.01, 'lambda': 100.0, 'eta': 0.2, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

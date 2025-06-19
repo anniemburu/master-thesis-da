@@ -1,14 +1,14 @@
-2025-05-30 13:22:07.557054
-XGBoost - Socmob - test_model - regression
+2025-06-19 14:02:24.950238
+XGBoost - Socmob - train_model - regression
 
-MSE - mean: 317.83549
-MSE - std: 54.70981
-R2 - mean: 0.81599
-R2 - std: 0.03167
+MSE - mean: 322.41854
+MSE - mean_std: 229.59164
+R2 - mean: 0.79304
+R2 - mean_std: 0.09637
 
-Train time: 0.219987
-Test time: 0.031276
+Train time: 0.293616
+Test time: 0.006180
 
-Best Parameters: {'max_depth': 2, 'alpha': 6.105162617992694e-06, 'lambda': 6.755503372760612e-08, 'eta': 0.11623060221352166, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 2, 'alpha': 0.01, 'lambda': 1e-08, 'eta': 0.3, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 

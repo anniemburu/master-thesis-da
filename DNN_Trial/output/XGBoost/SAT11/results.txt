@@ -1,14 +1,14 @@
-2025-05-30 13:22:06.566452
-XGBoost - SAT11 - test_model - regression
+2025-06-19 14:26:23.407926
+XGBoost - SAT11 - train_model - regression
 
-MSE - mean: 2377397.21747
-MSE - std: 76026.31237
-R2 - mean: 0.58232
-R2 - std: 0.01336
+MSE - mean: 1604038.57301
+MSE - mean_std: 266942.13081
+R2 - mean: 0.71998
+R2 - mean_std: 0.04974
 
-Train time: 0.525960
-Test time: 0.045578
+Train time: 4.645771
+Test time: 0.014415
 
-Best Parameters: {'max_depth': 6, 'alpha': 1.2990735895136888e-06, 'lambda': 1.8060446939267034e-08, 'eta': 0.1331690599779273, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 6, 'alpha': 0.01, 'lambda': 100.0, 'eta': 0.3, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 

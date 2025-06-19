@@ -1,14 +1,14 @@
-2025-05-30 13:22:01.893754
-XGBoost - Boston - test_model - regression
+2025-06-19 13:57:35.961674
+XGBoost - Boston - train_model - regression
 
-MSE - mean: 26.04847
-MSE - std: 11.42668
-R2 - mean: 0.74094
-R2 - std: 0.11364
+MSE - mean: 16.15756
+MSE - mean_std: 7.85055
+R2 - mean: 0.75054
+R2 - mean_std: 0.10572
 
-Train time: 0.186346
-Test time: 0.019135
+Train time: 0.317348
+Test time: 0.010197
 
-Best Parameters: {'max_depth': 2, 'alpha': 8.462153008039433e-06, 'lambda': 1.9404218709476588e-05, 'eta': 0.09910985949066609, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 6, 'alpha': 0.01, 'lambda': 0.01, 'eta': 0.3, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 

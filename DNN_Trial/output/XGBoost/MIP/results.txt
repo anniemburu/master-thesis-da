@@ -1,0 +1,14 @@
+2025-06-19 13:58:11.096646
+XGBoost - MIP - train_model - regression
+
+MSE - mean: 648173.58112
+MSE - mean_std: 255385.37696
+R2 - mean: 0.99910
+R2 - mean_std: 0.00045
+
+Train time: 1.676843
+Test time: 0.010680
+
+Best Parameters: {'max_depth': 6, 'alpha': 1e-08, 'lambda': 100.0, 'eta': 0.3, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

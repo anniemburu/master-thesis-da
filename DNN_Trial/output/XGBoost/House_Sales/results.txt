@@ -1,14 +1,14 @@
-2025-05-30 13:22:01.489811
-XGBoost - House_Sales - test_model - regression
+2025-06-19 13:33:31.418268
+XGBoost - House_Sales - train_model - regression
 
-MSE - mean: 18821496848.11455
-MSE - std: 877294583.80810
-R2 - mean: 0.85279
-R2 - std: 0.00686
+MSE - mean: 18801278564.65960
+MSE - mean_std: 3271346956.15622
+R2 - mean: 0.86750
+R2 - mean_std: 0.01964
 
-Train time: 0.292831
-Test time: 0.059608
+Train time: 1.463252
+Test time: 0.071015
 
-Best Parameters: {'max_depth': 2, 'alpha': 0.009341918576561432, 'lambda': 1.6477053019350504e-06, 'eta': 0.25069941667869916, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 6, 'alpha': 0.01, 'lambda': 0.01, 'eta': 0.2, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 

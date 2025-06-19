@@ -1,14 +1,14 @@
-2025-05-30 13:22:30.140713
-XGBoost - Black_Friday - test_model - regression
+2025-06-19 15:39:40.803873
+XGBoost - Black_Friday - train_model - regression
 
-MSE - mean: 13023469.45057
-MSE - std: 38881.78102
-R2 - mean: 0.49730
-R2 - std: 0.00150
+MSE - mean: 12051071.95376
+MSE - mean_std: 103152.81969
+R2 - mean: 0.53197
+R2 - mean_std: 0.00367
 
-Train time: 0.597268
-Test time: 0.120757
+Train time: 5.608237
+Test time: 0.154940
 
-Best Parameters: {'max_depth': 7, 'alpha': 6.986726717707178e-07, 'lambda': 5.465344165680221e-06, 'eta': 0.29400950414189186, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+Best Parameters: {'max_depth': 6, 'alpha': 0.01, 'lambda': 100.0, 'eta': 0.2, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
 
 
