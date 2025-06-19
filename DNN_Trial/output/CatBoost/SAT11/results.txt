@@ -1,14 +1,14 @@
-2025-05-30 13:15:37.595016
-CatBoost - SAT11 - test_model - regression
+2025-06-19 12:47:27.311554
+CatBoost - SAT11 - train_model - regression
 
-MSE - mean: 2508005.82889
-MSE - std: 144957.82492
-R2 - mean: 0.55937
-R2 - std: 0.02547
+MSE - mean: 2455841.44915
+MSE - mean_std: 458191.74868
+R2 - mean: 0.57145
+R2 - mean_std: 0.08308
 
-Train time: 3.698070
-Test time: 0.031207
+Train time: 24.463063
+Test time: 0.013245
 
-Best Parameters: {'learning_rate': 0.21908640123079498, 'max_depth': 11, 'l2_leaf_reg': 9.313881685748441, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [115]}
+Best Parameters: {'learning_rate': 0.2, 'max_depth': 6, 'l2_leaf_reg': 5.0, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/SAT11/catboost_info', 'cat_features': [115]}
 
 

@@ -1,14 +1,14 @@
-2025-05-30 13:15:35.611979
-CatBoost - House_Sales - test_model - regression
+2025-06-19 12:23:53.483358
+CatBoost - House_Sales - train_model - regression
 
-MSE - mean: 15199276187.13177
-MSE - std: 679387566.68680
-R2 - mean: 0.88112
-R2 - std: 0.00531
+MSE - mean: 15861826724.23548
+MSE - mean_std: 2953569039.42541
+R2 - mean: 0.88837
+R2 - mean_std: 0.01502
 
-Train time: 1.196813
-Test time: 0.072225
+Train time: 2.305939
+Test time: 0.017203
 
-Best Parameters: {'learning_rate': 0.2493128987457134, 'max_depth': 6, 'l2_leaf_reg': 1.701138175278075, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [13]}
+Best Parameters: {'learning_rate': 0.3, 'max_depth': 6, 'l2_leaf_reg': 1.0, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/House_Sales/catboost_info', 'cat_features': [13]}
 
 

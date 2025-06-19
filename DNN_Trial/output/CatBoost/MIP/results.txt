@@ -1,14 +1,14 @@
-2025-05-30 13:15:42.173482
-CatBoost - MIP - test_model - regression
+2025-06-19 14:29:22.857260
+CatBoost - MIP - train_model - regression
 
-MSE - mean: 1844538.54702
-MSE - std: 441282.61305
-R2 - mean: 0.99782
-R2 - std: 0.00052
+MSE - mean: 729800.48396
+MSE - mean_std: 398961.87041
+R2 - mean: 0.99899
+R2 - mean_std: 0.00064
 
-Train time: 0.761965
-Test time: 0.075772
+Train time: 0.738135
+Test time: 0.012349
 
-Best Parameters: {'learning_rate': 0.07829044547427533, 'max_depth': 2, 'l2_leaf_reg': 0.8972340047247755, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/MIP/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [144, 145]}
+Best Parameters: {'learning_rate': 0.1, 'max_depth': 2, 'l2_leaf_reg': 0.5, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/MIP/catboost_info', 'cat_features': [144, 145]}
 
 
