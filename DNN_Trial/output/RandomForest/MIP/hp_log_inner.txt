@@ -1,600 +1,1200 @@
-2025-05-30 09:11:04.500886
-Parameters: {'max_depth': 8, 'n_estimators': 26}
+2025-06-19 14:36:03.125107
+Parameters: {'max_depth': 12, 'n_estimators': 50}
 
-MSE - mean: 671272.23517
-MSE - std: 247169.47170
-R2 - mean: 0.99910
-R2 - std: 0.00031
-
-Train time: 0.538314
-Test time: 0.012164
-
----------------------------------------
-2025-05-30 09:11:04.922204
-Parameters: {'max_depth': 7, 'n_estimators': 8}
-
-MSE - mean: 651975.85676
-MSE - std: 319487.94092
-R2 - mean: 0.99914
-R2 - std: 0.00040
-
-Train time: 0.162380
-Test time: 0.007948
-
----------------------------------------
-2025-05-30 09:11:05.679856
-Parameters: {'max_depth': 4, 'n_estimators': 45}
-
-MSE - mean: 637137.95342
-MSE - std: 275924.22962
-R2 - mean: 0.99915
+MSE - mean: 615691.71089
+MSE - std: 277721.98438
+R2 - mean: 0.99918
 R2 - std: 0.00035
 
-Train time: 0.506559
-Test time: 0.013729
+Train time: 1.138829
+Test time: 0.018940
 
 ---------------------------------------
-2025-05-30 09:11:06.456341
-Parameters: {'max_depth': 2, 'n_estimators': 49}
+2025-06-19 14:36:03.451055
+Parameters: {'max_depth': 2, 'n_estimators': 10}
 
-MSE - mean: 677973.32988
-MSE - std: 286793.05317
+MSE - mean: 686650.32546
+MSE - std: 280302.87328
+R2 - mean: 0.99908
+R2 - std: 0.00036
+
+Train time: 0.074713
+Test time: 0.006800
+
+---------------------------------------
+2025-06-19 14:36:05.545569
+Parameters: {'max_depth': 12, 'n_estimators': 100}
+
+MSE - mean: 636045.46539
+MSE - std: 273029.70245
+R2 - mean: 0.99916
+R2 - std: 0.00034
+
+Train time: 2.277449
+Test time: 0.032297
+
+---------------------------------------
+2025-06-19 14:36:06.378943
+Parameters: {'max_depth': 6, 'n_estimators': 50}
+
+MSE - mean: 647328.47840
+MSE - std: 288615.44721
+R2 - mean: 0.99914
+R2 - std: 0.00036
+
+Train time: 0.659803
+Test time: 0.015236
+
+---------------------------------------
+2025-06-19 14:36:06.740876
+Parameters: {'max_depth': 10, 'n_estimators': 5}
+
+MSE - mean: 806911.77511
+MSE - std: 304317.73670
+R2 - mean: 0.99893
+R2 - std: 0.00036
+
+Train time: 0.111533
+Test time: 0.006884
+
+---------------------------------------
+2025-06-19 14:36:07.379473
+Parameters: {'max_depth': 12, 'n_estimators': 20}
+
+MSE - mean: 636007.71659
+MSE - std: 252708.87732
+R2 - mean: 0.99916
+R2 - std: 0.00032
+
+Train time: 0.458972
+Test time: 0.009514
+
+---------------------------------------
+2025-06-19 14:36:07.781607
+Parameters: {'max_depth': 6, 'n_estimators': 10}
+
+MSE - mean: 663298.78600
+MSE - std: 293465.47777
+R2 - mean: 0.99912
+R2 - std: 0.00037
+
+Train time: 0.152169
+Test time: 0.008161
+
+---------------------------------------
+2025-06-19 14:36:08.807147
+Parameters: {'max_depth': 10, 'n_estimators': 50}
+
+MSE - mean: 629869.79242
+MSE - std: 264166.78638
+R2 - mean: 0.99916
+R2 - std: 0.00033
+
+Train time: 0.921105
+Test time: 0.017291
+
+---------------------------------------
+2025-06-19 14:36:09.828535
+Parameters: {'max_depth': 2, 'n_estimators': 100}
+
+MSE - mean: 677215.44135
+MSE - std: 282431.36429
+R2 - mean: 0.99909
+R2 - std: 0.00036
+
+Train time: 0.541806
+Test time: 0.022544
+
+---------------------------------------
+2025-06-19 14:36:10.242596
+Parameters: {'max_depth': 2, 'n_estimators': 20}
+
+MSE - mean: 679442.06127
+MSE - std: 286136.33525
 R2 - mean: 0.99909
 R2 - std: 0.00037
 
-Train time: 0.319320
-Test time: 0.014300
+Train time: 0.126746
+Test time: 0.009505
 
 ---------------------------------------
-2025-05-30 09:11:06.996227
-Parameters: {'max_depth': 4, 'n_estimators': 23}
+2025-06-19 14:36:10.605471
+Parameters: {'max_depth': 6, 'n_estimators': 5}
 
-MSE - mean: 688891.79550
-MSE - std: 277581.35309
+MSE - mean: 709347.18809
+MSE - std: 315469.17267
+R2 - mean: 0.99904
+R2 - std: 0.00042
+
+Train time: 0.084127
+Test time: 0.007936
+
+---------------------------------------
+2025-06-19 14:36:12.532338
+Parameters: {'max_depth': 10, 'n_estimators': 100}
+
+MSE - mean: 644937.44255
+MSE - std: 271534.21989
+R2 - mean: 0.99915
+R2 - std: 0.00034
+
+Train time: 2.058761
+Test time: 0.029971
+
+---------------------------------------
+2025-06-19 14:36:13.952106
+Parameters: {'max_depth': 6, 'n_estimators': 100}
+
+MSE - mean: 637956.89997
+MSE - std: 277389.93362
+R2 - mean: 0.99915
+R2 - std: 0.00034
+
+Train time: 1.259879
+Test time: 0.030092
+
+---------------------------------------
+2025-06-19 14:36:14.460159
+Parameters: {'max_depth': 6, 'n_estimators': 20}
+
+MSE - mean: 679609.71385
+MSE - std: 298184.49476
+R2 - mean: 0.99909
+R2 - std: 0.00038
+
+Train time: 0.280191
+Test time: 0.009201
+
+---------------------------------------
+2025-06-19 14:36:14.936504
+Parameters: {'max_depth': 12, 'n_estimators': 10}
+
+MSE - mean: 647845.29132
+MSE - std: 311168.67935
+R2 - mean: 0.99915
+R2 - std: 0.00039
+
+Train time: 0.235131
+Test time: 0.008309
+
+---------------------------------------
+2025-06-19 14:36:15.411509
+Parameters: {'max_depth': 10, 'n_estimators': 10}
+
+MSE - mean: 730412.50674
+MSE - std: 262800.40306
+R2 - mean: 0.99902
+R2 - std: 0.00033
+
+Train time: 0.217654
+Test time: 0.008346
+
+---------------------------------------
+2025-06-19 14:36:16.046753
+Parameters: {'max_depth': 2, 'n_estimators': 50}
+
+MSE - mean: 685589.74457
+MSE - std: 298500.37021
 R2 - mean: 0.99908
-R2 - std: 0.00035
+R2 - std: 0.00038
 
-Train time: 0.267449
-Test time: 0.010157
+Train time: 0.284471
+Test time: 0.015881
 
 ---------------------------------------
-2025-05-30 09:11:09.416842
-Parameters: {'max_depth': 11, 'n_estimators': 100}
+2025-06-19 14:36:16.366885
+Parameters: {'max_depth': 2, 'n_estimators': 5}
 
-MSE - mean: 835581.50293
-MSE - std: 257180.76356
+MSE - mean: 718530.94604
+MSE - std: 329517.50162
+R2 - mean: 0.99903
+R2 - std: 0.00043
+
+Train time: 0.050034
+Test time: 0.007041
+
+---------------------------------------
+2025-06-19 14:36:16.801870
+Parameters: {'max_depth': 12, 'n_estimators': 5}
+
+MSE - mean: 675805.36496
+MSE - std: 308766.05909
+R2 - mean: 0.99910
+R2 - std: 0.00039
+
+Train time: 0.148264
+Test time: 0.007385
+
+---------------------------------------
+2025-06-19 14:36:17.520085
+Parameters: {'max_depth': 10, 'n_estimators': 20}
+
+MSE - mean: 650769.53710
+MSE - std: 291998.19770
+R2 - mean: 0.99913
+R2 - std: 0.00037
+
+Train time: 0.530660
+Test time: 0.010264
+
+---------------------------------------
+2025-06-19 14:36:19.076835
+Parameters: {'max_depth': 12, 'n_estimators': 50}
+
+MSE - mean: 839376.46189
+MSE - std: 246504.16506
+R2 - mean: 0.99884
+R2 - std: 0.00042
+
+Train time: 1.143656
+Test time: 0.018254
+
+---------------------------------------
+2025-06-19 14:36:19.394664
+Parameters: {'max_depth': 2, 'n_estimators': 10}
+
+MSE - mean: 914666.74955
+MSE - std: 227167.58969
+R2 - mean: 0.99872
+R2 - std: 0.00045
+
+Train time: 0.074468
+Test time: 0.005802
+
+---------------------------------------
+2025-06-19 14:36:21.373653
+Parameters: {'max_depth': 12, 'n_estimators': 100}
+
+MSE - mean: 808980.03171
+MSE - std: 250538.51121
+R2 - mean: 0.99887
+R2 - std: 0.00046
+
+Train time: 2.183457
+Test time: 0.028486
+
+---------------------------------------
+2025-06-19 14:36:22.192352
+Parameters: {'max_depth': 6, 'n_estimators': 50}
+
+MSE - mean: 825506.92557
+MSE - std: 271510.62957
+R2 - mean: 0.99886
+R2 - std: 0.00044
+
+Train time: 0.642619
+Test time: 0.014448
+
+---------------------------------------
+2025-06-19 14:36:22.554626
+Parameters: {'max_depth': 10, 'n_estimators': 5}
+
+MSE - mean: 916358.99996
+MSE - std: 289584.26880
+R2 - mean: 0.99875
+R2 - std: 0.00041
+
+Train time: 0.113718
+Test time: 0.006104
+
+---------------------------------------
+2025-06-19 14:36:23.164548
+Parameters: {'max_depth': 12, 'n_estimators': 20}
+
+MSE - mean: 814028.27707
+MSE - std: 259556.25227
+R2 - mean: 0.99887
+R2 - std: 0.00044
+
+Train time: 0.448928
+Test time: 0.008519
+
+---------------------------------------
+2025-06-19 14:36:23.560157
+Parameters: {'max_depth': 6, 'n_estimators': 10}
+
+MSE - mean: 910146.27551
+MSE - std: 348295.34364
+R2 - mean: 0.99878
+R2 - std: 0.00045
+
+Train time: 0.148487
+Test time: 0.007382
+
+---------------------------------------
+2025-06-19 14:36:24.622734
+Parameters: {'max_depth': 10, 'n_estimators': 50}
+
+MSE - mean: 839999.38449
+MSE - std: 275391.14082
 R2 - mean: 0.99884
 R2 - std: 0.00045
 
-Train time: 2.128496
-Test time: 0.033511
+Train time: 0.984138
+Test time: 0.016220
 
 ---------------------------------------
-2025-05-30 09:11:09.846964
-Parameters: {'max_depth': 6, 'n_estimators': 9}
+2025-06-19 14:36:25.649652
+Parameters: {'max_depth': 2, 'n_estimators': 100}
 
-MSE - mean: 866512.14247
-MSE - std: 254551.92459
-R2 - mean: 0.99879
-R2 - std: 0.00050
-
-Train time: 0.140332
-Test time: 0.008469
-
----------------------------------------
-2025-05-30 09:11:10.365468
-Parameters: {'max_depth': 3, 'n_estimators': 28}
-
-MSE - mean: 867882.12276
-MSE - std: 248879.65413
-R2 - mean: 0.99880
-R2 - std: 0.00042
-
-Train time: 0.219802
-Test time: 0.011369
-
----------------------------------------
-2025-05-30 09:11:10.889843
-Parameters: {'max_depth': 10, 'n_estimators': 14}
-
-MSE - mean: 884597.12139
-MSE - std: 280452.39003
+MSE - mean: 876304.58809
+MSE - std: 250620.11249
 R2 - mean: 0.99878
-R2 - std: 0.00048
+R2 - std: 0.00044
 
-Train time: 0.287998
-Test time: 0.009581
-
----------------------------------------
-2025-05-30 09:11:11.360911
-Parameters: {'max_depth': 10, 'n_estimators': 9}
-
-MSE - mean: 927660.45644
-MSE - std: 326920.21132
-R2 - mean: 0.99872
-R2 - std: 0.00053
-
-Train time: 0.197155
-Test time: 0.008874
+Train time: 0.544788
+Test time: 0.023468
 
 ---------------------------------------
-2025-05-30 09:11:13.269059
-Parameters: {'max_depth': 10, 'n_estimators': 77}
-
-MSE - mean: 516546.97136
-MSE - std: 172084.62284
-R2 - mean: 0.99936
-R2 - std: 0.00023
-
-Train time: 1.481501
-Test time: 0.026321
-
----------------------------------------
-2025-05-30 09:11:13.616896
-Parameters: {'max_depth': 3, 'n_estimators': 9}
-
-MSE - mean: 583389.79160
-MSE - std: 236272.95099
-R2 - mean: 0.99929
-R2 - std: 0.00028
-
-Train time: 0.084233
-Test time: 0.006305
-
----------------------------------------
-2025-05-30 09:11:15.090908
-Parameters: {'max_depth': 9, 'n_estimators': 78}
-
-MSE - mean: 503629.03658
-MSE - std: 187667.31701
-R2 - mean: 0.99937
-R2 - std: 0.00025
-
-Train time: 1.407709
-Test time: 0.027414
-
----------------------------------------
-2025-05-30 09:11:15.643015
-Parameters: {'max_depth': 11, 'n_estimators': 15}
-
-MSE - mean: 549466.19817
-MSE - std: 183458.78606
-R2 - mean: 0.99931
-R2 - std: 0.00026
-
-Train time: 0.328246
-Test time: 0.010325
-
----------------------------------------
-2025-05-30 09:11:16.652148
-Parameters: {'max_depth': 3, 'n_estimators': 87}
-
-MSE - mean: 578639.15776
-MSE - std: 233449.79755
-R2 - mean: 0.99929
-R2 - std: 0.00028
-
-Train time: 0.624537
-Test time: 0.022827
-
----------------------------------------
-2025-05-30 09:11:17.652598
-Parameters: {'max_depth': 2, 'n_estimators': 58}
-
-MSE - mean: 731923.39650
-MSE - std: 285912.66030
-R2 - mean: 0.99903
-R2 - std: 0.00063
-
-Train time: 0.330959
-Test time: 0.016954
-
----------------------------------------
-2025-05-30 09:11:18.239557
-Parameters: {'max_depth': 2, 'n_estimators': 42}
-
-MSE - mean: 727046.81704
-MSE - std: 277463.19479
-R2 - mean: 0.99904
-R2 - std: 0.00061
-
-Train time: 0.241632
-Test time: 0.015067
-
----------------------------------------
-2025-05-30 09:11:19.153366
-Parameters: {'max_depth': 2, 'n_estimators': 16}
-
-MSE - mean: 749572.16405
-MSE - std: 279600.85663
-R2 - mean: 0.99901
-R2 - std: 0.00062
-
-Train time: 0.112875
-Test time: 0.008333
-
----------------------------------------
-2025-05-30 09:11:19.620953
-Parameters: {'max_depth': 11, 'n_estimators': 7}
-
-MSE - mean: 785528.87629
-MSE - std: 134647.46058
-R2 - mean: 0.99899
-R2 - std: 0.00041
-
-Train time: 0.213144
-Test time: 0.007634
-
----------------------------------------
-2025-05-30 09:11:20.217262
-Parameters: {'max_depth': 5, 'n_estimators': 21}
-
-MSE - mean: 687877.86938
-MSE - std: 256919.58078
-R2 - mean: 0.99909
-R2 - std: 0.00059
-
-Train time: 0.320832
-Test time: 0.010452
-
----------------------------------------
-2025-05-30 09:11:20.773223
-Parameters: {'max_depth': 2, 'n_estimators': 16}
-
-MSE - mean: 828500.12194
-MSE - std: 355126.33993
-R2 - mean: 0.99889
-R2 - std: 0.00040
-
-Train time: 0.126342
-Test time: 0.007715
-
----------------------------------------
-2025-05-30 09:11:21.633718
-Parameters: {'max_depth': 4, 'n_estimators': 46}
-
-MSE - mean: 752227.40332
-MSE - std: 328390.33950
-R2 - mean: 0.99899
-R2 - std: 0.00038
-
-Train time: 0.554973
-Test time: 0.017085
-
----------------------------------------
-2025-05-30 09:11:22.834473
-Parameters: {'max_depth': 4, 'n_estimators': 68}
-
-MSE - mean: 757849.47904
-MSE - std: 327461.59934
-R2 - mean: 0.99898
-R2 - std: 0.00039
-
-Train time: 0.812832
-Test time: 0.021419
-
----------------------------------------
-2025-05-30 09:11:23.325917
-Parameters: {'max_depth': 5, 'n_estimators': 14}
-
-MSE - mean: 758809.48526
-MSE - std: 318872.08549
-R2 - mean: 0.99897
-R2 - std: 0.00041
-
-Train time: 0.205270
-Test time: 0.009209
-
----------------------------------------
-2025-05-30 09:11:24.514259
-Parameters: {'max_depth': 8, 'n_estimators': 55}
-
-MSE - mean: 711757.49557
-MSE - std: 285374.57350
-R2 - mean: 0.99904
-R2 - std: 0.00033
-
-Train time: 1.062469
-Test time: 0.019121
-
----------------------------------------
-2025-05-30 13:14:53.155296
-Parameters: {'max_depth': 5, 'n_estimators': 13}
-
-MSE - mean: 661150.12983
-MSE - std: 354772.58351
-R2 - mean: 0.99912
-R2 - std: 0.00045
-
-Train time: 0.159267
-Test time: 0.008250
-
----------------------------------------
-2025-05-30 13:14:53.660563
-Parameters: {'max_depth': 2, 'n_estimators': 27}
-
-MSE - mean: 694971.39415
-MSE - std: 300741.34633
-R2 - mean: 0.99907
-R2 - std: 0.00038
-
-Train time: 0.180733
-Test time: 0.009103
-
----------------------------------------
-2025-05-30 13:14:54.330003
-Parameters: {'max_depth': 3, 'n_estimators': 38}
-
-MSE - mean: 642998.96266
-MSE - std: 280844.51767
-R2 - mean: 0.99914
-R2 - std: 0.00036
-
-Train time: 0.339432
-Test time: 0.013113
-
----------------------------------------
-2025-05-30 13:14:55.686029
-Parameters: {'max_depth': 4, 'n_estimators': 96}
-
-MSE - mean: 642036.07840
-MSE - std: 270380.85355
-R2 - mean: 0.99914
-R2 - std: 0.00035
-
-Train time: 1.017242
-Test time: 0.026108
-
----------------------------------------
-2025-05-30 13:14:56.543044
-Parameters: {'max_depth': 3, 'n_estimators': 60}
-
-MSE - mean: 644053.01435
-MSE - std: 274169.20546
-R2 - mean: 0.99914
-R2 - std: 0.00035
-
-Train time: 0.470310
-Test time: 0.018757
-
----------------------------------------
-2025-05-30 13:14:57.259439
-Parameters: {'max_depth': 2, 'n_estimators': 33}
-
-MSE - mean: 874192.90763
-MSE - std: 241284.33095
-R2 - mean: 0.99878
-R2 - std: 0.00046
-
-Train time: 0.209409
-Test time: 0.013381
-
----------------------------------------
-2025-05-30 13:14:57.967956
-Parameters: {'max_depth': 3, 'n_estimators': 49}
-
-MSE - mean: 860387.25597
-MSE - std: 246155.32885
-R2 - mean: 0.99881
-R2 - std: 0.00041
-
-Train time: 0.380966
-Test time: 0.014887
-
----------------------------------------
-2025-05-30 13:14:59.075723
-Parameters: {'max_depth': 6, 'n_estimators': 71}
-
-MSE - mean: 842559.02934
-MSE - std: 273294.70986
-R2 - mean: 0.99885
-R2 - std: 0.00042
-
-Train time: 0.922749
-Test time: 0.020578
-
----------------------------------------
-2025-05-30 13:14:59.527281
-Parameters: {'max_depth': 6, 'n_estimators': 15}
-
-MSE - mean: 776527.09740
-MSE - std: 245014.48304
-R2 - mean: 0.99893
-R2 - std: 0.00042
-
-Train time: 0.205523
-Test time: 0.008478
-
----------------------------------------
-2025-05-30 13:14:59.856665
-Parameters: {'max_depth': 2, 'n_estimators': 10}
-
-MSE - mean: 891135.39389
-MSE - std: 281411.75143
-R2 - mean: 0.99876
-R2 - std: 0.00047
-
-Train time: 0.072835
-Test time: 0.006558
-
----------------------------------------
-2025-05-30 13:15:01.556479
-Parameters: {'max_depth': 10, 'n_estimators': 79}
-
-MSE - mean: 520440.99855
-MSE - std: 177746.44207
-R2 - mean: 0.99935
-R2 - std: 0.00024
-
-Train time: 1.574892
-Test time: 0.028116
-
----------------------------------------
-2025-05-30 13:15:01.988139
+2025-06-19 14:36:26.062642
 Parameters: {'max_depth': 2, 'n_estimators': 20}
 
-MSE - mean: 588707.99274
-MSE - std: 274103.50183
+MSE - mean: 885280.32932
+MSE - std: 254970.21455
+R2 - mean: 0.99877
+R2 - std: 0.00045
+
+Train time: 0.125835
+Test time: 0.008983
+
+---------------------------------------
+2025-06-19 14:36:26.428868
+Parameters: {'max_depth': 6, 'n_estimators': 5}
+
+MSE - mean: 832509.98303
+MSE - std: 264450.98322
+R2 - mean: 0.99885
+R2 - std: 0.00046
+
+Train time: 0.090476
+Test time: 0.007750
+
+---------------------------------------
+2025-06-19 14:36:28.356890
+Parameters: {'max_depth': 10, 'n_estimators': 100}
+
+MSE - mean: 822648.46812
+MSE - std: 259399.21584
+R2 - mean: 0.99887
+R2 - std: 0.00041
+
+Train time: 2.050824
+Test time: 0.030557
+
+---------------------------------------
+2025-06-19 14:36:29.776008
+Parameters: {'max_depth': 6, 'n_estimators': 100}
+
+MSE - mean: 813237.20243
+MSE - std: 270237.82117
+R2 - mean: 0.99889
+R2 - std: 0.00041
+
+Train time: 1.267663
+Test time: 0.028900
+
+---------------------------------------
+2025-06-19 14:36:30.303191
+Parameters: {'max_depth': 6, 'n_estimators': 20}
+
+MSE - mean: 813287.05601
+MSE - std: 259351.99981
+R2 - mean: 0.99889
+R2 - std: 0.00038
+
+Train time: 0.274155
+Test time: 0.010225
+
+---------------------------------------
+2025-06-19 14:36:30.792214
+Parameters: {'max_depth': 12, 'n_estimators': 10}
+
+MSE - mean: 851693.09510
+MSE - std: 246959.76526
+R2 - mean: 0.99881
+R2 - std: 0.00049
+
+Train time: 0.248436
+Test time: 0.006702
+
+---------------------------------------
+2025-06-19 14:36:31.256015
+Parameters: {'max_depth': 10, 'n_estimators': 10}
+
+MSE - mean: 857165.74626
+MSE - std: 239703.21580
+R2 - mean: 0.99881
+R2 - std: 0.00047
+
+Train time: 0.210383
+Test time: 0.008048
+
+---------------------------------------
+2025-06-19 14:36:31.907781
+Parameters: {'max_depth': 2, 'n_estimators': 50}
+
+MSE - mean: 877986.13290
+MSE - std: 246559.81710
+R2 - mean: 0.99877
+R2 - std: 0.00047
+
+Train time: 0.288057
+Test time: 0.015264
+
+---------------------------------------
+2025-06-19 14:36:32.220009
+Parameters: {'max_depth': 2, 'n_estimators': 5}
+
+MSE - mean: 884731.42259
+MSE - std: 255095.74405
+R2 - mean: 0.99876
+R2 - std: 0.00048
+
+Train time: 0.048889
+Test time: 0.007080
+
+---------------------------------------
+2025-06-19 14:36:32.656185
+Parameters: {'max_depth': 12, 'n_estimators': 5}
+
+MSE - mean: 913599.43289
+MSE - std: 296804.88593
+R2 - mean: 0.99873
+R2 - std: 0.00054
+
+Train time: 0.156161
+Test time: 0.007514
+
+---------------------------------------
+2025-06-19 14:36:33.379843
+Parameters: {'max_depth': 10, 'n_estimators': 20}
+
+MSE - mean: 810578.17460
+MSE - std: 251363.25710
+R2 - mean: 0.99887
+R2 - std: 0.00048
+
+Train time: 0.525028
+Test time: 0.009760
+
+---------------------------------------
+2025-06-19 14:36:35.086721
+Parameters: {'max_depth': 12, 'n_estimators': 50}
+
+MSE - mean: 502378.17104
+MSE - std: 165804.19514
+R2 - mean: 0.99937
+R2 - std: 0.00022
+
+Train time: 1.173922
+Test time: 0.017031
+
+---------------------------------------
+2025-06-19 14:36:35.415417
+Parameters: {'max_depth': 2, 'n_estimators': 10}
+
+MSE - mean: 597786.94993
+MSE - std: 266162.36367
+R2 - mean: 0.99927
+R2 - std: 0.00032
+
+Train time: 0.074204
+Test time: 0.006397
+
+---------------------------------------
+2025-06-19 14:36:37.487568
+Parameters: {'max_depth': 12, 'n_estimators': 100}
+
+MSE - mean: 503005.88347
+MSE - std: 165065.34819
+R2 - mean: 0.99937
+R2 - std: 0.00022
+
+Train time: 2.255755
+Test time: 0.030083
+
+---------------------------------------
+2025-06-19 14:36:38.359370
+Parameters: {'max_depth': 6, 'n_estimators': 50}
+
+MSE - mean: 549119.45756
+MSE - std: 190341.50079
+R2 - mean: 0.99932
+R2 - std: 0.00023
+
+Train time: 0.668427
+Test time: 0.018245
+
+---------------------------------------
+2025-06-19 14:36:38.748197
+Parameters: {'max_depth': 10, 'n_estimators': 5}
+
+MSE - mean: 556307.41756
+MSE - std: 174946.76693
+R2 - mean: 0.99930
+R2 - std: 0.00024
+
+Train time: 0.113811
+Test time: 0.006592
+
+---------------------------------------
+2025-06-19 14:36:39.381822
+Parameters: {'max_depth': 12, 'n_estimators': 20}
+
+MSE - mean: 538718.21312
+MSE - std: 213835.35375
+R2 - mean: 0.99933
+R2 - std: 0.00029
+
+Train time: 0.460172
+Test time: 0.008329
+
+---------------------------------------
+2025-06-19 14:36:39.798847
+Parameters: {'max_depth': 6, 'n_estimators': 10}
+
+MSE - mean: 564813.81866
+MSE - std: 231475.92850
+R2 - mean: 0.99930
+R2 - std: 0.00029
+
+Train time: 0.152758
+Test time: 0.007341
+
+---------------------------------------
+2025-06-19 14:36:40.879539
+Parameters: {'max_depth': 10, 'n_estimators': 50}
+
+MSE - mean: 522865.81566
+MSE - std: 173571.65772
+R2 - mean: 0.99935
+R2 - std: 0.00023
+
+Train time: 0.997847
+Test time: 0.017277
+
+---------------------------------------
+2025-06-19 14:36:41.940020
+Parameters: {'max_depth': 2, 'n_estimators': 100}
+
+MSE - mean: 593907.59008
+MSE - std: 271029.92133
 R2 - mean: 0.99928
 R2 - std: 0.00033
 
-Train time: 0.125947
-Test time: 0.009927
+Train time: 0.557487
+Test time: 0.026480
 
 ---------------------------------------
-2025-05-30 13:15:02.369747
-Parameters: {'max_depth': 10, 'n_estimators': 6}
+2025-06-19 14:36:42.357611
+Parameters: {'max_depth': 2, 'n_estimators': 20}
 
-MSE - mean: 544643.19575
-MSE - std: 213471.24998
-R2 - mean: 0.99931
-R2 - std: 0.00029
+MSE - mean: 589792.90650
+MSE - std: 268781.27621
+R2 - mean: 0.99928
+R2 - std: 0.00033
 
-Train time: 0.130810
-Test time: 0.007442
-
----------------------------------------
-2025-05-30 13:15:03.252695
-Parameters: {'max_depth': 6, 'n_estimators': 55}
-
-MSE - mean: 528324.69016
-MSE - std: 188519.20739
-R2 - mean: 0.99935
-R2 - std: 0.00023
-
-Train time: 0.664103
-Test time: 0.018356
+Train time: 0.126274
+Test time: 0.008365
 
 ---------------------------------------
-2025-05-30 13:15:05.067515
-Parameters: {'max_depth': 12, 'n_estimators': 93}
+2025-06-19 14:36:42.719219
+Parameters: {'max_depth': 6, 'n_estimators': 5}
 
-MSE - mean: 509798.24823
-MSE - std: 191489.74015
+MSE - mean: 654567.30971
+MSE - std: 251136.76771
+R2 - mean: 0.99919
+R2 - std: 0.00032
+
+Train time: 0.087557
+Test time: 0.008141
+
+---------------------------------------
+2025-06-19 14:36:44.680724
+Parameters: {'max_depth': 10, 'n_estimators': 100}
+
+MSE - mean: 510682.47214
+MSE - std: 185730.90671
 R2 - mean: 0.99936
 R2 - std: 0.00025
 
-Train time: 1.907797
-Test time: 0.030430
+Train time: 2.115118
+Test time: 0.031815
 
 ---------------------------------------
-2025-05-30 13:15:06.018507
-Parameters: {'max_depth': 7, 'n_estimators': 21}
+2025-06-19 14:36:46.044991
+Parameters: {'max_depth': 6, 'n_estimators': 100}
 
-MSE - mean: 724516.64769
-MSE - std: 216004.96926
-R2 - mean: 0.99905
-R2 - std: 0.00053
+MSE - mean: 536296.12917
+MSE - std: 198798.37185
+R2 - mean: 0.99934
+R2 - std: 0.00025
 
-Train time: 0.305027
-Test time: 0.009922
-
----------------------------------------
-2025-05-30 13:15:07.022066
-Parameters: {'max_depth': 4, 'n_estimators': 80}
-
-MSE - mean: 733454.29198
-MSE - std: 250000.98601
-R2 - mean: 0.99904
-R2 - std: 0.00057
-
-Train time: 0.698478
-Test time: 0.021067
+Train time: 1.241085
+Test time: 0.028037
 
 ---------------------------------------
-2025-05-30 13:15:07.494240
-Parameters: {'max_depth': 4, 'n_estimators': 22}
+2025-06-19 14:36:46.550698
+Parameters: {'max_depth': 6, 'n_estimators': 20}
 
-MSE - mean: 725855.57715
-MSE - std: 260040.91970
-R2 - mean: 0.99904
-R2 - std: 0.00059
+MSE - mean: 530718.46223
+MSE - std: 207793.46889
+R2 - mean: 0.99934
+R2 - std: 0.00026
 
-Train time: 0.211025
-Test time: 0.009567
+Train time: 0.270463
+Test time: 0.009995
 
 ---------------------------------------
-2025-05-30 13:15:08.102571
+2025-06-19 14:36:47.033733
+Parameters: {'max_depth': 12, 'n_estimators': 10}
+
+MSE - mean: 502060.02288
+MSE - std: 167536.14408
+R2 - mean: 0.99937
+R2 - std: 0.00022
+
+Train time: 0.247550
+Test time: 0.007351
+
+---------------------------------------
+2025-06-19 14:36:47.494930
+Parameters: {'max_depth': 10, 'n_estimators': 10}
+
+MSE - mean: 557330.71397
+MSE - std: 160728.52630
+R2 - mean: 0.99930
+R2 - std: 0.00023
+
+Train time: 0.211997
+Test time: 0.007065
+
+---------------------------------------
+2025-06-19 14:36:48.134035
+Parameters: {'max_depth': 2, 'n_estimators': 50}
+
+MSE - mean: 584654.44719
+MSE - std: 267175.04384
+R2 - mean: 0.99929
+R2 - std: 0.00033
+
+Train time: 0.286944
+Test time: 0.014974
+
+---------------------------------------
+2025-06-19 14:36:48.449030
+Parameters: {'max_depth': 2, 'n_estimators': 5}
+
+MSE - mean: 599536.38264
+MSE - std: 255613.72356
+R2 - mean: 0.99927
+R2 - std: 0.00031
+
+Train time: 0.045229
+Test time: 0.006364
+
+---------------------------------------
+2025-06-19 14:36:48.880483
+Parameters: {'max_depth': 12, 'n_estimators': 5}
+
+MSE - mean: 650216.28453
+MSE - std: 117310.21906
+R2 - mean: 0.99919
+R2 - std: 0.00018
+
+Train time: 0.147632
+Test time: 0.007476
+
+---------------------------------------
+2025-06-19 14:36:49.611667
 Parameters: {'max_depth': 10, 'n_estimators': 20}
 
-MSE - mean: 721860.62394
-MSE - std: 212097.23783
-R2 - mean: 0.99906
-R2 - std: 0.00051
+MSE - mean: 507495.78186
+MSE - std: 156686.90945
+R2 - mean: 0.99936
+R2 - std: 0.00021
 
-Train time: 0.386964
-Test time: 0.009769
-
----------------------------------------
-2025-05-30 13:15:08.883625
-Parameters: {'max_depth': 2, 'n_estimators': 63}
-
-MSE - mean: 722659.32934
-MSE - std: 280453.00657
-R2 - mean: 0.99904
-R2 - std: 0.00062
-
-Train time: 0.357835
-Test time: 0.017747
+Train time: 0.519414
+Test time: 0.009670
 
 ---------------------------------------
-2025-05-30 13:15:09.394631
+2025-06-19 14:36:51.052493
+Parameters: {'max_depth': 12, 'n_estimators': 50}
+
+MSE - mean: 699830.78536
+MSE - std: 207472.86958
+R2 - mean: 0.99908
+R2 - std: 0.00050
+
+Train time: 1.317330
+Test time: 0.017521
+
+---------------------------------------
+2025-06-19 14:36:51.374460
 Parameters: {'max_depth': 2, 'n_estimators': 10}
 
-MSE - mean: 828014.29217
-MSE - std: 327723.27198
-R2 - mean: 0.99889
-R2 - std: 0.00038
+MSE - mean: 756965.68029
+MSE - std: 280039.27127
+R2 - mean: 0.99900
+R2 - std: 0.00061
 
-Train time: 0.073306
-Test time: 0.007100
-
----------------------------------------
-2025-05-30 13:15:10.099530
-Parameters: {'max_depth': 2, 'n_estimators': 51}
-
-MSE - mean: 826594.42181
-MSE - std: 342455.04594
-R2 - mean: 0.99889
-R2 - std: 0.00039
-
-Train time: 0.318360
-Test time: 0.015675
+Train time: 0.075505
+Test time: 0.006560
 
 ---------------------------------------
-2025-05-30 13:15:10.560347
-Parameters: {'max_depth': 11, 'n_estimators': 5}
+2025-06-19 14:36:53.447550
+Parameters: {'max_depth': 12, 'n_estimators': 100}
 
-MSE - mean: 813030.75920
-MSE - std: 264907.61619
-R2 - mean: 0.99889
-R2 - std: 0.00036
+MSE - mean: 710789.79215
+MSE - std: 202104.75483
+R2 - mean: 0.99907
+R2 - std: 0.00049
 
-Train time: 0.136111
-Test time: 0.008199
+Train time: 2.257735
+Test time: 0.031730
 
 ---------------------------------------
-2025-05-30 13:15:12.068883
-Parameters: {'max_depth': 7, 'n_estimators': 82}
+2025-06-19 14:36:54.267785
+Parameters: {'max_depth': 6, 'n_estimators': 50}
 
-MSE - mean: 717103.97625
-MSE - std: 298152.27183
+MSE - mean: 694231.64421
+MSE - std: 237346.93044
+R2 - mean: 0.99908
+R2 - std: 0.00056
+
+Train time: 0.655382
+Test time: 0.014025
+
+---------------------------------------
+2025-06-19 14:36:55.250990
+Parameters: {'max_depth': 10, 'n_estimators': 5}
+
+MSE - mean: 780465.73945
+MSE - std: 165205.35685
+R2 - mean: 0.99900
+R2 - std: 0.00044
+
+Train time: 0.111779
+Test time: 0.006427
+
+---------------------------------------
+2025-06-19 14:36:55.892360
+Parameters: {'max_depth': 12, 'n_estimators': 20}
+
+MSE - mean: 790969.97543
+MSE - std: 251806.34434
+R2 - mean: 0.99896
+R2 - std: 0.00059
+
+Train time: 0.452262
+Test time: 0.009751
+
+---------------------------------------
+2025-06-19 14:36:56.272025
+Parameters: {'max_depth': 6, 'n_estimators': 10}
+
+MSE - mean: 678118.98992
+MSE - std: 219289.13798
+R2 - mean: 0.99911
+R2 - std: 0.00052
+
+Train time: 0.147566
+Test time: 0.007064
+
+---------------------------------------
+2025-06-19 14:36:57.373109
+Parameters: {'max_depth': 10, 'n_estimators': 50}
+
+MSE - mean: 686997.38867
+MSE - std: 222550.68546
+R2 - mean: 0.99910
+R2 - std: 0.00052
+
+Train time: 1.049365
+Test time: 0.017148
+
+---------------------------------------
+2025-06-19 14:36:58.403613
+Parameters: {'max_depth': 2, 'n_estimators': 100}
+
+MSE - mean: 726989.22628
+MSE - std: 286538.86108
+R2 - mean: 0.99904
+R2 - std: 0.00063
+
+Train time: 0.554150
+Test time: 0.022480
+
+---------------------------------------
+2025-06-19 14:36:58.782173
+Parameters: {'max_depth': 2, 'n_estimators': 20}
+
+MSE - mean: 728009.33338
+MSE - std: 289611.78539
 R2 - mean: 0.99903
-R2 - std: 0.00036
+R2 - std: 0.00064
 
-Train time: 1.377656
-Test time: 0.026373
+Train time: 0.123205
+Test time: 0.007363
 
 ---------------------------------------
-2025-05-30 13:15:12.423337
-Parameters: {'max_depth': 2, 'n_estimators': 7}
+2025-06-19 14:36:59.143001
+Parameters: {'max_depth': 6, 'n_estimators': 5}
 
-MSE - mean: 837187.21926
-MSE - std: 339382.58824
-R2 - mean: 0.99888
+MSE - mean: 751174.93663
+MSE - std: 224277.48674
+R2 - mean: 0.99901
+R2 - std: 0.00056
+
+Train time: 0.092943
+Test time: 0.006824
+
+---------------------------------------
+2025-06-19 14:37:01.107563
+Parameters: {'max_depth': 10, 'n_estimators': 100}
+
+MSE - mean: 694680.13441
+MSE - std: 193059.28951
+R2 - mean: 0.99909
+R2 - std: 0.00048
+
+Train time: 2.128302
+Test time: 0.028799
+
+---------------------------------------
+2025-06-19 14:37:02.487874
+Parameters: {'max_depth': 6, 'n_estimators': 100}
+
+MSE - mean: 714090.06972
+MSE - std: 231255.76412
+R2 - mean: 0.99906
+R2 - std: 0.00054
+
+Train time: 1.246650
+Test time: 0.027241
+
+---------------------------------------
+2025-06-19 14:37:02.988838
+Parameters: {'max_depth': 6, 'n_estimators': 20}
+
+MSE - mean: 720973.40061
+MSE - std: 226335.47860
+R2 - mean: 0.99905
+R2 - std: 0.00054
+
+Train time: 0.278811
+Test time: 0.010172
+
+---------------------------------------
+2025-06-19 14:37:03.486858
+Parameters: {'max_depth': 12, 'n_estimators': 10}
+
+MSE - mean: 798480.49270
+MSE - std: 216837.47149
+R2 - mean: 0.99897
+R2 - std: 0.00049
+
+Train time: 0.245741
+Test time: 0.007099
+
+---------------------------------------
+2025-06-19 14:37:04.207023
+Parameters: {'max_depth': 10, 'n_estimators': 10}
+
+MSE - mean: 716155.29373
+MSE - std: 196947.56786
+R2 - mean: 0.99907
+R2 - std: 0.00049
+
+Train time: 0.239025
+Test time: 0.008819
+
+---------------------------------------
+2025-06-19 14:37:05.787045
+Parameters: {'max_depth': 2, 'n_estimators': 50}
+
+MSE - mean: 725401.26369
+MSE - std: 283795.02051
+R2 - mean: 0.99904
+R2 - std: 0.00063
+
+Train time: 0.291118
+Test time: 0.013982
+
+---------------------------------------
+2025-06-19 14:37:06.125765
+Parameters: {'max_depth': 2, 'n_estimators': 5}
+
+MSE - mean: 752253.16240
+MSE - std: 275321.76795
+R2 - mean: 0.99901
+R2 - std: 0.00062
+
+Train time: 0.050343
+Test time: 0.006277
+
+---------------------------------------
+2025-06-19 14:37:06.563591
+Parameters: {'max_depth': 12, 'n_estimators': 5}
+
+MSE - mean: 800796.42314
+MSE - std: 159383.68088
+R2 - mean: 0.99897
+R2 - std: 0.00046
+
+Train time: 0.144269
+Test time: 0.007473
+
+---------------------------------------
+2025-06-19 14:37:07.270666
+Parameters: {'max_depth': 10, 'n_estimators': 20}
+
+MSE - mean: 717624.42239
+MSE - std: 196574.77513
+R2 - mean: 0.99907
+R2 - std: 0.00047
+
+Train time: 0.498233
+Test time: 0.008762
+
+---------------------------------------
+2025-06-19 14:37:08.620723
+Parameters: {'max_depth': 12, 'n_estimators': 50}
+
+MSE - mean: 722907.90199
+MSE - std: 268720.20053
+R2 - mean: 0.99902
+R2 - std: 0.00032
+
+Train time: 1.240790
+Test time: 0.017828
+
+---------------------------------------
+2025-06-19 14:37:08.939126
+Parameters: {'max_depth': 2, 'n_estimators': 10}
+
+MSE - mean: 836608.57932
+MSE - std: 339486.52508
+R2 - mean: 0.99887
+R2 - std: 0.00041
+
+Train time: 0.077376
+Test time: 0.005846
+
+---------------------------------------
+2025-06-19 14:37:10.936533
+Parameters: {'max_depth': 12, 'n_estimators': 100}
+
+MSE - mean: 717516.78063
+MSE - std: 263685.57999
+R2 - mean: 0.99903
+R2 - std: 0.00032
+
+Train time: 2.205294
+Test time: 0.029974
+
+---------------------------------------
+2025-06-19 14:37:11.762725
+Parameters: {'max_depth': 6, 'n_estimators': 50}
+
+MSE - mean: 715867.37211
+MSE - std: 294201.39692
+R2 - mean: 0.99904
+R2 - std: 0.00035
+
+Train time: 0.626103
+Test time: 0.015844
+
+---------------------------------------
+2025-06-19 14:37:12.144181
+Parameters: {'max_depth': 10, 'n_estimators': 5}
+
+MSE - mean: 761158.13285
+MSE - std: 268042.93947
+R2 - mean: 0.99897
+R2 - std: 0.00033
+
+Train time: 0.110127
+Test time: 0.006453
+
+---------------------------------------
+2025-06-19 14:37:12.779077
+Parameters: {'max_depth': 12, 'n_estimators': 20}
+
+MSE - mean: 712284.98378
+MSE - std: 256659.81869
+R2 - mean: 0.99904
+R2 - std: 0.00031
+
+Train time: 0.450424
+Test time: 0.009075
+
+---------------------------------------
+2025-06-19 14:37:13.183059
+Parameters: {'max_depth': 6, 'n_estimators': 10}
+
+MSE - mean: 721976.24775
+MSE - std: 342566.52922
+R2 - mean: 0.99903
 R2 - std: 0.00039
 
-Train time: 0.058750
-Test time: 0.007833
+Train time: 0.154096
+Test time: 0.006695
+
+---------------------------------------
+2025-06-19 14:37:14.261624
+Parameters: {'max_depth': 10, 'n_estimators': 50}
+
+MSE - mean: 708706.90560
+MSE - std: 271666.46236
+R2 - mean: 0.99904
+R2 - std: 0.00034
+
+Train time: 0.954219
+Test time: 0.020652
+
+---------------------------------------
+2025-06-19 14:37:15.285060
+Parameters: {'max_depth': 2, 'n_estimators': 100}
+
+MSE - mean: 819553.69628
+MSE - std: 351598.17578
+R2 - mean: 0.99890
+R2 - std: 0.00040
+
+Train time: 0.554489
+Test time: 0.020596
+
+---------------------------------------
+2025-06-19 14:37:15.692082
+Parameters: {'max_depth': 2, 'n_estimators': 20}
+
+MSE - mean: 832628.43609
+MSE - std: 355863.46119
+R2 - mean: 0.99888
+R2 - std: 0.00042
+
+Train time: 0.127271
+Test time: 0.009106
+
+---------------------------------------
+2025-06-19 14:37:16.062362
+Parameters: {'max_depth': 6, 'n_estimators': 5}
+
+MSE - mean: 769860.43016
+MSE - std: 337364.30708
+R2 - mean: 0.99896
+R2 - std: 0.00044
+
+Train time: 0.087471
+Test time: 0.007981
+
+---------------------------------------
+2025-06-19 14:37:18.067610
+Parameters: {'max_depth': 10, 'n_estimators': 100}
+
+MSE - mean: 710793.45378
+MSE - std: 262664.28042
+R2 - mean: 0.99903
+R2 - std: 0.00034
+
+Train time: 2.136198
+Test time: 0.029434
+
+---------------------------------------
+2025-06-19 14:37:19.466822
+Parameters: {'max_depth': 6, 'n_estimators': 100}
+
+MSE - mean: 723131.01239
+MSE - std: 297505.84244
+R2 - mean: 0.99902
+R2 - std: 0.00037
+
+Train time: 1.260520
+Test time: 0.026323
+
+---------------------------------------
+2025-06-19 14:37:19.992763
+Parameters: {'max_depth': 6, 'n_estimators': 20}
+
+MSE - mean: 724965.25877
+MSE - std: 292149.09730
+R2 - mean: 0.99902
+R2 - std: 0.00037
+
+Train time: 0.275975
+Test time: 0.009998
+
+---------------------------------------
+2025-06-19 14:37:20.496866
+Parameters: {'max_depth': 12, 'n_estimators': 10}
+
+MSE - mean: 769269.49762
+MSE - std: 243745.69895
+R2 - mean: 0.99896
+R2 - std: 0.00031
+
+Train time: 0.249271
+Test time: 0.007541
+
+---------------------------------------
+2025-06-19 14:37:20.980203
+Parameters: {'max_depth': 10, 'n_estimators': 10}
+
+MSE - mean: 766365.96486
+MSE - std: 308489.91997
+R2 - mean: 0.99896
+R2 - std: 0.00042
+
+Train time: 0.215772
+Test time: 0.007824
+
+---------------------------------------
+2025-06-19 14:37:21.613342
+Parameters: {'max_depth': 2, 'n_estimators': 50}
+
+MSE - mean: 827386.05816
+MSE - std: 347517.38842
+R2 - mean: 0.99889
+R2 - std: 0.00041
+
+Train time: 0.287004
+Test time: 0.014262
+
+---------------------------------------
+2025-06-19 14:37:21.921798
+Parameters: {'max_depth': 2, 'n_estimators': 5}
+
+MSE - mean: 811330.39096
+MSE - std: 313445.02550
+R2 - mean: 0.99890
+R2 - std: 0.00040
+
+Train time: 0.046258
+Test time: 0.006794
+
+---------------------------------------
+2025-06-19 14:37:22.343960
+Parameters: {'max_depth': 12, 'n_estimators': 5}
+
+MSE - mean: 798187.81483
+MSE - std: 311493.49354
+R2 - mean: 0.99891
+R2 - std: 0.00041
+
+Train time: 0.147539
+Test time: 0.006550
+
+---------------------------------------
+2025-06-19 14:37:23.092056
+Parameters: {'max_depth': 10, 'n_estimators': 20}
+
+MSE - mean: 765241.26373
+MSE - std: 318372.78997
+R2 - mean: 0.99897
+R2 - std: 0.00036
+
+Train time: 0.525735
+Test time: 0.009647
 
 ---------------------------------------

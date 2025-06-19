@@ -1,28 +1,14 @@
-2025-05-30 13:15:14.671735
+2025-06-19 15:09:28.117248
 RandomForest - Mercedes_Benz - train_model - regression
 
-MSE - mean: 65.43409
-MSE - mean_std: 11.66778
-R2 - mean: 0.58926
-R2 - mean_std: 0.04146
+MSE - mean: 66.10037
+MSE - mean_std: 11.95148
+R2 - mean: 0.58530
+R2 - mean_std: 0.04162
 
-Train time: 0.187872
-Test time: 0.009206
+Train time: 1.203590
+Test time: 0.023054
 
-Best Parameters: {'max_depth': 3, 'n_estimators': 20}
-
-
-2025-05-30 21:16:02.668887
-RandomForest - Mercedes_Benz - test_model - regression
-
-MSE - mean: 77.49042
-MSE - std: 0.60359
-R2 - mean: 0.52461
-R2 - std: 0.00370
-
-Train time: 0.354389
-Test time: 0.014274
-
-Best Parameters: {'max_depth': 3, 'n_estimators': 20}
+Best Parameters: {'max_depth': 6, 'n_estimators': 100}
 
 

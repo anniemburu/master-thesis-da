@@ -1,28 +1,14 @@
-2025-05-30 13:13:44.493397
+2025-06-19 15:14:17.303306
 RandomForest - SAT11 - train_model - regression
 
-MSE - mean: 2165156.76108
-MSE - mean_std: 307978.30819
-R2 - mean: 0.62209
-R2 - mean_std: 0.05808
+MSE - mean: 1995756.21228
+MSE - mean_std: 262089.83596
+R2 - mean: 0.65179
+R2 - mean_std: 0.04900
 
-Train time: 0.704716
-Test time: 0.013111
+Train time: 2.492751
+Test time: 0.027855
 
-Best Parameters: {'max_depth': 12, 'n_estimators': 26}
-
-
-2025-05-30 21:15:39.951798
-RandomForest - SAT11 - test_model - regression
-
-MSE - mean: 2254954.85931
-MSE - std: 61530.63415
-R2 - mean: 0.60383
-R2 - std: 0.01081
-
-Train time: 0.895228
-Test time: 0.016326
-
-Best Parameters: {'max_depth': 12, 'n_estimators': 26}
+Best Parameters: {'max_depth': 10, 'n_estimators': 50}
 
 

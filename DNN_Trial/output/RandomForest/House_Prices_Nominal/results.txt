@@ -1,28 +1,14 @@
-2025-05-30 13:14:22.132305
+2025-06-19 15:05:46.292590
 RandomForest - House_Prices_Nominal - train_model - regression
 
-MSE - mean: 1211750039.69301
-MSE - mean_std: 402181621.86528
-R2 - mean: 0.82594
-R2 - mean_std: 0.04463
+MSE - mean: 1194738634.79637
+MSE - mean_std: 344098653.44055
+R2 - mean: 0.82704
+R2 - mean_std: 0.03921
 
-Train time: 0.460760
-Test time: 0.013026
-
-Best Parameters: {'max_depth': 12, 'n_estimators': 39}
-
-
-2025-05-30 21:15:55.227258
-RandomForest - House_Prices_Nominal - test_model - regression
-
-MSE - mean: 834961844.98573
-MSE - std: 24478246.51455
-R2 - mean: 0.85286
-R2 - std: 0.00431
-
-Train time: 0.696006
+Train time: 1.106351
 Test time: 0.023678
 
-Best Parameters: {'max_depth': 12, 'n_estimators': 39}
+Best Parameters: {'max_depth': 10, 'n_estimators': 50}
 
 

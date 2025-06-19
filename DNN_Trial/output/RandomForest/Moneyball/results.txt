@@ -1,28 +1,14 @@
-2025-05-30 13:14:35.017719
+2025-06-19 14:41:50.275825
 RandomForest - Moneyball - train_model - regression
 
-MSE - mean: 727.17508
-MSE - mean_std: 74.14475
-R2 - mean: 0.89664
-R2 - mean_std: 0.01512
+MSE - mean: 707.30441
+MSE - mean_std: 78.91929
+R2 - mean: 0.89964
+R2 - mean_std: 0.01397
 
-Train time: 0.295605
-Test time: 0.019420
+Train time: 0.403580
+Test time: 0.021535
 
-Best Parameters: {'max_depth': 9, 'n_estimators': 78}
-
-
-2025-05-30 21:15:54.745235
-RandomForest - Moneyball - test_model - regression
-
-MSE - mean: 696.26106
-MSE - std: 16.98741
-R2 - mean: 0.92762
-R2 - std: 0.00177
-
-Train time: 0.492323
-Test time: 0.039385
-
-Best Parameters: {'max_depth': 9, 'n_estimators': 78}
+Best Parameters: {'max_depth': 10, 'n_estimators': 100}
 
 

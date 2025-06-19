@@ -1,28 +1,14 @@
-2025-05-30 13:13:59.787919
+2025-06-19 15:04:02.082618
 RandomForest - Diamonds - train_model - regression
 
-MSE - mean: 425634.01365
-MSE - mean_std: 122048.17306
-R2 - mean: 0.97311
-R2 - mean_std: 0.00792
+MSE - mean: 322291.62032
+MSE - mean_std: 24112.97806
+R2 - mean: 0.97969
+R2 - mean_std: 0.00129
 
-Train time: 1.051252
-Test time: 0.024344
+Train time: 7.618569
+Test time: 0.127331
 
-Best Parameters: {'max_depth': 12, 'n_estimators': 23}
-
-
-2025-05-30 21:15:49.852031
-RandomForest - Diamonds - test_model - regression
-
-MSE - mean: 338714.99029
-MSE - std: 7679.05100
-R2 - mean: 0.97880
-R2 - std: 0.00048
-
-Train time: 2.219452
-Test time: 0.112467
-
-Best Parameters: {'max_depth': 12, 'n_estimators': 23}
+Best Parameters: {'max_depth': 12, 'n_estimators': 100}
 
 

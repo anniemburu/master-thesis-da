@@ -1,28 +1,14 @@
-2025-05-30 13:15:12.727686
+2025-06-19 14:37:23.195017
 RandomForest - MIP - train_model - regression
 
-MSE - mean: 646304.88881
-MSE - mean_std: 279303.65947
-R2 - mean: 0.99909
-R2 - mean_std: 0.00050
+MSE - mean: 623665.03558
+MSE - mean_std: 296095.69773
+R2 - mean: 0.99913
+R2 - mean_std: 0.00049
 
-Train time: 0.934982
-Test time: 0.020584
+Train time: 1.146192
+Test time: 0.015383
 
-Best Parameters: {'max_depth': 6, 'n_estimators': 15}
-
-
-2025-05-30 21:15:59.043798
-RandomForest - MIP - test_model - regression
-
-MSE - mean: 1078458.14523
-MSE - std: 56493.49962
-R2 - mean: 0.99873
-R2 - std: 0.00007
-
-Train time: 0.276242
-Test time: 0.011052
-
-Best Parameters: {'max_depth': 6, 'n_estimators': 15}
+Best Parameters: {'max_depth': 12, 'n_estimators': 100}
 
 
