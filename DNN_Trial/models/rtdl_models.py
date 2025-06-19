@@ -65,7 +65,8 @@ class ResMLP(BaseModelTorch):
       ).to(self.device)
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
+      #self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
+      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
       """print("On Device:", self.device)
       print(f"Model: {self.model}")
@@ -352,24 +353,28 @@ class ResMLP(BaseModelTorch):
       params = {
          "d_in": args.num_features,
          "d_out": args.num_classes,
-         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4, 6]),
-         "d_block": trial.suggest_categorical('d_block', [64, 128, 256]),
-         "d_hidden": trial.suggest_categorical("d_hidden", [1.0, 2.0, 3.0, 4.0, 5.0]),
-         "d_hidden_multiplier" : trial.suggest_categorical("d_hidden_multiplier", [1.0, 2.0, 3.0, 4.0, 5.0]),
-         "dropout1" : trial.suggest_categorical("dropout1", [1e-8, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3]),
-         "dropout2" : trial.suggest_categorical("dropout2", [1e-8, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3]),
+         "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+         "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4]),
+         "d_block": trial.suggest_categorical('d_block', [64, 128]),
+         "d_hidden": trial.suggest_categorical("d_hidden", [2]),
+         "d_hidden_multiplier" : trial.suggest_categorical("d_hidden_multiplier", [1, 2]),
+         "dropout1" : trial.suggest_categorical("dropout1", [0.0, 0.1, 0.3]),
+         "dropout2" : trial.suggest_categorical("dropout2", [0.0, 0.1, 0.3]),
       }
       return params 
    
    @classmethod
    def define_grid_parameters(cls):
       search_space = {
-         "n_blocks": [2, 4, 6],
-         "d_block": [64, 128, 256],
-         "d_hidden": [1.0, 2.0, 3.0, 4.0, 5.0],
-         "d_hidden_multiplier": [1.0, 2.0, 3.0, 4.0, 5.0],
-         "dropout1": [1e-8, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3],
-         "dropout2": [1e-8, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3]
+         "learning_rate": [1e-5, 1e-2],
+         "weight_decay": [1e-6, 1e-3],
+         "n_blocks": [2, 4],
+         "d_block": [64, 128],
+         "d_hidden": [2],
+         "d_hidden_multiplier": [1, 2],
+         "dropout1": [0.0, 0.1, 0.3],
+         "dropout2": [0.0, 0.1, 0.3]
       }
 
       return search_space
@@ -411,7 +416,7 @@ class MLP(BaseModelTorch):
       # Add lambda_reg as a trainable parameter
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
+      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
       print("On Device:", self.device)
       """
@@ -713,18 +718,22 @@ class MLP(BaseModelTorch):
       params = {
          "d_in": args.num_features,
          "d_out": args.num_classes,
-         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4, 6]),
-         "d_block": trial.suggest_categorical('d_block', [64, 128, 256]),
-         "dropout" : trial.suggest_categorical("dropout", [1e-8, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3]),
+         "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+         "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4]),
+         "d_block": trial.suggest_categorical('d_block', [64, 128]),
+         "dropout" : trial.suggest_categorical("dropout", [0.0,0.1,0.3]),
       }
       return params
    
    @classmethod
    def define_grid_parameters(cls):
       search_space = {
-         "n_blocks": [2, 4, 6],
-         "d_block": [64, 128, 256],
-         "dropout": [1e-8, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3]
+         "learning_rate": [1e-5, 1e-2],
+         "weight_decay": [1e-6, 1e-3],
+         "n_blocks": [2, 4],
+         "d_block": [64, 128],
+         "dropout": [0.0,0.1,0.3]
       }
       return search_space
    
@@ -777,8 +786,8 @@ class FTTransformerWrapper(BaseModelTorch):
                         ).to(self.device)
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
-
+      #self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
+      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
       print("On Device:", self.device)
       print(f"Model: {self.model}")
       """for name, param in self.model.named_parameters():
@@ -1099,28 +1108,30 @@ class FTTransformerWrapper(BaseModelTorch):
    @classmethod
    def define_trial_parameters(cls, trial, args):
       params = {
-         "learning_rate": trial.suggest_categorical("learning_rate", 1e-5, 1e-2, ),
-         "weight_decay": trial.suggest_categorical("weight_decay", 1e-6, 1e-2),
-         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4, 6]),
-         "d_block": trial.suggest_categorical('d_block', [64, 128, 256]),
-         "attention_n_heads": trial.suggest_categorical("attention_n_heads", [1, 2, 4]),
-         "attention_dropout": trial.suggest_categorical("attention_dropout", [0.0, 0.1, 0.2]),
-         "ffn_d_hidden_multiplier": trial.suggest_categorical("ffn_d_hidden_multiplier", [1.0, 2.0, 3.0, 4.0, 5.0]),
-         "ffn_dropout": trial.suggest_categorical("ffn_dropout", [0.0, 0.1, 0.2]),
-         "residual_dropout": trial.suggest_categorical("residual_dropout", [0.0, 0.1, 0.2]),
+         "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+         "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4]),
+         "d_block": trial.suggest_categorical('d_block', [64, 128]),
+         "attention_n_heads": trial.suggest_categorical("attention_n_heads", [1, 2]),
+         "attention_dropout": trial.suggest_categorical("attention_dropout", [0.1]),
+         "ffn_d_hidden_multiplier": trial.suggest_categorical("ffn_d_hidden_multiplier", [1, 2]),
+         "ffn_dropout": trial.suggest_categorical("ffn_dropout", [0.1]),
+         "residual_dropout": trial.suggest_categorical("residual_dropout", [0.1]),
       }
       return params
 
    @classmethod
    def define_grid_parameters(cls):
       search_space = {
-         "n_blocks": [2, 4, 6],
-         "d_block": [64, 128, 256],
-         "attention_n_heads": [1, 2, 4],
-         "attention_dropout": [0.0, 0.1, 0.2],
-         "ffn_d_hidden_multiplier": [1.0, 2.0, 3.0, 4.0, 5.0],
-         "ffn_dropout": [0.0, 0.1, 0.2],
-         "residual_dropout": [0.0, 0.1, 0.2]
+         "learning_rate": [1e-5, 1e-2],
+         "weight_decay": [1e-6, 1e-3],
+         "n_blocks": [2, 4],
+         "d_block": [64, 128],
+         "attention_n_heads": [1, 2],
+         "attention_dropout": [0.1],
+         "ffn_d_hidden_multiplier": [1, 2],
+         "ffn_dropout": [0.1],
+         "residual_dropout": [0.1]
       }
 
       return search_space
