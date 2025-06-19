@@ -1,14 +1,14 @@
-2025-05-30 13:20:47.246355
-LightGBM - House_Prices_Nominal - test_model - regression
+2025-06-19 15:44:47.478140
+LightGBM - House_Prices_Nominal - train_model - regression
 
-MSE - mean: 738120698.87177
-MSE - std: 32483221.66333
-R2 - mean: 0.86993
-R2 - std: 0.00572
+MSE - mean: 1020084469.11395
+MSE - mean_std: 222997479.50935
+R2 - mean: 0.85120
+R2 - mean_std: 0.00963
 
-Train time: 1.622975
-Test time: 0.006599
+Train time: 0.234657
+Test time: 0.006217
 
-Best Parameters: {'num_leaves': 8, 'lambda_l1': 1.877030904417553e-05, 'lambda_l2': 0.110105768744722, 'learning_rate': 0.08355115347016198, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 6, 'lambda_l1': 1e-08, 'lambda_l2': 1e-08, 'learning_rate': 0.1, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 

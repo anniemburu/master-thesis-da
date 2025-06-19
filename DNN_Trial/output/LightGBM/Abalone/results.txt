@@ -1,14 +1,14 @@
-2025-05-30 13:20:35.556775
-LightGBM - Abalone - test_model - regression
+2025-06-19 12:39:23.461247
+LightGBM - Abalone - train_model - regression
 
-MSE - mean: 5.33260
-MSE - std: 0.08573
-R2 - mean: 0.49307
-R2 - std: 0.00815
+MSE - mean: 4.71182
+MSE - mean_std: 0.29456
+R2 - mean: 0.53701
+R2 - mean_std: 0.04455
 
-Train time: 0.190895
-Test time: 0.018371
+Train time: 0.270073
+Test time: 0.004444
 
-Best Parameters: {'num_leaves': 10, 'lambda_l1': 0.0004905461472416862, 'lambda_l2': 4.8560469792408415e-05, 'learning_rate': 0.2628126398294097, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 16, 'lambda_l1': 1e-08, 'lambda_l2': 100.0, 'learning_rate': 0.2, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 

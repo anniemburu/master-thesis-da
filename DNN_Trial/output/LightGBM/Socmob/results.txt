@@ -1,14 +1,14 @@
-2025-05-30 13:20:36.926802
-LightGBM - Socmob - test_model - regression
+2025-06-19 11:01:04.067140
+LightGBM - Socmob - train_model - regression
 
-MSE - mean: 396.85315
-MSE - std: 32.19175
-R2 - mean: 0.77024
-R2 - std: 0.01864
+MSE - mean: 367.94002
+MSE - mean_std: 355.08780
+R2 - mean: 0.75638
+R2 - mean_std: 0.18871
 
-Train time: 0.136391
-Test time: 0.012337
+Train time: 0.163611
+Test time: 0.001755
 
-Best Parameters: {'num_leaves': 9, 'lambda_l1': 1.0423507318474041e-08, 'lambda_l2': 8.917849337877523e-06, 'learning_rate': 0.09425267922362643, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 256, 'lambda_l1': 0.01, 'lambda_l2': 1.0, 'learning_rate': 0.3, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 

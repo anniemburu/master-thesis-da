@@ -1,14 +1,14 @@
-2025-05-30 13:20:57.391769
-LightGBM - Mercedes_Benz - test_model - regression
+2025-06-19 17:05:03.992846
+LightGBM - Mercedes_Benz - train_model - regression
 
-MSE - mean: 79.79109
-MSE - std: 1.50355
-R2 - mean: 0.51049
-R2 - std: 0.00922
+MSE - mean: 69.97064
+MSE - mean_std: 10.99288
+R2 - mean: 0.55936
+R2 - mean_std: 0.04193
 
-Train time: 6.250587
-Test time: 0.024451
+Train time: 0.368314
+Test time: 0.006944
 
-Best Parameters: {'num_leaves': 3, 'lambda_l1': 0.000776649282257678, 'lambda_l2': 0.0002397670653631374, 'learning_rate': 0.0613527271188514, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 16, 'lambda_l1': 1e-08, 'lambda_l2': 100.0, 'learning_rate': 0.2, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 

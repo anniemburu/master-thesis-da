@@ -1,14 +1,14 @@
-2025-05-30 13:20:46.043548
-LightGBM - MIP - test_model - regression
+2025-06-19 15:13:53.135662
+LightGBM - MIP - train_model - regression
 
-MSE - mean: 1032901.07327
-MSE - std: 44985.98014
-R2 - mean: 0.99878
-R2 - std: 0.00005
+MSE - mean: 597177.31678
+MSE - mean_std: 273066.30720
+R2 - mean: 0.99919
+R2 - mean_std: 0.00042
 
-Train time: 0.756732
-Test time: 0.017902
+Train time: 0.354266
+Test time: 0.000836
 
-Best Parameters: {'num_leaves': 292, 'lambda_l1': 5.101905453725273e-08, 'lambda_l2': 2.8789360978920297e-05, 'learning_rate': 0.11093227123635475, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 256, 'lambda_l1': 0.01, 'lambda_l2': 1.0, 'learning_rate': 0.3, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 

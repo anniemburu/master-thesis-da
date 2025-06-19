@@ -1,14 +1,14 @@
-2025-05-30 13:20:36.416863
-LightGBM - SAT11 - test_model - regression
+2025-06-19 12:16:36.149831
+LightGBM - SAT11 - train_model - regression
 
-MSE - mean: 2107676.33059
-MSE - std: 78680.93528
-R2 - mean: 0.62970
-R2 - std: 0.01382
+MSE - mean: 1757633.08670
+MSE - mean_std: 245241.93515
+R2 - mean: 0.69330
+R2 - mean_std: 0.04593
 
-Train time: 1.095402
-Test time: 0.010797
+Train time: 0.696119
+Test time: 0.004401
 
-Best Parameters: {'num_leaves': 762, 'lambda_l1': 1.87284499986866e-07, 'lambda_l2': 0.03085239769819928, 'learning_rate': 0.07085988305636355, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+Best Parameters: {'num_leaves': 6, 'lambda_l1': 1.0, 'lambda_l2': 1.0, 'learning_rate': 0.3, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
 
 
