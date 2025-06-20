@@ -194,3 +194,147 @@ Test time: 0.799596
 Best Parameters: {'depth': 12, 'dim': 256, 'dropout': 0.3, 'heads': 2}
 
 
+2025-06-20 18:50:08.503046
+SAINT - MIP - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 9.23689
+Log Loss - std: 0.09176
+AUC - mean: 0.43125
+AUC - std: 0.02164
+Accuracy - mean: 0.11743
+Accuracy - std: 0.01199
+F1 score - mean: 0.20357
+F1 score - std: 0.02194
+
+Train time: 307.880836
+Test time: 0.347679
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 18:59:04.250117
+SAINT - MIP - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 9.20560
+Log Loss - std: 0.11047
+AUC - mean: 0.42750
+AUC - std: 0.01753
+Accuracy - mean: 0.11927
+Accuracy - std: 0.01280
+F1 score - mean: 0.20798
+F1 score - std: 0.02211
+
+Train time: 314.015930
+Test time: 0.339621
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 19:07:59.696463
+SAINT - MIP - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 11.12637
+Log Loss - std: 0.06445
+AUC - mean: 0.47951
+AUC - std: 0.01410
+Accuracy - mean: 0.00550
+Accuracy - std: 0.00259
+F1 score - mean: 0.01000
+F1 score - std: 0.00462
+
+Train time: 309.743582
+Test time: 0.337209
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 19:16:30.925089
+SAINT - MIP - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 10.83255
+Log Loss - std: 0.16133
+AUC - mean: 0.49684
+AUC - std: 0.01306
+Accuracy - mean: 0.01101
+Accuracy - std: 0.00000
+F1 score - mean: 0.02113
+F1 score - std: 0.00089
+
+Train time: 317.488148
+Test time: 0.341178
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 19:30:49.735279
+SAINT - MIP - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 10.87810
+Log Loss - std: 0.10645
+AUC - mean: 0.52023
+AUC - std: 0.01357
+Accuracy - mean: 0.01223
+Accuracy - std: 0.00458
+F1 score - mean: 0.01969
+F1 score - std: 0.00768
+
+Train time: 282.620860
+Test time: 0.336854
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 19:39:20.052421
+SAINT - MIP - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 10.78399
+Log Loss - std: 0.15532
+AUC - mean: 0.52196
+AUC - std: 0.02546
+Accuracy - mean: 0.01529
+Accuracy - std: 0.00825
+F1 score - mean: 0.02329
+F1 score - std: 0.01245
+
+Train time: 286.570262
+Test time: 0.333639
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 19:47:54.440844
+SAINT - MIP - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 10.90174
+Log Loss - std: 0.07725
+AUC - mean: 0.52174
+AUC - std: 0.01376
+Accuracy - mean: 0.01835
+Accuracy - std: 0.00000
+F1 score - mean: 0.02291
+F1 score - std: 0.00292
+
+Train time: 301.654006
+Test time: 0.336660
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 19:56:34.391660
+SAINT - MIP - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 10.70437
+Log Loss - std: 0.12386
+AUC - mean: 0.51695
+AUC - std: 0.01595
+Accuracy - mean: 0.01468
+Accuracy - std: 0.00749
+F1 score - mean: 0.02574
+F1 score - std: 0.01243
+
+Train time: 306.305917
+Test time: 0.340254
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+

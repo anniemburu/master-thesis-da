@@ -418,3 +418,93 @@ Test time: 0.367022
 Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
 
 
+2025-06-17 11:53:28.726478
+FTTransformer - Diamonds - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 16.18877
+Log Loss - std: 0.14176
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01649
+Accuracy - std: 0.00109
+F1 score - mean: 0.03244
+F1 score - std: 0.00212
+
+Train time: 2318.494758
+Test time: 0.352112
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-17 13:44:38.149603
+FTTransformer - Diamonds - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 19.11714
+Log Loss - std: 0.09961
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00114
+Accuracy - std: 0.00012
+F1 score - mean: 0.00227
+F1 score - std: 0.00024
+
+Train time: 2368.509522
+Test time: 0.360757
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-17 15:37:22.468110
+FTTransformer - Diamonds - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 18.17221
+Log Loss - std: 0.10105
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00122
+Accuracy - std: 0.00015
+F1 score - mean: 0.00244
+F1 score - std: 0.00030
+
+Train time: 2391.755883
+Test time: 0.361021
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-17 17:38:29.448067
+FTTransformer - Diamonds - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 19.27852
+Log Loss - std: 0.13230
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00127
+Accuracy - std: 0.00023
+F1 score - mean: 0.00254
+F1 score - std: 0.00046
+
+Train time: 2582.828048
+Test time: 0.369610
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-17 19:53:34.309036
+FTTransformer - Diamonds - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 18.10310
+Log Loss - std: 0.32932
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00136
+Accuracy - std: 0.00024
+F1 score - mean: 0.00272
+F1 score - std: 0.00048
+
+Train time: 2875.511643
+Test time: 0.379310
+
+Best Parameters: {'learning_rate': 0.00013457653890213615, 'weight_decay': 8.376325678211951e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+

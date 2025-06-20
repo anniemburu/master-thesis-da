@@ -348,3 +348,183 @@ Test time: 0.037156
 Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 54, 'dropout': 0.07678813857296692, 'n_blocks': 5}
 
 
+2025-06-17 11:15:14.695605
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 17.23227
+Log Loss - std: 0.28907
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07476
+Accuracy - std: 0.00179
+F1 score - mean: 0.13911
+F1 score - std: 0.00310
+
+Train time: 39.357644
+Test time: 0.011956
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 11:17:24.546693
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 17.22261
+Log Loss - std: 0.21783
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07501
+Accuracy - std: 0.00122
+F1 score - mean: 0.13955
+F1 score - std: 0.00211
+
+Train time: 39.599882
+Test time: 0.020440
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 11:19:27.359430
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 19.06229
+Log Loss - std: 0.51645
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00006
+Accuracy - std: 0.00009
+F1 score - mean: 0.00012
+F1 score - std: 0.00018
+
+Train time: 39.894665
+Test time: 0.012678
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 11:21:29.242966
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 18.01817
+Log Loss - std: 0.85396
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00012
+Accuracy - std: 0.00009
+F1 score - mean: 0.00025
+F1 score - std: 0.00018
+
+Train time: 40.054926
+Test time: 0.009410
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 13, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 11:35:49.683816
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 19.14313
+Log Loss - std: 0.16838
+AUC - mean: 0.50499
+AUC - std: 0.00379
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 39.831922
+Test time: 0.099295
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 1775, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 11:48:17.835032
+MLP - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 18.95227
+Log Loss - std: 0.06107
+AUC - mean: 0.51068
+AUC - std: 0.00396
+Accuracy - mean: 0.00019
+Accuracy - std: 0.00026
+F1 score - mean: 0.00037
+F1 score - std: 0.00053
+
+Train time: 39.961291
+Test time: 0.100522
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 1775, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 12:05:14.301444
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 19.15309
+Log Loss - std: 0.09221
+AUC - mean: 0.49791
+AUC - std: 0.00381
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 40.182722
+Test time: 0.113552
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 2145, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 12:22:21.490040
+MLP - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 18.53656
+Log Loss - std: 0.09055
+AUC - mean: 0.50286
+AUC - std: 0.00309
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 39.888761
+Test time: 0.112042
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 2145, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 12:24:23.903294
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 19.00519
+Log Loss - std: 0.40614
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00050
+Accuracy - std: 0.00018
+F1 score - mean: 0.00100
+F1 score - std: 0.00035
+
+Train time: 39.925153
+Test time: 0.039280
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 54, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+
+2025-06-17 12:26:25.342484
+MLP - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 19.79987
+Log Loss - std: 0.13725
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00006
+Accuracy - std: 0.00009
+F1 score - mean: 0.00012
+F1 score - std: 0.00018
+
+Train time: 40.065838
+Test time: 0.024112
+
+Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 54, 'dropout': 0.26456213654515587, 'n_blocks': 2}
+
+

@@ -348,3 +348,219 @@ Test time: 0.026845
 Best Parameters: {'d_block': 256, 'd_hidden': 2, 'd_hidden_multiplier': 1.3709674297417445, 'd_in': 109, 'd_out': 24, 'dropout1': 0.4328849233188455, 'dropout2': 0.03863249998871383, 'n_blocks': 4}
 
 
+2025-06-17 21:44:47.004457
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 6.16747
+Log Loss - std: 0.13082
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.10046
+Accuracy - std: 0.02079
+F1 score - mean: 0.18193
+F1 score - std: 0.03403
+
+Train time: 19.757733
+Test time: 0.072916
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:45:59.519659
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 6.38340
+Log Loss - std: 0.26733
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.09132
+Accuracy - std: 0.02537
+F1 score - mean: 0.16636
+F1 score - std: 0.04321
+
+Train time: 19.622278
+Test time: 0.037660
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:47:14.438308
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 8.25370
+Log Loss - std: 0.15845
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00046
+Accuracy - std: 0.00065
+F1 score - mean: 0.00091
+F1 score - std: 0.00129
+
+Train time: 20.036568
+Test time: 0.046263
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:48:29.568390
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 7.48275
+Log Loss - std: 0.38177
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00228
+Accuracy - std: 0.00171
+F1 score - mean: 0.00455
+F1 score - std: 0.00340
+
+Train time: 20.107451
+Test time: 0.051706
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:49:43.576592
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 8.49387
+Log Loss - std: 0.11776
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00091
+Accuracy - std: 0.00065
+F1 score - mean: 0.00182
+F1 score - std: 0.00129
+
+Train time: 19.960699
+Test time: 0.054557
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:50:59.084509
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 7.64084
+Log Loss - std: 0.15243
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00137
+Accuracy - std: 0.00194
+F1 score - mean: 0.00273
+F1 score - std: 0.00386
+
+Train time: 20.232737
+Test time: 0.039539
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 10, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:52:13.683906
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 5.89904
+Log Loss - std: 0.25099
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01370
+Accuracy - std: 0.00296
+F1 score - mean: 0.02701
+F1 score - std: 0.00577
+
+Train time: 20.334796
+Test time: 0.040065
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 31, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:53:29.320912
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 6.06934
+Log Loss - std: 0.34013
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01416
+Accuracy - std: 0.00552
+F1 score - mean: 0.02786
+F1 score - std: 0.01069
+
+Train time: 20.310416
+Test time: 0.053676
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 31, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:54:45.981933
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 7.30712
+Log Loss - std: 0.19129
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 20.250368
+Test time: 0.054213
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 31, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:56:00.949615
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 6.57653
+Log Loss - std: 0.16142
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 19.966831
+Test time: 0.027962
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 31, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:57:15.451174
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 7.80769
+Log Loss - std: 0.20126
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 20.109045
+Test time: 0.072602
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 26, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+
+2025-06-17 21:58:30.532685
+ResMLP - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 6.90459
+Log Loss - std: 0.25609
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00046
+Accuracy - std: 0.00065
+F1 score - mean: 0.00091
+F1 score - std: 0.00129
+
+Train time: 20.144908
+Test time: 0.066563
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 4.285524104220049, 'd_in': 109, 'd_out': 26, 'dropout1': 0.07419545585050902, 'dropout2': 0.058496662836731425, 'n_blocks': 6}
+
+

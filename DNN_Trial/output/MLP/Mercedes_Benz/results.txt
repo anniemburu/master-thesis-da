@@ -348,3 +348,219 @@ Test time: 0.029222
 Best Parameters: {'d_block': 256, 'd_in': 546, 'd_out': 31, 'dropout': 0.29646621574612675, 'n_blocks': 2}
 
 
+2025-06-17 15:14:49.759402
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 8.81859
+Log Loss - std: 0.18807
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07522
+Accuracy - std: 0.00683
+F1 score - mean: 0.13984
+F1 score - std: 0.01178
+
+Train time: 20.102354
+Test time: 0.023690
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 12, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:16:34.373010
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 8.84322
+Log Loss - std: 0.11767
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07316
+Accuracy - std: 0.00757
+F1 score - mean: 0.13625
+F1 score - std: 0.01316
+
+Train time: 19.718816
+Test time: 0.013012
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 12, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:18:14.874942
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 14.06383
+Log Loss - std: 0.80403
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00032
+Accuracy - std: 0.00022
+F1 score - mean: 0.00063
+F1 score - std: 0.00045
+
+Train time: 19.759685
+Test time: 0.025987
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 12, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:19:49.411881
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 12.72410
+Log Loss - std: 0.37646
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00253
+Accuracy - std: 0.00179
+F1 score - mean: 0.00505
+F1 score - std: 0.00357
+
+Train time: 19.814715
+Test time: 0.027621
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 12, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:21:01.697949
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 14.23255
+Log Loss - std: 0.51588
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00063
+Accuracy - std: 0.00059
+F1 score - mean: 0.00127
+F1 score - std: 0.00118
+
+Train time: 19.861136
+Test time: 0.029474
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 12, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:22:44.921284
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 12.67813
+Log Loss - std: 0.38428
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00269
+Accuracy - std: 0.00199
+F1 score - mean: 0.00536
+F1 score - std: 0.00396
+
+Train time: 19.798186
+Test time: 0.011897
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 12, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:24:38.976607
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 8.99570
+Log Loss - std: 0.61676
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02122
+Accuracy - std: 0.00281
+F1 score - mean: 0.04154
+F1 score - std: 0.00537
+
+Train time: 19.744462
+Test time: 0.028334
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 34, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:26:17.387901
+MLP - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 8.95489
+Log Loss - std: 0.63858
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02074
+Accuracy - std: 0.00316
+F1 score - mean: 0.04063
+F1 score - std: 0.00605
+
+Train time: 19.640556
+Test time: 0.028319
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 34, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:27:40.469520
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 14.55876
+Log Loss - std: 0.34458
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 20.745657
+Test time: 0.015131
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 34, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:29:05.532760
+MLP - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 13.47533
+Log Loss - std: 0.09650
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 20.805298
+Test time: 0.035250
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 34, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:30:48.623025
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 13.03280
+Log Loss - std: 0.59403
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00063
+Accuracy - std: 0.00059
+F1 score - mean: 0.00127
+F1 score - std: 0.00118
+
+Train time: 20.921830
+Test time: 0.038831
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 31, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+
+2025-06-17 15:32:27.314512
+MLP - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 12.91869
+Log Loss - std: 0.59522
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00190
+Accuracy - std: 0.00155
+F1 score - mean: 0.00379
+F1 score - std: 0.00309
+
+Train time: 20.913605
+Test time: 0.027915
+
+Best Parameters: {'d_block': 256, 'd_in': 543, 'd_out': 31, 'dropout': 0.17946730470146646, 'n_blocks': 2}
+
+

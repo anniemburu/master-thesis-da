@@ -546,3 +546,21 @@ Test time: 0.132946
 Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 62, 'dropout': 0.28716314068720666, 'n_blocks': 3}
 
 
+2025-06-17 11:03:25.385500
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 17.22024
+Log Loss - std: 0.94340
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00205
+Accuracy - std: 0.00051
+F1 score - mean: 0.00409
+F1 score - std: 0.00101
+
+Train time: 550.097073
+Test time: 0.132475
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 62, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+

@@ -420,3 +420,147 @@ Test time: 0.213201
 Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
 
 
+2025-06-17 10:47:27.330978
+ResMLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 15.34504
+Log Loss - std: 0.74797
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00557
+Accuracy - std: 0.00102
+F1 score - mean: 0.01108
+F1 score - std: 0.00202
+
+Train time: 932.062827
+Test time: 0.227489
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 11:30:39.066082
+ResMLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 17.16514
+Log Loss - std: 0.37029
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00928
+Accuracy - std: 0.00052
+F1 score - mean: 0.01838
+F1 score - std: 0.00102
+
+Train time: 926.789154
+Test time: 0.225863
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 17, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 12:15:04.813059
+ResMLP - Black_Friday - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 11.69714
+Log Loss - std: 0.19904
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02325
+Accuracy - std: 0.00202
+F1 score - mean: 0.04543
+F1 score - std: 0.00387
+
+Train time: 929.506109
+Test time: 0.223197
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 67, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 12:59:33.544762
+ResMLP - Black_Friday - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 11.28502
+Log Loss - std: 0.19145
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02286
+Accuracy - std: 0.00303
+F1 score - mean: 0.04468
+F1 score - std: 0.00580
+
+Train time: 931.399487
+Test time: 0.216051
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 67, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 13:43:31.494195
+ResMLP - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 16.30858
+Log Loss - std: 0.24584
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00091
+Accuracy - std: 0.00024
+F1 score - mean: 0.00181
+F1 score - std: 0.00048
+
+Train time: 927.388656
+Test time: 0.217579
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 67, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 14:27:54.621278
+ResMLP - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 17.12420
+Log Loss - std: 0.71169
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00131
+Accuracy - std: 0.00015
+F1 score - mean: 0.00261
+F1 score - std: 0.00030
+
+Train time: 929.194226
+Test time: 0.233216
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 67, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 15:11:55.891960
+ResMLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 15.45986
+Log Loss - std: 0.31121
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00176
+Accuracy - std: 0.00007
+F1 score - mean: 0.00352
+F1 score - std: 0.00014
+
+Train time: 924.972901
+Test time: 0.212936
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 62, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+
+2025-06-17 15:58:54.841594
+ResMLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 16.18786
+Log Loss - std: 0.29970
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00205
+Accuracy - std: 0.00017
+F1 score - mean: 0.00408
+F1 score - std: 0.00034
+
+Train time: 985.450976
+Test time: 0.221446
+
+Best Parameters: {'d_block': 256, 'd_hidden': 5, 'd_hidden_multiplier': 3.1295693022802924, 'd_in': 75, 'd_out': 62, 'dropout1': 0.31999331016593385, 'dropout2': 0.17961742655097668, 'n_blocks': 4}
+
+

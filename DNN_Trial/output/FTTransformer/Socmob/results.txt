@@ -194,3 +194,219 @@ Test time: 0.030584
 Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
 
 
+2025-06-18 15:48:51.059819
+FTTransformer - Socmob - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 4.51025
+Log Loss - std: 0.30998
+AUC - mean: 0.67622
+AUC - std: 0.01297
+Accuracy - mean: 0.30854
+Accuracy - std: 0.02058
+F1 score - mean: 0.35202
+F1 score - std: 0.01527
+
+Train time: 85.619256
+Test time: 0.031039
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 15:53:10.119685
+FTTransformer - Socmob - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 4.52041
+Log Loss - std: 0.19075
+AUC - mean: 0.66110
+AUC - std: 0.02070
+Accuracy - mean: 0.32007
+Accuracy - std: 0.03399
+F1 score - mean: 0.36328
+F1 score - std: 0.03646
+
+Train time: 85.345308
+Test time: 0.031197
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 15:57:34.455149
+FTTransformer - Socmob - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 8.45226
+Log Loss - std: 0.48469
+AUC - mean: 0.50888
+AUC - std: 0.02841
+Accuracy - mean: 0.19896
+Accuracy - std: 0.00283
+F1 score - mean: 0.09901
+F1 score - std: 0.01128
+
+Train time: 84.857461
+Test time: 0.029780
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:02:06.530068
+FTTransformer - Socmob - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 6.78050
+Log Loss - std: 0.09272
+AUC - mean: 0.51875
+AUC - std: 0.01755
+Accuracy - mean: 0.19954
+Accuracy - std: 0.00216
+F1 score - mean: 0.10286
+F1 score - std: 0.00967
+
+Train time: 84.841132
+Test time: 0.030721
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:06:26.944445
+FTTransformer - Socmob - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 9.04208
+Log Loss - std: 0.50119
+AUC - mean: 0.52067
+AUC - std: 0.00793
+Accuracy - mean: 0.19896
+Accuracy - std: 0.00489
+F1 score - mean: 0.08428
+F1 score - std: 0.00973
+
+Train time: 84.238307
+Test time: 0.030046
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:10:49.700252
+FTTransformer - Socmob - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 7.80048
+Log Loss - std: 0.29654
+AUC - mean: 0.50260
+AUC - std: 0.02590
+Accuracy - mean: 0.19954
+Accuracy - std: 0.00082
+F1 score - mean: 0.08715
+F1 score - std: 0.00385
+
+Train time: 84.854798
+Test time: 0.029794
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:15:13.755719
+FTTransformer - Socmob - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 6.28099
+Log Loss - std: 0.19134
+AUC - mean: 0.59252
+AUC - std: 0.01756
+Accuracy - mean: 0.16609
+Accuracy - std: 0.01019
+F1 score - mean: 0.16672
+F1 score - std: 0.01009
+
+Train time: 85.251853
+Test time: 0.031340
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:19:36.507666
+FTTransformer - Socmob - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 6.06207
+Log Loss - std: 0.07546
+AUC - mean: 0.59831
+AUC - std: 0.02591
+Accuracy - mean: 0.14994
+Accuracy - std: 0.00668
+F1 score - mean: 0.16181
+F1 score - std: 0.00471
+
+Train time: 85.158307
+Test time: 0.030904
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:24:22.589422
+FTTransformer - Socmob - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 6.00727
+Log Loss - std: 0.41214
+AUC - mean: 0.58008
+AUC - std: 0.01265
+Accuracy - mean: 0.17359
+Accuracy - std: 0.02941
+F1 score - mean: 0.16705
+F1 score - std: 0.02087
+
+Train time: 85.030637
+Test time: 0.031621
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:28:45.842259
+FTTransformer - Socmob - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 5.74085
+Log Loss - std: 0.51034
+AUC - mean: 0.58640
+AUC - std: 0.01187
+Accuracy - mean: 0.16724
+Accuracy - std: 0.04450
+F1 score - mean: 0.16806
+F1 score - std: 0.03595
+
+Train time: 84.329810
+Test time: 0.032992
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:33:01.687842
+FTTransformer - Socmob - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 7.18331
+Log Loss - std: 0.26673
+AUC - mean: 0.52837
+AUC - std: 0.00984
+Accuracy - mean: 0.20531
+Accuracy - std: 0.00535
+F1 score - mean: 0.11839
+F1 score - std: 0.01430
+
+Train time: 82.606451
+Test time: 0.031689
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 16:37:20.054743
+FTTransformer - Socmob - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 5.56601
+Log Loss - std: 0.67735
+AUC - mean: 0.54919
+AUC - std: 0.02945
+Accuracy - mean: 0.21569
+Accuracy - std: 0.01041
+F1 score - mean: 0.14769
+F1 score - std: 0.03170
+
+Train time: 82.516308
+Test time: 0.030999
+
+Best Parameters: {'learning_rate': 0.00029650381259646087, 'weight_decay': 6.736378376679642e-05, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+

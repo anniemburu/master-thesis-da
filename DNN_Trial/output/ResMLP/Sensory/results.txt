@@ -348,3 +348,219 @@ Test time: 0.004280
 Best Parameters: {'d_block': 256, 'd_hidden': 3, 'd_hidden_multiplier': 2.544110387653899, 'd_in': 36, 'd_out': 10, 'dropout1': 0.12905452512026205, 'dropout2': 0.02854369523746009, 'n_blocks': 5}
 
 
+2025-06-18 00:36:36.183272
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 4.73942
+Log Loss - std: 0.24671
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.20718
+Accuracy - std: 0.03161
+F1 score - mean: 0.34209
+F1 score - std: 0.04412
+
+Train time: 37.163211
+Test time: 0.004499
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:39:08.005922
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 4.75519
+Log Loss - std: 0.17280
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.21065
+Accuracy - std: 0.03310
+F1 score - mean: 0.34674
+F1 score - std: 0.04566
+
+Train time: 37.245926
+Test time: 0.008227
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 6, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:41:44.801555
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 7.06200
+Log Loss - std: 0.12328
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00579
+Accuracy - std: 0.00164
+F1 score - mean: 0.01150
+F1 score - std: 0.00324
+
+Train time: 38.630359
+Test time: 0.005653
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:44:19.149135
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 6.61553
+Log Loss - std: 0.23231
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01157
+Accuracy - std: 0.00433
+F1 score - mean: 0.02285
+F1 score - std: 0.00845
+
+Train time: 37.813623
+Test time: 0.006330
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:46:53.158374
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 6.68918
+Log Loss - std: 0.24593
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02199
+Accuracy - std: 0.00164
+F1 score - mean: 0.04303
+F1 score - std: 0.00313
+
+Train time: 37.710774
+Test time: 0.006217
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:49:29.925395
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 6.34672
+Log Loss - std: 0.25160
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02431
+Accuracy - std: 0.00567
+F1 score - mean: 0.04740
+F1 score - std: 0.01081
+
+Train time: 38.127230
+Test time: 0.006773
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 9, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:52:04.669802
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 5.20814
+Log Loss - std: 0.68066
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.14468
+Accuracy - std: 0.06096
+F1 score - mean: 0.24769
+F1 score - std: 0.09562
+
+Train time: 37.824904
+Test time: 0.005170
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 7, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:54:38.814269
+ResMLP - Sensory - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 5.06630
+Log Loss - std: 0.62283
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.15972
+Accuracy - std: 0.07105
+F1 score - mean: 0.26888
+F1 score - std: 0.10729
+
+Train time: 37.667280
+Test time: 0.005187
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 7, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:57:14.322320
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 7.06028
+Log Loss - std: 0.08644
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00579
+Accuracy - std: 0.00327
+F1 score - mean: 0.01149
+F1 score - std: 0.00646
+
+Train time: 38.585048
+Test time: 0.006295
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 10, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 00:59:53.637124
+ResMLP - Sensory - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 6.57874
+Log Loss - std: 0.09352
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01389
+Accuracy - std: 0.00284
+F1 score - mean: 0.02738
+F1 score - std: 0.00552
+
+Train time: 38.597570
+Test time: 0.006423
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 10, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 01:02:28.205454
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 7.05693
+Log Loss - std: 0.08206
+AUC - mean: 0.49941
+AUC - std: 0.01739
+Accuracy - mean: 0.00579
+Accuracy - std: 0.00327
+F1 score - mean: 0.01148
+F1 score - std: 0.00646
+
+Train time: 38.042591
+Test time: 0.006546
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 10, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+
+2025-06-18 01:05:01.143685
+ResMLP - Sensory - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 6.57089
+Log Loss - std: 0.09441
+AUC - mean: 0.50459
+AUC - std: 0.03532
+Accuracy - mean: 0.01389
+Accuracy - std: 0.00284
+F1 score - mean: 0.02737
+F1 score - std: 0.00551
+
+Train time: 37.660191
+Test time: 0.008105
+
+Best Parameters: {'d_block': 128, 'd_hidden': 4, 'd_hidden_multiplier': 1.80130923504725, 'd_in': 36, 'd_out': 10, 'dropout1': 0.228729597309105, 'dropout2': 0.22695309081109494, 'n_blocks': 5}
+
+

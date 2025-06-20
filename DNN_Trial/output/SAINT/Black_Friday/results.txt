@@ -288,3 +288,111 @@ Test time: 3.971624
 Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
 
 
+2025-06-17 13:12:26.727928
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 11.07126
+Log Loss - std: 0.00369
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01628
+Accuracy - std: 0.00020
+F1 score - mean: 0.03204
+F1 score - std: 0.00038
+
+Train time: 3453.968341
+Test time: 4.142310
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-17 16:16:04.514104
+SAINT - Black_Friday - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 11.06824
+Log Loss - std: 0.01388
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01718
+Accuracy - std: 0.00099
+F1 score - mean: 0.03378
+F1 score - std: 0.00191
+
+Train time: 3494.635145
+Test time: 4.025983
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-17 19:31:37.420527
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 11.47382
+Log Loss - std: 0.00222
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00073
+Accuracy - std: 0.00008
+F1 score - mean: 0.00146
+F1 score - std: 0.00015
+
+Train time: 3724.870703
+Test time: 4.827745
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-17 22:44:36.879413
+SAINT - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 11.46375
+Log Loss - std: 0.01157
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00095
+Accuracy - std: 0.00013
+F1 score - mean: 0.00189
+F1 score - std: 0.00026
+
+Train time: 3675.873969
+Test time: 4.295460
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-18 01:55:39.523051
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 11.46322
+Log Loss - std: 0.00805
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00135
+Accuracy - std: 0.00043
+F1 score - mean: 0.00271
+F1 score - std: 0.00086
+
+Train time: 3644.001703
+Test time: 4.309676
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+
+2025-06-18 05:05:31.409412
+SAINT - Black_Friday - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 11.45493
+Log Loss - std: 0.00687
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00138
+Accuracy - std: 0.00049
+F1 score - mean: 0.00276
+F1 score - std: 0.00098
+
+Train time: 3629.050465
+Test time: 4.217394
+
+Best Parameters: {'depth': 3, 'dim': 64, 'dropout': 0.1, 'heads': 2}
+
+

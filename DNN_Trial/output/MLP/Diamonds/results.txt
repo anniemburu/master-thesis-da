@@ -348,3 +348,219 @@ Test time: 0.076652
 Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.23677836111066783, 'n_blocks': 6}
 
 
+2025-06-17 12:35:06.314140
+MLP - Diamonds - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 17.55617
+Log Loss - std: 0.24452
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07626
+Accuracy - std: 0.00351
+F1 score - mean: 0.14169
+F1 score - std: 0.00605
+
+Train time: 179.610850
+Test time: 0.060133
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 12:43:22.887904
+MLP - Diamonds - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 17.61688
+Log Loss - std: 0.19378
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07590
+Accuracy - std: 0.00299
+F1 score - mean: 0.14108
+F1 score - std: 0.00516
+
+Train time: 180.449579
+Test time: 0.064628
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 12:51:35.445474
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 19.61118
+Log Loss - std: 0.03949
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01117
+Accuracy - std: 0.00458
+F1 score - mean: 0.02206
+F1 score - std: 0.00899
+
+Train time: 180.928282
+Test time: 0.062582
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 12:59:33.226433
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 19.81399
+Log Loss - std: 0.05081
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01309
+Accuracy - std: 0.00256
+F1 score - mean: 0.02583
+F1 score - std: 0.00498
+
+Train time: 175.956960
+Test time: 0.062935
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 13:07:26.135602
+MLP - Diamonds - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 19.65037
+Log Loss - std: 0.05771
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01140
+Accuracy - std: 0.00351
+F1 score - mean: 0.02251
+F1 score - std: 0.00688
+
+Train time: 174.881875
+Test time: 0.064150
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 13:15:17.811312
+MLP - Diamonds - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 19.84727
+Log Loss - std: 0.04315
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01262
+Accuracy - std: 0.00321
+F1 score - mean: 0.02490
+F1 score - std: 0.00625
+
+Train time: 174.080793
+Test time: 0.067362
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 15, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 13:23:44.270280
+MLP - Diamonds - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 19.07774
+Log Loss - std: 0.14543
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02453
+Accuracy - std: 0.00165
+F1 score - mean: 0.04789
+F1 score - std: 0.00314
+
+Train time: 175.875374
+Test time: 0.084969
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 13:32:11.930675
+MLP - Diamonds - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 19.12773
+Log Loss - std: 0.09067
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02411
+Accuracy - std: 0.00169
+F1 score - mean: 0.04709
+F1 score - std: 0.00323
+
+Train time: 176.512806
+Test time: 0.074267
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 13:40:52.151738
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 19.64124
+Log Loss - std: 0.05090
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00052
+Accuracy - std: 0.00037
+F1 score - mean: 0.00104
+F1 score - std: 0.00073
+
+Train time: 176.875332
+Test time: 0.078834
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 13:49:27.418173
+MLP - Diamonds - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 20.09768
+Log Loss - std: 0.03298
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00168
+Accuracy - std: 0.00025
+F1 score - mean: 0.00336
+F1 score - std: 0.00051
+
+Train time: 176.081231
+Test time: 0.078317
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 13:58:09.772961
+MLP - Diamonds - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 19.63823
+Log Loss - std: 0.09595
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00062
+Accuracy - std: 0.00024
+F1 score - mean: 0.00124
+F1 score - std: 0.00047
+
+Train time: 175.627245
+Test time: 0.081232
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
+2025-06-17 14:06:44.204364
+MLP - Diamonds - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 20.09499
+Log Loss - std: 0.03784
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00143
+Accuracy - std: 0.00039
+F1 score - mean: 0.00286
+F1 score - std: 0.00079
+
+Train time: 175.909496
+Test time: 0.067176
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 64, 'dropout': 0.07787642217098255, 'n_blocks': 3}
+
+
