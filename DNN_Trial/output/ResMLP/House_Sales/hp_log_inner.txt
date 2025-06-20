@@ -1,0 +1,1800 @@
+2025-06-19 19:35:42.787200
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 17820375634.09958
+MSE - std: 1864891348.35020
+R2 - mean: 0.86944
+R2 - std: 0.01569
+
+Train time: 283.152500
+Test time: 0.025514
+
+---------------------------------------
+2025-06-19 19:38:34.856773
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 46656039276.34497
+MSE - std: 54556894918.34001
+R2 - mean: 0.68461
+R2 - std: 0.34278
+
+Train time: 273.087888
+Test time: 0.032166
+
+---------------------------------------
+2025-06-19 19:40:11.918936
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 19202491093.60561
+MSE - std: 4252165047.78093
+R2 - mean: 0.86092
+R2 - std: 0.02558
+
+Train time: 152.294625
+Test time: 0.019111
+
+---------------------------------------
+2025-06-19 19:43:45.701016
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 23010285741.04144
+MSE - std: 6884772410.51228
+R2 - mean: 0.83584
+R2 - std: 0.02632
+
+Train time: 338.741746
+Test time: 0.030917
+
+---------------------------------------
+2025-06-19 19:48:12.291972
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 80477072086.53474
+MSE - std: 77794178983.67773
+R2 - mean: 0.42802
+R2 - std: 0.55194
+
+Train time: 400.773413
+Test time: 0.045091
+
+---------------------------------------
+2025-06-19 19:50:08.444707
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 20031395720.07825
+MSE - std: 3841991559.91284
+R2 - mean: 0.85102
+R2 - std: 0.04200
+
+Train time: 182.232062
+Test time: 0.024521
+
+---------------------------------------
+2025-06-19 19:53:07.279315
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 16405813884.16390
+MSE - std: 1807101597.54081
+R2 - mean: 0.87859
+R2 - std: 0.02304
+
+Train time: 282.385947
+Test time: 0.031310
+
+---------------------------------------
+2025-06-19 19:58:20.098147
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 23766886516.88905
+MSE - std: 7896963086.22146
+R2 - mean: 0.83121
+R2 - std: 0.02956
+
+Train time: 459.316263
+Test time: 0.026074
+
+---------------------------------------
+2025-06-19 20:01:16.893836
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 18101757766.40125
+MSE - std: 3388555255.61402
+R2 - mean: 0.86924
+R2 - std: 0.01623
+
+Train time: 278.794682
+Test time: 0.019722
+
+---------------------------------------
+2025-06-19 20:03:55.778785
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 18522853130.16335
+MSE - std: 1989861674.80435
+R2 - mean: 0.86415
+R2 - std: 0.01830
+
+Train time: 250.575818
+Test time: 0.019628
+
+---------------------------------------
+2025-06-19 20:06:57.763023
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 17413009334.23936
+MSE - std: 2511431839.21918
+R2 - mean: 0.87196
+R2 - std: 0.02398
+
+Train time: 288.753798
+Test time: 0.037725
+
+---------------------------------------
+2025-06-19 20:14:43.891694
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 19755044395.57318
+MSE - std: 4239705907.90200
+R2 - mean: 0.85504
+R2 - std: 0.03377
+
+Train time: 698.352960
+Test time: 0.044672
+
+---------------------------------------
+2025-06-19 20:16:18.161794
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 17927616708.21617
+MSE - std: 2425689213.62931
+R2 - mean: 0.86863
+R2 - std: 0.01928
+
+Train time: 147.471422
+Test time: 0.013395
+
+---------------------------------------
+2025-06-19 20:19:11.213345
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 27905539630.88263
+MSE - std: 7244318626.12846
+R2 - mean: 0.79959
+R2 - std: 0.02811
+
+Train time: 271.965501
+Test time: 0.024809
+
+---------------------------------------
+2025-06-19 20:22:03.887539
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 18112079278.86831
+MSE - std: 1854694163.58440
+R2 - mean: 0.86653
+R2 - std: 0.02184
+
+Train time: 272.401019
+Test time: 0.019892
+
+---------------------------------------
+2025-06-19 20:26:44.878493
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 17096465974.15557
+MSE - std: 3466423473.71785
+R2 - mean: 0.87571
+R2 - std: 0.01978
+
+Train time: 414.841967
+Test time: 0.031723
+
+---------------------------------------
+2025-06-19 20:34:43.976832
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 19854160369.07790
+MSE - std: 4315938511.51815
+R2 - mean: 0.85440
+R2 - std: 0.03318
+
+Train time: 718.371130
+Test time: 0.033881
+
+---------------------------------------
+2025-06-19 20:39:43.731392
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 156999856091.65366
+MSE - std: 33685100039.09212
+R2 - mean: -0.13098
+R2 - std: 0.13616
+
+Train time: 452.663146
+Test time: 0.045141
+
+---------------------------------------
+2025-06-19 20:42:55.979127
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 17425703107.63121
+MSE - std: 2076249002.13251
+R2 - mean: 0.87302
+R2 - std: 0.01009
+
+Train time: 304.615385
+Test time: 0.025449
+
+---------------------------------------
+2025-06-19 20:45:30.321147
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 29900106349.04222
+MSE - std: 8162669212.05253
+R2 - mean: 0.78703
+R2 - std: 0.02462
+
+Train time: 242.436467
+Test time: 0.019374
+
+---------------------------------------
+2025-06-19 20:50:32.121942
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 20352870064.73698
+MSE - std: 3452533159.51906
+R2 - mean: 0.85001
+R2 - std: 0.03098
+
+Train time: 479.314295
+Test time: 0.032356
+
+---------------------------------------
+2025-06-19 20:54:50.775522
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 16609291271.74877
+MSE - std: 2107443098.23500
+R2 - mean: 0.87727
+R2 - std: 0.02349
+
+Train time: 383.404471
+Test time: 0.020632
+
+---------------------------------------
+2025-06-19 20:56:28.727768
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 17198638813.86256
+MSE - std: 2252373245.19958
+R2 - mean: 0.87349
+R2 - std: 0.01945
+
+Train time: 153.659468
+Test time: 0.019223
+
+---------------------------------------
+2025-06-19 20:59:06.452557
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 16884959782.98909
+MSE - std: 964475915.45909
+R2 - mean: 0.87476
+R2 - std: 0.02081
+
+Train time: 250.275602
+Test time: 0.037960
+
+---------------------------------------
+2025-06-19 21:02:43.613298
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 27138383871.98740
+MSE - std: 8578948100.18021
+R2 - mean: 0.80773
+R2 - std: 0.03578
+
+Train time: 342.927363
+Test time: 0.020563
+
+---------------------------------------
+2025-06-19 21:05:12.888982
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 17649708694.87533
+MSE - std: 2511678005.95492
+R2 - mean: 0.87038
+R2 - std: 0.02393
+
+Train time: 235.561974
+Test time: 0.031372
+
+---------------------------------------
+2025-06-19 21:13:53.538622
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 18583915977.60487
+MSE - std: 3592814721.64079
+R2 - mean: 0.86583
+R2 - std: 0.01194
+
+Train time: 780.991319
+Test time: 0.045378
+
+---------------------------------------
+2025-06-19 21:18:20.481923
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 18396096255.76304
+MSE - std: 1726495124.35551
+R2 - mean: 0.86362
+R2 - std: 0.02523
+
+Train time: 394.697585
+Test time: 0.032031
+
+---------------------------------------
+2025-06-19 21:22:01.491154
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 21528137780.17722
+MSE - std: 6147977921.85698
+R2 - mean: 0.83867
+R2 - std: 0.06382
+
+Train time: 349.271025
+Test time: 0.025807
+
+---------------------------------------
+2025-06-19 21:24:29.212185
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 17721608770.83937
+MSE - std: 1821443929.77300
+R2 - mean: 0.87019
+R2 - std: 0.01496
+
+Train time: 233.848608
+Test time: 0.019625
+
+---------------------------------------
+2025-06-19 21:27:31.890419
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 22949099327.91676
+MSE - std: 9016770453.69589
+R2 - mean: 0.83965
+R2 - std: 0.03337
+
+Train time: 289.864597
+Test time: 0.032009
+
+---------------------------------------
+2025-06-19 21:30:20.714140
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 30011187541.63522
+MSE - std: 6849904750.66631
+R2 - mean: 0.78261
+R2 - std: 0.03685
+
+Train time: 265.014005
+Test time: 0.019037
+
+---------------------------------------
+2025-06-19 21:32:06.103098
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 17565606248.81823
+MSE - std: 2203741715.48765
+R2 - mean: 0.87119
+R2 - std: 0.01949
+
+Train time: 165.219993
+Test time: 0.024792
+
+---------------------------------------
+2025-06-19 21:34:31.351059
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 27385063649.23661
+MSE - std: 6224729551.59243
+R2 - mean: 0.80201
+R2 - std: 0.02820
+
+Train time: 229.870521
+Test time: 0.025327
+
+---------------------------------------
+2025-06-19 21:38:08.687260
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 25223050442.38218
+MSE - std: 5257162258.13418
+R2 - mean: 0.81623
+R2 - std: 0.03359
+
+Train time: 343.226037
+Test time: 0.025854
+
+---------------------------------------
+2025-06-19 21:42:06.544790
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 56070272734.58439
+MSE - std: 45737542717.07143
+R2 - mean: 0.52768
+R2 - std: 0.43236
+
+Train time: 351.088631
+Test time: 0.031766
+
+---------------------------------------
+2025-06-19 21:44:50.314086
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 29469233680.85020
+MSE - std: 10663567145.10197
+R2 - mean: 0.79049
+R2 - std: 0.04659
+
+Train time: 257.381256
+Test time: 0.013676
+
+---------------------------------------
+2025-06-19 21:48:27.019895
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 20000282989.36231
+MSE - std: 4372133952.22107
+R2 - mean: 0.85278
+R2 - std: 0.03879
+
+Train time: 342.419068
+Test time: 0.031734
+
+---------------------------------------
+2025-06-19 21:51:02.693252
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 18383125420.57060
+MSE - std: 2991251231.04767
+R2 - mean: 0.86649
+R2 - std: 0.01385
+
+Train time: 245.488153
+Test time: 0.025598
+
+---------------------------------------
+2025-06-19 21:53:26.324357
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 32406686965.31563
+MSE - std: 10934917339.35297
+R2 - mean: 0.77014
+R2 - std: 0.04621
+
+Train time: 225.365354
+Test time: 0.013300
+
+---------------------------------------
+2025-06-19 21:56:20.683971
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 29183238919.82111
+MSE - std: 7289086737.45955
+R2 - mean: 0.79115
+R2 - std: 0.02072
+
+Train time: 274.022555
+Test time: 0.019420
+
+---------------------------------------
+2025-06-19 21:59:31.609194
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 17028834768.80859
+MSE - std: 1618856203.75160
+R2 - mean: 0.87423
+R2 - std: 0.02203
+
+Train time: 303.134322
+Test time: 0.037941
+
+---------------------------------------
+2025-06-19 22:04:06.410343
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 17324730174.54441
+MSE - std: 1882098667.89537
+R2 - mean: 0.87298
+R2 - std: 0.01588
+
+Train time: 405.692709
+Test time: 0.026399
+
+---------------------------------------
+2025-06-19 22:08:07.882192
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 18616507720.34577
+MSE - std: 3857548430.01534
+R2 - mean: 0.86331
+R2 - std: 0.03527
+
+Train time: 383.496091
+Test time: 0.037769
+
+---------------------------------------
+2025-06-19 22:13:41.734964
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 18155995987.69257
+MSE - std: 2657869243.62897
+R2 - mean: 0.86763
+R2 - std: 0.01675
+
+Train time: 493.499314
+Test time: 0.032087
+
+---------------------------------------
+2025-06-19 22:15:21.857259
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 19347508792.67190
+MSE - std: 4437647853.64253
+R2 - mean: 0.86057
+R2 - std: 0.02323
+
+Train time: 157.155498
+Test time: 0.019001
+
+---------------------------------------
+2025-06-19 22:18:39.582218
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 16672194015.99076
+MSE - std: 1732543092.58681
+R2 - mean: 0.87748
+R2 - std: 0.01832
+
+Train time: 313.774512
+Test time: 0.032291
+
+---------------------------------------
+2025-06-19 22:22:11.679498
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 23921551577.32162
+MSE - std: 6592936912.73516
+R2 - mean: 0.82904
+R2 - std: 0.02283
+
+Train time: 336.033501
+Test time: 0.030902
+
+---------------------------------------
+2025-06-19 22:25:43.650911
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 25799782320.62998
+MSE - std: 6354263862.56552
+R2 - mean: 0.81399
+R2 - std: 0.02677
+
+Train time: 334.664703
+Test time: 0.020163
+
+---------------------------------------
+2025-06-19 22:30:47.261455
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 24340334440.87251
+MSE - std: 7846387140.41774
+R2 - mean: 0.82405
+R2 - std: 0.04376
+
+Train time: 445.259810
+Test time: 0.026212
+
+---------------------------------------
+2025-06-19 22:34:06.885938
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 27297505364.28756
+MSE - std: 5928653786.24262
+R2 - mean: 0.80368
+R2 - std: 0.02402
+
+Train time: 314.951760
+Test time: 0.019756
+
+---------------------------------------
+2025-06-19 22:40:01.087615
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 23716869046.12012
+MSE - std: 8265117736.82297
+R2 - mean: 0.82883
+R2 - std: 0.05082
+
+Train time: 520.550480
+Test time: 0.026281
+
+---------------------------------------
+2025-06-19 22:45:47.413118
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 23332029890.49493
+MSE - std: 6580516043.77860
+R2 - mean: 0.83033
+R2 - std: 0.03969
+
+Train time: 509.079428
+Test time: 0.031675
+
+---------------------------------------
+2025-06-19 22:50:18.825084
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 107540828265.08841
+MSE - std: 46130381035.13192
+R2 - mean: 0.17542
+R2 - std: 0.35273
+
+Train time: 409.570619
+Test time: 0.044781
+
+---------------------------------------
+2025-06-19 22:51:59.673083
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 17031301760.19073
+MSE - std: 2082205422.75075
+R2 - mean: 0.87589
+R2 - std: 0.01079
+
+Train time: 158.058794
+Test time: 0.013487
+
+---------------------------------------
+2025-06-19 22:55:01.751960
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 16729604615.95343
+MSE - std: 2217286849.63826
+R2 - mean: 0.87799
+R2 - std: 0.01448
+
+Train time: 289.050643
+Test time: 0.032349
+
+---------------------------------------
+2025-06-19 23:00:38.218258
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 19183852720.07176
+MSE - std: 4376673851.97179
+R2 - mean: 0.86154
+R2 - std: 0.02162
+
+Train time: 534.544927
+Test time: 0.032362
+
+---------------------------------------
+2025-06-19 23:02:52.777946
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 18853579490.90294
+MSE - std: 1823887591.16130
+R2 - mean: 0.86187
+R2 - std: 0.01486
+
+Train time: 211.088005
+Test time: 0.007866
+
+---------------------------------------
+2025-06-19 23:05:47.495992
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 18144144714.93063
+MSE - std: 3177216126.23246
+R2 - mean: 0.86858
+R2 - std: 0.01178
+
+Train time: 275.607137
+Test time: 0.025597
+
+---------------------------------------
+2025-06-19 23:14:41.963286
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 17979473953.32463
+MSE - std: 3736926092.11034
+R2 - mean: 0.87028
+R2 - std: 0.01290
+
+Train time: 805.717211
+Test time: 0.050878
+
+---------------------------------------
+2025-06-19 23:17:59.559359
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 16840026274.49507
+MSE - std: 2073909175.66853
+R2 - mean: 0.87652
+R2 - std: 0.01898
+
+Train time: 313.445066
+Test time: 0.037881
+
+---------------------------------------
+2025-06-19 23:20:51.505616
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 27136382572.56234
+MSE - std: 7019795179.61029
+R2 - mean: 0.80388
+R2 - std: 0.03445
+
+Train time: 272.209784
+Test time: 0.025751
+
+---------------------------------------
+2025-06-19 23:26:02.156276
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 24799566882.98687
+MSE - std: 7479003349.33146
+R2 - mean: 0.82290
+R2 - std: 0.03648
+
+Train time: 459.952668
+Test time: 0.031596
+
+---------------------------------------
+2025-06-19 23:29:28.074660
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 16848410753.09119
+MSE - std: 1473963713.22261
+R2 - mean: 0.87637
+R2 - std: 0.01442
+
+Train time: 326.740960
+Test time: 0.037982
+
+---------------------------------------
+2025-06-19 23:33:23.857833
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 26906464387.48571
+MSE - std: 7764203300.63268
+R2 - mean: 0.80835
+R2 - std: 0.02951
+
+Train time: 372.013307
+Test time: 0.025635
+
+---------------------------------------
+2025-06-19 23:37:11.473025
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 18824132463.19575
+MSE - std: 3161839757.36880
+R2 - mean: 0.86162
+R2 - std: 0.02915
+
+Train time: 359.622087
+Test time: 0.026080
+
+---------------------------------------
+2025-06-19 23:41:35.560935
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 76584040440.68839
+MSE - std: 68113747520.63905
+R2 - mean: 0.49333
+R2 - std: 0.40372
+
+Train time: 400.891749
+Test time: 0.039692
+
+---------------------------------------
+2025-06-19 23:43:39.237443
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 17648650502.76690
+MSE - std: 3195050676.48193
+R2 - mean: 0.87229
+R2 - std: 0.01603
+
+Train time: 194.059197
+Test time: 0.013474
+
+---------------------------------------
+2025-06-19 23:49:00.426693
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 23275281442.76821
+MSE - std: 7197837727.46206
+R2 - mean: 0.83365
+R2 - std: 0.02944
+
+Train time: 476.518681
+Test time: 0.032146
+
+---------------------------------------
+2025-06-19 23:51:50.479163
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 26546385426.37991
+MSE - std: 6826775546.15559
+R2 - mean: 0.80864
+R2 - std: 0.03145
+
+Train time: 269.117339
+Test time: 0.019698
+
+---------------------------------------
+2025-06-19 23:54:41.416643
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 26469018246.83916
+MSE - std: 7941411765.92164
+R2 - mean: 0.81049
+R2 - std: 0.03263
+
+Train time: 270.407842
+Test time: 0.025530
+
+---------------------------------------
+2025-06-19 23:56:42.709869
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 19428971823.65394
+MSE - std: 3961452353.95552
+R2 - mean: 0.86044
+R2 - std: 0.00698
+
+Train time: 190.507317
+Test time: 0.024994
+
+---------------------------------------
+2025-06-20 00:03:00.144438
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 22177443238.80729
+MSE - std: 7366377660.36258
+R2 - mean: 0.84030
+R2 - std: 0.03856
+
+Train time: 571.757122
+Test time: 0.050585
+
+---------------------------------------
+2025-06-20 00:06:25.383973
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 67832014240.14378
+MSE - std: 104662951968.33246
+R2 - mean: 0.59461
+R2 - std: 0.56900
+
+Train time: 325.757722
+Test time: 0.037923
+
+---------------------------------------
+2025-06-20 00:11:44.419823
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 23837769966.47726
+MSE - std: 9010949189.64289
+R2 - mean: 0.83128
+R2 - std: 0.03954
+
+Train time: 474.195790
+Test time: 0.026384
+
+---------------------------------------
+2025-06-20 00:17:52.977279
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 22702314579.29387
+MSE - std: 6211245254.79432
+R2 - mean: 0.83726
+R2 - std: 0.02607
+
+Train time: 547.520600
+Test time: 0.032110
+
+---------------------------------------
+2025-06-20 00:20:19.625020
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 18702946059.39511
+MSE - std: 2376139943.57027
+R2 - mean: 0.86252
+R2 - std: 0.02130
+
+Train time: 231.446042
+Test time: 0.031399
+
+---------------------------------------
+2025-06-20 00:25:17.479203
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 20331173974.89074
+MSE - std: 3192104538.94548
+R2 - mean: 0.85009
+R2 - std: 0.02999
+
+Train time: 472.660805
+Test time: 0.037913
+
+---------------------------------------
+2025-06-20 00:27:51.495097
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 29548212477.23913
+MSE - std: 7007925517.63392
+R2 - mean: 0.78748
+R2 - std: 0.03204
+
+Train time: 241.889902
+Test time: 0.013815
+
+---------------------------------------
+2025-06-20 00:29:59.210145
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 17681869912.25889
+MSE - std: 2595675165.22384
+R2 - mean: 0.86987
+R2 - std: 0.02557
+
+Train time: 200.373208
+Test time: 0.030219
+
+---------------------------------------
+2025-06-20 00:33:35.104131
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 19810652040.81042
+MSE - std: 6584678747.14240
+R2 - mean: 0.85997
+R2 - std: 0.02390
+
+Train time: 322.188596
+Test time: 0.037783
+
+---------------------------------------
+2025-06-20 00:36:31.073217
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 25296080815.93701
+MSE - std: 8165072384.64752
+R2 - mean: 0.81921
+R2 - std: 0.03412
+
+Train time: 278.578080
+Test time: 0.025326
+
+---------------------------------------
+2025-06-20 00:40:45.640454
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 50578648344.36620
+MSE - std: 64596022486.52641
+R2 - mean: 0.68492
+R2 - std: 0.34337
+
+Train time: 403.881717
+Test time: 0.032437
+
+---------------------------------------
+2025-06-20 00:47:13.963275
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 36973070961.25268
+MSE - std: 38126189472.04515
+R2 - mean: 0.70005
+R2 - std: 0.35104
+
+Train time: 593.328215
+Test time: 0.045585
+
+---------------------------------------
+2025-06-20 00:49:30.129355
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 17775461083.10215
+MSE - std: 3183485304.90300
+R2 - mean: 0.86829
+R2 - std: 0.03476
+
+Train time: 214.668875
+Test time: 0.025632
+
+---------------------------------------
+2025-06-20 00:52:05.911820
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 28776802274.29436
+MSE - std: 8466701532.62774
+R2 - mean: 0.79416
+R2 - std: 0.03649
+
+Train time: 244.779252
+Test time: 0.024791
+
+---------------------------------------
+2025-06-20 00:55:02.822438
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 28967423334.83859
+MSE - std: 6913849385.73803
+R2 - mean: 0.79036
+R2 - std: 0.03784
+
+Train time: 279.051612
+Test time: 0.019929
+
+---------------------------------------
+2025-06-20 00:57:45.091089
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 17782352588.87914
+MSE - std: 3426530534.76565
+R2 - mean: 0.87199
+R2 - std: 0.00797
+
+Train time: 256.521732
+Test time: 0.030916
+
+---------------------------------------
+2025-06-20 01:00:35.375607
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 17518073105.27737
+MSE - std: 1684619090.98295
+R2 - mean: 0.87010
+R2 - std: 0.02497
+
+Train time: 253.983323
+Test time: 0.023908
+
+---------------------------------------
+2025-06-20 01:09:55.933547
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 17818141534.81765
+MSE - std: 3314023696.62784
+R2 - mean: 0.86986
+R2 - std: 0.02361
+
+Train time: 846.522251
+Test time: 0.039566
+
+---------------------------------------
+2025-06-20 01:18:00.886080
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 18879816913.60195
+MSE - std: 4024410802.79767
+R2 - mean: 0.86255
+R2 - std: 0.02672
+
+Train time: 732.672770
+Test time: 0.039697
+
+---------------------------------------
+2025-06-20 01:20:44.911098
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 19163396023.27101
+MSE - std: 3707640253.35271
+R2 - mean: 0.85606
+R2 - std: 0.04604
+
+Train time: 258.744384
+Test time: 0.025158
+
+---------------------------------------
+2025-06-20 01:25:36.553217
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 19730152528.00931
+MSE - std: 2650177385.80143
+R2 - mean: 0.85592
+R2 - std: 0.01719
+
+Train time: 463.173774
+Test time: 0.037842
+
+---------------------------------------
+2025-06-20 01:29:18.982491
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 83287702856.90657
+MSE - std: 55300562914.72212
+R2 - mean: 0.35272
+R2 - std: 0.43354
+
+Train time: 338.517802
+Test time: 0.045310
+
+---------------------------------------
+2025-06-20 01:33:50.072874
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 21152205862.93313
+MSE - std: 3253818746.73055
+R2 - mean: 0.84524
+R2 - std: 0.02232
+
+Train time: 430.441463
+Test time: 0.032346
+
+---------------------------------------
+2025-06-20 01:37:41.625680
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 20576789700.00038
+MSE - std: 5292737296.98597
+R2 - mean: 0.85066
+R2 - std: 0.03666
+
+Train time: 344.888660
+Test time: 0.020617
+
+---------------------------------------
+2025-06-20 01:40:38.263015
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 25778875048.07226
+MSE - std: 5885973841.63874
+R2 - mean: 0.81310
+R2 - std: 0.02957
+
+Train time: 279.755577
+Test time: 0.017180
+
+---------------------------------------
+2025-06-20 01:42:59.761598
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 32833868417.66653
+MSE - std: 10751744099.13735
+R2 - mean: 0.76578
+R2 - std: 0.04896
+
+Train time: 222.123658
+Test time: 0.013484
+
+---------------------------------------
+2025-06-20 01:46:57.746087
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 24253403777.82644
+MSE - std: 7312672282.19644
+R2 - mean: 0.82598
+R2 - std: 0.03452
+
+Train time: 375.854512
+Test time: 0.025893
+
+---------------------------------------
+2025-06-20 01:49:16.414077
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 20130052126.99886
+MSE - std: 5316436655.25723
+R2 - mean: 0.85463
+R2 - std: 0.03208
+
+Train time: 218.758464
+Test time: 0.025897
+
+---------------------------------------
+2025-06-20 01:51:58.667889
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 18767298843.70298
+MSE - std: 3116743598.28822
+R2 - mean: 0.86087
+R2 - std: 0.03291
+
+Train time: 254.722956
+Test time: 0.013622
+
+---------------------------------------
+2025-06-20 01:56:30.112947
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 21540798531.14243
+MSE - std: 5604798669.37022
+R2 - mean: 0.84316
+R2 - std: 0.03401
+
+Train time: 430.688949
+Test time: 0.037825
+
+---------------------------------------
+2025-06-20 02:02:12.394456
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 23505480808.63970
+MSE - std: 9487077950.44659
+R2 - mean: 0.82664
+R2 - std: 0.08028
+
+Train time: 511.312631
+Test time: 0.032211
+
+---------------------------------------
+2025-06-20 02:05:15.612354
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 18083317935.51582
+MSE - std: 1863351317.22356
+R2 - mean: 0.86760
+R2 - std: 0.01413
+
+Train time: 287.878472
+Test time: 0.019017
+
+---------------------------------------
+2025-06-20 02:07:45.911440
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 18657888797.68457
+MSE - std: 2931505154.66870
+R2 - mean: 0.86380
+R2 - std: 0.02031
+
+Train time: 235.978353
+Test time: 0.030604
+
+---------------------------------------
+2025-06-20 02:10:32.862201
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 28805516499.85751
+MSE - std: 7195183702.10012
+R2 - mean: 0.79117
+R2 - std: 0.03938
+
+Train time: 262.407045
+Test time: 0.013688
+
+---------------------------------------
+2025-06-20 02:13:07.338998
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 31550763148.41819
+MSE - std: 8453772964.02979
+R2 - mean: 0.77362
+R2 - std: 0.03954
+
+Train time: 242.477570
+Test time: 0.013375
+
+---------------------------------------
+2025-06-20 02:16:13.669300
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 30458421143.63806
+MSE - std: 8338440139.98670
+R2 - mean: 0.78370
+R2 - std: 0.02559
+
+Train time: 292.551265
+Test time: 0.013775
+
+---------------------------------------
+2025-06-20 02:20:52.293866
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 22878047259.16869
+MSE - std: 4801890987.79368
+R2 - mean: 0.83571
+R2 - std: 0.00952
+
+Train time: 440.214037
+Test time: 0.026218
+
+---------------------------------------
+2025-06-20 02:27:14.816957
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 21435990483.00543
+MSE - std: 3326720237.49514
+R2 - mean: 0.84334
+R2 - std: 0.02177
+
+Train time: 569.620364
+Test time: 0.026403
+
+---------------------------------------
+2025-06-20 02:32:03.351913
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 22140702482.06345
+MSE - std: 3954637882.31924
+R2 - mean: 0.83742
+R2 - std: 0.03199
+
+Train time: 455.966138
+Test time: 0.025971
+
+---------------------------------------
+2025-06-20 02:34:47.005447
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 26797084850.68204
+MSE - std: 6611668472.80159
+R2 - mean: 0.80650
+R2 - std: 0.02972
+
+Train time: 258.910216
+Test time: 0.020041
+
+---------------------------------------
+2025-06-20 02:37:48.859768
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 36586420591.44508
+MSE - std: 38323863959.39146
+R2 - mean: 0.70365
+R2 - std: 0.35252
+
+Train time: 288.559144
+Test time: 0.032251
+
+---------------------------------------
+2025-06-20 02:40:20.400921
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 17264296888.56591
+MSE - std: 1538881504.25030
+R2 - mean: 0.87199
+R2 - std: 0.02365
+
+Train time: 238.280960
+Test time: 0.002549
+
+---------------------------------------
+2025-06-20 02:44:11.402390
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 26494054603.64372
+MSE - std: 6924380441.85459
+R2 - mean: 0.80777
+R2 - std: 0.04151
+
+Train time: 364.919783
+Test time: 0.032112
+
+---------------------------------------
+2025-06-20 02:46:18.662798
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 17675302043.44206
+MSE - std: 2271016838.12139
+R2 - mean: 0.87003
+R2 - std: 0.02209
+
+Train time: 199.745044
+Test time: 0.030657
+
+---------------------------------------
+2025-06-20 02:48:33.724117
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 30798918465.55354
+MSE - std: 7528306034.28465
+R2 - mean: 0.77804
+R2 - std: 0.03601
+
+Train time: 212.208213
+Test time: 0.030702
+
+---------------------------------------
+2025-06-20 02:51:28.861547
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 17284367436.31909
+MSE - std: 3151635981.84044
+R2 - mean: 0.87537
+R2 - std: 0.00737
+
+Train time: 277.139616
+Test time: 0.008612
+
+---------------------------------------
+2025-06-20 02:53:27.966256
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.1}
+
+MSE - mean: 18284032236.14276
+MSE - std: 3219051263.33673
+R2 - mean: 0.86448
+R2 - std: 0.03574
+
+Train time: 186.874122
+Test time: 0.030185
+
+---------------------------------------
+2025-06-20 02:55:25.897533
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 18867634328.29133
+MSE - std: 1791630922.55979
+R2 - mean: 0.86120
+R2 - std: 0.01998
+
+Train time: 185.206791
+Test time: 0.013503
+
+---------------------------------------
+2025-06-20 02:58:46.296238
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 27659411986.85952
+MSE - std: 6076315986.54941
+R2 - mean: 0.80050
+R2 - std: 0.02403
+
+Train time: 316.204492
+Test time: 0.031109
+
+---------------------------------------
+2025-06-20 03:00:17.426431
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 17359945207.16792
+MSE - std: 1910159029.62170
+R2 - mean: 0.87242
+R2 - std: 0.01954
+
+Train time: 142.814320
+Test time: 0.024569
+
+---------------------------------------
+2025-06-20 03:05:26.991525
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 108526840620.92574
+MSE - std: 75805262757.50269
+R2 - mean: 0.17385
+R2 - std: 0.62199
+
+Train time: 471.984477
+Test time: 0.045184
+
+---------------------------------------
+2025-06-20 03:08:55.641144
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3}
+
+MSE - mean: 27865106143.52964
+MSE - std: 7323225808.59078
+R2 - mean: 0.80023
+R2 - std: 0.02685
+
+Train time: 329.296526
+Test time: 0.025679
+
+---------------------------------------
+2025-06-20 03:12:43.590902
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 27360077939.63605
+MSE - std: 7986613387.17012
+R2 - mean: 0.80537
+R2 - std: 0.02613
+
+Train time: 359.798492
+Test time: 0.031037
+
+---------------------------------------
+2025-06-20 03:15:57.191079
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 25732268857.65985
+MSE - std: 6375471374.99712
+R2 - mean: 0.81625
+R2 - std: 0.02165
+
+Train time: 306.147365
+Test time: 0.020031
+
+---------------------------------------
+2025-06-20 03:18:23.767171
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 17720327790.36805
+MSE - std: 2793001339.29433
+R2 - mean: 0.87127
+R2 - std: 0.01426
+
+Train time: 232.055169
+Test time: 0.025445
+
+---------------------------------------
+2025-06-20 03:24:39.655650
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 21833274829.18705
+MSE - std: 7826830277.43757
+R2 - mean: 0.84469
+R2 - std: 0.03453
+
+Train time: 557.544558
+Test time: 0.031813
+
+---------------------------------------
+2025-06-20 03:34:01.026949
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 18716270653.52353
+MSE - std: 5953918819.09283
+R2 - mean: 0.86649
+R2 - std: 0.02435
+
+Train time: 851.475840
+Test time: 0.039512
+
+---------------------------------------
+2025-06-20 03:36:35.278087
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 31060243127.32560
+MSE - std: 7059663761.95232
+R2 - mean: 0.77641
+R2 - std: 0.03208
+
+Train time: 242.199187
+Test time: 0.013490
+
+---------------------------------------
+2025-06-20 03:39:33.353726
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 25556108356.76540
+MSE - std: 6035520150.26281
+R2 - mean: 0.81461
+R2 - std: 0.03358
+
+Train time: 281.775557
+Test time: 0.019769
+
+---------------------------------------
+2025-06-20 03:41:37.446565
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 17751703262.48260
+MSE - std: 2889155278.88293
+R2 - mean: 0.87016
+R2 - std: 0.02137
+
+Train time: 194.744024
+Test time: 0.030196
+
+---------------------------------------
+2025-06-20 03:45:56.025377
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 24006833053.50368
+MSE - std: 9107090163.48858
+R2 - mean: 0.82840
+R2 - std: 0.04826
+
+Train time: 408.541110
+Test time: 0.025840
+
+---------------------------------------
+2025-06-20 03:49:47.082288
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 22546956769.41957
+MSE - std: 6854300131.27094
+R2 - mean: 0.83646
+R2 - std: 0.03883
+
+Train time: 366.283015
+Test time: 0.037743
+
+---------------------------------------
+2025-06-20 03:52:53.429743
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 28776441688.28265
+MSE - std: 6446779479.65658
+R2 - mean: 0.79392
+R2 - std: 0.01347
+
+Train time: 293.614056
+Test time: 0.031251
+
+---------------------------------------
+2025-06-20 03:55:49.616452
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 25583192442.87989
+MSE - std: 6726547750.14984
+R2 - mean: 0.81613
+R2 - std: 0.02768
+
+Train time: 278.649201
+Test time: 0.025216
+
+---------------------------------------
+2025-06-20 03:57:45.755403
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 17162978554.99521
+MSE - std: 2422156285.44585
+R2 - mean: 0.87324
+R2 - std: 0.02720
+
+Train time: 182.375205
+Test time: 0.024824
+
+---------------------------------------
+2025-06-20 04:00:25.837393
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 31429077372.00494
+MSE - std: 11629093571.48682
+R2 - mean: 0.77834
+R2 - std: 0.04512
+
+Train time: 251.336812
+Test time: 0.013309
+
+---------------------------------------
+2025-06-20 04:03:31.212633
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.0}
+
+MSE - mean: 17617089718.79286
+MSE - std: 3086406594.26736
+R2 - mean: 0.87051
+R2 - std: 0.02877
+
+Train time: 292.502928
+Test time: 0.031057
+
+---------------------------------------
+2025-06-20 04:05:13.607379
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 17081604026.44920
+MSE - std: 2392725804.51556
+R2 - mean: 0.87412
+R2 - std: 0.02533
+
+Train time: 160.708696
+Test time: 0.030578
+
+---------------------------------------
+2025-06-20 04:12:33.405998
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 18691587251.65285
+MSE - std: 3506995444.33391
+R2 - mean: 0.86368
+R2 - std: 0.02537
+
+Train time: 665.597594
+Test time: 0.050768
+
+---------------------------------------
+2025-06-20 04:17:34.504545
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 2, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.3}
+
+MSE - mean: 20125316398.93336
+MSE - std: 5101416743.26152
+R2 - mean: 0.85537
+R2 - std: 0.02052
+
+Train time: 448.061553
+Test time: 0.031750
+
+---------------------------------------
+2025-06-20 04:20:55.558338
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 27894228997.55087
+MSE - std: 5568572420.04927
+R2 - mean: 0.79815
+R2 - std: 0.02268
+
+Train time: 317.231791
+Test time: 0.025339
+
+---------------------------------------
+2025-06-20 04:26:12.067253
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3}
+
+MSE - mean: 61389052443.59413
+MSE - std: 51628927542.91002
+R2 - mean: 0.51702
+R2 - std: 0.42326
+
+Train time: 481.420644
+Test time: 0.050580
+
+---------------------------------------
+2025-06-20 04:33:28.982034
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 18960232505.39976
+MSE - std: 2650656121.97719
+R2 - mean: 0.86030
+R2 - std: 0.02491
+
+Train time: 662.043502
+Test time: 0.045839
+
+---------------------------------------
+2025-06-20 04:39:17.291797
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1}
+
+MSE - mean: 36833560774.88792
+MSE - std: 38225738805.24332
+R2 - mean: 0.70030
+R2 - std: 0.35158
+
+Train time: 529.646644
+Test time: 0.056282
+
+---------------------------------------
+2025-06-20 04:41:52.558606
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.1}
+
+MSE - mean: 28736155907.47531
+MSE - std: 8101451150.02135
+R2 - mean: 0.79330
+R2 - std: 0.03709
+
+Train time: 243.796880
+Test time: 0.024872
+
+---------------------------------------
+2025-06-20 04:45:42.615307
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.0}
+
+MSE - mean: 26469674410.75479
+MSE - std: 6314782388.48675
+R2 - mean: 0.81005
+R2 - std: 0.02248
+
+Train time: 362.869080
+Test time: 0.031100
+
+---------------------------------------
+2025-06-20 04:48:22.748715
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 29937628098.76654
+MSE - std: 6136773852.13784
+R2 - mean: 0.78365
+R2 - std: 0.03019
+
+Train time: 252.218050
+Test time: 0.031090
+
+---------------------------------------
+2025-06-20 04:53:03.016151
+Parameters: {'d_in': 90, 'd_out': 1, 'learning_rate': 0.01, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0}
+
+MSE - mean: 63054955548.14381
+MSE - std: 66824782078.12593
+R2 - mean: 0.60782
+R2 - std: 0.35766
+
+Train time: 425.038952
+Test time: 0.044838
+
+---------------------------------------
