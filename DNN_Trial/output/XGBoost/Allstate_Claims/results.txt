@@ -1,0 +1,14 @@
+2025-06-19 23:12:59.214636
+XGBoost - Allstate_Claims - train_model - regression
+
+MSE - mean: 3722080.93308
+MSE - mean_std: 245148.87498
+R2 - mean: 0.55447
+R2 - mean_std: 0.01133
+
+Train time: 14.541351
+Test time: 0.272373
+
+Best Parameters: {'max_depth': 6, 'alpha': 100.0, 'lambda': 0.01, 'eta': 0.2, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
