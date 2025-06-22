@@ -880,7 +880,7 @@ def test_model(model, parameters, X_train, y_train, X_test, y_test, args, visual
     X_test_original = X_test.copy()
     y_test_original = y_test.copy()
 
-    for seed in range(5):
+    for seed in range(3):
         print("In Test Model, Seed is ", seed)
         print(f"--- Test Run {seed+1}/{n_repeats} ---")
         #seed_update = np.random.randint(seed, 100000)
