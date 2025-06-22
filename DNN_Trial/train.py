@@ -1275,6 +1275,78 @@ class Objective(object):
 def main(args):
     print("--- Running Nested Cross-Validation with Hyperparameter Optimization ---")
 
+        final_strategies = {
+            "MLP": {
+                "Boston":["quantile","freedman",False],
+                "Socmob":["kmeans","sturges",True],
+                "Sensory":["uniform","sturges","False],
+                "Moneyball":["kmeans","sturges",True],
+                "Black_Friday":["kmeans","freedman",False],
+                "SAT11":["quantie","sturges",True],
+                "Diamonds":["quantile","freedman",True],
+                "House_Prices_Nominal":["kmeans","freeman",True],
+                "Mercedes_Benz":["uniform","freedman",False],
+                "Allstate_Claims":["kmeans","sturges",False],
+                "Brazillian_Houses":["kmeans","sturges",True],
+                "Abalone":["kmeans","sturges",False],
+                "House_Sales":["uniform","freedman",Flae],
+                "MIP":["uniform","sturges",True]
+            },
+            "ResMLP" : {
+                "Boston":["uniform","freedman",False],
+                "Socmob":["kmeans","sturges",False],
+                "Sensory":["uniform","sturges",False],
+                "Moneyball":["kmeans","freedman",False],
+                "Black_Friday":["kmeans","sturges",False],
+                "SAT11":["kmeans","sturges",False],
+                "Diamonds":["quantile","freedman",True],
+                "House_Prices_Nominal":["kmeans","sturges",True],
+                "Mercedes_Benz":["kmeans","sturges",False],
+                "Allstate_Claims":["uniform","freedman",False],
+                "Brazillian_Houses":["quantile","sturges",False],
+                "Abalone":["uniform","sturges",False],
+                "House_Sales":["kmeans","sturges",False],
+                "MIP":["uniform","sturges",True]
+            },
+            "FTTransformer" : {
+                "Boston":["uniform","sturges",False],
+                "Socmob":["kmeans","sturges",False],
+                "Sensory":["kmeans","freedman",False],
+                "Moneyball":["kmeans","sturges",False],
+                "Black_Friday":["kmeans","sturges",True],
+                "SAT11":["kmeans","freedman",True],
+                "Diamonds":["quantile","freedman",False],
+                "House_Prices_Nominal":["kmeans", "sturges", True],
+                "Mercedes_Benz":["kmeans","sturges",False],
+                "Allstate_Claims":["quantile","sturges",True],
+                "Brazillian_Houses":["kmeans","sturges",False],
+                "Abalone":["kmean","sturges",False], 
+                "House_Sales":["kmeans","sturges",False],
+                "MIP":["uniform","sturges",True]
+            },
+            "SAINT" : {
+                "Boston":["kmeans","sturges",False],
+                "Socmob":["quantile","sturges",False],
+                "Sensory":["kmeans","freedman",False],
+                "Moneyball":["uniform","sturges", True],
+                "Black_Friday":["kmeans","freedman",False],
+                "SAT11":["quantile","sturges",True],
+                "Diamonds":["quantile","freedman",False],
+                "House_Prices_Nominal":["uniform","freedman",False],
+                "Mercedes_Benz":["uniform","sturges",False],
+                "Allstate_Claims":["kmeans","Freedman",False],
+                "Brazillian_Houses":["uniform","freedman",False],
+                "Abalone":["kmeans","sturges",False],
+                "House_Sales":["quantile","freedman",True],
+                "MIP":["uniform","sturges",True]
+            }
+        }
+
+    model_strategies = final_strategies[args.model_name]
+    args.strategy = model_strategies[args.dataset][0]
+    args.binning = model_strategies[args.dataset][1]
+    args.weighted_loss = model_strategies[args.dataset][2]
+
     X, y = load_data(args, is_test=False) # Load full dataset
     model_cls = str2model(args.model_name) # Get model class
 
