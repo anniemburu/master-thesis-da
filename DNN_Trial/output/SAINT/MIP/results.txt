@@ -338,3 +338,39 @@ Test time: 0.340254
 Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
 
 
+2025-06-20 20:05:02.332774
+SAINT - MIP - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 11.11872
+Log Loss - std: 0.01225
+AUC - mean: 0.48189
+AUC - std: 0.02474
+Accuracy - mean: 0.00550
+Accuracy - std: 0.00150
+F1 score - mean: 0.01049
+F1 score - std: 0.00299
+
+Train time: 313.689683
+Test time: 0.346112
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 20:13:29.440671
+SAINT - MIP - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 10.83022
+Log Loss - std: 0.20573
+AUC - mean: 0.47881
+AUC - std: 0.00911
+Accuracy - mean: 0.01101
+Accuracy - std: 0.00396
+F1 score - mean: 0.01834
+F1 score - std: 0.00574
+
+Train time: 313.211462
+Test time: 0.337217
+
+Best Parameters: {'depth': 3, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
