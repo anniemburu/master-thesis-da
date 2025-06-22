@@ -55,12 +55,12 @@ class XGBoost(BaseModel):
                                 early_stopping_rounds=self.args.early_stopping_rounds,
                                 verbose_eval=self.args.logging_period)
             
-            return evals_result['train']['rmse'], evals_result['eval']['rmse']
+            return evals_result['train']['rmse'], evals_result['eval']['rmse'], []
         else:
             self.model = xgb.train(self.params, train, num_boost_round=self.args.epochs,
                                 verbose_eval=self.args.logging_period)
             
-            return [], []
+            return [], [], []
         
     def predict(self, X):
         X = xgb.DMatrix(X)
@@ -88,12 +88,22 @@ class XGBoost(BaseModel):
     @classmethod
     def define_trial_parameters(cls, trial, args):
         params = {
-            "max_depth": trial.suggest_int("max_depth", 2, 12, log=True),
-            "alpha": trial.suggest_float("alpha", 1e-8, 1.0, log=True),
-            "lambda": trial.suggest_float("lambda", 1e-8, 1.0, log=True),
-            "eta": trial.suggest_float("eta", 0.01, 0.3, log=True)
+            "max_depth": trial.suggest_categorical("max_depth", [2, 6, 10, 12]),
+            "alpha": trial.suggest_categorical("alpha", [1e-8, 1e-2, 1e2]),
+            "lambda": trial.suggest_categorical("lambda", [1e-8, 1e-2, 1e2]),
+            "eta": trial.suggest_categorical("eta", [0.001, 0.01, 0.1, 0.2, 0.3])
         }
+
         return params
+    @classmethod
+    def define_grid_parameters(cls):
+        search_space = {
+            "max_depth": [2, 6, 10, 12],
+            "alpha": [1e-8, 1e-2, 1e2],
+            "lambda": [1e-8, 1e-2, 1e2],
+            "eta": [0.001,0.01, 0.1, 0.2, 0.3]
+        }
+        return search_space
 
 
 '''
@@ -148,13 +158,13 @@ class CatBoost(BaseModel):
 
             evals_result = self.model.get_evals_result()
 
-            return evals_result['learn']['RMSE'], evals_result['validation']['RMSE']
+            return evals_result['learn']['RMSE'], evals_result['validation']['RMSE'], []
         else: 
             self.model.fit(X, y)
 
             #evals_result = self.model.get_evals_result()
 
-            return [],[]
+            return [],[], []
 
     def predict(self, X):
         if self.args.cat_idx:
@@ -166,11 +176,19 @@ class CatBoost(BaseModel):
     @classmethod
     def define_trial_parameters(cls, trial, args):
         params = {
-            "learning_rate": trial.suggest_float("learning_rate", 0.01, 0.3, log=True),
-            "max_depth": trial.suggest_int("max_depth", 2, 12, log=True),
-            "l2_leaf_reg": trial.suggest_float("l2_leaf_reg", 0.5, 30, log=True),
+            "learning_rate": trial.suggest_categorical("learning_rate", [0.001,0.01, 0.1, 0.2, 0.3]),
+            "max_depth": trial.suggest_categorical("max_depth", [2, 6, 10, 12]),
+            "l2_leaf_reg": trial.suggest_categorical("l2_leaf_reg",[0.5, 1.0, 5.0, 10.0, 30.0]),
         }
         return params
+    @classmethod
+    def define_grid_parameters(cls):
+        search_space = {
+            "learning_rate": [0.001,0.01, 0.1, 0.2, 0.3],
+            "max_depth": [2, 6, 10, 12],
+            "l2_leaf_reg": [0.5, 1.0, 5.0, 10.0, 30.0]
+        }
+        return search_space
 
 
 '''
@@ -211,10 +229,10 @@ class LightGBM(BaseModel):
             #print(f"Train Loss : {evals_result['train']['l2']} \n")
             #print(f"Eval Loss : {evals_result['eval']['l2']} \n")
 
-            return evals_result['train']['l2'], evals_result['eval']['l2']
+            return evals_result['train']['l2'], evals_result['eval']['l2'],[]
         else:
             self.model = lgb.train(self.params, train, num_boost_round=self.args.epochs)
-            return [], []
+            return [], [], []
 
     def predict_proba(self, X):
         probabilities = self.model.predict(X)
@@ -229,9 +247,19 @@ class LightGBM(BaseModel):
     @classmethod
     def define_trial_parameters(cls, trial, args):
         params = {
-            "num_leaves": trial.suggest_int("num_leaves", 2, 4096, log=True),
-            "lambda_l1": trial.suggest_float("lambda_l1", 1e-8, 10.0, log=True),
-            "lambda_l2": trial.suggest_float("lambda_l2", 1e-8, 10.0, log=True),
-            "learning_rate": trial.suggest_float("learning_rate", 0.01, 0.3, log=True)
+            "num_leaves": trial.suggest_categorical("num_leaves", [2, 6, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]),
+            "lambda_l1": trial.suggest_categorical("lambda_l1", [1e-8, 1e-2, 1e0, 1e2]),
+            "lambda_l2": trial.suggest_categorical("lambda_l2", [1e-8, 1e-2, 1e0, 1e2]),
+            "learning_rate": trial.suggest_categorical("learning_rate", [0.001,0.01, 0.1, 0.2, 0.3])
         }
         return params
+
+    @classmethod
+    def define_grid_parameters(cls):
+        search_space = {
+            "num_leaves": [2, 6, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096],
+            "lambda_l1": [1e-8, 1e-2, 1e0, 1e2],
+            "lambda_l2": [1e-8, 1e-2, 1e0, 1e2],
+            "learning_rate": [0.001,0.01, 0.05, 0.1, 0.2, 0.3]
+        }
+        return search_space

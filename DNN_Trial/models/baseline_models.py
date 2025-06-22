@@ -140,7 +140,15 @@ class RandomForest(BaseModel):
     @classmethod
     def define_trial_parameters(cls, trial, args):
         params = {
-            "max_depth": trial.suggest_int("max_depth", 2, 12, log=True),
-            "n_estimators": trial.suggest_int("n_estimators", 5, 100, log=True)
+            "max_depth": trial.suggest_categorical("max_depth", [2, 6, 10, 12]),
+            "n_estimators": trial.suggest_categorical("n_estimators", [5, 10, 20, 50, 100])
         }
         return params
+    
+    @classmethod
+    def define_grid_parameters(cls):
+        search_space = {
+            "max_depth": [2, 6, 10, 12],
+            "n_estimators": [5, 10, 20, 50, 100]
+        }
+        return search_space

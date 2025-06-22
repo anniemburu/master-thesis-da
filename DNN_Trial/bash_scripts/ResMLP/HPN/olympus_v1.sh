@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH --job-name=ResMLP_Olympus_final_reg
+#SBATCH --output=%x_%j.log
+#SBATCH --error=%x_%j.err
+#SBATCH --mail-user=mburu@uni-hildesheim.de
+#SBATCH --partition=STUDL
+#SBATCH --gres=gpu:1
+#SBATCH --account=long
+
+
+CONFIGS=("config/boston.yml"
+        "config/socmob.yml"
+        "config/sensory.yml"
+        "config/moneyball.yml"
+        #"config/black_friday.yml"
+          )
+
+for config in "${CONFIGS[@]}"; do
+    printf "\n\n----------------------------------------------------------------------------\n"
+    printf 'Training ResMLP Vesion 1 with Dataset: %s \n\n'  "$config" 
+    printf "\n\n----------------------------------------------------------------------------\n"
+
+    cd ~/Master_Thesis/master-thesis-da/DNN_Trial
+    source ~/anaconda3/etc/profile.d/conda.sh
+    conda activate TabSurvey
+    srun python3 train.py --config "$config" --model_name ResMLP --objective regression --optimize_hyperparameters --epochs 100
+done
+
+
+

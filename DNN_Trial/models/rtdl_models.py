@@ -65,7 +65,8 @@ class ResMLP(BaseModelTorch):
       ).to(self.device)
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
+      #self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
+      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
       """print("On Device:", self.device)
       print(f"Model: {self.model}")
@@ -119,19 +120,28 @@ class ResMLP(BaseModelTorch):
 
       print(f"X : {type(X)}, y : {type(y)}, X : {type(X_val)}, X : {type(X_val)} \n")
 
-      print(f"Seed in MLP: {self.args.test_seed}")
-      g = self.get_generator(self.args.test_seed) #seed gen
+      if self.args.optimize_hyperparameters is None:
+         print(f"Seed in MLP: {self.args.test_seed}")
+         g = self.get_generator(self.args.test_seed) #seed gen
 
-      train_dataset = TensorDataset(X, y)
-      loader = DataLoader(
-            train_dataset, 
-            batch_size=self.args.batch_size, 
-            shuffle=True, 
-            pin_memory=True,
-            num_workers=4,
-            worker_init_fn=self.seed_worker,
-            generator=g
-        )
+         train_dataset = TensorDataset(X, y)
+         loader = DataLoader(
+               train_dataset, 
+               batch_size=self.args.batch_size, 
+               shuffle=True, 
+               pin_memory=True,
+               num_workers=4,
+               worker_init_fn=self.seed_worker,
+               generator=g
+         )
+      else:
+         print("hyperparameter optimization")
+         train_dataset = TensorDataset(X, y)
+         loader = DataLoader(
+               train_dataset, 
+               batch_size=self.args.batch_size, 
+               shuffle=True,
+         )
 
       # Training loop
       self.model.train()
@@ -343,15 +353,31 @@ class ResMLP(BaseModelTorch):
       params = {
          "d_in": args.num_features,
          "d_out": args.num_classes,
-         "n_blocks": trial.suggest_int("n_blocks", 2, 6, log=True),
-         "d_block": trial.suggest_categorical('d_block', [64, 128, 256]),
-         "d_hidden": trial.suggest_int("d_hidden", 2, 10, log=True),
-         "d_hidden_multiplier" : trial.suggest_float("d_hidden_multiplier", 1.0, 5.0, log=True),
-         "dropout1" : trial.suggest_float("dropout1", 1e-8,0.5, log=False),
-         "dropout2" : trial.suggest_float("dropout2", 1e-8, 0.3, log=False),
+         "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+         "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4]),
+         "d_block": trial.suggest_categorical('d_block', [64, 128]),
+         "d_hidden": trial.suggest_categorical("d_hidden", [2]),
+         "d_hidden_multiplier" : trial.suggest_categorical("d_hidden_multiplier", [1, 2]),
+         "dropout1" : trial.suggest_categorical("dropout1", [0.0, 0.1, 0.3]),
+         "dropout2" : trial.suggest_categorical("dropout2", [0.0, 0.1, 0.3]),
       }
-      return params
+      return params 
    
+   @classmethod
+   def define_grid_parameters(cls):
+      search_space = {
+         "learning_rate": [1e-5, 1e-2],
+         "weight_decay": [1e-6, 1e-3],
+         "n_blocks": [2, 4],
+         "d_block": [64, 128],
+         "d_hidden": [2],
+         "d_hidden_multiplier": [1, 2],
+         "dropout1": [0.0, 0.1, 0.3],
+         "dropout2": [0.0, 0.1, 0.3]
+      }
+
+      return search_space
 
 '''
       MPL Model : 
@@ -390,7 +416,7 @@ class MLP(BaseModelTorch):
       # Add lambda_reg as a trainable parameter
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=3e-4, weight_decay=1e-5)
+      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
       print("On Device:", self.device)
       """
@@ -443,22 +469,29 @@ class MLP(BaseModelTorch):
       X_val = torch.tensor(X_val, dtype=torch.float32).to(self.device) if X_val is not None else None
       y_val = torch.tensor(y_val, dtype=torch.float32 if self.args.objective == 'regression' else torch.long).to(self.device) if y_val is not None else None
       class_weights = class_weights.to(self.device) if class_weights is not None else None
-
       
+      if self.args.optimize_hyperparameters is None:
+         print(f"Seed in MLP: {self.args.test_seed}")
+         g = self.get_generator(self.args.test_seed) #seed gen
 
-      print(f"Seed in MLP: {self.args.test_seed}")
-      g = self.get_generator(self.args.test_seed) #seed gen
-
-      train_dataset = TensorDataset(X, y)
-      loader = DataLoader(
-            train_dataset, 
-            batch_size=self.args.batch_size, 
-            shuffle=True, 
-            pin_memory=True,
-            num_workers=4,
-            worker_init_fn=self.seed_worker,
-            generator=g
-        )
+         train_dataset = TensorDataset(X, y)
+         loader = DataLoader(
+               train_dataset, 
+               batch_size=self.args.batch_size, 
+               shuffle=True, 
+               pin_memory=True,
+               num_workers=4,
+               worker_init_fn=self.seed_worker,
+               generator=g
+         )
+      else:
+         print("hyperparameter optimization")
+         train_dataset = TensorDataset(X, y)
+         loader = DataLoader(
+               train_dataset, 
+               batch_size=self.args.batch_size, 
+               shuffle=True,
+         )
 
       # Training loop
       self.model.train()
@@ -685,11 +718,24 @@ class MLP(BaseModelTorch):
       params = {
          "d_in": args.num_features,
          "d_out": args.num_classes,
-         "n_blocks": trial.suggest_int("n_blocks", 2, 6, log=True),
-         "d_block": trial.suggest_categorical('d_block', [64, 128, 256]),
-         "dropout" : trial.suggest_float("dropout", 1e-8, 0.3, log=False),
+         "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+         "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4]),
+         "d_block": trial.suggest_categorical('d_block', [64, 128]),
+         "dropout" : trial.suggest_categorical("dropout", [0.0,0.1,0.3]),
       }
       return params
+   
+   @classmethod
+   def define_grid_parameters(cls):
+      search_space = {
+         "learning_rate": [1e-5, 1e-2],
+         "weight_decay": [1e-6, 1e-3],
+         "n_blocks": [2, 4],
+         "d_block": [64, 128],
+         "dropout": [0.0,0.1,0.3]
+      }
+      return search_space
    
 class FTTransformerWrapper(BaseModelTorch):
    def __init__(self, params, args):
@@ -740,8 +786,8 @@ class FTTransformerWrapper(BaseModelTorch):
                         ).to(self.device)
 
       # Optimizer
-      self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
-
+      #self.optimizer = torch.optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
+      self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
       print("On Device:", self.device)
       print(f"Model: {self.model}")
       """for name, param in self.model.named_parameters():
@@ -791,21 +837,29 @@ class FTTransformerWrapper(BaseModelTorch):
       print(f"Train Data after...")
       print(f"X: {type(X)} , y : {type(y), }, X_val: {type(X_val)} , y : {type(y_val)}\n")
 
-      print(f"Seed in MLP: {self.args.test_seed}")
-      g = self.get_generator(self.args.test_seed) #seed gen
+      if self.args.optimize_hyperparameters is None:
+         print(f"Seed in MLP: {self.args.test_seed}")
+         g = self.get_generator(self.args.test_seed) #seed gen
 
 
-      train_dataset = TensorDataset(X, y)
-      loader = DataLoader(
-            train_dataset, 
-            batch_size=self.args.batch_size, 
-            shuffle=True, 
-            pin_memory=True,
-            num_workers=4,
-            worker_init_fn=self.seed_worker,
-            generator=g
-        )
-
+         train_dataset = TensorDataset(X, y)
+         loader = DataLoader(
+               train_dataset, 
+               batch_size=self.args.batch_size, 
+               shuffle=True, 
+               pin_memory=True,
+               num_workers=4,
+               worker_init_fn=self.seed_worker,
+               generator=g
+         )
+      else:
+         print("hyperparameter optimization")
+         train_dataset = TensorDataset(X, y)
+         loader = DataLoader(
+               train_dataset, 
+               batch_size=self.args.batch_size, 
+               shuffle=True, 
+         )
       # Training loop
       self.model.train()
       loss_history = []
@@ -952,12 +1006,12 @@ class FTTransformerWrapper(BaseModelTorch):
 
    def _compute_loss(self, outputs, targets, class_weights):
         if self.args.objective == 'regression':
-            return nn.MSELoss()(outputs, targets)
+            return nn.MSELoss()(outputs.squeeze(-1), targets)
         elif self.args.objective == "probabilistic_regression" or self.args.objective == "classification":
             if self.args.weighted_loss:
-               return nn.CrossEntropyLoss(weight=class_weights)(outputs, targets)
+               return nn.CrossEntropyLoss(weight=class_weights)(outputs.squeeze(-1), targets)
             else:
-               return nn.CrossEntropyLoss()(outputs, targets)
+               return nn.CrossEntropyLoss()(outputs.squeeze(-1), targets)
             
    def predict(self, X):
       self.model.eval()
@@ -1054,8 +1108,30 @@ class FTTransformerWrapper(BaseModelTorch):
    @classmethod
    def define_trial_parameters(cls, trial, args):
       params = {
-         "learning_rate": trial.suggest_float("learning_rate", 1e-5, 1e-2, log=True),
-         "weight_decay": trial.suggest_float("weight_decay", 1e-6, 1e-2, log=True),
+         "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+         "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+         "n_blocks": trial.suggest_categorical("n_blocks", [2, 4]),
+         "d_block": trial.suggest_categorical('d_block', [64, 128]),
+         "attention_n_heads": trial.suggest_categorical("attention_n_heads", [1, 2]),
+         "attention_dropout": trial.suggest_categorical("attention_dropout", [0.1]),
+         "ffn_d_hidden_multiplier": trial.suggest_categorical("ffn_d_hidden_multiplier", [1, 2]),
+         "ffn_dropout": trial.suggest_categorical("ffn_dropout", [0.1]),
+         "residual_dropout": trial.suggest_categorical("residual_dropout", [0.1]),
       }
       return params
 
+   @classmethod
+   def define_grid_parameters(cls):
+      search_space = {
+         "learning_rate": [1e-5, 1e-2],
+         "weight_decay": [1e-6, 1e-3],
+         "n_blocks": [2, 4],
+         "d_block": [64, 128],
+         "attention_n_heads": [1, 2],
+         "attention_dropout": [0.1],
+         "ffn_d_hidden_multiplier": [1, 2],
+         "ffn_dropout": [0.1],
+         "residual_dropout": [0.1]
+      }
+
+      return search_space
