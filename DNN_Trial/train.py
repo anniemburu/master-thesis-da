@@ -92,6 +92,8 @@ def bin_shifter(args, y_train, y_val = None):
     def get_contiguous_labels(arr):
         """ Renumber labels to remove gaps """
         unique_vals = np.unique(arr)
+        print(f"Unique YS : {unique_vals}")
+        SSS
         mapping = {old_label: new_label for new_label, old_label in enumerate(unique_vals)}
         return np.vectorize(mapping.get)(arr), mapping
 
@@ -676,10 +678,10 @@ def nested_cross_validation(model_cls, X, y, args, optimize_params=True):
                     X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, frequency_map_outer) # Use test set for validation monitoring if desired
             else:
                 if args.weighted_loss:
-                    loss_history, val_loss_history_ = final_model.fit(
+                    loss_history, val_loss_history = final_model.fit(
                         X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc, class_weights=class_weights)
                 else:
-                    loss_history, val_loss_history, _ = final_model.fit(
+                    loss_history, val_loss_history = final_model.fit(
                         X_train_outer_proc, y_train_outer_proc, X_test_outer_proc, y_test_outer_proc) # Use test set for validation monitoring if desired
         except Exception as e:
             print(f"ERROR during final model fitting in outer fold {i+1}: {e}")
@@ -1347,6 +1349,8 @@ def main(args):
     args.binning = model_strategies[args.dataset][1]
     args.weighted_loss = model_strategies[args.dataset][2]
 
+    print(f"Dataset: {args.dataset}, Model: {args.model_name}, Objective: {args.objective}")
+    print(f"Using Strategy: {args.strategy}, Binning: {args.binning}, Weighted Loss: {args.weighted_loss}")
     X, y = load_data(args, is_test=False) # Load full dataset
     model_cls = str2model(args.model_name) # Get model class
 
