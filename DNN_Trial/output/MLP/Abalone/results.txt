@@ -564,3 +564,21 @@ Test time: 0.065869
 Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 21, 'dropout': 0.045537479089527655, 'n_blocks': 4}
 
 
+2025-07-08 01:45:37.763918
+MLP - Abalone - train_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 2.40476
+Log Loss - mean_std: 0.03743
+AUC - mean: 0.60649
+AUC - mean_std: 0.08665
+Accuracy - mean: 0.06895
+Accuracy - mean_std: 0.05928
+F1 score - mean: 0.02527
+F1 score - mean_std: 0.02838
+
+Train time: 0.974472
+Test time: 0.001418
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'dropout': 0.3, 'd_out': 11, 'd_in': 10}
+
+

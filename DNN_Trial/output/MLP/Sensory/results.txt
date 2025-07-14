@@ -564,3 +564,21 @@ Test time: 0.003035
 Best Parameters: {'d_block': 128, 'd_in': 36, 'd_out': 10, 'dropout': 0.29860532918127847, 'n_blocks': 2}
 
 
+2025-07-08 02:01:38.607997
+MLP - Sensory - train_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 2.11039
+Log Loss - mean_std: 0.10772
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.17435
+Accuracy - mean_std: 0.22782
+F1 score - mean: 0.23856
+F1 score - mean_std: 0.30230
+
+Train time: 0.139631
+Test time: 0.001356
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'dropout': 0.3, 'd_out': 8, 'd_in': 36}
+
+
