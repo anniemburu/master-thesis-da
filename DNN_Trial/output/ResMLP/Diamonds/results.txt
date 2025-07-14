@@ -564,3 +564,21 @@ Test time: 0.103296
 Best Parameters: {'d_block': 128, 'd_hidden': 5, 'd_hidden_multiplier': 1.6469990033121622, 'd_in': 9, 'd_out': 64, 'dropout1': 0.1279373990844757, 'dropout2': 0.09909622892506705, 'n_blocks': 6}
 
 
+2025-07-11 06:15:02.210502
+ResMLP - Diamonds - train_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 8.69637
+Log Loss - mean_std: 3.80400
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.01439
+Accuracy - mean_std: 0.01588
+F1 score - mean: 0.02788
+F1 score - mean_std: 0.03067
+
+Train time: 77.804154
+Test time: 0.051074
+
+Best Parameters: {'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.0, 'd_out': 59, 'd_in': 9}
+
+
