@@ -374,3 +374,21 @@ Test time: 0.181054
 Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
 
 
+2025-07-08 20:32:31.754810
+FTTransformer - Brazillian_Houses - train_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 4.51043
+Log Loss - mean_std: 0.20108
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.00019
+Accuracy - mean_std: 0.00037
+F1 score - mean: 0.00037
+F1 score - mean_std: 0.00075
+
+Train time: 16.712516
+Test time: 0.022337
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'attention_n_heads': 2, 'attention_dropout': 0.1, 'ffn_d_hidden_multiplier': 2, 'ffn_dropout': 0.1, 'residual_dropout': 0.1}
+
+
