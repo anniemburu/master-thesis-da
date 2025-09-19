@@ -61,9 +61,9 @@ def load_data(args, is_test=False):
         y = df[label_col].to_numpy()
 
     elif args.dataset == "Socmob":
-        df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
         #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
-        #df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
+        #df = pd.read_csv('/home/mburu/Master_Thesis/master-thesis-da/datasets/541-socmob/raw_data.csv') #CLUSTER
+        df = pd.read_csv('/Users/wambo/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         #df = pd.read_csv('/home/wambo/Desktop/Master Thesis/datasets/541-socmob.csv') #UBUNTU
         #df = pd.read_csv('/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/datasets/541-socmob.csv')
         #df = pd.read_csv('/home/wekesa/Master_Thesis/master-thesis-da/datasets/541-socmob.csv')

@@ -564,3 +564,21 @@ Test time: 0.004345
 Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 4.543534401999215, 'd_in': 39, 'd_out': 35, 'dropout1': 0.115735614381013, 'dropout2': 0.018124882849134806, 'n_blocks': 3}
 
 
+2025-07-07 19:50:28.451221
+ResMLP - Socmob - train_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 2.18706
+Log Loss - mean_std: 0.01383
+AUC - mean: 0.47353
+AUC - mean_std: 0.03308
+Accuracy - mean: 0.15591
+Accuracy - mean_std: 0.05024
+F1 score - mean: 0.08817
+F1 score - mean_std: 0.01926
+
+Train time: 0.368817
+Test time: 0.004319
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.0, 'dropout2': 0.3, 'd_out': 9, 'd_in': 39}
+
+
