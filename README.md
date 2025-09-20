@@ -47,13 +47,13 @@ In order to run one-to-one experiment as in one datasets against one models run 
 python train.py --config/<config-file of the dataset>.yml --model_name <Name of the Model>
 ```
 Refer to the different parameters in ```bash empirical_experiments/utils/parser.py```. The most important ones to configure are as follows:
-* ```bash --config``` : .yaml file for the target dataset
-* ```bash --dataset ``` : The dataset
-* ```bash --objective``` : The learning objectives regression, probabilistic_regression
-* ```bash --optimize_hyperparameters``` : Set True for hyperparameter tuning.
-* ```bash --binning```: Binning method to use i.e 'uniform', 'quantile' or 'kmeans'
-* ```bash --strategy```: Binning strategy to use i,e 'sturges' or 'freedmans'
-* ```bash --class_comp``` : Set True for Regression-Classification conversion.
+* ```--config``` : .yaml file for the target dataset
+* ```--dataset ``` : The dataset
+* ```--objective``` : The learning objectives regression, probabilistic_regression
+* ```--optimize_hyperparameters``` : Set True for hyperparameter tuning.
+* ```--binning```: Binning method to use i.e 'uniform', 'quantile' or 'kmeans'
+* ```--strategy```: Binning strategy to use i,e 'sturges' or 'freedmans'
+* ```--class_comp``` : Set True for Regression-Classification conversion.
 
 
 ## 🙏 Acknowledgements
