@@ -1,3 +1,0 @@
-import openml
-
-print("Trial")
