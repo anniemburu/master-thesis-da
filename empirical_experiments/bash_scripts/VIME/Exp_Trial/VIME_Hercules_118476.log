@@ -1,0 +1,1344 @@
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/abalone.yml 
+
+
+
+----------------------------------------------------------------------------
+Namespace(batch_size=128, bin_alt=None, cat_dims=[2], cat_idx=[0], config='config/abalone.yml', data_parallel=False, dataset='Abalone', direction='maximize', dropna_idx=None, early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='VIME', n_trials=100, nominal_idx=[0], num_bins=10, num_classes=1, num_features=8, num_idx=None, num_splits=5, objective='probabilistic_regression', one_hot_encode=True, optimize_hyperparameters=False, ordinal_encode=False, ordinal_idx=None, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256, y_distribution='normal')
+Train model with given hyperparameters
+Loading dataset Abalone...
+Dataset loaded! 
+
+(4177, 8)
+I am in Main Once
+In get_device
+On Device: cuda
+Almost Cross Validating
+Fold 1
+num_features : 8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (3341, 8)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [1, 2, 3, 4, 5, 6, 7]
+Cat Dims V1 : []
+Cat Idx V1 : [0] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5711722952584546 -0.42686139059459793]
+ [0.0 0.0 1.0 -1.4481230668108207 -1.4372003130391107]
+ [0.0 0.0 1.0 -0.6964509769087927 -0.42686139059459793]
+ [0.0 1.0 0.0 -1.6151613090112709 -1.538234205283562]
+ [0.0 1.0 0.0 -0.8217296585591307 -1.0835816901835313]
+ [1.0 0.0 0.0 0.055221112993235226 0.07830807062765843]
+ [1.0 0.0 0.0 0.1804997946435733 0.17934196287210982]
+ [0.0 0.0 1.0 -0.4041340530580043 -0.3763444444723722]
+ [1.0 0.0 0.0 0.013461552443122539 -0.27531055222792084]
+ [0.0 0.0 1.0 -0.27885537140766625 -0.27531055222792084]] 
+ 
+ 
+Val : (3341, 10) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5711722952584546 -0.42686139059459793
+  -1.1403358713163287 -0.6396371751892543 -0.6047860626063131
+  -0.7242292401724562 -0.6378172121693153]
+ [0.0 0.0 1.0 -1.4481230668108207 -1.4372003130391107 -1.268891079376386
+  -1.2313829452130387 -1.1708398800472457 -1.207928885291349
+  -1.2181336383713948]
+ [0.0 0.0 1.0 -0.6964509769087927 -0.42686139059459793
+  -0.3690046229559858 -0.6355349514802506 -0.6455419374620602
+  -0.6044559947144446 -0.6015474355316853]
+ [0.0 1.0 0.0 -1.6151613090112709 -1.538234205283562 -1.5260014954965002
+  -1.273430738230327 -1.2161241854425204 -1.2908488244545877
+  -1.3269429682842848]
+ [0.0 1.0 0.0 -0.8217296585591307 -1.0835816901835313 -1.1403358713163287
+  -0.9729428515458055 -0.9829100126568561 -0.9407424146542464
+  -0.8554358719950952]
+ [1.0 0.0 0.0 0.055221112993235226 0.07830807062765843
+  0.27377141734429983 -0.09916920152801632 -0.5481806808622199
+  -0.3510895139378818 0.6678947467853636]
+ [1.0 0.0 0.0 0.1804997946435733 0.17934196287210982 -0.3690046229559858
+  -0.11865476414578383 -0.2900601401091547 -0.27738290134833615
+  0.16011787385854406]
+ [0.0 0.0 1.0 -0.4041340530580043 -0.3763444444723722 -0.3690046229559858
+  -0.6488671785345128 -0.6410135069225328 -0.6182759845749843
+  -0.5290078822564254]
+ [1.0 0.0 0.0 0.013461552443122539 -0.27531055222792084
+  0.016661001224186022 -0.44990932864783295 -0.7429031940619006
+  -0.2958095544957226 -0.20257989251775574]
+ [0.0 0.0 1.0 -0.27885537140766625 -0.27531055222792084
+  -0.11189420683587124 -0.5832315991904535 -0.6364850763830053
+  -0.7795091996146154 -0.3476589990682755]] 
+ 
+ 
+Val : (3341, 10) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 10
+Unique values in y_train: (array([0., 1., 2., 3., 4., 5., 6., 7., 8.]), 9)
+Unique values in y_test: (array([0., 1., 2., 3., 4., 5., 6., 7., 8.]), 9)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 9
+Final Test Labels Length: 9
+Final Num Classes: 9
+Final Bin Labels: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+VERIFY SHIFT
+Train after shift : [0 1 2 3 4 5 6 7 8], Length : 9
+Test after shift : [0 1 2 3 4 5 6 7 8], Length : 9
+Number of Classes After Bin Verifier: 9
+In get_device
+On Device: cuda
+{'K': 2, 'alpha': 1.1041260180067325, 'beta': 0.18806809637682864, 'p_m': 0.7192123464423629}
+Fitted encoder
+Epoch 0, Val Loss: 2.14469
+Epoch 1, Val Loss: 2.12468
+Epoch 2, Val Loss: 2.15044
+Epoch 3, Val Loss: 2.12721
+Epoch 4, Val Loss: 2.11852
+Epoch 5, Val Loss: 2.08212
+Epoch 6, Val Loss: 2.08764
+Epoch 7, Val Loss: 2.08345
+Epoch 8, Val Loss: 2.09021
+Epoch 9, Val Loss: 2.09837
+Epoch 10, Val Loss: 2.09352
+Epoch 11, Val Loss: 2.08114
+Epoch 12, Val Loss: 2.10404
+Epoch 13, Val Loss: 2.08133
+Epoch 14, Val Loss: 2.09157
+Epoch 15, Val Loss: 2.07077
+Epoch 16, Val Loss: 2.08808
+Epoch 17, Val Loss: 2.09333
+Epoch 18, Val Loss: 2.06650
+Epoch 19, Val Loss: 2.08970
+Epoch 20, Val Loss: 2.09953
+Epoch 21, Val Loss: 2.06797
+Epoch 22, Val Loss: 2.05518
+Epoch 23, Val Loss: 2.07964
+Epoch 24, Val Loss: 2.06596
+Epoch 25, Val Loss: 2.07086
+Epoch 26, Val Loss: 2.08004
+Epoch 27, Val Loss: 2.06709
+Epoch 28, Val Loss: 2.06346
+Epoch 29, Val Loss: 2.07918
+Epoch 30, Val Loss: 2.05092
+Epoch 31, Val Loss: 2.08286
+Epoch 32, Val Loss: 2.08026
+Epoch 33, Val Loss: 2.08806
+Epoch 34, Val Loss: 2.06520
+Epoch 35, Val Loss: 2.06905
+Epoch 36, Val Loss: 2.06888
+Epoch 37, Val Loss: 2.05930
+Epoch 38, Val Loss: 2.10258
+Epoch 39, Val Loss: 2.07621
+Epoch 40, Val Loss: 2.07937
+Epoch 41, Val Loss: 2.08583
+Epoch 42, Val Loss: 2.06376
+Epoch 43, Val Loss: 2.07252
+Epoch 44, Val Loss: 2.05535
+Epoch 45, Val Loss: 2.09748
+Epoch 46, Val Loss: 2.10132
+Epoch 47, Val Loss: 2.11556
+Epoch 48, Val Loss: 2.05550
+Epoch 49, Val Loss: 2.05223
+Epoch 50, Val Loss: 2.07483
+Epoch 51, Val Loss: 2.08321
+Early stopping applies.
+State of save is True b4 loss saving
+Log file exists at: output/VIME/Abalone/logging/loss_0.txt
+File name : output/VIME/Abalone/logging/loss_0.txt . The file was saved
+Log file exists at: output/VIME/Abalone/logging/val_loss_0.txt
+File name : output/VIME/Abalone/logging/val_loss_0.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 9
+Class label len :9
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Unique y_true : 9
+Unique train : 9
+
+Prediction shape : (836,)
+Probabilities shape : (836, 9) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 9
+Probabilities shape: (836, 9)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 4.47114, 'Log Loss - std': 0.0, 'AUC - mean': 0.6221252513004921, 'AUC - std': 0.0, 'Accuracy - mean': 0.33133971291866027, 'Accuracy - std': 0.0, 'F1 score - mean': 0.2736291565161711, 'F1 score - std': 0.0} 
+ 
+
+Fold 2
+num_features : 8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (3341, 8)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [1, 2, 3, 4, 5, 6, 7]
+Cat Dims V1 : []
+Cat Idx V1 : [0] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[1.0 0.0 0.0 0.051808811977212994 0.1209546838869621]
+ [0.0 0.0 1.0 -0.6975125768360658 -0.43337947093655044]
+ [0.0 1.0 0.0 -1.613349829830073 -1.5420477805835755]
+ [0.0 1.0 0.0 -0.8223994749716125 -1.0885016539097927]
+ [1.0 0.0 0.0 0.051808811977212994 0.07056066981209727]
+ [1.0 0.0 0.0 0.17669571011275956 0.17134869796182692]
+ [0.0 0.0 1.0 -0.40610981451979106 -0.3829854568616856]
+ [1.0 0.0 0.0 0.21832467615794174 0.3225307401864214]
+ [0.0 0.0 1.0 -0.7807705089264303 -0.5845615131611449]
+ [0.0 0.0 1.0 -0.2812229163842445 -0.28219742871195597]] 
+ 
+ 
+Val : (3341, 10) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[1.0 0.0 0.0 0.051808811977212994 0.1209546838869621
+  -0.10725663378676703 -0.30947434175323335 -0.463709340293154
+  -0.35856347602228766 -0.20891180319651964]
+ [0.0 0.0 1.0 -0.6975125768360658 -0.43337947093655044
+  -0.34231364492588795 -0.6402458656513711 -0.6493256004118436
+  -0.6110682244346455 -0.6037444215028267]
+ [0.0 1.0 0.0 -1.613349829830073 -1.5420477805835755 -1.400070195051931
+  -1.2791896167837988 -1.2197560583375726 -1.2951265428608514
+  -1.3216219093324761]
+ [0.0 1.0 0.0 -0.8223994749716125 -1.0885016539097927 -1.04748467834325
+  -0.9782080748516424 -0.9866039267250722 -0.9462108905092297
+  -0.855001542243204]
+ [1.0 0.0 0.0 0.051808811977212994 0.07056066981209727
+  0.24532888292191368 -0.1029989495062593 -0.5519902444959455
+  -0.35856347602228766 0.6525411821990598]
+ [1.0 0.0 0.0 0.17669571011275956 0.17134869796182692
+  -0.34231364492588795 -0.12251652389776423 -0.29393837067240147
+  -0.28510754921141984 0.15002694071830516]
+ [0.0 0.0 1.0 -0.40610981451979106 -0.3829854568616856
+  -0.34231364492588795 -0.6535999954981905 -0.6447983745552902
+  -0.6248412107116832 -0.5319566727198618]
+ [1.0 0.0 0.0 0.21832467615794174 0.3225307401864214 0.24532888292191368
+  0.13737538773648675 -0.20113024061305662 -0.27133456293438213
+  0.5807534334160948]
+ [0.0 0.0 1.0 -0.7807705089264303 -0.5845615131611449 -0.694899161634569
+  -0.8662388322898503 -0.866632441526407 -0.914073922529475
+  -0.7473199190687565]
+ [0.0 0.0 1.0 -0.2812229163842445 -0.28219742871195597
+  -0.10725663378676703 -0.587856587021542 -0.6402711486987368
+  -0.7855260506104564 -0.35248730076244944]] 
+ 
+ 
+Val : (3341, 10) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 10
+Unique values in y_train: (array([0., 1., 2., 3., 4., 5., 6., 7.]), 8)
+Unique values in y_test: (array([0., 1., 2., 3., 4., 5., 6., 7.]), 8)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 8
+Final Test Labels Length: 8
+Final Num Classes: 8
+Final Bin Labels: [0, 1, 2, 3, 4, 5, 6, 7]
+VERIFY SHIFT
+Train after shift : [0 1 2 3 4 5 6 7], Length : 8
+Test after shift : [0 1 2 3 4 5 6 7], Length : 8
+Number of Classes After Bin Verifier: 8
+In get_device
+On Device: cuda
+{'K': 2, 'alpha': 1.1041260180067325, 'beta': 0.18806809637682864, 'p_m': 0.7192123464423629}
+Fitted encoder
+Epoch 0, Val Loss: 2.08541
+Epoch 1, Val Loss: 1.95631
+Epoch 2, Val Loss: 1.97535
+Epoch 3, Val Loss: 1.96744
+Epoch 4, Val Loss: 1.95627
+Epoch 5, Val Loss: 1.94626
+Epoch 6, Val Loss: 1.95107
+Epoch 7, Val Loss: 1.95111
+Epoch 8, Val Loss: 1.94030
+Epoch 9, Val Loss: 1.92223
+Epoch 10, Val Loss: 1.90255
+Epoch 11, Val Loss: 1.92980
+Epoch 12, Val Loss: 1.91960
+Epoch 13, Val Loss: 1.90022
+Epoch 14, Val Loss: 1.89954
+Epoch 15, Val Loss: 1.90298
+Epoch 16, Val Loss: 1.92859
+Epoch 17, Val Loss: 1.92814
+Epoch 18, Val Loss: 2.06524
+Epoch 19, Val Loss: 2.03676
+Epoch 20, Val Loss: 2.01461
+Epoch 21, Val Loss: 1.99999
+Epoch 22, Val Loss: 1.90907
+Epoch 23, Val Loss: 1.89967
+Epoch 24, Val Loss: 1.93060
+Epoch 25, Val Loss: 1.92581
+Epoch 26, Val Loss: 1.88935
+Epoch 27, Val Loss: 1.96457
+Epoch 28, Val Loss: 1.90378
+Epoch 29, Val Loss: 1.91632
+Epoch 30, Val Loss: 1.90783
+Epoch 31, Val Loss: 1.93203
+Epoch 32, Val Loss: 1.88855
+Epoch 33, Val Loss: 1.94771
+Epoch 34, Val Loss: 1.93786
+Epoch 35, Val Loss: 1.93633
+Epoch 36, Val Loss: 1.93452
+Epoch 37, Val Loss: 1.92743
+Epoch 38, Val Loss: 1.95978
+Epoch 39, Val Loss: 1.89422
+Epoch 40, Val Loss: 1.93857
+Epoch 41, Val Loss: 1.92247
+Epoch 42, Val Loss: 1.91297
+Epoch 43, Val Loss: 1.90960
+Epoch 44, Val Loss: 1.90145
+Epoch 45, Val Loss: 1.90207
+Epoch 46, Val Loss: 1.90034
+Epoch 47, Val Loss: 1.88737
+Epoch 48, Val Loss: 1.90546
+Epoch 49, Val Loss: 1.90305
+Epoch 50, Val Loss: 1.89629
+Epoch 51, Val Loss: 1.90103
+Epoch 52, Val Loss: 1.90373
+Epoch 53, Val Loss: 1.89319
+Epoch 54, Val Loss: 1.88648
+Epoch 55, Val Loss: 1.89822
+Epoch 56, Val Loss: 1.90831
+Epoch 57, Val Loss: 1.90919
+Epoch 58, Val Loss: 1.91629
+Epoch 59, Val Loss: 1.90038
+Epoch 60, Val Loss: 1.91308
+Epoch 61, Val Loss: 1.90525
+Epoch 62, Val Loss: 1.90621
+Epoch 63, Val Loss: 1.89560
+Epoch 64, Val Loss: 1.89817
+Epoch 65, Val Loss: 1.89116
+Epoch 66, Val Loss: 1.89252
+Epoch 67, Val Loss: 1.88165
+Epoch 68, Val Loss: 1.90976
+Epoch 69, Val Loss: 1.89217
+Epoch 70, Val Loss: 1.87961
+Epoch 71, Val Loss: 1.89067
+Epoch 72, Val Loss: 1.88122
+Epoch 73, Val Loss: 1.87600
+Epoch 74, Val Loss: 1.88344
+Epoch 75, Val Loss: 1.88347
+Epoch 76, Val Loss: 1.89686
+Epoch 77, Val Loss: 1.89444
+Epoch 78, Val Loss: 1.89133
+Epoch 79, Val Loss: 1.89701
+Epoch 80, Val Loss: 1.87954
+Epoch 81, Val Loss: 1.92582
+Epoch 82, Val Loss: 2.02359
+Epoch 83, Val Loss: 1.99226
+Epoch 84, Val Loss: 1.99094
+Epoch 85, Val Loss: 1.98705
+Epoch 86, Val Loss: 1.98237
+Epoch 87, Val Loss: 1.98204
+Epoch 88, Val Loss: 1.98578
+Epoch 89, Val Loss: 1.87282
+Epoch 90, Val Loss: 1.88694
+Epoch 91, Val Loss: 1.88989
+Epoch 92, Val Loss: 1.88135
+Epoch 93, Val Loss: 1.89677
+Epoch 94, Val Loss: 1.88473
+Epoch 95, Val Loss: 1.89575
+Epoch 96, Val Loss: 1.89988
+Epoch 97, Val Loss: 1.90425
+Epoch 98, Val Loss: 1.88486
+Epoch 99, Val Loss: 1.88728
+State of save is True b4 loss saving
+Log file exists at: output/VIME/Abalone/logging/loss_1.txt
+File name : output/VIME/Abalone/logging/loss_1.txt . The file was saved
+Log file exists at: output/VIME/Abalone/logging/val_loss_1.txt
+File name : output/VIME/Abalone/logging/val_loss_1.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 8
+Class label len :8
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7]
+Unique y_true : 8
+Unique train : 8
+
+Prediction shape : (836,)
+Probabilities shape : (836, 8) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 8
+Probabilities shape: (836, 8)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 4.287535, 'Log Loss - std': 0.18360500000000002, 'AUC - mean': 0.6463224710533675, 'AUC - std': 0.024197219752875365, 'Accuracy - mean': 0.3486842105263158, 'Accuracy - std': 0.017344497607655524, 'F1 score - mean': 0.3042328296301916, 'F1 score - std': 0.03060367311402054} 
+ 
+
+Fold 3
+num_features : 8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (3342, 8)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [1, 2, 3, 4, 5, 6, 7]
+Cat Dims V1 : []
+Cat Idx V1 : [0] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5698320158539575 -0.4271699725795722]
+ [0.0 0.0 1.0 -1.4435910400327316 -1.4336221198959578]
+ [1.0 0.0 0.0 0.05428157284516671 0.12637870844443994]
+ [0.0 0.0 1.0 -0.6946547335937824 -0.4271699725795722]
+ [1.0 0.0 0.0 0.05428157284516671 0.07605610107862061]
+ [0.0 0.0 1.0 -0.4034017255341914 -0.37684736521375284]
+ [1.0 0.0 0.0 0.22071186316493327 0.3276691379077173]
+ [1.0 0.0 0.0 0.012674000265225062 -0.27620215048211416]
+ [0.0 0.0 1.0 -0.7778698787536658 -0.5781377946770302]
+ [0.0 0.0 1.0 -0.27857900779436645 -0.27620215048211416]] 
+ 
+ 
+Val : (3342, 10) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5698320158539575 -0.4271699725795722 -1.0389280503395208
+  -0.6347153561730201 -0.6005026730450418 -0.7223571148557317
+  -0.6306854501095174]
+ [0.0 0.0 1.0 -1.4435910400327316 -1.4336221198959578 -1.156125699169423
+  -1.2182459667920271 -1.160980331721523 -1.1969622573764345
+  -1.2017803823001665]
+ [1.0 0.0 0.0 0.05428157284516671 0.12637870844443994
+  -0.10134685970030412 -0.3050256177643609 -0.4570203924238625
+  -0.3562331477683324 -0.2023642509665306]
+ [0.0 0.0 1.0 -0.6946547335937824 -0.4271699725795722 -0.3357421573601085
+  -0.6306700833091101 -0.6408570644697484 -0.6048358414696529
+  -0.5949920168476018]
+ [1.0 0.0 0.0 0.05428157284516671 0.07605610107862061 0.25024608678940174
+  -0.10175065635288713 -0.5444549071773936 -0.3562331477683324
+  0.6542781473194431]
+ [0.0 0.0 1.0 -0.4034017255341914 -0.37684736521375284
+  -0.3357421573601085 -0.6438172201168175 -0.6363732432003366
+  -0.6183959883988158 -0.5236051503237706]
+ [1.0 0.0 0.0 0.22071186316493327 0.3276691379077173 0.25024608678940174
+  0.13489780618584366 -0.19695875879797511 -0.27035221721696706
+  0.5828912807956119]
+ [1.0 0.0 0.0 0.012674000265225062 -0.27620215048211416
+  0.015850789129598055 -0.44762148621718584 -0.7372592217621032
+  -0.3019925600516806 -0.2023642509665306]
+ [0.0 0.0 1.0 -0.7778698787536658 -0.5781377946770302 -0.6873351038498147
+  -0.8531600908241561 -0.8560804854015173 -0.9031590739112376
+  -0.737765749895264]
+ [0.0 0.0 1.0 -0.27857900779436645 -0.27620215048211416
+  -0.10134685970030412 -0.5790928542942586 -0.6318894219309248
+  -0.7765977025723835 -0.3451379840141928]] 
+ 
+ 
+Val : (3342, 10) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 10
+Unique values in y_train: (array([0., 1., 2., 3., 4., 5., 6., 7., 8.]), 9)
+Unique values in y_test: (array([0., 1., 2., 3., 4., 5., 6., 7., 8.]), 9)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 9
+Final Test Labels Length: 9
+Final Num Classes: 9
+Final Bin Labels: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+VERIFY SHIFT
+Train after shift : [0 1 2 3 4 5 6 7 8], Length : 9
+Test after shift : [0 1 2 3 4 5 6 7 8], Length : 9
+Number of Classes After Bin Verifier: 9
+In get_device
+On Device: cuda
+{'K': 2, 'alpha': 1.1041260180067325, 'beta': 0.18806809637682864, 'p_m': 0.7192123464423629}
+Fitted encoder
+Epoch 0, Val Loss: 2.13844
+Epoch 1, Val Loss: 2.11378
+Epoch 2, Val Loss: 2.10107
+Epoch 3, Val Loss: 2.08448
+Epoch 4, Val Loss: 2.10322
+Epoch 5, Val Loss: 2.08711
+Epoch 6, Val Loss: 2.09246
+Epoch 7, Val Loss: 2.07534
+Epoch 8, Val Loss: 2.08013
+Epoch 9, Val Loss: 2.12184
+Epoch 10, Val Loss: 2.11984
+Epoch 11, Val Loss: 2.10684
+Epoch 12, Val Loss: 2.09935
+Epoch 13, Val Loss: 2.18938
+Epoch 14, Val Loss: 2.11931
+Epoch 15, Val Loss: 2.08438
+Epoch 16, Val Loss: 2.08499
+Epoch 17, Val Loss: 2.08202
+Epoch 18, Val Loss: 2.10726
+Epoch 19, Val Loss: 2.08741
+Epoch 20, Val Loss: 2.09095
+Epoch 21, Val Loss: 2.09050
+Epoch 22, Val Loss: 2.07478
+Epoch 23, Val Loss: 2.08017
+Epoch 24, Val Loss: 2.09577
+Epoch 25, Val Loss: 2.07931
+Epoch 26, Val Loss: 2.08640
+Epoch 27, Val Loss: 2.09293
+Epoch 28, Val Loss: 2.09493
+Epoch 29, Val Loss: 2.10150
+Epoch 30, Val Loss: 2.06788
+Epoch 31, Val Loss: 2.07747
+Epoch 32, Val Loss: 2.08617
+Epoch 33, Val Loss: 2.07357
+Epoch 34, Val Loss: 2.08392
+Epoch 35, Val Loss: 2.09000
+Epoch 36, Val Loss: 2.07397
+Epoch 37, Val Loss: 2.07196
+Epoch 38, Val Loss: 2.08061
+Epoch 39, Val Loss: 2.07693
+Epoch 40, Val Loss: 2.09726
+Epoch 41, Val Loss: 2.08595
+Epoch 42, Val Loss: 2.08765
+Epoch 43, Val Loss: 2.07867
+Epoch 44, Val Loss: 2.07171
+Epoch 45, Val Loss: 2.08565
+Epoch 46, Val Loss: 2.07241
+Epoch 47, Val Loss: 2.09238
+Epoch 48, Val Loss: 2.08009
+Epoch 49, Val Loss: 2.07379
+Epoch 50, Val Loss: 2.10544
+Epoch 51, Val Loss: 2.08906
+Early stopping applies.
+State of save is True b4 loss saving
+Log file exists at: output/VIME/Abalone/logging/loss_2.txt
+File name : output/VIME/Abalone/logging/loss_2.txt . The file was saved
+Log file exists at: output/VIME/Abalone/logging/val_loss_2.txt
+File name : output/VIME/Abalone/logging/val_loss_2.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 9
+Class label len :9
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Unique y_true : 9
+Unique train : 9
+
+Prediction shape : (835,)
+Probabilities shape : (835, 9) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 9
+Probabilities shape: (835, 9)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 4.298136666666667, 'Log Loss - std': 0.15066072709531472, 'AUC - mean': 0.6389636127270634, 'AUC - std': 0.02233030573561089, 'Accuracy - mean': 0.33265574114928037, 'Accuracy - std': 0.02672785175272732, 'F1 score - mean': 0.2877134149618425, 'F1 score - std': 0.03420777680610485} 
+ 
+
+Fold 4
+num_features : 8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (3342, 8)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [1, 2, 3, 4, 5, 6, 7]
+Cat Dims V1 : []
+Cat Idx V1 : [0] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5690315405613264 -0.42535969270024443]
+ [0.0 0.0 1.0 -1.4392625570934354 -1.4277233177208453]
+ [1.0 0.0 0.0 0.05256204267589417 0.12594030106108614]
+ [0.0 1.0 0.0 -1.605020845956694 -1.5279596802229054]
+ [0.0 1.0 0.0 -0.8176689738562148 -1.0768960489636352]
+ [1.0 0.0 0.0 0.05256204267589417 0.07582211981005604]
+ [1.0 0.0 0.0 0.17688075932333838 0.17605848231211624]
+ [1.0 0.0 0.0 0.21832033153915312 0.32641302606520656]
+ [1.0 0.0 0.0 0.011122470460079437 -0.2750051489471541]
+ [0.0 0.0 1.0 -0.7762294016404001 -0.5757142364533347]] 
+ 
+ 
+Val : (3342, 10) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5690315405613264 -0.42535969270024443
+  -1.0500768981385924 -0.6384214848190454 -0.6042936766305018
+  -0.7195875197860123 -0.6349568100929689]
+ [0.0 0.0 1.0 -1.4392625570934354 -1.4277233177208453 -1.167955269492567
+  -1.225152073368887 -1.1667739623949986 -1.1982585500483505
+  -1.2058724559266103]
+ [1.0 0.0 0.0 0.05256204267589417 0.12594030106108614
+  -0.10704992730679613 -0.30692378660890945 -0.4602987234747907
+  -0.35032701072649475 -0.20677007571773787]
+ [0.0 1.0 0.0 -1.605020845956694 -1.5279596802229054 -1.403712012200516
+  -1.266843501671389 -1.2117723852561584 -1.2803164409504653
+  -1.312919139520418]
+ [0.0 1.0 0.0 -0.8176689738562148 -1.0768960489636352 -1.0500768981385924
+  -0.9689023189242423 -0.9800305075211857 -0.9338497904748684
+  -0.8490501772805844]
+ [1.0 0.0 0.0 0.05256204267589417 0.07582211981005604 0.24658518675512706
+  -0.10253410151615713 -0.5480456480540523 -0.35032701072649475
+  0.6496033930327244]
+ [1.0 0.0 0.0 0.17688075932333838 0.17605848231211624
+  -0.34280667001474535 -0.1218545195099993 -0.2915546377454418
+  -0.277386663257948 0.1500522029282881]
+ [1.0 0.0 0.0 0.21832033153915312 0.32641302606520656 0.24658518675512706
+  0.13541209903958457 -0.1993078708800643 -0.2637103481075954
+  0.5782389373035192]
+ [1.0 0.0 0.0 0.011122470460079437 -0.2750051489471541
+  0.010828444047178483 -0.45030162540531793 -0.741538866357039
+  -0.2956217501250846 -0.20677007571773787]
+ [0.0 0.0 1.0 -0.7762294016404001 -0.5757142364533347 -0.6964417840766689
+  -0.8580641314858839 -0.8607846869391123 -0.9019383884573792
+  -0.7420034936867765]] 
+ 
+ 
+Val : (3342, 10) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 10
+Unique values in y_train: (array([0., 1., 2., 3., 4., 6., 7., 8., 9.]), 9)
+Unique values in y_test: (array([0., 1., 2., 3., 4., 6., 7., 8., 9.]), 9)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 9
+Final Test Labels Length: 9
+Final Num Classes: 9
+Final Bin Labels: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+VERIFY SHIFT
+Train after shift : [0 1 2 3 4 5 6 7 8], Length : 9
+Test after shift : [0 1 2 3 4 5 6 7 8], Length : 9
+Number of Classes After Bin Verifier: 9
+In get_device
+On Device: cuda
+{'K': 2, 'alpha': 1.1041260180067325, 'beta': 0.18806809637682864, 'p_m': 0.7192123464423629}
+Fitted encoder
+Epoch 0, Val Loss: 2.15346
+Epoch 1, Val Loss: 2.14011
+Epoch 2, Val Loss: 2.14531
+Epoch 3, Val Loss: 2.13233
+Epoch 4, Val Loss: 2.12656
+Epoch 5, Val Loss: 2.12363
+Epoch 6, Val Loss: 2.09533
+Epoch 7, Val Loss: 2.11851
+Epoch 8, Val Loss: 2.10747
+Epoch 9, Val Loss: 2.10387
+Epoch 10, Val Loss: 2.08050
+Epoch 11, Val Loss: 2.09633
+Epoch 12, Val Loss: 2.07654
+Epoch 13, Val Loss: 2.08009
+Epoch 14, Val Loss: 2.07370
+Epoch 15, Val Loss: 2.11657
+Epoch 16, Val Loss: 2.11917
+Epoch 17, Val Loss: 2.11321
+Epoch 18, Val Loss: 2.09073
+Epoch 19, Val Loss: 2.08134
+Epoch 20, Val Loss: 2.14191
+Epoch 21, Val Loss: 2.13419
+Epoch 22, Val Loss: 2.07705
+Epoch 23, Val Loss: 2.07463
+Epoch 24, Val Loss: 2.09157
+Epoch 25, Val Loss: 2.12591
+Epoch 26, Val Loss: 2.08333
+Epoch 27, Val Loss: 2.12427
+Epoch 28, Val Loss: 2.08872
+Epoch 29, Val Loss: 2.13770
+Epoch 30, Val Loss: 2.12085
+Epoch 31, Val Loss: 2.06898
+Epoch 32, Val Loss: 2.07052
+Epoch 33, Val Loss: 2.06978
+Epoch 34, Val Loss: 2.08328
+Epoch 35, Val Loss: 2.09078
+Epoch 36, Val Loss: 2.10899
+Epoch 37, Val Loss: 2.06680
+Epoch 38, Val Loss: 2.07899
+Epoch 39, Val Loss: 2.08232
+Epoch 40, Val Loss: 2.07998
+Epoch 41, Val Loss: 2.09264
+Epoch 42, Val Loss: 2.13144
+Epoch 43, Val Loss: 2.10270
+Epoch 44, Val Loss: 2.08521
+Epoch 45, Val Loss: 2.10703
+Epoch 46, Val Loss: 2.10596
+Epoch 47, Val Loss: 2.08187
+Epoch 48, Val Loss: 2.08401
+Epoch 49, Val Loss: 2.07360
+Epoch 50, Val Loss: 2.08257
+Epoch 51, Val Loss: 2.03902
+Epoch 52, Val Loss: 2.05761
+Epoch 53, Val Loss: 2.04992
+Epoch 54, Val Loss: 2.07758
+Epoch 55, Val Loss: 2.05310
+Epoch 56, Val Loss: 2.05641
+Epoch 57, Val Loss: 2.04200
+Epoch 58, Val Loss: 2.05501
+Epoch 59, Val Loss: 2.06119
+Epoch 60, Val Loss: 2.06389
+Epoch 61, Val Loss: 2.08733
+Epoch 62, Val Loss: 2.05682
+Epoch 63, Val Loss: 2.11980
+Epoch 64, Val Loss: 2.11251
+Epoch 65, Val Loss: 2.04590
+Epoch 66, Val Loss: 2.04126
+Epoch 67, Val Loss: 2.04782
+Epoch 68, Val Loss: 2.06191
+Epoch 69, Val Loss: 2.03324
+Epoch 70, Val Loss: 2.04466
+Epoch 71, Val Loss: 2.03509
+Epoch 72, Val Loss: 2.05228
+Epoch 73, Val Loss: 2.05531
+Epoch 74, Val Loss: 2.04279
+Epoch 75, Val Loss: 2.05525
+Epoch 76, Val Loss: 2.06048
+Epoch 77, Val Loss: 2.04717
+Epoch 78, Val Loss: 2.08191
+Epoch 79, Val Loss: 2.04717
+Epoch 80, Val Loss: 2.04465
+Epoch 81, Val Loss: 2.07242
+Epoch 82, Val Loss: 2.03253
+Epoch 83, Val Loss: 2.05562
+Epoch 84, Val Loss: 2.07462
+Epoch 85, Val Loss: 2.04650
+Epoch 86, Val Loss: 2.04405
+Epoch 87, Val Loss: 2.08554
+Epoch 88, Val Loss: 2.09522
+Epoch 89, Val Loss: 2.10207
+Epoch 90, Val Loss: 2.08150
+Epoch 91, Val Loss: 2.09364
+Epoch 92, Val Loss: 2.08834
+Epoch 93, Val Loss: 2.08719
+Epoch 94, Val Loss: 2.09683
+Epoch 95, Val Loss: 2.08474
+Epoch 96, Val Loss: 2.11681
+Epoch 97, Val Loss: 2.09760
+Epoch 98, Val Loss: 2.08491
+Epoch 99, Val Loss: 2.09465
+State of save is True b4 loss saving
+Log file exists at: output/VIME/Abalone/logging/loss_3.txt
+File name : output/VIME/Abalone/logging/loss_3.txt . The file was saved
+Log file exists at: output/VIME/Abalone/logging/val_loss_3.txt
+File name : output/VIME/Abalone/logging/val_loss_3.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 9
+Class label len :9
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Unique y_true : 9
+Unique train : 9
+
+Prediction shape : (835,)
+Probabilities shape : (835, 9) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 9
+Probabilities shape: (835, 9)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 4.19486, 'Log Loss - std': 0.2214095766898985, 'AUC - mean': 0.6754419022873611, 'AUC - std': 0.0660755532963528, 'Accuracy - mean': 0.32883312322722974, 'Accuracy - std': 0.024075314490589212, 'F1 score - mean': 0.2894976990265092, 'F1 score - std': 0.029785567048194402} 
+ 
+
+Fold 5
+num_features : 8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :8
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0]
+ordinal_idx : None
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X shape : (3342, 8)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Numerical Index V1 : [1, 2, 3, 4, 5, 6, 7]
+Cat Dims V1 : []
+Cat Idx V1 : [0] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5902805359689328 -0.4481428509674965]
+ [0.0 0.0 1.0 -1.4674337379289928 -1.4602346254866023]
+ [1.0 0.0 0.0 0.036257465431109887 0.10850762501801176]
+ [0.0 0.0 1.0 -0.7155881362489415 -0.4481428509674965]
+ [0.0 1.0 0.0 -1.634510538302337 -1.561443802938513]
+ [0.0 1.0 0.0 -0.8408957365289501 -1.1060025044049155]
+ [1.0 0.0 0.0 0.1615650657111185 0.15911221374396708]
+ [0.0 0.0 1.0 -0.42320373559558844 -0.39753826224154115]
+ [1.0 0.0 0.0 0.20333426580445474 0.31092597992183313]
+ [1.0 0.0 0.0 -0.0055117346622263206 -0.29632908478963044]] 
+ 
+ 
+Val : (3342, 10) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [1, 2, 3, 4, 5, 6, 7] 
+
+
+OHE Idx : [0, 1, 2]
+
+
+Ordinal Idx V2: None
+
+
+Cat Dims V2 : []
+Cat Idx V2 : None 
+ 
+
+Train: [[0.0 0.0 1.0 -0.5902805359689328 -0.4481428509674965 -1.0550394761935622
+  -0.652531118203336 -0.6203614871572382 -0.7346462314941438
+  -0.6481967718014128]
+ [0.0 0.0 1.0 -1.4674337379289928 -1.4602346254866023 -1.172782811845699
+  -1.2399035204261921 -1.1817207861619912 -1.2109175474628806
+  -1.2256252900914224]
+ [1.0 0.0 0.0 0.036257465431109887 0.10850762501801176
+  -0.11309279097646885 -0.32067080082959054 -0.4766535066120213
+  -0.3672369306039755 -0.21512538308390547]
+ [0.0 0.0 1.0 -0.7155881362489415 -0.4481428509674965 -0.3485794622807424
+  -0.6484592124686889 -0.6607793566855803 -0.6167123818256947
+  -0.6121074894082871]
+ [0.0 1.0 0.0 -1.634510538302337 -1.561443802938513 -1.4082694831499722
+  -1.2816405542063258 -1.2266295300823715 -1.292564058771807
+  -1.3338931372707994]
+ [0.0 1.0 0.0 -0.8408957365289501 -1.1060025044049155 -1.0550394761935622
+  -0.9833734591434197 -0.9953494988924132 -0.9478343443563404
+  -0.8647324661601664]
+ [1.0 0.0 0.0 0.1615650657111185 0.15911221374396708 -0.3485794622807424
+  -0.13539908990314378 -0.30824571691059555 -0.29466225388492984
+  0.14576744084735074]
+ [0.0 0.0 1.0 -0.42320373559558844 -0.39753826224154115
+  -0.3485794622807424 -0.6616929061062923 -0.6562884822935423
+  -0.6303201337105158 -0.5399289246220358]
+ [1.0 0.0 0.0 0.20333426580445474 0.31092597992183313 0.24013721597994078
+  0.12214894781329044 -0.21618279187381598 -0.28105450200010873
+  0.578838829564858]
+ [1.0 0.0 0.0 -0.0055117346622263206 -0.29632908478963044
+  0.0046505446756679135 -0.4642054779759037 -0.7573331561143978
+  -0.31280592306469124 -0.21512538308390547]] 
+ 
+ 
+Val : (3342, 10) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Classes B4 Bin Verifier: 10
+Unique values in y_train: (array([0., 1., 2., 3., 4., 5., 6., 7.]), 8)
+Unique values in y_test: (array([0., 1., 2., 3., 4., 5., 6., 7.]), 8)
+WE ARE IN THE GUTTERS!!!!!
+Final Train Labels Length: 8
+Final Test Labels Length: 8
+Final Num Classes: 8
+Final Bin Labels: [0, 1, 2, 3, 4, 5, 6, 7]
+VERIFY SHIFT
+Train after shift : [0 1 2 3 4 5 6 7], Length : 8
+Test after shift : [0 1 2 3 4 5 6 7], Length : 8
+Number of Classes After Bin Verifier: 8
+In get_device
+On Device: cuda
+{'K': 2, 'alpha': 1.1041260180067325, 'beta': 0.18806809637682864, 'p_m': 0.7192123464423629}
+Fitted encoder
+Epoch 0, Val Loss: 2.08479
+Epoch 1, Val Loss: 2.15362
+Epoch 2, Val Loss: 2.10710
+Epoch 3, Val Loss: 1.96574
+Epoch 4, Val Loss: 1.95248
+Epoch 5, Val Loss: 1.94906
+Epoch 6, Val Loss: 1.94371
+Epoch 7, Val Loss: 1.94065
+Epoch 8, Val Loss: 1.93666
+Epoch 9, Val Loss: 1.92978
+Epoch 10, Val Loss: 1.90876
+Epoch 11, Val Loss: 1.93333
+Epoch 12, Val Loss: 1.95751
+Epoch 13, Val Loss: 1.92326
+Epoch 14, Val Loss: 1.93438
+Epoch 15, Val Loss: 1.91488
+Epoch 16, Val Loss: 1.93027
+Epoch 17, Val Loss: 1.90486
+Epoch 18, Val Loss: 1.91001
+Epoch 19, Val Loss: 1.91208
+Epoch 20, Val Loss: 1.91401
+Epoch 21, Val Loss: 1.91328
+Epoch 22, Val Loss: 1.91114
+Epoch 23, Val Loss: 1.90013
+Epoch 24, Val Loss: 1.89095
+Epoch 25, Val Loss: 1.89708
+Epoch 26, Val Loss: 1.91343
+Epoch 27, Val Loss: 1.89686
+Epoch 28, Val Loss: 1.91046
+Epoch 29, Val Loss: 1.90675
+Epoch 30, Val Loss: 1.88779
+Epoch 31, Val Loss: 1.91843
+Epoch 32, Val Loss: 1.89774
+Epoch 33, Val Loss: 1.90205
+Epoch 34, Val Loss: 1.92232
+Epoch 35, Val Loss: 1.90919
+Epoch 36, Val Loss: 1.92263
+Epoch 37, Val Loss: 1.90340
+Epoch 38, Val Loss: 1.92029
+Epoch 39, Val Loss: 1.92606
+Epoch 40, Val Loss: 1.89814
+Epoch 41, Val Loss: 1.90303
+Epoch 42, Val Loss: 1.89518
+Epoch 43, Val Loss: 1.90534
+Epoch 44, Val Loss: 1.90205
+Epoch 45, Val Loss: 1.89979
+Epoch 46, Val Loss: 1.90297
+Epoch 47, Val Loss: 1.89176
+Epoch 48, Val Loss: 1.88643
+Epoch 49, Val Loss: 1.88535
+Epoch 50, Val Loss: 1.89008
+Epoch 51, Val Loss: 1.88741
+Epoch 52, Val Loss: 1.92187
+Epoch 53, Val Loss: 1.88086
+Epoch 54, Val Loss: 1.88280
+Epoch 55, Val Loss: 1.88651
+Epoch 56, Val Loss: 1.89421
+Epoch 57, Val Loss: 1.89355
+Epoch 58, Val Loss: 1.88849
+Epoch 59, Val Loss: 1.88095
+Epoch 60, Val Loss: 1.91343
+Epoch 61, Val Loss: 1.89803
+Epoch 62, Val Loss: 1.87940
+Epoch 63, Val Loss: 1.88798
+Epoch 64, Val Loss: 1.90893
+Epoch 65, Val Loss: 1.89148
+Epoch 66, Val Loss: 1.89750
+Epoch 67, Val Loss: 1.89868
+Epoch 68, Val Loss: 1.88403
+Epoch 69, Val Loss: 1.89565
+Epoch 70, Val Loss: 1.88619
+Epoch 71, Val Loss: 1.88550
+Epoch 72, Val Loss: 1.87549
+Epoch 73, Val Loss: 1.89344
+Epoch 74, Val Loss: 1.90382
+Epoch 75, Val Loss: 1.88294
+Epoch 76, Val Loss: 1.89800
+Epoch 77, Val Loss: 1.88781
+Epoch 78, Val Loss: 1.89305
+Epoch 79, Val Loss: 1.89666
+Epoch 80, Val Loss: 1.89045
+Epoch 81, Val Loss: 1.89326
+Epoch 82, Val Loss: 1.88964
+Epoch 83, Val Loss: 1.89732
+Epoch 84, Val Loss: 1.90026
+Epoch 85, Val Loss: 1.90674
+Epoch 86, Val Loss: 1.89991
+Epoch 87, Val Loss: 1.90903
+Epoch 88, Val Loss: 1.87758
+Epoch 89, Val Loss: 1.88157
+Epoch 90, Val Loss: 1.88550
+Epoch 91, Val Loss: 1.88595
+Epoch 92, Val Loss: 1.89022
+Epoch 93, Val Loss: 1.87753
+Early stopping applies.
+State of save is True b4 loss saving
+Log file exists at: output/VIME/Abalone/logging/loss_4.txt
+File name : output/VIME/Abalone/logging/loss_4.txt . The file was saved
+Log file exists at: output/VIME/Abalone/logging/val_loss_4.txt
+File name : output/VIME/Abalone/logging/val_loss_4.txt . The file was saved
+Saved Losses and Regularization
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+B4 Evaluation
+Number of classes : 8
+Class label len :8
+Class labels : [0, 1, 2, 3, 4, 5, 6, 7]
+Unique y_true : 8
+Unique train : 8
+
+Prediction shape : (835,)
+Probabilities shape : (835, 8) 
+
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 
+
+IN SCORER EVAL
+y_true classes: 8
+Probabilities shape: (835, 8)
+DONE IN SCORER EVAL
+After Evaluation
+{'Log Loss - mean': 4.104412, 'Log Loss - std': 0.2682184246766058, 'AUC - mean': 0.6761229474440511, 'AUC - std': 0.05911546569855584, 'Accuracy - mean': 0.34282697762369996, 'Accuracy - std': 0.03531300692004371, 'F1 score - mean': 0.2991238589850668, 'F1 score - std': 0.03286937519480621} 
+ 
+
+Saving model.....
+Results After CV: {'Log Loss - mean': 4.104412, 'Log Loss - std': 0.2682184246766058, 'AUC - mean': 0.6761229474440511, 'AUC - std': 0.05911546569855584, 'Accuracy - mean': 0.34282697762369996, 'Accuracy - std': 0.03531300692004371, 'F1 score - mean': 0.2991238589850668, 'F1 score - std': 0.03286937519480621}
+Train time: 22.230446993000005
+Inference time: 0.03706021939999573
+Finished cross validation
+Loss path :output/VIME/Abalone/logging/
+Plots saved successfully!
+{'Log Loss - mean': 4.104412, 'Log Loss - std': 0.2682184246766058, 'AUC - mean': 0.6761229474440511, 'AUC - std': 0.05911546569855584, 'Accuracy - mean': 0.34282697762369996, 'Accuracy - std': 0.03531300692004371, 'F1 score - mean': 0.2991238589850668, 'F1 score - std': 0.03286937519480621}
+(22.230446993000005, 0.03706021939999573)
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/allstate.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/black_friday.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/boston.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/diamonds.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/house_prices_nominal.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/house_sales.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/mercedes_benz.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/mip_2016.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/moneyball.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/sat11.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/sensory.yml 
+
+
+
+----------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------
+Training VIME Vesion 1 with Dataset: config/socmob.yml 
+
+
+
+----------------------------------------------------------------------------

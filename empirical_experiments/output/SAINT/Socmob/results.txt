@@ -1,0 +1,398 @@
+2025-05-30 00:35:03.824073
+SAINT - Socmob - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 690.81009
+MSE - std: 57.56108
+R2 - mean: 0.60005
+R2 - std: 0.03333
+
+Train time: 38.125974
+Test time: 0.159343
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 00:44:06.426090
+SAINT - Socmob - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 698.10467
+MSE - std: 51.71728
+R2 - mean: 0.59583
+R2 - std: 0.02994
+
+Train time: 35.793505
+Test time: 0.159108
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 00:54:37.480323
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 777.77855
+MSE - std: 156.16124
+R2 - mean: 0.54970
+R2 - std: 0.09041
+
+Train time: 41.177300
+Test time: 0.155156
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 00:59:46.257648
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 1475.22218
+MSE - std: 752.66999
+R2 - mean: 0.14592
+R2 - std: 0.43576
+
+Train time: 22.429065
+Test time: 0.156974
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:07:30.757521
+SAINT - Socmob - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 847.99824
+MSE - std: 110.46012
+R2 - mean: 0.50905
+R2 - std: 0.06395
+
+Train time: 31.039576
+Test time: 0.161344
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:12:08.861850
+SAINT - Socmob - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 941.24941
+MSE - std: 196.31436
+R2 - mean: 0.45506
+R2 - std: 0.11366
+
+Train time: 20.856468
+Test time: 0.156049
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:20:29.794942
+SAINT - Socmob - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1472.75452
+MSE - std: 203.17790
+R2 - mean: 0.14734
+R2 - std: 0.11763
+
+Train time: 32.701200
+Test time: 0.164730
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:28:00.946366
+SAINT - Socmob - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1588.59129
+MSE - std: 289.39725
+R2 - mean: 0.08028
+R2 - std: 0.16755
+
+Train time: 29.166967
+Test time: 0.151104
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:36:08.606638
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 971.74205
+MSE - std: 164.11134
+R2 - mean: 0.43741
+R2 - std: 0.09501
+
+Train time: 31.965731
+Test time: 0.155294
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:41:52.539852
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 1332.36724
+MSE - std: 244.46512
+R2 - mean: 0.22862
+R2 - std: 0.14153
+
+Train time: 24.835746
+Test time: 0.151789
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:50:59.654575
+SAINT - Socmob - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 893.50084
+MSE - std: 117.91377
+R2 - mean: 0.48270
+R2 - std: 0.06827
+
+Train time: 35.938865
+Test time: 0.154938
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-05-30 01:55:53.552020
+SAINT - Socmob - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 1498.34441
+MSE - std: 691.46754
+R2 - mean: 0.13253
+R2 - std: 0.40033
+
+Train time: 21.754834
+Test time: 0.155921
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-04 03:35:11.202438
+SAINT - Socmob - test_model - regression
+
+MSE - mean: 294.61740
+MSE - std: 53.33472
+R2 - mean: 0.82943
+R2 - std: 0.03088
+
+Train time: 276.070303
+Test time: 0.251868
+
+Best Parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.6}
+
+
+2025-06-21 01:49:27.226332
+SAINT - Socmob - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 4.43926
+Log Loss - std: 0.06643
+AUC - mean: 0.71426
+AUC - std: 0.00370
+Accuracy - mean: 0.34487
+Accuracy - std: 0.03265
+F1 score - mean: 0.38560
+F1 score - std: 0.02873
+
+Train time: 48.947248
+Test time: 0.188073
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 01:54:10.052342
+SAINT - Socmob - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 4.63860
+Log Loss - std: 0.04794
+AUC - mean: 0.70822
+AUC - std: 0.00561
+Accuracy - mean: 0.32757
+Accuracy - std: 0.02301
+F1 score - mean: 0.36513
+F1 score - std: 0.01730
+
+Train time: 49.062838
+Test time: 0.188438
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 01:58:27.934439
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 8.73100
+Log Loss - std: 0.03576
+AUC - mean: 0.56862
+AUC - std: 0.00955
+Accuracy - mean: 0.19550
+Accuracy - std: 0.00283
+F1 score - mean: 0.09276
+F1 score - std: 0.01068
+
+Train time: 47.636486
+Test time: 0.162656
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:02:51.151071
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 8.45523
+Log Loss - std: 0.20024
+AUC - mean: 0.57350
+AUC - std: 0.00675
+Accuracy - mean: 0.19723
+Accuracy - std: 0.00509
+F1 score - mean: 0.09391
+F1 score - std: 0.01349
+
+Train time: 48.344277
+Test time: 0.175767
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:07:03.546270
+SAINT - Socmob - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 8.83638
+Log Loss - std: 0.10827
+AUC - mean: 0.53585
+AUC - std: 0.01299
+Accuracy - mean: 0.19608
+Accuracy - std: 0.00356
+F1 score - mean: 0.07902
+F1 score - std: 0.00924
+
+Train time: 47.744414
+Test time: 0.188582
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:11:16.018317
+SAINT - Socmob - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 8.92038
+Log Loss - std: 0.14121
+AUC - mean: 0.56152
+AUC - std: 0.00618
+Accuracy - mean: 0.19608
+Accuracy - std: 0.00356
+F1 score - mean: 0.08071
+F1 score - std: 0.00974
+
+Train time: 48.030699
+Test time: 0.180591
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:15:32.476077
+SAINT - Socmob - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 7.90238
+Log Loss - std: 0.18190
+AUC - mean: 0.58266
+AUC - std: 0.02245
+Accuracy - mean: 0.16494
+Accuracy - std: 0.00216
+F1 score - mean: 0.15651
+F1 score - std: 0.00353
+
+Train time: 47.909604
+Test time: 0.187817
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:19:49.546111
+SAINT - Socmob - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 8.09695
+Log Loss - std: 0.47746
+AUC - mean: 0.57244
+AUC - std: 0.01321
+Accuracy - mean: 0.10150
+Accuracy - std: 0.03453
+F1 score - mean: 0.12836
+F1 score - std: 0.03062
+
+Train time: 48.211502
+Test time: 0.185520
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:24:17.273507
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 6.91082
+Log Loss - std: 0.81251
+AUC - mean: 0.58908
+AUC - std: 0.03462
+Accuracy - mean: 0.19031
+Accuracy - std: 0.02589
+F1 score - mean: 0.17497
+F1 score - std: 0.02008
+
+Train time: 48.572564
+Test time: 0.186881
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:28:39.747514
+SAINT - Socmob - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 6.51814
+Log Loss - std: 0.77052
+AUC - mean: 0.60830
+AUC - std: 0.02374
+Accuracy - mean: 0.15802
+Accuracy - std: 0.04919
+F1 score - mean: 0.14809
+F1 score - std: 0.02959
+
+Train time: 48.379355
+Test time: 0.190340
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:32:54.940156
+SAINT - Socmob - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 7.57924
+Log Loss - std: 0.25038
+AUC - mean: 0.56374
+AUC - std: 0.01152
+Accuracy - mean: 0.20358
+Accuracy - std: 0.00778
+F1 score - mean: 0.12110
+F1 score - std: 0.01534
+
+Train time: 48.314563
+Test time: 0.184675
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+
+2025-06-21 02:37:18.229891
+SAINT - Socmob - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 5.84294
+Log Loss - std: 0.27226
+AUC - mean: 0.59019
+AUC - std: 0.00685
+Accuracy - mean: 0.20704
+Accuracy - std: 0.00356
+F1 score - mean: 0.13044
+F1 score - std: 0.01884
+
+Train time: 48.680017
+Test time: 0.191560
+
+Best Parameters: {'depth': 1, 'dim': 64, 'dropout': 0.2, 'heads': 2}
+
+

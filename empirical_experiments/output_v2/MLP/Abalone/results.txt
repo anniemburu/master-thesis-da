@@ -1,0 +1,410 @@
+2025-05-05 04:22:10.972407
+MLP - Abalone - train_model
+
+Log Loss - mean: 1.88961
+Log Loss - mean_std: 0.03601
+AUC - mean: 0.72772
+AUC - mean_std: 0.03217
+Accuracy - mean: 0.30077
+Accuracy - mean_std: 0.02926
+F1 score - mean: 0.18496
+F1 score - mean_std: 0.01711
+
+Train time: 0.048979
+Test time: 0.000814
+
+Best Parameters: {'n_blocks': 4, 'd_block': 256, 'dropout': 0.045537479089527655, 'd_in': 10, 'd_out': 7}
+
+
+2025-05-07 15:09:56.040550
+MLP - Abalone - test_model
+
+MSE - mean: 1.09737
+MSE - std: 0.00000
+R2 - mean: 0.89568
+R2 - std: 0.00000
+
+Train time: 0.176088
+Test time: 0.001110
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-07 20:57:14.246863
+MLP - Abalone - test_model
+
+MSE - mean: 1.31108
+MSE - std: 0.15025
+R2 - mean: 0.87537
+R2 - std: 0.01428
+
+Train time: 0.178285
+Test time: 0.001131
+
+Best Parameters: {'d_block': 256, 'd_in': 9, 'd_out': 8, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-09 19:09:47.814625
+MLP - Abalone - test_model
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 0.162181
+Test time: 0.001057
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-10 15:06:43.898541
+MLP - Abalone - test_model
+
+MSE - mean: 0.26252
+MSE - std: 0.04545
+R2 - mean: 0.97504
+R2 - std: 0.00432
+
+Train time: 0.167647
+Test time: 0.003302
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 13, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-11 04:50:00.406682
+MLP - Abalone - train_model
+
+MSE - mean: 92.98850
+MSE - mean_std: 7.05850
+R2 - mean: -8.18408
+R2 - mean_std: 1.40810
+
+Train time: 0.046421
+Test time: 0.000414
+
+Best Parameters: {'n_blocks': 2, 'd_block': 256, 'dropout': 0.03190847875416855, 'd_in': 10, 'd_out': 1}
+
+
+2025-05-14 11:37:12.986169
+MLP - Abalone - test_model
+
+MSE - mean: 62.55926
+MSE - std: 1.18849
+R2 - mean: -4.94705
+R2 - std: 0.11298
+
+Train time: 0.146610
+Test time: 0.000710
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 1, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-15 16:01:56.896961
+MLP - Abalone - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 0.130732
+Test time: 0.000913
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-15 16:02:01.736780
+MLP - Abalone - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 0.138295
+Test time: 0.000988
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-16 09:05:55.515431
+MLP - Abalone - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 0.01181
+MSE - std: 0.00185
+R2 - mean: 0.99888
+R2 - std: 0.00018
+
+Train time: 0.127277
+Test time: 0.001079
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 21, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-16 09:06:00.783609
+MLP - Abalone - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 0.02074
+MSE - std: 0.00572
+R2 - mean: 0.99803
+R2 - std: 0.00054
+
+Train time: 0.139096
+Test time: 0.001058
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 21, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-17 11:16:48.664218
+MLP - Abalone - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 0.140002
+Test time: 0.000986
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-17 11:16:54.202885
+MLP - Abalone - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 0.128921
+Test time: 0.000924
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-17 11:17:00.633003
+MLP - Abalone - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 0.128844
+Test time: 0.000990
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.03190847875416855, 'n_blocks': 2}
+
+
+2025-05-18 10:42:32.896059
+MLP - Abalone - test_model - probabilistic_regression - quantile - sturges 
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 0.164056
+Test time: 0.001260
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:38.163116
+MLP - Abalone - test_model - probabilistic_regression - kmeans - sturges 
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 0.148517
+Test time: 0.001110
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:43.092466
+MLP - Abalone - test_model - probabilistic_regression - uniform - sturges 
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 0.169629
+Test time: 0.001207
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:52.508154
+MLP - Abalone - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 1.10362
+MSE - std: 0.00355
+R2 - mean: 0.89509
+R2 - std: 0.00034
+
+Train time: 0.159851
+Test time: 0.001148
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 7, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:42:57.531938
+MLP - Abalone - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.53928
+MSE - std: 0.04953
+R2 - mean: 0.94873
+R2 - std: 0.00471
+
+Train time: 0.168979
+Test time: 0.001115
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 10:43:02.093195
+MLP - Abalone - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.55653
+MSE - std: 0.10243
+R2 - mean: 0.94709
+R2 - std: 0.00974
+
+Train time: 0.142866
+Test time: 0.001565
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 23:38:19.073555
+MLP - Abalone - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 0.26252
+MSE - std: 0.04545
+R2 - mean: 0.97504
+R2 - std: 0.00432
+
+Train time: 0.161002
+Test time: 0.002017
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 13, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 23:38:24.339534
+MLP - Abalone - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 0.01181
+MSE - std: 0.00185
+R2 - mean: 0.99888
+R2 - std: 0.00018
+
+Train time: 0.145644
+Test time: 0.002510
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 21, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 23:38:29.061072
+MLP - Abalone - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 0.02074
+MSE - std: 0.00572
+R2 - mean: 0.99803
+R2 - std: 0.00054
+
+Train time: 0.162716
+Test time: 0.002608
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 21, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 23:38:34.394620
+MLP - Abalone - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 0.26252
+MSE - std: 0.04545
+R2 - mean: 0.97504
+R2 - std: 0.00432
+
+Train time: 0.165460
+Test time: 0.001950
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 13, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 23:38:39.684070
+MLP - Abalone - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 0.01181
+MSE - std: 0.00185
+R2 - mean: 0.99888
+R2 - std: 0.00018
+
+Train time: 0.157657
+Test time: 0.002508
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 21, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-18 23:38:44.960054
+MLP - Abalone - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 0.02074
+MSE - std: 0.00572
+R2 - mean: 0.99803
+R2 - std: 0.00054
+
+Train time: 0.164428
+Test time: 0.002565
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 21, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-20 08:49:59.665373
+MLP - Abalone - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 0.79298
+MSE - std: 0.10312
+R2 - mean: 0.92462
+R2 - std: 0.00980
+
+Train time: 0.162885
+Test time: 0.001831
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 9, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-20 08:50:22.513853
+MLP - Abalone - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 0.34536
+MSE - std: 0.08178
+R2 - mean: 0.96717
+R2 - std: 0.00777
+
+Train time: 0.162169
+Test time: 0.001921
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 12, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+
+2025-05-20 08:50:30.316704
+MLP - Abalone - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 0.37179
+MSE - std: 0.11372
+R2 - mean: 0.96466
+R2 - std: 0.01081
+
+Train time: 0.160607
+Test time: 0.001883
+
+Best Parameters: {'d_block': 256, 'd_in': 10, 'd_out': 12, 'dropout': 0.045537479089527655, 'n_blocks': 4}
+
+

@@ -1,0 +1,122 @@
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+usage: train.py [-h] [-config CONFIG] --model_name MODEL_NAME --dataset
+                DATASET --objective
+                {regression,probabilistic_regression,classification,binary}
+                [--use_gpu] [--gpu_ids GPU_IDS] [--data_parallel]
+                [--optimize_hyperparameters] [--n_trials N_TRIALS]
+                [--direction {minimize,maximize}] --y_distribution
+                {normal,skewed,bimodial,multimodal} [--num_splits NUM_SPLITS]
+                [--num_bins NUM_BINS] [--shuffle] [--seed SEED]
+                [--test_seed TEST_SEED] [--weighted_loss]
+                [--strategy {uniform,quantile,kmeans}]
+                [--binning {sturges,freedman}] [--scale] [--target_encode]
+                [--one_hot_encode] [--ordinal_encode] [--frequency_reg]
+                [--class_comp] [--batch_size BATCH_SIZE]
+                [--val_batch_size VAL_BATCH_SIZE]
+                [--early_stopping_rounds EARLY_STOPPING_ROUNDS]
+                [--epochs EPOCHS] [--logging_period LOGGING_PERIOD]
+                --num_features NUM_FEATURES [--num_classes NUM_CLASSES]
+                [--cat_idx CAT_IDX] [--nominal_idx NOMINAL_IDX]
+                [--ordinal_idx ORDINAL_IDX] [--num_idx NUM_IDX]
+                [--cat_dims CAT_DIMS] [--bin_alt BIN_ALT]
+                [--class_weights CLASS_WEIGHTS] [--dropna_idx DROPNA_IDX]
+                [--miss_cat_idx MISS_CAT_IDX] [--miss_num_idx MISS_NUM_IDX]
+                [--outer_splits OUTER_SPLITS] [--save_results]
+                [--no_save_results]
+train.py: error: argument --strategy: invalid choice: 'quantil' (choose from 'uniform', 'quantile', 'kmeans')
+srun: error: stud-000: task 0: Exited with exit code 2
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (60). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (60). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (21) found smaller than n_clusters (45). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (55). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (49). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (60). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (60). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (21) found smaller than n_clusters (45). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (55). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py:1152: ConvergenceWarning: Number of distinct clusters (23) found smaller than n_clusters (49). Possibly due to duplicate points in X.
+  return fit_method(estimator, *args, **kwargs)
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+usage: train.py [-h] [-config CONFIG] --model_name MODEL_NAME --dataset
+                DATASET --objective
+                {regression,probabilistic_regression,classification,binary}
+                [--use_gpu] [--gpu_ids GPU_IDS] [--data_parallel]
+                [--optimize_hyperparameters] [--n_trials N_TRIALS]
+                [--direction {minimize,maximize}] --y_distribution
+                {normal,skewed,bimodial,multimodal} [--num_splits NUM_SPLITS]
+                [--num_bins NUM_BINS] [--shuffle] [--seed SEED]
+                [--test_seed TEST_SEED] [--weighted_loss]
+                [--strategy {uniform,quantile,kmeans}]
+                [--binning {sturges,freedman}] [--scale] [--target_encode]
+                [--one_hot_encode] [--ordinal_encode] [--frequency_reg]
+                [--class_comp] [--batch_size BATCH_SIZE]
+                [--val_batch_size VAL_BATCH_SIZE]
+                [--early_stopping_rounds EARLY_STOPPING_ROUNDS]
+                [--epochs EPOCHS] [--logging_period LOGGING_PERIOD]
+                --num_features NUM_FEATURES [--num_classes NUM_CLASSES]
+                [--cat_idx CAT_IDX] [--nominal_idx NOMINAL_IDX]
+                [--ordinal_idx ORDINAL_IDX] [--num_idx NUM_IDX]
+                [--cat_dims CAT_DIMS] [--bin_alt BIN_ALT]
+                [--class_weights CLASS_WEIGHTS] [--dropna_idx DROPNA_IDX]
+                [--miss_cat_idx MISS_CAT_IDX] [--miss_num_idx MISS_NUM_IDX]
+                [--outer_splits OUTER_SPLITS] [--save_results]
+                [--no_save_results]
+train.py: error: argument --strategy: invalid choice: 'quantil' (choose from 'uniform', 'quantile', 'kmeans')
+srun: error: stud-000: task 0: Exited with exit code 2

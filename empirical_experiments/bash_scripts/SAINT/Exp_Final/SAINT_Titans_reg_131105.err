@@ -1,0 +1,13 @@
+[I 2025-05-11 09:47:43,548] A new study created in memory with name: SAINT_SAT11_outer1
+[I 2025-05-11 09:59:22,838] Trial 0 finished with value: 2764746.1271859882 and parameters: {'dim': 128, 'depth': 1, 'heads': 4, 'dropout': 0.5}. Best is trial 0 with value: 2764746.1271859882.
+[I 2025-05-11 10:13:54,090] Trial 1 finished with value: 2721083.0437079994 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'dropout': 0.5}. Best is trial 1 with value: 2721083.0437079994.
+[I 2025-05-11 10:41:28,573] Trial 2 finished with value: 2536284.966881587 and parameters: {'dim': 128, 'depth': 12, 'heads': 2, 'dropout': 0.7}. Best is trial 2 with value: 2536284.966881587.
+[I 2025-05-11 10:58:16,257] Trial 3 finished with value: 2011354.731037606 and parameters: {'dim': 32, 'depth': 3, 'heads': 8, 'dropout': 0}. Best is trial 3 with value: 2011354.731037606.
+[I 2025-05-11 11:18:49,151] Trial 4 finished with value: 2315421.725767215 and parameters: {'dim': 32, 'depth': 6, 'heads': 2, 'dropout': 0.6}. Best is trial 3 with value: 2011354.731037606.
+[I 2025-05-11 11:23:17,183] A new study created in memory with name: SAINT_SAT11_outer2
+[I 2025-05-11 11:53:44,633] Trial 0 finished with value: 2401927.540727935 and parameters: {'dim': 32, 'depth': 12, 'heads': 4, 'dropout': 0.6}. Best is trial 0 with value: 2401927.540727935.
+[I 2025-05-11 12:10:27,587] Trial 1 finished with value: 2556961.4353530356 and parameters: {'dim': 256, 'depth': 3, 'heads': 4, 'dropout': 0.8}. Best is trial 0 with value: 2401927.540727935.
+[I 2025-05-11 12:33:35,097] Trial 2 finished with value: 2435844.903118612 and parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'dropout': 0.5}. Best is trial 0 with value: 2401927.540727935.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 131105.0 ON stud-000 CANCELLED AT 2025-05-11T12:41:59 ***
+slurmstepd: error: *** JOB 131105 ON stud-000 CANCELLED AT 2025-05-11T12:41:59 ***

@@ -1,0 +1,430 @@
+2025-06-01 04:04:50.767387
+FTTransformer - SAT11 - test_model - regression
+
+MSE - mean: 5732813.69206
+MSE - std: 32633.49324
+R2 - mean: -0.00720
+R2 - std: 0.00573
+
+Train time: 101.048162
+Test time: 0.139588
+
+Best Parameters: {'learning_rate': 0.004544327453839196, 'weight_decay': 0.000312514807931228}
+
+
+2025-06-04 10:06:51.989545
+FTTransformer - SAT11 - test_model - regression
+
+MSE - mean: 5732813.69206
+MSE - std: 32633.49324
+R2 - mean: -0.00720
+R2 - std: 0.00573
+
+Train time: 101.520444
+Test time: 0.140473
+
+Best Parameters: {'learning_rate': 0.004544327453839196, 'weight_decay': 0.000312514807931228}
+
+
+2025-06-10 08:18:38.565381
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 2794127.81042
+MSE - std: 154906.77335
+R2 - mean: 0.50910
+R2 - std: 0.02722
+
+Train time: 104.357439
+Test time: 0.200385
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 08:27:14.808913
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 2781065.11169
+MSE - std: 238739.79943
+R2 - mean: 0.51140
+R2 - std: 0.04194
+
+Train time: 104.740576
+Test time: 0.205120
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 08:35:56.557719
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 2562616.77994
+MSE - std: 151792.88444
+R2 - mean: 0.54977
+R2 - std: 0.02667
+
+Train time: 105.765709
+Test time: 0.203043
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 08:44:35.886809
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 3121885.61813
+MSE - std: 356698.40908
+R2 - mean: 0.45152
+R2 - std: 0.06267
+
+Train time: 105.267479
+Test time: 0.205541
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 08:53:13.859446
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 2558950.30756
+MSE - std: 110231.29195
+R2 - mean: 0.55042
+R2 - std: 0.01937
+
+Train time: 105.185558
+Test time: 0.197081
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 09:01:58.204090
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 2927881.22535
+MSE - std: 359361.71014
+R2 - mean: 0.48560
+R2 - std: 0.06314
+
+Train time: 106.516945
+Test time: 0.198571
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 09:10:35.748913
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 3009404.57614
+MSE - std: 137713.48908
+R2 - mean: 0.47128
+R2 - std: 0.02419
+
+Train time: 105.056273
+Test time: 0.208812
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 09:19:06.254694
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 2948066.19541
+MSE - std: 167967.45228
+R2 - mean: 0.48205
+R2 - std: 0.02951
+
+Train time: 103.525794
+Test time: 0.208427
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 09:27:40.424610
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 2694394.19757
+MSE - std: 231096.41172
+R2 - mean: 0.52662
+R2 - std: 0.04060
+
+Train time: 103.660515
+Test time: 0.221976
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 09:36:15.587331
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 2522185.07468
+MSE - std: 201643.99993
+R2 - mean: 0.55688
+R2 - std: 0.03543
+
+Train time: 103.897134
+Test time: 0.213543
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 09:44:43.073801
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 2829173.85253
+MSE - std: 472546.83783
+R2 - mean: 0.50294
+R2 - std: 0.08302
+
+Train time: 102.503101
+Test time: 0.197495
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-10 09:53:13.529914
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 2789537.63954
+MSE - std: 55881.86377
+R2 - mean: 0.50991
+R2 - std: 0.00982
+
+Train time: 103.162402
+Test time: 0.209048
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 13:28:49.452613
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 6.81591
+Log Loss - std: 0.12948
+AUC - mean: 0.53346
+AUC - std: 0.02208
+Accuracy - mean: 0.09927
+Accuracy - std: 0.01183
+F1 score - mean: 0.17792
+F1 score - std: 0.01907
+
+Train time: 96.339866
+Test time: 0.215976
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 13:33:39.350068
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 7.13923
+Log Loss - std: 0.33246
+AUC - mean: 0.53025
+AUC - std: 0.03634
+Accuracy - mean: 0.08845
+Accuracy - std: 0.01436
+F1 score - mean: 0.15961
+F1 score - std: 0.02365
+
+Train time: 96.998103
+Test time: 0.220671
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 13:38:28.954809
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 3.72587
+Log Loss - std: 0.04978
+AUC - mean: 0.53095
+AUC - std: 0.03184
+Accuracy - mean: 0.47393
+Accuracy - std: 0.00682
+F1 score - mean: 0.61182
+F1 score - std: 0.00575
+
+Train time: 96.572803
+Test time: 0.217214
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 13:43:39.090672
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 3.11261
+Log Loss - std: 0.06871
+AUC - mean: 0.51288
+AUC - std: 0.03283
+Accuracy - mean: 0.42294
+Accuracy - std: 0.03136
+F1 score - mean: 0.56654
+F1 score - std: 0.02840
+
+Train time: 96.420469
+Test time: 0.225407
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 13:48:26.860388
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 3.86413
+Log Loss - std: 0.20287
+AUC - mean: 0.52983
+AUC - std: 0.03593
+Accuracy - mean: 0.46929
+Accuracy - std: 0.01711
+F1 score - mean: 0.60830
+F1 score - std: 0.01423
+
+Train time: 96.103440
+Test time: 0.221032
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 13:53:16.487550
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 3.00492
+Log Loss - std: 0.03776
+AUC - mean: 0.53158
+AUC - std: 0.02694
+Accuracy - mean: 0.44766
+Accuracy - std: 0.01372
+F1 score - mean: 0.58933
+F1 score - std: 0.01236
+
+Train time: 96.689310
+Test time: 0.212925
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 13:58:02.178863
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 5.91850
+Log Loss - std: 0.16501
+AUC - mean: 0.55459
+AUC - std: 0.00813
+Accuracy - mean: 0.19737
+Accuracy - std: 0.01893
+F1 score - mean: 0.32823
+F1 score - std: 0.02628
+
+Train time: 95.575715
+Test time: 0.232160
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 14:02:50.712447
+FTTransformer - SAT11 - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 6.01623
+Log Loss - std: 0.14908
+AUC - mean: 0.53439
+AUC - std: 0.03023
+Accuracy - mean: 0.18579
+Accuracy - std: 0.00332
+F1 score - mean: 0.31242
+F1 score - std: 0.00470
+
+Train time: 96.284157
+Test time: 0.211660
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 14:07:46.978867
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 3.30539
+Log Loss - std: 0.23072
+AUC - mean: 0.50676
+AUC - std: 0.02846
+Accuracy - mean: 0.49131
+Accuracy - std: 0.00932
+F1 score - mean: 0.65477
+F1 score - std: 0.00830
+
+Train time: 95.908291
+Test time: 0.212252
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 14:12:36.419927
+FTTransformer - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 3.00106
+Log Loss - std: 0.28608
+AUC - mean: 0.52778
+AUC - std: 0.01346
+Accuracy - mean: 0.43839
+Accuracy - std: 0.01003
+F1 score - mean: 0.60600
+F1 score - std: 0.00960
+
+Train time: 96.467342
+Test time: 0.228781
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 14:17:27.027549
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 3.78616
+Log Loss - std: 0.39785
+AUC - mean: 0.53875
+AUC - std: 0.04545
+Accuracy - mean: 0.45153
+Accuracy - std: 0.05064
+F1 score - mean: 0.61661
+F1 score - std: 0.04866
+
+Train time: 97.101128
+Test time: 0.212561
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-06-18 14:22:18.902858
+FTTransformer - SAT11 - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 2.84212
+Log Loss - std: 0.25271
+AUC - mean: 0.53898
+AUC - std: 0.05938
+Accuracy - mean: 0.47393
+Accuracy - std: 0.02629
+F1 score - mean: 0.63861
+F1 score - std: 0.02373
+
+Train time: 95.664679
+Test time: 0.208025
+
+Best Parameters: {'learning_rate': 8.719401475807713e-05, 'weight_decay': 0.0007004339745422863, 'n_blocks': 3, 'd_block': 192, 'attention_n_heads': 8, 'attention_dropout': 0.2, 'ffn_d_hidden': 'None', 'ffn_d_hidden_multiplier': 1.3333333333333333, 'ffn_dropout': 0.1, 'residual_dropout': 0.0}
+
+
+2025-07-09 05:28:30.548144
+FTTransformer - SAT11 - train_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 1.42330
+Log Loss - mean_std: 0.16163
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.37805
+Accuracy - mean_std: 0.06697
+F1 score - mean: 0.54409
+F1 score - mean_std: 0.06974
+
+Train time: 37.851479
+Test time: 0.029539
+
+Best Parameters: {'learning_rate': 0.01, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 128, 'attention_n_heads': 2, 'attention_dropout': 0.1, 'ffn_d_hidden_multiplier': 1, 'ffn_dropout': 0.1, 'residual_dropout': 0.1}
+
+

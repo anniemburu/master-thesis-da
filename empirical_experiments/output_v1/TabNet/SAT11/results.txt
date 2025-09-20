@@ -1,0 +1,14 @@
+2025-01-09 17:32:39.944374
+TabNet - SAT11
+
+MSE - mean: 1184616.84720
+MSE - std: 200788.86767
+R2 - mean: 0.76646
+R2 - std: 0.04245
+
+Train time: 221.852178
+Test time: 0.206264
+
+Best Parameters: {'n_d': 43, 'n_steps': 9, 'gamma': 1.751938929868293, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.10895265262047434, 'mask_type': 'entmax', 'n_a': 43, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

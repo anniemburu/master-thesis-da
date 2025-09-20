@@ -1,0 +1,32 @@
+2025-05-04 17:47:42.261758
+FTTransformer - House_Sales - train_model
+
+Log Loss - mean: 4.79172
+Log Loss - mean_std: 0.08690
+AUC - mean: 0.61379
+AUC - mean_std: 0.06795
+Accuracy - mean: 0.01471
+Accuracy - mean_std: 0.00348
+F1 score - mean: 0.00116
+F1 score - mean_std: 0.00066
+
+Train time: 9.043129
+Test time: 0.309187
+
+Best Parameters: {'learning_rate': 0.00250136728702011, 'weight_decay': 0.00011052492730016369}
+
+
+2025-05-11 02:50:08.340322
+FTTransformer - House_Sales - train_model
+
+MSE - mean: 435954245671.42590
+MSE - mean_std: 17824562271.20536
+R2 - mean: -2.09017
+R2 - mean_std: 0.14739
+
+Train time: 9.264942
+Test time: 0.203532
+
+Best Parameters: {'learning_rate': 0.0008304138365966551, 'weight_decay': 1.4243260329863695e-05}
+
+

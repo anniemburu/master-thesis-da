@@ -1,0 +1,128 @@
+[I 2025-05-02 11:45:44,812] A new study created in memory with name: SAINT_SAT11_outer1
+[W 2025-05-02 12:00:19,990] Trial 0 failed with parameters: {'dim': 64, 'depth': 3, 'heads': 4, 'dropout': 0.7} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 12:00:20,436] Trial 0 failed with value None.
+[I 2025-05-02 12:00:20,439] A new study created in memory with name: SAINT_SAT11_outer2
+[W 2025-05-02 12:12:26,372] Trial 0 failed with parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'dropout': 0.3} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 12:12:26,566] Trial 0 failed with value None.
+[I 2025-05-02 12:12:26,571] A new study created in memory with name: SAINT_SAT11_outer3
+[W 2025-05-02 12:24:42,898] Trial 0 failed with parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'dropout': 0.2} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 12:24:43,093] Trial 0 failed with value None.
+[I 2025-05-02 12:24:43,098] A new study created in memory with name: SAINT_SAT11_outer4
+[W 2025-05-02 12:33:33,880] Trial 0 failed with parameters: {'dim': 32, 'depth': 1, 'heads': 2, 'dropout': 0.8} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 12:33:33,882] Trial 0 failed with value None.
+[I 2025-05-02 12:33:33,884] A new study created in memory with name: SAINT_SAT11_outer5
+[W 2025-05-02 12:46:51,745] Trial 0 failed with parameters: {'dim': 64, 'depth': 6, 'heads': 2, 'dropout': 0.7} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    print(f"Trial Results B4 Saving: {inner_sc.get_results()}")
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-02 12:46:51,941] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 1176, in <module>
+    main(arguments)
+  File "train.py", line 1047, in main
+    agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
+  File "train.py", line 698, in nested_cross_validation
+    best_hp_idx = best_loss_dict.index(min(best_loss_dict))
+ValueError: min() arg is an empty sequence
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-05-02 12:47:31,194] A new study created in memory with name: SAINT_Diamonds_outer1
+[I 2025-05-02 16:45:29,828] Trial 0 finished with value: 0.5438410666666667 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'dropout': 0.8}. Best is trial 0 with value: 0.5438410666666667.
+[I 2025-05-02 17:46:30,014] Trial 1 finished with value: 0.5959711999999999 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'dropout': 0.1}. Best is trial 0 with value: 0.5438410666666667.
+[I 2025-05-02 18:35:28,921] Trial 2 finished with value: 0.5295164333333334 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'dropout': 0.7}. Best is trial 2 with value: 0.5295164333333334.
+[I 2025-05-02 19:27:57,575] Trial 3 finished with value: 0.5843978333333333 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'dropout': 0.5}. Best is trial 2 with value: 0.5295164333333334.
+[I 2025-05-02 20:22:07,965] Trial 4 finished with value: 0.5717123333333334 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'dropout': 0.6}. Best is trial 2 with value: 0.5295164333333334.
+[I 2025-05-02 20:33:25,583] A new study created in memory with name: SAINT_Diamonds_outer2
+[I 2025-05-02 21:26:36,310] Trial 0 finished with value: 0.5293834000000001 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'dropout': 0.5}. Best is trial 0 with value: 0.5293834000000001.
+[I 2025-05-02 23:07:44,635] Trial 1 finished with value: 0.6242384 and parameters: {'dim': 128, 'depth': 12, 'heads': 8, 'dropout': 0}. Best is trial 0 with value: 0.5293834000000001.
+[I 2025-05-02 23:42:51,172] Trial 2 finished with value: 0.5217951333333334 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'dropout': 0.1}. Best is trial 2 with value: 0.5217951333333334.
+[I 2025-05-03 00:47:56,341] Trial 3 finished with value: 0.6108510333333333 and parameters: {'dim': 256, 'depth': 2, 'heads': 8, 'dropout': 0.4}. Best is trial 2 with value: 0.5217951333333334.
+[I 2025-05-03 02:17:14,742] Trial 4 finished with value: 0.5347534666666668 and parameters: {'dim': 32, 'depth': 6, 'heads': 4, 'dropout': 0.7}. Best is trial 2 with value: 0.5217951333333334.
+[I 2025-05-03 02:24:11,706] A new study created in memory with name: SAINT_Diamonds_outer3
+[I 2025-05-03 02:58:53,470] Trial 0 finished with value: 0.5721995333333333 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'dropout': 0.2}. Best is trial 0 with value: 0.5721995333333333.
+[I 2025-05-03 03:38:56,790] Trial 1 finished with value: 0.5934079666666665 and parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'dropout': 0.4}. Best is trial 0 with value: 0.5721995333333333.
+[I 2025-05-03 04:22:03,611] Trial 2 finished with value: 0.5268719 and parameters: {'dim': 64, 'depth': 1, 'heads': 8, 'dropout': 0.6}. Best is trial 2 with value: 0.5268719.
+[I 2025-05-03 05:22:42,494] Trial 3 finished with value: 0.6065422333333333 and parameters: {'dim': 64, 'depth': 12, 'heads': 4, 'dropout': 0.3}. Best is trial 2 with value: 0.5268719.
+[I 2025-05-03 06:34:50,808] Trial 4 finished with value: 0.5700272333333334 and parameters: {'dim': 64, 'depth': 6, 'heads': 8, 'dropout': 0.7}. Best is trial 2 with value: 0.5268719.
+[I 2025-05-03 06:46:46,830] A new study created in memory with name: SAINT_Diamonds_outer4
+[W 2025-05-03 06:47:10,922] Trial 0 failed with parameters: {'dim': 256, 'depth': 6, 'heads': 4, 'dropout': 0.4} because of the following error: AttributeError("'float' object has no attribute 'get_results'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1032, in __call__
+    # Optuna needs to know if the trial failed completely (e.g., all inner folds failed)
+AttributeError: 'float' object has no attribute 'get_results'
+[W 2025-05-03 06:47:10,925] Trial 0 failed with value None.
+[I 2025-05-03 06:47:10,934] A new study created in memory with name: SAINT_Diamonds_outer5
+[I 2025-05-03 07:34:25,210] Trial 0 finished with value: 0.5347241666666667 and parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'dropout': 0.7}. Best is trial 0 with value: 0.5347241666666667.
+[I 2025-05-03 08:10:53,418] Trial 1 finished with value: 0.5559623333333332 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'dropout': 0.4}. Best is trial 0 with value: 0.5347241666666667.
+[I 2025-05-03 08:54:45,699] Trial 2 finished with value: 0.5145727666666666 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'dropout': 0.7}. Best is trial 2 with value: 0.5145727666666666.
+[I 2025-05-03 10:06:59,719] Trial 3 finished with value: 0.6022355 and parameters: {'dim': 256, 'depth': 3, 'heads': 4, 'dropout': 0.2}. Best is trial 2 with value: 0.5145727666666666.
+[I 2025-05-03 11:10:09,655] Trial 4 finished with value: 0.5760739333333333 and parameters: {'dim': 256, 'depth': 1, 'heads': 2, 'dropout': 0.7}. Best is trial 2 with value: 0.5145727666666666.
+Traceback (most recent call last):
+  File "train.py", line 1176, in <module>
+    base_parser.add_argument('--save_results', action='store_true', default=True, help='Save aggregated results file') # Control saving final results
+  File "train.py", line 1047, in main
+    #print(f"Results: {inner_sc.get_results()}")
+  File "train.py", line 697, in nested_cross_validation
+    except Exception as e:
+  File "train.py", line 697, in <listcomp>
+    except Exception as e:
+KeyError: 3
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-05-03 11:21:09,548] A new study created in memory with name: SAINT_House_Prices_Nominal_outer1
+[I 2025-05-03 11:27:42,629] Trial 0 finished with value: 0.9436693999999999 and parameters: {'dim': 64, 'depth': 2, 'heads': 2, 'dropout': 0.7}. Best is trial 0 with value: 0.9436693999999999.
+[I 2025-05-03 11:34:01,451] Trial 1 finished with value: 0.9485783333333334 and parameters: {'dim': 64, 'depth': 2, 'heads': 4, 'dropout': 0.7}. Best is trial 0 with value: 0.9436693999999999.
+[I 2025-05-03 11:39:07,603] Trial 2 finished with value: 0.9320317333333333 and parameters: {'dim': 32, 'depth': 1, 'heads': 4, 'dropout': 0}. Best is trial 2 with value: 0.9320317333333333.
+[I 2025-05-03 11:44:44,450] Trial 3 finished with value: 0.9434037999999999 and parameters: {'dim': 64, 'depth': 1, 'heads': 4, 'dropout': 0.1}. Best is trial 2 with value: 0.9320317333333333.
+[I 2025-05-03 11:50:14,614] Trial 4 finished with value: 0.9136664333333334 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'dropout': 0.1}. Best is trial 4 with value: 0.9136664333333334.
+[I 2025-05-03 11:51:22,049] A new study created in memory with name: SAINT_House_Prices_Nominal_outer2
+[I 2025-05-03 12:00:53,322] Trial 0 finished with value: 1.0318983 and parameters: {'dim': 32, 'depth': 12, 'heads': 8, 'dropout': 0.1}. Best is trial 0 with value: 1.0318983.
+[I 2025-05-03 12:07:26,936] Trial 1 finished with value: 0.976131 and parameters: {'dim': 256, 'depth': 2, 'heads': 4, 'dropout': 0.7}. Best is trial 1 with value: 0.976131.
+[I 2025-05-03 12:15:11,561] Trial 2 finished with value: 0.9520133999999999 and parameters: {'dim': 64, 'depth': 1, 'heads': 2, 'dropout': 0.7}. Best is trial 2 with value: 0.9520133999999999.
+[I 2025-05-03 12:26:32,181] Trial 3 finished with value: 0.9800397333333333 and parameters: {'dim': 256, 'depth': 6, 'heads': 2, 'dropout': 0.8}. Best is trial 2 with value: 0.9520133999999999.
+[I 2025-05-03 12:31:48,640] Trial 4 finished with value: 0.9666456333333334 and parameters: {'dim': 32, 'depth': 2, 'heads': 4, 'dropout': 0.3}. Best is trial 2 with value: 0.9520133999999999.
+[I 2025-05-03 12:33:06,585] A new study created in memory with name: SAINT_House_Prices_Nominal_outer3
+[I 2025-05-03 12:38:27,357] Trial 0 finished with value: 1.0003929 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'dropout': 0.1}. Best is trial 0 with value: 1.0003929.
+[I 2025-05-03 12:46:13,616] Trial 1 finished with value: 1.0139261333333334 and parameters: {'dim': 128, 'depth': 6, 'heads': 4, 'dropout': 0.6}. Best is trial 0 with value: 1.0003929.
+[I 2025-05-03 12:53:30,087] Trial 2 finished with value: 0.9902311666666666 and parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'dropout': 0.7}. Best is trial 2 with value: 0.9902311666666666.
+[I 2025-05-03 12:59:06,800] Trial 3 finished with value: 1.0402638333333334 and parameters: {'dim': 256, 'depth': 1, 'heads': 4, 'dropout': 0.1}. Best is trial 2 with value: 0.9902311666666666.
+[I 2025-05-03 13:07:42,352] Trial 4 finished with value: 1.0342817333333332 and parameters: {'dim': 256, 'depth': 12, 'heads': 2, 'dropout': 0}. Best is trial 2 with value: 0.9902311666666666.
+[I 2025-05-03 13:09:06,438] A new study created in memory with name: SAINT_House_Prices_Nominal_outer4
+[I 2025-05-03 13:15:51,498] Trial 0 finished with value: 0.9079240666666667 and parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'dropout': 0.5}. Best is trial 0 with value: 0.9079240666666667.
+[I 2025-05-03 13:24:56,631] Trial 1 finished with value: 0.8929064666666667 and parameters: {'dim': 256, 'depth': 1, 'heads': 2, 'dropout': 0.8}. Best is trial 1 with value: 0.8929064666666667.
+[I 2025-05-03 13:29:55,698] Trial 2 finished with value: 0.9262633666666668 and parameters: {'dim': 32, 'depth': 2, 'heads': 2, 'dropout': 0.3}. Best is trial 1 with value: 0.8929064666666667.
+[I 2025-05-03 13:35:48,975] Trial 3 finished with value: 0.9699851666666668 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'dropout': 0.4}. Best is trial 1 with value: 0.8929064666666667.
+[I 2025-05-03 13:41:34,473] Trial 4 finished with value: 0.9357227 and parameters: {'dim': 256, 'depth': 3, 'heads': 2, 'dropout': 0.5}. Best is trial 1 with value: 0.8929064666666667.
+[I 2025-05-03 13:42:28,328] A new study created in memory with name: SAINT_House_Prices_Nominal_outer5
+[I 2025-05-03 14:00:23,636] Trial 0 finished with value: 1.0977932 and parameters: {'dim': 64, 'depth': 12, 'heads': 2, 'dropout': 0.8}. Best is trial 0 with value: 1.0977932.
+[I 2025-05-03 14:06:45,867] Trial 1 finished with value: 1.0105849666666666 and parameters: {'dim': 256, 'depth': 1, 'heads': 4, 'dropout': 0.4}. Best is trial 1 with value: 1.0105849666666666.
+[I 2025-05-03 14:15:29,097] Trial 2 finished with value: 1.0484988666666666 and parameters: {'dim': 64, 'depth': 6, 'heads': 2, 'dropout': 0.7}. Best is trial 1 with value: 1.0105849666666666.
+[I 2025-05-03 14:22:11,201] Trial 3 finished with value: 1.0244347333333335 and parameters: {'dim': 256, 'depth': 2, 'heads': 2, 'dropout': 0.7}. Best is trial 1 with value: 1.0105849666666666.
+[I 2025-05-03 14:28:20,141] Trial 4 finished with value: 1.0729314333333333 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'dropout': 0.6}. Best is trial 1 with value: 1.0105849666666666.

@@ -1,0 +1,152 @@
+[I 2025-05-05 04:22:49,399] A new study created in memory with name: CatBoost_Brazillian_Houses_outer1
+[W 2025-05-05 04:22:49,540] Trial 0 failed with parameters: {'learning_rate': 0.12958536094357292, 'max_depth': 7, 'l2_leaf_reg': 6.760066450246185} because of the following error: AttributeError("'NoneType' object has no attribute 'fit'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+[W 2025-05-05 04:22:49,541] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 1194, in <module>
+    main(arguments)
+  File "train.py", line 1065, in main
+    agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
+  File "train.py", line 512, in nested_cross_validation
+    study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-05-05 04:22:54,082] A new study created in memory with name: CatBoost_Abalone_outer1
+[W 2025-05-05 04:22:54,119] Trial 0 failed with parameters: {'learning_rate': 0.11971329997529499, 'max_depth': 9, 'l2_leaf_reg': 1.6135276701479628} because of the following error: AttributeError("'NoneType' object has no attribute 'fit'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+[W 2025-05-05 04:22:54,120] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 1194, in <module>
+    main(arguments)
+  File "train.py", line 1065, in main
+    agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
+  File "train.py", line 512, in nested_cross_validation
+    study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-05-05 04:22:58,710] A new study created in memory with name: CatBoost_House_Sales_outer1
+[W 2025-05-05 04:22:58,791] Trial 0 failed with parameters: {'learning_rate': 0.08049367616188075, 'max_depth': 6, 'l2_leaf_reg': 20.85155403991952} because of the following error: AttributeError("'NoneType' object has no attribute 'fit'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+[W 2025-05-05 04:22:58,792] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 1194, in <module>
+    main(arguments)
+  File "train.py", line 1065, in main
+    agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
+  File "train.py", line 512, in nested_cross_validation
+    study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+srun: error: stud-000: task 0: Exited with exit code 1
+[I 2025-05-05 04:23:03,278] A new study created in memory with name: CatBoost_MIP_outer1
+[W 2025-05-05 04:23:03,539] Trial 0 failed with parameters: {'learning_rate': 0.03960001867819556, 'max_depth': 11, 'l2_leaf_reg': 15.873783938673663} because of the following error: AttributeError("'NoneType' object has no attribute 'fit'").
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+[W 2025-05-05 04:23:03,541] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 1194, in <module>
+    main(arguments)
+  File "train.py", line 1065, in main
+    agg_scorer, avg_train_time, avg_test_time = nested_cross_validation(
+  File "train.py", line 512, in nested_cross_validation
+    study.optimize(objective, n_trials=args.n_trials, n_jobs=1) # n_jobs=1 unless Objective and preprocessing are thread-safe
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 1026, in __call__
+    inner_sc, avg_score, time = evaluate_hyperparameters_cv(
+  File "train.py", line 353, in evaluate_hyperparameters_cv
+    _,_ = curr_model.fit(X_train_inner_proc, y_train_inner_proc, X_val_inner_proc, y_val_inner_proc)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tree_models.py", line 136, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+AttributeError: 'NoneType' object has no attribute 'fit'
+srun: error: stud-000: task 0: Exited with exit code 1

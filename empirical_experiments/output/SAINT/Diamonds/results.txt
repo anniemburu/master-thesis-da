@@ -1,0 +1,398 @@
+2025-05-28 09:50:35.743406
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 698776.59389
+MSE - std: 23934.95994
+R2 - mean: 0.95625
+R2 - std: 0.00150
+
+Train time: 1885.972316
+Test time: 2.934648
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 11:22:52.244382
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 691211.20403
+MSE - std: 24251.40277
+R2 - mean: 0.95673
+R2 - std: 0.00152
+
+Train time: 1922.884814
+Test time: 2.909379
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 12:48:30.356284
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 539678.83635
+MSE - std: 20828.34721
+R2 - mean: 0.96621
+R2 - std: 0.00130
+
+Train time: 1759.357920
+Test time: 2.867309
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 14:10:57.958866
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 555853.87109
+MSE - std: 18590.62151
+R2 - mean: 0.96520
+R2 - std: 0.00116
+
+Train time: 1711.659923
+Test time: 2.798881
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 15:31:08.603170
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 541351.64375
+MSE - std: 27601.24670
+R2 - mean: 0.96611
+R2 - std: 0.00173
+
+Train time: 1651.441317
+Test time: 2.838715
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 16:53:32.368506
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 593434.59521
+MSE - std: 32293.59782
+R2 - mean: 0.96285
+R2 - std: 0.00202
+
+Train time: 1707.966778
+Test time: 2.876736
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 18:20:43.739858
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 449935.24670
+MSE - std: 30523.51866
+R2 - mean: 0.97183
+R2 - std: 0.00191
+
+Train time: 1797.991201
+Test time: 2.899399
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 19:49:55.918713
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 455180.88635
+MSE - std: 45173.95218
+R2 - mean: 0.97150
+R2 - std: 0.00283
+
+Train time: 1797.231025
+Test time: 3.055885
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 21:20:32.645731
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 469250.29531
+MSE - std: 18545.09327
+R2 - mean: 0.97062
+R2 - std: 0.00116
+
+Train time: 1755.265607
+Test time: 3.032895
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-28 22:43:07.070639
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 508803.09970
+MSE - std: 31323.99494
+R2 - mean: 0.96815
+R2 - std: 0.00196
+
+Train time: 1606.422658
+Test time: 2.961181
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 00:16:11.200100
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 455917.30097
+MSE - std: 11357.59268
+R2 - mean: 0.97146
+R2 - std: 0.00071
+
+Train time: 2230.394172
+Test time: 3.037906
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 01:38:10.524484
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 520344.56127
+MSE - std: 36902.27302
+R2 - mean: 0.96742
+R2 - std: 0.00231
+
+Train time: 1610.094451
+Test time: 3.068889
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-02 22:44:26.128651
+SAINT - Diamonds - test_model - regression
+
+MSE - mean: 409930.86411
+MSE - std: 15478.73546
+R2 - mean: 0.97434
+R2 - std: 0.00097
+
+Train time: 9482.775432
+Test time: 3.106764
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.5, 'heads': 2}
+
+
+2025-06-18 10:58:33.890023
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 10.52557
+Log Loss - std: 0.03494
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07119
+Accuracy - std: 0.00279
+F1 score - mean: 0.13291
+F1 score - std: 0.00485
+
+Train time: 6945.882568
+Test time: 2.449398
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-18 13:35:29.526210
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 10.54674
+Log Loss - std: 0.03510
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07024
+Accuracy - std: 0.00430
+F1 score - mean: 0.13123
+F1 score - std: 0.00751
+
+Train time: 6971.488630
+Test time: 2.579180
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-18 16:14:08.920412
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 11.26874
+Log Loss - std: 0.00483
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00902
+Accuracy - std: 0.00053
+F1 score - mean: 0.01788
+F1 score - std: 0.00105
+
+Train time: 6870.508847
+Test time: 2.661396
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-18 18:59:27.627125
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 11.27304
+Log Loss - std: 0.02189
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00780
+Accuracy - std: 0.00119
+F1 score - mean: 0.01547
+F1 score - std: 0.00235
+
+Train time: 8900.178198
+Test time: 2.421484
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-18 21:47:11.595598
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 11.27353
+Log Loss - std: 0.02052
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00911
+Accuracy - std: 0.00174
+F1 score - mean: 0.01805
+F1 score - std: 0.00342
+
+Train time: 9443.759148
+Test time: 2.437829
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-19 00:35:07.491350
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 11.25881
+Log Loss - std: 0.03568
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00765
+Accuracy - std: 0.00092
+F1 score - mean: 0.01518
+F1 score - std: 0.00180
+
+Train time: 9475.331750
+Test time: 2.479652
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-19 03:23:16.628707
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 11.16296
+Log Loss - std: 0.03910
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01691
+Accuracy - std: 0.00193
+F1 score - mean: 0.03325
+F1 score - std: 0.00373
+
+Train time: 9468.692110
+Test time: 2.510397
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-19 06:11:40.829107
+SAINT - Diamonds - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 11.16352
+Log Loss - std: 0.02236
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01678
+Accuracy - std: 0.00139
+F1 score - mean: 0.03301
+F1 score - std: 0.00270
+
+Train time: 9533.892529
+Test time: 2.440906
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-19 09:00:11.043221
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 11.45072
+Log Loss - std: 0.01779
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00119
+Accuracy - std: 0.00029
+F1 score - mean: 0.00237
+F1 score - std: 0.00058
+
+Train time: 9201.111419
+Test time: 2.657878
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-19 11:59:40.271975
+SAINT - Diamonds - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 11.39980
+Log Loss - std: 0.04382
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00164
+Accuracy - std: 0.00050
+F1 score - mean: 0.00328
+F1 score - std: 0.00100
+
+Train time: 8261.544904
+Test time: 3.057738
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-19 14:58:51.572927
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 11.44071
+Log Loss - std: 0.01145
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00142
+Accuracy - std: 0.00007
+F1 score - mean: 0.00284
+F1 score - std: 0.00014
+
+Train time: 6815.504569
+Test time: 3.030626
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-19 17:50:17.781919
+SAINT - Diamonds - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 11.41347
+Log Loss - std: 0.00941
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00173
+Accuracy - std: 0.00017
+F1 score - mean: 0.00345
+F1 score - std: 0.00033
+
+Train time: 8547.659853
+Test time: 2.464035
+
+Best Parameters: {'depth': 6, 'dim': 128, 'dropout': 0.6, 'heads': 2}
+
+

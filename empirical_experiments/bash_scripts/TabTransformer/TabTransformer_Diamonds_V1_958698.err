@@ -1,0 +1,129 @@
+[I 2025-01-20 07:31:32,388] Using an existing study with name 'TabTransformer_Diamonds' instead of creating a new one.
+[I 2025-01-20 08:16:10,846] Trial 5 finished with value: 2849335.9609772298 and parameters: {'dim': 128, 'depth': 3, 'heads': 4, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.4}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 10:20:44,662] Trial 6 finished with value: 14620005.883035967 and parameters: {'dim': 64, 'depth': 12, 'heads': 4, 'weight_decay': -1, 'learning_rate': -5, 'dropout': 0.1}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 10:50:14,012] Trial 7 finished with value: 14592126.943941653 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -5, 'dropout': 0.2}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 11:31:41,614] Trial 8 finished with value: 541647.0596231337 and parameters: {'dim': 128, 'depth': 3, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 11:53:53,673] Trial 9 finished with value: 538228.1556678759 and parameters: {'dim': 128, 'depth': 1, 'heads': 8, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.1}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 12:24:40,522] Trial 10 finished with value: 669996.9998936879 and parameters: {'dim': 64, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 13:08:23,183] Trial 11 finished with value: 4421191.033504702 and parameters: {'dim': 32, 'depth': 3, 'heads': 4, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 13:30:10,768] Trial 12 finished with value: 867603.2743741537 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -3, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 0 with value: 512890.5766758834.
+[I 2025-01-20 13:51:52,131] Trial 13 finished with value: 871027.2268007857 and parameters: {'dim': 32, 'depth': 1, 'heads': 8, 'weight_decay': -2, 'learning_rate': -3, 'dropout': 0.5}. Best is trial 0 with value: 512890.5766758834.
+[W 2025-01-20 13:52:11,582] Trial 14 failed with parameters: {'dim': 256, 'depth': 6, 'heads': 4, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.4} because of the following error: OutOfMemoryError('CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 20.44 MiB is free. Including non-PyTorch memory, this process has 7.76 GiB memory in use. Of the allocated memory 6.95 GiB is allocated by PyTorch, and 695.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)').
+Traceback (most recent call last):
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 126, in fit
+    out = self.model(x_categ, x_cont)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 465, in forward
+    x = self.transformer(x_categ)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 352, in forward
+    x = ff(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 266, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 276, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 298, in forward
+    return self.net(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 20.44 MiB is free. Including non-PyTorch memory, this process has 7.76 GiB memory in use. Of the allocated memory 6.95 GiB is allocated by PyTorch, and 695.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[W 2025-01-20 13:52:11,584] Trial 14 failed with value None.
+Traceback (most recent call last):
+  File "train.py", line 185, in <module>
+    main(arguments)
+  File "train.py", line 156, in main
+    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/study.py", line 475, in optimize
+    _optimize(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 63, in _optimize
+    _optimize_sequential(
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
+    raise func_err
+  File "/home/mburu/.local/lib/python3.8/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "train.py", line 134, in __call__
+    sc, time = cross_validation(model, self.X, self.y, self.args, visual=False)
+  File "train.py", line 46, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 126, in fit
+    out = self.model(x_categ, x_cont)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 465, in forward
+    x = self.transformer(x_categ)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 352, in forward
+    x = ff(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 266, in forward
+    return self.fn(x, **kwargs) + x
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 276, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabtransformer.py", line 298, in forward
+    return self.net(x)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 20.44 MiB is free. Including non-PyTorch memory, this process has 7.76 GiB memory in use. Of the allocated memory 6.95 GiB is allocated by PyTorch, and 695.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: stud-000: task 0: Exited with exit code 1

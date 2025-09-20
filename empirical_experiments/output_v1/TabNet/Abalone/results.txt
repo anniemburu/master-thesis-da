@@ -1,0 +1,14 @@
+2025-01-10 01:27:50.031264
+TabNet - Abalone
+
+MSE - mean: 4.22991
+MSE - std: 0.34198
+R2 - mean: 0.59216
+R2 - std: 0.00803
+
+Train time: 147.539099
+Test time: 0.189856
+
+Best Parameters: {'n_d': 33, 'n_steps': 9, 'gamma': 1.8704976362400025, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.1107777730479582, 'mask_type': 'entmax', 'n_a': 33, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

@@ -1,0 +1,1414 @@
+2025-01-15 02:28:58.414035
+TabNet - Mercedes_Benz
+
+MSE - mean: 81.11755
+MSE - std: 7.73103
+R2 - mean: 0.49515
+R2 - std: 0.04173
+
+Train time: 165.319512
+Test time: 0.401594
+
+Best Parameters: {'n_d': 38, 'n_steps': 3, 'gamma': 1.236205877214998, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 2, 'momentum': 0.007450090592673791, 'mask_type': 'sparsemax', 'n_a': 38, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 02:37:42.408443
+TabNet - Mercedes_Benz
+
+MSE - mean: 78.87270
+MSE - std: 8.78844
+R2 - mean: 0.51033
+R2 - std: 0.03572
+
+Train time: 220.716374
+Test time: 0.654744
+
+Best Parameters: {'n_d': 19, 'n_steps': 10, 'gamma': 1.7659837587496505, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 3, 'momentum': 0.04724891263052116, 'mask_type': 'entmax', 'n_a': 19, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 02:42:17.946917
+TabNet - Mercedes_Benz
+
+MSE - mean: 76.11829
+MSE - std: 7.27940
+R2 - mean: 0.52704
+R2 - std: 0.02894
+
+Train time: 156.885526
+Test time: 0.531487
+
+Best Parameters: {'n_d': 37, 'n_steps': 5, 'gamma': 1.5418476918413568, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 4, 'momentum': 0.026544957363664592, 'mask_type': 'entmax', 'n_a': 37, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 02:47:55.459272
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.64454
+MSE - std: 8.14408
+R2 - mean: 0.53058
+R2 - std: 0.02826
+
+Train time: 167.393460
+Test time: 0.592558
+
+Best Parameters: {'n_d': 29, 'n_steps': 6, 'gamma': 1.7459457276387949, 'cat_emb_dim': 1, 'n_independent': 1, 'n_shared': 5, 'momentum': 0.0825113077247021, 'mask_type': 'entmax', 'n_a': 29, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 02:58:45.099931
+TabNet - Mercedes_Benz
+
+MSE - mean: 79.93601
+MSE - std: 5.74607
+R2 - mean: 0.50235
+R2 - std: 0.02889
+
+Train time: 281.283037
+Test time: 0.671061
+
+Best Parameters: {'n_d': 61, 'n_steps': 10, 'gamma': 1.850493808936265, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.0043581063707074895, 'mask_type': 'sparsemax', 'n_a': 61, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:02:21.989527
+TabNet - Mercedes_Benz
+
+MSE - mean: 79.15821
+MSE - std: 8.57920
+R2 - mean: 0.50864
+R2 - std: 0.03321
+
+Train time: 128.182959
+Test time: 0.542681
+
+Best Parameters: {'n_d': 26, 'n_steps': 3, 'gamma': 1.9972296033073467, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.016454569697271375, 'mask_type': 'entmax', 'n_a': 26, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:09:22.489889
+TabNet - Mercedes_Benz
+
+MSE - mean: 78.06055
+MSE - std: 13.97543
+R2 - mean: 0.51576
+R2 - std: 0.07229
+
+Train time: 177.791825
+Test time: 0.645726
+
+Best Parameters: {'n_d': 17, 'n_steps': 8, 'gamma': 1.5954903860635667, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.292102788468035, 'mask_type': 'sparsemax', 'n_a': 17, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:17:07.602985
+TabNet - Mercedes_Benz
+
+MSE - mean: 77.20293
+MSE - std: 6.78390
+R2 - mean: 0.52002
+R2 - std: 0.02792
+
+Train time: 207.906783
+Test time: 0.637446
+
+Best Parameters: {'n_d': 28, 'n_steps': 9, 'gamma': 1.8387252936115046, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.3170742886804577, 'mask_type': 'entmax', 'n_a': 28, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:22:31.376421
+TabNet - Mercedes_Benz
+
+MSE - mean: 81.17771
+MSE - std: 10.32318
+R2 - mean: 0.49481
+R2 - std: 0.06133
+
+Train time: 157.752715
+Test time: 0.580128
+
+Best Parameters: {'n_d': 38, 'n_steps': 10, 'gamma': 1.5205716129861497, 'cat_emb_dim': 1, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.3580319899668655, 'mask_type': 'entmax', 'n_a': 38, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:31:22.256388
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.00073
+MSE - std: 7.25864
+R2 - mean: 0.53421
+R2 - std: 0.02575
+
+Train time: 229.168054
+Test time: 0.639363
+
+Best Parameters: {'n_d': 16, 'n_steps': 10, 'gamma': 1.4085809194984513, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 1, 'momentum': 0.05279800692544786, 'mask_type': 'sparsemax', 'n_a': 16, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:42:04.702285
+TabNet - Mercedes_Benz
+
+MSE - mean: 183.63195
+MSE - std: 55.04808
+R2 - mean: -0.14783
+R2 - std: 0.34497
+
+Train time: 285.070092
+Test time: 0.614987
+
+Best Parameters: {'n_d': 9, 'n_steps': 7, 'gamma': 1.2096014892291886, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.0010120813298252597, 'mask_type': 'sparsemax', 'n_a': 9, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:48:57.324174
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.72985
+MSE - std: 7.03325
+R2 - mean: 0.52941
+R2 - std: 0.02723
+
+Train time: 188.957495
+Test time: 0.569346
+
+Best Parameters: {'n_d': 48, 'n_steps': 5, 'gamma': 1.349323393665748, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.07604073553809136, 'mask_type': 'sparsemax', 'n_a': 48, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 03:56:00.274948
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.89943
+MSE - std: 5.83344
+R2 - mean: 0.53427
+R2 - std: 0.02043
+
+Train time: 190.436977
+Test time: 0.599562
+
+Best Parameters: {'n_d': 12, 'n_steps': 6, 'gamma': 1.367539072648147, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.09891415068212532, 'mask_type': 'entmax', 'n_a': 12, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:05:46.605498
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.41636
+MSE - std: 8.13314
+R2 - mean: 0.53171
+R2 - std: 0.03228
+
+Train time: 250.009506
+Test time: 0.655151
+
+Best Parameters: {'n_d': 8, 'n_steps': 7, 'gamma': 1.044594479580603, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.09724945889430626, 'mask_type': 'sparsemax', 'n_a': 8, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:10:56.183497
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.03761
+MSE - std: 8.07919
+R2 - mean: 0.54027
+R2 - std: 0.03211
+
+Train time: 149.028751
+Test time: 0.547092
+
+Best Parameters: {'n_d': 17, 'n_steps': 5, 'gamma': 1.3612898649294085, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.11476070650657906, 'mask_type': 'entmax', 'n_a': 17, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:17:48.660624
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.72735
+MSE - std: 7.46315
+R2 - mean: 0.55445
+R2 - std: 0.03005
+
+Train time: 190.429836
+Test time: 0.558246
+
+Best Parameters: {'n_d': 20, 'n_steps': 5, 'gamma': 1.0138857864391857, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.16019204782136584, 'mask_type': 'entmax', 'n_a': 20, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:22:24.788776
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.12437
+MSE - std: 6.48743
+R2 - mean: 0.55185
+R2 - std: 0.02270
+
+Train time: 140.159424
+Test time: 0.541651
+
+Best Parameters: {'n_d': 23, 'n_steps': 4, 'gamma': 1.0464496254829871, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.1893250453863416, 'mask_type': 'entmax', 'n_a': 23, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:27:05.412416
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.40988
+MSE - std: 7.12236
+R2 - mean: 0.53768
+R2 - std: 0.02741
+
+Train time: 143.354566
+Test time: 0.529587
+
+Best Parameters: {'n_d': 25, 'n_steps': 4, 'gamma': 1.002477234414176, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.15391100982636738, 'mask_type': 'entmax', 'n_a': 25, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:30:44.997263
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.33373
+MSE - std: 7.74705
+R2 - mean: 0.54450
+R2 - std: 0.03240
+
+Train time: 122.426747
+Test time: 0.521539
+
+Best Parameters: {'n_d': 46, 'n_steps': 4, 'gamma': 1.160369220431526, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.18469827784411139, 'mask_type': 'entmax', 'n_a': 46, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:36:36.568273
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.51675
+MSE - std: 7.70318
+R2 - mean: 0.54946
+R2 - std: 0.03374
+
+Train time: 174.550968
+Test time: 0.528080
+
+Best Parameters: {'n_d': 23, 'n_steps': 4, 'gamma': 1.0856909712729317, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.026705908821899407, 'mask_type': 'entmax', 'n_a': 23, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:40:13.482953
+TabNet - Mercedes_Benz
+
+MSE - mean: 83.66121
+MSE - std: 11.86282
+R2 - mean: 0.48157
+R2 - std: 0.04837
+
+Train time: 126.580668
+Test time: 0.479881
+
+Best Parameters: {'n_d': 32, 'n_steps': 3, 'gamma': 1.1187125651739112, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.011880550153801926, 'mask_type': 'entmax', 'n_a': 32, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:44:29.072623
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.26184
+MSE - std: 7.87352
+R2 - mean: 0.53280
+R2 - std: 0.02938
+
+Train time: 126.605600
+Test time: 0.545845
+
+Best Parameters: {'n_d': 22, 'n_steps': 4, 'gamma': 1.0939378922584677, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.03298707078738598, 'mask_type': 'entmax', 'n_a': 22, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:52:16.362032
+TabNet - Mercedes_Benz
+
+MSE - mean: 129.97553
+MSE - std: 38.76194
+R2 - mean: 0.19714
+R2 - std: 0.21512
+
+Train time: 231.882193
+Test time: 0.540188
+
+Best Parameters: {'n_d': 23, 'n_steps': 4, 'gamma': 1.2573069799284349, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.0025034406114909117, 'mask_type': 'entmax', 'n_a': 23, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 04:58:08.503273
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.82460
+MSE - std: 6.85523
+R2 - mean: 0.55379
+R2 - std: 0.02543
+
+Train time: 165.880355
+Test time: 0.590429
+
+Best Parameters: {'n_d': 34, 'n_steps': 5, 'gamma': 1.0498576569818443, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.19203469428988398, 'mask_type': 'entmax', 'n_a': 34, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:03:58.759723
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.21004
+MSE - std: 8.89451
+R2 - mean: 0.54572
+R2 - std: 0.03777
+
+Train time: 157.757791
+Test time: 0.600202
+
+Best Parameters: {'n_d': 42, 'n_steps': 6, 'gamma': 1.0363829505061228, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.1848886684657223, 'mask_type': 'entmax', 'n_a': 42, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:08:26.827386
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.71250
+MSE - std: 6.60689
+R2 - mean: 0.53559
+R2 - std: 0.02520
+
+Train time: 131.934560
+Test time: 0.532843
+
+Best Parameters: {'n_d': 31, 'n_steps': 5, 'gamma': 1.1803902188451079, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.22671121931774638, 'mask_type': 'entmax', 'n_a': 31, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:13:34.337395
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.08440
+MSE - std: 7.26212
+R2 - mean: 0.53982
+R2 - std: 0.02672
+
+Train time: 149.408740
+Test time: 0.585513
+
+Best Parameters: {'n_d': 54, 'n_steps': 5, 'gamma': 1.27686776481531, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.05417907604440197, 'mask_type': 'entmax', 'n_a': 54, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:18:48.936025
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.30222
+MSE - std: 8.41446
+R2 - mean: 0.54493
+R2 - std: 0.03458
+
+Train time: 152.191697
+Test time: 0.587291
+
+Best Parameters: {'n_d': 33, 'n_steps': 6, 'gamma': 1.0082001603730224, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.13287728458326345, 'mask_type': 'entmax', 'n_a': 33, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:28:07.446989
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.78900
+MSE - std: 7.56582
+R2 - mean: 0.54153
+R2 - std: 0.03211
+
+Train time: 241.008346
+Test time: 0.634627
+
+Best Parameters: {'n_d': 13, 'n_steps': 7, 'gamma': 1.1332362621501468, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.3826711583281101, 'mask_type': 'entmax', 'n_a': 13, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:31:02.709743
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.22594
+MSE - std: 7.18583
+R2 - mean: 0.54512
+R2 - std: 0.02737
+
+Train time: 103.627740
+Test time: 0.506508
+
+Best Parameters: {'n_d': 42, 'n_steps': 3, 'gamma': 1.2993935360323063, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.22409966887637672, 'mask_type': 'entmax', 'n_a': 42, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:35:20.616912
+TabNet - Mercedes_Benz
+
+MSE - mean: 83.00492
+MSE - std: 7.20175
+R2 - mean: 0.48405
+R2 - std: 0.02823
+
+Train time: 148.403582
+Test time: 0.522202
+
+Best Parameters: {'n_d': 35, 'n_steps': 5, 'gamma': 1.2064937675319993, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 3, 'momentum': 0.008346296278787147, 'mask_type': 'entmax', 'n_a': 35, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:40:31.461546
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.83409
+MSE - std: 9.36183
+R2 - mean: 0.55436
+R2 - std: 0.04030
+
+Train time: 153.165819
+Test time: 0.539314
+
+Best Parameters: {'n_d': 21, 'n_steps': 4, 'gamma': 1.0845459008005778, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.03459225232304088, 'mask_type': 'entmax', 'n_a': 21, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:45:31.518030
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.87515
+MSE - std: 7.20945
+R2 - mean: 0.54747
+R2 - std: 0.02496
+
+Train time: 147.782981
+Test time: 0.558513
+
+Best Parameters: {'n_d': 20, 'n_steps': 4, 'gamma': 1.0897609713822098, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.05198165270865695, 'mask_type': 'entmax', 'n_a': 20, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:49:26.555472
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.57395
+MSE - std: 8.34420
+R2 - mean: 0.53674
+R2 - std: 0.03702
+
+Train time: 135.462862
+Test time: 0.489314
+
+Best Parameters: {'n_d': 13, 'n_steps': 3, 'gamma': 1.0723929541214223, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.03685303296239314, 'mask_type': 'entmax', 'n_a': 13, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 05:55:59.373050
+TabNet - Mercedes_Benz
+
+MSE - mean: 77.15489
+MSE - std: 7.90592
+R2 - mean: 0.52015
+R2 - std: 0.04153
+
+Train time: 176.572876
+Test time: 0.568330
+
+Best Parameters: {'n_d': 27, 'n_steps': 5, 'gamma': 1.1453678898065642, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.07422425958205534, 'mask_type': 'entmax', 'n_a': 27, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:00:14.352264
+TabNet - Mercedes_Benz
+
+MSE - mean: 78.83436
+MSE - std: 9.74917
+R2 - mean: 0.51086
+R2 - std: 0.04059
+
+Train time: 136.995216
+Test time: 0.509778
+
+Best Parameters: {'n_d': 20, 'n_steps': 4, 'gamma': 1.4346987788693466, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.01579082464121951, 'mask_type': 'entmax', 'n_a': 20, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:03:49.873423
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.85287
+MSE - std: 8.09116
+R2 - mean: 0.55400
+R2 - std: 0.03183
+
+Train time: 119.478063
+Test time: 0.548511
+
+Best Parameters: {'n_d': 30, 'n_steps': 3, 'gamma': 1.0114648464161384, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.13122543377349247, 'mask_type': 'entmax', 'n_a': 30, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:07:12.875956
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.44373
+MSE - std: 6.37165
+R2 - mean: 0.54358
+R2 - std: 0.02229
+
+Train time: 116.358211
+Test time: 0.497136
+
+Best Parameters: {'n_d': 29, 'n_steps': 3, 'gamma': 1.0075000765317659, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.13016837106714757, 'mask_type': 'entmax', 'n_a': 29, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:11:01.967951
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.03764
+MSE - std: 7.34992
+R2 - mean: 0.54626
+R2 - std: 0.02925
+
+Train time: 127.324900
+Test time: 0.497899
+
+Best Parameters: {'n_d': 39, 'n_steps': 3, 'gamma': 1.579663723949926, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.27150088459764216, 'mask_type': 'sparsemax', 'n_a': 39, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:18:24.462748
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.08080
+MSE - std: 7.74002
+R2 - mean: 0.53364
+R2 - std: 0.03126
+
+Train time: 199.619656
+Test time: 0.601589
+
+Best Parameters: {'n_d': 29, 'n_steps': 6, 'gamma': 1.6332004931254316, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 5, 'momentum': 0.06852829191289932, 'mask_type': 'entmax', 'n_a': 29, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:25:08.228354
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.45193
+MSE - std: 8.18823
+R2 - mean: 0.53777
+R2 - std: 0.03211
+
+Train time: 180.687885
+Test time: 0.608205
+
+Best Parameters: {'n_d': 34, 'n_steps': 5, 'gamma': 1.6784894210247634, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.019538493725273137, 'mask_type': 'entmax', 'n_a': 34, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:29:43.066285
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.69976
+MSE - std: 7.18905
+R2 - mean: 0.54823
+R2 - std: 0.02972
+
+Train time: 140.379462
+Test time: 0.518214
+
+Best Parameters: {'n_d': 25, 'n_steps': 4, 'gamma': 1.0620126888280754, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.174489040849892, 'mask_type': 'entmax', 'n_a': 25, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:32:08.759528
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.56478
+MSE - std: 7.13797
+R2 - mean: 0.53666
+R2 - std: 0.02798
+
+Train time: 98.452160
+Test time: 0.461727
+
+Best Parameters: {'n_d': 19, 'n_steps': 3, 'gamma': 1.1325476125920055, 'cat_emb_dim': 3, 'n_independent': 1, 'n_shared': 4, 'momentum': 0.2410971223940687, 'mask_type': 'entmax', 'n_a': 19, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:36:41.946708
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.53784
+MSE - std: 9.81924
+R2 - mean: 0.54991
+R2 - std: 0.04446
+
+Train time: 133.576342
+Test time: 0.547524
+
+Best Parameters: {'n_d': 30, 'n_steps': 4, 'gamma': 1.2128973913849417, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.10357896667999258, 'mask_type': 'entmax', 'n_a': 30, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:40:39.230892
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.46480
+MSE - std: 7.94933
+R2 - mean: 0.54383
+R2 - std: 0.03162
+
+Train time: 132.727384
+Test time: 0.514580
+
+Best Parameters: {'n_d': 15, 'n_steps': 3, 'gamma': 1.0386215728453558, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.3912283277681905, 'mask_type': 'sparsemax', 'n_a': 15, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:50:11.988435
+TabNet - Mercedes_Benz
+
+MSE - mean: 96.44032
+MSE - std: 15.68850
+R2 - mean: 0.40261
+R2 - std: 0.07163
+
+Train time: 242.501669
+Test time: 0.681929
+
+Best Parameters: {'n_d': 22, 'n_steps': 9, 'gamma': 1.9391822797447245, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.004927824721673261, 'mask_type': 'entmax', 'n_a': 22, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 06:56:10.691759
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.22616
+MSE - std: 6.50176
+R2 - mean: 0.53262
+R2 - std: 0.01962
+
+Train time: 168.434700
+Test time: 0.575697
+
+Best Parameters: {'n_d': 27, 'n_steps': 5, 'gamma': 1.1798052146812033, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.03876982649873784, 'mask_type': 'entmax', 'n_a': 27, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:00:20.906987
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.09936
+MSE - std: 8.27567
+R2 - mean: 0.54012
+R2 - std: 0.03126
+
+Train time: 133.338486
+Test time: 0.564621
+
+Best Parameters: {'n_d': 63, 'n_steps': 4, 'gamma': 1.110521248903824, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 4, 'momentum': 0.14264679445769632, 'mask_type': 'sparsemax', 'n_a': 63, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:07:05.586049
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.28681
+MSE - std: 7.49722
+R2 - mean: 0.55723
+R2 - std: 0.03085
+
+Train time: 182.526463
+Test time: 0.606227
+
+Best Parameters: {'n_d': 38, 'n_steps': 6, 'gamma': 1.0048216589523016, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.08870750405639888, 'mask_type': 'entmax', 'n_a': 38, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:11:38.232324
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.97292
+MSE - std: 8.30879
+R2 - mean: 0.55325
+R2 - std: 0.03399
+
+Train time: 144.574241
+Test time: 0.538787
+
+Best Parameters: {'n_d': 38, 'n_steps': 7, 'gamma': 1.003537640246538, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.07991883219519182, 'mask_type': 'entmax', 'n_a': 38, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:17:59.804826
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.08561
+MSE - std: 7.65001
+R2 - mean: 0.53373
+R2 - std: 0.02906
+
+Train time: 180.617303
+Test time: 0.559781
+
+Best Parameters: {'n_d': 41, 'n_steps': 6, 'gamma': 1.3244138919795985, 'cat_emb_dim': 1, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.06056654851650863, 'mask_type': 'entmax', 'n_a': 41, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:22:29.896094
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.43810
+MSE - std: 7.88891
+R2 - mean: 0.53784
+R2 - std: 0.03049
+
+Train time: 143.687056
+Test time: 0.540923
+
+Best Parameters: {'n_d': 39, 'n_steps': 7, 'gamma': 1.0225316810975857, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 2, 'momentum': 0.09377809931708433, 'mask_type': 'entmax', 'n_a': 39, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:26:21.495777
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.06278
+MSE - std: 6.62934
+R2 - mean: 0.53972
+R2 - std: 0.02431
+
+Train time: 131.968480
+Test time: 0.504543
+
+Best Parameters: {'n_d': 36, 'n_steps': 7, 'gamma': 1.0455519495899885, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.08154430409970045, 'mask_type': 'entmax', 'n_a': 36, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:29:48.823344
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.82401
+MSE - std: 7.05896
+R2 - mean: 0.52894
+R2 - std: 0.02561
+
+Train time: 119.963409
+Test time: 0.494925
+
+Best Parameters: {'n_d': 46, 'n_steps': 6, 'gamma': 1.0025283869310277, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 2, 'momentum': 0.04072988828030864, 'mask_type': 'entmax', 'n_a': 46, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:34:57.017387
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.72105
+MSE - std: 6.78129
+R2 - mean: 0.54203
+R2 - std: 0.02368
+
+Train time: 165.080092
+Test time: 0.538972
+
+Best Parameters: {'n_d': 37, 'n_steps': 6, 'gamma': 1.0763402931015142, 'cat_emb_dim': 2, 'n_independent': 3, 'n_shared': 2, 'momentum': 0.11654489549018499, 'mask_type': 'entmax', 'n_a': 37, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:39:20.437888
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.86916
+MSE - std: 7.16741
+R2 - mean: 0.52864
+R2 - std: 0.02622
+
+Train time: 143.582496
+Test time: 0.572019
+
+Best Parameters: {'n_d': 50, 'n_steps': 8, 'gamma': 1.4567138028427553, 'cat_emb_dim': 2, 'n_independent': 2, 'n_shared': 1, 'momentum': 0.3121593615688262, 'mask_type': 'entmax', 'n_a': 50, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 07:51:57.997565
+TabNet - Mercedes_Benz
+
+MSE - mean: 77.09520
+MSE - std: 9.79167
+R2 - mean: 0.52136
+R2 - std: 0.04461
+
+Train time: 324.424491
+Test time: 0.724718
+
+Best Parameters: {'n_d': 33, 'n_steps': 8, 'gamma': 1.1102605594901793, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.027107051890266954, 'mask_type': 'sparsemax', 'n_a': 33, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:01:23.730780
+TabNet - Mercedes_Benz
+
+MSE - mean: 76.08397
+MSE - std: 7.17684
+R2 - mean: 0.52699
+R2 - std: 0.03150
+
+Train time: 240.934861
+Test time: 0.692822
+
+Best Parameters: {'n_d': 40, 'n_steps': 7, 'gamma': 1.2427689466814422, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.08946531874559567, 'mask_type': 'entmax', 'n_a': 40, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:07:29.569791
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.05860
+MSE - std: 8.64177
+R2 - mean: 0.54637
+R2 - std: 0.03764
+
+Train time: 168.853127
+Test time: 0.656341
+
+Best Parameters: {'n_d': 43, 'n_steps': 5, 'gamma': 1.1707899771905268, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.15309582471575414, 'mask_type': 'entmax', 'n_a': 43, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:10:51.278417
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.19323
+MSE - std: 8.29005
+R2 - mean: 0.53952
+R2 - std: 0.03183
+
+Train time: 116.448729
+Test time: 0.526248
+
+Best Parameters: {'n_d': 37, 'n_steps': 6, 'gamma': 1.061160892640471, 'cat_emb_dim': 2, 'n_independent': 1, 'n_shared': 2, 'momentum': 0.06357235812631949, 'mask_type': 'entmax', 'n_a': 37, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:18:00.715770
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.53247
+MSE - std: 8.59010
+R2 - mean: 0.53752
+R2 - std: 0.03385
+
+Train time: 186.446765
+Test time: 0.668344
+
+Best Parameters: {'n_d': 31, 'n_steps': 5, 'gamma': 1.7805828975729816, 'cat_emb_dim': 1, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.20748531473040815, 'mask_type': 'entmax', 'n_a': 31, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:24:05.234795
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.82957
+MSE - std: 8.82887
+R2 - mean: 0.54814
+R2 - std: 0.03575
+
+Train time: 179.104771
+Test time: 0.585188
+
+Best Parameters: {'n_d': 24, 'n_steps': 4, 'gamma': 1.0378480582494836, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.1698505541328797, 'mask_type': 'entmax', 'n_a': 24, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:29:49.212636
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.93629
+MSE - std: 8.96113
+R2 - mean: 0.54735
+R2 - std: 0.03829
+
+Train time: 168.803841
+Test time: 0.566742
+
+Best Parameters: {'n_d': 17, 'n_steps': 4, 'gamma': 1.0985576577290403, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.11612329406925503, 'mask_type': 'entmax', 'n_a': 17, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:36:16.127593
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.61143
+MSE - std: 8.28313
+R2 - mean: 0.54299
+R2 - std: 0.03342
+
+Train time: 180.130821
+Test time: 0.622192
+
+Best Parameters: {'n_d': 26, 'n_steps': 5, 'gamma': 1.0666562529736037, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.2945618603870864, 'mask_type': 'entmax', 'n_a': 26, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:46:16.305549
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.37265
+MSE - std: 7.98303
+R2 - mean: 0.53159
+R2 - std: 0.03573
+
+Train time: 241.230468
+Test time: 0.725841
+
+Best Parameters: {'n_d': 10, 'n_steps': 7, 'gamma': 1.0293577677437933, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.20465423671732672, 'mask_type': 'entmax', 'n_a': 10, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:52:45.912632
+TabNet - Mercedes_Benz
+
+MSE - mean: 70.66830
+MSE - std: 7.52060
+R2 - mean: 0.56119
+R2 - std: 0.02921
+
+Train time: 177.848200
+Test time: 0.635265
+
+Best Parameters: {'n_d': 18, 'n_steps': 4, 'gamma': 1.0002210363788324, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.13656563814026673, 'mask_type': 'entmax', 'n_a': 18, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 08:57:14.954589
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.46534
+MSE - std: 7.88336
+R2 - mean: 0.54399
+R2 - std: 0.02898
+
+Train time: 135.718343
+Test time: 0.568351
+
+Best Parameters: {'n_d': 16, 'n_steps': 3, 'gamma': 1.004172317795204, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.04795337728630177, 'mask_type': 'entmax', 'n_a': 16, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:03:34.765497
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.70835
+MSE - std: 6.26745
+R2 - mean: 0.53531
+R2 - std: 0.02845
+
+Train time: 169.557934
+Test time: 0.626884
+
+Best Parameters: {'n_d': 21, 'n_steps': 5, 'gamma': 1.1341580342135036, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.12655760988071257, 'mask_type': 'entmax', 'n_a': 21, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:10:01.497224
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.72370
+MSE - std: 7.74799
+R2 - mean: 0.54201
+R2 - std: 0.03211
+
+Train time: 183.757265
+Test time: 0.601744
+
+Best Parameters: {'n_d': 19, 'n_steps': 4, 'gamma': 1.087955687989813, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.08551728388673088, 'mask_type': 'sparsemax', 'n_a': 19, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:18:17.105719
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.79924
+MSE - std: 6.22790
+R2 - mean: 0.54758
+R2 - std: 0.02094
+
+Train time: 211.790123
+Test time: 0.676554
+
+Best Parameters: {'n_d': 34, 'n_steps': 6, 'gamma': 1.0010014459026293, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.2643667291723006, 'mask_type': 'entmax', 'n_a': 34, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:25:36.929237
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.25351
+MSE - std: 7.65337
+R2 - mean: 0.53903
+R2 - std: 0.02785
+
+Train time: 194.668303
+Test time: 0.635530
+
+Best Parameters: {'n_d': 14, 'n_steps': 5, 'gamma': 1.0499912604784738, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.15633999104232005, 'mask_type': 'entmax', 'n_a': 14, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:31:29.136200
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.07243
+MSE - std: 9.56883
+R2 - mean: 0.55301
+R2 - std: 0.04079
+
+Train time: 172.704255
+Test time: 0.570849
+
+Best Parameters: {'n_d': 11, 'n_steps': 4, 'gamma': 1.1503954324652148, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.1972680282182661, 'mask_type': 'entmax', 'n_a': 11, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:37:18.174548
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.84674
+MSE - std: 8.58148
+R2 - mean: 0.55373
+R2 - std: 0.03968
+
+Train time: 172.172080
+Test time: 0.574371
+
+Best Parameters: {'n_d': 11, 'n_steps': 4, 'gamma': 1.1134632736300816, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.10272407729019892, 'mask_type': 'entmax', 'n_a': 11, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:41:44.620999
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.77525
+MSE - std: 8.22938
+R2 - mean: 0.54840
+R2 - std: 0.03139
+
+Train time: 137.501487
+Test time: 0.563317
+
+Best Parameters: {'n_d': 18, 'n_steps': 3, 'gamma': 1.1048443881658334, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.09908534922544861, 'mask_type': 'entmax', 'n_a': 18, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:51:44.573662
+TabNet - Mercedes_Benz
+
+MSE - mean: 85.82250
+MSE - std: 19.23858
+R2 - mean: 0.46626
+R2 - std: 0.11737
+
+Train time: 234.243199
+Test time: 0.729217
+
+Best Parameters: {'n_d': 9, 'n_steps': 8, 'gamma': 1.2044457579659067, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.06849437240290517, 'mask_type': 'entmax', 'n_a': 9, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 09:57:12.229180
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.35291
+MSE - std: 9.05643
+R2 - mean: 0.54469
+R2 - std: 0.03978
+
+Train time: 164.162081
+Test time: 0.584462
+
+Best Parameters: {'n_d': 43, 'n_steps': 4, 'gamma': 1.033492170822166, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 3, 'momentum': 0.10691401059731304, 'mask_type': 'entmax', 'n_a': 43, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:03:51.621729
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.07447
+MSE - std: 6.94460
+R2 - mean: 0.54599
+R2 - std: 0.02695
+
+Train time: 187.378143
+Test time: 0.583524
+
+Best Parameters: {'n_d': 35, 'n_steps': 4, 'gamma': 1.0747572129402578, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.05853960390245949, 'mask_type': 'entmax', 'n_a': 35, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:10:06.898615
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.31281
+MSE - std: 8.39472
+R2 - mean: 0.54480
+R2 - std: 0.03538
+
+Train time: 181.843975
+Test time: 0.591239
+
+Best Parameters: {'n_d': 12, 'n_steps': 5, 'gamma': 1.0225296274996714, 'cat_emb_dim': 3, 'n_independent': 3, 'n_shared': 4, 'momentum': 0.029440485411755476, 'mask_type': 'entmax', 'n_a': 12, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:14:50.933173
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.20884
+MSE - std: 9.22114
+R2 - mean: 0.54590
+R2 - std: 0.03759
+
+Train time: 147.164982
+Test time: 0.578298
+
+Best Parameters: {'n_d': 28, 'n_steps': 3, 'gamma': 1.1234525033878517, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.0772445963356661, 'mask_type': 'entmax', 'n_a': 28, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:22:34.484261
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.59475
+MSE - std: 8.65445
+R2 - mean: 0.53673
+R2 - std: 0.03809
+
+Train time: 211.614913
+Test time: 0.630154
+
+Best Parameters: {'n_d': 15, 'n_steps': 6, 'gamma': 1.0595862487381127, 'cat_emb_dim': 3, 'n_independent': 4, 'n_shared': 3, 'momentum': 0.020929228775384737, 'mask_type': 'entmax', 'n_a': 15, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:26:19.370995
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.36368
+MSE - std: 6.67186
+R2 - mean: 0.55013
+R2 - std: 0.02788
+
+Train time: 131.483657
+Test time: 0.514814
+
+Best Parameters: {'n_d': 32, 'n_steps': 3, 'gamma': 1.0885980535222282, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 2, 'momentum': 0.25541779676102194, 'mask_type': 'sparsemax', 'n_a': 32, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:32:36.263798
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.68178
+MSE - std: 7.24101
+R2 - mean: 0.54835
+R2 - std: 0.03057
+
+Train time: 182.948598
+Test time: 0.583514
+
+Best Parameters: {'n_d': 11, 'n_steps': 4, 'gamma': 1.1552292315960435, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.14590148892117996, 'mask_type': 'entmax', 'n_a': 11, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:39:48.531993
+TabNet - Mercedes_Benz
+
+MSE - mean: 299.99886
+MSE - std: 147.09625
+R2 - mean: -0.89354
+R2 - std: 0.96721
+
+Train time: 210.965457
+Test time: 0.603544
+
+Best Parameters: {'n_d': 9, 'n_steps': 4, 'gamma': 1.1538156417466707, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.0015486623277950176, 'mask_type': 'entmax', 'n_a': 9, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:45:23.001220
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.14860
+MSE - std: 8.88258
+R2 - mean: 0.55236
+R2 - std: 0.03696
+
+Train time: 161.581905
+Test time: 0.568077
+
+Best Parameters: {'n_d': 8, 'n_steps': 4, 'gamma': 1.0001195252522075, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.1774597751335389, 'mask_type': 'entmax', 'n_a': 8, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:53:20.151214
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.80968
+MSE - std: 6.86277
+R2 - mean: 0.54751
+R2 - std: 0.02713
+
+Train time: 214.959558
+Test time: 0.633965
+
+Best Parameters: {'n_d': 11, 'n_steps': 5, 'gamma': 1.0338648473684073, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 4, 'momentum': 0.12843683375649953, 'mask_type': 'entmax', 'n_a': 11, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 10:57:08.255154
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.19052
+MSE - std: 7.46603
+R2 - mean: 0.54526
+R2 - std: 0.03128
+
+Train time: 127.254853
+Test time: 0.526782
+
+Best Parameters: {'n_d': 14, 'n_steps': 4, 'gamma': 1.0629776485485036, 'cat_emb_dim': 3, 'n_independent': 2, 'n_shared': 4, 'momentum': 0.1834806300506457, 'mask_type': 'entmax', 'n_a': 14, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:03:42.754206
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.74323
+MSE - std: 5.89542
+R2 - mean: 0.52906
+R2 - std: 0.01979
+
+Train time: 176.865237
+Test time: 0.643062
+
+Best Parameters: {'n_d': 38, 'n_steps': 7, 'gamma': 1.1920563411446023, 'cat_emb_dim': 2, 'n_independent': 5, 'n_shared': 1, 'momentum': 0.22175177761118983, 'mask_type': 'entmax', 'n_a': 38, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:07:43.238053
+TabNet - Mercedes_Benz
+
+MSE - mean: 74.52994
+MSE - std: 7.43464
+R2 - mean: 0.53712
+R2 - std: 0.02733
+
+Train time: 128.385384
+Test time: 0.524849
+
+Best Parameters: {'n_d': 21, 'n_steps': 3, 'gamma': 1.1186048280512098, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.04417311894414844, 'mask_type': 'entmax', 'n_a': 21, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:16:15.823167
+TabNet - Mercedes_Benz
+
+MSE - mean: 70.25356
+MSE - std: 7.30578
+R2 - mean: 0.56373
+R2 - std: 0.02823
+
+Train time: 223.644291
+Test time: 0.659832
+
+Best Parameters: {'n_d': 16, 'n_steps': 5, 'gamma': 1.0239150361392573, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.11107074832862197, 'mask_type': 'entmax', 'n_a': 16, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:23:33.258530
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.20869
+MSE - std: 5.92791
+R2 - mean: 0.54479
+R2 - std: 0.02253
+
+Train time: 190.531583
+Test time: 0.629398
+
+Best Parameters: {'n_d': 17, 'n_steps': 5, 'gamma': 1.016419466116665, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.11767534222705642, 'mask_type': 'entmax', 'n_a': 17, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:31:09.081777
+TabNet - Mercedes_Benz
+
+MSE - mean: 75.48468
+MSE - std: 6.24353
+R2 - mean: 0.53063
+R2 - std: 0.02550
+
+Train time: 193.438494
+Test time: 0.704065
+
+Best Parameters: {'n_d': 56, 'n_steps': 6, 'gamma': 1.0505259198209578, 'cat_emb_dim': 2, 'n_independent': 4, 'n_shared': 5, 'momentum': 0.09173934896601825, 'mask_type': 'entmax', 'n_a': 56, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:39:03.859942
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.01689
+MSE - std: 6.96140
+R2 - mean: 0.55879
+R2 - std: 0.02721
+
+Train time: 220.968120
+Test time: 0.604408
+
+Best Parameters: {'n_d': 13, 'n_steps': 4, 'gamma': 1.0836693299818796, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.14267332330683408, 'mask_type': 'entmax', 'n_a': 13, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:49:12.827346
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.93807
+MSE - std: 7.31108
+R2 - mean: 0.54687
+R2 - std: 0.02915
+
+Train time: 264.301308
+Test time: 0.646330
+
+Best Parameters: {'n_d': 19, 'n_steps': 5, 'gamma': 1.090125795167779, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.14271882041918366, 'mask_type': 'entmax', 'n_a': 19, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 11:58:05.526352
+TabNet - Mercedes_Benz
+
+MSE - mean: 71.90009
+MSE - std: 7.36017
+R2 - mean: 0.55315
+R2 - std: 0.03268
+
+Train time: 231.439086
+Test time: 0.666107
+
+Best Parameters: {'n_d': 13, 'n_steps': 5, 'gamma': 1.025794227921189, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.07470194096714279, 'mask_type': 'entmax', 'n_a': 13, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:04:29.225254
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.20262
+MSE - std: 10.61637
+R2 - mean: 0.54588
+R2 - std: 0.04996
+
+Train time: 165.917254
+Test time: 0.645692
+
+Best Parameters: {'n_d': 13, 'n_steps': 5, 'gamma': 1.027456989829225, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.10824470660582079, 'mask_type': 'entmax', 'n_a': 13, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:14:35.611436
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.48213
+MSE - std: 7.18127
+R2 - mean: 0.54373
+R2 - std: 0.02420
+
+Train time: 264.283427
+Test time: 0.652182
+
+Best Parameters: {'n_d': 16, 'n_steps': 5, 'gamma': 1.0810830023150237, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.01109505417533259, 'mask_type': 'entmax', 'n_a': 16, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:21:54.508405
+TabNet - Mercedes_Benz
+
+MSE - mean: 73.21243
+MSE - std: 7.16392
+R2 - mean: 0.54524
+R2 - std: 0.02713
+
+Train time: 191.449101
+Test time: 0.648974
+
+Best Parameters: {'n_d': 15, 'n_steps': 5, 'gamma': 1.0509186020194936, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.16787749132600574, 'mask_type': 'entmax', 'n_a': 15, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:29:03.447862
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.86339
+MSE - std: 8.29983
+R2 - mean: 0.54778
+R2 - std: 0.03329
+
+Train time: 203.246730
+Test time: 0.587744
+
+Best Parameters: {'n_d': 13, 'n_steps': 4, 'gamma': 1.1103810355672417, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.07233080279789557, 'mask_type': 'entmax', 'n_a': 13, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:35:05.285587
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.65195
+MSE - std: 7.62381
+R2 - mean: 0.54863
+R2 - std: 0.03200
+
+Train time: 170.241586
+Test time: 0.622107
+
+Best Parameters: {'n_d': 22, 'n_steps': 4, 'gamma': 1.025127734714732, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.12703170259208446, 'mask_type': 'sparsemax', 'n_a': 22, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:42:39.733489
+TabNet - Mercedes_Benz
+
+MSE - mean: 72.37543
+MSE - std: 6.66317
+R2 - mean: 0.55039
+R2 - std: 0.02275
+
+Train time: 202.324247
+Test time: 0.614445
+
+Best Parameters: {'n_d': 18, 'n_steps': 5, 'gamma': 1.0587654280433914, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.10363731486933221, 'mask_type': 'entmax', 'n_a': 18, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+
+2025-01-15 12:51:02.019766
+TabNet - Mercedes_Benz
+
+MSE - mean: 70.25356
+MSE - std: 7.30578
+R2 - mean: 0.56373
+R2 - std: 0.02823
+
+Train time: 222.220113
+Test time: 0.635371
+
+Best Parameters: {'n_d': 16, 'n_steps': 5, 'gamma': 1.0239150361392573, 'cat_emb_dim': 3, 'n_independent': 5, 'n_shared': 5, 'momentum': 0.11107074832862197, 'mask_type': 'entmax', 'n_a': 16, 'cat_idxs': [], 'cat_dims': [], 'device_name': device(type='cuda')}
+
+

@@ -1,0 +1,42 @@
+2025-05-30 13:22:13.581182
+XGBoost - Sensory - test_model - regression
+
+MSE - mean: 0.60810
+MSE - std: 0.02561
+R2 - mean: 0.06782
+R2 - std: 0.03925
+
+Train time: 0.374322
+Test time: 0.052401
+
+Best Parameters: {'max_depth': 2, 'alpha': 3.8628734334151045e-07, 'lambda': 0.04825003662277624, 'eta': 0.055937333566860314, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2025-06-17 11:51:18.971454
+XGBoost - Sensory - train_model - regression
+
+MSE - mean: 0.62120
+MSE - mean_std: 0.05854
+R2 - mean: 0.09247
+R2 - mean_std: 0.03082
+
+Train time: 0.020394
+Test time: 0.000473
+
+Best Parameters: {'max_depth': 2, 'alpha': 1e-08, 'lambda': 1e-08, 'eta': 0.2, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
+2025-06-17 12:38:06.321030
+XGBoost - Sensory - test_model - regression
+
+MSE - mean: 0.59763
+MSE - std: 0.01060
+R2 - mean: 0.08387
+R2 - std: 0.01625
+
+Train time: 0.010029
+Test time: 0.000639
+
+Best Parameters: {'max_depth': 2, 'alpha': 3.8628734334151045e-07, 'lambda': 0.04825003662277624, 'eta': 0.055937333566860314, 'verbosity': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+

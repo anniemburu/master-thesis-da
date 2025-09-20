@@ -1,0 +1,14 @@
+2025-05-06 09:39:25.889432
+LightGBM - House_Sales - train_model
+
+MSE - mean: 17841315311.34465
+MSE - mean_std: 3493159409.29505
+R2 - mean: 0.87416
+R2 - mean_std: 0.02304
+
+Train time: 2.108161
+Test time: 0.021645
+
+Best Parameters: {'num_leaves': 16, 'lambda_l1': 0.0025789430178050363, 'lambda_l2': 3.5374912505595794e-05, 'learning_rate': 0.23810449603002587, 'verbosity': -1, 'objective': 'regression', 'metric': 'mse'}
+
+

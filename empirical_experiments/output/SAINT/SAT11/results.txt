@@ -1,0 +1,398 @@
+2025-05-29 21:47:31.289677
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 3221581.24576
+MSE - std: 116187.10141
+R2 - mean: 0.43400
+R2 - std: 0.02041
+
+Train time: 193.491732
+Test time: 0.302206
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:00:24.134665
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 3128765.11675
+MSE - std: 143849.07349
+R2 - mean: 0.45031
+R2 - std: 0.02527
+
+Train time: 195.913176
+Test time: 0.321350
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:10:35.173181
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 3683651.66422
+MSE - std: 233718.53286
+R2 - mean: 0.35282
+R2 - std: 0.04106
+
+Train time: 163.996724
+Test time: 0.315545
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:16:24.157903
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 8806055.16519
+MSE - std: 2148308.40755
+R2 - mean: -0.54713
+R2 - std: 0.37744
+
+Train time: 98.380494
+Test time: 0.302271
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:25:28.524462
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 3786107.13544
+MSE - std: 121106.04079
+R2 - mean: 0.33482
+R2 - std: 0.02128
+
+Train time: 141.099902
+Test time: 0.303886
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:30:45.802064
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 8108139.48810
+MSE - std: 710030.40302
+R2 - mean: -0.42452
+R2 - std: 0.12475
+
+Train time: 88.249758
+Test time: 0.301902
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:40:26.859429
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 3940544.60277
+MSE - std: 264222.88558
+R2 - mean: 0.30769
+R2 - std: 0.04642
+
+Train time: 150.921802
+Test time: 0.307325
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:49:50.311015
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 3871750.83679
+MSE - std: 204114.24970
+R2 - mean: 0.31977
+R2 - std: 0.03586
+
+Train time: 143.639716
+Test time: 0.294670
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 22:59:22.570573
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 3598960.27864
+MSE - std: 166665.03947
+R2 - mean: 0.36770
+R2 - std: 0.02928
+
+Train time: 143.982390
+Test time: 0.304259
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 23:05:47.857058
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 5684705.03950
+MSE - std: 1365890.97052
+R2 - mean: 0.00126
+R2 - std: 0.23997
+
+Train time: 104.034087
+Test time: 0.307530
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 23:15:25.793107
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 3608022.43200
+MSE - std: 148609.06462
+R2 - mean: 0.36611
+R2 - std: 0.02611
+
+Train time: 155.891745
+Test time: 0.304939
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-05-29 23:21:25.654200
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 6097539.66003
+MSE - std: 1089310.88007
+R2 - mean: -0.07128
+R2 - std: 0.19138
+
+Train time: 102.343619
+Test time: 0.302535
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-03 00:37:45.666964
+SAINT - SAT11 - test_model - regression
+
+MSE - mean: 1931029.49803
+MSE - std: 72249.09019
+R2 - mean: 0.66074
+R2 - std: 0.01269
+
+Train time: 282.375245
+Test time: 0.462668
+
+Best Parameters: {'depth': 6, 'dim': 256, 'dropout': 0.1, 'heads': 4}
+
+
+2025-06-20 21:23:02.400901
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 9.66174
+Log Loss - std: 0.02288
+AUC - mean: 0.48455
+AUC - std: 0.03924
+Accuracy - mean: 0.07686
+Accuracy - std: 0.00894
+F1 score - mean: 0.14108
+F1 score - std: 0.01501
+
+Train time: 316.387925
+Test time: 0.352028
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 21:32:42.548225
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 9.66861
+Log Loss - std: 0.03064
+AUC - mean: 0.47756
+AUC - std: 0.03291
+Accuracy - mean: 0.07725
+Accuracy - std: 0.00952
+F1 score - mean: 0.14171
+F1 score - std: 0.01610
+
+Train time: 342.300688
+Test time: 0.351715
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 21:42:21.999798
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 4.49459
+Log Loss - std: 0.30941
+AUC - mean: 0.53995
+AUC - std: 0.02739
+Accuracy - mean: 0.45693
+Accuracy - std: 0.00858
+F1 score - mean: 0.59758
+F1 score - std: 0.00710
+
+Train time: 350.879076
+Test time: 0.358871
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 21:51:46.468719
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 3.61491
+Log Loss - std: 0.22072
+AUC - mean: 0.52361
+AUC - std: 0.01675
+Accuracy - mean: 0.34183
+Accuracy - std: 0.02371
+F1 score - mean: 0.48862
+F1 score - std: 0.02486
+
+Train time: 321.246806
+Test time: 0.349286
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 22:01:20.785002
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 4.48562
+Log Loss - std: 0.26026
+AUC - mean: 0.54812
+AUC - std: 0.02464
+Accuracy - mean: 0.46698
+Accuracy - std: 0.01023
+F1 score - mean: 0.60576
+F1 score - std: 0.00844
+
+Train time: 345.421991
+Test time: 0.345470
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 22:10:45.244102
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 3.40013
+Log Loss - std: 0.26234
+AUC - mean: 0.55519
+AUC - std: 0.04286
+Accuracy - mean: 0.33333
+Accuracy - std: 0.03272
+F1 score - mean: 0.47876
+F1 score - std: 0.03515
+
+Train time: 302.687181
+Test time: 0.348635
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 22:20:09.730521
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 8.31802
+Log Loss - std: 0.16736
+AUC - mean: 0.53889
+AUC - std: 0.03244
+Accuracy - mean: 0.18038
+Accuracy - std: 0.00723
+F1 score - mean: 0.30365
+F1 score - std: 0.00976
+
+Train time: 317.113673
+Test time: 0.338883
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 22:29:50.912279
+SAINT - SAT11 - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 8.32029
+Log Loss - std: 0.21279
+AUC - mean: 0.52755
+AUC - std: 0.03303
+Accuracy - mean: 0.18038
+Accuracy - std: 0.00971
+F1 score - mean: 0.30360
+F1 score - std: 0.01330
+
+Train time: 343.319246
+Test time: 0.358092
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 22:39:28.356613
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 4.44706
+Log Loss - std: 0.29923
+AUC - mean: 0.55073
+AUC - std: 0.01324
+Accuracy - mean: 0.46002
+Accuracy - std: 0.00328
+F1 score - mean: 0.62642
+F1 score - std: 0.00304
+
+Train time: 347.424291
+Test time: 0.353109
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 22:48:50.464374
+SAINT - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 2.59141
+Log Loss - std: 0.17867
+AUC - mean: 0.53111
+AUC - std: 0.02958
+Accuracy - mean: 0.44187
+Accuracy - std: 0.02992
+F1 score - mean: 0.60861
+F1 score - std: 0.02872
+
+Train time: 314.832983
+Test time: 0.343121
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 22:58:15.781376
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 4.47033
+Log Loss - std: 0.28359
+AUC - mean: 0.57259
+AUC - std: 0.00803
+Accuracy - mean: 0.47007
+Accuracy - std: 0.01063
+F1 score - mean: 0.63544
+F1 score - std: 0.00975
+
+Train time: 329.391714
+Test time: 0.349618
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+
+2025-06-20 23:07:44.038169
+SAINT - SAT11 - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 2.44798
+Log Loss - std: 0.12367
+AUC - mean: 0.64016
+AUC - std: 0.04778
+Accuracy - mean: 0.44882
+Accuracy - std: 0.00805
+F1 score - mean: 0.61576
+F1 score - std: 0.00763
+
+Train time: 305.353630
+Test time: 0.346025
+
+Best Parameters: {'depth': 2, 'dim': 32, 'dropout': 0.6, 'heads': 2}
+
+

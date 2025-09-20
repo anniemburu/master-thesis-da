@@ -1,0 +1,14 @@
+[I 2025-01-20 06:22:43,272] Using an existing study with name 'TabTransformer_Black_Friday' instead of creating a new one.
+[I 2025-01-20 08:47:46,785] Trial 15 finished with value: 12462147.36544023 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-20 11:10:06,706] Trial 16 finished with value: 13038785.197382957 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-20 13:39:23,829] Trial 17 finished with value: 12472516.433520194 and parameters: {'dim': 32, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-20 16:55:36,503] Trial 18 finished with value: 13056881.9847998 and parameters: {'dim': 64, 'depth': 3, 'heads': 2, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.1}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-20 19:21:31,135] Trial 19 finished with value: 61926956.11665491 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -5, 'learning_rate': -6, 'dropout': 0.4}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-20 21:40:11,372] Trial 20 finished with value: 12473969.460752029 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -4, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-20 23:49:25,060] Trial 21 finished with value: 13044470.809766378 and parameters: {'dim': 128, 'depth': 2, 'heads': 4, 'weight_decay': -6, 'learning_rate': -4, 'dropout': 0.3}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-21 05:22:20,553] Trial 22 finished with value: 12531437.811887404 and parameters: {'dim': 32, 'depth': 6, 'heads': 2, 'weight_decay': -5, 'learning_rate': -3, 'dropout': 0.4}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-21 08:33:19,213] Trial 23 finished with value: 13038157.649502415 and parameters: {'dim': 64, 'depth': 3, 'heads': 8, 'weight_decay': -3, 'learning_rate': -4, 'dropout': 0}. Best is trial 13 with value: 12421735.392065033.
+[I 2025-01-21 10:53:47,251] Trial 24 finished with value: 12421861.852254927 and parameters: {'dim': 128, 'depth': 2, 'heads': 8, 'weight_decay': -6, 'learning_rate': -3, 'dropout': 0.3}. Best is trial 13 with value: 12421735.392065033.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 958697 ON stud-000 CANCELLED AT 2025-01-23T06:22:41 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 958697.0 ON stud-000 CANCELLED AT 2025-01-23T06:22:41 DUE TO TIME LIMIT ***

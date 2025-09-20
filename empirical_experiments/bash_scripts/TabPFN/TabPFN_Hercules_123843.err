@@ -1,0 +1,286 @@
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 239, in fit
+    raise ValueError("⚠️ WARNING: TabPFN is not made for datasets with a trainingsize > 1024. Prediction might take a while, be less reliable. We advise not to run datasets > 10k samples, which might lead to your machine crashing (due to quadratic memory scaling of TabPFN). Please confirm you want to run by passing overwrite_warning=True to the fit function.")
+ValueError: ⚠️ WARNING: TabPFN is not made for datasets with a trainingsize > 1024. Prediction might take a while, be less reliable. We advise not to run datasets > 10k samples, which might lead to your machine crashing (due to quadratic memory scaling of TabPFN). Please confirm you want to run by passing overwrite_warning=True to the fit function.
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 235, in fit
+    raise ValueError("The number of features for this classifier is restricted to ", self.max_num_features)
+ValueError: ('The number of features for this classifier is restricted to ', 100)
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 237, in fit
+    raise ValueError("The number of classes for this classifier is restricted to ", self.max_num_classes)
+ValueError: ('The number of classes for this classifier is restricted to ', 10)
+srun: error: stud-000: task 0: Exited with exit code 1
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Boston/models/m_0.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Boston/models/m_1.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Boston/models/m_2.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Boston/models/m_3.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Boston/models/m_4.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 237, in fit
+    raise ValueError("The number of classes for this classifier is restricted to ", self.max_num_classes)
+ValueError: ('The number of classes for this classifier is restricted to ', 10)
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 237, in fit
+    raise ValueError("The number of classes for this classifier is restricted to ", self.max_num_classes)
+ValueError: ('The number of classes for this classifier is restricted to ', 10)
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 235, in fit
+    raise ValueError("The number of features for this classifier is restricted to ", self.max_num_features)
+ValueError: ('The number of features for this classifier is restricted to ', 100)
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 237, in fit
+    raise ValueError("The number of classes for this classifier is restricted to ", self.max_num_classes)
+ValueError: ('The number of classes for this classifier is restricted to ', 10)
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 235, in fit
+    raise ValueError("The number of features for this classifier is restricted to ", self.max_num_features)
+ValueError: ('The number of features for this classifier is restricted to ', 100)
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 235, in fit
+    raise ValueError("The number of features for this classifier is restricted to ", self.max_num_features)
+ValueError: ('The number of features for this classifier is restricted to ', 100)
+srun: error: stud-000: task 0: Exited with exit code 1
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Moneyball/models/m_0.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Moneyball/models/m_1.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Moneyball/models/m_2.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Moneyball/models/m_3.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Moneyball/models/m_4.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 235, in fit
+    raise ValueError("The number of features for this classifier is restricted to ", self.max_num_features)
+ValueError: ('The number of features for this classifier is restricted to ', 100)
+srun: error: stud-000: task 0: Exited with exit code 1
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Sensory/models/m_0.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Sensory/models/m_1.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Sensory/models/m_2.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Sensory/models/m_3.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_discretization.py:322: UserWarning: Bins whose width are too small (i.e., <= 1e-8) in feature 0 are removed. Consider decreasing the number of bins.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/io_utils.py:34: ResourceWarning: unclosed file <_io.BufferedWriter name='output/TabPFN/Sensory/models/m_4.pkl'>
+  pickle.dump(model, open(filename, 'wb'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "train.py", line 405, in <module>
+    main_once(arguments)
+  File "train.py", line 387, in main_once
+    sc, time = cross_validation(model, X, y, args, visual=False, save_model=True)
+  File "train.py", line 228, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/tabpfn.py", line 20, in fit
+    self.model.fit(X, y)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/tabpfn/scripts/transformer_prediction_interface.py", line 237, in fit
+    raise ValueError("The number of classes for this classifier is restricted to ", self.max_num_classes)
+ValueError: ('The number of classes for this classifier is restricted to ', 10)
+srun: error: stud-000: task 0: Exited with exit code 1

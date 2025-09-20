@@ -1,0 +1,410 @@
+2025-05-04 17:49:57.665629
+FTTransformer - Sensory - train_model
+
+Log Loss - mean: 1.65148
+Log Loss - mean_std: 0.04734
+AUC - mean: 0.48487
+AUC - mean_std: 0.04420
+Accuracy - mean: 0.22904
+Accuracy - mean_std: 0.05221
+F1 score - mean: 0.12984
+F1 score - mean_std: 0.03352
+
+Train time: 0.050878
+Test time: 0.008037
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-07 15:09:40.044977
+FTTransformer - Sensory - test_model
+
+MSE - mean: 0.03142
+MSE - std: 0.00000
+R2 - mean: 0.95183
+R2 - std: 0.00000
+
+Train time: 0.326932
+Test time: 0.012055
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-07 21:01:43.343767
+FTTransformer - Sensory - test_model
+
+MSE - mean: 0.07966
+MSE - std: 0.03452
+R2 - mean: 0.87789
+R2 - std: 0.05292
+
+Train time: 0.380992
+Test time: 0.012532
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-10 09:39:27.803171
+FTTransformer - Sensory - test_model
+
+MSE - mean: 0.04231
+MSE - std: 0.00815
+R2 - mean: 0.93514
+R2 - std: 0.01249
+
+Train time: 0.443533
+Test time: 0.015402
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-10 15:06:23.856914
+FTTransformer - Sensory - test_model
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.429200
+Test time: 0.016738
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-11 02:53:16.847123
+FTTransformer - Sensory - train_model
+
+MSE - mean: 115.00811
+MSE - mean_std: 21.49515
+R2 - mean: -167.72084
+R2 - mean_std: 30.15610
+
+Train time: 0.056529
+Test time: 0.003744
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-14 12:18:26.969782
+FTTransformer - Sensory - test_model
+
+MSE - mean: 4.97492
+MSE - std: 0.26616
+R2 - mean: -6.62623
+R2 - std: 0.40801
+
+Train time: 0.607321
+Test time: 0.008036
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-15 21:16:01.084419
+FTTransformer - Sensory - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 0.04927
+MSE - std: 0.00556
+R2 - mean: 0.92447
+R2 - std: 0.00852
+
+Train time: 0.624609
+Test time: 0.014646
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-15 21:16:30.526681
+FTTransformer - Sensory - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 0.04477
+MSE - std: 0.00032
+R2 - mean: 0.93138
+R2 - std: 0.00049
+
+Train time: 0.553236
+Test time: 0.013783
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-16 10:35:55.313563
+FTTransformer - Sensory - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.626271
+Test time: 0.014734
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-16 10:36:01.787745
+FTTransformer - Sensory - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.637437
+Test time: 0.015716
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-17 14:29:10.192896
+FTTransformer - Sensory - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 0.04231
+MSE - std: 0.00815
+R2 - mean: 0.93514
+R2 - std: 0.01249
+
+Train time: 0.658991
+Test time: 0.015084
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-17 14:29:17.213658
+FTTransformer - Sensory - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.04927
+MSE - std: 0.00556
+R2 - mean: 0.92447
+R2 - std: 0.00852
+
+Train time: 0.619309
+Test time: 0.014674
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-17 14:29:24.501070
+FTTransformer - Sensory - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.04477
+MSE - std: 0.00032
+R2 - mean: 0.93138
+R2 - std: 0.00049
+
+Train time: 0.652504
+Test time: 0.015053
+
+Best Parameters: {'learning_rate': 0.007837909586982108, 'weight_decay': 7.3601111536878155e-06}
+
+
+2025-05-18 11:20:45.687676
+FTTransformer - Sensory - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 0.04231
+MSE - std: 0.00815
+R2 - mean: 0.93514
+R2 - std: 0.01249
+
+Train time: 0.615553
+Test time: 0.014338
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-18 11:20:52.349055
+FTTransformer - Sensory - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.04927
+MSE - std: 0.00556
+R2 - mean: 0.92447
+R2 - std: 0.00852
+
+Train time: 0.634010
+Test time: 0.015545
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-18 11:20:58.696577
+FTTransformer - Sensory - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.04477
+MSE - std: 0.00032
+R2 - mean: 0.93138
+R2 - std: 0.00049
+
+Train time: 0.602517
+Test time: 0.014414
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-18 11:21:04.957973
+FTTransformer - Sensory - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 0.04231
+MSE - std: 0.00815
+R2 - mean: 0.93514
+R2 - std: 0.01249
+
+Train time: 0.627856
+Test time: 0.014491
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-18 11:21:11.519791
+FTTransformer - Sensory - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 0.04927
+MSE - std: 0.00556
+R2 - mean: 0.92447
+R2 - std: 0.00852
+
+Train time: 0.609687
+Test time: 0.014367
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-18 11:21:17.656397
+FTTransformer - Sensory - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 0.04477
+MSE - std: 0.00032
+R2 - mean: 0.93138
+R2 - std: 0.00049
+
+Train time: 0.623437
+Test time: 0.014114
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-19 01:22:18.744152
+FTTransformer - Sensory - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.619268
+Test time: 0.015466
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-19 01:22:25.585576
+FTTransformer - Sensory - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.606956
+Test time: 0.014483
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-19 01:22:31.781603
+FTTransformer - Sensory - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.614570
+Test time: 0.015310
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-19 01:22:38.480002
+FTTransformer - Sensory - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.643032
+Test time: 0.015013
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-19 01:22:45.121832
+FTTransformer - Sensory - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.664748
+Test time: 0.015189
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-19 01:22:52.627572
+FTTransformer - Sensory - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.622103
+Test time: 0.016147
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-20 11:01:47.335556
+FTTransformer - Sensory - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 0.03128
+MSE - std: 0.00091
+R2 - mean: 0.95205
+R2 - std: 0.00139
+
+Train time: 0.614701
+Test time: 0.014951
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-20 11:01:53.679950
+FTTransformer - Sensory - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 0.01532
+MSE - std: 0.01122
+R2 - mean: 0.97652
+R2 - std: 0.01720
+
+Train time: 0.576292
+Test time: 0.014899
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+
+2025-05-20 11:01:59.981234
+FTTransformer - Sensory - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 0.00246
+MSE - std: 0.00010
+R2 - mean: 0.99623
+R2 - std: 0.00016
+
+Train time: 0.608119
+Test time: 0.015116
+
+Best Parameters: {'learning_rate': 4.126150574320677e-05, 'weight_decay': 5.170169005303637e-05}
+
+

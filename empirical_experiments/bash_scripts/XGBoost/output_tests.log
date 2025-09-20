@@ -1,0 +1,24 @@
+usage: train.py [-h] [-config CONFIG] --model_name MODEL_NAME --dataset
+                DATASET --objective
+                {regression,probabilistic_regression,classification,binary}
+                [--use_gpu] [--gpu_ids GPU_IDS] [--data_parallel]
+                [--optimize_hyperparameters] [--n_trials N_TRIALS]
+                [--direction {minimize,maximize}] --y_distribution
+                {normal,skewed,bimodial} [--num_splits NUM_SPLITS]
+                [--num_bins NUM_BINS] [--shuffle] [--seed SEED]
+                [--weighted_loss] [--scale] [--target_encode]
+                [--one_hot_encode] [--ordinal_encode] [--frequency_reg]
+                [--class_comp] [--batch_size BATCH_SIZE]
+                [--val_batch_size VAL_BATCH_SIZE]
+                [--early_stopping_rounds EARLY_STOPPING_ROUNDS]
+                [--epochs EPOCHS] [--logging_period LOGGING_PERIOD]
+                --num_features NUM_FEATURES [--num_classes NUM_CLASSES]
+                [--cat_idx CAT_IDX] [--nominal_idx NOMINAL_IDX]
+                [--ordinal_idx ORDINAL_IDX] [--num_idx NUM_IDX]
+                [--cat_dims CAT_DIMS] [--bin_alt BIN_ALT]
+                [--dropna_idx DROPNA_IDX] [--miss_cat_idx MISS_CAT_IDX]
+                [--miss_num_idx MISS_NUM_IDX]
+                [-best_params_file BEST_PARAMS_FILE] [-parameters PARAMETERS]
+                [--outer_splits OUTER_SPLITS] [--save_results]
+                [--no_save_results]
+train.py: error: Unable to open config file: config/best_params.yml. Error: No such file or directory
