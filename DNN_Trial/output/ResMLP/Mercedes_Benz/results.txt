@@ -564,3 +564,21 @@ Test time: 0.054547
 Best Parameters: {'d_block': 256, 'd_hidden': 4, 'd_hidden_multiplier': 2.8190447590303593, 'd_in': 543, 'd_out': 31, 'dropout1': 0.39853029839247645, 'dropout2': 0.23047013110182565, 'n_blocks': 5}
 
 
+2025-07-08 13:53:20.567412
+ResMLP - Mercedes_Benz - train_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 2.64343
+Log Loss - mean_std: 0.20879
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.01283
+Accuracy - mean_std: 0.02024
+F1 score - mean: 0.02457
+F1 score - mean_std: 0.03847
+
+Train time: 1.944491
+Test time: 0.019770
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.1, 'dropout2': 0.1, 'd_out': 11, 'd_in': 549}
+
+

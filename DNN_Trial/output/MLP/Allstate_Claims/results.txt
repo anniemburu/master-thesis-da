@@ -582,3 +582,21 @@ Test time: 0.731047
 Best Parameters: {'d_block': 256, 'd_in': 1073, 'd_out': 237, 'dropout': 0.12920563775872115, 'n_blocks': 6}
 
 
+2025-07-11 05:25:09.601393
+MLP - Allstate_Claims - train_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 14.85358
+Log Loss - mean_std: 1.81075
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.00000
+Accuracy - mean_std: 0.00000
+F1 score - mean: 0.00000
+F1 score - mean_std: 0.00000
+
+Train time: 177.656429
+Test time: 0.159870
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'dropout': 0.1, 'd_out': 17, 'd_in': 1083}
+
+

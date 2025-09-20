@@ -528,3 +528,21 @@ Test time: 0.044640
 Best Parameters: {'d_block': 256, 'd_hidden': 9, 'd_hidden_multiplier': 2.8578552359643927, 'd_in': 17, 'd_out': 54, 'dropout1': 0.05920170022592163, 'dropout2': 0.19030616663715155, 'n_blocks': 2}
 
 
+2025-07-08 14:12:47.901272
+ResMLP - Brazillian_Houses - train_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 2.69399
+Log Loss - mean_std: 0.06364
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.22822
+Accuracy - mean_std: 0.05847
+F1 score - mean: 0.36813
+F1 score - mean_std: 0.07334
+
+Train time: 8.625391
+Test time: 0.002238
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'd_hidden': 2, 'd_hidden_multiplier': 2, 'dropout1': 0.1, 'dropout2': 0.1, 'd_out': 13, 'd_in': 17}
+
+

@@ -564,3 +564,21 @@ Test time: 0.002378
 Best Parameters: {'d_block': 256, 'd_in': 48, 'd_out': 19, 'dropout': 0.2819627248207455, 'n_blocks': 2}
 
 
+2025-07-08 02:07:47.803229
+MLP - Moneyball - train_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 2.26564
+Log Loss - mean_std: 0.02334
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.00163
+Accuracy - mean_std: 0.00325
+F1 score - mean: 0.00323
+F1 score - mean_std: 0.00645
+
+Train time: 0.745006
+Test time: 0.001171
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'dropout': 0.3, 'd_out': 9, 'd_in': 48}
+
+

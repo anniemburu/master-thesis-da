@@ -564,3 +564,21 @@ Test time: 0.032339
 Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 5, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
 
 
+2025-07-08 09:22:03.690404
+ResMLP - SAT11 - train_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 1.32918
+Log Loss - mean_std: 0.07058
+AUC - mean: 0.52793
+AUC - mean_std: 0.01521
+Accuracy - mean: 0.67992
+Accuracy - mean_std: 0.04706
+F1 score - mean: 0.75283
+F1 score - mean_std: 0.03095
+
+Train time: 3.451195
+Test time: 0.003158
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1, 'dropout1': 0.3, 'dropout2': 0.3, 'd_out': 10, 'd_in': 130}
+
+

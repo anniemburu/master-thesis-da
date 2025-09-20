@@ -528,3 +528,21 @@ Test time: 0.024112
 Best Parameters: {'d_block': 256, 'd_in': 17, 'd_out': 54, 'dropout': 0.26456213654515587, 'n_blocks': 2}
 
 
+2025-07-08 01:32:34.090741
+MLP - Brazillian_Houses - train_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 2.63030
+Log Loss - mean_std: 0.06343
+AUC - mean: nan
+AUC - mean_std: nan
+Accuracy - mean: 0.00000
+Accuracy - mean_std: 0.00000
+F1 score - mean: 0.00000
+F1 score - mean_std: 0.00000
+
+Train time: 1.916934
+Test time: 0.000907
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 0.001, 'n_blocks': 4, 'd_block': 64, 'dropout': 0.1, 'd_out': 13, 'd_in': 17}
+
+

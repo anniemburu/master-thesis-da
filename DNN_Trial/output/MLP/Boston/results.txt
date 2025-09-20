@@ -564,3 +564,21 @@ Test time: 0.003629
 Best Parameters: {'d_block': 256, 'd_in': 14, 'd_out': 16, 'dropout': 0.10721970311199958, 'n_blocks': 6}
 
 
+2025-07-08 01:52:46.432610
+MLP - Boston - train_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 2.89454
+Log Loss - mean_std: 0.05172
+AUC - mean: 0.54996
+AUC - mean_std: 0.05417
+Accuracy - mean: 0.04376
+Accuracy - mean_std: 0.03448
+F1 score - mean: 0.04118
+F1 score - mean_std: 0.04831
+
+Train time: 0.586443
+Test time: 0.000880
+
+Best Parameters: {'learning_rate': 1e-05, 'weight_decay': 1e-06, 'n_blocks': 2, 'd_block': 64, 'dropout': 0.3, 'd_out': 18, 'd_in': 14}
+
+
