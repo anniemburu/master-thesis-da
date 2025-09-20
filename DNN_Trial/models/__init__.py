@@ -1,6 +1,6 @@
 all_models = ["LinearModel", "KNN", "DecisionTree", "RandomForest", "XGBoost", "CatBoost", "LightGBM", "ModelTree",
                "MLP", "TabNet", "VIME", "TabTransformer", "NODE", "DeepGBM", "RLN", "DNFNet", "STG", "NAM", "DeepFM",
-               "SAINT", "DANet"]
+               "SAINT", "DANet","TabPFN"]
 
 
 def str2model(model):
@@ -37,7 +37,7 @@ def str2model(model):
         from models.tree_models import LightGBM
         return LightGBM
 
-    elif model == "MLP":
+    elif model == "MLPOLD":
         from models.mlp import MLP
         return MLP
 
@@ -92,6 +92,23 @@ def str2model(model):
     elif model == "DANet":
         from models.danet import DANet
         return DANet
+    
+    elif model == "TabPFN":
+        from models.tabpfn import TabPFN
+        return TabPFN
+    
+    elif model == "MLP":
+        from models.rtdl_models import MLP
+        return MLP
+    
+    elif model == "ResMLP":
+        from models.rtdl_models import ResMLP
+        return ResMLP
+
+    
+    elif model == "FTTransformer":
+        from models.rtdl_models import FTTransformerWrapper
+        return FTTransformerWrapper
 
     else:
         raise NotImplementedError("Model \"" + model + "\" not yet implemented")

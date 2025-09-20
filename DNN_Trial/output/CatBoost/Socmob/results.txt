@@ -1,0 +1,14 @@
+2025-05-30 13:15:34.235531
+CatBoost - Socmob - test_model - regression
+
+MSE - mean: 468.84285
+MSE - std: 50.56706
+R2 - mean: 0.72856
+R2 - std: 0.02928
+
+Train time: 0.802089
+Test time: 0.019768
+
+Best Parameters: {'learning_rate': 0.06922414781810075, 'max_depth': 4, 'l2_leaf_reg': 2.5924822649610864, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Socmob/catboost_info', 'task_type': 'GPU', 'devices': [[0, 1]], 'cat_features': [0, 1, 2, 3]}
+
+

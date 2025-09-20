@@ -1,0 +1,396 @@
+2025-05-04 22:43:50.275362
+FTTransformer - Brazillian_Houses - train_model
+
+Log Loss - mean: 7.02443
+Log Loss - mean_std: 0.01189
+AUC - mean: 0.55917
+AUC - mean_std: 0.01342
+Accuracy - mean: 0.00206
+Accuracy - mean_std: 0.00150
+F1 score - mean: 0.00002
+F1 score - mean_std: 0.00002
+
+Train time: 0.888771
+Test time: 0.024191
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-08 02:09:31.869212
+FTTransformer - Brazillian_Houses - test_model
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 11.637835
+Test time: 0.176536
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-10 09:36:00.804940
+FTTransformer - Brazillian_Houses - test_model
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 10.929741
+Test time: 0.186771
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-10 15:01:06.403204
+FTTransformer - Brazillian_Houses - test_model
+
+MSE - mean: 47971324.90564
+MSE - std: 23484255.45184
+R2 - mean: -0.20191
+R2 - std: 0.58839
+
+Train time: 10.934959
+Test time: 0.204630
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-11 02:51:43.024521
+FTTransformer - Brazillian_Houses - train_model
+
+MSE - mean: 535308481.09720
+MSE - mean_std: 559412216.19269
+R2 - mean: -0.61231
+R2 - mean_std: 0.61775
+
+Train time: 0.970239
+Test time: 0.011147
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-14 12:10:21.983599
+FTTransformer - Brazillian_Houses - test_model
+
+MSE - mean: 56127746.57579
+MSE - std: 1052768.34381
+R2 - mean: -0.40626
+R2 - std: 0.02638
+
+Train time: 20.995178
+Test time: 0.137821
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-15 21:10:12.679627
+FTTransformer - Brazillian_Houses - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 6.089087
+Test time: 0.186243
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-15 21:10:26.075325
+FTTransformer - Brazillian_Houses - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 1.758983
+Test time: 0.178306
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-16 10:30:37.215129
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 6062801.52496
+MSE - std: 3883371.43717
+R2 - mean: 0.84810
+R2 - std: 0.09730
+
+Train time: 2.137452
+Test time: 0.211324
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-16 10:31:18.886242
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 173187211.21617
+MSE - std: 227099322.07476
+R2 - mean: -3.33915
+R2 - std: 5.68991
+
+Train time: 11.002942
+Test time: 0.183037
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-17 14:22:58.195202
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 8.224706
+Test time: 0.191720
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-17 14:23:12.865612
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 2.737993
+Test time: 0.179293
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-17 14:23:22.912366
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 1.602435
+Test time: 0.186795
+
+Best Parameters: {'learning_rate': 0.007246604745497065, 'weight_decay': 0.0029245663761010127}
+
+
+2025-05-18 10:59:46.463020
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 14.496403
+Test time: 0.184858
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-18 11:00:32.697918
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 13.120625
+Test time: 0.190140
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-18 11:01:45.481855
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 22.131313
+Test time: 0.198443
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-18 11:02:34.005951
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 20475857.55622
+MSE - std: 1140139.63907
+R2 - mean: 0.48698
+R2 - std: 0.02857
+
+Train time: 14.295957
+Test time: 0.194726
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-18 11:03:04.206800
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 6634940.50020
+MSE - std: 3834720.59486
+R2 - mean: 0.83376
+R2 - std: 0.09608
+
+Train time: 8.090160
+Test time: 0.193921
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-18 11:03:15.599035
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 122697430.87516
+MSE - std: 139027470.09230
+R2 - mean: -2.07415
+R2 - std: 3.48329
+
+Train time: 1.587919
+Test time: 0.190710
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:54:50.407972
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 47971324.90564
+MSE - std: 23484255.45184
+R2 - mean: -0.20191
+R2 - std: 0.58839
+
+Train time: 8.680275
+Test time: 0.194483
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:56:02.483950
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 6062801.48435
+MSE - std: 3883371.46588
+R2 - mean: 0.84810
+R2 - std: 0.09730
+
+Train time: 21.676552
+Test time: 0.208903
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:04.281209
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 173187211.21617
+MSE - std: 227099322.07476
+R2 - mean: -3.33915
+R2 - std: 5.68991
+
+Train time: 18.759509
+Test time: 0.191181
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:17.925897
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 47971324.90564
+MSE - std: 23484255.45184
+R2 - mean: -0.20191
+R2 - std: 0.58839
+
+Train time: 2.508381
+Test time: 0.217504
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:29.026761
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 6062801.52207
+MSE - std: 3883371.51923
+R2 - mean: 0.84810
+R2 - std: 0.09730
+
+Train time: 1.650729
+Test time: 0.207632
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-19 00:57:38.577459
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 173187211.21617
+MSE - std: 227099322.07476
+R2 - mean: -3.33915
+R2 - std: 5.68991
+
+Train time: 1.565334
+Test time: 0.199973
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-20 10:46:16.445633
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 20196854.00011
+MSE - std: 1359496.40359
+R2 - mean: 0.49397
+R2 - std: 0.03406
+
+Train time: 20.369686
+Test time: 0.186105
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-20 10:47:48.134252
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 6462674.62033
+MSE - std: 3831359.81404
+R2 - mean: 0.83808
+R2 - std: 0.09599
+
+Train time: 14.327132
+Test time: 0.188199
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+
+2025-05-20 10:49:40.869912
+FTTransformer - Brazillian_Houses - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 192705815.10569
+MSE - std: 227240895.29876
+R2 - mean: -3.82819
+R2 - std: 5.69345
+
+Train time: 20.634408
+Test time: 0.183527
+
+Best Parameters: {'learning_rate': 0.00012882433392871884, 'weight_decay': 0.0006194542036721904}
+
+

@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "train.py", line 1252, in <module>
+    main_once(arguments)
+  File "train.py", line 1212, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 930, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 84, in fit
+    self.model.to(self.device)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 5 more times]
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.12 GiB. GPU 0 has a total capacty of 7.79 GiB of which 1.22 GiB is free. Including non-PyTorch memory, this process has 6.56 GiB memory in use. Of the allocated memory 6.44 GiB is allocated by PyTorch, and 22.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1252, in <module>
+    main_once(arguments)
+  File "train.py", line 1212, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 930, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 84, in fit
+    self.model.to(self.device)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 5 more times]
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.12 GiB. GPU 0 has a total capacty of 7.79 GiB of which 1.22 GiB is free. Including non-PyTorch memory, this process has 6.56 GiB memory in use. Of the allocated memory 6.44 GiB is allocated by PyTorch, and 22.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1252, in <module>
+    main_once(arguments)
+  File "train.py", line 1212, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=False, save_model=True)
+  File "train.py", line 930, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 84, in fit
+    self.model.to(self.device)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 5 more times]
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.12 GiB. GPU 0 has a total capacty of 7.79 GiB of which 1.22 GiB is free. Including non-PyTorch memory, this process has 6.56 GiB memory in use. Of the allocated memory 6.44 GiB is allocated by PyTorch, and 22.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1

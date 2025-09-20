@@ -1,0 +1,163 @@
+Running Mode: Nested CV with Hyperparameter Optimization
+Arguements: Namespace(batch_size=128, bin_alt=None, cat_dims=[2], cat_idx=[0], config='config/black_friday.yml', data_parallel=False, dataset='Black_Friday', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='CatBoost', n_trials=5, nominal_idx=[0, 2, 3, 4, 5, 6, 7, 8], num_bins=10, num_classes=1, num_features=9, num_idx=None, num_splits=5, objective='probabilistic_regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[1], outer_splits=2, save_results=False, scale=False, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=256, weighted_loss=False, y_distribution='bimodial')
+--- Running Nested Cross-Validation with Hyperparameter Optimization ---
+Loading dataset Black_Friday...
+Dataset loaded! 
+
+(166821, 9)
+--- Starting Nested Cross-Validation (2 Outer Folds, 5 Inner Folds) ---
+Hyperparameter Optimization per Outer Fold: True
+
+--- Outer Fold 1/2 ---
+Starting Hyperparameter Optimization for Outer Fold 1...
+  outer_1_inner Fold 1/5
+Before Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 9
+DEBUG Inner Fold 1: num_classes: 1
+DEBUG Inner Fold 1: cat_idx: [0]
+DEBUG Inner Fold 1: nominal_idx: [0, 2, 3, 4, 5, 6, 7, 8]
+DEBUG Inner Fold 1: ordinal_idx: [1]
+DEBUG Inner Fold 1: num_idx: None
+DEBUG Inner Fold 1: cat_dims: [2]
+DEBUG Inner Fold 1: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :9
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 2, 3, 4, 5, 6, 7, 8]
+ordinal_idx : [1]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (53382, 9)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 2, 3, 4, 5, 6, 7, 8]
+Ordinal Index : [1]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 2, 3, 4, 5, 6, 7, 8]
+Ordinal Index : [1]
+Cat Idx : [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Cat dims : []
+No one Hot for this Baby!!! 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [1]
+Numerical Index V1 : []
+Cat Idx V1 : [0, 1, 2, 3, 4, 5, 6, 7, 8] 
+Cat Dims V1 : [2, 7, 21, 3, 5, 2, 12, 14, 15]
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 2, 3, 4, 5, 6, 7, 8]
+
+
+Ordinal Idx V2: [1]
+
+
+Cat Dims V2 : [2, 7, 21, 3, 5, 2, 12, 14, 15]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7, 8] 
+ 
+
+Train: [[1.0 3.0 6.0 1.0 4.0]
+ [1.0 5.0 8.0 1.0 1.0]
+ [1.0 4.0 4.0 2.0 3.0]
+ [1.0 6.0 1.0 1.0 3.0]
+ [1.0 5.0 0.0 1.0 2.0]
+ [1.0 3.0 0.0 2.0 2.0]
+ [1.0 2.0 10.0 2.0 4.0]
+ [1.0 2.0 0.0 0.0 1.0]
+ [0.0 2.0 14.0 2.0 1.0]
+ [1.0 2.0 15.0 0.0 1.0]] 
+ 
+ 
+Val : (53382, 9) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cat Idx V3 : [0, 2, 3, 4, 5, 6, 7, 8] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [] 
+
+
+OHE Idx : [0, 2, 3, 4, 5, 6, 7, 8]
+
+
+Ordinal Idx V2: [1]
+
+
+Cat Dims V2 : [2, 7, 21, 3, 5, 2, 12, 14, 15, 3, 22, 4, 6, 3, 13, 15, 16]
+Cat Idx V2 : [0, 2, 3, 4, 5, 6, 7, 8] 
+ 
+
+Train: [[1.0 3.0 6.0 1.0 4.0 0.0 0.0 0.0 11.0]
+ [1.0 5.0 8.0 1.0 1.0 1.0 0.0 0.0 2.0]
+ [1.0 4.0 4.0 2.0 3.0 1.0 2.0 2.0 8.0]
+ [1.0 6.0 1.0 1.0 3.0 1.0 0.0 0.0 3.0]
+ [1.0 5.0 0.0 1.0 2.0 1.0 8.0 12.0 12.0]
+ [1.0 3.0 0.0 2.0 2.0 0.0 3.0 3.0 8.0]
+ [1.0 2.0 10.0 2.0 4.0 0.0 0.0 8.0 11.0]
+ [1.0 2.0 0.0 0.0 1.0 0.0 1.0 5.0 14.0]
+ [0.0 2.0 14.0 2.0 1.0 1.0 4.0 4.0 7.0]
+ [1.0 2.0 15.0 0.0 1.0 1.0 5.0 7.0 12.0]] 
+ 
+ 
+Val : (53382, 9) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+Number of bins: 34
+Number of Classes B4 Bin Verifier: 34
+Unique values in y: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13., 14., 15., 16., 17., 18., 19., 20., 21., 22., 23., 24., 25.,
+       26., 27., 28., 29., 30., 31., 32., 33.]), 34)
+Unique values in y_val: (array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13., 14., 15., 16., 17., 18., 19., 20., 21., 22., 23., 24., 25.,
+       26., 27., 28., 29., 30., 31., 32., 33.]), 34)
+No need to shift labels.
+VERIFY SHIFT
+Y shape : (53382,) , Y_val shape : (13346,)
+Train after shift : [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33], Length : 34
+Number of Classes After Bin Verifier: 34 
+
+
+After Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 9
+DEBUG Inner Fold 1: num_classes: 34
+DEBUG Inner Fold 1: cat_idx: [0, 2, 3, 4, 5, 6, 7, 8]
+DEBUG Inner Fold 1: nominal_idx: [0, 2, 3, 4, 5, 6, 7, 8]
+DEBUG Inner Fold 1: ordinal_idx: [1]
+DEBUG Inner Fold 1: num_idx: []
+DEBUG Inner Fold 1: cat_dims: [2, 7, 21, 3, 5, 2, 12, 14, 15, 3, 22, 4, 6, 3, 13, 15, 16]
+DEBUG Inner Fold 1: bin_alt: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+**** Data b4 Fitting ****

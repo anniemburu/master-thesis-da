@@ -10,6 +10,7 @@ output_dir = "output/"
 
 def save_loss_to_file(args, arr, name, extension=""):
     filename = get_output_path(args, directory="logging", filename=name, extension=extension, file_type="txt")
+    print(f"Saving loss to file: {filename}")
     np.savetxt(filename, arr)
     #Check if file is created
     if os.path.exists(filename):
@@ -58,13 +59,50 @@ def save_results_to_json_file(args, jsondict, resultsname, append=True):
         jsondict = old_res
     json.dump(jsondict, open(filename, "w"))
 
+def save_matrix_to_file(args, matrix, filename, filetype = 'csv'):
+    """
+    Save a 2D NumPy array to a .csv or .txt file.
 
-def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None):
+    Parameters:
+    - matrix (np.ndarray): The array to be saved.
+    - filename (str): The name of the file (without extension).
+    - filetype (str): 'csv' or 'txt'. Defaults to 'csv'.
+    """
+
+    if not isinstance(matrix, np.ndarray):
+        raise TypeError("Input must be a NumPy array.")
+    
+    if matrix.ndim != 2:
+        raise ValueError("Only 2D arrays are supported.")
+
+    if filetype == 'csv':
+        file_name = get_output_path(args, directory="matriX" , filename=filename, file_type="csv")
+        np.savetxt(file_name, matrix, delimiter=',', fmt='%s')
+        print(f"Matrix saved to {file_name}")
+    elif filetype == 'txt':
+        file_name = get_output_path(args, directory="matriX" , filename=filename, file_type="txt")
+        np.savetxt(file_name, matrix, delimiter='\t', fmt='%s')
+        print(f"Matrix saved to {file_name}")
+    else:
+        raise ValueError("filetype must be either 'csv' or 'txt'.")
+    
+def save_arrays_to_file(args, array, filename):
+    file_name = get_output_path(args, directory="arrayS" , filename=filename, file_type="csv")
+
+    np.savetxt(file_name, array, delimiter=",", header="y_true_class, y_pred_class, y_pred_cont", comments='')
+
+
+
+def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None, task_type=None):
     filename = get_output_path(args, filename="results", file_type="txt")
 
     with open(filename, "a") as text_file:
         text_file.write(str(datetime.datetime.now()) + "\n")
-        text_file.write(args.model_name + " - " + args.dataset + "\n\n")
+        if args.objective == "probabilistic_regression":
+            text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + " - " + args.strategy + " - " + args.binning + " - "  + str(args.weighted_loss)+  " - "  +str(args.exp_pred) + "\n\n")
+        else:
+            text_file.write(args.model_name + " - " + args.dataset +  " - " + task_type + " - " + args.objective + "\n\n")
+
 
         for key, value in results.items():
             text_file.write("%s: %.5f\n" % (key, value))
@@ -81,6 +119,22 @@ def save_results_to_file(args, results, train_time=None, test_time=None, best_pa
 
 def save_hyperparameters_to_file(args, params, results, time=None):
     filename = get_output_path(args, filename="hp_log", file_type="txt")
+
+    with open(filename, "a") as text_file:
+        text_file.write(str(datetime.datetime.now()) + "\n")
+        text_file.write("Parameters: %s\n\n" % params)
+
+        for key, value in results.items():
+            text_file.write("%s: %.5f\n" % (key, value))
+
+        if time:
+            text_file.write("\nTrain time: %f\n" % time[0])
+            text_file.write("Test time: %f\n" % time[1])
+
+        text_file.write("\n---------------------------------------\n")
+
+def save_hyperparameters_to_file_inner(args, params, results, time=None):
+    filename = get_output_path(args, filename="hp_log_inner", file_type="txt")
 
     with open(filename, "a") as text_file:
         text_file.write(str(datetime.datetime.now()) + "\n")
@@ -133,9 +187,13 @@ def get_predictions_from_file(args):
 
 
 
-def update_yaml(dataset_name, model_name, parameters):
-    file_path = "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/config/results_params.yml"
-    #file_path = '/Users/johnmburu/Desktop/Master Thesis/master-thesis-da/DNN_Trial/config/results_params.yml'
+def update_yaml(dataset_name, model_name, parameters, task):
+    print(f"Updating YAML file for dataset: {dataset_name}, model: {model_name}, task: {task}")
+    if task == "regression":
+        file_path = os.getcwd() + '/config/results_params_regression.yml'
+    elif task == "classification":
+        file_path = os.getcwd() + '/config/results_params_classification.yml'
+    
     # Load existing data
     try:
         with open(file_path, 'r') as file:

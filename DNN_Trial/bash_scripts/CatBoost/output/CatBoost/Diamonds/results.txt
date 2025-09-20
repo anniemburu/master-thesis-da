@@ -1,0 +1,14 @@
+2025-05-06 08:56:17.733443
+CatBoost - Diamonds - train_model
+
+MSE - mean: 369096.96072
+MSE - mean_std: 68236.83850
+R2 - mean: 0.97677
+R2 - mean_std: 0.00395
+
+Train time: 1.806143
+Test time: 0.006130
+
+Best Parameters: {'learning_rate': 0.15112337670160492, 'max_depth': 10, 'l2_leaf_reg': 15.996172615472394, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Diamonds/catboost_info', 'cat_features': [1, 2, 3]}
+
+

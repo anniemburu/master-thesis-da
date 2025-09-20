@@ -1,0 +1,14 @@
+2025-05-06 08:55:05.694245
+CatBoost - Black_Friday - train_model
+
+MSE - mean: 12410392.89223
+MSE - mean_std: 148993.15419
+R2 - mean: 0.51801
+R2 - mean_std: 0.00624
+
+Train time: 5.129428
+Test time: 0.027144
+
+Best Parameters: {'learning_rate': 0.0699928966757608, 'max_depth': 12, 'l2_leaf_reg': 0.60066810485453, 'iterations': 100, 'od_type': 'Iter', 'od_wait': 20, 'verbose': 100, 'train_dir': 'output/CatBoost/Black_Friday/catboost_info', 'cat_features': [0, 1, 2, 3, 4, 5, 6, 7, 8]}
+
+

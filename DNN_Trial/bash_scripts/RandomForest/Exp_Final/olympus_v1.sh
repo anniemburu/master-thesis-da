@@ -23,7 +23,7 @@ for config in "${CONFIGS[@]}"; do
     cd ~/Master_Thesis/master-thesis-da/DNN_Trial
     source ~/anaconda3/etc/profile.d/conda.sh
     conda activate TabSurvey
-    srun python3 train.py --config "$config" --model_name RandomForest --optimize_hyperparameters --n_trials 200 --epochs 100
+    srun python3 train.py --config "$config" --model_name RandomForest --optimize_hyperparameters --objective regression --n_trials 5 --epochs 100
 done
 
 

@@ -1,10 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=NODE_Olympus_V1
+#SBATCH --job-name=NODE_Olympus_BR
 #SBATCH --output=%x_%j.log
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=mburu@uni-hildesheim.de
-#SBATCH --partition=STUD
+#SBATCH --partition=STUDL
 #SBATCH --gres=gpu:1
+#SBATCH --account=long
 
 CONFIGS=(
 	config/boston.yml

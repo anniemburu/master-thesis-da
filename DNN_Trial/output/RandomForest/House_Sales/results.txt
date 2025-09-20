@@ -1,0 +1,28 @@
+2025-05-30 13:14:48.315629
+RandomForest - House_Sales - train_model - regression
+
+MSE - mean: 22822384592.16942
+MSE - mean_std: 3367932686.02533
+R2 - mean: 0.83887
+R2 - mean_std: 0.02135
+
+Train time: 4.718822
+Test time: 0.036340
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 59}
+
+
+2025-05-30 21:15:54.206908
+RandomForest - House_Sales - test_model - regression
+
+MSE - mean: 19734506739.02284
+MSE - std: 1332835269.53326
+R2 - mean: 0.84565
+R2 - std: 0.01042
+
+Train time: 7.004681
+Test time: 0.114544
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 59}
+
+

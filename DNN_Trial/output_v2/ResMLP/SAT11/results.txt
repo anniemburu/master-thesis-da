@@ -1,0 +1,442 @@
+2025-05-04 22:44:00.046329
+ResMLP - SAT11 - train_model
+
+Log Loss - mean: 0.73237
+Log Loss - mean_std: 0.09131
+AUC - mean: 0.67886
+AUC - mean_std: 0.06381
+Accuracy - mean: 0.72728
+Accuracy - mean_std: 0.04799
+F1 score - mean: 0.70845
+F1 score - mean_std: 0.04754
+
+Train time: 0.103756
+Test time: 0.002088
+
+Best Parameters: {'n_blocks': 5, 'd_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'd_in': 130, 'd_out': 3}
+
+
+2025-05-07 15:18:38.767473
+ResMLP - SAT11 - test_model
+
+MSE - mean: 7920.98260
+MSE - std: 0.00000
+R2 - mean: 0.99861
+R2 - std: 0.00000
+
+Train time: 0.227865
+Test time: 0.005829
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 117, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-07 21:06:05.916271
+ResMLP - SAT11 - test_model
+
+MSE - mean: 10050.31822
+MSE - std: 1553.03073
+R2 - mean: 0.99823
+R2 - std: 0.00027
+
+Train time: 0.256185
+Test time: 0.023199
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 117, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-09 19:26:13.418358
+ResMLP - SAT11 - test_model
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.246840
+Test time: 0.013701
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-10 15:25:40.417852
+ResMLP - SAT11 - test_model
+
+MSE - mean: 65319.46699
+MSE - std: 5276.60628
+R2 - mean: 0.98852
+R2 - std: 0.00093
+
+Train time: 0.244873
+Test time: 0.024004
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-11 05:29:14.585725
+ResMLP - SAT11 - train_model
+
+Log Loss - mean: 0.87302
+Log Loss - mean_std: 0.05439
+AUC - mean: 0.73750
+AUC - mean_std: 0.03190
+Accuracy - mean: 0.68789
+Accuracy - mean_std: 0.04818
+F1 score - mean: 0.67058
+F1 score - mean_std: 0.04880
+
+Train time: 0.088404
+Test time: 0.001977
+
+Best Parameters: {'n_blocks': 4, 'd_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'd_in': 130, 'd_out': 3}
+
+
+2025-05-14 11:47:01.999954
+ResMLP - SAT11 - test_model
+
+MSE - mean: 12301369.42927
+MSE - std: 1101.47401
+R2 - mean: -1.16123
+R2 - std: 0.00019
+
+Train time: 0.278041
+Test time: 0.031708
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 1, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-15 09:53:29.365942
+ResMLP - SAT11 - test_modelprobabilistic_regressionquantilesturges
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 0.205315
+Test time: 0.010989
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 8, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-15 09:53:36.148735
+ResMLP - SAT11 - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.219928
+Test time: 0.012124
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 8, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-15 16:22:59.214611
+ResMLP - SAT11 - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.249179
+Test time: 0.033580
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 8, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-15 16:23:05.361799
+ResMLP - SAT11 - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.285161
+Test time: 0.029410
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 8, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-16 09:39:18.124606
+ResMLP - SAT11 - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 65319.46699
+MSE - std: 5276.60628
+R2 - mean: 0.98852
+R2 - std: 0.00093
+
+Train time: 0.202866
+Test time: 0.011476
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 3, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-16 09:39:24.648065
+ResMLP - SAT11 - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 75626.44092
+MSE - std: 1466.49353
+R2 - mean: 0.98671
+R2 - std: 0.00026
+
+Train time: 0.211632
+Test time: 0.007636
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 3, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-17 11:44:32.609457
+ResMLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 0.215885
+Test time: 0.003836
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 8, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-17 11:44:38.160952
+ResMLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.282451
+Test time: 0.038341
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 8, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-17 11:44:43.101068
+ResMLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.263894
+Test time: 0.027249
+
+Best Parameters: {'d_block': 128, 'd_hidden': 2, 'd_hidden_multiplier': 1.2674975187110258, 'd_in': 130, 'd_out': 8, 'dropout1': 0.3407681665344991, 'dropout2': 0.21986827250639, 'n_blocks': 4}
+
+
+2025-05-18 11:31:19.203935
+ResMLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 0.215955
+Test time: 0.006341
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-18 11:31:24.836316
+ResMLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.219138
+Test time: 0.020272
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-18 11:31:29.731452
+ResMLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.232999
+Test time: 0.018244
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-18 11:31:34.490135
+ResMLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 269420.46345
+MSE - std: 143980.32199
+R2 - mean: 0.95267
+R2 - std: 0.02530
+
+Train time: 0.230644
+Test time: 0.004171
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-18 11:31:39.815743
+ResMLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 7873.37901
+MSE - std: 182.00373
+R2 - mean: 0.99862
+R2 - std: 0.00003
+
+Train time: 0.218164
+Test time: 0.014896
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-18 11:31:44.657063
+ResMLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 11823.23093
+MSE - std: 197.31411
+R2 - mean: 0.99792
+R2 - std: 0.00003
+
+Train time: 0.214660
+Test time: 0.010036
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 8, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-19 00:27:26.694358
+ResMLP - SAT11 - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 1676490.71670
+MSE - std: 46031.13443
+R2 - mean: 0.70546
+R2 - std: 0.00809
+
+Train time: 0.239704
+Test time: 0.012512
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-19 00:27:32.472769
+ResMLP - SAT11 - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 65319.46699
+MSE - std: 5276.60628
+R2 - mean: 0.98852
+R2 - std: 0.00093
+
+Train time: 0.226411
+Test time: 0.020848
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-19 00:27:37.465751
+ResMLP - SAT11 - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 75626.44092
+MSE - std: 1466.49353
+R2 - mean: 0.98671
+R2 - std: 0.00026
+
+Train time: 0.212766
+Test time: 0.013153
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-19 00:27:42.650426
+ResMLP - SAT11 - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1676490.71670
+MSE - std: 46031.13443
+R2 - mean: 0.70546
+R2 - std: 0.00809
+
+Train time: 0.221815
+Test time: 0.007692
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-19 00:27:48.501402
+ResMLP - SAT11 - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 65319.46699
+MSE - std: 5276.60628
+R2 - mean: 0.98852
+R2 - std: 0.00093
+
+Train time: 0.216120
+Test time: 0.010855
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-19 00:27:54.381233
+ResMLP - SAT11 - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 75626.44092
+MSE - std: 1466.49353
+R2 - mean: 0.98671
+R2 - std: 0.00026
+
+Train time: 0.222859
+Test time: 0.018731
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 3, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-20 09:15:56.254906
+ResMLP - SAT11 - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 198800.47922
+MSE - std: 83996.40139
+R2 - mean: 0.96507
+R2 - std: 0.01476
+
+Train time: 0.237485
+Test time: 0.030731
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 10, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-20 09:16:01.728876
+ResMLP - SAT11 - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 5102.70258
+MSE - std: 565.16491
+R2 - mean: 0.99910
+R2 - std: 0.00010
+
+Train time: 0.243568
+Test time: 0.017611
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 10, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+
+2025-05-20 09:16:06.904462
+ResMLP - SAT11 - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 7753.92627
+MSE - std: 87.60933
+R2 - mean: 0.99864
+R2 - std: 0.00002
+
+Train time: 0.310267
+Test time: 0.054016
+
+Best Parameters: {'d_block': 256, 'd_hidden': 6, 'd_hidden_multiplier': 3.226913030082402, 'd_in': 130, 'd_out': 10, 'dropout1': 0.4143262004883449, 'dropout2': 0.10671304592041092, 'n_blocks': 5}
+
+

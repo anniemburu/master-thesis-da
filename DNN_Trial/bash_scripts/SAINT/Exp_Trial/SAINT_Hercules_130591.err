@@ -1,0 +1,167 @@
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 896, in test_model
+    loss_history, test_loss_history = curr_model.fit(X_train, y_train_class, X_test, y_test_class)  # X_test, y_test_class)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/models/saint.py", line 76, in fit
+    self.model.to(self.device)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 5 more times]
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/mburu/anaconda3/envs/TabSurvey/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.12 GiB. GPU 0 has a total capacty of 7.79 GiB of which 1.22 GiB is free. Including non-PyTorch memory, this process has 6.56 GiB memory in use. Of the allocated memory 6.44 GiB is allocated by PyTorch, and 22.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: stud-000: task 0: Exited with exit code 1
+usage: train.py [-h] [-config CONFIG] --model_name MODEL_NAME --dataset
+                DATASET --objective
+                {regression,probabilistic_regression,classification,binary}
+                [--use_gpu] [--gpu_ids GPU_IDS] [--data_parallel]
+                [--optimize_hyperparameters] [--n_trials N_TRIALS]
+                [--direction {minimize,maximize}] --y_distribution
+                {normal,skewed,bimodial,multimodal} [--num_splits NUM_SPLITS]
+                [--num_bins NUM_BINS] [--shuffle] [--seed SEED]
+                [--weighted_loss] [--scale] [--target_encode]
+                [--one_hot_encode] [--ordinal_encode] [--frequency_reg]
+                [--class_comp] [--batch_size BATCH_SIZE]
+                [--val_batch_size VAL_BATCH_SIZE]
+                [--early_stopping_rounds EARLY_STOPPING_ROUNDS]
+                [--epochs EPOCHS] [--logging_period LOGGING_PERIOD]
+                --num_features NUM_FEATURES [--num_classes NUM_CLASSES]
+                [--cat_idx CAT_IDX] [--nominal_idx NOMINAL_IDX]
+                [--ordinal_idx ORDINAL_IDX] [--num_idx NUM_IDX]
+                [--cat_dims CAT_DIMS] [--bin_alt BIN_ALT]
+                [--dropna_idx DROPNA_IDX] [--miss_cat_idx MISS_CAT_IDX]
+                [--miss_num_idx MISS_NUM_IDX] [--outer_splits OUTER_SPLITS]
+                [--save_results] [--no_save_results]
+train.py: error: argument --y_distribution: invalid choice: 'multimodial' (choose from 'normal', 'skewed', 'bimodial', 'multimodal')
+srun: error: stud-000: task 0: Exited with exit code 2
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 856, in test_model
+    X_train, y_train, X_test, y_test = encoding(args, X_train, y_train, X_test, y_test)
+  File "/home/mburu/Master_Thesis/master-thesis-da/DNN_Trial/utils/data_encoding.py", line 329, in encoding
+    X_train[:, args.ordinal_idx] = encoder.fit_transform(train_cat)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py", line 916, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/base.py", line 1152, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_encoders.py", line 1499, in fit
+    fit_results = self._fit(
+  File "/home/mburu/.local/lib/python3.8/site-packages/sklearn/preprocessing/_encoders.py", line 85, in _fit
+    raise ValueError(
+ValueError: Shape mismatch: if categories is an array, it has to be of shape (n_features,).
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "train.py", line 1195, in <module>
+    main_once(arguments)
+  File "train.py", line 1155, in main_once
+    sc, timer, results = test_model(model_name, parameters, X, y, X_test, y_test, args, visual=True, save_model=True)
+  File "train.py", line 961, in test_model
+    mse_scores.append(error_results['MSE'])
+KeyError: 'MSE'
+srun: error: stud-000: task 0: Exited with exit code 1

@@ -1,0 +1,412 @@
+2025-05-29 23:26:38.915036
+SAINT - Sensory - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 1.03649
+MSE - std: 0.16467
+R2 - mean: -0.58888
+R2 - std: 0.25243
+
+Train time: 22.411536
+Test time: 0.141937
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-29 23:31:47.865444
+SAINT - Sensory - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 1.45813
+MSE - std: 0.36022
+R2 - mean: -1.23521
+R2 - std: 0.55219
+
+Train time: 21.650058
+Test time: 0.149905
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-29 23:37:19.870012
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 0.70497
+MSE - std: 0.05025
+R2 - mean: -0.08068
+R2 - std: 0.07704
+
+Train time: 23.311090
+Test time: 0.146794
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-29 23:42:38.731692
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 2.16880
+MSE - std: 0.34435
+R2 - mean: -2.32462
+R2 - std: 0.52787
+
+Train time: 22.681487
+Test time: 0.136467
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-29 23:48:10.882094
+SAINT - Sensory - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 0.72205
+MSE - std: 0.04014
+R2 - mean: -0.10685
+R2 - std: 0.06154
+
+Train time: 23.438750
+Test time: 0.143523
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-29 23:53:49.843621
+SAINT - Sensory - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 1.87377
+MSE - std: 0.34519
+R2 - mean: -1.87236
+R2 - std: 0.52915
+
+Train time: 23.039988
+Test time: 0.136575
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-29 23:58:35.103008
+SAINT - Sensory - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 0.75402
+MSE - std: 0.13370
+R2 - mean: -0.15586
+R2 - std: 0.20495
+
+Train time: 21.314976
+Test time: 0.141908
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-30 00:03:48.966965
+SAINT - Sensory - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 1.64190
+MSE - std: 0.34850
+R2 - mean: -1.51693
+R2 - std: 0.53423
+
+Train time: 22.202680
+Test time: 0.134081
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-30 00:09:25.030728
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 0.69705
+MSE - std: 0.05095
+R2 - mean: -0.06853
+R2 - std: 0.07810
+
+Train time: 23.867667
+Test time: 0.145813
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-30 00:14:38.855728
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 2.42604
+MSE - std: 0.64589
+R2 - mean: -2.71896
+R2 - std: 0.99010
+
+Train time: 22.367589
+Test time: 0.137272
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-30 00:20:11.887926
+SAINT - Sensory - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 0.69705
+MSE - std: 0.05095
+R2 - mean: -0.06853
+R2 - std: 0.07810
+
+Train time: 23.528810
+Test time: 0.137396
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-05-30 00:25:37.325161
+SAINT - Sensory - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 2.42604
+MSE - std: 0.64589
+R2 - mean: -2.71896
+R2 - std: 0.99010
+
+Train time: 22.647973
+Test time: 0.129373
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-02 08:38:06.240724
+SAINT - Sensory - test_model - regression
+
+MSE - mean: 0.61966
+MSE - std: 0.01154
+R2 - mean: 0.05010
+R2 - std: 0.01769
+
+Train time: 8.267893
+Test time: 0.230534
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 2, 'dropout': 0.1}
+
+
+2025-06-03 00:52:04.137718
+SAINT - Sensory - test_model - regression
+
+MSE - mean: 0.70279
+MSE - std: 0.03275
+R2 - mean: -0.07733
+R2 - std: 0.05021
+
+Train time: 87.945868
+Test time: 0.113548
+
+Best Parameters: {'dim': 64, 'depth': 1, 'heads': 2, 'dropout': 0.1}
+
+
+2025-06-20 23:20:46.616510
+SAINT - Sensory - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 6.65385
+Log Loss - std: 0.15470
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.21181
+Accuracy - std: 0.02321
+F1 score - mean: 0.34896
+F1 score - std: 0.03188
+
+Train time: 163.840773
+Test time: 0.159219
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-20 23:33:44.246819
+SAINT - Sensory - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 6.64071
+Log Loss - std: 0.13109
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.20949
+Accuracy - std: 0.02572
+F1 score - mean: 0.34567
+F1 score - std: 0.03500
+
+Train time: 162.858223
+Test time: 0.158847
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-20 23:46:41.833378
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 11.10727
+Log Loss - std: 0.17894
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00347
+Accuracy - std: 0.00000
+F1 score - mean: 0.00692
+F1 score - std: 0.00000
+
+Train time: 162.333721
+Test time: 0.154162
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-20 23:59:36.960472
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 11.11661
+Log Loss - std: 0.16423
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00347
+Accuracy - std: 0.00000
+F1 score - mean: 0.00692
+F1 score - std: 0.00000
+
+Train time: 161.850042
+Test time: 0.152519
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 00:12:32.346642
+SAINT - Sensory - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 10.35902
+Log Loss - std: 0.30200
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01157
+Accuracy - std: 0.00433
+F1 score - mean: 0.02285
+F1 score - std: 0.00845
+
+Train time: 161.944280
+Test time: 0.157012
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 00:25:31.706918
+SAINT - Sensory - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 10.50169
+Log Loss - std: 0.19446
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.01389
+Accuracy - std: 0.00284
+F1 score - mean: 0.02738
+F1 score - std: 0.00552
+
+Train time: 163.236377
+Test time: 0.159219
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 00:38:32.482276
+SAINT - Sensory - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 7.47510
+Log Loss - std: 0.99863
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.15625
+Accuracy - std: 0.06333
+F1 score - mean: 0.26491
+F1 score - std: 0.09792
+
+Train time: 164.066979
+Test time: 0.158041
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 00:51:43.267445
+SAINT - Sensory - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 7.36385
+Log Loss - std: 1.03430
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.15394
+Accuracy - std: 0.06379
+F1 score - mean: 0.26132
+F1 score - std: 0.09924
+
+Train time: 165.710095
+Test time: 0.160888
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 01:04:49.391829
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 11.09801
+Log Loss - std: 0.22591
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00347
+Accuracy - std: 0.00000
+F1 score - mean: 0.00692
+F1 score - std: 0.00000
+
+Train time: 164.917693
+Test time: 0.161059
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 01:18:07.600666
+SAINT - Sensory - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 11.18431
+Log Loss - std: 0.18029
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00347
+Accuracy - std: 0.00000
+F1 score - mean: 0.00692
+F1 score - std: 0.00000
+
+Train time: 168.239358
+Test time: 0.170253
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 01:31:21.815966
+SAINT - Sensory - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 11.09230
+Log Loss - std: 0.22381
+AUC - mean: 0.48587
+AUC - std: 0.01088
+Accuracy - mean: 0.00347
+Accuracy - std: 0.00000
+F1 score - mean: 0.00692
+F1 score - std: 0.00000
+
+Train time: 166.497981
+Test time: 0.163380
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+
+2025-06-21 01:45:02.723614
+SAINT - Sensory - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 11.17958
+Log Loss - std: 0.17724
+AUC - mean: 0.48840
+AUC - std: 0.00842
+Accuracy - mean: 0.00347
+Accuracy - std: 0.00000
+F1 score - mean: 0.00692
+F1 score - std: 0.00000
+
+Train time: 165.901727
+Test time: 0.174820
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0, 'heads': 8}
+
+

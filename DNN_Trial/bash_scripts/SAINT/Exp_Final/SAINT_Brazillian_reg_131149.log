@@ -1,0 +1,12 @@
+Running Mode: Nested CV with Hyperparameter Optimization
+Arguements: Namespace(batch_size=32, bin_alt=None, cat_dims=[2], cat_idx=[0], class_comp=False, class_weights=None, config='config/brazillian_houses.yml', data_parallel=False, dataset='Brazillian_Houses', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=5, nominal_idx=[0, 6], num_bins=10, num_classes=1, num_features=12, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[7], outer_splits=2, save_results=False, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=64, weighted_loss=False, y_distribution='skewed')
+--- Running Nested Cross-Validation with Hyperparameter Optimization ---
+Loading dataset Brazillian_Houses...
+Dataset loaded! 
+
+(10692, 12)
+X : [['Rio de Janeiro' 60 2 1 0 7 'acept' 'not furnished' 528 1100 86 15]
+ ['Belo Horizonte' 44 1 1 1 11 'acept' 'not furnished' 520 3500 225 47]
+ ['Porto Alegre' 90 2 1 0 2 'acept' 'not furnished' 200 950 26 14]
+ ['Porto Alegre' 121 3 2 2 2 'acept' 'not furnished' 720 2650 135 39]
+ ['Campinas' 54 2 1 1 3 'acept' 'not furnished' 286 999 23 13]]

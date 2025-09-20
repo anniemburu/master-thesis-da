@@ -10,6 +10,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from torch import einsum
 from einops import rearrange
+from sklearn.utils.class_weight import compute_class_weight
 
 from models.saint_lib.models.pretrainmodel import SAINT as SAINTModel
 from models.saint_lib.data_openml import DataSetCatCon
@@ -39,6 +40,14 @@ class SAINT(BaseModelTorch):
         dim = self.params["dim"] if args.num_features < 50 else 8
         self.batch_size = self.args.batch_size if args.num_features < 50 else 64
 
+        self.lambda_reg = torch.nn.Parameter(torch.log(torch.tensor(0.01))) # Initialize with 0.01  #FRR
+
+        #try and learn the mean bins
+        """if self.args.objective == "probabilistic_regression":
+            self.class_weights = nn.Parameter(
+                torch.tensor(args.class_weights, dtype=torch.float32).to(self.device)
+            )"""
+
         print("Using dim %d and batch size %d" % (dim, self.batch_size))
 
         self.model = SAINTModel(
@@ -61,30 +70,44 @@ class SAINT(BaseModelTorch):
             self.model.transformer = nn.DataParallel(self.model.transformer, device_ids=self.args.gpu_ids)
             self.model.mlpfory = nn.DataParallel(self.model.mlpfory, device_ids=self.args.gpu_ids)
 
-    def fit(self, X, y, X_val=None, y_val=None):
+        """for name, param in self.model.named_parameters():
+         print(name, param.shape, param.view(-1)[0].item())
+      
+        for name, param in self.model.state_dict().items():
+            print("In here")
+            print(name, param.shape, param.view(-1)[0].item())
+        """
+
+    def fit(self, X, y, X_val=None, y_val=None,class_weights=None):
+
+        class_weights = class_weights.to(self.device) if class_weights is not None else None
 
         if self.args.objective == 'binary':
             criterion = nn.BCEWithLogitsLoss()
         elif self.args.objective == 'classification' or self.args.objective == 'probabilistic_regression':
-            criterion = nn.CrossEntropyLoss()
+            criterion = nn.CrossEntropyLoss(weight=class_weights)
         else:
             criterion = nn.MSELoss()
 
-        optimizer = optim.AdamW(self.model.parameters(), lr=0.00003)
+        #optimizer = optim.AdamW(list(self.model.parameters()) + [self.lambda_reg], lr=0.00003)
+        optimizer = optim.AdamW(self.model.parameters(), lr=self.params['learning_rate'], weight_decay=self.params['weight_decay'])
 
         self.model.to(self.device)
 
         # SAINT wants it like this...
         X = {'data': X, 'mask': np.ones_like(X)}
         y = {'data': y.reshape(-1, 1)}
-        X_val = {'data': X_val, 'mask': np.ones_like(X_val)}
-        y_val = {'data': y_val.reshape(-1, 1)}
+        X_val = {'data': X_val, 'mask': np.ones_like(X_val)} if X_val is not None else X
+        y_val = {'data': y_val.reshape(-1, 1)} if y_val is not None else y
+
 
         train_ds = DataSetCatCon(X, y, self.args.cat_idx, self.args.objective)
         trainloader = DataLoader(train_ds, batch_size=self.batch_size, shuffle=True, num_workers=4)
 
-        val_ds = DataSetCatCon(X_val, y_val, self.args.cat_idx, self.args.objective)
-        valloader = DataLoader(val_ds, batch_size=self.args.val_batch_size, shuffle=True, num_workers=4)
+
+        if X_val is None:
+            val_ds = DataSetCatCon(X_val, y_val, self.args.cat_idx, self.args.objective)
+            valloader = DataLoader(val_ds, batch_size=self.args.val_batch_size, shuffle=True, num_workers=4)
 
         min_val_loss = float("inf")
         min_val_loss_idx = 0
@@ -118,7 +141,20 @@ class SAINT(BaseModelTorch):
                 # and apply mlp on it in the next step to get the predictions.
                 y_reps = reps[:, 0, :]
 
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                #changed this for my EXP 4BIN MEAN
+
                 y_outs = self.model.mlpfory(y_reps)
+
+                """logits = self.model.mlpfory(y_reps)
+
+                if self.args.objective == "probabilistic_regression":
+                    probs = F.softmax(logits, dim=1)  # (batch_size, n_bins)
+                    y_outs = torch.matmul(probs, self.class_weights)  # (batch_size,)
+                else:
+                    y_outs = logits"""
+
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
                 if self.args.objective == "regression":
                     y_gts = y_gts.to(self.device)
@@ -136,49 +172,50 @@ class SAINT(BaseModelTorch):
                 # print("Loss", loss.item())
 
             # Early Stopping
-            val_loss = 0.0
-            val_dim = 0
-            self.model.eval()
-            with torch.no_grad():
-                for data in valloader:
-                    x_categ, x_cont, y_gts, cat_mask, con_mask = data
+            if X_val is None:
+                val_loss = 0.0
+                val_dim = 0
+                self.model.eval()
+                with torch.no_grad():
+                    for data in valloader:
+                        x_categ, x_cont, y_gts, cat_mask, con_mask = data
 
-                    x_categ, x_cont = x_categ.to(self.device), x_cont.to(self.device)
-                    cat_mask, con_mask = cat_mask.to(self.device), con_mask.to(self.device)
+                        x_categ, x_cont = x_categ.to(self.device), x_cont.to(self.device)
+                        cat_mask, con_mask = cat_mask.to(self.device), con_mask.to(self.device)
 
-                    _, x_categ_enc, x_cont_enc = embed_data_mask(x_categ, x_cont, cat_mask, con_mask, self.model)
-                    reps = self.model.transformer(x_categ_enc, x_cont_enc)
-                    y_reps = reps[:, 0, :]
-                    y_outs = self.model.mlpfory(y_reps)
+                        _, x_categ_enc, x_cont_enc = embed_data_mask(x_categ, x_cont, cat_mask, con_mask, self.model)
+                        reps = self.model.transformer(x_categ_enc, x_cont_enc)
+                        y_reps = reps[:, 0, :]
+                        y_outs = self.model.mlpfory(y_reps)
 
-                    if self.args.objective == "regression":
-                        y_gts = y_gts.to(self.device)
-                    elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
-                        y_gts = y_gts.to(self.device).squeeze()
-                    else:
-                        y_gts = y_gts.to(self.device).float()
+                        if self.args.objective == "regression":
+                            y_gts = y_gts.to(self.device)
+                        elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
+                            y_gts = y_gts.to(self.device).squeeze()
+                        else:
+                            y_gts = y_gts.to(self.device).float()
 
-                    val_loss += criterion(y_outs, y_gts)
-                    val_dim += 1
-            val_loss /= val_dim
+                        val_loss += criterion(y_outs, y_gts)
+                        val_dim += 1
+                val_loss /= val_dim
 
-            val_loss_history.append(val_loss.item())
+                val_loss_history.append(val_loss.item())
 
-            print("Epoch", epoch, "loss", val_loss.item())
+                print("Epoch", epoch, "loss", val_loss.item())
 
-            if val_loss < min_val_loss:
-                min_val_loss = val_loss
-                min_val_loss_idx = epoch
+                if val_loss < min_val_loss:
+                    min_val_loss = val_loss
+                    min_val_loss_idx = epoch
 
-                # Save the currently best model
-                self.save_model(filename_extension="best", directory="tmp")
+                    # Save the currently best model
+                    self.save_model(filename_extension="best", directory="tmp")
 
-            if min_val_loss_idx + self.args.early_stopping_rounds < epoch:
-                print("Validation loss has not improved for %d steps!" % self.args.early_stopping_rounds)
-                print("Early stopping applies.")
-                break
+                if min_val_loss_idx + self.args.early_stopping_rounds < epoch:
+                    print("Validation loss has not improved for %d steps!" % self.args.early_stopping_rounds)
+                    print("Early stopping applies.")
+                    break
 
-        self.load_model(filename_extension="best", directory="tmp")
+        #self.load_model(filename_extension="best", directory="tmp")
         return loss_history, val_loss_history
 
     def predict_helper(self, X):
@@ -202,14 +239,30 @@ class SAINT(BaseModelTorch):
                 _, x_categ_enc, x_cont_enc = embed_data_mask(x_categ, x_cont, cat_mask, con_mask, self.model)
                 reps = self.model.transformer(x_categ_enc, x_cont_enc)
                 y_reps = reps[:, 0, :]
-                y_outs = self.model.mlpfory(y_reps)
 
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                #EXPEREIMENTS 4 MY BIN STUFF MEAN BIN
+
+                y_outs = self.model.mlpfory(y_reps)
                 if self.args.objective == "binary":
                     y_outs = torch.sigmoid(y_outs)
                 elif self.args.objective == "classification" or self.args.objective == "probabilistic_regression":
                     y_outs = F.softmax(y_outs, dim=1)
 
                 predictions.append(y_outs.detach().cpu().numpy())
+
+                """logits = self.model.mlpfory(y_reps)
+
+                if self.args.objective == "probabilistic_regression":
+                    probs = F.softmax(logits, dim=1)
+                    y_outs = torch.matmul(probs, self.class_weights.unsqueeze(0).expand(probs.size(0), -1))  # broadcast
+                else:
+                    y_outs = logits if self.args.objective == "regression" else F.softmax(logits, dim=1)
+
+                predictions.append(y_outs.detach().cpu().numpy())"""
+
+                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
         return np.concatenate(predictions)
 
     def attribute(self, X, y, strategy=""):
@@ -268,9 +321,23 @@ class SAINT(BaseModelTorch):
     @classmethod
     def define_trial_parameters(cls, trial, args):
         params = {
-            "dim": trial.suggest_categorical("dim", [32, 64, 128, 256]),
-            "depth": trial.suggest_categorical("depth", [1, 2, 3, 6, 12]),
+            "learning_rate": trial.suggest_categorical("learning_rate", [1e-5, 1e-2]),
+            "weight_decay": trial.suggest_categorical("weight_decay", [1e-6, 1e-3]),
+            "dim": trial.suggest_categorical("dim", [64, 128]),
+            "depth": trial.suggest_categorical("depth", [2, 3, 6]),
             "heads": trial.suggest_categorical("heads", [2, 4, 8]),
-            "dropout": trial.suggest_categorical("dropout", [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]),
+            "dropout": trial.suggest_categorical("dropout", [0.1, 0.2, 0.3]),
         }
         return params
+
+    @classmethod
+    def define_grid_parameters(cls):
+        search_space = {
+            "learning_rate": [1e-5, 1e-2],
+            "weight_decay": [1e-6, 1e-3],
+            "dim": [64, 128],
+            "depth": [2, 3, 6],
+            "heads": [2, 4, 8],
+            "dropout": [0.1, 0.2, 0.3],
+            }
+        return search_space

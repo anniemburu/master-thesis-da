@@ -14,6 +14,7 @@ def get_parser():
     parser.add('--dataset', required=True, help="Name of the dataset that will be used")
     parser.add('--objective', required=True, type=str, default="regression", choices=["regression", 
                                                                                       "probabilistic_regression",
+                                                                                      "ordinal_regression",
                                                                                       "classification", "binary"],
                help="Set the type of the task") 
 
@@ -23,27 +24,33 @@ def get_parser():
 
     parser.add('--optimize_hyperparameters', action="store_true",
                help="Search for the best hyperparameters")
-    parser.add('--n_trials', type=int, default=100, help="Number of trials for the hyperparameter optimization")
+    parser.add('--n_trials', type=int, default=10, help="Number of trials for the hyperparameter optimization")
     parser.add('--direction', type=str, default="minimize", choices=['minimize', 'maximize'],
                help="Direction of optimization.")
-    parser.add('--y_distribution', required=True, type=str, default="quantile", choices=["normal","skewed","bimodial"],
+    parser.add('--y_distribution', required=True, type=str, default="quantile", choices=["normal","skewed","bimodial", "multimodal"],
                help="Set the distribution of the target variable") 
 
     parser.add('--num_splits', type=int, default=5, help="Number of splits done for cross validation")
     parser.add('--num_bins', type=int, default=10, help="Number of bins for probailistic regression")
     parser.add('--shuffle', action="store_true", help="Shuffle data during cross-validation")
     parser.add('--seed', type=int, default=123, help="Seed for KFold initialization.")
+    parser.add('--test_seed', type=int, help="Use in Testing")
+    parser.add('--weighted_loss', action="store_true", help="Add weights to the loss function.")
+    parser.add('--strategy', type=str, choices=["uniform", "quantile", "kmeans"], help="Strategy for binning the data", default="quantile")
+    parser.add('--binning', type=str, help="Find bin fo the data", choices=["sturges", "freedman"], default="sturges")
 
     parser.add('--scale', action="store_true", help="Normalize input data.")
     parser.add('--target_encode', action="store_true", help="Encode the targets that they start at 0. (0, 1, 2,...)")
     parser.add('--one_hot_encode', action="store_true", help="OneHotEncode the categorical features")
     parser.add('--ordinal_encode', action="store_true", help="Encode Ordinal categorical features")
     parser.add('--frequency_reg', action="store_true", help="Perform frequency regularization")
+    parser.add('--class_comp', action='store_true', help='Convert Classification to Regression')
+    parser.add('--exp_pred', action="store_true", help="Get the expected value of y")
 
     parser.add('--batch_size', type=int, default=128, help="Batch size used for training")
     parser.add('--val_batch_size', type=int, default=128, help="Batch size used for training and testing")
     parser.add('--early_stopping_rounds', type=int, default=20, help="Number of rounds before early stopping applies.")
-    parser.add('--epochs', type=int, default=1000, help="Max number of epochs to train.")
+    parser.add('--epochs', type=int, default=100, help="Max number of epochs to train.")
     parser.add('--logging_period', type=int, default=100, help="Number of iteration after which validation is printed.")
 
     parser.add('--num_features', type=int, required=True, help="Set the total number of features.")
@@ -55,6 +62,7 @@ def get_parser():
     parser.add('--cat_dims', type=int, action="append", help="Cardinality of the categorical features (is set "
                                                              "automatically, when the load_data function is used.")
     parser.add('--bin_alt', type=int, action="append", help="Alternative Bins")
+    parser.add('--class_weights', type=int, action="append", help="Mean per bin")
     
     parser.add('--dropna_idx', type=int, action="append", help="Indices of columns to be dropped")
     parser.add('--miss_cat_idx', type=int, action="append", help="Indices of categorical columns with missing values")
@@ -65,10 +73,17 @@ def get_parser():
     return parser
 
 
-def get_given_parameters_parser():
+def get_given_parameters_parser(task):
     parser = get_parser()
 
-    parser.add('-best_params_file', '--best_params_file', is_config_file_arg=True, default="config/best_params.yml",
+    if task == "regression":
+        best_params_file = "config/best_params_regression.yml"
+    elif task == "classification":
+        best_params_file = "config/best_params_classification.yml"
+    else:
+        raise ValueError(f"Task {task} is not supported. Use 'regression' or 'classification'.")
+
+    parser.add('-best_params_file', '--best_params_file', is_config_file_arg=True, default=best_params_file,
                help="Parameter file path")
     parser.add('-parameters', '--parameters', type=yaml.safe_load, help="Parameter values")
 

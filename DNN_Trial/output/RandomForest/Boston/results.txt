@@ -1,0 +1,28 @@
+2025-05-30 13:13:35.828771
+RandomForest - Boston - train_model - regression
+
+MSE - mean: 15.48394
+MSE - mean_std: 7.23191
+R2 - mean: 0.76407
+R2 - mean_std: 0.09323
+
+Train time: 0.249739
+Test time: 0.021078
+
+Best Parameters: {'max_depth': 8, 'n_estimators': 77}
+
+
+2025-05-30 21:15:33.314322
+RandomForest - Boston - test_model - regression
+
+MSE - mean: 18.84899
+MSE - std: 3.76425
+R2 - mean: 0.81254
+R2 - std: 0.03744
+
+Train time: 0.336666
+Test time: 0.030082
+
+Best Parameters: {'max_depth': 8, 'n_estimators': 77}
+
+

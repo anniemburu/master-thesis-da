@@ -1,0 +1,2792 @@
+Running Mode: Nested CV with Hyperparameter Optimization
+Arguements: Namespace(batch_size=32, bin_alt=None, cat_dims=[2], cat_idx=[0], class_comp=False, class_weights=None, config='config/brazillian_houses.yml', data_parallel=False, dataset='Brazillian_Houses', direction='minimize', dropna_idx=None, early_stopping_rounds=20, epochs=100, frequency_reg=False, gpu_ids=[0, 1], logging_period=100, miss_cat_idx=None, miss_num_idx=None, model_name='SAINT', n_trials=5, nominal_idx=[0, 6], num_bins=10, num_classes=1, num_features=12, num_idx=None, num_splits=5, objective='regression', one_hot_encode=True, optimize_hyperparameters=True, ordinal_encode=True, ordinal_idx=[7], outer_splits=2, save_results=False, scale=True, seed=221, shuffle=True, target_encode=False, use_gpu=True, val_batch_size=64, weighted_loss=False, y_distribution='skewed')
+--- Running Nested Cross-Validation with Hyperparameter Optimization ---
+Loading dataset Brazillian_Houses...
+Dataset loaded! 
+
+(10692, 12)
+X : [['Rio de Janeiro' 60 2 1 0 7 'acept' 'not furnished' 528 1100 86 15]
+ ['Belo Horizonte' 44 1 1 1 11 'acept' 'not furnished' 520 3500 225 47]
+ ['Porto Alegre' 90 2 1 0 2 'acept' 'not furnished' 200 950 26 14]
+ ['Porto Alegre' 121 3 2 2 2 'acept' 'not furnished' 720 2650 135 39]
+ ['Campinas' 54 2 1 1 3 'acept' 'not furnished' 286 999 23 13]]
+X : [1729 4292 1190 3544 1321]
+--- Starting Nested Cross-Validation (2 Outer Folds, 5 Inner Folds) ---
+Hyperparameter Optimization per Outer Fold: True
+
+--- Outer Fold 1/2 ---
+Starting Hyperparameter Optimization for Outer Fold 1...
+  outer_1_inner Fold 1/5
+Before Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 12
+DEBUG Inner Fold 1: num_classes: 1
+DEBUG Inner Fold 1: cat_idx: [0]
+DEBUG Inner Fold 1: nominal_idx: [0, 6]
+DEBUG Inner Fold 1: ordinal_idx: [7]
+DEBUG Inner Fold 1: num_idx: None
+DEBUG Inner Fold 1: cat_dims: [2]
+DEBUG Inner Fold 1: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3420, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]] 
+ 
+ 
+Val : (3420, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.6066119667393784 -0.4409735877705798
+  -0.8891088668162085 -1.0310300730068107 0.2638682927091926
+  -0.03726588519561444 -0.8168946486982943 -0.0649112397113407
+  -0.7997059857529025]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.7242858670452416 -1.3092117398577316
+  -0.8891088668162085 -0.3988818389294905 0.8090605966303156
+  -0.03768442184442685 -0.1307794991794192 -0.03924644180762629
+  -0.14718167573763577]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.6507396793540772 -0.4409735877705798
+  -0.8891088668162085 -0.3988818389294905 -0.2813240112119303
+  -0.049926618822189746 -0.845768661240547 -0.07654348624324005
+  -0.8404887551288567]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.7172194117015818 2.1637408684908754
+  -0.19008534394001708 0.8654146292251502 -0.6902182391527725
+  -0.06488930401723328 0.7268644377191747 -0.02724491760804761
+  0.8927789433491956]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.7172194117015818 0.42726456431657195
+  0.5089381789361743 0.23326639514782987 -0.6902182391527725
+  -0.06488930401723328 0.012161156970346462 -0.026875639940368266
+  0.13829770989404344]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.275942285554595 0.42726456431657195
+  0.5089381789361743 -1.0310300730068107 -0.6902182391527725
+  -0.06384296239520226 -0.4166608114789505 -0.049401577668808254
+  -0.31031275324145247]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.5330657790482141 -0.4409735877705798
+  -0.19008534394001708 0.23326639514782987 0.1275702167289119
+  -0.03219112832876401 -0.4881311395538333 -0.0418313854813817
+  -0.4938352154332462]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.040306321517412154
+  0.42726456431657195 0.5089381789361743 -0.3988818389294905
+  0.5364644446697541 0.00035009611640060854 0.4409831254196434
+  -0.024844612768131873 0.32182017208583724]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.5698388728937962 -0.4409735877705798
+  -0.19008534394001708 -0.3988818389294905 -0.14502593523164956
+  -0.05154844833633782 -0.7311302550084349 -0.06583443388053907
+  -0.7181404470009942]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.35655492858941934
+  -0.4409735877705798 -0.19008534394001708 0.23326639514782987
+  0.40016636868947336 -0.033499055356302786 -0.302308286559138
+  -0.03832324763842793 -0.2287472144895441]] 
+ 
+ 
+Val : (3420, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 17
+DEBUG Inner Fold 1: num_classes: 1
+DEBUG Inner Fold 1: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 1: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 1: ordinal_idx: [0]
+DEBUG Inner Fold 1: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 1: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 1: bin_alt: None
+In get_device
+Using dim 64 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 33587208.0
+Epoch 1 loss 7254574.0
+Epoch 2 loss 9989252.0
+Epoch 3 loss 3273981.75
+Epoch 4 loss 1199980.625
+Epoch 5 loss 2941542.75
+Epoch 6 loss 3172854.75
+Epoch 7 loss 4584035.0
+Epoch 8 loss 4981408.0
+Epoch 9 loss 2293554.0
+Epoch 10 loss 1101671.375
+Epoch 11 loss 536546.125
+Epoch 12 loss 811528.1875
+Epoch 13 loss 1871119.5
+Epoch 14 loss 1123252.0
+Epoch 15 loss 488574.5
+Epoch 16 loss 430918.6875
+Epoch 17 loss 559154.0
+Epoch 18 loss 1236753.625
+Epoch 19 loss 2357409.75
+Epoch 20 loss 1250525.0
+Epoch 21 loss 6099323.5
+Epoch 22 loss 668525.4375
+Epoch 23 loss 542321.625
+Epoch 24 loss 632689.0
+Epoch 25 loss 420637.59375
+Epoch 26 loss 551350.4375
+Epoch 27 loss 801145.75
+Epoch 28 loss 727540.1875
+Epoch 29 loss 20986168.0
+Epoch 30 loss 4330343.5
+Epoch 31 loss 1843661.125
+Epoch 32 loss 1284518.375
+Epoch 33 loss 2016817.625
+Epoch 34 loss 1177352.0
+Epoch 35 loss 802111.625
+Epoch 36 loss 666910.875
+Epoch 37 loss 621807.375
+Epoch 38 loss 418511.1875
+Epoch 39 loss 977145.3125
+Epoch 40 loss 399468.6875
+Epoch 41 loss 524490.4375
+Epoch 42 loss 570797.375
+Epoch 43 loss 2151098.75
+Epoch 44 loss 423985.875
+Epoch 45 loss 463438.5
+Epoch 46 loss 378454.65625
+Epoch 47 loss 962514.125
+Epoch 48 loss 996870.125
+Epoch 49 loss 1529443.875
+Epoch 50 loss 351727.03125
+Epoch 51 loss 366723.875
+Epoch 52 loss 318955.09375
+Epoch 53 loss 385190.3125
+Epoch 54 loss 631860.1875
+Epoch 55 loss 263041.09375
+Epoch 56 loss 427626.875
+Epoch 57 loss 250673.75
+Epoch 58 loss 276003.6875
+Epoch 59 loss 234459.015625
+Epoch 60 loss 215805.3125
+Epoch 61 loss 203291.03125
+Epoch 62 loss 175239.828125
+Epoch 63 loss 246710.15625
+Epoch 64 loss 160864.78125
+Epoch 65 loss 136503.625
+Epoch 66 loss 149549.46875
+Epoch 67 loss 285863.71875
+Epoch 68 loss 137954.375
+Epoch 69 loss 127966.90625
+Epoch 70 loss 189107.1875
+Epoch 71 loss 153337.546875
+Epoch 72 loss 246355.296875
+Epoch 73 loss 153574.484375
+Epoch 74 loss 102432.8046875
+Epoch 75 loss 120114.015625
+Epoch 76 loss 97430.0859375
+Epoch 77 loss 93083.9609375
+Epoch 78 loss 109328.3359375
+Epoch 79 loss 86045.5546875
+Epoch 80 loss 77527.8046875
+Epoch 81 loss 56943.84765625
+Epoch 82 loss 57186.828125
+Epoch 83 loss 70674.9609375
+Epoch 84 loss 83974.984375
+Epoch 85 loss 122681.796875
+Epoch 86 loss 42881.3125
+Epoch 87 loss 72288.2890625
+Epoch 88 loss 57439.39453125
+Epoch 89 loss 83195.359375
+Epoch 90 loss 86245.1796875
+Epoch 91 loss 319461.75
+Epoch 92 loss 60296.92578125
+Epoch 93 loss 355034.9375
+Epoch 94 loss 404880.125
+Epoch 95 loss 214421.0625
+Epoch 96 loss 5771518.0
+Epoch 97 loss 395943.96875
+Epoch 98 loss 137091.171875
+Epoch 99 loss 129319.703125
+Inner Fold 1 Results: {'MSE - mean': 45250.50307327781, 'MSE - std': 0.0, 'R2 - mean': 0.9976574270373044, 'R2 - std': 0.0}
+  outer_1_inner Fold 2/5
+Before Debugging -- Inner Fold 2
+DEBUG Inner Fold 2: num_features: 12
+DEBUG Inner Fold 2: num_classes: 1
+DEBUG Inner Fold 2: cat_idx: [0]
+DEBUG Inner Fold 2: nominal_idx: [0, 6]
+DEBUG Inner Fold 2: ordinal_idx: [7]
+DEBUG Inner Fold 2: num_idx: None
+DEBUG Inner Fold 2: cat_dims: [2]
+DEBUG Inner Fold 2: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.0646965038862356 0.41924339550736156
+  -0.18505046504095268 0.22626987463181988 -0.5645927957269675
+  -0.17014799323675153 -0.3713475858795869 -0.05629221026773546
+  -0.3055912573722765]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.21705334726702674
+  -0.4309235612387461 -0.8799545714131805 -0.39647287767345446
+  -0.37666985797818797 -0.5767599681829683 -0.8493345075928997
+  -0.07696251704610513 -0.8427356950189477]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.20590744181994566 2.1195773089995766
+  -0.18505046504095268 0.8490126269370942 -0.9404386712245265
+  -0.8447116383088162 0.7432796997632081 -0.027685982136956024
+  0.9133134280567081]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.20590744181994566 0.41924339550736156
+  0.5098536413312751 0.22626987463181988 -0.9404386712245265
+  -0.8447116383088162 0.01949574804710745 -0.027316869515913708
+  0.14891557448259912]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.06946847759834167 0.41924339550736156
+  0.5098536413312751 -1.0192156299787287 -0.9404386712245265
+  -0.8259737592790366 -0.4147746229825529 -0.049832739399494945
+  -0.3055912573722765]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.180669623474599 -0.4309235612387461
+  -0.18505046504095268 0.22626987463181988 0.18709895526815062
+  -0.2591529186282045 -0.48715301815416295 -0.04226593066812748
+  -0.49152587040381657]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.02831278009380787
+  0.41924339550736156 0.5098536413312751 -0.39647287767345446
+  0.7508677685144892 0.32359511919794026 0.45376611907676784
+  -0.025286750100180975 0.33485018751413914]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.1260940377859574 -0.4309235612387461
+  -0.18505046504095268 0.22626987463181988 0.5629448307657097
+  -0.282575267415429 -0.29896919070797684 -0.03875936076822548
+  -0.22295365158048094]
+ [2.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.146559882419198 -0.4309235612387461
+  -0.8799545714131805 -1.0192156299787287 0.5629448307657097
+  0.5606292889246519 -0.27725567215649377 -0.05647676657825662
+  -0.3055912573722765]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.06946847759834167 2.9697442657456845
+  1.204757747703503 2.717240883852917 -0.9404386712245265
+  -0.8447116383088162 0.45376611907676784 -0.0426350432891698
+  0.7686976179210658]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 2
+DEBUG Inner Fold 2: num_features: 17
+DEBUG Inner Fold 2: num_classes: 1
+DEBUG Inner Fold 2: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 2: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 2: ordinal_idx: [0]
+DEBUG Inner Fold 2: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 2: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 2: bin_alt: None
+In get_device
+Using dim 64 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 1429819136.0
+Epoch 1 loss 1394256640.0
+Epoch 2 loss 1387793920.0
+Epoch 3 loss 1387031168.0
+Epoch 4 loss 1384651520.0
+Epoch 5 loss 1384272384.0
+Epoch 6 loss 1381920512.0
+Epoch 7 loss 1384647680.0
+Epoch 8 loss 3826525696.0
+Epoch 9 loss 1385387008.0
+Epoch 10 loss 1380535552.0
+Epoch 11 loss 1383256704.0
+Epoch 12 loss 1384119808.0
+Epoch 13 loss 1382877952.0
+Epoch 14 loss 1380896256.0
+Epoch 15 loss 1384017536.0
+Epoch 16 loss 1382689536.0
+Epoch 17 loss 1384484864.0
+Epoch 18 loss 1380680192.0
+Epoch 19 loss 1383573504.0
+Epoch 20 loss 1389145472.0
+Epoch 21 loss 1384707456.0
+Epoch 22 loss 1383083392.0
+Epoch 23 loss 1382703104.0
+Epoch 24 loss 1382264192.0
+Epoch 25 loss 1380711296.0
+Epoch 26 loss 1381543424.0
+Epoch 27 loss 1381325696.0
+Epoch 28 loss 1380333568.0
+Epoch 29 loss 1381347712.0
+Epoch 30 loss 1380400896.0
+Epoch 31 loss 1380181376.0
+Epoch 32 loss 1379496448.0
+Epoch 33 loss 1379916288.0
+Epoch 34 loss 1380413184.0
+Epoch 35 loss 1378571008.0
+Epoch 36 loss 1378989952.0
+Epoch 37 loss 1378543488.0
+Epoch 38 loss 1379076480.0
+Epoch 39 loss 1378691712.0
+Epoch 40 loss 1378585344.0
+Epoch 41 loss 1379456896.0
+Epoch 42 loss 1379184640.0
+Epoch 43 loss 1377528704.0
+Epoch 44 loss 3838441984.0
+Epoch 45 loss 3838245632.0
+Epoch 46 loss 1378910208.0
+Epoch 47 loss 1378389888.0
+Epoch 48 loss 1378209152.0
+Epoch 49 loss 1379625984.0
+Epoch 50 loss 1377064192.0
+Epoch 51 loss 1377138432.0
+Epoch 52 loss 1378247168.0
+Epoch 53 loss 1376712320.0
+Epoch 54 loss 1377692160.0
+Epoch 55 loss 1378375168.0
+Epoch 56 loss 1377688320.0
+Epoch 57 loss 1376935296.0
+Epoch 58 loss 1376800000.0
+Epoch 59 loss 1377693312.0
+Epoch 60 loss 1377148928.0
+Epoch 61 loss 1376632576.0
+Epoch 62 loss 1376922368.0
+Epoch 63 loss 1376890880.0
+Epoch 64 loss 1378338304.0
+Epoch 65 loss 1377861120.0
+Epoch 66 loss 1376608000.0
+Epoch 67 loss 1376056704.0
+Epoch 68 loss 1373380992.0
+Epoch 69 loss 1372185344.0
+Epoch 70 loss 1380179584.0
+Epoch 71 loss 1380673152.0
+Epoch 72 loss 1380878080.0
+Epoch 73 loss 1378835968.0
+Epoch 74 loss 1380902144.0
+Epoch 75 loss 1388553984.0
+Epoch 76 loss 1380727680.0
+Epoch 77 loss 1381181696.0
+Epoch 78 loss 1381088128.0
+Epoch 79 loss 1380957952.0
+Epoch 80 loss 1380930816.0
+Epoch 81 loss 1380448512.0
+Epoch 82 loss 1381083136.0
+Epoch 83 loss 1380979200.0
+Epoch 84 loss 1380577152.0
+Epoch 85 loss 1380191488.0
+Epoch 86 loss 1380146176.0
+Epoch 87 loss 1380609408.0
+Epoch 88 loss 1380559616.0
+Epoch 89 loss 1379954176.0
+Epoch 90 loss 1380817280.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Inner Fold 2 Results: {'MSE - mean': 718947824.0411065, 'MSE - std': 718902573.5380331, 'R2 - mean': 0.5108058922938465, 'R2 - std': 0.48685153474345794}
+  outer_1_inner Fold 3/5
+Before Debugging -- Inner Fold 3
+DEBUG Inner Fold 3: num_features: 12
+DEBUG Inner Fold 3: num_classes: 1
+DEBUG Inner Fold 3: cat_idx: [0]
+DEBUG Inner Fold 3: nominal_idx: [0, 6]
+DEBUG Inner Fold 3: ordinal_idx: [7]
+DEBUG Inner Fold 3: num_idx: None
+DEBUG Inner Fold 3: cat_dims: [2]
+DEBUG Inner Fold 3: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.20512949678171455
+  -0.43267840845591216 -0.8909784663853085 -1.0294811942668063
+  0.2677468265771872 -0.03714672562803827 -0.8215053933271916
+  -0.06535137858836142 -0.8019277498512417]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.24150575345031622
+  -1.2882812034430078 -0.8909784663853085 -0.40169952482175386
+  0.8151616741615634 -0.037565323023224656 -0.13451223043615673
+  -0.03967976482216557 -0.14927267118262877]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.0664450182326707 0.42292438653118347
+  -0.19092395708256624 0.22608214462329862 -0.41652173290328304
+  -0.02710038814356508 -0.3778223089600649 -0.05630167301610533
+  -0.312436440849782]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.21877059303244017
+  -0.43267840845591216 -0.8909784663853085 -0.40169952482175386
+  -0.279668021007189 -0.04980929683242636 -0.850416355598856
+  -0.07698671432411924 -0.8427186922680301]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.06769242823279795 0.42292438653118347
+  0.5091305522201761 -1.0294811942668063 -0.6902291566954711
+  -0.0637276602223736 -0.4207593816407546 -0.04983759760735098
+  -0.312436440849782]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.1823943363638385
+  -0.43267840845591216 -0.19092395708256624 0.22608214462329862
+  0.13089311468109316 -0.03207123221140338 -0.49232116944190407
+  -0.04226539498566731 -0.49599568172532943]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.03006876156406903
+  0.42292438653118347 0.5091305522201761 -0.40169952482175386
+  0.5414542503693753 0.00047471526433789935 0.437982071973039
+  -0.025274111054084447 0.3198231666104368]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.19376191657277653
+  -0.43267840845591216 -0.19092395708256624 -0.40169952482175386
+  -0.14281430911109494 -0.05143136173877359 -0.7356312479658123
+  -0.06627481793246918 -0.7203458650176651]
+ [2.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.14829159573702444
+  -0.43267840845591216 -0.8909784663853085 -1.0294811942668063
+  0.40460053847328126 0.013712857887107261 -0.2847919848185706
+  -0.05648636088492688 -0.312436440849782]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.06769242823279795 2.9897327714924704
+  1.2091850615229185 2.7372088224035087 -0.6902291566954711
+  -0.06477415371033955 0.437982071973039 -0.042634770723310414
+  0.7481280619867141]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 3
+DEBUG Inner Fold 3: num_features: 17
+DEBUG Inner Fold 3: num_classes: 1
+DEBUG Inner Fold 3: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 3: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 3: ordinal_idx: [0]
+DEBUG Inner Fold 3: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 3: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 3: bin_alt: None
+In get_device
+Using dim 64 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 32797048.0
+Epoch 1 loss 10402339.0
+Epoch 2 loss 15297749.0
+Epoch 3 loss 1986685.125
+Epoch 4 loss 1679385.5
+Epoch 5 loss 3495942.75
+Epoch 6 loss 778596.6875
+Epoch 7 loss 904098.5
+Epoch 8 loss 3955581.0
+Epoch 9 loss 1601404.75
+Epoch 10 loss 1474179.625
+Epoch 11 loss 642991.875
+Epoch 12 loss 795976.6875
+Epoch 13 loss 3403137.0
+Epoch 14 loss 1023883.0
+Epoch 15 loss 20889942.0
+Epoch 16 loss 1129984.75
+Epoch 17 loss 3927251.0
+Epoch 18 loss 15654643.0
+Epoch 19 loss 31878968.0
+Epoch 20 loss 27349102.0
+Epoch 21 loss 29151348.0
+Epoch 22 loss 45349432.0
+Epoch 23 loss 48814156.0
+Epoch 24 loss 66145636.0
+Epoch 25 loss 58934800.0
+Epoch 26 loss 56864916.0
+Epoch 27 loss 90931488.0
+Epoch 28 loss 75050824.0
+Epoch 29 loss 109427224.0
+Epoch 30 loss 124498856.0
+Epoch 31 loss 39678068.0
+Epoch 32 loss 9666511.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Inner Fold 3 Results: {'MSE - mean': 479517257.0756741, 'MSE - std': 677643908.1758562, 'R2 - mean': 0.6624421173320441, 'R2 - std': 0.4516673193945333}
+  outer_1_inner Fold 4/5
+Before Debugging -- Inner Fold 4
+DEBUG Inner Fold 4: num_features: 12
+DEBUG Inner Fold 4: num_classes: 1
+DEBUG Inner Fold 4: cat_idx: [0]
+DEBUG Inner Fold 4: nominal_idx: [0, 6]
+DEBUG Inner Fold 4: ordinal_idx: [7]
+DEBUG Inner Fold 4: num_idx: None
+DEBUG Inner Fold 4: cat_dims: [2]
+DEBUG Inner Fold 4: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.19989818109962781
+  -0.42503609608689036 -0.8891383278497766 -1.0212222419193242
+  0.2585676672126659 -0.03709331778730986 -0.8162728829110684
+  -0.33188072387364737 -0.7996014235414244]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.23639995868095806
+  -1.2813661813125985 -0.8891383278497766 -0.38958216063094814
+  0.803919078762931 -0.03751191314271126 -0.1184702378694011
+  -0.15304475404422402 -0.13375653153434397]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.06073515407080628 0.4312939891388178
+  -0.17276003779464574 0.24205792065742787 -0.42312159722516546
+  -0.027047029257676075 -0.3656086746549916 -0.2688378280344981
+  -0.3002177545361141]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.2107468166903374 2.1439541595902343
+  -0.17276003779464574 0.8736980019458039 -0.695797303000298
+  -0.06472061124380274 0.753783068432683 -0.06941642282902605
+  0.9274337651019405]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.2107468166903374 0.4312939891388178
+  0.5436182522604852 0.24205792065742787 -0.695797303000298
+  -0.06472061124380274 0.02690531318094625 -0.06684324340701996
+  0.15755060871875373]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.07386515076034898 0.4312939891388178
+  0.5436182522604852 -1.0212222419193242 -0.695797303000298
+  -0.06367412285529922 -0.4092213399700958 -0.22380718814939152
+  -0.3002177545361141]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.1884913756054621
+  -0.42503609608689036 -0.17276003779464574 -0.38958216063094814
+  -0.1504458914500329 -0.05137788429038288 -0.7290475522808599
+  -0.33831367242866256 -0.7163708120405393]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.12233190373930106
+  -0.42503609608689036 -0.17276003779464574 0.24205792065742787
+  0.39490552010023217 -0.03332595958869719 -0.2929208991298179
+  -0.1466118054892088 -0.21698714303522904]
+ [2.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.1428641536287993
+  -0.42503609608689036 -0.8891383278497766 -1.0212222419193242
+  0.39490552010023217 0.013766017893961148 -0.2711145664722658
+  -0.27012441774550117 -0.3002177545361141]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.07386515076034898 3.0002842448159424
+  1.259996542315616 2.768618245810932 -0.695797303000298
+  -0.06472061124380274 0.4630319663319883 -0.17363018942027275
+  0.7817801949753916]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 4
+DEBUG Inner Fold 4: num_features: 17
+DEBUG Inner Fold 4: num_classes: 1
+DEBUG Inner Fold 4: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 4: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 4: ordinal_idx: [0]
+DEBUG Inner Fold 4: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 4: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 4: bin_alt: None
+In get_device
+Using dim 64 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 148243248.0
+Epoch 1 loss 114303072.0
+Epoch 2 loss 112189096.0
+Epoch 3 loss 111766304.0
+Epoch 4 loss 110736232.0
+Epoch 5 loss 109113072.0
+Epoch 6 loss 109947056.0
+Epoch 7 loss 108770792.0
+Epoch 8 loss 109363032.0
+Epoch 9 loss 107824912.0
+Epoch 10 loss 108578488.0
+Epoch 11 loss 107894928.0
+Epoch 12 loss 107261368.0
+Epoch 13 loss 106986992.0
+Epoch 14 loss 107148744.0
+Epoch 15 loss 106497568.0
+Epoch 16 loss 106340384.0
+Epoch 17 loss 106631256.0
+Epoch 18 loss 105973344.0
+Epoch 19 loss 106093416.0
+Epoch 20 loss 105035848.0
+Epoch 21 loss 105852000.0
+Epoch 22 loss 104053336.0
+Epoch 23 loss 104250120.0
+Epoch 24 loss 103772128.0
+Epoch 25 loss 103500944.0
+Epoch 26 loss 102961552.0
+Epoch 27 loss 103955864.0
+Epoch 28 loss 103884680.0
+Epoch 29 loss 103176136.0
+Epoch 30 loss 103492640.0
+Epoch 31 loss 103152528.0
+Epoch 32 loss 102298640.0
+Epoch 33 loss 102025304.0
+Epoch 34 loss 101885328.0
+Epoch 35 loss 100412624.0
+Epoch 36 loss 100526616.0
+Epoch 37 loss 101247432.0
+Epoch 38 loss 100868504.0
+Epoch 39 loss 100419800.0
+Epoch 40 loss 102157256.0
+Epoch 41 loss 99840248.0
+Epoch 42 loss 101900648.0
+Epoch 43 loss 100644904.0
+Epoch 44 loss 101213776.0
+Epoch 45 loss 99759240.0
+Epoch 46 loss 281238624.0
+Epoch 47 loss 282006720.0
+Epoch 48 loss 100478680.0
+Epoch 49 loss 100984920.0
+Epoch 50 loss 97544840.0
+Epoch 51 loss 105346208.0
+Epoch 52 loss 103459936.0
+Epoch 53 loss 277853536.0
+Epoch 54 loss 102048056.0
+Epoch 55 loss 100673264.0
+Epoch 56 loss 100005904.0
+Epoch 57 loss 102219288.0
+Epoch 58 loss 99281744.0
+Epoch 59 loss 99083656.0
+Epoch 60 loss 100573128.0
+Epoch 61 loss 101451464.0
+Epoch 62 loss 99526344.0
+Epoch 63 loss 98789592.0
+Epoch 64 loss 100651672.0
+Epoch 65 loss 100514632.0
+Epoch 66 loss 100601376.0
+Epoch 67 loss 100512976.0
+Epoch 68 loss 100379688.0
+Epoch 69 loss 99726392.0
+Epoch 70 loss 100525744.0
+Epoch 71 loss 100159392.0
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Inner Fold 4 Results: {'MSE - mean': 385248779.47299296, 'MSE - std': 609147426.5926664, 'R2 - mean': 0.5558106787790087, 'R2 - std': 0.4325659679406735}
+  outer_1_inner Fold 5/5
+Before Debugging -- Inner Fold 5
+DEBUG Inner Fold 5: num_features: 12
+DEBUG Inner Fold 5: num_classes: 1
+DEBUG Inner Fold 5: cat_idx: [0]
+DEBUG Inner Fold 5: nominal_idx: [0, 6]
+DEBUG Inner Fold 5: ordinal_idx: [7]
+DEBUG Inner Fold 5: num_idx: None
+DEBUG Inner Fold 5: cat_dims: [2]
+DEBUG Inner Fold 5: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.20273979806500222
+  -0.42959729315944767 -0.8768305277326494 -1.0136662776132894
+  0.27577432920771994 -0.03611462165461881 -0.8059240872532762
+  -0.06373526994411653 -0.7862076278532772]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.23909200526289381
+  -1.2835498439429862 -0.8768305277326494 -0.3874921469316239
+  0.8275649303012189 -0.03653324950745118 -0.11212956284472753
+  -0.03798759404120652 -0.13003861097895697]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.06414700812304064
+  0.42435525762409093 -0.17302075875719344 0.23868198375004146
+  -0.4139639221591538 -0.02606755318664192 -0.3578484569060885
+  -0.05465875110064465 -0.294080865197537]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.21637187576421157
+  -0.42959729315944767 -0.8768305277326494 -0.3874921469316239
+  -0.27601627188577904 -0.04877811420279802 -0.8351212734888027
+  -0.07540507988572322 -0.8272181914079223]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.20622253291127787 2.132260359191168
+  -0.17302075875719344 0.8648561144317068 -0.6898592227059033
+  -0.06374405994155526 0.7551135926659585 -0.025947313942723413
+  0.915730759664491]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.20622253291127787 0.42435525762409093
+  0.5307890102182625 0.23868198375004146 -0.6898592227059033
+  -0.06374405994155526 0.032410963073720135 -0.02557684378584701
+  0.15703533390355817]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.18001966856632 -0.42959729315944767
+  -0.17302075875719344 0.23868198375004146 0.1378266789343452
+  -0.031038758939026318 -0.4734808776408467 -0.040580885139341334
+  -0.47862840119343963]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.027794800925149073
+  0.42435525762409093 0.5307890102182625 -0.3874921469316239
+  0.5516696297544694 0.0015095566186904825 0.4660325408290631
+  -0.023539257923026795 0.34158286989946074]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.19137973331566113
+  -0.42959729315944767 -0.17302075875719344 -0.3874921469316239
+  -0.1380686216124043 -0.050400297132523454 -0.7191997717022077
+  -0.06466144533630754 -0.7041865007439873]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.12549135776948267
+  -0.42959729315944767 -0.17302075875719344 0.23868198375004146
+  0.4137219794810947 -0.032346970979127476 -0.28557819394686473
+  -0.03706141864901551 -0.212059738088247]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 5
+DEBUG Inner Fold 5: num_features: 17
+DEBUG Inner Fold 5: num_classes: 1
+DEBUG Inner Fold 5: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 5: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 5: ordinal_idx: [0]
+DEBUG Inner Fold 5: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 5: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 5: bin_alt: None
+In get_device
+Using dim 64 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 40979616.0
+Epoch 1 loss 9677827.0
+Epoch 2 loss 6550453.5
+Epoch 3 loss 8655382.0
+Epoch 4 loss 3275897.25
+Epoch 5 loss 1945007.25
+Epoch 6 loss 1564886.125
+Epoch 7 loss 1722148.25
+Epoch 8 loss 1132920.5
+Epoch 9 loss 3218370.25
+Epoch 10 loss 1068162.5
+Epoch 11 loss 1039146.8125
+Epoch 12 loss 897603.75
+Epoch 13 loss 1002966.5625
+Epoch 14 loss 746872.9375
+Epoch 15 loss 754206.4375
+Epoch 16 loss 717182.9375
+Epoch 17 loss 1428990.5
+Epoch 18 loss 410476.1875
+Epoch 19 loss 934677.6875
+Epoch 20 loss 12995573.0
+Epoch 21 loss 3213368.5
+Epoch 22 loss 4416701.5
+Epoch 23 loss 5325255.5
+Epoch 24 loss 6510450.5
+Epoch 25 loss 6264550.5
+Epoch 26 loss 5877622.5
+Epoch 27 loss 5598780.5
+Epoch 28 loss 6599570.0
+Epoch 29 loss 2958293.5
+Epoch 30 loss 3766947.5
+Epoch 31 loss 6348484.5
+Epoch 32 loss 670759.875
+Epoch 33 loss 20941640.0
+Epoch 34 loss 6044330.5
+Epoch 35 loss 1488082.25
+Epoch 36 loss 6517491.0
+Epoch 37 loss 1093133.5
+Epoch 38 loss 1262178.375
+Epoch 39 loss 1358560.25
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Inner Fold 5 Results: {'MSE - mean': 308285496.82437253, 'MSE - std': 566164161.1439035, 'R2 - mean': 0.6407031646546095, 'R2 - std': 0.42251341982109597}
+Trial Results B4 Saving: {'MSE - mean': 308285496.82437253, 'MSE - std': 566164161.1439035, 'R2 - mean': 0.6407031646546095, 'R2 - std': 0.42251341982109597}
+Score: 308285496.82437253
+  outer_1_inner Fold 1/5
+Before Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 12
+DEBUG Inner Fold 1: num_classes: 1
+DEBUG Inner Fold 1: cat_idx: [0]
+DEBUG Inner Fold 1: nominal_idx: [0, 6]
+DEBUG Inner Fold 1: ordinal_idx: [7]
+DEBUG Inner Fold 1: num_idx: None
+DEBUG Inner Fold 1: cat_dims: [2]
+DEBUG Inner Fold 1: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3420, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]] 
+ 
+ 
+Val : (3420, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.6066119667393784 -0.4409735877705798
+  -0.8891088668162085 -1.0310300730068107 0.2638682927091926
+  -0.03726588519561444 -0.8168946486982943 -0.0649112397113407
+  -0.7997059857529025]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.7242858670452416 -1.3092117398577316
+  -0.8891088668162085 -0.3988818389294905 0.8090605966303156
+  -0.03768442184442685 -0.1307794991794192 -0.03924644180762629
+  -0.14718167573763577]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.6507396793540772 -0.4409735877705798
+  -0.8891088668162085 -0.3988818389294905 -0.2813240112119303
+  -0.049926618822189746 -0.845768661240547 -0.07654348624324005
+  -0.8404887551288567]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.7172194117015818 2.1637408684908754
+  -0.19008534394001708 0.8654146292251502 -0.6902182391527725
+  -0.06488930401723328 0.7268644377191747 -0.02724491760804761
+  0.8927789433491956]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.7172194117015818 0.42726456431657195
+  0.5089381789361743 0.23326639514782987 -0.6902182391527725
+  -0.06488930401723328 0.012161156970346462 -0.026875639940368266
+  0.13829770989404344]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.275942285554595 0.42726456431657195
+  0.5089381789361743 -1.0310300730068107 -0.6902182391527725
+  -0.06384296239520226 -0.4166608114789505 -0.049401577668808254
+  -0.31031275324145247]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.5330657790482141 -0.4409735877705798
+  -0.19008534394001708 0.23326639514782987 0.1275702167289119
+  -0.03219112832876401 -0.4881311395538333 -0.0418313854813817
+  -0.4938352154332462]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.040306321517412154
+  0.42726456431657195 0.5089381789361743 -0.3988818389294905
+  0.5364644446697541 0.00035009611640060854 0.4409831254196434
+  -0.024844612768131873 0.32182017208583724]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.5698388728937962 -0.4409735877705798
+  -0.19008534394001708 -0.3988818389294905 -0.14502593523164956
+  -0.05154844833633782 -0.7311302550084349 -0.06583443388053907
+  -0.7181404470009942]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.35655492858941934
+  -0.4409735877705798 -0.19008534394001708 0.23326639514782987
+  0.40016636868947336 -0.033499055356302786 -0.302308286559138
+  -0.03832324763842793 -0.2287472144895441]] 
+ 
+ 
+Val : (3420, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 17
+DEBUG Inner Fold 1: num_classes: 1
+DEBUG Inner Fold 1: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 1: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 1: ordinal_idx: [0]
+DEBUG Inner Fold 1: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 1: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 1: bin_alt: None
+In get_device
+Using dim 32 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 44324380.0
+Epoch 1 loss 27628492.0
+Epoch 2 loss 18081824.0
+Epoch 3 loss 9549378.0
+Epoch 4 loss 5371129.0
+Epoch 5 loss 4734185.5
+Epoch 6 loss 4374903.0
+Epoch 7 loss 3870524.25
+Epoch 8 loss 3832042.5
+Epoch 9 loss 3235174.5
+Epoch 10 loss 2684833.25
+Epoch 11 loss 2709085.0
+Epoch 12 loss 2388166.0
+Epoch 13 loss 2123155.75
+Epoch 14 loss 3126492.25
+Epoch 15 loss 1836021.0
+Epoch 16 loss 1601970.25
+Epoch 17 loss 1326200.25
+Epoch 18 loss 1460865.875
+Epoch 19 loss 915310.6875
+Epoch 20 loss 929038.3125
+Epoch 21 loss 999579.125
+Epoch 22 loss 656901.6875
+Epoch 23 loss 795235.9375
+Epoch 24 loss 989368.75
+Epoch 25 loss 539924.5
+Epoch 26 loss 738548.375
+Epoch 27 loss 637190.875
+Epoch 28 loss 531875.5625
+Epoch 29 loss 727355.9375
+Epoch 30 loss 998713.25
+Epoch 31 loss 440988.125
+Epoch 32 loss 710568.625
+Epoch 33 loss 971308.1875
+Epoch 34 loss 422671.21875
+Epoch 35 loss 356130.53125
+Epoch 36 loss 352563.6875
+Epoch 37 loss 655268.875
+Epoch 38 loss 622272.3125
+Epoch 39 loss 535744.0
+Epoch 40 loss 359114.03125
+Epoch 41 loss 312663.8125
+Epoch 42 loss 348480.1875
+Epoch 43 loss 357956.53125
+Epoch 44 loss 501298.6875
+Epoch 45 loss 227589.328125
+Epoch 46 loss 1311311.25
+Epoch 47 loss 352690.78125
+Epoch 48 loss 379670.09375
+Epoch 49 loss 281798.5625
+Epoch 50 loss 306750.96875
+Epoch 51 loss 271054.0625
+Epoch 52 loss 376891.96875
+Epoch 53 loss 398364.59375
+Epoch 54 loss 263523.78125
+Epoch 55 loss 542332.75
+Epoch 56 loss 657508.9375
+Epoch 57 loss 528546.4375
+Epoch 58 loss 566314.5
+Epoch 59 loss 316586.0625
+Epoch 60 loss 754058.5625
+Epoch 61 loss 258654.890625
+Epoch 62 loss 272887.125
+Epoch 63 loss 290839.8125
+Epoch 64 loss 353747.5625
+Epoch 65 loss 554518.4375
+Epoch 66 loss 448287.1875
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Inner Fold 1 Results: {'MSE - mean': 265269.7372777461, 'MSE - std': 0.0, 'R2 - mean': 0.9862672529107157, 'R2 - std': 0.0}
+  outer_1_inner Fold 2/5
+Before Debugging -- Inner Fold 2
+DEBUG Inner Fold 2: num_features: 12
+DEBUG Inner Fold 2: num_classes: 1
+DEBUG Inner Fold 2: cat_idx: [0]
+DEBUG Inner Fold 2: nominal_idx: [0, 6]
+DEBUG Inner Fold 2: ordinal_idx: [7]
+DEBUG Inner Fold 2: num_idx: None
+DEBUG Inner Fold 2: cat_dims: [2]
+DEBUG Inner Fold 2: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.0646965038862356 0.41924339550736156
+  -0.18505046504095268 0.22626987463181988 -0.5645927957269675
+  -0.17014799323675153 -0.3713475858795869 -0.05629221026773546
+  -0.3055912573722765]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.21705334726702674
+  -0.4309235612387461 -0.8799545714131805 -0.39647287767345446
+  -0.37666985797818797 -0.5767599681829683 -0.8493345075928997
+  -0.07696251704610513 -0.8427356950189477]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.20590744181994566 2.1195773089995766
+  -0.18505046504095268 0.8490126269370942 -0.9404386712245265
+  -0.8447116383088162 0.7432796997632081 -0.027685982136956024
+  0.9133134280567081]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.20590744181994566 0.41924339550736156
+  0.5098536413312751 0.22626987463181988 -0.9404386712245265
+  -0.8447116383088162 0.01949574804710745 -0.027316869515913708
+  0.14891557448259912]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.06946847759834167 0.41924339550736156
+  0.5098536413312751 -1.0192156299787287 -0.9404386712245265
+  -0.8259737592790366 -0.4147746229825529 -0.049832739399494945
+  -0.3055912573722765]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.180669623474599 -0.4309235612387461
+  -0.18505046504095268 0.22626987463181988 0.18709895526815062
+  -0.2591529186282045 -0.48715301815416295 -0.04226593066812748
+  -0.49152587040381657]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.02831278009380787
+  0.41924339550736156 0.5098536413312751 -0.39647287767345446
+  0.7508677685144892 0.32359511919794026 0.45376611907676784
+  -0.025286750100180975 0.33485018751413914]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.1260940377859574 -0.4309235612387461
+  -0.18505046504095268 0.22626987463181988 0.5629448307657097
+  -0.282575267415429 -0.29896919070797684 -0.03875936076822548
+  -0.22295365158048094]
+ [2.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.146559882419198 -0.4309235612387461
+  -0.8799545714131805 -1.0192156299787287 0.5629448307657097
+  0.5606292889246519 -0.27725567215649377 -0.05647676657825662
+  -0.3055912573722765]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.06946847759834167 2.9697442657456845
+  1.204757747703503 2.717240883852917 -0.9404386712245265
+  -0.8447116383088162 0.45376611907676784 -0.0426350432891698
+  0.7686976179210658]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 2
+DEBUG Inner Fold 2: num_features: 17
+DEBUG Inner Fold 2: num_classes: 1
+DEBUG Inner Fold 2: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 2: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 2: ordinal_idx: [0]
+DEBUG Inner Fold 2: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 2: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 2: bin_alt: None
+In get_device
+Using dim 32 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 1446991360.0
+Epoch 1 loss 1419636352.0
+Epoch 2 loss 1407176064.0
+Epoch 3 loss 1397065344.0
+Epoch 4 loss 1394221312.0
+Epoch 5 loss 1388442112.0
+Epoch 6 loss 1388365824.0
+Epoch 7 loss 1386382208.0
+Epoch 8 loss 1384509696.0
+Epoch 9 loss 1386592896.0
+Epoch 10 loss 1385704064.0
+Epoch 11 loss 1384902016.0
+Epoch 12 loss 1383310848.0
+Epoch 13 loss 1383872128.0
+Epoch 14 loss 1383166592.0
+Epoch 15 loss 1385879808.0
+Epoch 16 loss 1385963776.0
+Epoch 17 loss 1385074304.0
+Epoch 18 loss 1383630336.0
+Epoch 19 loss 1382074240.0
+Epoch 20 loss 1382803968.0
+Epoch 21 loss 1383618432.0
+Epoch 22 loss 1385081216.0
+Epoch 23 loss 1385679488.0
+Epoch 24 loss 1384292864.0
+Epoch 25 loss 1384836736.0
+Epoch 26 loss 1382913024.0
+Epoch 27 loss 1386266880.0
+Epoch 28 loss 1381129472.0
+Epoch 29 loss 1381089152.0
+Epoch 30 loss 1383243136.0
+Epoch 31 loss 1381673600.0
+Epoch 32 loss 1382357888.0
+Epoch 33 loss 1380361216.0
+Epoch 34 loss 1379889024.0
+Epoch 35 loss 1382657792.0
+Epoch 36 loss 1379524224.0
+Epoch 37 loss 1380520832.0
+Epoch 38 loss 1378765184.0
+Epoch 39 loss 1381591680.0
+Epoch 40 loss 1383729024.0
+Epoch 41 loss 1381697792.0
+Epoch 42 loss 1378914688.0
+Epoch 43 loss 1377283072.0
+Epoch 44 loss 1383488768.0
+Epoch 45 loss 1382487936.0
+Epoch 46 loss 1377081984.0
+Epoch 47 loss 1377896704.0
+Epoch 48 loss 1380939520.0
+Epoch 49 loss 1378952704.0
+Epoch 50 loss 1378679040.0
+Epoch 51 loss 1382903296.0
+Epoch 52 loss 1377030528.0
+Epoch 53 loss 1379855744.0
+Epoch 54 loss 1379303680.0
+Epoch 55 loss 1379980160.0
+Epoch 56 loss 1379100032.0
+Epoch 57 loss 1377092992.0
+Epoch 58 loss 1379174912.0
+Epoch 59 loss 1376844672.0
+Epoch 60 loss 3834631168.0
+Epoch 61 loss 1376740352.0
+Epoch 62 loss 1377011328.0
+Epoch 63 loss 1381472128.0
+Epoch 64 loss 1378229120.0
+Epoch 65 loss 1381753856.0
+Epoch 66 loss 1377893888.0
+Epoch 67 loss 1378135040.0
+Epoch 68 loss 1375029760.0
+Epoch 69 loss 1375980288.0
+Epoch 70 loss 1378739456.0
+Epoch 71 loss 1374995328.0
+Epoch 72 loss 1375810176.0
+Epoch 73 loss 1377891072.0
+Epoch 74 loss 1379249792.0
+Epoch 75 loss 1378331904.0
+Epoch 76 loss 1378862464.0
+Epoch 77 loss 1376799616.0
+Epoch 78 loss 1376858496.0
+Epoch 79 loss 1376766976.0
+Epoch 80 loss 1378174720.0
+Epoch 81 loss 1376978560.0
+Epoch 82 loss 1376863232.0
+Epoch 83 loss 1373226368.0
+Epoch 84 loss 1375984896.0
+Epoch 85 loss 1376171264.0
+Epoch 86 loss 1378258816.0
+Epoch 87 loss 1375255424.0
+Epoch 88 loss 1375540864.0
+Epoch 89 loss 1375200896.0
+Epoch 90 loss 1374505984.0
+Epoch 91 loss 1374338944.0
+Epoch 92 loss 1377739648.0
+Epoch 93 loss 1375579392.0
+Epoch 94 loss 1378135040.0
+Epoch 95 loss 1376870016.0
+Epoch 96 loss 1378851328.0
+Epoch 97 loss 1379425024.0
+Epoch 98 loss 1378667264.0
+Epoch 99 loss 1375551488.0
+Inner Fold 2 Results: {'MSE - mean': 720862853.9704167, 'MSE - std': 720597584.2331389, 'R2 - mean': 0.5038855162761311, 'R2 - std': 0.48238173663458456}
+  outer_1_inner Fold 3/5
+Before Debugging -- Inner Fold 3
+DEBUG Inner Fold 3: num_features: 12
+DEBUG Inner Fold 3: num_classes: 1
+DEBUG Inner Fold 3: cat_idx: [0]
+DEBUG Inner Fold 3: nominal_idx: [0, 6]
+DEBUG Inner Fold 3: ordinal_idx: [7]
+DEBUG Inner Fold 3: num_idx: None
+DEBUG Inner Fold 3: cat_dims: [2]
+DEBUG Inner Fold 3: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.20512949678171455
+  -0.43267840845591216 -0.8909784663853085 -1.0294811942668063
+  0.2677468265771872 -0.03714672562803827 -0.8215053933271916
+  -0.06535137858836142 -0.8019277498512417]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.24150575345031622
+  -1.2882812034430078 -0.8909784663853085 -0.40169952482175386
+  0.8151616741615634 -0.037565323023224656 -0.13451223043615673
+  -0.03967976482216557 -0.14927267118262877]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.0664450182326707 0.42292438653118347
+  -0.19092395708256624 0.22608214462329862 -0.41652173290328304
+  -0.02710038814356508 -0.3778223089600649 -0.05630167301610533
+  -0.312436440849782]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.21877059303244017
+  -0.43267840845591216 -0.8909784663853085 -0.40169952482175386
+  -0.279668021007189 -0.04980929683242636 -0.850416355598856
+  -0.07698671432411924 -0.8427186922680301]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.06769242823279795 0.42292438653118347
+  0.5091305522201761 -1.0294811942668063 -0.6902291566954711
+  -0.0637276602223736 -0.4207593816407546 -0.04983759760735098
+  -0.312436440849782]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.1823943363638385
+  -0.43267840845591216 -0.19092395708256624 0.22608214462329862
+  0.13089311468109316 -0.03207123221140338 -0.49232116944190407
+  -0.04226539498566731 -0.49599568172532943]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.03006876156406903
+  0.42292438653118347 0.5091305522201761 -0.40169952482175386
+  0.5414542503693753 0.00047471526433789935 0.437982071973039
+  -0.025274111054084447 0.3198231666104368]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.19376191657277653
+  -0.43267840845591216 -0.19092395708256624 -0.40169952482175386
+  -0.14281430911109494 -0.05143136173877359 -0.7356312479658123
+  -0.06627481793246918 -0.7203458650176651]
+ [2.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.14829159573702444
+  -0.43267840845591216 -0.8909784663853085 -1.0294811942668063
+  0.40460053847328126 0.013712857887107261 -0.2847919848185706
+  -0.05648636088492688 -0.312436440849782]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.06769242823279795 2.9897327714924704
+  1.2091850615229185 2.7372088224035087 -0.6902291566954711
+  -0.06477415371033955 0.437982071973039 -0.042634770723310414
+  0.7481280619867141]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 3
+DEBUG Inner Fold 3: num_features: 17
+DEBUG Inner Fold 3: num_classes: 1
+DEBUG Inner Fold 3: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 3: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 3: ordinal_idx: [0]
+DEBUG Inner Fold 3: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 3: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 3: bin_alt: None
+In get_device
+Using dim 32 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 43053100.0
+Epoch 1 loss 24398586.0
+Epoch 2 loss 18331148.0
+Epoch 3 loss 16445730.0
+Epoch 4 loss 7272624.5
+Epoch 5 loss 5651934.0
+Epoch 6 loss 5735990.5
+Epoch 7 loss 3602798.0
+Epoch 8 loss 3873523.0
+Epoch 9 loss 2670298.0
+Epoch 10 loss 2878726.25
+Epoch 11 loss 2231095.0
+Epoch 12 loss 2237264.0
+Epoch 13 loss 2972317.0
+Epoch 14 loss 2481020.0
+Epoch 15 loss 1877804.125
+Epoch 16 loss 2335180.5
+Epoch 17 loss 3075433.75
+Epoch 18 loss 1608794.625
+Epoch 19 loss 1353755.875
+Epoch 20 loss 3018420.25
+Epoch 21 loss 1197258.0
+Epoch 22 loss 1257854.25
+Epoch 23 loss 1852745.5
+Epoch 24 loss 1134279.625
+Epoch 25 loss 1172075.375
+Epoch 26 loss 899581.75
+Epoch 27 loss 1148677.875
+Epoch 28 loss 1355032.0
+Epoch 29 loss 1073012.375
+Epoch 30 loss 812925.5625
+Epoch 31 loss 1485676.625
+Epoch 32 loss 835805.5625
+Epoch 33 loss 2754847.5
+Epoch 34 loss 1505197.25
+Epoch 35 loss 1611711.75
+Epoch 36 loss 1060685.375
+Epoch 37 loss 784671.6875
+Epoch 38 loss 732637.3125
+Epoch 39 loss 951331.25
+Epoch 40 loss 755206.25
+Epoch 41 loss 962437.5625
+Epoch 42 loss 953165.5
+Epoch 43 loss 1482889.75
+Epoch 44 loss 1640985.875
+Epoch 45 loss 3476465.0
+Epoch 46 loss 637800.125
+Epoch 47 loss 530407.3125
+Epoch 48 loss 923666.1875
+Epoch 49 loss 2205147.25
+Epoch 50 loss 699397.625
+Epoch 51 loss 504821.90625
+Epoch 52 loss 997999.625
+Epoch 53 loss 550435.4375
+Epoch 54 loss 1833141.25
+Epoch 55 loss 371123.9375
+Epoch 56 loss 1122744.375
+Epoch 57 loss 810558.625
+Epoch 58 loss 1417070.75
+Epoch 59 loss 711402.9375
+Epoch 60 loss 1757004.75
+Epoch 61 loss 1352753.5
+Epoch 62 loss 659688.8125
+Epoch 63 loss 1245693.75
+Epoch 64 loss 917302.0
+Epoch 65 loss 548743.5625
+Epoch 66 loss 684038.625
+Epoch 67 loss 3211307.25
+Epoch 68 loss 631473.4375
+Epoch 69 loss 882582.8125
+Epoch 70 loss 759366.625
+Epoch 71 loss 719618.5625
+Epoch 72 loss 1166664.25
+Epoch 73 loss 530761.0
+Epoch 74 loss 1557873.625
+Epoch 75 loss 630310.6875
+Epoch 76 loss 781012.1875
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Inner Fold 3 Results: {'MSE - mean': 480718950.77363735, 'MSE - std': 679346824.1040498, 'R2 - mean': 0.6617472561665595, 'R2 - std': 0.4527347469194278}
+  outer_1_inner Fold 4/5
+Before Debugging -- Inner Fold 4
+DEBUG Inner Fold 4: num_features: 12
+DEBUG Inner Fold 4: num_classes: 1
+DEBUG Inner Fold 4: cat_idx: [0]
+DEBUG Inner Fold 4: nominal_idx: [0, 6]
+DEBUG Inner Fold 4: ordinal_idx: [7]
+DEBUG Inner Fold 4: num_idx: None
+DEBUG Inner Fold 4: cat_dims: [2]
+DEBUG Inner Fold 4: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.19989818109962781
+  -0.42503609608689036 -0.8891383278497766 -1.0212222419193242
+  0.2585676672126659 -0.03709331778730986 -0.8162728829110684
+  -0.33188072387364737 -0.7996014235414244]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.23639995868095806
+  -1.2813661813125985 -0.8891383278497766 -0.38958216063094814
+  0.803919078762931 -0.03751191314271126 -0.1184702378694011
+  -0.15304475404422402 -0.13375653153434397]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.06073515407080628 0.4312939891388178
+  -0.17276003779464574 0.24205792065742787 -0.42312159722516546
+  -0.027047029257676075 -0.3656086746549916 -0.2688378280344981
+  -0.3002177545361141]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.2107468166903374 2.1439541595902343
+  -0.17276003779464574 0.8736980019458039 -0.695797303000298
+  -0.06472061124380274 0.753783068432683 -0.06941642282902605
+  0.9274337651019405]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.2107468166903374 0.4312939891388178
+  0.5436182522604852 0.24205792065742787 -0.695797303000298
+  -0.06472061124380274 0.02690531318094625 -0.06684324340701996
+  0.15755060871875373]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.07386515076034898 0.4312939891388178
+  0.5436182522604852 -1.0212222419193242 -0.695797303000298
+  -0.06367412285529922 -0.4092213399700958 -0.22380718814939152
+  -0.3002177545361141]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.1884913756054621
+  -0.42503609608689036 -0.17276003779464574 -0.38958216063094814
+  -0.1504458914500329 -0.05137788429038288 -0.7290475522808599
+  -0.33831367242866256 -0.7163708120405393]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.12233190373930106
+  -0.42503609608689036 -0.17276003779464574 0.24205792065742787
+  0.39490552010023217 -0.03332595958869719 -0.2929208991298179
+  -0.1466118054892088 -0.21698714303522904]
+ [2.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.1428641536287993
+  -0.42503609608689036 -0.8891383278497766 -1.0212222419193242
+  0.39490552010023217 0.013766017893961148 -0.2711145664722658
+  -0.27012441774550117 -0.3002177545361141]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.07386515076034898 3.0002842448159424
+  1.259996542315616 2.768618245810932 -0.695797303000298
+  -0.06472061124380274 0.4630319663319883 -0.17363018942027275
+  0.7817801949753916]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 4
+DEBUG Inner Fold 4: num_features: 17
+DEBUG Inner Fold 4: num_classes: 1
+DEBUG Inner Fold 4: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 4: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 4: ordinal_idx: [0]
+DEBUG Inner Fold 4: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 4: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 4: bin_alt: None
+In get_device
+Using dim 32 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 159592560.0
+Epoch 1 loss 140706464.0
+Epoch 2 loss 127772888.0
+Epoch 3 loss 123280776.0
+Epoch 4 loss 117254680.0
+Epoch 5 loss 114757536.0
+Epoch 6 loss 113852688.0
+Epoch 7 loss 113311408.0
+Epoch 8 loss 112775160.0
+Epoch 9 loss 112315928.0
+Epoch 10 loss 112050536.0
+Epoch 11 loss 112102296.0
+Epoch 12 loss 110623496.0
+Epoch 13 loss 110812624.0
+Epoch 14 loss 110602008.0
+Epoch 15 loss 109511472.0
+Epoch 16 loss 110173800.0
+Epoch 17 loss 110366296.0
+Epoch 18 loss 111281296.0
+Epoch 19 loss 109240248.0
+Epoch 20 loss 109275744.0
+Epoch 21 loss 108904952.0
+Epoch 22 loss 300616768.0
+Epoch 23 loss 109140360.0
+Epoch 24 loss 298683008.0
+Epoch 25 loss 108815528.0
+Epoch 26 loss 107994800.0
+Epoch 27 loss 108544016.0
+Epoch 28 loss 108370872.0
+Epoch 29 loss 108961680.0
+Epoch 30 loss 109443704.0
+Epoch 31 loss 109159320.0
+Epoch 32 loss 109517784.0
+Epoch 33 loss 108863800.0
+Epoch 34 loss 108120872.0
+Epoch 35 loss 107406048.0
+Epoch 36 loss 296575488.0
+Epoch 37 loss 108464080.0
+Epoch 38 loss 107398512.0
+Epoch 39 loss 107840936.0
+Epoch 40 loss 107985552.0
+Epoch 41 loss 108856712.0
+Epoch 42 loss 108490896.0
+Epoch 43 loss 107951584.0
+Epoch 44 loss 107371120.0
+Epoch 45 loss 108002768.0
+Epoch 46 loss 107181624.0
+Epoch 47 loss 107376472.0
+Epoch 48 loss 107032480.0
+Epoch 49 loss 107284960.0
+Epoch 50 loss 106942472.0
+Epoch 51 loss 107601248.0
+Epoch 52 loss 108936016.0
+Epoch 53 loss 106732528.0
+Epoch 54 loss 106718960.0
+Epoch 55 loss 106773616.0
+Epoch 56 loss 107172400.0
+Epoch 57 loss 106631048.0
+Epoch 58 loss 292274432.0
+Epoch 59 loss 105701768.0
+Epoch 60 loss 106648728.0
+Epoch 61 loss 106628536.0
+Epoch 62 loss 106344800.0
+Epoch 63 loss 106890208.0
+Epoch 64 loss 108164176.0
+Epoch 65 loss 105942904.0
+Epoch 66 loss 106117896.0
+Epoch 67 loss 106791328.0
+Epoch 68 loss 107647496.0
+Epoch 69 loss 106157256.0
+Epoch 70 loss 105915680.0
+Epoch 71 loss 106256824.0
+Epoch 72 loss 105171720.0
+Epoch 73 loss 104835808.0
+Epoch 74 loss 105887848.0
+Epoch 75 loss 107538248.0
+Epoch 76 loss 105476064.0
+Epoch 77 loss 107252792.0
+Epoch 78 loss 105387272.0
+Epoch 79 loss 105533488.0
+Epoch 80 loss 106207992.0
+Epoch 81 loss 105017880.0
+Epoch 82 loss 105734608.0
+Epoch 83 loss 106804648.0
+Epoch 84 loss 106355400.0
+Epoch 85 loss 104209184.0
+Epoch 86 loss 105055928.0
+Epoch 87 loss 105739288.0
+Epoch 88 loss 105142984.0
+Epoch 89 loss 106466192.0
+Epoch 90 loss 105731504.0
+Epoch 91 loss 105383752.0
+Epoch 92 loss 105232080.0
+Epoch 93 loss 104694408.0
+Epoch 94 loss 105995936.0
+Epoch 95 loss 112833448.0
+Epoch 96 loss 105687320.0
+Epoch 97 loss 104635960.0
+Epoch 98 loss 104035256.0
+Epoch 99 loss 105986904.0
+Inner Fold 4 Results: {'MSE - mean': 387952402.48950565, 'MSE - std': 609877838.5929844, 'R2 - mean': 0.5418465101642664, 'R2 - std': 0.443683592188023}
+  outer_1_inner Fold 5/5
+Before Debugging -- Inner Fold 5
+DEBUG Inner Fold 5: num_features: 12
+DEBUG Inner Fold 5: num_classes: 1
+DEBUG Inner Fold 5: cat_idx: [0]
+DEBUG Inner Fold 5: nominal_idx: [0, 6]
+DEBUG Inner Fold 5: ordinal_idx: [7]
+DEBUG Inner Fold 5: num_idx: None
+DEBUG Inner Fold 5: cat_dims: [2]
+DEBUG Inner Fold 5: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3421, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.20273979806500222
+  -0.42959729315944767 -0.8768305277326494 -1.0136662776132894
+  0.27577432920771994 -0.03611462165461881 -0.8059240872532762
+  -0.06373526994411653 -0.7862076278532772]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.23909200526289381
+  -1.2835498439429862 -0.8768305277326494 -0.3874921469316239
+  0.8275649303012189 -0.03653324950745118 -0.11212956284472753
+  -0.03798759404120652 -0.13003861097895697]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.06414700812304064
+  0.42435525762409093 -0.17302075875719344 0.23868198375004146
+  -0.4139639221591538 -0.02606755318664192 -0.3578484569060885
+  -0.05465875110064465 -0.294080865197537]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.21637187576421157
+  -0.42959729315944767 -0.8768305277326494 -0.3874921469316239
+  -0.27601627188577904 -0.04877811420279802 -0.8351212734888027
+  -0.07540507988572322 -0.8272181914079223]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.20622253291127787 2.132260359191168
+  -0.17302075875719344 0.8648561144317068 -0.6898592227059033
+  -0.06374405994155526 0.7551135926659585 -0.025947313942723413
+  0.915730759664491]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.20622253291127787 0.42435525762409093
+  0.5307890102182625 0.23868198375004146 -0.6898592227059033
+  -0.06374405994155526 0.032410963073720135 -0.02557684378584701
+  0.15703533390355817]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.18001966856632 -0.42959729315944767
+  -0.17302075875719344 0.23868198375004146 0.1378266789343452
+  -0.031038758939026318 -0.4734808776408467 -0.040580885139341334
+  -0.47862840119343963]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.027794800925149073
+  0.42435525762409093 0.5307890102182625 -0.3874921469316239
+  0.5516696297544694 0.0015095566186904825 0.4660325408290631
+  -0.023539257923026795 0.34158286989946074]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.19137973331566113
+  -0.42959729315944767 -0.17302075875719344 -0.3874921469316239
+  -0.1380686216124043 -0.050400297132523454 -0.7191997717022077
+  -0.06466144533630754 -0.7041865007439873]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.12549135776948267
+  -0.42959729315944767 -0.17302075875719344 0.23868198375004146
+  0.4137219794810947 -0.032346970979127476 -0.28557819394686473
+  -0.03706141864901551 -0.212059738088247]] 
+ 
+ 
+Val : (3421, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 5
+DEBUG Inner Fold 5: num_features: 17
+DEBUG Inner Fold 5: num_classes: 1
+DEBUG Inner Fold 5: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 5: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 5: ordinal_idx: [0]
+DEBUG Inner Fold 5: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 5: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 5: bin_alt: None
+In get_device
+Using dim 32 and batch size 32
+**** Data b4 Fitting ****
+Epoch 0 loss 49769364.0
+Epoch 1 loss 28951770.0
+Epoch 2 loss 21403806.0
+Epoch 3 loss 18508174.0
+Epoch 4 loss 10262762.0
+Epoch 5 loss 7928871.0
+Epoch 6 loss 7478485.0
+Epoch 7 loss 6976674.5
+Epoch 8 loss 5649857.5
+Epoch 9 loss 5463460.0
+Epoch 10 loss 4856923.5
+Epoch 11 loss 4084091.0
+Epoch 12 loss 4777062.5
+Epoch 13 loss 3318213.75
+Epoch 14 loss 3083837.25
+Epoch 15 loss 2682553.25
+Epoch 16 loss 3554884.75
+Epoch 17 loss 2183142.75
+Epoch 18 loss 2971719.5
+Epoch 19 loss 1618646.125
+Epoch 20 loss 1558599.5
+Epoch 21 loss 1725606.125
+Epoch 22 loss 1780021.875
+Epoch 23 loss 1120909.625
+Epoch 24 loss 1894454.25
+Epoch 25 loss 1165945.5
+Epoch 26 loss 2973333.75
+Epoch 27 loss 1079308.625
+Epoch 28 loss 1103504.125
+Epoch 29 loss 1265580.75
+Epoch 30 loss 1106972.25
+Epoch 31 loss 1756220.125
+Epoch 32 loss 1295977.625
+Epoch 33 loss 1497850.75
+Epoch 34 loss 738107.0625
+Epoch 35 loss 1008376.875
+Epoch 36 loss 968748.6875
+Epoch 37 loss 721944.6875
+Epoch 38 loss 741440.8125
+Epoch 39 loss 893668.375
+Epoch 40 loss 978898.625
+Epoch 41 loss 590528.0
+Epoch 42 loss 3403407.5
+Epoch 43 loss 683483.8125
+Epoch 44 loss 913410.5
+Epoch 45 loss 1294748.75
+Epoch 46 loss 904450.25
+Epoch 47 loss 1108367.375
+Epoch 48 loss 774279.0625
+Epoch 49 loss 743380.375
+Epoch 50 loss 714230.9375
+Epoch 51 loss 1014032.6875
+Epoch 52 loss 1542162.5
+Epoch 53 loss 781196.375
+Epoch 54 loss 719271.3125
+Epoch 55 loss 902211.1875
+Epoch 56 loss 561465.0
+Epoch 57 loss 679041.3125
+Epoch 58 loss 920709.5
+Epoch 59 loss 601306.5
+Epoch 60 loss 559987.625
+Epoch 61 loss 2510294.75
+Epoch 62 loss 760510.875
+Epoch 63 loss 1123216.875
+Epoch 64 loss 515966.53125
+Epoch 65 loss 1194311.125
+Epoch 66 loss 646480.9375
+Epoch 67 loss 615744.25
+Epoch 68 loss 614808.125
+Epoch 69 loss 996926.3125
+Epoch 70 loss 789594.8125
+Epoch 71 loss 5213930.5
+Epoch 72 loss 1045282.375
+Epoch 73 loss 831873.3125
+Epoch 74 loss 536011.1875
+Epoch 75 loss 792232.125
+Epoch 76 loss 535273.6875
+Epoch 77 loss 933921.375
+Epoch 78 loss 4527965.5
+Epoch 79 loss 976245.3125
+Epoch 80 loss 670471.25
+Epoch 81 loss 620368.875
+Epoch 82 loss 905144.5
+Epoch 83 loss 805539.0625
+Epoch 84 loss 688931.5
+Epoch 85 loss 1298184.75
+Validation loss has not improved for 20 steps!
+Early stopping applies.
+Inner Fold 5 Results: {'MSE - mean': 310465708.0674289, 'MSE - std': 567078066.6322068, 'R2 - mean': 0.6287419245892361, 'R2 - std': 0.4332289881504274}
+Trial Results B4 Saving: {'MSE - mean': 310465708.0674289, 'MSE - std': 567078066.6322068, 'R2 - mean': 0.6287419245892361, 'R2 - std': 0.4332289881504274}
+Score: 310465708.0674289
+  outer_1_inner Fold 1/5
+Before Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 12
+DEBUG Inner Fold 1: num_classes: 1
+DEBUG Inner Fold 1: cat_idx: [0]
+DEBUG Inner Fold 1: nominal_idx: [0, 6]
+DEBUG Inner Fold 1: ordinal_idx: [7]
+DEBUG Inner Fold 1: num_idx: None
+DEBUG Inner Fold 1: cat_dims: [2]
+DEBUG Inner Fold 1: bin_alt: None
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE ANY ENCODING
+num_features :12
+num_classes : 1
+cat_idx : [0]
+nominal_idx : [0, 6]
+ordinal_idx : [7]
+num_idx : None
+cat_dims : [2]
+bin_alt : None 
+
+
+X_train shape : (3420, 12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AFTER getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0]
+Cat dims : [2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BEFORE getting cat idx
+Nominal Index : [0, 6]
+Ordinal Index : [7]
+Cat Idx : [0, 6, 7]
+Cat dims : []
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+AFTER SEPARATING CATEGORICALS AND NUMERICALS
+Ordinal Index : [7]
+Numerical Index V1 : [1, 2, 3, 4, 5, 8, 9, 10, 11]
+Cat Idx V1 : [0, 6, 7] 
+Cat Dims V1 : []
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+Scaling the data...
+One Hot Encoding...
+Ord : 1, Nom : 7, Num : 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After OHE
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : []
+Cat Idx V2 : [0, 6, 7] 
+ 
+
+Train: [['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 1.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 0.0 1.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['furnished' 0.0 0.0 0.0 0.0]
+ ['not furnished' 1.0 0.0 0.0 0.0]
+ ['not furnished' 0.0 0.0 1.0 0.0]] 
+ 
+ 
+Val : (3420, 17) 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ordinal Encoding...
+Train Cat : [['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['not furnished']
+ ['furnished']
+ ['not furnished']
+ ['not furnished']]
+Uniques : ['furnished' 'not furnished']
+Cat Idx V3 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After ORDINAL
+Numerical Index V2 : [8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+
+OHE Idx : [1, 2, 3, 4, 5, 6, 7]
+
+
+Ordinal Idx V2: [0]
+
+
+Cat Dims V2 : [3, 3, 3, 3, 3, 3, 3, 3]
+Cat Idx V2 : [0, 1, 2, 3, 4, 5, 6, 7] 
+ 
+
+Train: [[1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 -0.6066119667393784 -0.4409735877705798
+  -0.8891088668162085 -1.0310300730068107 0.2638682927091926
+  -0.03726588519561444 -0.8168946486982943 -0.0649112397113407
+  -0.7997059857529025]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.7242858670452416 -1.3092117398577316
+  -0.8891088668162085 -0.3988818389294905 0.8090605966303156
+  -0.03768442184442685 -0.1307794991794192 -0.03924644180762629
+  -0.14718167573763577]
+ [1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 -0.6507396793540772 -0.4409735877705798
+  -0.8891088668162085 -0.3988818389294905 -0.2813240112119303
+  -0.049926618822189746 -0.845768661240547 -0.07654348624324005
+  -0.8404887551288567]
+ [1.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.7172194117015818 2.1637408684908754
+  -0.19008534394001708 0.8654146292251502 -0.6902182391527725
+  -0.06488930401723328 0.7268644377191747 -0.02724491760804761
+  0.8927789433491956]
+ [1.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.7172194117015818 0.42726456431657195
+  0.5089381789361743 0.23326639514782987 -0.6902182391527725
+  -0.06488930401723328 0.012161156970346462 -0.026875639940368266
+  0.13829770989404344]
+ [1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.275942285554595 0.42726456431657195
+  0.5089381789361743 -1.0310300730068107 -0.6902182391527725
+  -0.06384296239520226 -0.4166608114789505 -0.049401577668808254
+  -0.31031275324145247]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.5330657790482141 -0.4409735877705798
+  -0.19008534394001708 0.23326639514782987 0.1275702167289119
+  -0.03219112832876401 -0.4881311395538333 -0.0418313854813817
+  -0.4938352154332462]
+ [2.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 -0.040306321517412154
+  0.42726456431657195 0.5089381789361743 -0.3988818389294905
+  0.5364644446697541 0.00035009611640060854 0.4409831254196434
+  -0.024844612768131873 0.32182017208583724]
+ [1.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -0.5698388728937962 -0.4409735877705798
+  -0.19008534394001708 -0.3988818389294905 -0.14502593523164956
+  -0.05154844833633782 -0.7311302550084349 -0.06583443388053907
+  -0.7181404470009942]
+ [1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.35655492858941934
+  -0.4409735877705798 -0.19008534394001708 0.23326639514782987
+  0.40016636868947336 -0.033499055356302786 -0.302308286559138
+  -0.03832324763842793 -0.2287472144895441]] 
+ 
+ 
+Val : (3420, 17) 
+ 
+
+FINISHED ENCODING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test numpy array issues
+X dtype: object
+X Val dtype: object
+X dtype: float32
+X Val dtype: float32
+After Debugging -- Inner Fold 1
+DEBUG Inner Fold 1: num_features: 17
+DEBUG Inner Fold 1: num_classes: 1
+DEBUG Inner Fold 1: cat_idx: [0, 1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 1: nominal_idx: [1, 2, 3, 4, 5, 6, 7]
+DEBUG Inner Fold 1: ordinal_idx: [0]
+DEBUG Inner Fold 1: num_idx: [8, 9, 10, 11, 12, 13, 14, 15, 16]
+DEBUG Inner Fold 1: cat_dims: [3, 3, 3, 3, 3, 3, 3, 3]
+DEBUG Inner Fold 1: bin_alt: None
+In get_device
+Using dim 256 and batch size 32
+**** Data b4 Fitting ****

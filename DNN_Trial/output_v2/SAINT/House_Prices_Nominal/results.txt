@@ -1,0 +1,312 @@
+2025-05-03 14:29:31.602572
+SAINT - House_Prices_Nominal - train_model
+
+Log Loss - mean: 0.98911
+Log Loss - mean_std: 0.12661
+AUC - mean: 0.91373
+AUC - mean_std: 0.01870
+Accuracy - mean: 0.56849
+Accuracy - mean_std: 0.05428
+F1 score - mean: 0.56519
+F1 score - mean_std: 0.05162
+
+Train time: 33.456820
+Test time: 0.167174
+
+Best Parameters: {'dim': 128, 'depth': 1, 'heads': 2, 'dropout': 0.7}
+
+
+2025-05-08 17:00:32.941456
+SAINT - House_Prices_Nominal - test_model
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 37.202242
+Test time: 0.179305
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-09 21:35:36.602016
+SAINT - House_Prices_Nominal - test_model
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 35.495381
+Test time: 0.164953
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-10 17:34:09.272744
+SAINT - House_Prices_Nominal - test_model
+
+MSE - mean: 303253231.03921
+MSE - std: 52273290.76833
+R2 - mean: 0.94656
+R2 - std: 0.00921
+
+Train time: 36.260318
+Test time: 0.182378
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-13 16:00:20.306491
+SAINT - House_Prices_Nominal - train_model
+
+MSE - mean: 1354418432.32142
+MSE - mean_std: 448216916.36516
+R2 - mean: 0.80617
+R2 - mean_std: 0.02414
+
+Train time: 93.718951
+Test time: 0.168932
+
+Best Parameters: {'dim': 256, 'depth': 1, 'heads': 8, 'dropout': 0.1}
+
+
+2025-05-15 00:03:35.334313
+SAINT - House_Prices_Nominal - test_model
+
+MSE - mean: 784186641.38457
+MSE - std: 42935182.95804
+R2 - mean: 0.86181
+R2 - std: 0.00757
+
+Train time: 75.880950
+Test time: 0.172018
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-16 01:03:52.953395
+SAINT - House_Prices_Nominal - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 325086833.40145
+MSE - std: 70311813.00939
+R2 - mean: 0.94271
+R2 - std: 0.01239
+
+Train time: 30.000191
+Test time: 0.162041
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-16 01:07:19.209267
+SAINT - House_Prices_Nominal - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 545040590.83002
+MSE - std: 55989635.97473
+R2 - mean: 0.90395
+R2 - std: 0.00987
+
+Train time: 27.644777
+Test time: 0.163544
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-16 14:09:36.300822
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 62794610.86065
+MSE - std: 15634181.49430
+R2 - mean: 0.98893
+R2 - std: 0.00276
+
+Train time: 30.709977
+Test time: 0.165363
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-16 14:13:41.196506
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 109655245.27433
+MSE - std: 15207419.33008
+R2 - mean: 0.98068
+R2 - std: 0.00268
+
+Train time: 30.982305
+Test time: 0.163307
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-17 19:46:21.788985
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 27.684604
+Test time: 0.167488
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-17 19:49:26.950727
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 325086833.40145
+MSE - std: 70311813.00939
+R2 - mean: 0.94271
+R2 - std: 0.01239
+
+Train time: 27.764109
+Test time: 0.164332
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-17 19:52:15.648013
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 545040590.83002
+MSE - std: 55989635.97473
+R2 - mean: 0.90395
+R2 - std: 0.00987
+
+Train time: 25.767759
+Test time: 0.165353
+
+Best Parameters: {'depth': 1, 'dim': 256, 'dropout': 0.1, 'heads': 8}
+
+
+2025-05-18 10:58:04.902643
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 34.507357
+Test time: 0.165461
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-18 11:01:41.320346
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 325086833.40145
+MSE - std: 70311813.00939
+R2 - mean: 0.94271
+R2 - std: 0.01239
+
+Train time: 32.601210
+Test time: 0.143807
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-18 11:05:06.792047
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 545040590.83002
+MSE - std: 55989635.97473
+R2 - mean: 0.90395
+R2 - std: 0.00987
+
+Train time: 31.366801
+Test time: 0.160048
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-18 11:08:37.902045
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 893761979.51547
+MSE - std: 47352230.67231
+R2 - mean: 0.84250
+R2 - std: 0.00834
+
+Train time: 32.039071
+Test time: 0.158637
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-18 11:12:52.450828
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 325086833.40145
+MSE - std: 70311813.00939
+R2 - mean: 0.94271
+R2 - std: 0.01239
+
+Train time: 38.982094
+Test time: 0.159925
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-18 11:16:22.794611
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 545040590.83002
+MSE - std: 55989635.97473
+R2 - mean: 0.90395
+R2 - std: 0.00987
+
+Train time: 31.952743
+Test time: 0.137869
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-19 16:02:02.017588
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 303253231.03921
+MSE - std: 52273290.76833
+R2 - mean: 0.94656
+R2 - std: 0.00921
+
+Train time: 32.691102
+Test time: 0.157511
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-19 16:08:19.570516
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 62794610.86065
+MSE - std: 15634181.49430
+R2 - mean: 0.98893
+R2 - std: 0.00276
+
+Train time: 38.373261
+Test time: 0.165731
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+
+2025-05-19 16:13:47.103003
+SAINT - House_Prices_Nominal - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 109655245.27433
+MSE - std: 15207419.33008
+R2 - mean: 0.98068
+R2 - std: 0.00268
+
+Train time: 37.297412
+Test time: 0.162056
+
+Best Parameters: {'depth': 1, 'dim': 128, 'dropout': 0.7, 'heads': 2}
+
+

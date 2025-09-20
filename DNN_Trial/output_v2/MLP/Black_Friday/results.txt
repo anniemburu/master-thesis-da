@@ -1,0 +1,396 @@
+2025-05-04 22:56:20.805966
+MLP - Black_Friday - train_model
+
+Log Loss - mean: 2.04879
+Log Loss - mean_std: 0.01320
+AUC - mean: 0.90076
+AUC - mean_std: 0.00115
+Accuracy - mean: 0.22096
+Accuracy - mean_std: 0.00342
+F1 score - mean: 0.14852
+F1 score - mean_std: 0.01193
+
+Train time: 2.062966
+Test time: 0.067032
+
+Best Parameters: {'n_blocks': 3, 'd_block': 256, 'dropout': 0.28716314068720666, 'd_in': 75, 'd_out': 36}
+
+
+2025-05-08 14:54:58.387413
+MLP - Black_Friday - test_model
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 3.447734
+Test time: 0.127709
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-09 19:16:24.958822
+MLP - Black_Friday - test_model
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 3.383979
+Test time: 0.135379
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-10 15:13:59.873845
+MLP - Black_Friday - test_model
+
+MSE - mean: 123118.67621
+MSE - std: 3057.01784
+R2 - mean: 0.99525
+R2 - std: 0.00012
+
+Train time: 4.103776
+Test time: 0.149253
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-11 04:53:50.864215
+MLP - Black_Friday - train_model
+
+MSE - mean: 15185013.60577
+MSE - mean_std: 795633.78488
+R2 - mean: 0.41023
+R2 - mean_std: 0.03140
+
+Train time: 2.725746
+Test time: 0.044446
+
+Best Parameters: {'n_blocks': 6, 'd_block': 256, 'dropout': 0.10721970311199958, 'd_in': 75, 'd_out': 1}
+
+
+2025-05-14 11:44:01.068049
+MLP - Black_Friday - test_model
+
+MSE - mean: 13430038.75817
+MSE - std: 192534.29790
+R2 - mean: 0.48161
+R2 - std: 0.00743
+
+Train time: 13.551345
+Test time: 0.140352
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 1, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-15 16:15:46.961710
+MLP - Black_Friday - test_modelprobabilistic_regressionkmeanssturges
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 5.487203
+Test time: 0.143451
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-15 16:16:36.089013
+MLP - Black_Friday - test_modelprobabilistic_regressionuniformsturges
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 4.919108
+Test time: 0.146362
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-16 09:19:04.963934
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - freedman
+
+MSE - mean: 13403.80200
+MSE - std: 73.62789
+R2 - mean: 0.99948
+R2 - std: 0.00000
+
+Train time: 7.839696
+Test time: 0.146937
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-16 09:19:47.662736
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman
+
+MSE - mean: 20099.56388
+MSE - std: 8.45311
+R2 - mean: 0.99922
+R2 - std: 0.00000
+
+Train time: 7.910138
+Test time: 0.157092
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 38, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-17 11:35:26.010846
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 5.620598
+Test time: 0.147995
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-17 11:35:59.256680
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 4.218447
+Test time: 0.154733
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-17 11:36:26.821759
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 2.561436
+Test time: 0.145101
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.10721970311199958, 'n_blocks': 6}
+
+
+2025-05-18 11:18:21.552174
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 3.460905
+Test time: 0.123321
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:18:51.043958
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 3.472035
+Test time: 0.129113
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:19:20.829537
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 4.071342
+Test time: 0.131490
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:19:48.557601
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - Class Weights
+
+MSE - mean: 326943.85913
+MSE - std: 5616.48112
+R2 - mean: 0.98738
+R2 - std: 0.00022
+
+Train time: 3.236651
+Test time: 0.139820
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:20:15.321591
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - Class Weights
+
+MSE - mean: 87695.69590
+MSE - std: 18.79017
+R2 - mean: 0.99662
+R2 - std: 0.00000
+
+Train time: 2.713165
+Test time: 0.126125
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-18 11:20:41.686575
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - Class Weights
+
+MSE - mean: 128705.89594
+MSE - std: 116.50681
+R2 - mean: 0.99503
+R2 - std: 0.00000
+
+Train time: 2.912605
+Test time: 0.121173
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 15, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:14:19.573347
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 123118.67621
+MSE - std: 3057.01784
+R2 - mean: 0.99525
+R2 - std: 0.00012
+
+Train time: 3.792019
+Test time: 0.150612
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:14:53.846920
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 13403.80200
+MSE - std: 73.62789
+R2 - mean: 0.99948
+R2 - std: 0.00000
+
+Train time: 5.089839
+Test time: 0.149537
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:15:29.169186
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 20099.56388
+MSE - std: 8.45311
+R2 - mean: 0.99922
+R2 - std: 0.00000
+
+Train time: 5.228032
+Test time: 0.154875
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 38, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:16:01.393009
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 123118.67621
+MSE - std: 3057.01784
+R2 - mean: 0.99525
+R2 - std: 0.00012
+
+Train time: 4.425844
+Test time: 0.146694
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:16:29.197176
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 13403.80200
+MSE - std: 73.62789
+R2 - mean: 0.99948
+R2 - std: 0.00000
+
+Train time: 2.685784
+Test time: 0.140953
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 39, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-19 00:16:55.524617
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 20099.56388
+MSE - std: 8.45311
+R2 - mean: 0.99922
+R2 - std: 0.00000
+
+Train time: 2.692351
+Test time: 0.133703
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 38, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-20 09:08:13.533107
+MLP - Black_Friday - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 307654.86748
+MSE - std: 1303.80414
+R2 - mean: 0.98812
+R2 - std: 0.00005
+
+Train time: 4.390027
+Test time: 0.147318
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 17, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-20 09:08:47.738955
+MLP - Black_Friday - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 70876.80064
+MSE - std: 48.45788
+R2 - mean: 0.99726
+R2 - std: 0.00000
+
+Train time: 5.205169
+Test time: 0.130335
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 17, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+
+2025-05-20 09:09:24.563858
+MLP - Black_Friday - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 99819.06521
+MSE - std: 38.34067
+R2 - mean: 0.99615
+R2 - std: 0.00000
+
+Train time: 4.681440
+Test time: 0.141475
+
+Best Parameters: {'d_block': 256, 'd_in': 75, 'd_out': 17, 'dropout': 0.28716314068720666, 'n_blocks': 3}
+
+

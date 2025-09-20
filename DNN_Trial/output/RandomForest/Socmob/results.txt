@@ -1,0 +1,28 @@
+2025-05-30 13:13:54.410861
+RandomForest - Socmob - train_model - regression
+
+MSE - mean: 544.43971
+MSE - mean_std: 363.43202
+R2 - mean: 0.63365
+R2 - mean_std: 0.19193
+
+Train time: 0.131008
+Test time: 0.014795
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 30}
+
+
+2025-05-30 21:15:41.500361
+RandomForest - Socmob - test_model - regression
+
+MSE - mean: 372.99753
+MSE - std: 28.99980
+R2 - mean: 0.78405
+R2 - std: 0.01679
+
+Train time: 0.168253
+Test time: 0.017085
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 30}
+
+

@@ -1,0 +1,384 @@
+2025-05-29 11:23:57.200776
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - False
+
+MSE - mean: 102.09273
+MSE - std: 7.66557
+R2 - mean: 0.37368
+R2 - std: 0.04703
+
+Train time: 930.914576
+Test time: 1.673873
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 12:00:16.596675
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - True
+
+MSE - mean: 108.16437
+MSE - std: 11.26549
+R2 - mean: 0.33643
+R2 - std: 0.06911
+
+Train time: 977.839299
+Test time: 1.703820
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 12:35:45.789905
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - False
+
+MSE - mean: 92.96880
+MSE - std: 2.09996
+R2 - mean: 0.42965
+R2 - std: 0.01288
+
+Train time: 943.353981
+Test time: 1.725942
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 13:07:58.826365
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - True
+
+MSE - mean: 299.18834
+MSE - std: 177.77685
+R2 - mean: -0.83548
+R2 - std: 1.09064
+
+Train time: 906.044661
+Test time: 1.706606
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 13:43:30.209657
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - False
+
+MSE - mean: 86.66831
+MSE - std: 2.21293
+R2 - mean: 0.46830
+R2 - std: 0.01358
+
+Train time: 964.940320
+Test time: 1.724555
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 14:15:24.449809
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - True
+
+MSE - mean: 409.15383
+MSE - std: 113.70460
+R2 - mean: -1.51010
+R2 - std: 0.69756
+
+Train time: 887.995222
+Test time: 1.702221
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 14:51:50.257212
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - False
+
+MSE - mean: 111.04506
+MSE - std: 14.31310
+R2 - mean: 0.31875
+R2 - std: 0.08781
+
+Train time: 944.515849
+Test time: 1.713677
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 15:29:46.334561
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - True
+
+MSE - mean: 111.59002
+MSE - std: 23.24840
+R2 - mean: 0.31541
+R2 - std: 0.14263
+
+Train time: 971.873381
+Test time: 1.720143
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 16:04:53.945348
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - False
+
+MSE - mean: 90.69565
+MSE - std: 1.59909
+R2 - mean: 0.44360
+R2 - std: 0.00981
+
+Train time: 909.275797
+Test time: 1.709805
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 16:38:22.958368
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - True
+
+MSE - mean: 399.78873
+MSE - std: 102.70561
+R2 - mean: -1.45265
+R2 - std: 0.63008
+
+Train time: 899.845400
+Test time: 1.672083
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 17:14:08.321271
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - False
+
+MSE - mean: 90.63225
+MSE - std: 2.33205
+R2 - mean: 0.44398
+R2 - std: 0.01431
+
+Train time: 885.084632
+Test time: 1.601916
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-05-29 17:43:20.632283
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - True
+
+MSE - mean: 427.41700
+MSE - std: 92.75721
+R2 - mean: -1.62214
+R2 - std: 0.56905
+
+Train time: 785.274876
+Test time: 1.595582
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 07:43:43.830932
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - False - False
+
+Log Loss - mean: 7.79971
+Log Loss - std: 0.55719
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.07522
+Accuracy - std: 0.02323
+F1 score - mean: 0.13906
+F1 score - std: 0.03963
+
+Train time: 4389.664032
+Test time: 1.837139
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 08:46:30.836653
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - sturges - True - False
+
+Log Loss - mean: 7.47573
+Log Loss - std: 0.34559
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.08361
+Accuracy - std: 0.01569
+F1 score - mean: 0.15393
+F1 score - std: 0.02697
+
+Train time: 3957.864170
+Test time: 1.860348
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 09:46:09.245034
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - False - False
+
+Log Loss - mean: 11.29313
+Log Loss - std: 0.05873
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 3553.489264
+Test time: 1.814464
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 10:43:30.693375
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - sturges - True - False
+
+Log Loss - mean: 11.08504
+Log Loss - std: 0.27482
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00095
+Accuracy - std: 0.00067
+F1 score - mean: 0.00190
+F1 score - std: 0.00134
+
+Train time: 3134.923989
+Test time: 1.818930
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 11:44:17.489181
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - False - False
+
+Log Loss - mean: 10.87510
+Log Loss - std: 0.44692
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00095
+Accuracy - std: 0.00078
+F1 score - mean: 0.00190
+F1 score - std: 0.00155
+
+Train time: 3618.968004
+Test time: 1.864117
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 12:43:27.160830
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - sturges - True - False
+
+Log Loss - mean: 10.90926
+Log Loss - std: 0.32402
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00158
+Accuracy - std: 0.00119
+F1 score - mean: 0.00316
+F1 score - std: 0.00236
+
+Train time: 3245.341363
+Test time: 1.878460
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 13:42:00.762987
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - False - False
+
+Log Loss - mean: 8.80897
+Log Loss - std: 0.51998
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02106
+Accuracy - std: 0.00119
+F1 score - mean: 0.04125
+F1 score - std: 0.00227
+
+Train time: 3184.953733
+Test time: 1.863118
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 14:42:37.894130
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - quantile - freedman - True - False
+
+Log Loss - mean: 8.77608
+Log Loss - std: 0.61369
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.02138
+Accuracy - std: 0.00356
+F1 score - mean: 0.04184
+F1 score - std: 0.00682
+
+Train time: 3528.458460
+Test time: 1.845204
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 15:42:42.741595
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - False - False
+
+Log Loss - mean: 11.37465
+Log Loss - std: 0.06260
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 3370.466948
+Test time: 1.852995
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 16:43:26.371116
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - kmeans - freedman - True - False
+
+Log Loss - mean: 11.47270
+Log Loss - std: 0.04045
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00016
+Accuracy - std: 0.00022
+F1 score - mean: 0.00032
+F1 score - std: 0.00045
+
+Train time: 3348.799466
+Test time: 1.881501
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 17:42:04.327458
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - False - False
+
+Log Loss - mean: 11.21087
+Log Loss - std: 0.02833
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00000
+Accuracy - std: 0.00000
+F1 score - mean: 0.00000
+F1 score - std: 0.00000
+
+Train time: 3177.112093
+Test time: 1.821352
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+
+2025-06-20 18:41:35.522407
+SAINT - Mercedes_Benz - test_model - probabilistic_regression - uniform - freedman - True - False
+
+Log Loss - mean: 11.24114
+Log Loss - std: 0.17026
+AUC - mean: nan
+AUC - std: nan
+Accuracy - mean: 0.00206
+Accuracy - std: 0.00157
+F1 score - mean: 0.00410
+F1 score - std: 0.00312
+
+Train time: 3429.247380
+Test time: 1.840216
+
+Best Parameters: {'depth': 1, 'dim': 32, 'dropout': 0, 'heads': 4}
+
+

@@ -1,0 +1,14 @@
+2025-05-30 13:21:51.024890
+XGBoost - House_Prices_Nominal - test_model - regression
+
+MSE - mean: 822216474.42386
+MSE - std: 51715103.28865
+R2 - mean: 0.85511
+R2 - std: 0.00911
+
+Train time: 0.403642
+Test time: 0.049157
+
+Best Parameters: {'max_depth': 5, 'alpha': 0.017077444591583498, 'lambda': 0.0013165910056231439, 'eta': 0.18394165476867871, 'verbosity': 1, 'tree_method': 'gpu_hist', 'gpu_id': 0, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+
+
