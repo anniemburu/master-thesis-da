@@ -31,7 +31,6 @@ def download_folder(folder_id, local_path):
             print(f'Downloading file: {file_name}')
             file.GetContentFile(os.path.join(local_path, file_name))
 
-# Replace with the Google Drive folder ID you want to download and the local path to save to
 root_folder_id = '1-iahx_9D5aGMsUHwMkMcFOuB_dhG9ZYM'
 local_path = '/home/mburu/Master_Thesis/master-thesis-da/datasets/'
 download_folder(root_folder_id, local_path)
